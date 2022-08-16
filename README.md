@@ -12,7 +12,7 @@
 # Creating Packages
 - In the packages directory:
   - `$ lerna create @scope/package-name`
-    - Example: `@psuooe/wc-package`
+    - Example: `@psu-ooe/wc-package`
     - This command also creates `lib/` and `__tests__/` in package directory -- may or may not be an option to turn this off, as well as set default "main" attribute.
 - Make sure the resistry in the newly created packed directory is github packages
 - Add files to new package
