@@ -29,7 +29,8 @@
   - These last two commands are what we will use for GitHub Actions
 
 # TODO
-- See if Lerna or Nx has a solution for publishing packages without incrementing version
+- `publishConfig:`**"access"?**
+- Include `publishConfig:"registry"` in `lerna create`
 
 # Links
 ## Reference

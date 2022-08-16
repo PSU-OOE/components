@@ -1,0 +1,30 @@
+{
+  "name": "@psu-ooe/base-dev",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Zachary Ishler <zri5004@psu.edu>",
+  "homepage": "https://github.com/PSU-OOE/monorepo-dev#readme",
+  "license": "ISC",
+  "main": "lib/base-dev.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PSU-OOE/monorepo-dev.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@psu-ooe/base-dev.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/PSU-OOE/monorepo-dev/issues"
+  }
+}
