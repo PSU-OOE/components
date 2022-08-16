@@ -1,0 +1,90 @@
+// Expose breakpoint values, for edge-case media queries
+// @TODO: Eliminate *_max
+$bp_xxs: 320px;
+$bp_xs: 550px;
+$bp_xs_max: 549px;
+$bp_s: 800px;
+$bp_s_max: 799px;
+$bp_m: 950px;
+$bp_m_max: 949px;
+$bp_l: 1024px;
+$bp_1030: 1030px;
+$bp_xl: 1280px;
+
+@mixin bp($point) {
+  @if $point == xxs {
+    @media (min-width: $bp_xxs) {
+      @content;
+    }
+  }
+  @else if $point == xs {
+    @media (min-width: $bp_xs) {
+      @content;
+    }
+  }
+  @else if $point == xs_max {
+    @media (max-width: $bp_xs_max) {
+      @content;
+    }
+  }
+  @else if $point == s {
+    @media (min-width: $bp_s) {
+      @content;
+    }
+  }
+  @else if $point == s_max {
+    @media (max-width: $bp_s_max) {
+      @content;
+    }
+  }
+  @else if $point == m {
+    @media (min-width: $bp_m) {
+      @content;
+    }
+  }
+  @else if $point == m_max {
+    @media (max-width: $bp_m_max) {
+      @content;
+    }
+  }
+  @else if $point == l {
+    @media (min-width: $bp_l) {
+      @content;
+    }
+  }
+  @else if $point == 1030 {
+    @media (min-width: $bp_1030) {
+      @content;
+    }
+  }
+  @else if $point == xl {
+    @media (min-width: $bp_xl) {
+      @content;
+    }
+  }
+}
+
+// @TODO: Remove when not referenced by legacy layout styles.
+@mixin full-width-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 rem(2);
+
+  @include bp(xs) {
+    padding: 0 rem(4);
+  }
+
+
+  @include bp(l) {
+    max-width: rem(119);
+  }
+}
+
+@mixin visible_at($bp) {
+  .visible-at--#{$bp} {
+    @include bp(#{$bp}_max) {
+      display: none !important;
+    }
+  }
+}
+

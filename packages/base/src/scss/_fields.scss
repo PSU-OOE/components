@@ -1,0 +1,7 @@
+.field {
+  margin-bottom: rem(2);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

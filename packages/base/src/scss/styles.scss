@@ -1,0 +1,160 @@
+@import "imports/variables";
+@import "imports/layout";
+
+@import "normalize";
+
+// Universal selectors.
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: rem(.2) solid $sky-blue;
+}
+
+// Type selectors.
+html {
+  font-size: 62.5%;
+
+  /* set up for rem() use */
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  background: $nittany-navy;
+  scroll-behavior: smooth;
+
+  @media (prefers-reduced-motion) {
+    scroll-behavior: auto;
+  }
+
+  &.no-scroll-mobile {
+    @include bp(s_max) {
+      overflow: hidden;
+    }
+  }
+}
+
+body {
+  font-size: rem(1.6);
+  font-family: $font-family-default;
+  color: $font-color-default;
+  background: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $primary-blue;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    color: $beaver-blue;
+  }
+
+  &.hidden {
+    left: rem(-99.9);
+    position: absolute;
+
+    &:focus {
+      background-color: transparent;
+      color: #ffffff;
+      left: rem(.5);
+    }
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: none;
+  margin: rem(2) 0;
+  padding: 0;
+  background: transparent;
+  height: rem(.1);
+  width: 100%;
+  border-bottom: rem(.1) dotted rgba($nittany-navy, 0.25);
+}
+
+nav {
+  ul {
+    border: medium none;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+    li {
+      &.expanded,
+      &.collapsed,
+      &.leaf {
+        padding: 0;
+      }
+    }
+  }
+}
+
+caption {
+  font-size: rem(2.2);
+  line-height: rem(2.8);
+  clear: both;
+  color: $nittany-navy;
+  font-weight: 700;
+  padding-bottom: rem(2);
+  text-align:left;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+footer {
+  overflow: hidden;
+}
+
+blockquote {
+  margin: 0;
+
+  p {
+    &::before {
+      content: open-quote;
+    }
+
+    &::after {
+      content: close-quote;
+    }
+    color: $beaver-blue;
+    font-size: rem(1.4);
+    line-height: rem(2.4);
+    text-indent:rem(-.5);
+  }
+}
+
+@import "fields";
+@import "tables";
+@import "typography";
+@import "forms";
+
+// Class selectors
+
+.stealthed {
+  display: none !important;
+}
+
+// Removing span:after content for visually-hidden class
+span {
+  &.visually-hidden {
+    &:after {
+      content: none !important;
+    }
+  }
+}
+
+@include visible_at(xs);
+@include visible_at(s);
+@include visible_at(m);

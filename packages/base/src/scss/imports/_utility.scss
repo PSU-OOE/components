@@ -1,0 +1,207 @@
+@use "sass:math";
+
+@function parseInt($n) {
+  @return math.div($n, $n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px: ();
+  $rem: ();
+
+  @each $value in $values {
+    @if $value == 0 or $value == auto {
+      $px: append($px, $value);
+      $rem: append($rem, $value);
+    }
+    @else {
+      $unit: unit($value);
+      $val: parseInt($value);
+
+      @if $unit == "px" {
+        $px: append($px, $value);
+        $rem: append($rem, math.div($val, 10) + rem);
+      }
+
+      @if $unit == "rem" {
+        $px: append($px, $val * 10 + px);
+        $rem: append($rem, $value);
+      }
+    }
+  }
+
+  @if $px == $rem {
+    #{$property}: $px;
+  }
+  @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute !important;
+  clip: rect(#{rem(.1)}, #{rem(.1)}, #{rem(.1)}, #{rem(.1)});
+  overflow: hidden;
+  height: rem(.1);
+  width: rem(.1);
+  word-wrap: normal;
+}
+
+@mixin mobile-only($display_type) {
+  @include bp(s_max) {
+    display: #{$display_type};
+  }
+
+
+  @include bp(m) {
+    display: none;
+  }
+}
+
+@mixin desktop-only($display_type) {
+  @include bp(s_max) {
+    display: none;
+  }
+
+
+  @include bp(m) {
+    display: #{$display_type};
+  }
+}
+
+@mixin btw-bp($breakpoint-min: $bp_s, $breakpoint-max: $bp_m) {
+  @media only screen and (min-width: $breakpoint-min) and (max-width: $breakpoint-max) {
+    @content;
+  }
+}
+
+@mixin full-width-bg($bg-color: $light-grey) {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+
+    // +rem(.1) to account any rounding errors
+    width: calc(100vw + #{rem(.1)});
+    height: calc(100% + #{rem(.1)});
+    background: $bg-color;
+    left: 50%;
+    top: 0;
+    z-index: 0;
+    transform: translateX(-50%);
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@mixin dotted-border($position: bottom) {
+  border-#{$position}: rem(.1) dotted rgba($nittany-navy, 0.25);
+}
+
+@mixin edge {
+  @supports (display:-ms-grid) {
+    @content;
+  }
+}
+
+// This mixin targets Safari 10.1+ desktop, Safari iOS, and Chrome iOS
+@mixin safari-10-plus {
+  @media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+      @content;
+    }
+  }
+}
+
+@mixin tile-nav-bg-extended($background) {
+  @include bp(xs) {
+    @include full-width-bg($background);
+  }
+
+  // Extend the background to the area beneath the end of the container.
+  &:before {
+    @include bp(xs) {
+      height: calc(100% + #{rem(3)});
+    }
+
+    @include bp(m) {
+      height: calc(100% + #{rem(6)});
+    }
+  }
+}
+
+@mixin hi-res {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+    @content;
+  }
+}
+
+// @deprecated - delete some day...
+@mixin tile-nav-highlight-title($bg-color, $fg-color, $chevron-color) {
+  background-color: $bg-color;
+  box-decoration-break: clone;
+  display: inline;
+  max-width: 95%;
+  padding: 9px 0 6px;
+  box-shadow: 10px 0 0 0 $bg-color, -10px 0 0 0 $bg-color; // Hack for Edge + IE11
+
+  & span {
+    color: $fg-color;
+    font-family: $open-sans;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    position: relative;
+    transition: inherit;
+
+    &:after {
+      color: $chevron-color;
+      content: "\f054";
+      font-family: $font-awesome;
+      font-size: .9rem;
+      font-weight: 700;
+      margin-left: 10px;
+      vertical-align: middle;
+
+      @include bp(m) {
+        display: none;
+      }
+    }
+  }
+}
+
+// @TODO: Delete some day...
+@mixin tile-nav-read-more($color) {
+  bottom: 25px;
+  color: $color;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height:20px;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 25px;
+  text-transform: uppercase;
+
+  @include bp(m) {
+    display: inline;
+  }
+
+  &:after {
+    color: $color;
+    content: "\00a0\f105";
+    margin-left: 3px;
+    font-family: $font-awesome;
+    text-decoration: none;
+  }
+
+  span {
+    border-bottom: 1px solid $color;
+  }
+}

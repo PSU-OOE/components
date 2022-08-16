@@ -1,0 +1,110 @@
+// @deprecated - don't use.
+%button {
+  font-size: rem(1.5);
+  line-height: rem(1.5);
+  display: inline-block;
+  text-align: center;
+  padding: rem(1.5) rem(3);
+  background-color: $primary-blue;
+  border-radius: rem(.2);
+  color: $white;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $nittany-navy;
+    text-decoration: none;
+    color: $white;
+  }
+
+  &:focus {
+    outline-offset: rem(-.5);
+  }
+
+  @include bp(m) {
+    padding: rem(1.7) rem(3.125);
+  }
+}
+
+// @deprecated - don't use.
+%pdf-button-icon {
+  font-size: rem(2.4);
+  font-family: $font-awesome;
+  color: $white;
+  line-height: 0;
+  display: inline-block;
+  content: "\f1c1";
+  vertical-align: baseline;
+  transform: translateY(rem(.2));
+  margin-left: rem(1.5);
+}
+
+// @deprecated - don't use.
+@mixin basic-button($bg_color: $primary-blue, $bg_color_hover: $nittany-navy, $text_color: $white, $text_color_hover: $white) {
+  @extend %button;
+
+  background-color: $bg_color;
+  color: $text_color;
+
+  &:hover {
+    background-color: $bg_color_hover;
+    color: $text_color_hover;
+  }
+
+  &:focus {
+    background-color: $bg_color_hover;
+    color: $text_color_hover;
+  }
+}
+
+// @deprecated - don't use.
+@mixin full-width {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+// @deprecated - use `.read-more` utility class instead.
+@mixin read-more($color: $primary-blue, $hover-color: $primary-blue) {
+  span {
+    font-size: rem(1.1);
+    line-height: rem(1.8);
+    text-transform: uppercase;
+    font-weight: 700;
+    pointer-events: none;
+
+    &:hover {
+      &:hover {
+        color: $hover-color;
+      }
+
+      a {
+        border-color: $hover-color;
+        color: $hover-color;
+      }
+    }
+  }
+
+  a {
+    color: $color;
+    font-weight: 700;
+    pointer-events: auto;
+    border-bottom: rem(.1) solid transparent;
+
+    &:after {
+      content: "\00a0\f105";
+      font-family: $font-awesome;
+      color: $color;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline-offset: rem(.2);
+    }
+  }
+}
