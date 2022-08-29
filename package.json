@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "monorepo-dev",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -9,5 +9,6 @@
   },
   "dependencies": {
     "yarn": "^1.22.19"
-  }
+  },
+  "packageManager": "yarn@3.2.2"
 }
