@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/grid-dev",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "> TODO: description",
   "author": "Zachary Ishler <zri5004@psu.edu>",
   "homepage": "https://github.com/PSU-OOE/monorepo-dev#readme",
@@ -9,13 +9,6 @@
   "ooe": {
     "namespace": "global"
   },
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
-  "files": [
-    "lib"
-  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
