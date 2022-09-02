@@ -1313,9 +1313,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/base-dev@workspace:packages/base-dev":
+"@psu-ooe/base-dev@workspace:packages/base":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/base-dev@workspace:packages/base-dev"
+  resolution: "@psu-ooe/base-dev@workspace:packages/base"
   languageName: unknown
   linkType: soft
 
@@ -1332,6 +1332,7 @@ __metadata:
     gulp: ^4.0
     gulp-cli: ^2.3.0
     gulp-concat: ^2.6.1
+    gulp-htmlmin: ^5.0.1
     gulp-sass: ^5.0
     gulp-sass-bulk-import: ^1.0.1
     gulp-sourcemaps: ^3.0
@@ -2151,6 +2152,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"camel-case@npm:3.0.x":
+  version: 3.0.0
+  resolution: "camel-case@npm:3.0.0"
+  dependencies:
+    no-case: ^2.2.0
+    upper-case: ^1.1.1
+  checksum: 4190ed6ab8acf4f3f6e1a78ad4d0f3f15ce717b6bfa1b5686d58e4bcd29960f6e312dd746b5fa259c6d452f1413caef25aee2e10c9b9a580ac83e516533a961a
+  languageName: node
+  linkType: hard
+
 "camelcase-keys@npm:^6.2.2":
   version: 6.2.2
   resolution: "camelcase-keys@npm:6.2.2"
@@ -2286,6 +2297,15 @@ __metadata:
     isobject: ^3.0.0
     static-extend: ^0.1.1
   checksum: be108900801e639e50f96a7e4bfa8867c753a7750a7603879f3981f8b0a89cba657497a2d5f40cd4ea557ff15d535a100818bb486baf6e26fe5d7872e75f1078
+  languageName: node
+  linkType: hard
+
+"clean-css@npm:4.2.x":
+  version: 4.2.4
+  resolution: "clean-css@npm:4.2.4"
+  dependencies:
+    source-map: ~0.6.0
+  checksum: 045ff6fcf4b5c76a084b24e1633e0c78a13b24080338fc8544565a9751559aa32ff4ee5886d9e52c18a644a6ff119bd8e37bc58e574377c05382a1fb7dbe39f8
   languageName: node
   linkType: hard
 
@@ -2561,10 +2581,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:2.17.x":
+  version: 2.17.1
+  resolution: "commander@npm:2.17.1"
+  checksum: 22e7ed5b422079a13a496e5eb8f73f36c15b5809d46f738e168e20f9ad485c12951bdc2cb366a36eb5f4927dae4f17b355b8adb96a5b9093f5fa4c439e8b9419
+  languageName: node
+  linkType: hard
+
 "commander@npm:^2.20.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
   checksum: ab8c07884e42c3a8dbc5dd9592c606176c7eb5c1ca5ff274bcf907039b2c41de3626f684ea75ccf4d361ba004bbaff1f577d5384c155f3871e456bdf27becf9e
+  languageName: node
+  linkType: hard
+
+"commander@npm:~2.19.0":
+  version: 2.19.0
+  resolution: "commander@npm:2.19.0"
+  checksum: d52ffb0b31528784005356f879591b5a4875d3e88806c115fb30a8de0994d2fa9ca3f72a3cb880cdaf1bfb9df185f928cfcbbc656fa831f9c6109a209569ef6d
   languageName: node
   linkType: hard
 
@@ -4458,6 +4492,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gulp-htmlmin@npm:^5.0.1":
+  version: 5.0.1
+  resolution: "gulp-htmlmin@npm:5.0.1"
+  dependencies:
+    html-minifier: ^3.5.20
+    plugin-error: ^1.0.1
+    through2: ^2.0.3
+  checksum: 23cee11483b156813721d1826a60c7470ea7c6fd88009f1d191d419c05e518d2f8f90b700dffe83a0699775ea996d84f0ce95126e678d5b9e5e4d6a621ff99a9
+  languageName: node
+  linkType: hard
+
 "gulp-sass-bulk-import@npm:^1.0.1":
   version: 1.0.1
   resolution: "gulp-sass-bulk-import@npm:1.0.1"
@@ -4702,6 +4747,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"he@npm:1.2.x":
+  version: 1.2.0
+  resolution: "he@npm:1.2.0"
+  bin:
+    he: bin/he
+  checksum: 3d4d6babccccd79c5c5a3f929a68af33360d6445587d628087f39a965079d84f18ce9c3d3f917ee1e3978916fc833bb8b29377c3b403f919426f91bc6965e7a7
+  languageName: node
+  linkType: hard
+
 "homedir-polyfill@npm:^1.0.1":
   version: 1.0.3
   resolution: "homedir-polyfill@npm:1.0.3"
@@ -4742,6 +4796,23 @@ __metadata:
   dependencies:
     lru-cache: ^7.5.1
   checksum: 22abbc6a7418344c883e2df6e791e94b38192b2a61256b19c955999d878b8d5365ea51683fd1f0cc8f217e9bd121db88d5aaa7cf0407c4b7ff287b79aabacbd3
+  languageName: node
+  linkType: hard
+
+"html-minifier@npm:^3.5.20":
+  version: 3.5.21
+  resolution: "html-minifier@npm:3.5.21"
+  dependencies:
+    camel-case: 3.0.x
+    clean-css: 4.2.x
+    commander: 2.17.x
+    he: 1.2.x
+    param-case: 2.1.x
+    relateurl: 0.2.x
+    uglify-js: 3.4.x
+  bin:
+    html-minifier: ./cli.js
+  checksum: 66a86841a8b919a11a13d9b80176845cfbc5dda6e88efea2cf312ecc07427d9eab4aca70537357583e5e66ee1e62da14e035792eea000f8f3a9ca1856b2fb2b2
   languageName: node
   linkType: hard
 
@@ -5957,6 +6028,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lower-case@npm:^1.1.1":
+  version: 1.1.4
+  resolution: "lower-case@npm:1.1.4"
+  checksum: 1ca9393b5eaef94a64e3f89e38b63d15bc7182a91171e6ad1550f51d710ec941540a065b274188f2e6b4576110cc2d11b50bc4bb7c603a040ddeb1db4ca95197
+  languageName: node
+  linkType: hard
+
 "lru-cache@npm:2":
   version: 2.7.3
   resolution: "lru-cache@npm:2.7.3"
@@ -6509,6 +6587,15 @@ __metadata:
   version: 1.1.0
   resolution: "next-tick@npm:1.1.0"
   checksum: 83b5cf36027a53ee6d8b7f9c0782f2ba87f4858d977342bfc3c20c21629290a2111f8374d13a81221179603ffc4364f38374b5655d17b6a8f8a8c77bdea4fe8b
+  languageName: node
+  linkType: hard
+
+"no-case@npm:^2.2.0":
+  version: 2.3.2
+  resolution: "no-case@npm:2.3.2"
+  dependencies:
+    lower-case: ^1.1.1
+  checksum: 856487731936fef44377ca74fdc5076464aba2e0734b56a4aa2b2a23d5b154806b591b9b2465faa59bb982e2b5c9391e3685400957fb4eeb38f480525adcf3dd
   languageName: node
   linkType: hard
 
@@ -7196,6 +7283,15 @@ __metadata:
   bin:
     pacote: lib/bin.js
   checksum: a7b7f97094ab570a23e1c174537e9953a4d53176cc4b18bac77d7728bd89e2b9fa331d0f78fa463add03df79668a918bbdaa2750819504ee39242063abf53c6e
+  languageName: node
+  linkType: hard
+
+"param-case@npm:2.1.x":
+  version: 2.1.1
+  resolution: "param-case@npm:2.1.1"
+  dependencies:
+    no-case: ^2.2.0
+  checksum: 3a63dcb8d8dc7995a612de061afdc7bb6fe7bd0e6db994db8d4cae999ed879859fd24389090e1a0d93f4c9207ebf8c048c870f468a3f4767161753e03cb9ab58
   languageName: node
   linkType: hard
 
@@ -7898,6 +7994,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"relateurl@npm:0.2.x":
+  version: 0.2.7
+  resolution: "relateurl@npm:0.2.7"
+  checksum: 5891e792eae1dfc3da91c6fda76d6c3de0333a60aa5ad848982ebb6dccaa06e86385fb1235a1582c680a3d445d31be01c6bfc0804ebbcab5aaf53fa856fde6b6
+  languageName: node
+  linkType: hard
+
 "remove-bom-buffer@npm:^3.0.0":
   version: 3.0.0
   resolution: "remove-bom-buffer@npm:3.0.0"
@@ -8492,7 +8595,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map@npm:^0.6.0, source-map@npm:^0.6.1":
+"source-map@npm:^0.6.0, source-map@npm:^0.6.1, source-map@npm:~0.6.0, source-map@npm:~0.6.1":
   version: 0.6.1
   resolution: "source-map@npm:0.6.1"
   checksum: 59ce8640cf3f3124f64ac289012c2b8bd377c238e316fb323ea22fbfe83da07d81e000071d7242cad7a23cd91c7de98e4df8830ec3f133cb6133a5f6e9f67bc2
@@ -9262,6 +9365,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uglify-js@npm:3.4.x":
+  version: 3.4.10
+  resolution: "uglify-js@npm:3.4.10"
+  dependencies:
+    commander: ~2.19.0
+    source-map: ~0.6.1
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: dfc61c85b0660216432e021aac6a5f3ea0331720003d4d929b95f297daceb73bc9615875ca150516b49bc57ab60d3cf32415fc006cccf20f275c806f6686da0d
+  languageName: node
+  linkType: hard
+
 "uglify-js@npm:^3.1.4":
   version: 3.17.0
   resolution: "uglify-js@npm:3.17.0"
@@ -9404,6 +9519,13 @@ __metadata:
   version: 2.0.1
   resolution: "upath@npm:2.0.1"
   checksum: 2db04f24a03ef72204c7b969d6991abec9e2cb06fb4c13a1fd1c59bc33b46526b16c3325e55930a11ff86a77a8cbbcda8f6399bf914087028c5beae21ecdb33c
+  languageName: node
+  linkType: hard
+
+"upper-case@npm:^1.1.1":
+  version: 1.1.3
+  resolution: "upper-case@npm:1.1.3"
+  checksum: 991c845de75fa56e5ad983f15e58494dd77b77cadd79d273cc11e8da400067e9881ae1a52b312aed79b3d754496e2e0712e08d22eae799e35c7f9ba6f3d8a85d
   languageName: node
   linkType: hard
 

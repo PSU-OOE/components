@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
     "yarn": "^1.22.19"
   },
   "packageManager": "yarn@3.2.3",

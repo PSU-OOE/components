@@ -1,0 +1,28 @@
+{% set viewboxes = {
+  'blog': '0 0 448 448',
+  'community-shield': '0 0 1033.5 1143.1',
+  'ellipsis-h': '0 0 512 512',
+  'envelope': '0 0 512 512',
+  'fa-angle-up': '0 0 320 512',
+  'fa-filter-solid': '0 0 512 512',
+  'fa-plus-circle': '0 0 512 512',
+  'fas-plus': '0 0 448 512',
+  'fas-chevron-down': '0 0 448 512',
+  'fas-chevron-right': '0 0 320 512',
+  'fas-chevron-up': '0 0 448 512',
+  'facebook': '0 0 448 448',
+  'flickr': '0 0 448 448',
+  'instagram': '0 0 448 448',
+  'linkedin': '0 0 448 448',
+  'pinterest': '0 0 448 448',
+  'phone': '0 0 512 512',
+  'psu-mark': '0 0 259.5 81.7',
+  'twitter': '0 0 448 448',
+  'youtube': '0 0 448 448',
+  'wc-mark': '0 0 229 72',
+} %}
+{% apply spaceless %}
+  <svg class="sprite sprite--{{ name }}" aria-hidden="true" viewBox="{{ viewboxes[name] }}">
+    <use xlink:href="#{{ name }}" />
+  </svg>
+{% endapply %}

@@ -1,12 +1,12 @@
+const fs = require('fs');
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const bulkSass = require('gulp-sass-bulk-import');
 const sourcemaps = require('gulp-sourcemaps');
 const svgSprite = require('gulp-svg-sprite');
 const uglify = require('gulp-uglify-es').default;
-
+const htmlmin = require('gulp-htmlmin');
 const components = function(done) {
-  const fs = require('fs');
   const components = fs.readdirSync('packages').filter(function(file) {
     return fs.statSync('packages/' + file).isDirectory();
   });
@@ -40,7 +40,7 @@ const components = function(done) {
 
 const sprites = function(done) {
 
-  gulp.src('packages/sprite/src/*.svg')
+  gulp.src('packages/sprite/src/assets/*.svg')
     .pipe(svgSprite({
       svg: {
         namespaceIDs: false,
@@ -57,7 +57,12 @@ const sprites = function(done) {
         transform: [],
       }
     }))
-    .pipe(gulp.dest('packages/sprite/dist'));
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('packages/sprite/dist'))
+    .on('end', () => {
+      fs.copyFileSync('packages/sprite/dist/defs/svg/sprite.defs.svg', 'packages/sprite/dist/sprites.svg');
+      fs.rmdirSync('packages/sprite/dist/defs/', { recursive: true });
+    });
 
   done();
 };
