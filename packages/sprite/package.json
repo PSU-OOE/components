@@ -1,15 +1,15 @@
 {
-  "name": "@psu-ooe/base",
+  "name": "@psu-ooe/sprite",
   "version": "1.0.0",
-  "description": "The base styles for the OOE design system.",
+  "description": "Provides lightweight and efficient imagery.",
   "ooe": {
-    "namespace": "global"
+    "namespace": "atoms"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/webfonts": "^1.0"
+    "@psu-ooe/base": "^1.0"
   }
 }

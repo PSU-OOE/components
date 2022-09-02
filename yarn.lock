@@ -1307,21 +1307,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@psu-ooe/accordion-dev@workspace:packages/accordion-dev":
+"@psu-ooe/base@^1.0, @psu-ooe/base@workspace:packages/base":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/accordion-dev@workspace:packages/accordion-dev"
-  languageName: unknown
-  linkType: soft
-
-"@psu-ooe/base-dev@workspace:packages/base":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/base-dev@workspace:packages/base"
-  languageName: unknown
-  linkType: soft
-
-"@psu-ooe/grid-dev@workspace:packages/grid-dev":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/grid-dev@workspace:packages/grid-dev"
+  resolution: "@psu-ooe/base@workspace:packages/base"
+  dependencies:
+    "@psu-ooe/webfonts": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1345,7 +1335,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/webfonts@workspace:packages/webfonts":
+"@psu-ooe/sprite@workspace:packages/sprite":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/sprite@workspace:packages/sprite"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/webfonts@^1.0, @psu-ooe/webfonts@workspace:packages/webfonts":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/webfonts@workspace:packages/webfonts"
   languageName: unknown
