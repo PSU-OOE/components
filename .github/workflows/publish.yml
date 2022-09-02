@@ -17,8 +17,8 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://npm.pkg.github.com'
-#      - run: npm i -g corepack
-#      - run: corepack enable
+      - run: npm i -g corepack
+      - run: corepack enable
 #      - run: yarn init -2
 #      - run: yarn plugin import workspace-tools
       - run: yarn install
