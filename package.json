@@ -1,11 +1,11 @@
 {
   "name": "monorepo-dev",
   "private": true,
-  "workspaces": [
+  "workspaces": {
     "packages": [
       "packages/*"
     ]
-  ],
+  },
   "devDependencies": {
     "lerna": "^5.4.2",
     "gulp": "^4.0",
