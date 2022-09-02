@@ -16,9 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-      - run: echo "@{{OWNER}}:registry=https://npm.pkg.github.com/:_authToken={{NPM_TOKEN}}" > .npmrc
-        env:
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo "@{{OWNER}}:registry=https://npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
       - run: cat .npmrc
 #      - run: yarn install
 #      - run: yarn workspaces foreach install
