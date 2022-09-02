@@ -1,5 +1,5 @@
 {
-  "name": "monorepo-dev",
+  "name": "@psu-ooe/monorepo-dev",
   "version": "1.0.0",
   "workspaces": {
     "packages": [
