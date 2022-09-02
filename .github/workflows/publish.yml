@@ -18,12 +18,6 @@ jobs:
           node-version: '16.x'   
       - run: echo "npmRegistries:" >> .yarnrc
       - run: echo '  \"https://npm.pkg.github.com\":' >> .yarnrc
-      - run: echo '    npmAuthToken: @{{secrets.GITHUB_TOKEN}}' >> .yarnrc
-      - run: echo '    npmAlwaysAuth: true' >> .yarnrc
-      - run: echo 'npmScopes:' >> .yarnrc
-      - run: echo '  psu-ooe:' >> .yarnrc
-      - run: echo '    npmAlwaysAuth: true' >> .yarnrc
-      - run: echo '    npmRegistryServer: "https://npm.pkg.github.com"' >> .yarnrc
       - run: cat .yarnrc
 #      - run: yarn install
 #      - run: yarn workspaces foreach install
