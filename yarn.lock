@@ -1325,6 +1325,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/monorepo-dev@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/monorepo-dev@workspace:."
+  dependencies:
+    gulp: ^4.0
+    gulp-cli: ^2.3.0
+    gulp-concat: ^2.6.1
+    gulp-sass: ^5.0
+    gulp-sass-bulk-import: ^1.0.1
+    gulp-sourcemaps: ^3.0
+    gulp-svg-sprite: ^1.5.0
+    gulp-uglify-es: ^3.0.0
+    lerna: ^5.4.2
+    sass: ^1.52.1
+    svg-sprite: ^1.5.4
+    yarn: ^1.22.19
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/webfonts@workspace:packages/webfonts":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/webfonts@workspace:packages/webfonts"
@@ -6379,25 +6398,6 @@ __metadata:
   checksum: 8296610c608bc97b03c2cf889c6cdf4517e32fa2d836440096374c2209f6b7b3e256c209493a0b32584b9cb32d528e99d0dd19dcd9a14d2d915a312d391cc7e9
   languageName: node
   linkType: hard
-
-"monorepo-dev@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "monorepo-dev@workspace:."
-  dependencies:
-    gulp: ^4.0
-    gulp-cli: ^2.3.0
-    gulp-concat: ^2.6.1
-    gulp-sass: ^5.0
-    gulp-sass-bulk-import: ^1.0.1
-    gulp-sourcemaps: ^3.0
-    gulp-svg-sprite: ^1.5.0
-    gulp-uglify-es: ^3.0.0
-    lerna: ^5.4.2
-    sass: ^1.52.1
-    svg-sprite: ^1.5.4
-    yarn: ^1.22.19
-  languageName: unknown
-  linkType: soft
 
 "ms@npm:2.0.0":
   version: 2.0.0
