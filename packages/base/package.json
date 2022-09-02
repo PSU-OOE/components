@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/base-dev",
+  "version": "1.0.0",
+  "description": "The base styles for the OOE design system.",
+  "ooe": {
+    "namespace": "global"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
