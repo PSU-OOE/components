@@ -6,35 +6,15 @@
   ],
   "devDependencies": {
     "lerna": "^5.4.2",
-    "@lhci/cli": "^0.9.0",
-    "@pattern-lab/cli": "^5.16.2",
-    "@pattern-lab/core": "^5.16.2",
-    "@pattern-lab/engine-twig-php": "^5.16.2",
-    "@pattern-lab/uikit-workshop": "^5.16.2",
-    "@wdio/browserstack-service": "^7.0",
-    "@wdio/cli": "^7.0",
-    "@wdio/local-runner": "^7.0",
-    "@wdio/mocha-framework": "^7.0",
-    "@wdio/spec-reporter": "^7.0",
-    "browserstack-local": "^1.5.1",
-    "chai": "^4.3.6",
-    "expect": "^28.0",
-    "expect-webdriverio": "^3.0",
-    "git-branch": "^2.0.1",
     "gulp": "^4.0",
     "gulp-cli": "^2.3.0",
     "gulp-sass": "^5.0",
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-sourcemaps": "^3.0",
-    "gulp-stripbom": "^1.0.5",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^3.0.0",
     "sass": "^1.52.1",
-    "svg-sprite": "^1.5.4",
-    "vinyl": "^2.2.1",
-    "vinyl-buffer": "^1.0.0",
-    "wdio-image-comparison-service": "^3.0",
-    "webdriverio": "^7.0"
+    "svg-sprite": "^1.5.4"
   },
   "dependencies": {
     "yarn": "^1.22.19",
@@ -42,7 +22,7 @@
   },
   "packageManager": "yarn@3.2.2",
   "scripts": {
-    "build": "gulp dist && patternlab build --config ./patternlab-config.json"
+    "build": "gulp dist"
   },
   "default": {
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
