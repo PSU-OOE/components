@@ -32,4 +32,4 @@ jobs:
       - run: yarn install
       - run: yarn workspaces foreach install
       - run: npm run build
-      - run: yarn workspaces foreach npm publish --tolerate-republish
+      - run: yarn workspaces foreach --no-private npm publish --tolerate-republish
