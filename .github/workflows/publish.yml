@@ -16,10 +16,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-          registry-url: https://npm.pkg.github.com/:_authToken={{NPM_TOKEN}}
+      - run: echo "@{{OWNER}}:registry=https://npm.pkg.github.com/:_authToken={{NPM_TOKEN}}" > .npmrc
         env:
           NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: yarn install
-      - run: yarn workspaces foreach install
-      - run: npm run build
-      - run: yarn workspaces foreach npm publish --tolerate-republish
+      - run: cat .npmrc
+#      - run: yarn install
+#      - run: yarn workspaces foreach install
+#      - run: npm run build
+#      - run: yarn workspaces foreach npm publish --tolerate-republish
