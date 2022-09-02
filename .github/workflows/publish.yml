@@ -24,7 +24,7 @@ jobs:
       - run: echo '  psu-ooe:' >> .yarnrc.yml
       - run: echo '    npmAlwaysAuth:true' >> .yarnrc.yml
       - run: echo '    npmRegistryServer:"https://npm.pkg.github.com"' >> .yarnrc.yml
-      - run: cat .yarnrc
+      - run: cat .yarnrc.yml
 #      - run: yarn install
 #      - run: yarn workspaces foreach install
 #      - run: npm run build
