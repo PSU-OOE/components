@@ -23,7 +23,7 @@ jobs:
       - run: echo -n '    npmAlwaysAuth:' >> .yarnrc.yml
       - run: echo ' true' >> .yarnrc.yml
       - run: echo 'npmScopes:' >> .yarnrc.yml
-      - run: echo '  - psu-ooe:' >> .yarnrc.yml
+      - run: echo '  psu-ooe:' >> .yarnrc.yml
       - run: echo -n '    npmAlwaysAuth:' >> .yarnrc.yml
       - run: echo ' true' >> .yarnrc.yml
       - run: echo -n '    npmRegistryServer:' >> .yarnrc.yml
