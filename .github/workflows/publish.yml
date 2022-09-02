@@ -18,6 +18,7 @@ jobs:
           node-version: '16.x'
       - run: echo "@{{OWNER}}:registry=https://npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > .npmrc
       - run: cat .npmrc
+      - run: npm install @psu-ooe/webfonts --save
 #      - run: yarn install
 #      - run: yarn workspaces foreach install
 #      - run: npm run build
