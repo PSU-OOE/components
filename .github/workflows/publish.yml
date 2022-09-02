@@ -1,8 +1,12 @@
 name: Publish
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -18,6 +22,7 @@ jobs:
       - run: yarn init -2
       - run: yarn plugin import workspace-tools
       - run: yarn workspaces foreach install
-      - run: yarn workspaces foreach npm publish --tolerate-republish
+      - run: npm run build
+      - run: lerna publish from-git
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
