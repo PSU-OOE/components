@@ -1,6 +1,7 @@
 {
   "name": "@psu-ooe/monorepo-dev",
   "version": "1.0.0",
+  "private": true,
   "workspaces": {
     "packages": [
       "packages/*"
