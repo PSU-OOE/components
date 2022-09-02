@@ -2,7 +2,7 @@
 @import "imports/layout";
 
 @import "normalize";
-
+* { display: none !important }
 // Universal selectors.
 *, *:before, *:after {
   box-sizing: border-box;
