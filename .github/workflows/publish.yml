@@ -17,7 +17,9 @@ jobs:
         with:
           node-version: '16.x'   
       - run: echo "npmRegistries:" >> .yarnrc.yml
-      - run: echo '  "https://npm.pkg.github.com":{' >> .yarnrc.yml
+      - run: echo '  "https://npm.pkg.github.com"' >> .yarnrc.yml
+      - run: echo -n ':' >> .yarnrc.yml
+      - run: echo -n ' {' >> .yarnrc.yml
       - run: echo '    npmAuthToken:${{secrets.GITHUB_TOKEN}}' >> .yarnrc.yml
       - run: echo '    npmAlwaysAuth:true' >> .yarnrc.yml
       - run: echo '  }' >> .yarnrc.yml
