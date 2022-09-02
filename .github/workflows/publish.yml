@@ -16,14 +16,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-          registry-url: 'https://npm.pkg.github.com'
-#      - run: npm i -g corepack
-#      - run: corepack enable
-#      - run: yarn init -2
-#      - run: yarn plugin import workspace-tools
+          registry-url: https://npm.pkg.github.com/:_authToken={{NPM_TOKEN}}
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: yarn install
       - run: yarn workspaces foreach install
       - run: npm run build
       - run: yarn workspaces foreach npm publish --tolerate-republish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
