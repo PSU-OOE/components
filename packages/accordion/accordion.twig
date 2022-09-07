@@ -1,0 +1,25 @@
+{% set classes = ['accordion'] %}
+
+{% if expanded %}
+  {% set classes = classes|merge(['accordion--expanded']) %}
+{% endif %}
+
+{% if borderless %}
+  {% set classes = classes|merge(['accordion--borderless']) %}
+{% endif %}
+
+<div class="{{ classes|join(' ') }}">
+  {% if heading_level %}
+    <{{ heading_level }} class="accordion__heading">
+  {% endif %}
+  <button class="accordion__button" aria-expanded="{{ expanded ? 'true' : 'false' }}" aria-controls="{{ id }}">
+    <span class="accordion__label">{{ label }}</span>
+    {% include '@atoms/sprite/sprite.twig' with { name: 'fas-plus'} only %}
+  </button>
+  {% if heading_level %}
+    </{{ heading_level }}>
+  {% endif %}
+  <div class="accordion__expandable-content" id="{{ id }}" {% if not expanded %} style="height:0; overflow:hidden"{% endif %}>
+    {{ expandable_content }}
+  </div>
+</div>

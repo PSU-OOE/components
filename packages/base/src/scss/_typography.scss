@@ -1,0 +1,122 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 rem(2);
+}
+
+h1, .heading--xlarge {
+  color: $beaver-blue;
+  font-size: rem(4.2);
+  font-weight: 400;
+  letter-spacing: -.0294em;
+  line-height: rem(4.8);
+
+  &.heading--flush {
+    margin-top: rem(-.7);
+  }
+}
+
+h2, .heading--large {
+  color: $primary-blue;
+  font-size: rem(3.4);
+  font-weight: 400;
+  letter-spacing: -.0294em;
+  line-height: calc(4 / 3.4);
+
+  &.heading--flush {
+    margin-top: rem(-.7);
+  }
+}
+
+h3, .heading--medium {
+  color: $nittany-navy;
+  font-size: rem(2.2);
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: calc(2.8 / 2.2);
+
+  &.heading--flush {
+    margin-top: rem(-.6);
+  }
+}
+
+h4, .heading--small {
+  color: $nittany-navy;
+  font-size: rem(1.8);
+  font-weight: 700;
+  letter-spacing: normal;
+  line-height: calc(2.4 / 1.8);
+
+  &.heading--flush {
+    margin-top: rem(-.5);
+  }
+}
+
+h5, .heading--xsmall {
+  color: $nittany-navy;
+  font-size: rem(1.6);
+  font-weight: 700;
+  line-height: calc(2.2 / 1.6);
+  letter-spacing: normal;
+
+  &.heading--flush {
+    margin-top: rem(-.4);
+  }
+}
+
+.heading--neutral {
+  color: $slate;
+}
+
+// @TODO: Eventually, get away from defining font sizing in here.
+.heading--hr {
+  display: flex;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .075em;
+  color: $slate;
+  font-weight: 600;
+  font-family: $open-sans;
+  font-size: rem(1.4);
+  line-height: rem(2.1);
+
+  &::before,
+  &::after {
+    border-bottom: rem(.1) dotted rgba(0,30,68,.25);;
+    content: " ";
+    flex: 1;
+    margin: auto 0;
+  }
+
+  &::before {
+    margin-right: rem(.5);
+  }
+
+  &::after {
+    margin-left: rem(.5);
+  }
+}
+
+p {
+  color: $font-color-default;
+  font-size: rem(1.6);
+  line-height: rem(3);
+  margin: 0 0 rem(2);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.text--contrasting {
+  font-weight: 800;
+  color: rgba($nittany-navy, .5);
+  letter-spacing: -.0294em;
+}
+
+// Increase the opacity for a11y reasons.
+h4, .heading--small,
+h5, .heading--xsmall,
+h6 {
+  .text--contrasting {
+    color: rgba($nittany-navy, .62);
+  }
+}

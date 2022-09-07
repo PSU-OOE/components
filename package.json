@@ -1,0 +1,34 @@
+{
+  "name": "@psu-ooe/monorepo-dev",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "gulp": "^4.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^5.0",
+    "gulp-sass-bulk-import": "^1.0.1",
+    "gulp-sourcemaps": "^3.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify-es": "^3.0.0",
+    "lerna": "^5.4.2",
+    "sass": "^1.52.1",
+    "svg-sprite": "^1.5.4"
+  },
+  "dependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "yarn": "^1.22.19"
+  },
+  "packageManager": "yarn@3.2.3",
+  "scripts": {
+    "build": "gulp dist"
+  },
+  "default": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  }
+}

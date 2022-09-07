@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/slide-toggle",
+  "version": "1.0.0",
+  "description": "Provides a light-weight, performant slide toggle replacement.",
+  "ooe": {
+    "namespace": "global"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

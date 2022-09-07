@@ -1,0 +1,30 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'   
+      - run: echo "npmRegistries:" >> .yarnrc.yml
+      - run: echo '  "https://npm.pkg.github.com":' >> .yarnrc.yml
+      - run: echo -n '    npmAuthToken:' >> .yarnrc.yml
+      - run: echo ' ${{secrets.GITHUB_TOKEN}}' >> .yarnrc.yml
+      - run: echo -n '    npmAlwaysAuth:' >> .yarnrc.yml
+      - run: echo ' true' >> .yarnrc.yml
+      - run: echo 'npmScopes:' >> .yarnrc.yml
+      - run: echo '  psu-ooe:' >> .yarnrc.yml
+      - run: echo -n '    npmAlwaysAuth:' >> .yarnrc.yml
+      - run: echo ' true' >> .yarnrc.yml
+      - run: echo -n '    npmRegistryServer:' >> .yarnrc.yml
+      - run: echo ' "https://npm.pkg.github.com"' >> .yarnrc.yml
+      - run: yarn install
+      - run: yarn workspaces foreach install
+      - run: npm run build
+      - run: yarn workspaces foreach --no-private npm publish --tolerate-republish

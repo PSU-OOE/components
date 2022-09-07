@@ -1,0 +1,202 @@
+// @TODO: Tables have known a11y issues.
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: rem(3);
+  margin-top: rem(1);
+
+  caption {
+    background: transparent;
+    padding: 0;
+    margin: 0 0 rem(2) 0;
+  }
+
+  caption span.h2 {
+    font-size: rem(2.6);
+    line-height: rem(3.2);
+    letter-spacing: rem(-.01);
+    color: $primary-blue;
+    text-align: left;
+    font-weight: 400;
+  }
+
+  caption span.h4 {
+    font-size: rem(1.8);
+    line-height: rem(2.4);
+    clear: both;
+    font-family: $open-sans;
+    color: $nittany-navy;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  th, td {
+    padding: rem(1);
+    border: rem(.1) solid $medium-grey;
+    text-align: left;
+    min-width: rem(10);
+    vertical-align: top;
+  }
+
+  th {
+    background: transparent;
+
+    &, & p {
+      font-size: rem(1.6);
+      line-height: rem(1.8);
+      font-weight: 700;
+      color: $primary-blue;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    &.st-head-row:not(.st-head-row-main) {
+      &, & p {
+        font-size: rem(1.4);
+        line-height: rem(2.2);
+        color: $nittany-navy;
+        font-weight: 600;
+      }
+    }
+  }
+
+  td {
+    &, & p {
+      font-size: rem(1.4);
+      line-height: rem(2.2);
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      strong {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+table.small-only {
+
+  display: table;
+
+  @include bp(m) {
+    display: none;
+  }
+
+  margin-top: rem(1);
+  border-top: rem(.1) solid $medium-grey;
+
+  tr {
+    border: rem(.1) solid $medium-grey;
+    border-top: none;
+    display: block;
+
+    th {
+      width: 100%;
+      display: block;
+      border: none;
+    }
+
+    td {
+      border: none;
+    }
+
+    &.show td {}
+
+    &.row-data {
+      border-bottom: none;
+
+      &.show {
+        display: block;
+
+        & + .row-heading {
+          border-top: rem(.1) solid $medium-grey;
+        }
+      }
+    }
+  }
+
+  tr.show:last-child {
+    border-bottom: rem(.1) solid $medium-grey;
+  }
+}
+
+table.large-only {
+  display: none;
+
+  @include bp(m) {
+    display: table;
+  }
+
+  margin: rem(3) 0;
+}
+
+tr:not(:first-of-type) .st-head-row {
+  position: relative;
+  padding-right: rem(4);
+  cursor: pointer;
+
+  &:after {
+    font-size: rem(1.4);
+    content: "\f067";
+    font-weight: 200;
+    font-family: $font-awesome;
+    color: $primary-blue;
+    position: absolute;
+    right: rem(1.5);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform .1s ease-in-out;
+  }
+}
+
+// Table support styles
+p .footnote {
+  font-size: rem(1.4) !important;
+  line-height: rem(2.2) !important;
+  display: block;
+}
+
+table + p .footnote {
+  margin-top: rem(-4);
+}
+
+table + p + p .footnote {
+  margin-top: rem(-2);
+}
+
+// Responsive Tables
+
+.show {
+  .st-key,
+  .st-val {
+    display: block;
+    border: none;
+  }
+
+  .st-key {
+    padding-bottom: 0;
+
+    &, & p {
+      color: $primary-blue;
+      font-weight: 700;
+    }
+  }
+
+  .st-val {
+    padding-top: 0;
+  }
+}
+
+.show + .show {
+  .st-key {
+    padding-top: 0;
+  }
+}
+
+table .row-heading-active .st-head-row:after {
+  transform: translateY(-50%) rotate(45deg);
+}

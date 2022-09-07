@@ -1,0 +1,49 @@
+// Fonts
+$open-sans: 'Open Sans', sans-serif;
+$roboto-slab: 'Roboto Slab', Georgia, serif;
+$source-sans-pro: 'Source Sans Pro', serif;
+$font-awesome: 'Font Awesome 5 Pro';
+
+// Basic Colors
+$white: #FFF;
+$black: #000;
+
+// Penn State World Campus Colors
+$primary-blue:     #0064bf;
+$beaver-blue:      #1e407c;
+$nittany-navy:     #001e44;
+$true-blue:        #0057ae;
+$sky-blue:         #009cde;
+$pugh-blue:        #96bee6;
+$light-mauve:      #ebecf4;
+
+$light-grey:       #f2f3f9;
+$medium-grey:      #d8dbea;
+$medium-dark-grey: #687a8d;
+$slate:            #314d64;
+$slate-light:      #CCDAE6;
+
+$keystone:         #ffd100;
+$keystone-light:   #f9df70;
+
+$invent-orange: #E98300;
+$invent-orange-light: #fca917;
+
+// Tile nav
+$tile-nav-image-overlay: rgba(0, 100, 191, 0.75);
+$tile-nav-active: rgba(0,30,68, .75);
+
+$error-red: #dd3636;
+
+// Font Defaults
+$font-family-default: $open-sans;
+$font-color-default: $nittany-navy;
+
+// Image Path
+$img-path: "/themes/custom/worldcampus/images";
+
+$fa-font-path: '/themes/custom/worldcampus/webfonts/2021-04-12';
+$base-rem-scale: 1 !default;
+@function rem($base) {
+  @return unquote(($base * $base-rem-scale) + 'rem');
+}

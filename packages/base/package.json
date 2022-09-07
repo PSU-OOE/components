@@ -1,0 +1,15 @@
+{
+  "name": "@psu-ooe/base",
+  "version": "1.0.1",
+  "description": "The base styles for the OOE design system.",
+  "ooe": {
+    "namespace": "global"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/webfonts": "^1.0"
+  }
+}
