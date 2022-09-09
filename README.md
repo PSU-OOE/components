@@ -18,6 +18,18 @@
 - Add files to new package
 - Commit and push changes
 
+## Javascript Bootstrapping
+If components require Javascript, be sure to bootstrap properly.
+
+```
+(cms => {
+  cms.attach(context => {
+    // Component scripting starts here.
+  });
+})(cms);
+```
+Do not define global variables from component scripts.
+
 # Publishing Packages (CL)
 - `$ npm login --registry=https://npm.pkg.github.com --scope=@scope`
   - Uses personal access token, see more about token creation [here (GitHub Docs)](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) and [here (brief of token package permissions)](https://dev.to/xcanchal/monorepo-using-lerna-conventional-commits-and-github-packages-4m8m#authentication-in-github-packages-and-npm)
