@@ -1,11 +1,11 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
-  "devDependencies": {
+  "dependencies": {
     "@pattern-lab/cli": "^5.16.2",
     "@pattern-lab/core": "^5.16.2",
     "@pattern-lab/engine-twig-php": "^5.16.2",
