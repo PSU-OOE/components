@@ -1539,9 +1539,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/patternlab@workspace:packages/docs":
+"@psu-ooe/patternlab@workspace:packages/patternlab":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/patternlab@workspace:packages/docs"
+  resolution: "@psu-ooe/patternlab@workspace:packages/patternlab"
   dependencies:
     "@pattern-lab/cli": ^5.16.2
     "@pattern-lab/core": ^5.16.2

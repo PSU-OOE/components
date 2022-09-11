@@ -28,7 +28,8 @@
   },
   "packageManager": "yarn@3.2.3",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp",
+    "package": "gulp compile_all"
   },
   "default": {
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"

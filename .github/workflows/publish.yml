@@ -26,5 +26,5 @@ jobs:
       - run: echo ' "https://npm.pkg.github.com"' >> .yarnrc.yml
       - run: yarn install
       - run: yarn workspaces foreach install
-      - run: npm run build
+      - run: npm run package
       - run: yarn workspaces foreach --no-private npm publish --tolerate-republish
