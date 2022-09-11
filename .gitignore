@@ -1,3 +1,7 @@
+dependencyGraph.json
+packages/patternlab/public
+packages/patternlab/source/patterns/build.json
+
 # Logs
 logs
 *.log

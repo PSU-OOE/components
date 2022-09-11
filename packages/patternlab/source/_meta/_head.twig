@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+{#     {% include '@global/webfonts/webfonts.twig' with { base_directory: '/webfonts'} %}
+#}
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    {{ patternLabHead | raw }}
+    <!-- End Pattern Lab -->
+
+    <style>
+      {{ get_component_stylesheets() }}
+    </style>
+
+    <script>const cms = { attach: (component, callback) => callback(document) };</script>
+  </head>
+  <body class="{{ bodyClass }}">

@@ -1,21 +1,33 @@
-const fs = require('fs');
 const gulp = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const bulkSass = require('gulp-sass-bulk-import');
-const sourcemaps = require('gulp-sourcemaps');
-const svgSprite = require('gulp-svg-sprite');
-const uglify = require('gulp-uglify-es').default;
-const htmlmin = require('gulp-htmlmin');
-const components = function(done) {
+
+/**
+ * Updates a file which contains a random build ID.
+ *
+ * This update will trigger an automatic pattern lab rebuild.
+ */
+const update_build_id = done => {
+  require('fs').writeFileSync(
+    'packages/patternlab/source/patterns/build.json',
+    JSON.stringify({build_id: require('crypto').randomBytes(20).toString('hex')})
+  );
+  done();
+};
+
+/**
+ * Compiles SCSS sources into an optimized build artifact.
+ */
+const compile_scss = done => {
+  const fs = require('fs');
+  const bulkSass = require('gulp-sass-bulk-import');
+  const sass = require('gulp-sass')(require('sass'));
+  const sourcemaps = require('gulp-sourcemaps');
   const components = fs.readdirSync('packages').filter(function(file) {
-    return fs.statSync('packages/' + file).isDirectory();
+    return file !== 'patternlab';
   });
 
   components.forEach(function(component) {
-
     const dist = 'packages/' + component + '/dist';
 
-    // Compile the SCSS.
     gulp.src('packages/' + component + '/src/scss/*.scss')
       .pipe(sourcemaps.init())
       .pipe(bulkSass())
@@ -26,8 +38,23 @@ const components = function(done) {
       })).on('error', sass.logError)
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(dist));
+  });
+  done();
+};
 
-    // Compile the JS
+/**
+ * Compiles JS sources into an optimized build artifact.
+ */
+const compile_js = done => {
+  const fs = require('fs');
+  const uglify = require('gulp-uglify-es').default;
+  const components = fs.readdirSync('packages').filter(function(file) {
+    return file !== 'patternlab';
+  });
+
+  components.forEach(function(component) {
+    const dist = 'packages/' + component + '/dist';
+
     const js_src = 'packages/' + component + '/src/js/scripts.js';
     if (fs.existsSync(js_src)) {
       gulp.src(js_src)
@@ -38,7 +65,13 @@ const components = function(done) {
   done();
 };
 
-const sprites = function(done) {
+/**
+ * Compiles sprites into an optimized build artifact.
+ */
+const compile_sprites = function(done) {
+  const fs = require('fs');
+  const svgSprite = require('gulp-svg-sprite');
+  const htmlmin = require('gulp-htmlmin');
 
   gulp.src('packages/sprite/src/assets/*.svg')
     .pipe(svgSprite({
@@ -63,22 +96,75 @@ const sprites = function(done) {
       fs.copyFileSync('packages/sprite/dist/defs/svg/sprite.defs.svg', 'packages/sprite/dist/sprites.svg');
       fs.rmdirSync('packages/sprite/dist/defs/', { recursive: true });
     });
-
   done();
 };
 
-const watch = function() {
-  gulp.watch('packages/*/src/*', ['components']);
-  gulp.watch('packages/sprite/src/*', ['sprite']);
+/**
+ * Watches the sprite component for changes to SVG assets.
+ */
+const watch_sprites = () => {
+  gulp.watch(
+    'packages/sprite/src/assets',
+    gulp.series(compile_sprites, update_build_id)
+  );
 };
 
-gulp.task('default', gulp.series(
-  gulp.series(sprites, components, watch)
+/**
+ * Watches all components for changes to CSS assets.
+ */
+const watch_scss = () => {
+  gulp.watch(
+    'packages/*/src/scss/*',
+    gulp.series(compile_scss, update_build_id)
+  );
+};
+
+/**
+ * Watches all components for changes to JS assets.
+ */
+const watch_js = () => {
+  gulp.watch(
+    'packages/*/src/js/*',
+    gulp.series(compile_js, update_build_id)
+  );
+};
+
+/**
+ * Starts a local server instance of Pattern Lab and watches for changes.
+ */
+const watch_patternlab = () => {
+  require('gulp-run')('patternlab serve --config packages/patternlab/patternlab-config.json').exec();
+};
+
+
+gulp.task('update_build_id', update_build_id);
+
+gulp.task('compile_scss', gulp.series(compile_scss, update_build_id));
+gulp.task('compile_js', gulp.series(compile_js, update_build_id));
+gulp.task('compile_sprites', gulp.series(compile_sprites, update_build_id));
+
+gulp.task('compile_all', gulp.series(
+  gulp.parallel(
+    compile_scss,
+    compile_js,
+    compile_sprites
+  ),
+  update_build_id
 ));
 
-gulp.task('components', gulp.series(components));
-gulp.task('sprites', gulp.series(sprites));
-gulp.task('dist', gulp.parallel(
-  gulp.series(components),
-  gulp.series(sprites)
+gulp.task('default', gulp.series(
+  gulp.parallel(
+    compile_scss,
+    compile_js,
+    compile_sprites
+  ),
+  update_build_id,
+  gulp.parallel(
+    watch_scss,
+    watch_js,
+    watch_sprites,
+    watch_patternlab
+  )
 ));
+
+

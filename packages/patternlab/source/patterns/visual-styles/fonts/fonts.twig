@@ -1,0 +1,31 @@
+{%
+  set fonts = {
+    'Open Sans': {
+      'family' : "'Open Sans', sans-serif",
+      'weights' : ['400','600','700','800'],
+      'italics' : ['400', '600', '700']
+    },
+    'Roboto Slab': {
+      'family': "'Roboto Slab', Georgia, serif",
+      'weights' : ['300','400','700']
+    },
+    'Source Sans Pro': {
+      'family': "'Source Sans Pro', serif",
+      'weights' : ['400']
+    }
+  }
+%}
+<ul>
+    {% for name, style in fonts %}
+        {% for weight in style.weights %}
+            <li style="font-family: {{ style.family }}; font-weight: {{ weight }}">
+                {{ style.family }} - {{ weight}} - The quick brown fox jumps over the lazy dog
+            </li>
+            {% if weight in style.italics %}
+                <li style="font-family: {{ style.family }}; font-weight: {{ weight }}; font-style: italic">
+                    {{ style.family }} - {{ weight }} - italic - The quick brown fox jumps over the lazy dog
+                </li>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ul>

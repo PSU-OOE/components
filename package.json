@@ -8,25 +8,27 @@
     ]
   },
   "devDependencies": {
+    "@pattern-lab/cli": "^5.16.2",
+    "@pattern-lab/core": "^5.16.2",
+    "@pattern-lab/engine-twig-php": "^5.16.2",
+    "@pattern-lab/uikit-workshop": "^5.16.2",
     "gulp": "^4.0",
     "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-run": "^1.7.1",
     "gulp-sass": "^5.0",
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-sourcemaps": "^3.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^3.0.0",
-    "lerna": "^5.4.2",
     "sass": "^1.52.1",
-    "svg-sprite": "^1.5.4"
-  },
-  "dependencies": {
-    "gulp-concat": "^2.6.1",
-    "gulp-htmlmin": "^5.0.1",
+    "svg-sprite": "^1.5.4",
     "yarn": "^1.22.19"
   },
   "packageManager": "yarn@3.2.3",
   "scripts": {
-    "build": "gulp dist"
+    "build": "gulp"
   },
   "default": {
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"

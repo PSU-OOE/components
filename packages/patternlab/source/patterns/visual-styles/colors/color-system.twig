@@ -1,0 +1,63 @@
+{{ true_blue }}
+<style>
+.sg-colors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.sg-colors li {
+    -webkit-box-flex: 1;
+    -ms-flex: auto;
+    flex: auto;
+    padding: 0.3em;
+    margin: 0 0.5em 0.5em 0;
+    min-width: 5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.sg-swatch {
+    display: block;
+    height: 4em;
+    margin-bottom: 0.3em;
+    border-radius: 5px;
+}
+
+.sg-label {
+    font-size: 90%;
+    line-height: 1;
+}
+</style>
+{%
+    set colors = {
+    'primary blue': '#0064bf',
+    'beaver blue': '#1e407c',
+    'nittany navy': '#001e44',
+    'true blue': '#0056ae',
+    'pugh-blue': '#96bee6',
+    'light mauve': '#ebecf4',
+    'light grey': '#f2f3f9',
+    'medium grey': '#d8dbea',
+    'medium dark grey': '#687a8d',
+    'slate': '#314d64',
+    'slate light': '#ccdae6',
+    'keystone': '#ffd100',
+    'invent orange': '#e98300',
+    'invent orange light': '#fca917',
+}
+%}
+
+<p>The color foundation of Penn State Outreach and Online Education, based on Penn State branding guidelines.</p>
+<ul class="sg-colors grid grid--three-col">
+    {% for name,value in colors %}
+        <li>
+            <span class="sg-swatch" style="background: {{ value }};"></span>
+            <span class="sg-label">{{ name }} ({{ value }})</span>
+        </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,151 @@
+{
+  "cacheBust": true,
+  "cleanPublic": true,
+  "defaultPattern": "all",
+  "defaultShowPatternInfo": false,
+  "ishControlsHide": {
+    "s": false,
+    "m": false,
+    "l": false,
+    "full": false,
+    "random": true,
+    "disco": true,
+    "hay": false,
+    "mqs": false,
+    "find": false,
+    "views-all": false,
+    "views-annotations": false,
+    "views-code": false,
+    "views-new": false,
+    "tools-all": true,
+    "tools-docs": true
+  },
+  "ishViewportRange": {
+    "s": [
+      320,
+      549
+    ],
+    "m": [
+      550,
+      949
+    ],
+    "l": [
+      950,
+      1280
+    ]
+  },
+  "logLevel": "info",
+  "outputFileSuffixes": {
+    "rendered": ".rendered",
+    "rawTemplate": "",
+    "markupOnly": ".markup-only"
+  },
+  "paths": {
+    "source": {
+      "root": "packages/patternlab/source/",
+      "patterns": "packages/patternlab/source/patterns/",
+      "meta": "packages/patternlab/source/_meta/",
+      "data": "packages/patternlab/source/_data/",
+      "css": "packages/patternlab/source/css",
+      "js": "packages/patternlab/source/js",
+      "images": "packages/patternlab/source/images",
+      "fonts": "node_modules/@psu-ooe/webfonts/webfonts",
+      "annotations": "packages/patternlab/source/_annotations/",
+      "styleguide": "dist/",
+      "patternlabFiles": {
+        "general-header": "views/partials/general-header.mustache",
+        "general-footer": "views/partials/general-footer.mustache",
+        "patternSection": "views/partials/patternSection.mustache",
+        "patternSectionSubgroup": "views/partials/patternSectionSubgroup.mustache",
+        "viewall": "views/viewall.mustache"
+      }
+    },
+    "public": {
+      "root": "packages/patternlab/public/",
+      "patterns": "packages/patternlab/public/patterns/",
+      "data": "packages/patternlab/public/styleguide/data/",
+      "annotations": "packages/patternlab/public/annotations/",
+      "styleguide": "packages/patternlab/public/styleguide",
+      "css": "packages/patternlab/public/css/",
+      "js": "packages/patternlab/public/js",
+      "images": "packages/patternlab/public/images",
+      "fonts": "packages/patternlab/public/fonts"
+    }
+  },
+  "patternExtension": "twig",
+  "patternStateCascade": [
+    "inprogress",
+    "inreview",
+    "complete"
+  ],
+  "patternExportAll": false,
+  "patternExportDirectory": "pattern_exports",
+  "patternExportPatternPartials": [],
+  "patternExportPreserveDirectoryStructure": true,
+  "patternExportRaw": false,
+  "patternMergeVariantArrays": true,
+  "renderFlatPatternsOnViewAllPages": false,
+  "serverOptions": {
+    "wait": 1000
+  },
+  "starterkitSubDir": "dist",
+  "styleGuideExcludes": [],
+  "theme": {
+    "color": "light",
+    "density": "compact",
+    "layout": "horizontal",
+    "noViewAll": false,
+    "logo": {
+      "text": "",
+      "srcLight": "/images/psu-mark.svg",
+      "srcDark": "/images/psu-mark-white.svg",
+      "width": "192",
+      "height": "48"
+    }
+  },
+  "uikits": [
+    {
+      "name": "uikit-workshop",
+      "package": "@pattern-lab/uikit-workshop",
+      "outputDir": "",
+      "enabled": true,
+      "excludedPatternStates": [],
+      "excludedTags": []
+    }
+  ],
+  "engines": {
+    "twig": {
+      "namespaces": [
+        {
+          "id": "global",
+          "recursive": false,
+          "paths": [
+            "node_modules/@psu-ooe"
+          ]
+        },
+        {
+          "id": "atoms",
+          "recursive": false,
+          "paths": [
+            "node_modules/@psu-ooe"
+          ]
+        },
+        {
+          "id": "molecules",
+          "recursive": false,
+          "paths": [
+            "node_modules/@psu-ooe"
+          ]
+        }
+      ],
+      "alterTwigEnv": [
+        {
+          "file": "packages/patternlab/source/alter-twig.php",
+          "functions": [
+            "addCustomExtension"
+          ]
+        }
+      ]
+    }
+  }
+}

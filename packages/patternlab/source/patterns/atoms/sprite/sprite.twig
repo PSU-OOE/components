@@ -1,0 +1,27 @@
+{% set sprites = [
+    'blog',
+    'community-shield',
+    'ellipsis-h',
+    'envelope',
+    'fa-angle-up',
+    'fa-filter-solid',
+    'fa-plus-circle',
+    'fas-plus',
+    'fas-chevron-down',
+    'fas-chevron-right',
+    'fas-chevron-up',
+    'facebook',
+    'flickr',
+    'instagram',
+    'linkedin',
+    'pinterest',
+    'phone',
+    'psu-mark',
+    'twitter',
+    'youtube',
+    'wc-mark',
+] %}
+
+{% for sprite in sprites %}
+  {% include '@atoms/sprite/sprite.twig' with { name: sprite } %}
+{% endfor %}
