@@ -16,6 +16,7 @@ jobs:
       - run: yarn install
       - run: yarn workspaces foreach install
       - run: npm run package
+      - run: ./node_modules/.bin/pattern_lab build --config packages/patternlab/patternlab-config.json
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
