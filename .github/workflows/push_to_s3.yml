@@ -1,0 +1,28 @@
+name: Update approval environment
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+      - run: yarn install
+      - run: yarn workspaces foreach install
+      - run: npm run package
+      - run: ./node_modules/.bin/patternlab build --config packages/patternlab/patternlab-config.json
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./packages/patternlab/public/ s3://github-approval-artifacts/${GITHUB_REF_NAME} --delete
