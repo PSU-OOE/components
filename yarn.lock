@@ -1515,6 +1515,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/drop-button@workspace:packages/drop-button":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/monorepo-dev@workspace:.":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/monorepo-dev@workspace:."
