@@ -2,7 +2,6 @@
   "name": "@psu-ooe/band",
   "version": "1.0.0",
   "description": "Provides a simple band container.",
-
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
