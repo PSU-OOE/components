@@ -59,12 +59,18 @@
       justify-content: space-around;
       height: min-content;
     }
+
+    .drop-button__sprite {
+      font-size: 1.25em;
+      vertical-align: middle;
+    }
   }
 
   &__toggle {
     background: $light-mauve;
     border: none;
     display: inline-flex;
+    gap: rem(.5);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -75,6 +81,27 @@
     width: 4.4rem;
     height: 4.4rem;
     color: $beaver-blue;
+
+    font-family: $open-sans;
+    font-weight: 400;
+
+    font-size: 1.1rem;
+
+    @include bp(xs) {
+      font-size: 1.2rem
+    }
+
+    @include bp(s) {
+      font-size: 1.4rem
+    }
+
+    @include bp(m) {
+      font-size: 1.5rem
+    }
+
+    @include bp(l) {
+      font-size: 1.6rem;
+    }
 
     @include bp(xs) {
       padding: .6rem;
@@ -135,46 +162,11 @@
   }
 
   &__sprite {
-    font-size: 2rem;
-
-    @include bp(xs) {
-      font-size: 2.2rem;
-    }
-
-    @include bp(s) {
-      font-size: 2.4rem;
-    }
-
-    @include bp(m) {
-      font-size: 2.6rem;
-    }
-
-    @include bp(l) {
-      font-size: 2.8rem;
-    }
+    font-size: .55em;
   }
 
   &__label {
-    font-family: $open-sans;
-    font-weight: 400;
-
-    font-size: 1.1rem;
-
-    @include bp(xs) {
-      font-size: 1.2rem
-    }
-
-    @include bp(s) {
-      font-size: 1.4rem
-    }
-
-    @include bp(m) {
-      font-size: 1.5rem
-    }
-
-    @include bp(l) {
-      font-size: 1.6rem;
-    }
+    line-height: 1;
   }
 
   &__list {
