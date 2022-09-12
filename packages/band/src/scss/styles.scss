@@ -1,0 +1,26 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.band {
+  background-color: $light-mauve;
+
+  &--secondary {
+    background-color: $light-grey;
+  }
+
+  &__content {
+    padding: rem(1.5) rem(2);
+
+    @include bp(xs) {
+      padding: rem(1.5) rem(4);
+    }
+  }
+
+  &--compact .band__content {
+    padding: rem(.8) rem(2);
+
+    @include bp(xs) {
+      padding: rem(.8) rem(4);
+    }
+  }
+}

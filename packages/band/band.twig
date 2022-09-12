@@ -1,0 +1,12 @@
+{% set classes = ['band'] %}
+{% if density %}
+    {% set classes = classes|merge(['band--' ~ density]) %}
+{% endif %}
+{% if secondary %}
+  {% set classes = classes|merge(['band--secondary']) %}
+{% endif %}
+<div class="{{ classes|join(' ') }}">
+    <div class="band__content">
+        {{ content }}
+    </div>
+</div>
