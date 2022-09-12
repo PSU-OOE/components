@@ -8,7 +8,7 @@
 <div class="{{ classes|join(' ' ) }}">
     <button class="drop-button__toggle" aria-expanded="false">
     <span class="drop-button__sprite">
-      {% include '@atoms/sprite/sprite.twig' with { name: 'ellipsis-h' } only %}
+      {% include '@atoms/sprite/sprite.twig' with { name: short ? 'fas-ellipsis-vertical' : 'fas-ellipsis' } only %}
     </span>
         <span class="drop-button__label">{{ button_label }}</span>
     </button>

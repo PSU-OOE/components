@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
 
@@ -30,8 +32,32 @@
 
       &::before {
         left: revert;
-        right: 2rem;
+        right: calc(2.2rem - #{rem(math.div(math.sqrt(200), 10))});
+
+        @include bp(xs) {
+          right: calc(2.6rem - #{rem(math.div(math.sqrt(200), 10))});
+        }
+
+        @include bp(s) {
+          right: calc(3.15rem - #{rem(math.div(math.sqrt(200), 10))});
+        }
+
+        @include bp(m) {
+          right: calc(3.6rem - #{rem(math.div(math.sqrt(200), 10))});
+        }
+
+        @include bp(l) {
+          right: calc(4rem - #{rem(math.div(math.sqrt(200), 10))});
+        }
       }
+    }
+  }
+
+  &--short {
+    .drop-button__toggle {
+      flex-direction: row;
+      justify-content: space-around;
+      height: min-content;
     }
   }
 
@@ -162,7 +188,7 @@
     border-color: $slate-light $slate-light $slate-light $primary-blue;
     border-width: rem(.1) rem(.1) rem(.1) rem(.3);
     box-shadow: rem(.1) rem(.3) rem(.5) rgba($nittany-navy, .15);
-    padding: rem(2);
+    padding: rem(1.5) rem(2);
     max-width: 100%;
     width: rem(28);
     z-index: 100;
@@ -175,13 +201,28 @@
       background: $white;
       width: 2rem;
       height: 2rem;
-      left: 2rem;
-      right: 2rem;
       top: -1rem;
       z-index: -1;
       border-width: 1px;
       border-style: solid;
       border-color: $slate-light transparent transparent $slate-light;
+      left: calc(2.2rem - #{rem(math.div(math.sqrt(200), 10))});
+
+      @include bp(xs) {
+        left: calc(2.6rem - #{rem(math.div(math.sqrt(200), 10))});
+      }
+
+      @include bp(s) {
+        left: calc(3.15rem - #{rem(math.div(math.sqrt(200), 10))});
+      }
+
+      @include bp(m) {
+        left: calc(3.6rem - #{rem(math.div(math.sqrt(200), 10))});
+      }
+
+      @include bp(l) {
+        left: calc(4rem - #{rem(math.div(math.sqrt(200), 10))});
+      }
     }
   }
 
