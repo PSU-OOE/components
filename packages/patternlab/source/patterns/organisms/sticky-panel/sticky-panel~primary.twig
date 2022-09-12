@@ -1,0 +1,16 @@
+{% set primary_content %}
+  <div style="display: flex;align-items: center; flex-flow: row nowrap">
+    <a href="/" title="Home" tabindex="-1">Home Link</a>
+    <span style="margin-left: auto">Call to action buttons</span>
+  </div>
+{% endset %}
+{% set primary_band %}
+  {% include '@molecules/band/band.twig' with {
+    content: primary_content,
+    padding: 'medium'
+  } only %}
+{% endset %}
+
+{% include '@organisms/sticky-panel/sticky-panel.twig' with {
+  bands: [primary_band]
+} only %}
