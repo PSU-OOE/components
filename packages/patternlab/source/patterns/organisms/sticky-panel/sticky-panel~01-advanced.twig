@@ -5,11 +5,14 @@
     <span style="margin-left: auto">Call to action buttons</span>
 </div>
 {% endset %}
+
 {% set secondary_content %}
     <div style="display: flex;align-items: center; flex-flow: row nowrap">
         <span>Primary tabs go here</span>
         <span style="margin-left: auto">Call to action buttons</span>
-    </div>{% endset %}
+    </div>
+{% endset %}
+
 {% set primary_band %}
     {% include '@molecules/band/band.twig' with {
         content: primary_content,
@@ -21,11 +24,11 @@
     {% include '@molecules/band/band.twig' with {
         content: secondary_content,
         secondary: true,
-        padding: 'large'
+        padding: 'small'
     } only %}
 {% endset %}
 
-<div style="min-height: 200rem">
+<div style="">
   {% include '@organisms/sticky-panel/sticky-panel.twig' with {
       bands: [primary_band, secondary_band]
   } only %}
