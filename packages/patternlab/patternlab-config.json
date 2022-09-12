@@ -120,21 +120,21 @@
           "id": "global",
           "recursive": false,
           "paths": [
-            "node_modules/@psu-ooe"
+            "packages"
           ]
         },
         {
           "id": "atoms",
           "recursive": false,
           "paths": [
-            "node_modules/@psu-ooe"
+            "packages"
           ]
         },
         {
           "id": "molecules",
           "recursive": false,
           "paths": [
-            "node_modules/@psu-ooe"
+            "packages"
           ]
         }
       ],
