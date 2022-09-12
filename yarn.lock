@@ -1507,7 +1507,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/band@workspace:packages/band":
+"@psu-ooe/band@^1.0, @psu-ooe/band@workspace:packages/band":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/band@workspace:packages/band"
   dependencies:
@@ -1574,6 +1574,14 @@ __metadata:
   resolution: "@psu-ooe/sprite@workspace:packages/sprite"
   dependencies:
     "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/sticky-panel@workspace:packages/sticky-panel":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/sticky-panel@workspace:packages/sticky-panel"
+  dependencies:
+    "@psu-ooe/band": ^1.0
   languageName: unknown
   linkType: soft
 
