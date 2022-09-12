@@ -11,6 +11,11 @@
           toggle.setAttribute('aria-expanded', 'true');
         }
       });
+      drop_button.addEventListener('focusout', (e) => {
+        if (!drop_button.matches(':focus-within')) {
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
   });
 })(cms);
