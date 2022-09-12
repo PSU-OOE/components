@@ -32,22 +32,22 @@
 
       &::before {
         left: revert;
-        right: calc(2.2rem - #{rem(math.div(math.sqrt(200), 10))});
+        right: 1.2rem;
 
         @include bp(xs) {
-          right: calc(2.6rem - #{rem(math.div(math.sqrt(200), 10))});
+          right: 1.6rem;
         }
 
         @include bp(s) {
-          right: calc(3.15rem - #{rem(math.div(math.sqrt(200), 10))});
+          right: 2.15rem;
         }
 
         @include bp(m) {
-          right: calc(3.6rem - #{rem(math.div(math.sqrt(200), 10))});
+          right: 2.6rem;
         }
 
         @include bp(l) {
-          right: calc(4rem - #{rem(math.div(math.sqrt(200), 10))});
+          right: 3rem;
         }
       }
     }
