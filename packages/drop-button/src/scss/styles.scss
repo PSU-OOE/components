@@ -231,3 +231,17 @@
     padding: .5rem 0;
   }
 }
+
+.layout--bg-light-grey {
+  .drop-button__toggle {
+    background: $white;
+
+    &:focus-visible {
+      background: $pugh-blue;
+    }
+
+    &.focus-visible {
+      background: $pugh-blue;
+    }
+  }
+}
