@@ -25,8 +25,8 @@
     } only %}
 {% endset %}
 
-{% include '@organisms/sticky-panel/sticky-panel.twig' with {
-    bands: [primary_band, secondary_band]
-} only %}
-
-
+<div style="min-height: 200rem">
+  {% include '@organisms/sticky-panel/sticky-panel.twig' with {
+      bands: [primary_band, secondary_band]
+  } only %}
+</div>
