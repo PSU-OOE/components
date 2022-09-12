@@ -1,6 +1,6 @@
 {% set classes = ['band'] %}
-{% if density %}
-    {% set classes = classes|merge(['band--' ~ density]) %}
+{% if padding %}
+    {% set classes = classes|merge(['band--padding-' ~ padding]) %}
 {% endif %}
 {% if secondary %}
   {% set classes = classes|merge(['band--secondary']) %}
