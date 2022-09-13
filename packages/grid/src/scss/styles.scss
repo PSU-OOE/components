@@ -1,0 +1,22 @@
+@import "../../../base/src/scss/imports/variables";
+
+.grid {
+  display: grid;
+  gap: rem(2);
+  margin: 0;
+  padding: 0;
+
+  &--three-col {
+    grid-template-columns: repeat(auto-fill, minmax(unquote('max(30%, #{unquote('min(#{rem(24)}, 100%)')})'), 1fr));
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    &::before {
+      display: none;
+    }
+  }
+}

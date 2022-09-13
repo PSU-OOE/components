@@ -1523,6 +1523,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/grid@^1.0, @psu-ooe/grid@workspace:packages/grid":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/grid@workspace:packages/grid"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/monorepo-dev@workspace:.":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/monorepo-dev@workspace:."
@@ -1557,6 +1565,7 @@ __metadata:
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/grid": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/sprite": ^1.0
     "@psu-ooe/webfonts": ^1.0
