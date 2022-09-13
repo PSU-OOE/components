@@ -10,6 +10,27 @@
     {{ patternLabHead | raw }}
     <!-- End Pattern Lab -->
 
+    {# @TODO: Move the visually hidden styles into the base component and stop loading hidden.module.css in Drupal #}
+    <style>
+      .visually-hidden {
+        position: absolute !important;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        width: 1px;
+        height: 1px;
+        word-wrap: normal;
+      }
+
+      .visually-hidden.focusable:active,
+      .visually-hidden.focusable:focus {
+        position: static !important;
+        overflow: visible;
+        clip: auto;
+        width: auto;
+        height: auto;
+      }
+    </style>
+
     <style>
       {{ get_component_stylesheets() }}
     </style>
