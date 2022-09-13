@@ -1,28 +1,45 @@
 {%
     set colors = {
-    'primary blue': '#0064bf',
-    'beaver blue': '#1e407c',
-    'nittany navy': '#001e44',
-    'true blue': '#0056ae',
-    'pugh-blue': '#96bee6',
-    'light mauve': '#ebecf4',
-    'light grey': '#f2f3f9',
-    'medium grey': '#d8dbea',
-    'medium dark grey': '#687a8d',
-    'slate': '#314d64',
-    'slate light': '#ccdae6',
-    'keystone': '#ffd100',
-    'invent orange': '#e98300',
-    'invent orange light': '#fca917',
+    'primary blue': { hex_code:  '#0064bf', scss_variable: '$primary-blue' },
+    'beaver blue': { hex_code:  '#1e407c', scss_variable: '$beaver-blue' },
+    'nittany navy': { hex_code:  '#001e44', scss_variable: '$nittany-navy' },
+    'true blue': { hex_code:  '#0056ae', scss_variable: '$true-blue' },
+    'pugh-blue': { hex_code:  '#96bee6', scss_variable: '$pugh-blue' },
+    'light mauve': { hex_code:  '#ebecf4', scss_variable: '$light-mauve' },
+    'light grey': { hex_code:  '#f2f3f9', scss_variable: '$light-grey' },
+    'medium grey': { hex_code:  '#d8dbea', scss_variable: '$medium-grey' },
+    'medium dark grey': { hex_code:  '#687a8d', scss_variable: '$medium-dark-grey' },
+    'slate': { hex_code:  '#314d64', scss_variable: '$slate' },
+    'slate light': { hex_code:  '#ccdae6', scss_variable: '$slate-light' },
+    'keystone': { hex_code:  '#ffd100', scss_variable: '$keystone' },
+    'invent orange': { hex_code:  '#e98300', scss_variable: '$invent-orange' },
+    'invent orange light': { hex_code:  '#fca917', scss_variable: '$invent-orange-light' },
 }
 %}
 
 {% set items = [] %}
-{% for name, value in colors %}
+{% for name, properties in colors %}
   {% set color %}
-    <div style="text-align:center">
-      <span style="display:block;aspect-ratio:4;border-radius: .5rem; background: {{ value }};"></span>
-      <span style="font-size: 90%;line-height: 1;">{{ name }} ({{ value }})</span>
+    <div style="text-align:center;">
+      <span style="display:block;aspect-ratio:4;border-radius: .5rem .5rem 0 0; background: {{ properties.hex_code }};"></span>
+      <table style="max-width: 100%;margin:0">
+        <thead>
+          <tr>
+              {# @TODO: Fix table styles. #}
+            <th style="min-width: revert">Name</th>
+            <th style="min-width: revert">Hex color</th>
+            <th style="min-width: revert">Scss variable</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              {# @TODO: Fix table styles. #}
+              <td style="min-width: revert">{{ name }}</td>
+              <td style="min-width: revert">{{ properties.hex_code }}</td>
+              <td style="min-width: revert">{{ properties.scss_variable }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   {% endset %}
   {% set items = items|merge([color]) %}
