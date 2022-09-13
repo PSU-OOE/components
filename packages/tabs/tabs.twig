@@ -1,0 +1,19 @@
+<div class="tabs">
+  {% if intro %}
+    <div class="tabs__intro">
+      {{ intro }}
+    </div>
+  {% endif %}
+  <div class="tabs__list">
+    {% include '@molecules/tabs-list/tabs-list.twig' with { tabs: tabs } only %}
+  </div>
+  {% for tab in tabs %}
+      {% set panel_classes = ['tabs__panel'] %}
+      {% if loop.first %}
+        {% set panel_classes = panel_classes|merge(['tabs__panel--active']) %}
+      {% endif %}
+      <div class="{{ panel_classes|join(' ') }}" id="{{ tab.id }}" role="tabpanel" tabindex="0" aria-labelledby="{{ tab.id ~ '-button' }}">
+        {{ tab.content }}
+      </div>
+    {% endfor %}
+</div>
