@@ -1601,6 +1601,7 @@ __metadata:
   resolution: "@psu-ooe/tabs-list@workspace:packages/tabs-list"
   dependencies:
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/flex-wrap-listener": ^1.0
   languageName: unknown
   linkType: soft
 
