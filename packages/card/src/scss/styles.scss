@@ -1,0 +1,123 @@
+@import "../../../base/src/scss/imports/variables";
+
+.card {
+  position: relative;
+
+  &:focus-within,
+  &:hover {
+    .card__media-overlay {
+      opacity: 1;
+    }
+    .card__title {
+      text-decoration-color: $primary-blue;
+    }
+  }
+
+  &:focus-within {
+    outline: rem(.2) solid $sky-blue;
+    outline-offset: rem(.2);
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: rem(1.5) rem(3);
+  }
+
+  &__media {
+    flex: 1 1 rem(26);
+    position: relative;
+
+    &--warning {
+      &::after {
+        position: absolute;
+        content: "Missing alt text!";
+        color: $white;
+        background: $error-red;
+        font-family: $roboto-slab;
+        top: rem(1);
+        right: rem(1);
+        font-size: rem(1.5);
+        padding: rem(.5);
+      }
+    }
+  }
+
+  // Required to prevent layout shifts while images are loading.
+  &__media-placeholder {
+    height: 0;
+    padding-bottom: 56.25%;
+  }
+
+  &__media-overlay {
+    background: radial-gradient(circle, rgba($nittany-navy, 0) calc(100% / 3), rgba($nittany-navy, calc(1/3)), 75%, rgba($nittany-navy, calc(2/3)) 100%);
+    transition: opacity .2s linear;
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+  }
+
+  &__text {
+    flex: 5 1 rem(26);
+    align-self: center;
+  }
+
+  &__title {
+    color: $primary-blue;
+    display: block;
+    font-family: $open-sans;
+    font-size: rem(1.8);
+    font-weight: 700;
+    line-height: calc(25/18);
+    transition: text-decoration-color .2s linear;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: .2em;
+  }
+
+  &__attribution {
+    color: $slate;
+    display: block;
+    font-family: $open-sans;
+    font-size: rem(1.4);
+    font-style: italic;
+    line-height:calc(20/14);
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &--list {
+    border-bottom: rem(.1) solid $medium-grey;
+    padding: rem(1.5) 0;
+
+    .card__content {
+      flex-wrap: nowrap;
+      gap: rem(2);
+    }
+
+    .card__media {
+      max-width: rem(10);
+
+      &--warning {
+        &::after {
+          font-size: rem(1);
+          top: rem(.25);
+          right: rem(.25);
+        }
+      }
+    }
+
+    .card__title {
+      font-size: rem(1.6);
+      line-height: calc(21/16);
+    }
+  }
+}

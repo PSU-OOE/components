@@ -1,0 +1,42 @@
+{#
+Variables:
+  image: optional; default empty
+  image_decorative: optional; default false
+  image_alt: optional; string
+  link_text: string
+  link_url: string
+  link_attribution: string
+#}
+{% set card_classes = ['card'] %}
+{% if list %}
+    {% set card_classes = card_classes|merge(['card--list']) %}
+{% endif %}
+{% set media_classes = ['card__media'] %}
+
+{% if image_decorative %}
+    {% set image_alt = '' %}
+{% else %}
+    {% if image_alt is empty %}
+        {% set media_classes = media_classes|merge(['card__media--warning']) %}
+    {% endif %}
+{% endif %}
+
+<div class="{{ card_classes|join(' ') }}">
+    <div class="card__content">
+        {% if image %}
+            <div class="{{ media_classes|join(' ') }}">
+                <div class="card__media-placeholder">
+                    <img class="card__media-image" src="{{ image }}" alt="{{ image_alt }}" loading="lazy" />
+                </div>
+                <span class="card__media-overlay"></span>
+            </div>
+        {% endif %}
+        <span class="card__text" aria-hidden="true">
+      <span class="card__title">{{ link_text }}</span>
+      <span class="card__attribution">{{ link_attribution }}</span>
+    </span>
+    </div>
+    <a class="card__link" href="{{ link_url }}">
+        <span class="visually-hidden">{{ link_text }}, {{ link_attribution }}</span>
+    </a>
+</div>
