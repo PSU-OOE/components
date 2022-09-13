@@ -17,14 +17,18 @@
 }
 %}
 
+{% set items = [] %}
+{% for name, value in colors %}
+  {% set color %}
+    <div style="text-align:center">
+      <span style="display:block;aspect-ratio:4;border-radius: .5rem; background: {{ value }};"></span>
+      <span style="font-size: 90%;line-height: 1;">{{ name }} ({{ value }})</span>
+    </div>
+  {% endset %}
+  {% set items = items|merge([color]) %}
+{% endfor %}
+
 <p>The color foundation of Penn State Outreach and Online Education, based on Penn State branding guidelines.</p>
-<ul class="grid grid--three-col">
-  {% for name,value in colors %}
-    <li class="grid__item">
-      <div style="text-align:center">
-        <span style="display:block;aspect-ratio:4;border-radius: .5rem; background: {{ value }};"></span>
-        <span style="font-size: 90%;line-height: 1;">{{ name }} ({{ value }})</span>
-      </div>
-    </li>
-  {% endfor %}
-</ul>
+{% include '@molecules/grid/grid.twig' with {
+  items: items
+} only %}
