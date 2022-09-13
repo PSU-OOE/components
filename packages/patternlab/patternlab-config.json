@@ -136,6 +136,13 @@
           "paths": [
             "packages"
           ]
+        },
+        {
+          "id": "organisms",
+          "recursive": false,
+          "paths": [
+            "packages"
+          ]
         }
       ],
       "alterTwigEnv": [
