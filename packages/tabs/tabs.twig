@@ -4,10 +4,8 @@
       {{ intro }}
     </div>
   {% endif %}
-  <div class="tabs__list" role="tablist">
-    {% for tab in tabs %}
-      <button class="tabs__button" type="button" role="tab" aria-selected="{{ loop.first ? 'true' : 'false' }}" aria-controls="{{ tab.id }}" tabindex="{{ loop.first ? '0' : '-1' }}" id="{{ (region.id ~ '-button') }}">{{ tab.title }}</button>
-    {% endfor %}
+  <div class="tabs__list">
+    {% include '@molecules/tabs-list/tabs-list.twig' with { tabs: tabs } only %}
   </div>
   {% for tab in tabs %}
       {% set panel_classes = ['tabs__panel'] %}
