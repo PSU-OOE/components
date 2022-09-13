@@ -1515,6 +1515,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/card@workspace:packages/card":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/card@workspace:packages/card"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/grid@^1.0, @psu-ooe/grid@workspace:packages/grid":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/grid@workspace:packages/grid"
