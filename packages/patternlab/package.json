@@ -12,9 +12,13 @@
     "@pattern-lab/uikit-workshop": "^5.16.2",
     "@psu-ooe/accordion": "^1.0",
     "@psu-ooe/base": "^1.0",
+    "@psu-ooe/card": "^1.0",
+    "@psu-ooe/flex-wrap-listener": "^1.0",
     "@psu-ooe/grid": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0",
     "@psu-ooe/sprite": "^1.0",
+    "@psu-ooe/tabs": "^1.0",
+    "@psu-ooe/tabs-list": "^1.0",
     "@psu-ooe/webfonts": "^1.0"
   }
 }

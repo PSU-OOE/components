@@ -1515,7 +1515,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/card@workspace:packages/card":
+"@psu-ooe/card@^1.0, @psu-ooe/card@workspace:packages/card":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/card@workspace:packages/card"
   dependencies:
@@ -1523,7 +1523,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener":
+"@psu-ooe/flex-wrap-listener@^1.0, @psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener"
   languageName: unknown
@@ -1571,9 +1571,13 @@ __metadata:
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/card": ^1.0
+    "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/tabs": ^1.0
+    "@psu-ooe/tabs-list": ^1.0
     "@psu-ooe/webfonts": ^1.0
   languageName: unknown
   linkType: soft
@@ -1600,7 +1604,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/tabs@workspace:packages/tabs":
+"@psu-ooe/tabs@^1.0, @psu-ooe/tabs@workspace:packages/tabs":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/tabs@workspace:packages/tabs"
   dependencies:
