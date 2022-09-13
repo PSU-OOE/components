@@ -43,7 +43,9 @@
         sibling.setAttribute('aria-selected', 'false');
         sibling.setAttribute('tabindex', '-1');
         const panel_id = sibling.getAttribute('aria-controls');
-        const panel = tabs_list.querySelector('#' + panel_id);
+
+        // Note - document is used here because tab panels can act as proxies.
+        const panel = document.querySelector('#' + panel_id);
         if (panel) {
           panel.classList.remove('tabs__panel--active');
         }
@@ -56,7 +58,9 @@
         sibling.setAttribute('tabindex', '');
         sibling.focus();
         const panel_id = sibling.getAttribute('aria-controls');
-        const panel = tabs_list.querySelector('#' + panel_id);
+
+        // Note - document is used here because tab panels can act as proxies.
+        const panel = document.querySelector('#' + panel_id);
         if (panel) {
           panel.classList.add('tabs__panel--active');
         }
