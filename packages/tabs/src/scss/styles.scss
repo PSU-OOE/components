@@ -59,10 +59,6 @@
 
 // @TODO: Delete when safari polyfills are no longer needed. */
 // These styles are repeated from the canonical :focus-visible selector.
-.tabs__button.focus-visible {
-  outline: rem(.2) solid $sky-blue;
-  box-shadow: 0 rem(.3) 0 0 $beaver-blue;
-}
 
 .tabs__panel.focus-visible {
   border-left: rem(.4) solid $sky-blue;

@@ -15,7 +15,7 @@
             aria-selected="{{ loop.first ? 'true' : 'false' }}"
             aria-controls="{{ tab.id }}"
             tabindex="{{ loop.first ? '0' : '-1' }}"
-            id="{{ (region.id ~ '-button') }}">
+            id="{{ (tab.id ~ '-button') }}">
         {{ tab.title }}
     </button>
   {% endfor %}

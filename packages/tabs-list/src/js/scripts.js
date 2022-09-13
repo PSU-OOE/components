@@ -79,7 +79,7 @@
     const key = event.key;
     const orientation = getOrientation(tabs_list);
     const active_item = tabs_list.querySelector('.tabs-list__button[aria-selected="true"]');
-console.log(orientation);
+
     // Only handle keys that jive with the current orientation.
     if (
       key === 'Home' || key === 'End' ||
@@ -110,11 +110,12 @@ console.log(orientation);
         case 'End':
           const last = tabs_list.querySelector('.tabs-list__button:last-child');
           last.click();
+          break;
       }
     }
   }
 
-  cms.attach('tabs', context => {
+  cms.attach('tabsList', context => {
     const tabs_lists = context.querySelectorAll('.tabs-list');
     tabs_lists.forEach(tabs_list => {
       tabs_list.addEventListener('keydown', onKeyDown);
@@ -123,6 +124,15 @@ console.log(orientation);
         button.addEventListener('click', onClick);
       });
     });
+
+    // Auto-select a tab if the user is heading there.
+    if (context === document) {
+      const id = window.location.hash.replace('#', '');
+      const button = document.querySelector('[aria-controls="' + id + '"]');
+      if (button && button.getAttribute('aria-selected') === 'false') {
+        button.click();
+      }
+    }
   });
 
 })(cms);
