@@ -1,0 +1,12 @@
+{% set classes = ['band'] %}
+{% if padding %}
+    {% set classes = classes|merge(['band--padding-' ~ padding]) %}
+{% endif %}
+{% if secondary %}
+  {% set classes = classes|merge(['band--secondary']) %}
+{% endif %}
+<div class="{{ classes|join(' ') }}">
+    <div class="band__content">
+        {{ content }}
+    </div>
+</div>
