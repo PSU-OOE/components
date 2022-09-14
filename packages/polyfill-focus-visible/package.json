@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/polyfill-focus-visible",
+  "version": "1.0.0",
+  "description": "Provides a light-weight polyfill for :focus-visible.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "focus-visible": "^5.2.0"
+  }
+}

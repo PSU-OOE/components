@@ -10,6 +10,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0"
+    "@psu-ooe/base": "^1.0",
+    "@psu-ooe/polyfill-focus-visible": "^1.0"
   }
 }
