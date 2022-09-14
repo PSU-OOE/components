@@ -54,15 +54,33 @@
   }
 
   &--short {
+
     .drop-button__toggle {
       flex-direction: row;
       justify-content: space-around;
-      height: min-content;
+      height: auto;
+      width: auto;
+      padding: rem(.5) rem(.75);
+
+      @include bp(xs) {
+        padding: rem(.6) rem(.9);
+      }
+
+      @include bp(s) {
+        padding: rem(.8) rem(1.2);
+      }
+
+      @include bp(m) {
+        padding: rem(.9) rem(1.35);
+      }
+
+      @include bp(l) {
+        padding: rem(1) rem(1.5);
+      }
     }
 
-    .drop-button__sprite {
-      font-size: 1.25em;
-      vertical-align: middle;
+    .sprite {
+      height: 1em;
     }
   }
 
@@ -159,10 +177,27 @@
         opacity: 1;
       }
     }
-  }
 
-  &__sprite {
-    font-size: .55em;
+    .sprite {
+      opacity: .75;
+      height: rem(.605);
+
+      @include bp(xs) {
+        height: rem(.66);
+      }
+
+      @include bp(s) {
+        height: rem(.77);
+      }
+
+      @include bp(m) {
+        height: rem(.825);
+      }
+
+      @include bp(l) {
+        height: rem(.88);
+      }
+    }
   }
 
   &__label {
