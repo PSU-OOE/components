@@ -1507,6 +1507,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/band@workspace:packages/band":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/band@workspace:packages/band"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/base@^1.0, @psu-ooe/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/base@workspace:packages/base"

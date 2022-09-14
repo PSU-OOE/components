@@ -1,0 +1,35 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.band {
+  background-color: $light-mauve;
+
+  &__content {
+    padding-left: rem(2);
+    padding-right: rem(2);
+
+    @include bp(xs) {
+      padding-left: rem(4);
+      padding-right: rem(4);
+    }
+  }
+
+  &--secondary {
+    background-color: $light-grey;
+  }
+
+  &--padding-small .band__content {
+    padding-top: rem(.8);
+    padding-bottom: rem(.8);
+  }
+
+  &--padding-medium .band__content {
+    padding-top: rem(1.5);
+    padding-bottom: rem(1.5);
+  }
+
+  &--padding-large .band__content {
+    padding-top: rem(3);
+    padding-bottom: rem(3);
+  }
+}
