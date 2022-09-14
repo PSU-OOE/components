@@ -5,12 +5,12 @@
   background-color: $light-mauve;
 
   &__content {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: rem(2);
+    padding-right: rem(2);
 
     @include bp(xs) {
-      padding-left: 4rem;
-      padding-right: 4rem;
+      padding-left: rem(4);
+      padding-right: rem(4);
     }
   }
 
@@ -29,7 +29,7 @@
   }
 
   &--padding-large .band__content {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-top: rem(3);
+    padding-bottom: rem(3);
   }
 }
