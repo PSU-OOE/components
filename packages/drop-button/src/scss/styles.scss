@@ -7,86 +7,10 @@
   display: flex;
   position: relative;
 
-  &--align-center {
-    .drop-button__toggle {
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .drop-button__list {
-      left: 50%;
-      transform: translate(-50%);
-    }
-
-    .drop-button__list::before {
-      left: 50%;
-      transform: rotateZ(45deg) translateX(calc(-50% + 2px)) translateY(calc(50% - 2px));
-    }
-  }
-
-  &--align-right {
-    .drop-button__toggle {
-      margin-left: auto;
-    }
-    .drop-button__list {
-      right: 0;
-
-      &::before {
-        left: revert;
-        right: 1.2rem;
-
-        @include bp(xs) {
-          right: 1.6rem;
-        }
-
-        @include bp(s) {
-          right: 2.15rem;
-        }
-
-        @include bp(m) {
-          right: 2.6rem;
-        }
-
-        @include bp(l) {
-          right: 3rem;
-        }
-      }
-    }
-  }
-
-  &--short {
-
-    .drop-button__toggle {
-      flex-direction: row;
-      justify-content: space-around;
-      height: auto;
-      width: auto;
-      padding: rem(.5) rem(.75);
-
-      @include bp(xs) {
-        padding: rem(.6) rem(.9);
-      }
-
-      @include bp(s) {
-        padding: rem(.8) rem(1.2);
-      }
-
-      @include bp(m) {
-        padding: rem(.9) rem(1.35);
-      }
-
-      @include bp(l) {
-        padding: rem(1) rem(1.5);
-      }
-    }
-
-    .sprite {
-      height: 1em;
-    }
-  }
-
   &__toggle {
     background: $light-mauve;
     border: none;
+    cursor: pointer;
     display: inline-flex;
     gap: rem(.5);
     flex-direction: column;
@@ -271,6 +195,83 @@
     &:hover, &:focus {
       color: $primary-blue;
       text-decoration-color: $primary-blue;
+    }
+  }
+
+  &--align-center {
+    .drop-button__toggle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .drop-button__list {
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .drop-button__list::before {
+      left: 50%;
+      transform: rotateZ(45deg) translateX(calc(-50% + 2px)) translateY(calc(50% - 2px));
+    }
+  }
+
+  &--align-right {
+    .drop-button__toggle {
+      margin-left: auto;
+    }
+    .drop-button__list {
+      right: 0;
+
+      &::before {
+        left: revert;
+        right: 1.2rem;
+
+        @include bp(xs) {
+          right: 1.6rem;
+        }
+
+        @include bp(s) {
+          right: 2.15rem;
+        }
+
+        @include bp(m) {
+          right: 2.6rem;
+        }
+
+        @include bp(l) {
+          right: 3rem;
+        }
+      }
+    }
+  }
+
+  &--short {
+
+    .drop-button__toggle {
+      flex-direction: row;
+      justify-content: space-around;
+      height: auto;
+      width: auto;
+      padding: rem(.5) rem(.75);
+
+      @include bp(xs) {
+        padding: rem(.6) rem(.9);
+      }
+
+      @include bp(s) {
+        padding: rem(.8) rem(1.2);
+      }
+
+      @include bp(m) {
+        padding: rem(.9) rem(1.35);
+      }
+
+      @include bp(l) {
+        padding: rem(1) rem(1.5);
+      }
+    }
+
+    .sprite {
+      height: 1em;
     }
   }
 }

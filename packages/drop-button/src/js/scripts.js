@@ -11,6 +11,13 @@
           toggle.setAttribute('aria-expanded', 'true');
         }
       });
+
+      drop_button.addEventListener('keydown', e => {
+        if (e.key.toLowerCase() === 'escape' && toggle.getAttribute('aria-expanded') === 'true') {
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
       drop_button.addEventListener('focusout', (e) => {
         if (!drop_button.matches(':focus-within')) {
           toggle.setAttribute('aria-expanded', 'false');

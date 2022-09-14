@@ -1531,7 +1531,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/drop-button@workspace:packages/drop-button":
+"@psu-ooe/drop-button@^1.0, @psu-ooe/drop-button@workspace:packages/drop-button":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
   dependencies:
@@ -1588,6 +1588,7 @@ __metadata:
     "@psu-ooe/accordion": ^1.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/card": ^1.0
+    "@psu-ooe/drop-button": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
