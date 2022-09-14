@@ -1,7 +1,7 @@
 {
   "name": "@psu-ooe/sticky-panel",
   "version": "1.0.0",
-  "description": "Provides a simple band container.",
+  "description": "Provides a sticky panel that contains one or more bands.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
