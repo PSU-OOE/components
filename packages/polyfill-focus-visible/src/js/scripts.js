@@ -12,7 +12,7 @@
     }
     catch (e) {
       const script = document.createElement('script');
-      script.src = '/' + cms.vendor_dir + '/focus-visible/dist/focus-visible.min.js';
+      script.src = cms.vendor_dir + '/focus-visible/dist/focus-visible.min.js';
       document.body.appendChild(script);
     }
     finally {
