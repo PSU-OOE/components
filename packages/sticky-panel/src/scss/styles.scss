@@ -4,7 +4,7 @@
   position: sticky;
   top: 0;
 
-  .sticky-panel__content {
+  &__content {
     position: relative;
 
     &::after {
