@@ -1507,7 +1507,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/band@workspace:packages/band":
+"@psu-ooe/band@^1.0, @psu-ooe/band@workspace:packages/band":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/band@workspace:packages/band"
   dependencies:
@@ -1587,6 +1587,7 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.16.2
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
+    "@psu-ooe/band": ^1.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/card": ^1.0
     "@psu-ooe/drop-button": ^1.0
@@ -1594,6 +1595,7 @@ __metadata:
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^1.0
     "@psu-ooe/tabs-list": ^1.0
     "@psu-ooe/webfonts": ^1.0
@@ -1618,6 +1620,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/sprite@workspace:packages/sprite"
   dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/sticky-panel@^1.0, @psu-ooe/sticky-panel@workspace:packages/sticky-panel":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/sticky-panel@workspace:packages/sticky-panel"
+  dependencies:
+    "@psu-ooe/band": ^1.0
     "@psu-ooe/base": ^1.0
   languageName: unknown
   linkType: soft
