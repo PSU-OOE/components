@@ -19,11 +19,10 @@
       });
 
       drop_button.addEventListener('focusout', (e) => {
-        console.log(drop_button.matches(':focus-within'));
-        if (!drop_button.matches(':focus-within')) {
+        if (!drop_button.contains(event.relatedTarget)) {
           toggle.setAttribute('aria-expanded', 'false');
         }
-      }, { capture: true });
+      });
     });
   });
 })(cms);
