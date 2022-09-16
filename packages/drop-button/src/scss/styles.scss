@@ -274,6 +274,12 @@
       height: 1em;
     }
   }
+
+  &--full-width .drop-button__toggle {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .layout--bg-light-grey {

@@ -2,6 +2,9 @@
 {% if short %}
     {% set classes = classes|merge(['drop-button--short']) %}
 {% endif %}
+{% if full_width %}
+    {%  set classes = classes|merge(['drop-button--full-width']) %}
+{% endif %}
 {% if align %}
     {% set classes = classes|merge(['drop-button--align-' ~ align]) %}
 {% endif %}
