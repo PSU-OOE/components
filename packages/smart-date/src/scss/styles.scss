@@ -1,0 +1,39 @@
+@import "../../../base/src/scss/imports/variables";
+
+.date-range {
+  .date-range__start .date__day::before,
+  .date-range__start .date__year::before,
+  .date-range__end .date__day::before,
+  .date-range__end .date__year::before {
+    content: "\A";
+  }
+
+  // For same-day date ranges, exclude the separator + end.
+  &[data-same-day] {
+    .date-range__separator,
+    .date-range__end {
+      display: none;
+    }
+  }
+
+  // For same-month events, exclude the start month and year.
+  &[data-same-month] {
+    .date-range__start .date__pause,
+    .date-range__start .date__year,
+    .date-range__end .date__month {
+      display: none;
+    }
+
+    .date-range__end .date__day::before {
+      display: none;
+    }
+  }
+
+  // For same-year events, exclude the start year.
+  &[data-same-year] {
+    .date-range__start .date__pause,
+    .date-range__start .date__year {
+      display: none;
+    }
+  }
+}

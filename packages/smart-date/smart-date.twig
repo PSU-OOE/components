@@ -1,0 +1,30 @@
+{#
+  Variables:
+    - start: A string or datetime object that is the start of the range.
+    - end: A string or datetime object that is the end of the range.
+    - timezone: A timezone string (i.e. 'America/New_York')
+#}
+{% if start and end %}
+  {% set month_format = compact ? 'M' : 'F' %}
+  {% set attributes = get_date_range_metadata(start|cast_to_datetime(timezone), end|cast_to_datetime(timezone)) %}
+  {% apply spaceless %}
+  <span class="date-range" {{ attributes|join(' ') }}>
+    <time class="date-range__start date" datetime="{{ start|date('Y-m-d\\TH:i:sP', false) }}">
+      <span class="date__month">{{ start|date(month_format, false) }}</span>
+      <span class="date__day">{{ start|date('j', false) }}</span>
+      <span class="date__pause">,</span>
+      <span class="date__year">{{ start|date('Y', false) }}</span>
+    </time>
+    <span class="date-range__separator">
+      <span class="visually-hidden">through</span>
+      <span aria-hidden="true">–<wbr></span>
+    </span>
+    <time class="date-range__end date" datetime="{{ end|date('Y-m-d\\TH:i:sP', false) }}">
+      <span class="date__month">{{ end|date(month_format, false) }}</span>
+      <span class="date__day">{{ end|date('j', false) }}</span>
+      <span class="date__pause">,</span>
+      <span class="date__year">{{ end|date('Y', false) }}</span>
+    </time>
+  </span>
+  {% endapply %}
+{% endif %}
