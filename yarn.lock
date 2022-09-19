@@ -1598,6 +1598,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/smart-date@workspace:packages/smart-date":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/smart-date@workspace:packages/smart-date"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/sprite@^1.0, @psu-ooe/sprite@workspace:packages/sprite":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/sprite@workspace:packages/sprite"
