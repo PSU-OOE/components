@@ -1,0 +1,209 @@
+@import "../../../../upstream-components/base/src/scss/imports/variables";
+@import "../../../../upstream-components/base/src/scss/imports/layout";
+
+.event-link {
+  display: flex;
+
+  // @TODO: Remove when :focus-visible is globally adopted.
+  &:focus {
+    outline: none;
+  }
+
+  // @TODO: Consolidate states after safari polyfill is no longer needed.
+  &:hover {
+    .event-link__title {
+      color: $primary-blue;
+      text-decoration: underline;
+      text-decoration-thickness: rem(.1);
+      text-underline-offset: .2em;
+    }
+
+    .event-link__third .sprite {
+      transform: scale(1.25);
+    }
+  }
+
+  &:focus-visible {
+    outline: rem(.2) solid $sky-blue;
+    outline-offset: rem(.5);
+
+    .event-link__title {
+      color: $primary-blue;
+      text-decoration: underline;
+      text-decoration-thickness: rem(.1);
+      text-underline-offset: .2em;
+    }
+
+    .event-link__third .sprite {
+      transform: scale(1.25);
+    }
+  }
+
+  &__first {
+    color: $nittany-navy;
+    font-family: $open-sans;
+    font-weight: 400;
+    font-size: rem(1.4);
+    line-height: calc(19/14);
+    width: rem(8.7);
+    flex: 0 0 auto;
+    padding-right: rem(1.5);
+    position: relative;
+    text-align: center;
+
+    &::after {
+      background: repeating-linear-gradient(0deg, $primary-blue, $primary-blue rem(.1), transparent rem(.1), transparent rem(.3));
+      content: "";
+      position: absolute;
+      inset: 0 rem(-.1) 0 auto;
+      width: rem(.1);
+    }
+  }
+
+  &__second {
+    flex: 1 0 0;
+    padding-left: rem(1.5);
+    position: relative;
+    font-size: rem(1.6);
+    margin: auto;
+    line-height: 1.375;
+  }
+
+  &__third {
+    flex: 0 0 auto;
+    color: $primary-blue;
+    margin: auto rem(1.5);
+
+    .sprite {
+      height: rem(1.6);
+      transition: transform .2s linear;
+    }
+  }
+
+  .date-range {
+    .date__day {
+      font-weight: 800;
+    }
+    &[data-same-day] {
+      .date-range__start .date__day {
+        color: $slate;
+        display: block;
+        font-size: rem(1.8);
+        line-height: 1;
+      }
+
+      .date-range__start .date__month,
+      .date-range__start .date__year {
+        display: block;
+      }
+
+      .date-range__start .date__pause {
+        display: none;
+      }
+    }
+
+    &[data-same-month] {
+      .date-range__start .date__month {
+        display: block;
+      }
+      .date-range__end .date__pause {
+        display: none;
+      }
+      .date-range__end .date__year {
+        display: block;
+      }
+
+      .date-range__start .date__day,
+      .date-range__separator,
+      .date-range__end .date__day {
+        color: $slate;
+        font-size: rem(1.8);
+        line-height: 1;
+      }
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    line-height: 1.375;
+  }
+
+  &__time {
+    display: block;
+    font-size: rem(1.4);
+    line-height: 1.375;
+
+    .time-range[data-same-day] {
+      color: $nittany-navy;
+      font-weight: 400;
+      margin-top: rem(.3);
+    }
+
+    .time-range:not([data-same-day]) {
+      display: none;
+    }
+  }
+
+  &--featured {
+    .date-range {
+      &[data-same-month] {
+        .date-range__start .date__day,
+        .date-range__separator,
+        .date-range__end .date__day {
+          font-size: rem(2.1);
+        }
+      }
+
+      &[data-same-day] {
+        .date-range__start .date__day {
+          font-size: rem(3);
+        }
+      }
+    }
+
+    @include bp(s) {
+      .event-link__first {
+        max-width: rem(8.7);
+        width: auto;
+      }
+
+      .event-link__second {
+        margin: 0;
+      }
+
+      .event-link__third {
+        display: none;
+      }
+    }
+  }
+
+  &--compact {
+    .event-link {
+      &__first {
+        width: rem(6.5);
+        padding-right: rem(1);
+      }
+
+      &__second {
+        padding-left: rem(1);
+      }
+    }
+  }
+}
+
+// @TODO: Delete Safari polyfill when not needed.
+.event-link.focus-visible {
+  outline: rem(.2) solid $sky-blue;
+  outline-offset: rem(.5);
+
+  .event-link__title {
+    color: $primary-blue;
+    text-decoration: underline;
+    text-decoration-thickness: rem(.1);
+    text-underline-offset: .2em;
+  }
+
+  .event-link__third .sprite {
+    transform: scale(1.25);
+  }
+}

@@ -1,0 +1,34 @@
+{% set classes = ['event-link'] %}
+{% if featured %}
+  {% set classes = classes|merge(['event-link--featured']) %}
+{% endif %}
+{% if compact %}
+  {% set classes = classes|merge(['event-link--compact']) %}
+{% endif %}
+<a class="{{ classes|join(' ') }}" href="{{ url }}">
+  <span class="event-link__first">
+    <span class="event-link__date">
+      {% include '@molecules/smart-date/smart-date.twig' with {
+        start: start,
+        end: end,
+        timezone: timezone,
+        compact: compact
+      } only %}
+    </span>
+  </span>
+  <span class="event-link__second">
+    <span class="event-link__title">{{ title }}</span>
+    <span class="event-link__time">
+      {% include '@molecules/smart-time/smart-time.twig' with {
+        start: start,
+        end: end,
+        timezone: timezone
+      } only %}
+    </span>
+  </span>
+  <span class="event-link__third">
+    {% include '@atoms/sprite/sprite.twig' with {
+      name: 'fas-chevron-right'
+    } only %}
+  </span>
+</a>
