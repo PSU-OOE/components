@@ -1,0 +1,115 @@
+@use "sass:map";
+
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+@import "colors";
+@import "sprites";
+
+.bg {
+  background: none;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  position: relative;
+  z-index: 0;
+
+  &--padding-large {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  @include bp(m) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    &--padding-small {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    &--padding-large {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  &--left::before, &--right::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  @each $color, $scss_color in $supported_colors {
+    &--#{$color} {
+      background-color: #{$scss_color};
+    }
+  }
+}
+
+//noinspection CssUnknownProperty
+@supports (container-type: inline-size ) {
+
+  @mixin container_query($px) {
+    //noinspection CssInvalidAtRule
+    @container (min-width: #{$px}) {
+      @content;
+    }
+  }
+
+  .bg {
+    container-type: inline-size;
+
+    @each $sprite, $properties in $supported_sprites {
+      &--#{$sprite} {
+        @each $container_query, $container_query_properties in map-get($properties, "container_queries") {
+          @if $container_query == "default" {
+            &.bg--left::before, &.bg--right::after {
+              background-image: url(map-get($properties, "sprite")),
+            }
+
+            &::before, &::after {
+              background-size: #{map-get($container_query_properties, "size")};
+            }
+            &.bg--left::before {
+              background-position: #{map-get($container_query_properties, "left_position")};
+            }
+
+            &.bg--right::after {
+              background-position: #{map-get($container_query_properties, "right_position")};
+            }
+          }
+          @else {
+            @include container_query(#{$container_query}) {
+              &::before, &::after {
+                background-size: #{map-get($container_query_properties, "size")};
+              }
+              &.bg--left::before {
+                background-position: #{map-get($container_query_properties, "left_position")};
+              }
+
+              &.bg--right::after {
+                background-position: #{map-get($container_query_properties, "right_position")};
+              }
+
+              @if map-has-key($container_query_properties, "narrow_left_position") {
+                &.bg--left.bg--narrow::before {
+                  background-position: #{map-get($container_query_properties, "narrow_left_position")};
+                }
+              }
+
+              @if map-has-key($container_query_properties, "narrow_right_position") {
+                &.bg--right.bg--narrow::after {
+                  background-position: #{map-get($container_query_properties, "narrow_right_position")};
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

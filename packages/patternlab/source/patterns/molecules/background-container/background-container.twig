@@ -1,0 +1,101 @@
+{% set short_content %}
+  <div style="padding:0 4rem">
+    <h2>Some heading</h2>
+    <p>This is a WYSIWYG block.</p>
+  </div>
+{% endset %}
+
+{% set tall_content %}
+  <div style="padding:0 4rem">
+    <h2>Some heading</h2>
+    <p>This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on.</p>
+  </div>
+{% endset %}
+
+{% set unbound_short_content %}
+    <div style="max-width:111rem;margin:auto;">
+      {{ short_content }}
+    </div>
+{% endset %}
+{% set unbound_tall_content %}
+    <div style="max-width:111rem;margin:auto;">
+      {{ tall_content }}
+    </div>
+{% endset %}
+{% set unbound_short_narrow_content %}
+    <div style="max-width:87rem;margin:auto;">
+      {{ short_content }}
+    </div>
+{% endset %}
+{% set unbound_tall_narrow_content %}
+    <div style="max-width:87rem;margin:auto;">
+      {{ tall_content }}
+    </div>
+{% endset %}
+
+{% set colors = ['light-grey'] %}
+{% set sprites = ['shield'] %}
+{% set positions = ['left', 'right'] %}
+{% set unbound_content_items = [unbound_short_content, unbound_tall_content, unbound_short_narrow_content, unbound_tall_narrow_content] %}
+
+{% for color in colors %}
+    {% for sprite in sprites %}
+      {% for position in positions %}
+        {% for unbound_content_item in unbound_content_items %}
+            {% include '@molecules/background-container/background-container.twig' with {
+                color: color,
+                sprite: sprite,
+                position: position,
+                content: unbound_content_item
+            } only %}
+            <br />
+            <br />
+        {% endfor %}
+      {% endfor %}
+    {% endfor %}
+{% endfor %}
+
+{% for color in colors %}
+    {% for sprite in sprites %}
+        {% for position in positions %}
+            <div style="max-width:119rem;padding:0 4rem;margin:auto;">
+                {% include '@molecules/background-container/background-container.twig' with {
+                    color: color,
+                    sprite: sprite,
+                    position: position,
+                    content: short_content
+                } only %}
+            </div>
+            <br />
+            <br />
+            <div style="max-width:119rem;padding:0 4rem;margin:auto;">
+                {% include '@molecules/background-container/background-container.twig' with {
+                    color: color,
+                    sprite: sprite,
+                    position: position,
+                    content: tall_content
+                } only %}
+            </div>
+            <br />
+            <br />
+            <div style="max-width:95rem;padding:0 4rem;margin:auto;">
+                {% include '@molecules/background-container/background-container.twig' with {
+                    color: color,
+                    sprite: sprite,
+                    position: position,
+                    content: short_content
+                } only %}
+            </div>
+            <br />
+            <br />
+            <div style="max-width:95rem;padding:0 4rem;margin:auto;">
+                {% include '@molecules/background-container/background-container.twig' with {
+                    color: color,
+                    sprite: sprite,
+                    position: position,
+                    content: tall_content
+                } only %}
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

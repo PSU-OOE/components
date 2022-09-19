@@ -1,0 +1,23 @@
+{#
+  Available variables:
+    color
+    sprite
+    position
+    padding
+    width
+    content
+#}
+
+{% set classes = ['bg', 'bg--' ~ color] %}
+{% if sprite %}
+  {% set classes = classes|merge(['bg--' ~ sprite]) %}
+{% endif %}
+{% if position %}
+  {% set classes = classes|merge(['bg--' ~ position]) %}
+{% endif %}
+{% if width %}
+  {% set classes = classes|merge(['bg--' ~ width]) %}
+{% endif %}
+<div class="{{ classes|join(' ') }}">
+  {{ content }}
+</div>
