@@ -3,10 +3,10 @@
 use Twig\Environment;
 use Twig\TwigFunction;
 
-require_once('packages/smart-date/SmartDate.php');
+require_once('packages/smart-datetime/SmartDatetime.php');
 
 function addCustomExtension(Environment $env) {
-    $env->addExtension(new SmartDateExtension);
+    $env->addExtension(new SmartDatetimeExtension);
     $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
         $styles = '';
         foreach (glob('packages/*/dist/styles.css') as $component) {

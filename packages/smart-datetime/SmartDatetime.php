@@ -7,7 +7,7 @@ use Twig\TwigFunction;
 /**
  * Defines custom twig functions.
  */
-class SmartDateExtension extends AbstractExtension {
+class SmartDatetimeExtension extends AbstractExtension {
 
     /**
      * {@inheritdoc}
