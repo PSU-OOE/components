@@ -18,6 +18,7 @@
     "@psu-ooe/grid": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0",
     "@psu-ooe/smart-date": "^1.0",
+    "@psu-ooe/smart-time": "^1.0",
     "@psu-ooe/sprite": "^1.0",
     "@psu-ooe/sticky-panel": "^1.0",
     "@psu-ooe/tabs": "^1.0",
