@@ -1584,7 +1584,7 @@ __metadata:
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
-    "@psu-ooe/smart-date": ^1.0
+    "@psu-ooe/smart-datetime": ^1.0
     "@psu-ooe/sprite": ^1.0
     "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^1.0
@@ -1599,9 +1599,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/smart-date@^1.0, @psu-ooe/smart-date@workspace:packages/smart-date":
+"@psu-ooe/smart-datetime@^1.0, @psu-ooe/smart-datetime@workspace:packages/smart-datetime":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/smart-date@workspace:packages/smart-date"
+  resolution: "@psu-ooe/smart-datetime@workspace:packages/smart-datetime"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/smart-time@workspace:packages/smart-time":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/smart-time@workspace:packages/smart-time"
   dependencies:
     "@psu-ooe/base": ^1.0
   languageName: unknown
