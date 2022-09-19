@@ -1607,14 +1607,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/smart-time@workspace:packages/smart-time":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/smart-time@workspace:packages/smart-time"
-  dependencies:
-    "@psu-ooe/base": ^1.0
-  languageName: unknown
-  linkType: soft
-
 "@psu-ooe/sprite@^1.0, @psu-ooe/sprite@workspace:packages/sprite":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/sprite@workspace:packages/sprite"
