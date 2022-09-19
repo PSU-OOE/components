@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^1.0",
-    "@psu-ooe/smart-date": "^1.0",
-    "@psu-ooe/smart-time": "^1.0"
+    "@psu-ooe/smart-datetime": "^1.0"
   }
 }
