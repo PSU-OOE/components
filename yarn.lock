@@ -1531,6 +1531,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/event-link@^1.0, @psu-ooe/event-link@workspace:packages/event-link":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/event-link@workspace:packages/event-link"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/smart-datetime": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/flex-wrap-listener@^1.0, @psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener"
@@ -1581,6 +1590,7 @@ __metadata:
     "@psu-ooe/band": ^1.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/card": ^1.0
+    "@psu-ooe/event-link": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
