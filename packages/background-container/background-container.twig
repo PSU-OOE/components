@@ -7,8 +7,7 @@
     width
     content
 #}
-
-{% set classes = ['bg', 'bg--' ~ color] %}
+{% set classes = (classes|default([]))|merge(['bg', 'bg--' ~ color]) %}
 {% if sprite %}
   {% set classes = classes|merge(['bg--' ~ sprite]) %}
 {% endif %}
