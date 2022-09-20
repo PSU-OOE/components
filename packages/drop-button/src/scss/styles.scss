@@ -96,6 +96,7 @@
 
     &[aria-expanded="true"] {
       box-shadow: -.1rem -.1rem $beaver-blue;
+
       & + .drop-button__list {
         visibility: visible;
         opacity: 1;
@@ -105,6 +106,7 @@
     .sprite {
       opacity: .75;
       height: rem(.605);
+      margin-top: rem(.3);
 
       @include bp(xs) {
         height: rem(.66);
@@ -184,7 +186,7 @@
     font-weight: 400;
     line-height: 1.25;
     font-size: rem(1.4);
-    text-decoration: underline  transparent;
+    text-decoration: underline transparent;
     text-underline-offset: rem(.3);
     transition: text-decoration-color .3s, color .3s;
 
@@ -203,6 +205,7 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     .drop-button__list {
       left: 50%;
       transform: translate(-50%);
@@ -218,6 +221,7 @@
     .drop-button__toggle {
       margin-left: auto;
     }
+
     .drop-button__list {
       right: 0;
 
@@ -272,13 +276,39 @@
 
     .sprite {
       height: 1em;
+      margin-top: 0;
     }
   }
 
-  &--full-width .drop-button__toggle {
-    flex-direction: column;
-    width: 100%;
-    height: auto;
+  &--full-width {
+    .drop-button {
+      &__toggle {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: rem(.8);
+
+        @include bp(xs) {
+          padding: rem(.9);
+        }
+
+        @include bp(s) {
+          padding: rem(1);
+        }
+
+        @include bp(m) {
+          padding: rem(1.2);
+        }
+
+        @include bp(l) {
+          padding: rem(1.5);
+        }
+      }
+
+      &__list {
+        width: 100%;
+      }
+    }
   }
 }
 
