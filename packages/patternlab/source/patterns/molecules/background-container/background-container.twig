@@ -36,21 +36,43 @@
 {% set colors = ['light-grey'] %}
 {% set sprites = ['shield'] %}
 {% set positions = ['left', 'right'] %}
-{% set unbound_content_items = [unbound_short_content, unbound_tall_content, unbound_short_narrow_content, unbound_tall_narrow_content] %}
-
 {% for color in colors %}
     {% for sprite in sprites %}
       {% for position in positions %}
-        {% for unbound_content_item in unbound_content_items %}
-            {% include '@molecules/background-container/background-container.twig' with {
-                color: color,
-                sprite: sprite,
-                position: position,
-                content: unbound_content_item
-            } only %}
-            <br />
-            <br />
-        {% endfor %}
+          {% include '@molecules/background-container/background-container.twig' with {
+              color: color,
+              sprite: sprite,
+              position: position,
+              content: unbound_short_content
+          } only %}
+          <br />
+          <br />
+          {% include '@molecules/background-container/background-container.twig' with {
+              color: color,
+              sprite: sprite,
+              position: position,
+              content: unbound_tall_content
+          } only %}
+          <br />
+          <br />
+          {% include '@molecules/background-container/background-container.twig' with {
+              color: color,
+              sprite: sprite,
+              position: position,
+              width: 'narrow',
+              content: unbound_short_narrow_content
+          } only %}
+          <br />
+          <br />
+          {% include '@molecules/background-container/background-container.twig' with {
+              color: color,
+              sprite: sprite,
+              position: position,
+              width: 'narrow',
+              content: unbound_tall_narrow_content
+          } only %}
+          <br />
+          <br />
       {% endfor %}
     {% endfor %}
 {% endfor %}
@@ -83,6 +105,7 @@
                     color: color,
                     sprite: sprite,
                     position: position,
+                    width: 'narrow',
                     content: short_content
                 } only %}
             </div>
@@ -93,6 +116,7 @@
                     color: color,
                     sprite: sprite,
                     position: position,
+                    width: 'narrow',
                     content: tall_content
                 } only %}
             </div>
