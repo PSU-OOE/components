@@ -1593,6 +1593,7 @@ __metadata:
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
+    "@psu-ooe/read-more": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/smart-datetime": ^1.0
     "@psu-ooe/sprite": ^1.0
@@ -1600,6 +1601,14 @@ __metadata:
     "@psu-ooe/tabs": ^1.0
     "@psu-ooe/tabs-list": ^1.0
     "@psu-ooe/webfonts": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/read-more@^1.0, @psu-ooe/read-more@workspace:packages/read-more":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/read-more@workspace:packages/read-more"
+  dependencies:
+    "@psu-ooe/base": ^1.0
   languageName: unknown
   linkType: soft
 
