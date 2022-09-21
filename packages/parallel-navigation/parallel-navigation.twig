@@ -1,0 +1,23 @@
+{% if heading and items is not empty %}
+  {% set column_classes = {
+    2: 'parallel-navigation__list--two-col'
+  } %}
+
+  <nav class="parallel-navigation" aria-labelledby="parallel-navigation-{{ id }}-label">
+    {% if heading or intro_text %}
+      <div class="parallel-navigation__intro">
+        <{{ heading_level }} class="parallel-navigation__heading heading heading--medium heading--neutral" id="parallel-navigation-{{ id }}-label">{{ heading }}</{{ heading_level }}>
+        {% if intro_text %}
+          <p class="parallel-navigation__text">{{ intro_text }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+    <ul class="parallel-navigation__list{% if column_classes[columns] is defined %} {{ column_classes[columns] }}{% endif %}">
+      {% for item in items %}
+        <li class="parallel-navigation__item">
+          <a class="parallel-navigation__link{% if item.active %} active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}
