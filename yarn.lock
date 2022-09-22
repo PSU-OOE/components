@@ -1540,6 +1540,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/event-link@^1.0, @psu-ooe/event-link@workspace:packages/event-link":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/event-link@workspace:packages/event-link"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/smart-datetime": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/flex-wrap-listener@^1.0, @psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener"
@@ -1578,6 +1587,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/parallel-navigation@^1.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/patternlab@workspace:packages/patternlab":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/patternlab@workspace:packages/patternlab"
@@ -1591,9 +1608,13 @@ __metadata:
     "@psu-ooe/base": ^1.0
     "@psu-ooe/card": ^1.0
     "@psu-ooe/drop-button": ^1.0
+    "@psu-ooe/event-link": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
+    "@psu-ooe/parallel-navigation": ^1.0
+    "@psu-ooe/read-more": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
+    "@psu-ooe/smart-datetime": ^1.0
     "@psu-ooe/sprite": ^1.0
     "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^1.0
@@ -1610,9 +1631,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/read-more@^1.0, @psu-ooe/read-more@workspace:packages/read-more":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/read-more@workspace:packages/read-more"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/slide-toggle@^1.0, @psu-ooe/slide-toggle@workspace:packages/slide-toggle":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/slide-toggle@workspace:packages/slide-toggle"
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/smart-datetime@^1.0, @psu-ooe/smart-datetime@workspace:packages/smart-datetime":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/smart-datetime@workspace:packages/smart-datetime"
+  dependencies:
+    "@psu-ooe/base": ^1.0
   languageName: unknown
   linkType: soft
 

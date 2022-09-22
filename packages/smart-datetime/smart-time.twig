@@ -1,0 +1,57 @@
+{#
+Variables:
+  - start: A string or datetime object that is the start of the range.
+  - end: A string or datetime object that is the end of the range.
+  - timezone: A timezone string (i.e. 'America/New_York')
+#}
+{% if start and end %}
+  {% set attributes = get_date_range_metadata(start|cast_to_datetime(timezone), end|cast_to_datetime(timezone)) %}
+  {% apply spaceless %}
+    <span class="time-range" {{ attributes|join(' ') }}>
+      <span class="time-range__start">
+        <time class="time" datetime="{{ start|date('Y-m-d\\TH:i:sP', false) }}">
+          {% set hours = start|date('g', false) %}
+          {% set minutes = start|date('i', false) %}
+          {% set meridiem = start|date('a', false)|replace({'am': 'a.m.', 'pm': 'p.m.'}) %}
+          {% if hours == '12' and minutes == '00' %}
+            {% if meridiem == 'a.m.' %}
+              <span class="time__midnight">Midnight</span>
+            {% else %}
+              <span class="time__noon">Noon</span>
+            {% endif %}
+          {% else %}
+            <span class="time__hours">{{ hours }}</span>
+            <span class="time__separator">:</span>
+            <span class="time__minutes">{{ minutes }}</span>
+            <span class="time__meridiem">{{ meridiem }}</span>
+          {% endif %}
+          <span class="time__timezone">({{ start|date('T', false) }})</span>
+        </time>
+      </span>
+      <span class="time-range__separator">
+        <span class="visually-hidden">to</span>
+        <span aria-hidden="true">–<wbr></span>
+      </span>
+      <span class="time-range__end">
+        <time class="time" datetime="{{ end|date('Y-m-d\\TH:i:sP', false) }}">
+          {% set hours = end|date('g', false) %}
+          {% set minutes = end|date('i', false) %}
+          {% set meridiem = end|date('a', false)|replace({'am': 'a.m.', 'pm': 'p.m.'}) %}
+          {% if hours == '12' and minutes == '00' %}
+            {% if meridiem == 'a.m.' %}
+              <span class="time__midnight">midnight</span>
+            {% else %}
+              <span class="time__noon">noon</span>
+            {% endif %}
+          {% else %}
+            <span class="time__hours">{{ hours }}</span>
+            <span class="time__separator">:</span>
+            <span class="time__minutes">{{ minutes }}</span>
+            <span class="time__meridiem">{{ meridiem }}</span>
+          {% endif %}
+          <span class="time__timezone">({{ end|date('T', false) }})</span>
+        </time>
+      </span>
+    </span>
+  {% endapply %}
+{% endif %}

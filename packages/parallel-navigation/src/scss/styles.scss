@@ -1,0 +1,77 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.parallel-navigation {
+  &__intro {
+    margin-bottom: rem(.8);
+
+    @include bp(m) {
+      margin-bottom: rem(1.5);
+    }
+  }
+
+  &__heading {
+    margin-bottom: rem(.8);
+  }
+
+  &__text {
+    font-size: rem(1.4);
+    line-height: calc(13/7)
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    font-family: $open-sans;
+
+    &--two-col {
+      column-count: 2;
+      column-gap: rem(2);
+      column-width: rem(29);
+    }
+  }
+
+  &__item {
+    border-bottom: rem(.1) solid $slate-light;
+    display: inline-block;
+    list-style-type: none;
+    padding: rem(.4) 0;
+    width: 100%;
+    margin: 0;
+    &::before {
+      display: none;
+    }
+  }
+
+  &__link {
+    border-bottom: none;
+    color: $nittany-navy;
+    display: block;
+    font-size: rem(1.6);
+    line-height: calc(4/3);
+    font-weight: 400;
+    text-decoration: none;
+    padding: rem(1.1) 0;
+
+    @include bp(m) {
+      font-size: rem(1.8);
+      padding: rem(1.5) 0;
+    }
+
+    &:focus {
+      outline: rem(.2) solid $sky-blue;
+      color: $primary-blue;
+    }
+
+    &:hover {
+      border-bottom: none;
+      color: $primary-blue;
+      text-decoration: underline;
+    }
+
+    &.active {
+      color: $primary-blue;
+      font-weight: 700;
+    }
+  }
+}

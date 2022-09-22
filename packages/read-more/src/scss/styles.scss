@@ -1,0 +1,43 @@
+@import "../../../base/src/scss/imports/variables";
+
+.read-more {
+  text-decoration: none;
+  border-bottom: rem(.1) solid transparent;
+  color: $primary-blue;
+  font-size: rem(1.4);
+  line-height: calc(16/14);
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &:hover {
+    color: $primary-blue;
+    border-color: $primary-blue;
+  }
+
+  &:focus {
+    outline-offset: rem(0.2);
+  }
+
+  &--small {
+    font-size: rem(1.1);
+    line-height: calc(16/11);
+  }
+
+  &--reverse {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      border-color: $white;
+    }
+
+    &:focus {
+      outline-color: $white;
+    }
+  }
+
+  .sprite {
+    font-size: rem(1);
+    vertical-align: -6%;
+  }
+}

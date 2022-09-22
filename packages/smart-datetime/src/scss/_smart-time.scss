@@ -1,0 +1,41 @@
+.time-range {
+
+  .time {
+    &__timezone,
+    &__meridiem {
+      &::before {
+        content: "\A";
+      }
+    }
+  }
+
+  &[data-same-meridiem] {
+    .time-range__start .time__meridiem {
+      display: none;
+    }
+  }
+
+  &[data-same-timezone] {
+    .time-range__start .time__timezone {
+      display: none;
+    }
+  }
+
+  &[data-start-on-the-hour] {
+    .time-range__start {
+      .time__separator,
+      .time__minutes {
+        display: none;
+      }
+    }
+  }
+
+  &[data-end-on-the-hour] {
+    .time-range__end {
+      .time__separator,
+      .time__minutes {
+        display: none;
+      }
+    }
+  }
+}
