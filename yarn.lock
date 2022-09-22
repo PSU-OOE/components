@@ -1523,6 +1523,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/breadcrumbs@workspace:packages/breadcrumbs":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/breadcrumbs@workspace:packages/breadcrumbs"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/card@^1.0, @psu-ooe/card@workspace:packages/card":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/card@workspace:packages/card"
@@ -1570,6 +1578,7 @@ __metadata:
     gulp-sass: ^5.0
     gulp-sass-bulk-import: ^1.0.1
     gulp-sourcemaps: ^3.0
+    gulp-stripbom: ^1.0.5
     gulp-svg-sprite: ^1.5.0
     gulp-uglify-es: ^3.0.0
     sass: ^1.52.1
@@ -1709,9 +1718,9 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*":
-  version: 18.7.16
-  resolution: "@types/node@npm:18.7.16"
-  checksum: 01a3d35c764a3f0e7370b56e1ad4203731131883c65784e020009014171b3f53c4649cde6c7aa4f1026b907ee87ef6ae6ece2bc518151dc7b81100fe8b1db3ad
+  version: 18.7.18
+  resolution: "@types/node@npm:18.7.18"
+  checksum: 8aec61f0f96e2a69ce51f1f40f949ca578bbb4fe05d7c0b8ce3aeeb848e90f755837f17f6ac132ca404d974fe9b2974150ad3b4984fc9dc7c3ceddb10bae0167
   languageName: node
   linkType: hard
 
@@ -1830,6 +1839,13 @@ __metadata:
   dependencies:
     ansi-wrap: ^0.1.0
   checksum: 0092e5c10f2c396f436457dae2ab9e53af1df077f324a900a1451a1cfa99cd41dd6e0c87b9a3f3a6023a36c49584b243a06334e68ff5e1d8d8bd4cea84f442f1
+  languageName: node
+  linkType: hard
+
+"ansi-colors@npm:^4.1.1":
+  version: 4.1.3
+  resolution: "ansi-colors@npm:4.1.3"
+  checksum: a9c2ec842038a1fabc7db9ece7d3177e2fe1c5dc6f0c51ecfbf5f39911427b89c00b5dc6b8bd95f82a26e9b16aaae2e83d45f060e98070ce4d1333038edceb0e
   languageName: node
   linkType: hard
 
@@ -4115,7 +4131,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fancy-log@npm:^1.1.0, fancy-log@npm:^1.3.2":
+"fancy-log@npm:^1.1.0, fancy-log@npm:^1.3.2, fancy-log@npm:^1.3.3":
   version: 1.3.3
   resolution: "fancy-log@npm:1.3.3"
   dependencies:
@@ -5000,6 +5016,20 @@ __metadata:
     strip-bom-string: ^1.0.0
     through2: ^2.0.0
   checksum: 845004dfbc47aac5395957393e66520c2aca5bdf64f17a4c2ac17f1fb2cebb5bc9839a3527e55a295d9f229362cb63d03e676517f0bd6fb22c033d24b66c5597
+  languageName: node
+  linkType: hard
+
+"gulp-stripbom@npm:^1.0.5":
+  version: 1.0.5
+  resolution: "gulp-stripbom@npm:1.0.5"
+  dependencies:
+    ansi-colors: ^4.1.1
+    fancy-log: ^1.3.3
+    log-symbols: ^1.0.0
+    plugin-error: ^1.0.1
+    strip-bom: ^1.0.0
+    through2: ^0.5.1
+  checksum: 6b1e8d5b6a0c2f48e42e5aab549decba3daa883773969e013da9bb123d7c60d6cadabfa41741823d204af64c7de77618081854bac8a5241b443bacd1e2cd1bc1
   languageName: node
   linkType: hard
 
@@ -6627,6 +6657,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"log-symbols@npm:^1.0.0":
+  version: 1.0.2
+  resolution: "log-symbols@npm:1.0.2"
+  dependencies:
+    chalk: ^1.0.0
+  checksum: 5214ade9381db5d40528c171fdfd459b75cad7040eb6a347294ae47fa80cfebba4adbc3aa73a1c9da744cbfa240dd93b38f80df8615717affeea6c4bb6b8dfe7
+  languageName: node
+  linkType: hard
+
 "log-symbols@npm:^4.1.0":
   version: 4.1.0
   resolution: "log-symbols@npm:4.1.0"
@@ -8119,7 +8158,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"readable-stream@npm:>=1.0.33-1 <1.1.0-0":
+"readable-stream@npm:>=1.0.33-1 <1.1.0-0, readable-stream@npm:~1.0.17":
   version: 1.0.34
   resolution: "readable-stream@npm:1.0.34"
   dependencies:
@@ -9388,6 +9427,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"through2@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "through2@npm:0.5.1"
+  dependencies:
+    readable-stream: ~1.0.17
+    xtend: ~3.0.0
+  checksum: 88e53617f3c609f1697c8306110733bcef92815d431fc742f35f165a28827cb31d091587301fef23f4fae58b0b24becba5033bdb6f057dd01c8d1eef1f843c47
+  languageName: node
+  linkType: hard
+
 "through2@npm:^0.6.1, through2@npm:^0.6.3":
   version: 0.6.5
   resolution: "through2@npm:0.6.5"
@@ -10297,6 +10346,13 @@ __metadata:
   version: 4.0.2
   resolution: "xtend@npm:4.0.2"
   checksum: ac5dfa738b21f6e7f0dd6e65e1b3155036d68104e67e5d5d1bde74892e327d7e5636a076f625599dc394330a731861e87343ff184b0047fef1360a7ec0a5a36a
+  languageName: node
+  linkType: hard
+
+"xtend@npm:~3.0.0":
+  version: 3.0.0
+  resolution: "xtend@npm:3.0.0"
+  checksum: ecdc4dd74f26e561dbc13d4148fcc7b8f46f49b9259862fc31e42b7cede9eee62af9d869050a7b8e089475e858744a74ceae3f0da2943755ef712f3277ad2e50
   languageName: node
   linkType: hard
 
