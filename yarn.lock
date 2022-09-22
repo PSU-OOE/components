@@ -1523,7 +1523,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/breadcrumbs@workspace:packages/breadcrumbs":
+"@psu-ooe/breadcrumbs@^1.0, @psu-ooe/breadcrumbs@workspace:packages/breadcrumbs":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/breadcrumbs@workspace:packages/breadcrumbs"
   dependencies:
@@ -1606,6 +1606,7 @@ __metadata:
     "@psu-ooe/accordion": ^1.0
     "@psu-ooe/band": ^1.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/breadcrumbs": ^1.0
     "@psu-ooe/card": ^1.0
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
