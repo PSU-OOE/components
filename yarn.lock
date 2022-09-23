@@ -1612,7 +1612,7 @@ __metadata:
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/parallel-navigation": ^1.0
-    "@psu-ooe/polyfill-focus-visible": ^1.0
+    "@psu-ooe/quote": ^1.0
     "@psu-ooe/read-more": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/smart-datetime": ^1.0
@@ -1624,11 +1624,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/polyfill-focus-visible@^1.0, @psu-ooe/polyfill-focus-visible@workspace:packages/polyfill-focus-visible":
+"@psu-ooe/quote@^1.0, @psu-ooe/quote@workspace:packages/quote":
   version: 0.0.0-use.local
-  resolution: "@psu-ooe/polyfill-focus-visible@workspace:packages/polyfill-focus-visible"
+  resolution: "@psu-ooe/quote@workspace:packages/quote"
   dependencies:
-    focus-visible: ^5.2.0
+    "@psu-ooe/base": ^1.0
   languageName: unknown
   linkType: soft
 
