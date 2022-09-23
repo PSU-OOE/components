@@ -1539,6 +1539,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/cards-list@^1.0, @psu-ooe/cards-list@workspace:packages/cards-list":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/cards-list@workspace:packages/cards-list"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/card": ^1.0
+    "@psu-ooe/expandable-section": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/cta@^1.0, @psu-ooe/cta@workspace:packages/cta":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta@workspace:packages/cta"
@@ -1642,6 +1652,7 @@ __metadata:
     "@psu-ooe/base": ^1.0
     "@psu-ooe/breadcrumbs": ^1.0
     "@psu-ooe/card": ^1.0
+    "@psu-ooe/cards-list": ^1.0
     "@psu-ooe/cta": ^1.0
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/expandable-section": ^1.0
