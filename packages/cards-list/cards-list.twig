@@ -1,0 +1,52 @@
+{#
+  Variables:
+    - cards
+    - collapsible
+#}
+
+{% set max_featured_cards = max_featured_cards|default(4) %}
+{% set classes = ['cards-list'] %}
+{% if collapsible %}
+  {% set classes = classes|merge(['cards-list--collapsible']) %}
+{% endif %}
+<div class="{{ classes|join(' ') }}">
+  {% set featured_cards = cards|slice(0, min(cards|length, max_featured_cards)) %}
+  {% set featured_cards_length = featured_cards|length %}
+  {% if featured_cards %}
+  {% set featured_classes = [
+    'cards-list__featured',
+    'cards-list__featured--' ~ featured_cards_length,
+  ] %}
+  <div class="{{ featured_classes|join(' ') }}">
+    {% for card in featured_cards %}
+      <div class="cards-list__card">
+        {% include '@molecules/card/card.twig' with card only %}
+      </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+  {% set overflow_cards = cards|slice(featured_cards_length, (cards|length - featured_cards_length)) %}
+  {% if overflow_cards %}
+    <div class="cards-list__overflow">
+      {% set overflow %}
+        <div class="cards-list__overflow-cards">
+          {% for card in overflow_cards %}
+            <div class="cards-list__card">
+              {% include '@molecules/card/card.twig' with card|merge({ list: true }) only %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endset %}
+      {% if collapsible %}
+        {% set expand_label = expand_label|default(featured_cards_length ? 'More Items' : 'Show Items') %}
+        {% include '@organisms/expandable-section/expandable-section.twig' with {
+          content: overflow,
+          expand_label: expand_label,
+          collapse_label: collapse_label|default('Close Items')
+        } only %}
+      {% else %}
+        {{ overflow }}
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

@@ -1,6 +1,10 @@
 {
   "name": "@psu-ooe/patternlab",
+<<<<<<< HEAD
   "version": "1.0.21",
+=======
+  "version": "1.0.20",
+>>>>>>> main
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -15,6 +19,7 @@
     "@psu-ooe/base": "^1.0",
     "@psu-ooe/breadcrumbs": "^1.0",
     "@psu-ooe/card": "^1.0",
+    "@psu-ooe/cards-list": "^1.0",
     "@psu-ooe/cta": "^1.0",
     "@psu-ooe/event-link": "^1.0",
     "@psu-ooe/expandable-section": "^1.0",
