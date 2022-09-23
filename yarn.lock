@@ -1587,6 +1587,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/overlay@^1.0, @psu-ooe/overlay@workspace:packages/overlay":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/overlay@workspace:packages/overlay"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/parallel-navigation@^1.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
@@ -1611,6 +1619,7 @@ __metadata:
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
+    "@psu-ooe/overlay": ^1.0
     "@psu-ooe/parallel-navigation": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/quote": ^1.0
