@@ -1,6 +1,5 @@
-((Drupal, cms) => {
-  Drupal.behaviors.expandableSection = {
-    attach: context => {
+(cms => {
+    cms.attach( context => {
       const elements = context.querySelectorAll('.expandable-section');
       elements.forEach(element => {
         const expand = element.querySelector('.expandable-section__expand');
@@ -36,6 +35,5 @@
           content.addEventListener('transitionend', afterCollapse);
         });
       });
-    }
-  };
-})(Drupal, cms);
+    });
+})(cms);
