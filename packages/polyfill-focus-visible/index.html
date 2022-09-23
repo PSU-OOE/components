@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Focus Visible Polyfill</title>
+    <script>const Drupal = {};</script>
+    <style>
+      :focus {
+        outline: none;
+      }
+      .focus-visible,
+      :focus-visible {
+        outline: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Press me!</button>
+    <script src="/themes/custom/worldcampus/components/polyfill-focus-visible/dist/scripts.js"></script>
+    <script>
+      const Drupal = {};
+      Drupal.behaviors = {};
+      Drupal.behaviors.polyfillFocusVisible.attach(document);
+    </script>
+  </body>
+</html>
