@@ -1671,6 +1671,7 @@ __metadata:
     "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^1.0
     "@psu-ooe/tabs-list": ^1.0
+    "@psu-ooe/upcoming-events": ^1.0
     "@psu-ooe/webfonts": ^1.0
   languageName: unknown
   linkType: soft
@@ -1753,6 +1754,16 @@ __metadata:
   dependencies:
     "@psu-ooe/base": ^1.0
     "@psu-ooe/tabs-list": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/upcoming-events@^1.0, @psu-ooe/upcoming-events@workspace:packages/upcoming-events":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/upcoming-events@workspace:packages/upcoming-events"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/event-link": ^1.0
+    "@psu-ooe/expandable-section": ^1.0
   languageName: unknown
   linkType: soft
 
