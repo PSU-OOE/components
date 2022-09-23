@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^1.0",
-    "@psu-ooe/slide-toggle": "^1.0",
-    "@psu-ooe/polyfill-focus-visible": "^1.0"
+    "@psu-ooe/polyfill-focus-visible": "^1.0",
+    "@psu-ooe/slide-toggle": "^1.0"
   }
 }
