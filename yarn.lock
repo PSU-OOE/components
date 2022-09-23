@@ -1556,6 +1556,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/expandable-section@^1.0, @psu-ooe/expandable-section@workspace:packages/expandable-section":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/expandable-section@workspace:packages/expandable-section"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/polyfill-focus-visible": ^1.0
+    "@psu-ooe/slide-toggle": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/flex-wrap-listener@^1.0, @psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener"
@@ -1634,6 +1644,7 @@ __metadata:
     "@psu-ooe/card": ^1.0
     "@psu-ooe/cta": ^1.0
     "@psu-ooe/event-link": ^1.0
+    "@psu-ooe/expandable-section": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/heading": ^1.0
