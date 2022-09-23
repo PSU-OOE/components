@@ -1580,6 +1580,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/heading@^1.0, @psu-ooe/heading@workspace:packages/heading":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/heading@workspace:packages/heading"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/monorepo-dev@workspace:.":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/monorepo-dev@workspace:."
@@ -1639,6 +1647,7 @@ __metadata:
     "@psu-ooe/expandable-section": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
+    "@psu-ooe/heading": ^1.0
     "@psu-ooe/overlay": ^1.0
     "@psu-ooe/parallel-navigation": ^1.0
     "@psu-ooe/polyfill-flex-gap": ^1.0

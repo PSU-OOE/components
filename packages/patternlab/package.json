@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -20,6 +20,7 @@
     "@psu-ooe/expandable-section": "^1.0",
     "@psu-ooe/flex-wrap-listener": "^1.0",
     "@psu-ooe/grid": "^1.0",
+    "@psu-ooe/heading": "^1.0",
     "@psu-ooe/overlay": "^1.0",
     "@psu-ooe/parallel-navigation": "^1.0",
     "@psu-ooe/polyfill-flex-gap": "^1.0",
