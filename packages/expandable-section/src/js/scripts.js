@@ -15,7 +15,7 @@
           expand.style.display = 'none';
 
           // Say something for A/T users.
-          Drupal.announce('expanded', 'assertive');
+          cms.announce('expanded', 'assertive');
 
         });
 
