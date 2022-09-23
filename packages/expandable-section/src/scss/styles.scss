@@ -1,0 +1,22 @@
+@import "../../../base/src/scss/imports/variables";
+
+.expandable-section {
+
+  &__content {
+    overflow: hidden;
+    visibility: hidden;
+    transition-property: height, margin-bottom, visibility;
+    transition-timing-function: linear;
+    margin-bottom: 0;
+  }
+
+  &__expand[aria-expanded="true"] + .expandable-section__content {
+    visibility: visible;
+    margin-bottom: rem(3);
+    overflow: visible;
+  }
+
+  &__collapse {
+    display: none;
+  }
+}
