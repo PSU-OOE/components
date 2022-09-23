@@ -5,4 +5,7 @@
 {% if color %}
   {% set classes = classes|merge(['cta-block--' ~ color]) %}
 {% endif %}
+{% if compact %}
+  {% set classes = classes|merge(['cta-block--compact']) %}
+{% endif %}
 <a class="{{ classes|join(' ') }}" href="{{ url }}">{{ label }}</a>
