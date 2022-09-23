@@ -1,0 +1,39 @@
+@import "../../../base/src/scss/imports/variables";
+
+.breadcrumbs {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: rem(1.4);
+
+    &:not(:last-of-type)::after {
+      content: "›";
+      color: $beaver-blue;
+      font-size: rem(1.6);
+      font-weight: 700;
+      padding: 0 rem(.4);
+    }
+  }
+
+  &__link {
+    font-size: rem(1.4);
+    color: $beaver-blue;
+    border-bottom: none;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+      color: $primary-blue;
+    }
+
+    &:focus {
+      color: $primary-blue;
+      outline-offset: rem(.2);
+    }
+  }
+}
