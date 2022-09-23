@@ -17,6 +17,7 @@
     "@psu-ooe/event-link": "^1.0",
     "@psu-ooe/flex-wrap-listener": "^1.0",
     "@psu-ooe/grid": "^1.0",
+    "@psu-ooe/overlay": "^1.0",
     "@psu-ooe/parallel-navigation": "^1.0",
     "@psu-ooe/read-more": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0",

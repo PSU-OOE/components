@@ -1,0 +1,119 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.overlay {
+  @include bp(s) {
+    position: relative;
+    min-height: rem(50);
+  }
+
+  .overlay__image {
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      width: 100%;
+
+      @include bp(s) {
+        position: absolute;
+      }
+    }
+  }
+
+  .overlay__column {
+    @include bp(s) {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: rem(4);
+      padding-right: rem(4);
+      max-width: rem(119);
+      min-height: rem(50);
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .overlay__content {
+    background: $white;
+    width: auto;
+    padding: rem(2);
+
+    @include bp(xs) {
+      padding: rem(4);
+    }
+
+    @include bp(s) {
+      width: rem(37.5);
+      padding: rem(3);
+      margin-top: rem(4);
+      margin-bottom: rem(4);
+      align-self: center;
+      z-index: 1;
+    }
+  }
+
+  &--beaver-blue {
+    .overlay__content {
+      background: $beaver-blue;
+      color: $white;
+    }
+    // because quotes are currently nested in here
+    .overlay__content > * {
+      color: $white;
+    }
+  }
+
+  &--blue-gradient {
+    .overlay__content {
+      background: linear-gradient(to right, $true-blue, $primary-blue);
+      color: $white;
+    }
+    // because quotes are currently nested in here
+    .overlay__content > * {
+      color: $white;
+    }
+  }
+
+  &--column-width-narrow {
+    .overlay__column {
+      @include bp(s) {
+        max-width: rem(95);
+      }
+    }
+  }
+
+  &--content-width-wide {
+    .overlay__content {
+      @include bp(s) {
+        width: rem(57.5);
+      }
+    }
+  }
+
+  &--background-position {
+    &--top-left .overlay__image img {
+      object-position: top left;
+    }
+    &--top-right .overlay__image img {
+      object-position: top right;
+    }
+    &--center-left .overlay__image img {
+      object-position: center left;
+    }
+    &--center-center .overlay__image img {
+      object-position: center center;
+    }
+    &--center-right .overlay__image img {
+      object-position: center right;
+    }
+    &--bottom-left .overlay__image img {
+      object-position: bottom left;
+    }
+    &--bottom-center .overlay__image img {
+      object-position: bottom center;
+    }
+    &--bottom-right .overlay__image img {
+      object-position: bottom right;
+    }
+  }
+}

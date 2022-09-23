@@ -1,0 +1,24 @@
+{% set classes = ['overlay'] %}
+
+{% if overlay_bg_color %}
+  {% set classes = classes|merge(['overlay--' ~ overlay_bg_color ]) %}
+{% endif %}
+
+{% if column_width %}
+  {% set classes = classes|merge(['overlay--column-width-' ~ column_width ]) %}
+{% endif %}
+
+{% if overlay_width %}
+  {% set classes = classes|merge(['overlay--content-width-' ~ overlay_width ]) %}
+{% endif %}
+
+{% if background_position %}
+  {% set classes = classes|merge(['overlay--background-position--' ~ background_position ]) %}
+{% endif %}
+
+<div class="{{ classes|join(' ') }}">
+  <div class="overlay__image"> {{ image }} </div>
+  <div class="overlay__column">
+    <div class="overlay__content"> {{ content }} </div>
+  </div>
+</div>
