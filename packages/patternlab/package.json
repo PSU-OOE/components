@@ -18,6 +18,7 @@
     "@psu-ooe/cards-list": "^1.0",
     "@psu-ooe/cta": "^1.0",
     "@psu-ooe/event-link": "^1.0",
+    "@psu-ooe/expandable-section": "^1.0",
     "@psu-ooe/flex-wrap-listener": "^1.0",
     "@psu-ooe/grid": "^1.0",
     "@psu-ooe/heading": "^1.0",
