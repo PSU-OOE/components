@@ -1,0 +1,29 @@
+{% set content %}
+{% set headshot %}
+  <img src="https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg" width="400" height="400" alt="carrie tilley and family" loading="lazy">
+{% endset %}
+  {% include '@organisms/quote/quote.twig' with {
+  headshot: headshot,
+  reverse: true,
+  quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+  attribution: "Carrie Tilley",
+  byline: "Master of Engineering in Systems Engineering graduate",
+  after_quote: ""
+} %}
+{% endset %}
+{% set image %}
+  <picture>
+    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2021-12/quote-background-entry-gates-snow.webp?itok=8J4_R3Oq 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
+    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2021-12/quote-background-entry-gates-snow.webp?itok=GOfpUKe2 1x" type="image/webp" width="950" height="534">
+    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2021-12/quote-background-entry-gates-snow.jpg?itok=8J4_R3Oq 1x" media="(min-width:800px)" type="image/jpeg" width="1920" height="840">
+    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2021-12/quote-background-entry-gates-snow.jpg?itok=GOfpUKe2 1x" type="image/jpeg" width="950" height="534">
+    <img src="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2021-12/quote-background-entry-gates-snow.jpg?itok=8J4_R3Oq" width="1920" height="840" alt="Snowy sidewalk at Penn State's University Park campus" loading="lazy">
+  </picture>
+{% endset %}
+{% include '@molecules/overlay/overlay.twig' with {
+  image: image,
+  content: content,
+  overlay_bg_color: "blue-gradient",
+  column_width: "normal",
+  overlay_width: "wide"
+} %}
