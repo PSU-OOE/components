@@ -1,0 +1,20 @@
+{% set classes = classes|default([]) %}
+{% set level = level|default(2) %}
+{% set flush = flush|default(false) %}
+
+{% set allowed_levels = 1..6 %}
+{% set allowed_colors = ['neutral']  %}
+{% set allowed_sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] %}
+
+{% if level in allowed_levels and content is not empty %}
+
+  {% set classes = classes|merge([
+    'heading',
+    color in allowed_colors ? 'heading--' ~ color,
+    size in allowed_sizes ? 'heading--' ~ size,
+    flush ? 'heading--flush',
+  ]) | filter(class => class is not empty) %}
+{% apply spaceless %}
+  <h{{ level }}{% if classes %} class="{{ classes|join(' ') }}"{% endif %}>{{ content }}</h{{ level }}>
+{% endapply %}
+{% endif %}
