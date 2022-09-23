@@ -1,0 +1,16 @@
+<nav class="breadcrumbs" aria-labelledby="{{ id }}">
+  <{{ heading_level}} class="visually-hidden" id="{{ id }}">{{ heading }}</{{ heading_level}}>
+  <ol class="breadcrumbs__list">
+    {% for crumb in breadcrumbs %}
+        {% if crumb.url %}
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="{{ crumb.link }}">{{ crumb.text }}</a>
+          </li>
+        {% else %}
+          <li class="breadcrumbs__item">
+            {{ crumb.text }}
+          </li>
+        {% endif %}
+    {% endfor %}
+  </ol>
+</nav>
