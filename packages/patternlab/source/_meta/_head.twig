@@ -35,6 +35,12 @@
       {{ get_component_stylesheets() }}
     </style>
 
-    <script>const cms = { attach: (component, callback) => callback(document) };</script>
+    <script>
+      const cms = {
+        attach: (component, callback) => callback(document),
+        announce: (text, priority) => { /* @todo: implement */ },
+        vendor_dir: '/vendor'
+      };
+    </script>
   </head>
   <body class="{{ bodyClass }}">

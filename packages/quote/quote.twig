@@ -1,0 +1,23 @@
+<div class="quote{% if reverse %} quote--reverse{% endif %}">
+  <div class="quote__wrapper">
+    {% if headshot %}
+      <span class="quote__headshot">{{ headshot }}</span>
+    {% endif %}
+    <figure class="quote__figure">
+      <blockquote class="quote__content">
+        &ldquo;{{- quote -}}&rdquo;
+      </blockquote>
+      {% apply spaceless %}
+        <figcaption class="quote__caption">
+        {%- if attribution or byline -%}
+          — {{ attribution }}
+          {%- if attribution and byline -%}, {% endif %}{{ byline }}
+        {% endif %}
+        </figcaption>
+      {% endapply %}
+      {% if after_quote %}
+        <div class="quote__after">{{ after_quote }}</div>
+      {% endif %}
+    </figure>
+  </div>
+</div>

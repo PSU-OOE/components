@@ -1,0 +1,18 @@
+{% set after_quote %}
+{% include '@molecules/read-more/read-more.twig' with {
+  url: "http://www.google.com",
+  title: "All my programs",
+  size: "medium",
+  reverse: false
+} %}
+{% endset %}
+
+
+{% include '@organisms/quote/quote.twig' with {
+  reverse: false,
+  headshot: " <img src=\"https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg\" width=\"400\" height=\"400\" alt=\"carrie tilley and family\" loading=\"lazy\">",
+  quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+  attribution: "Carrie Tilley",
+  byline: "Master of Engineering in Systems Engineering graduate",
+  after_quote: after_quote
+} %}
