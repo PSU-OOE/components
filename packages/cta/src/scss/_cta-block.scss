@@ -1,0 +1,179 @@
+/* Automatic contrasting color definitions */
+:root {
+  --cta-block-expand-background-color-default: #{$light-mauve};
+  --cta-block-expand-background-color-light: #{$white};
+
+  --cta-block-expand-background-color: var(--cta-block-expand-background-color-default);
+}
+
+.cta-block {
+  border: none;
+  display:inline-block;
+  padding: 1.5rem 3rem;
+  font-family: $open-sans;
+  font-size:1.5rem;
+  line-height:1em;
+  font-weight:600;
+  text-decoration:none;
+  border-radius: 0.2rem;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  text-align:center;
+  color: $white;
+  background: $primary-blue;
+  margin-bottom: 0;
+  outline-offset: -.5rem;
+  position: relative;
+
+  @include bp(m) {
+    padding: 1.7rem 3.125rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $nittany-navy;
+    border-bottom: none;
+    color: $white;
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: .2rem solid $sky-blue;
+    outline-offset: -.5rem;
+    background-color: $nittany-navy;
+    border-bottom: none;
+    color: $white;
+  }
+
+  // @TODO: Remove safari polyfill.
+  &.focus-visible {
+    outline: .2rem solid $sky-blue;
+    outline-offset: -.5rem;
+    background-color: $nittany-navy;
+    border-bottom: none;
+    color: $white;
+  }
+
+  &:hover {
+    outline: none;
+  }
+
+  &--compact {
+    font-size: 1.1rem;
+    padding: 1.4rem 0.5rem;
+
+    @include bp(m) {
+      padding: 1.4rem 2.2rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  &--campaign-legacy {
+    padding: 1.3rem 1.571rem;
+    font-size: 1.4rem;
+
+    .cta-block__icon {
+      margin-left: -.4rem;
+      &::before {
+        content: "\00a0\f106";
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &--expand-to-fit {
+    display: block;
+    width: stretch; /* official name - not supported by major browsers yet */
+    width: -webkit-fill-available;
+    width: -moz-available;
+  }
+
+  &--shadow {
+    box-shadow: .1rem .1rem rgba(0,0,0,0.25);
+    filter: drop-shadow(-.1rem -.1rem 0 rgba(255,255,255,0.67));
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &__icon {
+    display: inline-flex;
+    transition: color .2s ease-in-out;
+    font-size: 1.3rem;
+    color: $light-mauve;
+    vertical-align: middle;
+    &--before {
+      margin-right: 0.8rem;
+    }
+    &--after {
+      margin-left: 0.8rem;
+    }
+
+    .sprite {
+      margin: auto;
+    }
+  }
+}
+
+@mixin cta-color($name, $background, $foreground, $background-active, $foreground-active, $outline, $icon, $icon-active) {
+  .cta-block--#{$name} {
+    background: $background;
+    color: $foreground;
+
+    &:hover {
+      background: $background-active;
+      color: $foreground-active;
+
+      .cta-block__icon {
+        color: $icon-active;
+      }
+    }
+
+    &:focus-visible {
+      outline-color: $outline;
+      background: $background-active;
+      color: $foreground-active;
+
+      .cta-block__icon {
+        color: $icon-active;
+      }
+    }
+
+    // @TODO: Remove safari polyfill.
+    &.focus-visible {
+      outline-color: $outline;
+      background: $background-active;
+      color: $foreground-active;
+
+      .cta-block__icon {
+        color: $icon-active;
+      }
+    }
+
+    .cta-block__icon {
+      color: $icon;
+    }
+  }
+}
+
+@include cta-color('alt', $beaver-blue, $white, $nittany-navy, $white, $sky-blue, $light-mauve, $light-mauve);
+@include cta-color('reversed', $white, $nittany-navy,$nittany-navy, $white, $sky-blue, $primary-blue, $light-mauve);
+@include cta-color('color-keystone', $keystone, $black,$invent-orange-light, $black, $black, $black, $black);
+@include cta-color('expand', var(--cta-block-expand-background-color), $beaver-blue, $pugh-blue, $nittany-navy, $nittany-navy, $beaver-blue, $nittany-navy);
+
+.cta-block--expand {
+  transition: color .3s linear, background-color .3s linear, box-shadow .3s linear;
+  box-shadow: .1rem .1rem 0 0 rgba($beaver-blue, .5);
+
+  &:focus-visible, &:hover {
+    box-shadow: .1rem .1rem 0 0 rgba($nittany-navy, .5);
+  }
+
+  // @TODO: Remove safari polyfill.
+  &.focus-visible {
+    box-shadow: .1rem .1rem 0 0 rgba($nittany-navy, .5);
+  }
+}

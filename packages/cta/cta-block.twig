@@ -1,0 +1,8 @@
+{% set classes = ['cta-block'] %}
+{% if expand_to_fit %}
+  {% set classes = classes|merge(['cta-block--expand-to-fit']) %}
+{% endif %}
+{% if color %}
+  {% set classes = classes|merge(['cta-block--' ~ color]) %}
+{% endif %}
+<a class="{{ classes|join(' ') }}" href="{{ url }}">{{ label }}</a>
