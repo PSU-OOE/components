@@ -1,0 +1,54 @@
+{% include '@organisms/upcoming-events/upcoming-events.twig' with {
+  heading: {
+    level: 2,
+    size: "medium",
+    content: "Upcoming Events",
+    color: "neutral",
+    flush: true
+  },
+  compact: true,
+  events: [
+    {
+      title: "Virtual Open House (Morning)",
+      url: "#",
+      start: "2022-03-23 8:00 EDT",
+      end: "2022-03-23 9:40 EDT",
+      timezone: "America/New_York"
+    },
+    {
+      title: "Transferring Credits to Penn State",
+      url: "#",
+      start: "2022-03-24 13:00 EDT",
+      end: "2022-03-24 14:40 EDT",
+      timezone: "America/New_York"
+    },
+    {
+      title: "Virtual Open House (Evening)",
+      url: "#",
+      start: "2022-03-24 17:00 EDT",
+      end: "2022-03-25 18:00 EDT",
+      timezone: "America/New_York"
+    },
+    {
+      title: "Party in Portland",
+      url: "#",
+      start: "2022-09-22 8:00 PST",
+      end: "2022-09-22 19:00 PST",
+      timezone: "America/Los_Angeles"
+    },
+    {
+      title: "Rumble in Rome",
+      url: "#",
+      start: "2022-04-23 8:15 MET",
+      end: "2022-05-23 19:40 MET",
+      timezone: "Europe/Rome"
+    },
+    {
+      title: "Confusion on a plane flying over Arizona on the fall daylight savings changeover.",
+      url: "#",
+      start: "2022-11-06 00:01 EDT",
+      end: "2022-11-06 23:59:59 EST",
+      timezone: "America/New_York"
+    }
+  ]
+} only %}

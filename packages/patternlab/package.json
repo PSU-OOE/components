@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -25,6 +25,7 @@
     "@psu-ooe/sticky-panel": "^1.0",
     "@psu-ooe/tabs": "^1.0",
     "@psu-ooe/tabs-list": "^1.0",
+    "@psu-ooe/upcoming-events": "^1.0",
     "@psu-ooe/webfonts": "^1.0"
   }
 }
