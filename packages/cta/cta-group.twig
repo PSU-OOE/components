@@ -1,0 +1,12 @@
+{% set classes = ['cta-group'] %}
+{% if expand_to_fit %}
+  {% set classes = classes|merge(['cta-group--expand-to-fit']) %}
+{% endif %}
+{% if align_right %}
+  {% set classes = classes|merge(['cta-group--align-right']) %}
+{% endif %}
+<div class="{{ classes|join(' ') }}">
+  {% for cta in ctas %}
+    {{ cta }}
+  {% endfor %}
+</div>

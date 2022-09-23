@@ -1,0 +1,27 @@
+.cta-group {
+  &--align-right {
+    text-align: right;
+  }
+
+  &--expand-to-fit {
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+
+    > .cta-block {
+      flex: 1 1 auto;
+
+      &:not(.cta-block--compact) {
+        padding: 1.5rem;
+
+        @include bp(m) {
+          padding: 1.7rem;
+        }
+      }
+    }
+  }
+
+  & > .cta-block:not(:last-of-type) {
+    margin-right: .5rem;
+  }
+}

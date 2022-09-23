@@ -1539,6 +1539,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/cta@^1.0, @psu-ooe/cta@workspace:packages/cta":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/cta@workspace:packages/cta"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/event-link@^1.0, @psu-ooe/event-link@workspace:packages/event-link":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/event-link@workspace:packages/event-link"
@@ -1626,12 +1634,14 @@ __metadata:
     "@psu-ooe/base": ^1.0
     "@psu-ooe/breadcrumbs": ^1.0
     "@psu-ooe/card": ^1.0
+    "@psu-ooe/cta": ^1.0
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/expandable-section": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/overlay": ^1.0
     "@psu-ooe/parallel-navigation": ^1.0
+    "@psu-ooe/polyfill-flex-gap": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/quote": ^1.0
     "@psu-ooe/read-more": ^1.0
@@ -1642,6 +1652,14 @@ __metadata:
     "@psu-ooe/tabs": ^1.0
     "@psu-ooe/tabs-list": ^1.0
     "@psu-ooe/webfonts": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/polyfill-flex-gap@^1.0, @psu-ooe/polyfill-flex-gap@workspace:packages/polyfill-flex-gap":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/polyfill-flex-gap@workspace:packages/polyfill-flex-gap"
+  dependencies:
+    "@psu-ooe/base": ^1.0
   languageName: unknown
   linkType: soft
 
