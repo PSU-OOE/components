@@ -8,12 +8,14 @@
   }
 
   &__item {
+    color: $beaver-blue;
     display: inline-block;
     font-size: rem(1.4);
+    font-weight: 700;
 
     &:not(:last-of-type)::after {
       content: "›";
-      color: $beaver-blue;
+      color: $primary-blue;
       font-size: rem(1.6);
       font-weight: 700;
       padding: 0 rem(.4);
