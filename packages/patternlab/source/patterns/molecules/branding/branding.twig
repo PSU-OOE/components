@@ -1,0 +1,10 @@
+{% set wc_logo %}
+  {% include '@atoms/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+{% endset %}
+{% include '@molecules/branding/branding.twig' with {
+  url: '/',
+  site_name: 'Penn State World Campus',
+  image: wc_logo,
+  tagline: 'A world of possibilities. Online.',
+  aria_current: false,
+} only %}

@@ -1,0 +1,30 @@
+@import "../../../base/src/scss/imports/variables";
+
+.branding {
+  color: #1e407c;
+  width: fit-content;
+
+  &__content {
+    padding: rem(2);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: rem(1) rem(2);
+  }
+
+  &__link {
+    color: $beaver-blue;
+  }
+
+  &__mark {
+    font-size: rem(6);
+    line-height: 0;
+  }
+
+  &__tagline {
+    font-size: rem(2);
+    margin-bottom: rem(1);
+    text-align: center;
+  }
+}

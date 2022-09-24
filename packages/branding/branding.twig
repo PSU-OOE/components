@@ -1,0 +1,13 @@
+<div class="branding">
+  <div class="branding__content">
+    <a class="branding__link" href="{{ url }}"{% if aria_current %}aria-current="page"{% endif %}>
+      <span class="visually-hidden">{{ site_name }}</span>
+      <div class="branding__mark">
+        {{ image }}
+      </div>
+    </a>
+    {% if tagline %}
+      <span class="branding__tagline">{{ tagline }}</span>
+    {% endif %}
+  </div>
+</div>
