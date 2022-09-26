@@ -1,0 +1,111 @@
+{% set wc_logo %}
+  {% include '@atoms/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+{% endset %}
+
+  {% set apply_now %}
+    {% include '@ooe/cta/cta-block.twig' with {
+      label: 'Primary CTA',
+    } %}
+  {% endset %}
+  {% set request_info %}
+    {% include '@ooe/cta/cta-block.twig' with {
+      label: 'Secondary CTA',
+      color: 'alt',
+    } %}
+  {% endset %}
+
+{% set header %}
+  {% include '@molecules/branding/branding.twig' with {
+    url: '/',
+    image: wc_logo,
+    site_name: 'Penn State World Campus',
+    tagline: 'A world of possibilities. Online.',
+    aria_current: false,
+  } only %}
+  {% include '@ooe/cta/cta-group.twig' with {
+    ctas: [apply_now, request_info]
+  } only %}
+{% endset %}
+
+{% set navigation %}
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/">About Us</a></li>
+    <li><a href="/">Degrees and Certificates</a></li>
+    <li><a href="/">Technical Support</a></li>
+    <li><a href="/">Student Services</a></li>
+  </ul>
+{% endset %}
+{% set before_content %}
+  {% include '@ooe/breadcrumbs/breadcrumbs.twig' with {
+    heading: 'Breadcrumbs',
+    heading_level: 'h2',
+    id: 'breadcrumbs-top',
+    breadcrumbs: [
+      { url: '/', text: 'Home' },
+      { url: '/', text: 'Parent page' },
+      { text: 'Current page' }
+    ]
+  } only %}
+{% endset %}
+
+{% set main %}
+  <h1>Simple website example</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lacinia at quis risus sed vulputate odio ut. <strong>Condimentum lacinia quis vel eros donec ac.</strong> Posuere morbi leo urna molestie at elementum eu. Egestas quis ipsum suspendisse ultrices. Gravida neque convallis a cras semper auctor neque vitae tempus. Nisl pretium fusce id velit ut tortor. Habitasse platea dictumst vestibulum rhoncus. Amet venenatis urna cursus eget nunc scelerisque. Commodo nulla facilisi nullam vehicula. Id venenatis a condimentum vitae. Quisque egestas diam in arcu cursus euismod quis. Eget mauris pharetra et ultrices neque ornare aenean euismod elementum. Risus nec feugiat in fermentum posuere.</p>
+  <h2>Subheading 2</h2>
+  <p>Dui sapien eget mi proin sed libero enim. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Ac tortor dignissim convallis aenean. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Tincidunt id aliquet risus feugiat. Rhoncus aenean vel elit scelerisque mauris. Sem fringilla ut morbi tincidunt augue interdum velit. Eget nullam non nisi est. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat velit. Ut porttitor leo a diam. Sapien faucibus et molestie ac. Ac odio tempor orci dapibus ultrices. Eu facilisis sed odio morbi quis commodo. Quis hendrerit dolor magna eget. Elit pellentesque habitant morbi tristique senectus. Nibh sed pulvinar proin gravida hendrerit. Rhoncus mattis rhoncus urna neque viverra justo.</p>
+  <h2>Subheading 2</h2>
+  <p>Convallis posuere morbi leo urna molestie at. Massa enim nec dui nunc mattis. Vitae justo eget magna fermentum iaculis eu. At risus viverra adipiscing at in tellus integer. Dui id ornare arcu odio ut sem nulla. Curabitur vitae nunc sed velit dignissim. Id eu nisl nunc mi ipsum faucibus vitae. Quam id leo in vitae. Faucibus interdum posuere lorem ipsum dolor sit. At ultrices mi tempus imperdiet nulla malesuada pellentesque.</p>
+  <h2>Subheading 2</h2>
+  <p>Quis imperdiet massa tincidunt nunc pulvinar sapien et. Eu volutpat odio facilisis mauris sit amet massa. Velit dignissim sodales ut eu sem integer vitae justo. Gravida quis blandit turpis cursus in. Dui accumsan sit amet nulla. Et ligula ullamcorper malesuada proin libero nunc consequat. Ut aliquam purus sit amet luctus venenatis lectus magna fringilla. Auctor urna nunc id cursus. Odio pellentesque diam volutpat commodo sed egestas egestas. Etiam dignissim diam quis enim lobortis. Ut diam quam nulla porttitor massa id neque.</p>
+  <h3>Subheading 3</h3>
+  <p>Mattis aliquam faucibus purus in massa tempor nec. Et malesuada fames ac turpis egestas integer eget. Ut porttitor leo a diam sollicitudin tempor. Nibh venenatis cras sed felis eget velit. Lacus vel facilisis volutpat est velit egestas dui. Adipiscing commodo elit at imperdiet dui accumsan. Tristique magna sit amet purus gravida quis blandit turpis cursus. Egestas integer eget aliquet nibh praesent tristique magna. Laoreet suspendisse interdum consectetur libero. Arcu felis bibendum ut tristique et egestas. Vitae semper quis lectus nulla at volutpat diam.</p>
+{% endset %}
+
+{% set aside %}
+  {% include '@ooe/menu/menu.twig' with {
+    links: [
+      { url: '#', text: 'Link 1' },
+      { url: '#', text: 'Link 2' },
+      { url: '#', text: 'Link 3' },
+      { url: '#', text: 'Link 4' },
+      { url: '#', text: 'Link 5' },
+    ]
+  } only %}
+{% endset %}
+
+{% set after_content %}
+  {% include '@ooe/breadcrumbs/breadcrumbs.twig' with {
+    heading: 'Breadcrumbs',
+    heading_level: 'h2',
+    id: 'breadcrumbs-bottom',
+    breadcrumbs: [
+      { url: '/', text: 'Home' },
+      { url: '/', text: 'Parent page' },
+      { text: 'Current page' }
+    ]
+  } only %}
+{% endset %}
+
+{% set footer %}
+  <ul style="display: inline;list-style-type: none;margin:0;padding:0;">
+    <li style="display: inline">
+      <a style="padding: 0 1rem 1rem 0;display: inline-block;font-size: 6rem;line-height: 0" href="/">
+        {% include '@ooe/sprite/sprite.twig' with { name: 'wc-mark' } %}
+      </a></li>
+    <li style="display: inline"><a style="display: inline-block;padding: 1rem;" href="#">Privacy Statement</a></li>
+    <li style="display: inline"><a style="display: inline-block;padding: 1rem;" href="#">Non Discrimination</a></li>
+    <li style="display: inline"><a style="display: inline-block;padding: 1rem;" href="#">Accessibility</a></li>
+    <li style="display: inline"><a style="display: inline-block;padding: 1rem;" href="#">Equal Opportunity</a></li>
+    <li style="display: inline"><a style="display: inline-block;padding: 1rem;" href="#">Legal Statements</a></li>
+  </ul>
+  <ul style="display: inline-block;padding: 1rem 0;list-style-type: none;margin:0;">
+    <li style="display: inline-block; vertical-align: middle;">
+      <a style="padding: 1rem;" href="#">The Pennsylvania State University © {{ 'now'|date('Y') }}</a>
+    </li>
+    <li style="display: inline-block; vertical-align: middle;" class="footer-svg">
+      <img style="display: inline-block;padding: 1rem;" src="https://www.psu.edu/psu-edu-assets/images/shared/we-are-penn-state.svg" width="192px" alt="We Are Penn State">
+    </li>
+  </ul>
+{% endset %}
+{% include '@ooe/page/page.twig' %}

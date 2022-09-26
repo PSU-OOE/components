@@ -1,0 +1,103 @@
+@import "../../../base/src/scss/imports/variables";
+
+.header {
+  max-width: 119rem;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page {
+  &__header {
+    background: $light-grey;
+    position: sticky;
+    top: 0;
+
+    &::after {
+      content: '';
+      display: block;
+      box-shadow: 0 5px 10px 2px $light-grey;
+    }
+  }
+
+  &__navigation {
+    background: $primary-blue;
+
+    ul {
+      max-width: 119rem;
+      margin: auto;
+      padding: 0 3rem;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      color: $white;
+      display: inline-block;
+      padding: 2rem 1rem;
+      outline-offset: -0.5rem;
+      outline-color: white;
+    }
+  }
+
+  &__before-content {
+    padding: 0 4rem;
+    max-width: 119rem;
+    margin: 4rem auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 5%;
+    padding: 0 4rem;
+    max-width: 119rem;
+    margin: 4rem auto;
+  }
+
+  &__after-content {
+    padding: 0 4rem;
+    max-width: 119rem;
+    margin: 4rem auto;
+  }
+
+  &__main {
+    flex: 1 1 72.5%;
+  }
+
+  &__aside {
+    flex: 1 1 22.5%;
+    position: sticky;
+    top: rem(18);
+    height: min-content;
+  }
+
+  &__footer {
+    background: $nittany-navy;
+    color: $white;
+
+    a {
+      color: $white;
+
+      &:focus {
+        outline-color: $white;
+      }
+    }
+  }
+}
+
+.footer {
+  margin: auto;
+  max-width: 119rem;
+  padding: 4rem;
+}

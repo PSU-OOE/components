@@ -1,0 +1,41 @@
+<div class="page">
+  {% if header %}
+    <div class="page__header">
+      {% include '@ooe/page/region/header.twig' with { content: header } only %}
+    </div>
+  {% endif %}
+  {% if navigation %}
+    <div class="page__navigation">
+      {% include '@ooe/page/region/navigation.twig' with { content: navigation } only %}
+    </div>
+  {% endif %}
+  {% if before_content %}
+    <div class="page__before-content">
+      {% include '@ooe/page/region/before-content.twig' with { content: before_content } only %}
+    </div>
+  {% endif %}
+  {% if main or aside %}
+    <div class="page__content" id="main-content">
+      {% if main %}
+        <div class="page__main">
+          {% include '@ooe/page/region/main.twig' with { content: main } only %}
+        </div>
+      {% endif %}
+      {% if aside %}
+        <div class="page__aside">
+          {% include '@ooe/page/region/aside.twig' with { content: aside } only %}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+  {% if after_content %}
+    <div class="page__after-content">
+      {% include '@ooe/page/region/after-content.twig' with { content: after_content } only %}
+    </div>
+  {% endif %}
+  {% if footer %}
+    <div class="page__footer">
+      {% include '@ooe/page/region/footer.twig' with { content: footer } only %}
+    </div>
+  {% endif %}
+</div>

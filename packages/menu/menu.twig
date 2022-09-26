@@ -1,0 +1,15 @@
+<nav class="menu">
+  {% include '@ooe/heading/heading.twig' with {
+    level: 2,
+    size: 'small',
+    content: 'In this section',
+    classes: ['menu__heading']
+  } only %}
+  <ul class="menu__list">
+    {% for link in links %}
+    <li class="menu__item">
+      <a class="menu__link" href="{{ link.url }}">{{ link.text }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</nav>

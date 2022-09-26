@@ -31,7 +31,7 @@
     ],
     "l": [
       950,
-      1280
+      2048
     ]
   },
   "logLevel": "info",
@@ -141,6 +141,13 @@
         },
         {
           "id": "organisms",
+          "recursive": false,
+          "paths": [
+            "packages"
+          ]
+        },
+        {
+          "id": "ooe",
           "recursive": false,
           "paths": [
             "packages"

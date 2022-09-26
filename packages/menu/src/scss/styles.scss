@@ -1,0 +1,24 @@
+@import "../../../base/src/scss/imports/variables";
+
+.menu {
+  border: rem(.1) solid $medium-grey;
+  border-radius: rem(.3);
+  box-shadow: rem(.1) rem(.1) rem(.1) $medium-grey;
+
+  &__heading {
+    padding: rem(1);
+    background: $medium-grey;
+    margin-bottom: 0;
+  }
+
+  &__list {
+    margin: 0;
+    padding: rem(1);
+    list-style-type: none;
+  }
+
+  &__link {
+    display: block;
+    padding: rem(1);
+  }
+}
