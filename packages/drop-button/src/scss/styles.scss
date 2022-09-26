@@ -1,0 +1,328 @@
+@use "sass:math";
+
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.drop-button {
+  display: flex;
+  position: relative;
+
+  &__toggle {
+    background: $light-mauve;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    gap: rem(.5);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem(.5);
+    border-radius: rem(.4);
+    box-shadow: rem(.1) rem(.1) rgba($beaver-blue, .5);
+    transition: .3s color, .3s background-color, .3s box-shadow;
+    width: rem(4.4);
+    height: rem(4.4);
+    color: $beaver-blue;
+
+    font-family: $open-sans;
+    font-weight: 400;
+
+    font-size: rem(1.1);
+
+    @include bp(xs) {
+      font-size: rem(1.2);
+    }
+
+    @include bp(s) {
+      font-size: rem(1.4);
+    }
+
+    @include bp(m) {
+      font-size: rem(1.5);
+    }
+
+    @include bp(l) {
+      font-size: rem(1.6);
+    }
+
+    @include bp(xs) {
+      padding: rem(.6);
+      width: rem(5.2);
+      height: rem(5.2);
+    }
+
+    @include bp(s) {
+      padding: rem(.8);
+      width: rem(6.3);
+      height: rem(6.3);
+    }
+
+    @include bp(m) {
+      padding: rem(.9);
+      width: rem(7.2);
+      height: rem(7.2);
+    }
+
+    @include bp(l) {
+      padding: rem(1);
+      width: rem(8);
+      height: rem(8);
+    }
+
+    &:focus-visible {
+      background: $pugh-blue;
+      box-shadow: rem(.1) rem(.1) $nittany-navy;
+      color: $nittany-navy;
+      outline: none;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &.focus-visible {
+      background: $pugh-blue;
+      box-shadow: rem(.1) rem(.1) $nittany-navy;
+      color: $nittany-navy;
+      outline: none;
+    }
+
+
+    &:hover {
+      background: $pugh-blue;
+      box-shadow: rem(.1) rem(.1) $nittany-navy;
+      color: $nittany-navy;
+    }
+
+    &[aria-expanded="true"] {
+      box-shadow: rem(-.1) rem(-.1) $beaver-blue;
+
+      & + .drop-button__list {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .sprite {
+      opacity: .75;
+      height: rem(.605);
+      margin-top: rem(.3);
+
+      @include bp(xs) {
+        height: rem(.66);
+      }
+
+      @include bp(s) {
+        height: rem(.77);
+      }
+
+      @include bp(m) {
+        height: rem(.825);
+      }
+
+      @include bp(l) {
+        height: rem(.88);
+      }
+    }
+  }
+
+  &__label {
+    line-height: 1;
+  }
+
+  &__list {
+    background: $white;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s linear, visibility .2s linear;
+    list-style-type: none;
+    border-style: solid;
+    border-color: $slate-light $slate-light $slate-light $primary-blue;
+    border-width: rem(.1) rem(.1) rem(.1) rem(.3);
+    box-shadow: rem(.1) rem(.3) rem(.5) rgba($nittany-navy, .15);
+    padding: rem(1);
+    max-width: 100%;
+    width: rem(28);
+    z-index: 100;
+    top: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      transform: rotateZ(45deg);
+      background: $white;
+      width: rem(2);
+      height: rem(2);
+      top: rem(-1);
+      z-index: -1;
+      border-width: rem(.1);
+      border-style: solid;
+      border-color: $slate-light transparent transparent $slate-light;
+      left: calc(#{rem(2.2)} - #{rem(math.div(math.sqrt(200), 10))});
+
+      @include bp(xs) {
+        left: calc(#{rem(2.6)} - #{rem(math.div(math.sqrt(200), 10))});
+      }
+
+      @include bp(s) {
+        left: calc(#{rem(3.15)} - #{rem(math.div(math.sqrt(200), 10))});
+      }
+
+      @include bp(m) {
+        left: calc(#{rem(3.6)} - #{rem(math.div(math.sqrt(200), 10))});
+      }
+
+      @include bp(l) {
+        left: calc(#{rem(4)} - #{rem(math.div(math.sqrt(200), 10))});
+      }
+    }
+  }
+
+  &__link {
+    color: $nittany-navy;
+    display: block;
+    padding: rem(1);
+    font-weight: 400;
+    line-height: 1.25;
+    font-size: rem(1.4);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: rem(.3);
+    transition: text-decoration-color .3s, color .3s;
+
+    @include bp(xs) {
+      font-size: rem(1.6);
+    }
+
+    &:hover, &:focus {
+      color: $primary-blue;
+      text-decoration-color: $primary-blue;
+    }
+  }
+
+  &--align-center {
+    .drop-button__toggle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .drop-button__list {
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    .drop-button__list::before {
+      left: 50%;
+      transform: rotateZ(45deg) translateX(calc(-50% + #{rem(.2)})) translateY(calc(50% - #{rem(.2)}));
+    }
+  }
+
+  &--align-right {
+    .drop-button__toggle {
+      margin-left: auto;
+    }
+
+    .drop-button__list {
+      right: 0;
+
+      &::before {
+        left: revert;
+        right: rem(1.2);
+
+        @include bp(xs) {
+          right: rem(1.6);
+        }
+
+        @include bp(s) {
+          right: rem(2.15);
+        }
+
+        @include bp(m) {
+          right: rem(2.6);
+        }
+
+        @include bp(l) {
+          right: rem(3);
+        }
+      }
+    }
+  }
+
+  &--short {
+
+    .drop-button__toggle {
+      flex-direction: row;
+      justify-content: space-around;
+      height: auto;
+      width: auto;
+      padding: rem(.5) rem(.75);
+
+      @include bp(xs) {
+        padding: rem(.6) rem(.9);
+      }
+
+      @include bp(s) {
+        padding: rem(.8) rem(1.2);
+      }
+
+      @include bp(m) {
+        padding: rem(.9) rem(1.35);
+      }
+
+      @include bp(l) {
+        padding: rem(1) rem(1.5);
+      }
+    }
+
+    .sprite {
+      height: 1em;
+      margin-top: 0;
+    }
+  }
+
+  &--full-width {
+    .drop-button {
+      &__toggle {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: rem(.8);
+
+        @include bp(xs) {
+          padding: rem(.9);
+        }
+
+        @include bp(s) {
+          padding: rem(1);
+        }
+
+        @include bp(m) {
+          padding: rem(1.2);
+        }
+
+        @include bp(l) {
+          padding: rem(1.5);
+        }
+      }
+
+      &__list {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.layout--bg-light-grey {
+  .drop-button__toggle {
+    background: $white;
+
+    &:focus-visible {
+      background: $pugh-blue;
+    }
+
+    &.focus-visible {
+      background: $pugh-blue;
+    }
+  }
+}
