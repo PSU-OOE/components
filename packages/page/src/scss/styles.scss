@@ -15,12 +15,6 @@
     background: $light-grey;
     position: sticky;
     top: 0;
-
-    &::after {
-      content: '';
-      display: block;
-      box-shadow: 0 5px 10px 2px $light-grey;
-    }
   }
 
   &__navigation {
