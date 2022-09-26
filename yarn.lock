@@ -1566,6 +1566,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/drop-button@^1.0, @psu-ooe/drop-button@workspace:packages/drop-button":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/polyfill-focus-visible": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/event-link@^1.0, @psu-ooe/event-link@workspace:packages/event-link":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/event-link@workspace:packages/event-link"
@@ -1663,6 +1672,7 @@ __metadata:
     "@psu-ooe/card": ^1.0
     "@psu-ooe/cards-list": ^1.0
     "@psu-ooe/cta": ^1.0
+    "@psu-ooe/drop-button": ^1.0
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/expandable-section": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
