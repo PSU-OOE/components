@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.12",
+  "version": "1.0.22",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -13,12 +13,21 @@
     "@psu-ooe/accordion": "^1.0",
     "@psu-ooe/band": "^1.0",
     "@psu-ooe/base": "^1.0",
+    "@psu-ooe/breadcrumbs": "^1.0",
     "@psu-ooe/card": "^1.0",
+    "@psu-ooe/cards-list": "^1.0",
+    "@psu-ooe/cta": "^1.0",
     "@psu-ooe/drop-button": "^1.0",
     "@psu-ooe/event-link": "^1.0",
+    "@psu-ooe/expandable-section": "^1.0",
     "@psu-ooe/flex-wrap-listener": "^1.0",
     "@psu-ooe/grid": "^1.0",
+    "@psu-ooe/heading": "^1.0",
+    "@psu-ooe/overlay": "^1.0",
     "@psu-ooe/parallel-navigation": "^1.0",
+    "@psu-ooe/polyfill-flex-gap": "^1.0",
+    "@psu-ooe/polyfill-focus-visible": "^1.0",
+    "@psu-ooe/quote": "^1.0",
     "@psu-ooe/read-more": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0",
     "@psu-ooe/smart-datetime": "^1.0",
@@ -26,6 +35,7 @@
     "@psu-ooe/sticky-panel": "^1.0",
     "@psu-ooe/tabs": "^1.0",
     "@psu-ooe/tabs-list": "^1.0",
+    "@psu-ooe/upcoming-events": "^1.0",
     "@psu-ooe/webfonts": "^1.0"
   }
 }

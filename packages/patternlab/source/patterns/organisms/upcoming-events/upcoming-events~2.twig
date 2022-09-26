@@ -1,0 +1,24 @@
+{% include '@organisms/upcoming-events/upcoming-events.twig' with {
+  heading: {
+    level: 2,
+    content: "Upcoming Events",
+    color: "neutral",
+    flush: true
+  },
+  events: [
+    {
+      title: "Virtual Open House (Morning)",
+      url: "#",
+      start: "2022-03-23 8:00 EDT",
+      end: "2022-03-23 9:40 EDT",
+      timezone: "America/New_York"
+    },
+    {
+      title: "Transferring Credits to Penn State",
+      url: "#",
+      start: "2022-03-24 13:00 EDT",
+      end: "2022-03-24 14:40 EDT",
+      timezone: "America/New_York"
+    }
+  ]
+} only %}

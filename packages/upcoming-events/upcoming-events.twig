@@ -1,0 +1,46 @@
+{#
+  Variables:
+    heading: object - containing heading component properties
+    events: array - containing event-link objects
+    compact: boolean - true to display in compact mode
+#}
+<div class="upcoming-events{% if compact %} upcoming-events--compact{% endif %}">
+  <div class="upcoming-events__featured">
+    {% if heading %}
+      {% set heading_classes = heading.classes|default([])|merge(['upcoming-events__heading']) %}
+      {% set heading = heading|merge({classes: heading_classes}) %}
+      {% include '@atoms/heading/heading.twig' with heading only %}
+    {% endif %}
+    {% for event in events|slice(0, 3) %}
+      <div class="upcoming-events__event">
+        {% include '@organisms/event-link/event-link.twig' with event|merge({
+          compact: compact,
+          featured: not compact
+        }) only %}
+      </div>
+    {% endfor %}
+  </div>
+  {% set events = events|slice(3, (events|length - 3)) %}
+  {% set event_count = events|length %}
+  {% if events is not empty %}
+    {% set more %}
+      <div class="upcoming-events__more">
+        {% for event in events %}
+          <div class="upcoming-events__event">
+            {% include '@organisms/event-link/event-link.twig' with event|merge({
+              compact: compact,
+              featured: false
+            }) only %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endset %}
+    <div class="upcoming-events__overflow">
+      {% include '@organisms/expandable-section/expandable-section.twig' with {
+        expand_label: event_count == 1 ? '1 More Event' : event_count ~ ' More Events',
+        collapse_label: 'Close Events',
+        content: more
+      } only %}
+    </div>
+  {% endif %}
+</div>

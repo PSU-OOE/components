@@ -1,0 +1,48 @@
+@import '../../../base/src/scss/imports/layout';
+@import '../../../base/src/scss/imports/variables';
+
+.cards-list {
+  &__featured {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 2rem 2%;
+
+    &--2,
+    &--4 {
+      @include bp(xs) {
+        flex-direction: row;
+
+        .cards-list__card {
+          max-width: 49%;
+        }
+      }
+    }
+
+    &--3 {
+      @include bp(s) {
+        flex-direction: row;
+
+        .cards-list__card {
+          max-width: calc(96% / 3);
+        }
+      }
+    }
+
+    &--4 {
+      @include bp(m) {
+        .cards-list__card {
+          max-width: 23.5%;
+        }
+      }
+    }
+
+    & + .cards-list__overflow {
+      margin-top: rem(3);
+    }
+  }
+
+  &__overflow-cards {
+    display: grid;
+    gap: rem(.5);
+  }
+}
