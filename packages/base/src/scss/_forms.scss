@@ -1,3 +1,83 @@
+// "Clean" form styles
+input {
+  display: block;
+  padding: rem(1.25);
+  font-family: $source-sans-pro;
+  font-size: rem(1.6);
+  line-height: 145%;
+  color: $font-color-default;
+  transition: border .25s linear;
+}
+
+input[type="submit"],
+button {
+  font-family: $open-sans;
+  font-weight: 600;
+}
+
+input:not([type="submit"]) {
+  width: 100%;
+}
+
+input:not([disabled]) {
+  &:not([type]), /** if type is not specified, it defaults to "text" */
+  &[type="text"],
+  &[type="date"],
+  &[type="datetime-local"],
+  &[type="email"],
+  &[type="month"],
+  &[type="number"],
+  &[type="password"],
+  &[type="tel"],
+  &[type="time"],
+  &[type="url"],
+  &[type="week"] {
+    border: rem(.1) solid;
+    border-color: $limestone $medium-grey $medium-grey $medium-grey;
+  }
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: rem(1.25);
+  border-radius: 0;
+  font-family: $source-sans-pro;
+  font-size: rem(1.6);
+  line-height: 145%;
+  color: $font-color-default;
+  height: rem(10);
+}
+
+textarea:not([disabled]) {
+  border: rem(.1) solid;
+  border-color: $limestone $medium-grey $medium-grey $medium-grey;
+}
+
+textarea,
+input {
+  &.error:not([disabled]) {
+    border-color: $error-red;
+  }
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.fieldset-legend {
+  display: block;
+  margin-bottom: rem(0.5);
+
+  &.form-required::after {
+    content: "*";
+    margin-left: rem(0.25);
+    color: $primary-blue;
+  }
+}
+
 // @TODO: These styles need some serious TLC.
 form {
   .js-form-type-processed-text {
@@ -43,23 +123,6 @@ form {
     }
   }
 
-  .js-form-type-textarea {
-    textarea {
-      display: block;
-      width: 100%;
-      padding: rem(1.25);
-      border: rem(.1) solid $medium-grey;
-      border-radius: 0;
-      font-family: $source-sans-pro;
-      font-size: rem(1.6);
-      line-height: 145%;
-      color: $font-color-default;
-      transition-property: border-color;
-      transition-duration: 250ms;
-      height: rem(10);
-    }
-  }
-
   .js-form-type-select {
     position: relative;
 
@@ -83,16 +146,6 @@ form {
   .js-form-type-textfield {
     position: relative;
 
-    // Need to reset the font-weight because adding a span field suffix
-    // around the field causes the global styles to inherit. Maybe we
-    // should make the global less aggressive and not target all spans
-    // inside it. Maybe just the first? For the label.
-    input,
-    .span {
-      font-weight: 400;
-
-    }
-
     .ajax-progress-throbber {
       position: absolute;
       right: rem(1.5);
@@ -111,17 +164,12 @@ form {
     }
   }
 
-  .fieldgroup {
-    margin-bottom: rem(2);
-  }
-
   .fieldset-legend {
     font-size: rem(1.4);
     line-height: rem(1.8);
     color: $beaver-blue;
-    display: inline-block;
+    display: block;
     font-weight: 600;
-    margin-bottom: rem(2);
     text-transform: uppercase;
   }
 
