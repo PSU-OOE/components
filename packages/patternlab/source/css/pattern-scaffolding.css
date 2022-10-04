@@ -1,0 +1,8 @@
+.pl-c-category__description {
+  max-width: unset;
+}
+
+.pl-c-pattern .pl-c-pattern-info {
+  max-height: 45rem;
+  height: auto;
+}

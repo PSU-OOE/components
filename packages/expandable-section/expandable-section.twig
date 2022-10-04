@@ -1,4 +1,9 @@
 <div class="expandable-section">
+  {% if intro %}
+    <div class="expandable-section__intro">
+      {{ intro }}
+    </div>
+  {% endif %}
   <button class="expandable-section__expand cta-block cta-block--expand cta-block--expand-to-fit" aria-expanded="false">
     {{ expand_label }}
     <span class="cta-block__icon cta-block__icon--after">

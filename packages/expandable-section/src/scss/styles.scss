@@ -2,6 +2,10 @@
 
 .expandable-section {
 
+  &__intro {
+    margin-bottom: rem(2);
+  }
+
   &__content {
     overflow: hidden;
     visibility: hidden;
