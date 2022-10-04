@@ -1,0 +1,23 @@
+{% set classes = ['drop-button'] %}
+{% if short %}
+    {% set classes = classes|merge(['drop-button--short']) %}
+{% endif %}
+{% if full_width %}
+    {%  set classes = classes|merge(['drop-button--full-width']) %}
+{% endif %}
+{% if align %}
+    {% set classes = classes|merge(['drop-button--align-' ~ align]) %}
+{% endif %}
+<div class="{{ classes|join(' ' ) }}">
+    <button class="drop-button__toggle" aria-expanded="false">
+      {% include '@atoms/sprite/sprite.twig' with { name: short ? 'fas-ellipsis-vertical' : 'fas-ellipsis' } only %}
+      <span class="drop-button__label">{{ button_label }}</span>
+    </button>
+    <ul class="drop-button__list">
+        {% for link in links %}
+            <li class="drop-button__item">
+                <a class="drop-button__link" href="{{ link.url }}">{{ link.label }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

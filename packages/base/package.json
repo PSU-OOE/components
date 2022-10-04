@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/base",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "The base styles for the OOE design system.",
   "ooe": {
     "namespace": "global"

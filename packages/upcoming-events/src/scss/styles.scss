@@ -1,0 +1,59 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.upcoming-events {
+
+  &__heading {
+    margin-bottom: 0;
+
+    @include bp(s) {
+      width: rem(19);
+    }
+  }
+
+  &__featured {
+    display: flex;
+    flex-direction: column;
+    gap: rem(2) rem(3);
+    width: 100%;
+
+    @include bp(s) {
+      flex-direction: row;
+    }
+  }
+
+  &__overflow {
+    margin-top: rem(2);
+
+    @include bp(s) {
+      margin-top: rem(3);
+    }
+  }
+
+  &__more {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: rem(2);
+  }
+
+  &__event {
+    flex: 1 1 0;
+  }
+
+  &--compact {
+    .upcoming-events {
+      &__heading {
+        width: auto;
+      }
+
+      &__top,
+      &__featured {
+        flex-direction: column;
+      }
+
+      &__overflow {
+        margin-top: rem(2);
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/breadcrumbs",
+  "version": "1.0.1",
+  "description": "Provides a breadcrumbs implementation.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^1.0"
+  }
+}
