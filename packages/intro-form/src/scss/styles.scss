@@ -1,0 +1,132 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.intro-form {
+  background-color: $light-grey;
+
+  @include bp(s) {
+    padding-top: rem(3);
+    margin-top: rem(3);
+  }
+
+  &__container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(3);
+    padding-bottom: rem(4);
+
+    @include bp(s) {
+      flex-direction: row;
+      max-width: rem(97);
+      padding: 0 rem(4) rem(4) rem(4);
+    }
+  }
+
+  &__first {
+    position: relative;
+
+    @include bp(s) {
+      box-shadow: rem(.1) rem(.2) $limestone;
+      flex: 1;
+      height: fit-content;
+      margin-top: rem(-6);
+    }
+  }
+
+  &__border {
+    @include bp(s) {
+      border-top: rem(.8) solid $primary-blue;
+    }
+  }
+
+  &__image {
+    position: absolute;
+
+    img {
+      aspect-ratio: 16/7;
+      object-fit: cover;
+
+      @include bp(s) {
+        aspect-ratio: 2;
+      }
+    }
+  }
+
+  &__intro {
+    padding: 0 rem(1);
+    margin-top: calc(43.75% - 3.25rem);
+
+    @include bp(xs) {
+      padding: 0 rem(2);
+    }
+
+    @include bp(s) {
+      background: $white;
+      padding: 0;
+      margin-top: calc(50% - 7.25rem);
+    }
+  }
+
+  &__overlay {
+    margin-right: rem(4);
+
+    @include bp(xs) {
+      margin-right: rem(5);
+    }
+
+    @include bp(s) {
+      min-height: rem(5.9);
+      margin-left: rem(-2);
+      margin-right: rem(3);
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: rem(3.4);
+    font-family: $open-sans;
+    background: $primary-blue;
+    padding: rem(1) rem(1.5);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    color: $white;
+  }
+
+  &__relative {
+    position: relative;
+  }
+
+  &__description {
+    background: $white;
+    display: block;
+    box-shadow: rem(.1) rem(.2) $limestone;
+    padding: rem(2.5) rem(2);
+    margin: rem(.4) rem(1) 0 rem(1);
+
+    @include bp(xs) {
+      margin: rem(.4) rem(2) 0 rem(2);
+    }
+
+    @include bp(s) {
+      font-size: rem(1.8);
+      line-height: calc(33/18);
+      margin: rem(1.3) 0 0 0;
+      box-shadow: none;
+      padding: rem(2) rem(2) rem(3);
+    }
+  }
+
+  &__second {
+    padding: 0 rem(2);
+
+    @include bp(xs) {
+      padding: 0 rem(4);
+    }
+
+    @include bp(s) {
+      padding: 0;
+      flex: 1;
+    }
+  }
+}
