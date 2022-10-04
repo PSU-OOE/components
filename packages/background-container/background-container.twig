@@ -1,18 +1,12 @@
-{#
-  Available variables:
-    color
-    sprite
-    position
-    padding
-    width
-    content
-#}
 {% set classes = (classes|default([]))|merge(['bg', 'bg--' ~ color]) %}
 {% if sprite %}
   {% set classes = classes|merge(['bg--' ~ sprite]) %}
 {% endif %}
 {% if position %}
   {% set classes = classes|merge(['bg--' ~ position]) %}
+{% endif %}
+{% if padding %}
+  {% set classes = classes|merge(['bg--padding-' ~ padding]) %}
 {% endif %}
 {% if width %}
   {% set classes = classes|merge(['bg--' ~ width]) %}
