@@ -1507,6 +1507,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/background-container@^1.0, @psu-ooe/background-container@workspace:packages/background-container":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/background-container@workspace:packages/background-container"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/band@^1.0, @psu-ooe/band@workspace:packages/band":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/band@workspace:packages/band"
@@ -1665,6 +1674,7 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.16.2
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
+    "@psu-ooe/background-container": ^1.0
     "@psu-ooe/band": ^1.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/breadcrumbs": ^1.0
