@@ -1607,6 +1607,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/intro-form@workspace:packages/intro-form":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/monorepo-dev@workspace:.":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/monorepo-dev@workspace:."
