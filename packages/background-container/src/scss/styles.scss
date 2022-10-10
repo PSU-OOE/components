@@ -17,7 +17,7 @@
     padding-bottom: rem(5);
   }
 
-  @include bp(m) {
+  @include bp(xs) {
     padding-top: rem(4);
     padding-bottom: rem(4);
 
@@ -25,6 +25,14 @@
       padding-top: rem(3);
       padding-bottom: rem(3);
     }
+
+    &--padding-large {
+      padding-top: rem(5);
+      padding-bottom: rem(5);
+    }
+  }
+
+  @include bp(m) {
     &--padding-large {
       padding-top: rem(6);
       padding-bottom: rem(6);
