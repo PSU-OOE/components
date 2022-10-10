@@ -17,14 +17,22 @@
     padding-bottom: rem(5);
   }
 
-  @include bp(m) {
-    padding-top: rem(4);
-    padding-bottom: rem(4);
+  @include bp(xs) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
     &--padding-small {
       padding-top: rem(3);
       padding-bottom: rem(3);
     }
+
+    &--padding-large {
+      padding-top: rem(5);
+      padding-bottom: rem(5);
+    }
+  }
+
+  @include bp(m) {
     &--padding-large {
       padding-top: rem(6);
       padding-bottom: rem(6);
