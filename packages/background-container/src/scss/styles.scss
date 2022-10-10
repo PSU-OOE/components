@@ -18,8 +18,8 @@
   }
 
   @include bp(xs) {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: rem(4);
+    padding-bottom: rem(4);
 
     &--padding-small {
       padding-top: rem(3);
