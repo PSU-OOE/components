@@ -53,6 +53,10 @@
     text-decoration: none;
     padding: rem(1.1) 0;
 
+    &--beaver-blue {
+      color: $beaver-blue;
+    }
+
     @include bp(m) {
       font-size: rem(1.8);
       padding: rem(1.5) 0;

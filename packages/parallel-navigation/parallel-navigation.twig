@@ -15,7 +15,14 @@
     <ul class="parallel-navigation__list{% if column_classes[columns] is defined %} {{ column_classes[columns] }}{% endif %}">
       {% for item in items %}
         <li class="parallel-navigation__item">
-          <a class="parallel-navigation__link{% if item.active %} active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
+            {% set link_classes = ['parallel-navigation__link'] %}
+            {% if link_color %}
+                {% set link_classes = link_classes|merge(['parallel-navigation__link--' ~ link_color]) %}
+            {% endif %}
+            {% if item.active %}
+                {% set link_classes = link_classes|merge(['active']) %}
+            {% endif %}
+            <a class="{{ link_classes|join(' ') }}" href="{{ item.url }}">{{ item.title }}</a>
         </li>
       {% endfor %}
     </ul>
