@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
 
@@ -5,17 +7,17 @@
   background-color: $light-mauve;
 
   &__content {
-    padding-left: rem(2);
-    padding-right: rem(2);
+    padding-left: 2.6%;
+    padding-right: 2.6%;
 
     @include bp(xs) {
-      padding-left: rem(4);
-      padding-right: rem(4);
+      padding-left: rem(2);
+      padding-right: rem(2);
     }
   }
 
   &--secondary {
-    background-color: $light-grey;
+    background-color: color.mix($light-mauve, $white);
   }
 
   &--padding-small .band__content {
