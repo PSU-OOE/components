@@ -7,31 +7,34 @@
   background-color: $light-mauve;
 
   &__content {
-    padding-left: 2.6%;
-    padding-right: 2.6%;
+    padding: rem(1.2) 2.6%;
 
-    @include bp(xs) {
-      padding-left: rem(2);
-      padding-right: rem(2);
+    @include bp(m) {
+      padding: rem(1.6) rem(2);
+    }
+  }
+
+  &--padding-compact .band__content {
+    padding-top: rem(.8);
+    padding-bottom: rem(.8);
+
+    @include bp(m) {
+      padding-top: rem(.8);
+      padding-bottom: rem(.8);
+    }
+  }
+
+  &--padding-none .band__content {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include bp(m) {
+      padding-top: rem(0);
+      padding-bottom: rem(0);
     }
   }
 
   &--secondary {
     background-color: color.mix($light-mauve, $white);
-  }
-
-  &--padding-small .band__content {
-    padding-top: rem(.8);
-    padding-bottom: rem(.8);
-  }
-
-  &--padding-medium .band__content {
-    padding-top: rem(1.5);
-    padding-bottom: rem(1.5);
-  }
-
-  &--padding-large .band__content {
-    padding-top: rem(3);
-    padding-bottom: rem(3);
   }
 }

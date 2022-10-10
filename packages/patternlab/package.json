@@ -12,7 +12,7 @@
     "@pattern-lab/uikit-workshop": "^5.16.2",
     "@psu-ooe/accordion": "^1.0",
     "@psu-ooe/background-container": "^1.0",
-    "@psu-ooe/band": "^1.0",
+    "@psu-ooe/band": "^2.0",
     "@psu-ooe/base": "^1.0",
     "@psu-ooe/breadcrumbs": "^1.0",
     "@psu-ooe/card": "^1.0",

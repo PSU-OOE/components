@@ -1516,7 +1516,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/band@^1.0, @psu-ooe/band@workspace:packages/band":
+"@psu-ooe/band@^1.0 || ^2.0, @psu-ooe/band@^2.0, @psu-ooe/band@workspace:packages/band":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/band@workspace:packages/band"
   dependencies:
@@ -1675,7 +1675,7 @@ __metadata:
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
     "@psu-ooe/background-container": ^1.0
-    "@psu-ooe/band": ^1.0
+    "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/breadcrumbs": ^1.0
     "@psu-ooe/card": ^1.0
@@ -1763,7 +1763,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/sticky-panel@workspace:packages/sticky-panel"
   dependencies:
-    "@psu-ooe/band": ^1.0
+    "@psu-ooe/band": ^1.0 || ^2.0
     "@psu-ooe/base": ^1.0
   languageName: unknown
   linkType: soft
