@@ -11,7 +11,7 @@
 | secondary  | Display the band in a secondary color profile |
 
 ## Paddings
-| Padding | Description                                               |
-|---------|-----------------------------------------------------------|
-| compact | Adds a small amount of vertical padding to the container. |
-| none    | Adds no vertical padding to the container.                |
+| Padding | Description                                                    |
+|---------|----------------------------------------------------------------|
+| compact | Applies a smaller amount of vertical padding to the container. |
+| none    | Applies no vertical padding to the container.                  |
