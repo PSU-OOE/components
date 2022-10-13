@@ -1,0 +1,61 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.highlighted-text {
+  color: $white;
+  font-family: $open-sans;
+  padding: 1rem 0;
+
+  &__highlight {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+  }
+
+  &__relative {
+    position: relative;
+  }
+
+  &--primary-blue {
+    .highlighted-text__highlight {
+      background-color: $primary-blue;
+    }
+  }
+
+  &--beaver-blue {
+    .highlighted-text__highlight {
+      background-color: $beaver-blue;
+    }
+  }
+
+  &--large {
+    font-weight: bold;
+    font-size: rem(2.6);
+    line-height: calc(3.2 / 2.6);
+
+    @include bp(xs) {
+      font-size: rem(3);
+      line-height: calc(4.2 / 3);
+    }
+
+    @include bp(xl) {
+      font-size: rem(3.6);
+      line-height: calc(4.9 / 3.6);
+    }
+  }
+
+  &--small {
+    font-size: rem(1.5);
+    line-height: calc(2 / 1.5);
+
+    @include bp(xs) {
+      font-size: rem(1.8);
+      line-height: calc(2.4 / 1.8);
+    }
+
+    @include bp(xl) {
+      font-size: rem(1.9);
+      line-height: calc(2.6 / 1.9);
+    }
+
+  }
+}
