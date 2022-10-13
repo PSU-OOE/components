@@ -1,0 +1,12 @@
+{% apply spaceless %}
+  {% include '@molecules/highlighted-text/highlighted-text.twig' with {
+    content: 'Testing',
+    size: 'large',
+    color: 'primary-blue',
+  } only %}
+  {% include '@molecules/highlighted-text/highlighted-text.twig' with {
+    content: 'Online Degree and Certificate Programs',
+    size: 'small',
+    color: 'beaver-blue',
+  } only %}
+{% endapply %}

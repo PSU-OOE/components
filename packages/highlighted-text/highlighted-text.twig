@@ -5,10 +5,10 @@
 {% if color %}
   {% set classes = classes|merge(['highlighted-text--' ~ color]) %}
 {% endif %}
+{% apply spaceless %}
 <div class="{{ classes|join(' ') }}">
   <span class="highlighted-text__highlight">
-    <span class="highlighted-text__relative">
-      {{ content }}
-    </span>
+    <span class="highlighted-text__relative">{{ content }}</span>
   </span>
 </div>
+{% endapply %}

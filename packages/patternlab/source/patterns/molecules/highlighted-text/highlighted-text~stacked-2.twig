@@ -1,0 +1,12 @@
+{% apply spaceless %}
+  {% include '@molecules/highlighted-text/highlighted-text.twig' with {
+    content: 'Master of',
+    size: 'small',
+    color: 'beaver-blue',
+  } only %}
+  {% include '@molecules/highlighted-text/highlighted-text.twig' with {
+    content: 'Testing Design Systems',
+    size: 'large',
+    color: 'primary-blue',
+  } only %}
+{% endapply %}
