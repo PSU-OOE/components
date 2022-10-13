@@ -7,7 +7,8 @@
   padding: 1rem 0;
 
   &__highlight {
-    padding: 1rem 1.5rem;
+    padding: rem(1) 0;
+    box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }
 
@@ -18,12 +19,14 @@
   &--primary-blue {
     .highlighted-text__highlight {
       background-color: $primary-blue;
+      box-shadow: rem(1.5) 0 0 $primary-blue, rem(-1.5) 0 0 $primary-blue;
     }
   }
 
   &--beaver-blue {
     .highlighted-text__highlight {
       background-color: $beaver-blue;
+      box-shadow: rem(1.5) 0 0 $beaver-blue, rem(-1.5) 0 0 $beaver-blue;
     }
   }
 
@@ -42,6 +45,19 @@
       font-size: rem(3.6);
       line-height: calc(4.9 / 3.6);
     }
+
+    // Correct minor overlap errors at certain viewport dimensions.
+    & + .highlighted-text--small {
+      margin-top: rem(.2);
+
+      @include bp(xs) {
+        margin-top: rem(-.1);
+      }
+
+      @include bp(xl) {
+        margin-top: 0;
+      }
+    }
   }
 
   &--small {
@@ -59,5 +75,13 @@
       line-height: calc(2.6 / 1.9);
     }
 
+    // Correct minor overlap errors at certain viewport dimensions.
+    & + .highlighted-text--large {
+      margin-top: rem(.2);
+
+      @include bp(xs) {
+        margin-top: 0;
+      }
+    }
   }
 }

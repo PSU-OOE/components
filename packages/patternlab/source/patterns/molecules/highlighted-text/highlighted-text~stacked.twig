@@ -1,4 +1,4 @@
-{% apply spaceless %}
+<div style="padding:0 2rem;">
   {% include '@molecules/highlighted-text/highlighted-text.twig' with {
     content: 'Testing',
     size: 'large',
@@ -9,4 +9,6 @@
     size: 'small',
     color: 'beaver-blue',
   } only %}
-{% endapply %}
+  <p>Some text under the highlight</p>
+</div>
+
