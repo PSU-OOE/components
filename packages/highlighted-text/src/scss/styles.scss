@@ -64,6 +64,7 @@
   &--small {
     font-size: rem(1.5);
     font-weight: 600;
+    letter-spacing: normal;
     line-height: calc(2 / 1.5);
 
     @include bp(xs) {
