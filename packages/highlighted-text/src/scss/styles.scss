@@ -8,7 +8,8 @@
   margin: 0;
 
   &__highlight {
-    padding: rem(1) 0;
+    padding: rem(1) rem(1.5);
+    margin: 0 rem(-1.5);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
   }
@@ -20,14 +21,12 @@
   &--primary-blue {
     .highlighted-text__highlight {
       background-color: $primary-blue;
-      box-shadow: rem(1.5) 0 0 $primary-blue, rem(-1.5) 0 0 $primary-blue;
     }
   }
 
   &--beaver-blue {
     .highlighted-text__highlight {
       background-color: $beaver-blue;
-      box-shadow: rem(1.5) 0 0 $beaver-blue, rem(-1.5) 0 0 $beaver-blue;
     }
   }
 
@@ -52,7 +51,7 @@
       margin-top: rem(.125);
 
       @include bp(xs) {
-        margin-top: rem(-.2);
+        margin-top: rem(-.205);
       }
 
       @include bp(xl) {
