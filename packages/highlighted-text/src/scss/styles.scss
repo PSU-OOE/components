@@ -49,10 +49,10 @@
 
     // Correct minor overlap errors at certain viewport dimensions.
     & + .highlighted-text--small {
-      margin-top: rem(.2);
+      margin-top: rem(.125);
 
       @include bp(xs) {
-        margin-top: rem(-.1);
+        margin-top: rem(-.2);
       }
 
       @include bp(xl) {
@@ -79,10 +79,10 @@
 
     // Correct minor overlap errors at certain viewport dimensions.
     & + .highlighted-text--large {
-      margin-top: rem(.2);
+      margin-top: rem(.125);
 
       @include bp(xs) {
-        margin-top: 0;
+        margin-top: rem(-.025);
       }
     }
   }
