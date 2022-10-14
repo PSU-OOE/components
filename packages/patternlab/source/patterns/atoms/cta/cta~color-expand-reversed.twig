@@ -1,7 +1,14 @@
-<div style="padding: 2rem;background-color:#f2f3f9; --cta-block-expand-background-color: var(--cta-block-expand-background-color-light)">
+{% set cta %}
   {% include '@atoms/cta/cta-block.twig' with {
     label: 'Expand items',
     url: '#',
     color: 'expand',
   } only %}
-</div>
+{% endset %}
+
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'light-grey',
+  sprite: 'shield',
+  position: 'right',
+  content: cta
+} only %}

@@ -116,6 +116,11 @@
       margin: auto;
     }
   }
+
+
+  &:is(.bg--light-grey *) {
+    --cta-block-expand-background-color: var(--cta-block-expand-background-color-light);
+  }
 }
 
 @mixin cta-color($name, $background, $foreground, $background-active, $foreground-active, $outline, $icon, $icon-active) {
