@@ -1,0 +1,14 @@
+{% set content %}
+  <div style="padding:0 4rem;">
+    <h2 style="color:white;">Some heading</h2>
+    <p style="color:white;">This is a WYSIWYG block with some content.</p>
+  </div>
+{% endset %}
+
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'blue-gradient',
+  sprite: 'shield',
+  position: 'right',
+  inset: '0 0 0 calc(100% - 50px)',
+  content: content
+} only %}

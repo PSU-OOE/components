@@ -5,52 +5,85 @@ $supported_sprites: (
       "default": (
         "size": "70rem",
         "left_position": "left -62rem top -42rem",
-        "right_position": "right -58rem top -40rem"
+        "right_position": "right -58rem top -40rem",
+        "left_inset": "0 0 0 calc(100% - 2rem)",
+        "right_inset": "0 0 0 calc(100% - 2rem)",
+        "left_narrow_inset": "0 0 0 calc(100% - 2rem)",
+        "right_narrow_inset": "0 0 0 calc(100% - 2rem)",
       ),
       "550px": (
         "size": "90rem",
         "left_position": "left -78rem top -49rem",
-        "right_position": "right -75rem top -47rem"
+        "right_position": "right -75rem top -47rem",
+        "left_inset": "0 0 0 calc(100% - 10rem)",
+        "right_inset": "0 0 0 calc(100% - 10rem)",
+        "left_narrow_inset": "0 0 0 calc(100% - 10rem)",
+        "right_narrow_inset": "0 0 0 calc(100% - 10rem)",
       ),
       "800px": (
         "size": "110rem",
         "left_position": "left -98rem top -63rem",
-        "right_position": "right -92rem top -63rem"
+        "right_position": "right -92rem top -63rem",
+        "left_inset": "0 0 0 calc(100% - 20rem)",
+        "right_inset": "0 0 0 calc(100% - 20rem)",
+        "left_narrow_inset": "0 0 0 calc(100% - 20rem)",
+        "right_narrow_inset": "0 0 0 calc(100% - 20rem)",
       ),
       "950px": (
         "size": "130rem",
         "left_position": "left -112rem top -76rem",
         "right_position": "right -110rem top -76rem",
         "narrow_left_position": "left -110rem top -76rem",
-        "narrow_right_position": "right -108rem top -76rem"
+        "narrow_right_position": "right -108rem top -76rem",
+        "left_inset": "0 0 0 calc(100% - 30rem)",
+        "right_inset": "0 0 0 calc(100% - 30rem)",
+        "left_narrow_inset": "0 0 0 calc(100% - 30rem)",
+        "right_narrow_inset": "0 0 0 calc(100% - 30rem)",
       ),
       "1024px": (
         "size": "130rem",
         "left_position": "left -112rem top -76rem",
         "right_position": "right -110rem top -76rem",
         "narrow_left_position": "left -105rem top -76rem",
-        "narrow_right_position": "right -100rem top -76rem"
+        "narrow_right_position": "right -100rem top -76rem",
+        "left_inset": "0 0 0 calc(100% - 40rem)",
+        "right_inset": "0 0 0 calc(100% - 40rem)",
+        "left_narrow_inset": "0 0 0 calc(100% - 40rem)",
+        "right_narrow_inset": "0 0 0 calc(100% - 40rem)",
       ),
       "1280px": (
         "size": "130rem",
         "left_position": "left -98rem top -76rem",
         "right_position": "right -96rem top -76rem",
         "narrow_left_position": "left -90rem top -76rem",
-        "narrow_right_position": "right -88rem top -76rem"
+        "narrow_right_position": "right -88rem top -76rem",
+        "left_inset": "0 0 0 calc(100% - 50rem)",
+        "right_inset": "0 0 0 calc(100% - 50rem)",
+        "left_narrow_inset": "0 0 0 calc(100% - 50rem)",
+        "right_narrow_inset": "0 0 0 calc(100% - 50rem)",
+
       ),
       "1500px": (
         "size": "130rem",
         "left_position": "left -95rem top -76rem",
         "right_position": "right -91rem top -76rem",
         "narrow_left_position": "left -85rem top -76rem",
-        "narrow_right_position": "right -87rem top -76rem"
+        "narrow_right_position": "right -87rem top -76rem",
+        "left_inset": "0 0 0 calc(100% - 60rem)",
+        "right_inset": "0 0 0 calc(100% - 60rem)",
+        "left_narrow_inset": "0 0 0 calc(100% - 60rem)",
+        "right_narrow_inset": "0 0 0 calc(100% - 60rem)",
       ),
       "1800px": (
         "size": "130rem",
         "left_position": "left -83rem top -76rem",
         "right_position": "right -75rem top -76rem",
         "narrow_left_position": "left -70rem top -76rem",
-        "narrow_right_position": "right -65rem top -76rem"
+        "narrow_right_position": "right -65rem top -76rem",
+        "left_inset": "0 0 0 calc(100% - 70rem)",
+        "right_inset": "0 0 0 calc(100% - 70rem)",
+        "left_narrow_inset": "0 0 0 calc(100% - 70rem)",
+        "right_narrow_inset": "0 0 0 calc(100% - 70rem)",
       ),
     )
   )

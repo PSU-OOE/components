@@ -42,10 +42,7 @@
   &--left::before, &--right::after {
     content: "";
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    inset: 0;
     z-index: -1;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -53,7 +50,7 @@
 
   @each $color, $scss_color in $supported_colors {
     &--#{$color} {
-      background-color: #{$scss_color};
+      background: #{$scss_color};
     }
   }
 }
@@ -84,10 +81,29 @@
             }
             &.bg--left::before {
               background-position: #{map-get($container_query_properties, "left_position")};
+
+              @if map-has-key($container_query_properties, "left_inset") {
+                inset: #{map-get($container_query_properties, "left_inset")};
+              }
+            }
+
+            @if map-has-key($container_query_properties, "left_narrow_inset") {
+              &.bg--left.bg--narrow::before {
+                inset: #{map-get($container_query_properties, "left_narrow_inset")};
+              }
             }
 
             &.bg--right::after {
               background-position: #{map-get($container_query_properties, "right_position")};
+              @if map-has-key($container_query_properties, "right_inset") {
+                inset: #{map-get($container_query_properties, "right_inset")};
+              }
+            }
+
+            @if map-has-key($container_query_properties, "right_narrow_inset") {
+              &.bg--right.bg--narrow::before {
+                inset: #{map-get($container_query_properties, "right_narrow_inset")};
+              }
             }
           }
           @else {
@@ -97,10 +113,17 @@
               }
               &.bg--left::before {
                 background-position: #{map-get($container_query_properties, "left_position")};
+                @if map-has-key($container_query_properties, "left_inset") {
+                  inset: #{map-get($container_query_properties, "left_inset")};
+                }
               }
 
               &.bg--right::after {
                 background-position: #{map-get($container_query_properties, "right_position")};
+
+                @if map-has-key($container_query_properties, "right_inset") {
+                  inset: #{map-get($container_query_properties, "right_inset")};
+                }
               }
 
               @if map-has-key($container_query_properties, "narrow_left_position") {
@@ -109,9 +132,21 @@
                 }
               }
 
+              @if map-has-key($container_query_properties, "left_narrow_inset") {
+                &.bg--left.bg--narrow::before {
+                  inset: #{map-get($container_query_properties, "left_narrow_inset")};
+                }
+              }
+
               @if map-has-key($container_query_properties, "narrow_right_position") {
                 &.bg--right.bg--narrow::after {
                   background-position: #{map-get($container_query_properties, "narrow_right_position")};
+                }
+              }
+
+              @if map-has-key($container_query_properties, "right_narrow_inset") {
+                &.bg--right.bg--narrow::before {
+                  inset: #{map-get($container_query_properties, "right_narrow_inset")};
                 }
               }
             }
