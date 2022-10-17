@@ -1616,6 +1616,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/highlighted-text@^1.0, @psu-ooe/highlighted-text@workspace:packages/highlighted-text":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/highlighted-text@workspace:packages/highlighted-text"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/intro-form@^1.0, @psu-ooe/intro-form@workspace:packages/intro-form":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
@@ -1687,6 +1695,7 @@ __metadata:
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/heading": ^1.0
+    "@psu-ooe/highlighted-text": ^1.0
     "@psu-ooe/intro-form": ^1.0
     "@psu-ooe/overlay": ^1.0
     "@psu-ooe/parallel-navigation": ^1.0
