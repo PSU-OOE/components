@@ -11,13 +11,14 @@ title: Headings
 | color    | string  | false    | Must match a documented color modifier (below).                             |
 
 ## Size modifiers
-| Size   | Description                         |
-| ------ | ----------------------------------- |
-| xlarge | This style looks like an &lt;h1&gt; |
-| large  | This style looks like an &lt;h2&gt; |
-| medium | This style looks like an &lt;h3&gt; |
-| small  | This style looks like an &lt;h4&gt; |
-| xsmall | This style looks like an &lt;h5&gt; |
+| Size   | Description                                                       |
+|--------|-------------------------------------------------------------------|
+| xlarge | This style looks like an &lt;h1&gt;                               |
+| large  | This style looks like an &lt;h2&gt;                               |
+| medium | This style looks like an &lt;h3&gt;                               |
+| small  | This style looks like an &lt;h4&gt;                               |
+| xsmall | This style looks like an &lt;h5&gt;                               |
+| hr     | This style renders the heading in a horizontal-rule-like fashion. |
 
 ## Color modifiers
 | Color    | Description                                           |
