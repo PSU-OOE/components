@@ -2,16 +2,21 @@
 {% set level = level|default(2) %}
 {% set flush = flush|default(false) %}
 
+{# @deprecated: Remove 'size' in 2.0 #}
+{% if size and not style %}
+  {% set style = size %}
+{% endif %}
+
 {% set allowed_levels = 1..6 %}
 {% set allowed_colors = ['neutral']  %}
-{% set allowed_sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall', 'hr'] %}
+{% set allowed_styles = ['xlarge', 'large', 'medium', 'small', 'xsmall', 'hr'] %}
 
 {% if level in allowed_levels and content is not empty %}
 
   {% set classes = classes|merge([
     'heading',
     color in allowed_colors ? 'heading--' ~ color,
-    size in allowed_sizes ? 'heading--' ~ size,
+    style in allowed_styles ? 'heading--' ~ style,
     flush ? 'heading--flush',
   ]) | filter(class => class is not empty) %}
 {% apply spaceless %}
