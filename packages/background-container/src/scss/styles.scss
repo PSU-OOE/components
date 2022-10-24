@@ -3,14 +3,19 @@
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
 @import "colors";
-@import "sprites";
 
 .bg {
   background: none;
   padding-top: rem(3);
   padding-bottom: rem(3);
   position: relative;
-  z-index: 0;
+  overflow: hidden;
+
+  //noinspection CssUnknownProperty
+  @supports (container-type: inline-size ) {
+    // Might not be needed if a linear scaling function can work now?
+    container-type: inline-size;
+  }
 
   &--padding-large {
     padding-top: rem(5);
@@ -39,84 +44,30 @@
     }
   }
 
-  &--left::before, &--right::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-    background-repeat: no-repeat;
-    background-color: transparent;
-  }
-
   @each $color, $scss_color in $supported_colors {
     &--#{$color} {
       background-color: #{$scss_color};
     }
   }
-}
 
-//noinspection CssUnknownProperty
-@supports (container-type: inline-size ) {
+  &.bg--community-shield--left .sprite{
+    position: absolute;
+    left: -18rem;
+    top: -34rem;
+    height: 42rem;
+    width: auto;
+    z-index: -1;
 
-  @mixin container_query($px) {
-    //noinspection CssInvalidAtRule
-    @container (min-width: #{$px}) {
-      @content;
-    }
-  }
+    //noinspection CssUnknownProperty
+    @supports (container-type: inline-size ) {
 
-  .bg {
-    container-type: inline-size;
+      // Might not be needed if a linear scaling function can work now?
 
-    @each $sprite, $properties in $supported_sprites {
-      &--#{$sprite} {
-        @each $container_query, $container_query_properties in map-get($properties, "container_queries") {
-          @if $container_query == "default" {
-            &.bg--left::before, &.bg--right::after {
-              background-image: url(map-get($properties, "sprite")),
-            }
-
-            &::before, &::after {
-              background-size: #{map-get($container_query_properties, "size")};
-            }
-            &.bg--left::before {
-              background-position: #{map-get($container_query_properties, "left_position")};
-            }
-
-            &.bg--right::after {
-              background-position: #{map-get($container_query_properties, "right_position")};
-            }
-          }
-          @else {
-            @include container_query(#{$container_query}) {
-              &::before, &::after {
-                background-size: #{map-get($container_query_properties, "size")};
-              }
-              &.bg--left::before {
-                background-position: #{map-get($container_query_properties, "left_position")};
-              }
-
-              &.bg--right::after {
-                background-position: #{map-get($container_query_properties, "right_position")};
-              }
-
-              @if map-has-key($container_query_properties, "narrow_left_position") {
-                &.bg--left.bg--narrow::before {
-                  background-position: #{map-get($container_query_properties, "narrow_left_position")};
-                }
-              }
-
-              @if map-has-key($container_query_properties, "narrow_right_position") {
-                &.bg--right.bg--narrow::after {
-                  background-position: #{map-get($container_query_properties, "narrow_right_position")};
-                }
-              }
-            }
-          }
-        }
+      //noinspection CssInvalidAtRule
+      @container (min-width: 550px) {
+        left: -18rem;
+        top: -34rem;
+        height: 52rem;
       }
     }
   }
