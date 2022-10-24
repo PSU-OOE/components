@@ -91,7 +91,7 @@
 
   &--expanded {
 
-    .accordion__button {
+   > .accordion__button {
       .sprite {
         transform: rotate(45deg);
       }
@@ -111,7 +111,7 @@
       }
     }
 
-    .accordion__expandable-content {
+   > .accordion__expandable-content {
       margin-bottom: rem(2);
       visibility: inherit;
     }
