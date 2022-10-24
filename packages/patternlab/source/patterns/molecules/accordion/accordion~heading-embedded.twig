@@ -1,0 +1,15 @@
+{% set accordion %}
+    {% include '@molecules/accordion/accordion.twig' with {
+        "id": "accordion-embedded",
+        "heading_level": "h2",
+        "label": "Accordion item (h2)",
+        "expandable_content": "This is the embedded accordion's content."
+    }
+    %}
+{% endset %}
+{% include '@molecules/accordion/accordion.twig' with {
+    "id": "accordion-default",
+    "heading_level": "h1",
+    "label": "Accordion item (h1)",
+    "expandable_content": accordion
+} only %}
