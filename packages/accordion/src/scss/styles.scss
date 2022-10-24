@@ -91,7 +91,7 @@
 
   &--expanded {
 
-    .accordion__button {
+   > .accordion__button {
       .sprite {
         transform: rotate(45deg);
       }
