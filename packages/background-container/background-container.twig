@@ -12,6 +12,10 @@
   ]) %}
 {% endif %}
 <div class="{{ classes|join(' ') }}">
-  {% include '@atoms/sprite/sprite.twig' with { name: sprite } only %}
+  {% if sprite %}
+    <div class="bg__sprite">
+      {% include '@atoms/sprite/sprite.twig' with { name: sprite } only %}
+    </div>
+  {% endif %}
   {{ content }}
 </div>
