@@ -91,7 +91,8 @@
 
   &--expanded {
 
-   > .accordion__button {
+   > .accordion__button,
+   > .accordion__heading {
       .sprite {
         transform: rotate(45deg);
       }
@@ -118,7 +119,7 @@
   }
 }
 
-// @TODO: Delete when focus-visible polyfill is rem()oved.
+// @TODO: Delete when focus-visible polyfill is removed.
 .accordion {
 
   &__button.focus-visible {
