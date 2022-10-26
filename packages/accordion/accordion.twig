@@ -9,8 +9,8 @@
 {% endif %}
 
 {% set heading_classes = ['accordion__heading'] %}
-{% if heading_size %}
-  {% set heading_classes = heading_classes|merge(["heading", "heading--" ~ heading_size])%}
+{% if heading_style %}
+  {% set heading_classes = heading_classes|merge(["heading", "heading--" ~ heading_style])%}
 {% endif %}
 
 <div class="{{ classes|join(' ') }}">
