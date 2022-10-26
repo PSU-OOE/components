@@ -10,7 +10,7 @@
 
 {% set heading_classes = ['accordion__heading'] %}
 {% if heading_size %}
-  {% set heading_classes = heading_classes|merge(["heading--" ~ heading_size])%}
+  {% set heading_classes = heading_classes|merge(["heading", "heading--" ~ heading_size])%}
 {% endif %}
 
 <div class="{{ classes|join(' ') }}">

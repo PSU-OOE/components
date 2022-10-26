@@ -3,11 +3,15 @@
 .accordion {
 
   &:not(.accordion--borderless) {
+
     border-top: rem(.1) solid $medium-grey;
-    &:last-child {
-      border-bottom: rem(.1) solid $medium-grey;
+    border-bottom: rem(.1) solid $medium-grey;
+
+    + .accordion {
+      border-top: none;
     }
   }
+
 
   &__heading {
     margin-bottom: 0;
