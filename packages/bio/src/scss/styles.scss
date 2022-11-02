@@ -1,0 +1,49 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.bio {
+
+  &__title {
+    @include bp(m) {
+      float: left;
+    }
+  }
+
+  &__job-title {
+    font-weight: bold;
+    line-height: 1.5;
+
+    @include bp(m) {
+      clear: left;
+    }
+  }
+
+  &__profile-photo {
+    margin-bottom: rem(2);
+
+    @include bp(m) {
+      float: right;
+      margin: 0 0 rem(3) rem(3);
+    }
+  }
+
+  &__credentials {
+    list-style-type: none;
+    margin: 0 0 rem(2) 0;
+    padding: 0;
+
+    @include bp(m) {
+      clear: left;
+    }
+  }
+
+  &__credential:not(:last-of-type) {
+    margin-bottom: rem(.6);
+  }
+
+  &__content {
+    @include bp(m) {
+      clear: left;
+    }
+  }
+}

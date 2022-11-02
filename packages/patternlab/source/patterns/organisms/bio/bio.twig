@@ -1,0 +1,17 @@
+{% include '@organisms/bio/bio.twig' with {
+  title: {
+    level: 2,
+    content: 'Lorem ipsum dolor sit amet',
+    color: 'neutral',
+    size: 'medium',
+  },
+  profile_photo: '<img src="https://via.placeholder.com/130x130" alt="test">',
+  job_title: 'Condimentum id venenatis a condimentum vitae',
+  credentials: [
+    { icon: 'phone', icon_alt: 'Phone', text: 'Id donec ultrices tincidunt arcu non'},
+    { icon: 'phone', icon_alt: 'Phone', text: 'Dui id ornare arcu odio ut sem'},
+    { icon: 'phone', icon_alt: 'Phone', text: 'Ultrices dui sapien eget mi proin sed libero enim'},
+    { icon: 'phone', icon_alt: 'Phone', text: 'Malesuada pellentesque elit eget gravida'},
+  ],
+  content: '<p>Ut sem nulla pharetra diam sit amet. Pulvinar neque laoreet suspendisse interdum. Sem nulla pharetra diam sit amet nisl suscipit adipiscing. Dui faucibus in ornare quam viverra orci. Odio ut enim blandit volutpat. Magna etiam tempor orci eu lobortis elementum. Magna ac placerat vestibulum lectus. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Mauris sit amet massa vitae. Justo eget magna fermentum iaculis. Mauris vitae ultricies leo integer malesuada nunc vel risus commodo.</p>',
+} only %}

@@ -1,0 +1,37 @@
+<div class="bio">
+  <div class="bio__title">
+    {% include '@atoms/heading/heading.twig' with title only %}
+  </div>
+  {% if profile_photo %}
+    <div class="bio__profile-photo">
+      {{ profile_photo }}
+    </div>
+  {% endif %}
+  {% if job_title %}
+    <p class="bio__job-title">
+      {{ job_title }}
+    </p>
+  {% endif %}
+  {% if credentials %}
+    {% if credentials|length > 1 %}
+      <ul class="bio__credentials">
+        {% for credential in credentials %}
+          <li class="bio__credential">
+            {% include '@molecules/credential/credential.twig' with credential only %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="bio__credentials">
+        <div class="bio__credential">
+          {% include '@molecules/credential/credential.twig' with credentials[0] only %}
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+  {% if content %}
+    <div class="bio__content">
+      {{ content }}
+    </div>
+  {% endif %}
+</div>
