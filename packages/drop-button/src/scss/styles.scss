@@ -142,7 +142,6 @@
     border-width: rem(.1) rem(.1) rem(.1) rem(.3);
     box-shadow: rem(.1) rem(.3) rem(.5) rgba($nittany-navy, .15);
     padding: rem(1);
-    max-width: 100%;
     width: rem(28);
     z-index: 100;
     top: 100%;
@@ -249,6 +248,7 @@
     }
   }
 
+  // @deprecated - to be removed in 2.0.0
   &--short {
 
     .drop-button__toggle {
@@ -308,6 +308,32 @@
 
       &__list {
         width: 100%;
+      }
+    }
+  }
+
+  &--sticky-tab {
+    .drop-button {
+      &__toggle {
+        flex-direction: row;
+        justify-content: space-around;
+        width: auto;
+        height: auto;
+        min-height: 100%;
+        padding: rem(1) rem(1.5);
+
+        .sprite {
+          height: rem(1.4);
+          width: auto;
+        }
+      }
+
+      &__label {
+        font-size: rem(1.1);
+      }
+
+      &__list::before {
+        right: calc(#{rem(3.2845)} - #{rem(math.div(math.sqrt(200), 10))});
       }
     }
   }

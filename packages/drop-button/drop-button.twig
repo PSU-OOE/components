@@ -1,6 +1,10 @@
 {% set classes = ['drop-button'] %}
+{# @deprecated - short to be removed in 2.0.0 #}
 {% if short %}
     {% set classes = classes|merge(['drop-button--short']) %}
+{% endif %}
+{% if sticky_tab %}
+  {% set classes = classes|merge(['drop-button--sticky-tab']) %}
 {% endif %}
 {% if full_width %}
     {%  set classes = classes|merge(['drop-button--full-width']) %}
@@ -10,7 +14,11 @@
 {% endif %}
 <div class="{{ classes|join(' ' ) }}">
     <button class="drop-button__toggle" aria-expanded="false">
-      {% include '@atoms/sprite/sprite.twig' with { name: short ? 'fas-ellipsis-vertical' : 'fas-ellipsis' } only %}
+      {% if short or sticky_tab %}
+        {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis-vertical' } only %}
+      {% else %}
+        {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis' } only %}
+      {% endif %}
       <span class="drop-button__label">{{ button_label }}</span>
     </button>
     <ul class="drop-button__list">
