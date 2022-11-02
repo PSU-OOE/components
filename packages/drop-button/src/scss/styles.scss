@@ -325,11 +325,13 @@
         .sprite {
           height: rem(1.4);
           width: auto;
+          margin-top: 0;
         }
       }
 
       &__label {
         font-size: rem(1.1);
+        margin-bottom: rem(.1);
       }
 
       &__list::before {
