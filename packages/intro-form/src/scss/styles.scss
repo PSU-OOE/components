@@ -41,7 +41,14 @@
   }
 
   &__image {
+    background-color: $white;
     position: absolute;
+    aspect-ratio: 16/7;
+    width: 100%;
+
+    @include bp(s) {
+      aspect-ratio: 2;
+    }
 
     img {
       aspect-ratio: 16/7;
@@ -83,11 +90,14 @@
   }
 
   &__title {
+    display: inline;
+    letter-spacing: normal;
     position: relative;
     font-size: rem(3.4);
     font-family: $open-sans;
     background: $primary-blue;
     padding: rem(1) rem(1.5);
+    margin: 0;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     color: $white;

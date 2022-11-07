@@ -1645,6 +1645,7 @@ __metadata:
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
   dependencies:
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/random-item": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1751,6 +1752,12 @@ __metadata:
   resolution: "@psu-ooe/quote@workspace:packages/quote"
   dependencies:
     "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/random-item@^1.0, @psu-ooe/random-item@workspace:packages/random-item":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/random-item@workspace:packages/random-item"
   languageName: unknown
   linkType: soft
 
