@@ -41,7 +41,14 @@
   }
 
   &__image {
+    background-color: $white;
     position: absolute;
+    aspect-ratio: 16/7;
+    width: 100%;
+
+    @include bp(s) {
+      aspect-ratio: 2;
+    }
 
     img {
       aspect-ratio: 16/7;
