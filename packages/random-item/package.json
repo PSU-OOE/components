@@ -1,0 +1,9 @@
+{
+  "name": "@psu-ooe/random-item",
+  "version": "1.0.0",
+  "description": "Provides a simple client-side randomization mechanism.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}
