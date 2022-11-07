@@ -1,0 +1,10 @@
+<div class="random-item">
+  <script>
+    (() => {
+      const items = {{ items|json_encode()|raw }};
+      if (items) {
+        document.currentScript.parentElement.outerHTML = items[~~(Math.random() * items.length)];
+      }
+    })();
+  </script>
+</div>
