@@ -3,6 +3,13 @@
 
 .bio {
 
+  &__legacy-title {
+    font-size: rem(2.2);
+    line-height: calc(2.8 / 2.2);
+    margin-bottom: rem(2);
+    font-weight: 700;
+  }
+
   &__title {
     @include bp(s) {
       float: left;

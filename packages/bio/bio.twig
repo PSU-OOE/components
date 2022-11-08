@@ -1,7 +1,14 @@
 <div class="bio">
-  <div class="bio__title">
-    {% include '@atoms/heading/heading.twig' with title only %}
-  </div>
+  {# @deprecated - legacy title to be removed in 2.0.0 #}
+  {% if legacy_title %}
+    <div class="bio__legacy-title heading--neutral">
+      {{ legacy_title }}
+    </div>
+  {% else %}
+    <div class="bio__title">
+      {% include '@atoms/heading/heading.twig' with title only %}
+    </div>
+  {% endif %}
   {% if profile_photo %}
     <div class="bio__profile-photo">
       {{ profile_photo }}
