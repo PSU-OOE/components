@@ -1,0 +1,7 @@
+<ul class="bio-collection">
+  {% for bio in bios %}
+    <li class="bio-collection__bio">
+      {% include '@organisms/bio/bio.twig' with bio only %}
+    </li>
+  {% endfor %}
+</ul>

@@ -1532,7 +1532,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/bio@workspace:packages/bio":
+"@psu-ooe/bio-collection@workspace:packages/bio-collection":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/bio-collection@workspace:packages/bio-collection"
+  dependencies:
+    "@psu-ooe/bio": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/bio@^1.0, @psu-ooe/bio@workspace:packages/bio":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/bio@workspace:packages/bio"
   dependencies:
