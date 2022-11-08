@@ -8,6 +8,10 @@
     line-height: calc(2.8 / 2.2);
     margin-bottom: rem(2);
     font-weight: 700;
+
+    @include bp(s) {
+      float: left;
+    }
   }
 
   &__title {
