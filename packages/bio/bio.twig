@@ -41,4 +41,9 @@
       {{ content }}
     </div>
   {% endif %}
+  {% if link %}
+    <div class="bio__link">
+      {% include '@molecules/read-more/read-more.twig' with link|merge({size: 'small'}) only %}
+    </div>
+  {% endif %}
 </div>

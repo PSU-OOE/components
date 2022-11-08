@@ -2,6 +2,7 @@
 @import "../../../base/src/scss/imports/layout";
 
 .bio {
+  clear: both;
 
   &__legacy-title {
     font-size: rem(2.2);
@@ -53,6 +54,14 @@
   }
 
   &__content {
+    @include bp(s) {
+      clear: left;
+    }
+  }
+
+  &__link {
+    margin-top: rem(2);
+
     @include bp(s) {
       clear: left;
     }
