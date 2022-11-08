@@ -2,10 +2,10 @@
     <ul class="bio-collection">
       {% for bio in bios %}
         <li class="bio-collection__bio">
-          {% include '@organisms/bio/bio.twig' with bio only %}
+          {{ bio }}
         </li>
       {% endfor %}
     </ul>
 {% else %}
-  {% include '@organisms/bio/bio.twig' with bios[0] only %}
+  {{ bios[0] }}
 {% endif %}
