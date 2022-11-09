@@ -7,6 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0"
+    "@psu-ooe/credential": "^1.0"
   }
 }
