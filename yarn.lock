@@ -1532,7 +1532,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/bio-collection@workspace:packages/bio-collection":
+"@psu-ooe/bio-collection@^1.0, @psu-ooe/bio-collection@workspace:packages/bio-collection":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/bio-collection@workspace:packages/bio-collection"
   dependencies:
@@ -1710,9 +1710,12 @@ __metadata:
     "@psu-ooe/background-container": ^1.0
     "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/bio": ^1.0
+    "@psu-ooe/bio-collection": ^1.0
     "@psu-ooe/breadcrumbs": ^1.0
     "@psu-ooe/card": ^1.0
     "@psu-ooe/cards-list": ^1.0
+    "@psu-ooe/credential": ^1.0
     "@psu-ooe/cta": ^1.0
     "@psu-ooe/drop-button": ^1.0
     "@psu-ooe/event-link": ^1.0
