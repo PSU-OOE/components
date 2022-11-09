@@ -1532,6 +1532,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/bio-collection@workspace:packages/bio-collection":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/bio-collection@workspace:packages/bio-collection"
+  dependencies:
+    "@psu-ooe/bio": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/bio@^1.0, @psu-ooe/bio@workspace:packages/bio":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/bio@workspace:packages/bio"
+  dependencies:
+    "@psu-ooe/credential": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/breadcrumbs@^1.0, @psu-ooe/breadcrumbs@workspace:packages/breadcrumbs":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/breadcrumbs@workspace:packages/breadcrumbs"
@@ -1555,6 +1571,14 @@ __metadata:
     "@psu-ooe/base": ^1.0
     "@psu-ooe/card": ^1.0
     "@psu-ooe/expandable-section": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/credential@^1.0, @psu-ooe/credential@workspace:packages/credential":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/credential@workspace:packages/credential"
+  dependencies:
+    "@psu-ooe/sprite": ^1.0
   languageName: unknown
   linkType: soft
 
