@@ -116,7 +116,7 @@
   }
 
   cms.attach('tabsList', context => {
-    const tabs_lists = context.querySelectorAll('.tabs-list');
+    const tabs_lists = context.querySelectorAll('.tabs-list[role="tablist"]');
     tabs_lists.forEach(tabs_list => {
       tabs_list.addEventListener('keydown', onKeyDown);
       const buttons = tabs_list.querySelectorAll('.tabs-list__button');

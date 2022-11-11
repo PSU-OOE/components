@@ -126,7 +126,9 @@
     }
 
     &[aria-selected="true"] {
-      cursor: default;
+      &:is(button) {
+        cursor: default;
+      }
       font-weight: 700;
       letter-spacing: rem(-0.03);
       box-shadow: 0 rem(.5) 0 0 $beaver-blue;
@@ -137,6 +139,7 @@
       }
     }
 
+    &:not([aria-selected]):hover,
     &[aria-selected="false"]:hover {
       color: $primary-blue;
       cursor: pointer;

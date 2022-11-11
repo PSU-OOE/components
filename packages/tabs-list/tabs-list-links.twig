@@ -1,0 +1,17 @@
+{% set classes = ['tabs-list'] %}
+{% if orientation %}
+  {% set classes = classes|merge(['tabs-list--' ~ orientation]) %}
+{% else %}
+  {% set classes = classes|merge(['tabs-list--automatic']) %}
+{% endif %}
+{% if borderless_inactive %}
+  {% set classes = classes|merge(['tabs-list--borderless-inactive']) %}
+{% endif %}
+{% if short %}
+  {% set classes = classes|merge(['tabs-list--short']) %}
+{% endif %}
+<div class="{{ classes|join(' ') }}" data-flex-wrap-aware>
+  {% for tab in tabs %}
+    <a class="tabs-list__button" href="#{{ tab.id }}">{{ tab.title }}</a>
+  {% endfor %}
+</div>
