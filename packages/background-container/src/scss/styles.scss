@@ -50,25 +50,179 @@
     }
   }
 
-  &.bg--community-shield--left .sprite {
-    position: absolute;
-    left: -18rem;
-    top: -34rem;
-    height: 42rem;
-    width: auto;
-    z-index: -1;
+  // Left side shield
+  &.bg--community-shield--left {
+	.sprite {
+	  position: absolute;
+	  z-index: -1;
+	  height: auto;
+	  width: 70rem;
+	  left: -62rem;
+	  top: -42rem;
 
-    //noinspection CssUnknownProperty
+	  //noinspection CssUnknownProperty
+	 @supports (container-type: inline-size ) {
+
+		// Might not be needed if a linear scaling function can work now?
+
+		//noinspection CssInvalidAtRule
+		@container (min-width: 550px) {
+		  width: 90rem;
+		  left: -78rem;
+		  top: -49rem;
+		}
+		@container (min-width: 800px) {
+		  width: 110rem;
+		  left: -98rem;
+		  top: -63rem;
+		}
+		@container (min-width: 950px) {
+		  width: 130rem;
+		  left: -112rem;
+		  top: -76rem;
+		}
+		@container (min-width: 1280px) {
+		  left: -98rem;
+		}
+		@container (min-width: 1500px) {
+		  left: -95rem;
+		}
+		@container (min-width: 1800px) {
+		  left: -83rem;
+		}
+	  }
+    }
+	&.bg--primary-blue .sprite {
+	  opacity: .25;
+	}
+  }
+  &.bg--community-shield--left.bg--narrow .sprite {
     @supports (container-type: inline-size ) {
 
       // Might not be needed if a linear scaling function can work now?
 
-      //noinspection CssInvalidAtRule
-      @container (min-width: 550px) {
-        left: -18rem;
-        top: -34rem;
-        height: 52rem;
+      @container (min-width: 950px) {
+        left: -110rem;
       }
+      @container (min-width: 1024px) {
+        left: -105rem;
+      }
+      @container (min-width: 1280px) {
+        left: -90rem;
+      }
+      @container (min-width: 1500px) {
+        left: -85rem;
+      }
+      @container (min-width: 1800px) {
+        left: -70rem;
+      }
+    }
+  }
+  
+  // Right-side shield
+  &.bg--community-shield--right {
+	.sprite {
+  
+	  position: absolute;
+	  z-index: -1;
+	  height: auto;
+	  width: 70rem;
+	  right: -58rem;
+	  top: -40rem;
+
+	 @supports (container-type: inline-size ) {
+
+		// Might not be needed if a linear scaling function can work now?
+
+		//noinspection CssInvalidAtRule
+		@container (min-width: 550px) {
+		  width: 90rem;
+		  right: -75rem;
+		  top: -47rem;
+		}
+		@container (min-width: 800px) {
+		  width: 110rem;
+		  right: -92rem;
+		  top: -63rem;
+		}
+		@container (min-width: 950px) {
+		  width: 130rem;
+		  right: -110rem;
+		  top: -76rem;
+		}
+		@container (min-width: 1280px) {
+		  right: -96rem;
+		}
+		@container (min-width: 1500px) {
+		  right: -85rem;
+		}
+		@container (min-width: 1800px) {
+		  right: -75rem;
+		}
+	  }
+	}
+	&.bg--primary-blue .sprite {
+	  opacity: .25;
+	}
+  }
+  
+  // Adjustments for narrow widths with right side shield
+  &.bg--community-shield--right.bg--narrow .sprite {
+    @supports (container-type: inline-size ) {
+
+      @container (min-width: 950px) {
+        right: -108rem;
+      }
+      @container (min-width: 1024px) {
+        right: -100rem;
+      }
+      @container (min-width: 1280px) {
+        right: -88rem;
+      }
+      @container (min-width: 1500px) {
+        right: -87rem;
+      }
+      @container (min-width: 1800px) {
+        right: -65rem;
+      }
+    }
+  }
+  
+  &.bg--community-shield--right-bottom-corner {
+  	.bg__sprite {
+  	  position: absolute;
+  	  z-index:-1;
+  	  width: 8.6rem;
+  	  height: 16.2rem;
+  	  max-height: 100%;
+  	  right: 0;
+  	  bottom: 0;
+  	  overflow:hidden;
+  	}
+  	.sprite {
+	  position: absolute;
+	  z-index: -1;
+	  height: auto;
+	  width: 72.2rem;
+	  right: -6.9rem;
+	  bottom: -25.3rem;
+    }
+    &.bg--primary-blue .sprite {
+	  opacity: .5;
+    }
+  }
+  
+  &.bg--community-shield--program-page-banner-top {
+  	.sprite {
+	  position: absolute;
+	  z-index: -1;
+	  width: 132.6rem;
+	  height: auto;
+	  left: calc( ( ( 100% - 39.5rem ) / 2 ) - 108rem );
+	  bottom: 0;
+    }
+    &.bg--primary-blue .sprite {
+	  opacity: .25;
     }
   }
 }
