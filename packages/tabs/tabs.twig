@@ -12,7 +12,7 @@
       {% if loop.first %}
         {% set panel_classes = panel_classes|merge(['tabs__panel--active']) %}
       {% endif %}
-      <div class="{{ panel_classes|join(' ') }}" id="{{ tab.id }}" role="tabpanel" tabindex="0" aria-labelledby="{{ tab.id ~ '-button' }}">
+      <div class="{{ panel_classes|join(' ') }}" id="{{ tab.id }}" role="tabpanel" tabindex="0" aria-labelledby="{{ tab.id ~ '-button' }}" data-interactive-component>
         {{ tab.content }}
       </div>
     {% endfor %}
