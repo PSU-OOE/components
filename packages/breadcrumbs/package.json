@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/breadcrumbs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides a breadcrumbs implementation.",
   "publishConfig": {
     "access": "public",
