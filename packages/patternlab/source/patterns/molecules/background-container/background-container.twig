@@ -1,14 +1,14 @@
 {# @TODO: Split this out into ~16 discreet examples when we have time. #}
 {% set short_content %}
   <div style="padding:0 4rem">
-    <h2>Some heading</h2>
+    <h3>Short content</h3>
     <p>This is a WYSIWYG block.</p>
   </div>
 {% endset %}
 
 {% set tall_content %}
   <div style="padding:0 4rem">
-    <h2>Some heading</h2>
+    <h3>Long content</h3>
     <p>This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on.</p>
   </div>
 {% endset %}
@@ -35,31 +35,27 @@
 {% endset %}
 
 {% set colors = ['light-grey','primary-blue'] %}
-{% set sprites = ['community-shield'] %}
-{% set positions = ['left', 'right', 'right-bottom-corner', 'program-page-banner-top'] %}
+{% set backgrounds = ['shield--left', 'shield--right', 'shield--right-bottom-corner', 'shield--topleft-bottomright', 'shield--program-page-banner-top', 'shield--program-page-at-a-glance'] %}
 {% for color in colors %}
-    {% for sprite in sprites %}
-      {% for position in positions %}
+    {% for background in backgrounds %}
+      	<h2>{{ color }} {{ background }} (Full Width Background)</h2>
           {% include '@molecules/background-container/background-container.twig' with {
               color: color,
-              sprite: sprite,
-              position: position,
+              background_image: background,
               content: unbound_short_content
           } only %}
           <br />
           <br />
           {% include '@molecules/background-container/background-container.twig' with {
               color: color,
-              sprite: sprite,
-              position: position,
+              background_image: background,
               content: unbound_tall_content
           } only %}
           <br />
           <br />
           {% include '@molecules/background-container/background-container.twig' with {
               color: color,
-              sprite: sprite,
-              position: position,
+              background_image: background,
               width: 'narrow',
               content: unbound_short_narrow_content
           } only %}
@@ -67,25 +63,22 @@
           <br />
           {% include '@molecules/background-container/background-container.twig' with {
               color: color,
-              sprite: sprite,
-              position: position,
+              background_image: background,
               width: 'narrow',
               content: unbound_tall_narrow_content
           } only %}
           <br />
           <br />
-      {% endfor %}
     {% endfor %}
 {% endfor %}
 
 {% for color in colors %}
-    {% for sprite in sprites %}
-        {% for position in positions %}
+    {% for background in backgrounds %}
+      	<h2>{{ color }} {{ background }} (Limited Width Background)</h2>
             <div style="max-width:119rem;padding:0 4rem;margin:auto;">
                 {% include '@molecules/background-container/background-container.twig' with {
                     color: color,
-                    sprite: sprite,
-                    position: position,
+                    background_image: background,
                     content: short_content
                 } only %}
             </div>
@@ -94,8 +87,7 @@
             <div style="max-width:119rem;padding:0 4rem;margin:auto;">
                 {% include '@molecules/background-container/background-container.twig' with {
                     color: color,
-                    sprite: sprite,
-                    position: position,
+                    background_image: background,
                     content: tall_content
                 } only %}
             </div>
@@ -104,8 +96,7 @@
             <div style="max-width:95rem;padding:0 4rem;margin:auto;">
                 {% include '@molecules/background-container/background-container.twig' with {
                     color: color,
-                    sprite: sprite,
-                    position: position,
+                    background_image: background,
                     width: 'narrow',
                     content: short_content
                 } only %}
@@ -115,14 +106,12 @@
             <div style="max-width:95rem;padding:0 4rem;margin:auto;">
                 {% include '@molecules/background-container/background-container.twig' with {
                     color: color,
-                    sprite: sprite,
-                    position: position,
+                    background_image: background,
                     width: 'narrow',
                     content: tall_content
                 } only %}
             </div>
             <br />
             <br />
-        {% endfor %}
     {% endfor %}
 {% endfor %}

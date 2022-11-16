@@ -51,8 +51,8 @@
   }
 
   // Left side shield
-  &.bg--community-shield--left {
-	.sprite {
+  &.bg--shield--left {
+	.bg__sprite .sprite {
 	  position: absolute;
 	  z-index: -1;
 	  height: auto;
@@ -92,11 +92,11 @@
 		}
 	  }
     }
-	&.bg--primary-blue .sprite {
+	&.bg--primary-blue .bg__sprite {
 	  opacity: .25;
 	}
   }
-  &.bg--community-shield--left.bg--narrow .sprite {
+  &.bg--shield--left.bg--narrow .bg__sprite .sprite {
     @supports (container-type: inline-size ) {
 
       // Might not be needed if a linear scaling function can work now?
@@ -120,8 +120,8 @@
   }
   
   // Right-side shield
-  &.bg--community-shield--right {
-	.sprite {
+  &.bg--shield--right {
+	.bg__sprite .sprite {
   
 	  position: absolute;
 	  z-index: -1;
@@ -161,13 +161,13 @@
 		}
 	  }
 	}
-	&.bg--primary-blue .sprite {
+	&.bg--primary-blue .bg__sprite {
 	  opacity: .25;
 	}
   }
   
   // Adjustments for narrow widths with right side shield
-  &.bg--community-shield--right.bg--narrow .sprite {
+  &.bg--shield--right.bg--narrow .bg__sprite .sprite {
     @supports (container-type: inline-size ) {
 
       @container (min-width: 950px) {
@@ -188,7 +188,7 @@
     }
   }
   
-  &.bg--community-shield--right-bottom-corner {
+  &.bg--shield--right-bottom-corner {
   	.bg__sprite {
   	  position: absolute;
   	  z-index:-1;
@@ -198,30 +198,108 @@
   	  right: 0;
   	  bottom: 0;
   	  overflow:hidden;
+	  .sprite {
+		position: absolute;
+		z-index: -1;
+		height: auto;
+		width: 72.2rem;
+		right: -6.9rem;
+		bottom: -25.3rem;
+	  }
   	}
-  	.sprite {
-	  position: absolute;
-	  z-index: -1;
-	  height: auto;
-	  width: 72.2rem;
-	  right: -6.9rem;
-	  bottom: -25.3rem;
-    }
-    &.bg--primary-blue .sprite {
+    &.bg--primary-blue .bg__sprite {
 	  opacity: .5;
     }
   }
   
-  &.bg--community-shield--program-page-banner-top {
-  	.sprite {
+  &.bg--shield--topleft-bottomright {
+    .bg__sprite .sprite {
 	  position: absolute;
 	  z-index: -1;
-	  width: 132.6rem;
 	  height: auto;
-	  left: calc( ( ( 100% - 39.5rem ) / 2 ) - 108rem );
-	  bottom: 0;
+	}
+  	.bg__sprite--1 .sprite {
+	  width: 53.2rem;
+	  left: -30rem;
+	  top: -40rem;
+	  @container (min-width: 675px) {
+	    width: 70rem;
+	    left: -40rem;
+	    top: -55rem;
+	  }
+	  @container (min-width: 800px) {
+		width: 132.6rem;
+		left: calc( ( ( 100% - 39.5rem ) / 2 ) - 110rem );
+	    top: -115rem;
+	  }
+	  @container (min-width: 950px) {
+		left: calc( ( ( 100% - 39.5rem ) / 2 ) - 125rem );
+	  }
     }
-    &.bg--primary-blue .sprite {
+    .bg__sprite--2 .sprite {
+	  width: 53.2rem;
+	  right: -32rem;
+	  bottom: -46rem;
+	  @container (min-width: 550px) {
+		width: 75rem;
+		right: -50rem;
+	  	bottom: -60rem;
+	  }
+	  @container (min-width: 675px) {
+		width: 100rem;
+		right: -70rem;
+	  	bottom: -90rem;
+	  }
+	  @container (min-width: 800px) {
+		width: 132.6rem;
+		right: calc( ( ( 100% - 39.5rem ) / 2 ) - 120rem );
+	  	bottom: -120rem;
+	  }
+    }
+    &.bg--primary-blue .bg__sprite {
+	  opacity: .25;
+    }
+  }
+  
+  &.bg--shield--program-page-banner-top {
+  	.bg__sprite .sprite {
+	  position: absolute;
+	  z-index: -1;
+	  width: 53.2rem;
+	  height: auto;
+	  left: -22.3rem;
+	  top: -47.5rem;
+	  @container (min-width: 950px) {
+		width: 132.6rem;
+		left: calc( ( ( 100% - 39.5rem ) / 2 ) - 108rem );
+	    bottom: 0;
+	    top: unset;
+	  }
+    }
+    &.bg--primary-blue .bg__sprite {
+	  opacity: .25;
+    }
+  }
+  
+  &.bg--shield--program-page-at-a-glance {
+  	.bg__sprite .sprite {
+	  position: absolute;
+	  z-index: -1;
+	  width: 53.2rem;
+	  height: auto;
+	  right: -32rem;
+	  bottom: -46rem;
+	  @container (min-width: 950px) {
+		width: 132.6rem;
+		right: - 113.8rem;
+	  	top: 0;
+	  	bottom: unset;
+	  }
+	  @container (min-width: 1280px) {
+		right: calc( ( ( 100% - 39.5rem ) / 2 ) - 158rem );
+	  }
+    }
+    &.bg--primary-blue .bg__sprite {
 	  opacity: .25;
     }
   }
