@@ -7,7 +7,8 @@
   <div class="tabs__list">
     {% include '@molecules/tabs-list/tabs-list.twig' with { tabs: tabs } only %}
   </div>
-  {% for tab in tabs %}
+  <div class="tabs__panels">
+    {% for tab in tabs %}
       {% set panel_classes = ['tabs__panel'] %}
       {% if loop.first %}
         {% set panel_classes = panel_classes|merge(['tabs__panel--active']) %}
@@ -16,4 +17,5 @@
         {{ tab.content }}
       </div>
     {% endfor %}
+  </div>
 </div>

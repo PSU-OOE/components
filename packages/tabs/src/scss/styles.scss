@@ -2,6 +2,8 @@
 @import "../../../base/src/scss/imports/layout";
 
 .tabs {
+  position: relative;
+
   &__list {
     /* @TODO: Replace with gap when flex-gap is available. */
     margin-left: rem(-.4);
@@ -26,15 +28,21 @@
     }
   }
 
-  &__panel {
+  &__panels {
     position: relative;
+  }
+
+  &__panel {
+    position: absolute;
     width: 100%;
     visibility: hidden;
     opacity: 0;
     height: 0;
     overflow: hidden;
+    top: 0;
 
     &--active {
+      position: relative;
       visibility: visible;
       opacity: 1;
       height: auto;
