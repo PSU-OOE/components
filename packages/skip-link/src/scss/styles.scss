@@ -7,7 +7,7 @@
   position: absolute;
   overflow: hidden;
   clip: rect(rem(0.1),rem(0.1),rem(0.1),rem(0.1));
-
+  text-decoration: underline;
   &:focus {
     left: rem(1);
     top: rem(1);
