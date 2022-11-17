@@ -4,8 +4,18 @@
       {{ intro }}
     </div>
   {% endif %}
+  {% set tabs_list_data = { tabs: tabs } %}
+  {% if orientation %}
+    {% set tabs_list_data = tabs_list_data|merge({ orientation: orientation }) %}
+  {% endif %}
+  {% if short %}
+    {% set tabs_list_data = tabs_list_data|merge({ short: true }) %}
+  {% endif %}
+  {% if borderless_inactive %}
+    {% set tabs_list_data = tabs_list_data|merge({ borderless_inactive: true }) %}
+  {% endif %}
   <div class="tabs__list">
-    {% include '@molecules/tabs-list/tabs-list.twig' with { tabs: tabs } only %}
+    {% include '@organisms/tabs/tabs-list.twig' with tabs_list_data only %}
   </div>
   <div class="tabs__panels">
     {% for tab in tabs %}

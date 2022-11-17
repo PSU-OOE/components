@@ -21,7 +21,51 @@
     else if (tabs_list.classList.contains('tabs-list--vertical')) {
       orientation = 'vertical';
     }
+
     return orientation;
+  }
+
+  /**
+   * Listener for click events.
+   *
+   * @param {Event} event - the click event
+   */
+  function onClick(event) {
+    const target = event.target;
+    const tabs_list = target.closest('.tabs-list');
+    const buttons = tabs_list.querySelectorAll('.tabs-list__button');
+
+    // Revalidate the states of each button / panel.
+    buttons.forEach(sibling => {
+      // If the current button is not the one that was clicked, then set
+      // aria-selected to false and hide the associated panel.
+      if (target !== sibling) {
+        sibling.setAttribute('aria-selected', 'false');
+        sibling.setAttribute('tabindex', '-1');
+        const panel_id = sibling.getAttribute('aria-controls');
+
+        // Note - document is used here because tab panels can act as proxies.
+        const panel = document.querySelector('#' + panel_id);
+        if (panel) {
+          panel.classList.remove('tabs__panel--active');
+        }
+      }
+
+      // If the current button was clicked, make sure it was not previously
+      // selected before changing any states.
+      else if(target.getAttribute('aria-selected') !== 'true') {
+        sibling.setAttribute('aria-selected', 'true');
+        sibling.setAttribute('tabindex', '');
+        sibling.focus();
+        const panel_id = sibling.getAttribute('aria-controls');
+
+        // Note - document is used here because tab panels can act as proxies.
+        const panel = document.querySelector('#' + panel_id);
+        if (panel) {
+          panel.classList.add('tabs__panel--active');
+        }
+      }
+    });
   }
 
   /**
@@ -49,83 +93,46 @@
         case 'ArrowUp':
           const previous = active_item.previousElementSibling;
           if (previous) {
-            document.getElementById(previous.getAttribute('aria-controls')).dispatchEvent(
-              new CustomEvent('component:activate', {
-                detail: {
-                  activation_type: 'USER_ACTIVATE',
-                  original_activation_type: 'USER_ACTIVATE',
-                }
-              })
-            );
+            previous.click();
           }
           break;
         case 'ArrowRight':
         case 'ArrowDown':
           const next = active_item.nextElementSibling;
           if (next) {
-            document.getElementById(next.getAttribute('aria-controls')).dispatchEvent(
-              new CustomEvent('component:activate', {
-                detail: {
-                  activation_type: 'USER_ACTIVATE',
-                  original_activation_type: 'USER_ACTIVATE',
-                }
-              })
-            );
+            next.click();
           }
           break;
         case 'Home':
           const first = tabs_list.querySelector('.tabs-list__button:first-child');
-          document.getElementById(first.getAttribute('aria-controls')).dispatchEvent(
-            new CustomEvent('component:activate', {
-              detail: {
-                activation_type: 'USER_ACTIVATE',
-                original_activation_type: 'USER_ACTIVATE',
-              }
-            })
-          );
+          first.click();
           break;
         case 'End':
           const last = tabs_list.querySelector('.tabs-list__button:last-child');
-          document.getElementById(last.getAttribute('aria-controls')).dispatchEvent(
-            new CustomEvent('component:activate', {
-              detail: {
-                activation_type: 'USER_ACTIVATE',
-                original_activation_type: 'USER_ACTIVATE',
-              }
-            })
-          );
+          last.click();
+          break;
       }
     }
   }
 
-  /**
-   * Attaches the tabs behavior to each tab component.
-   *
-   * @type {Drupal~behavior}
-   *
-   * @prop {Drupal~behaviorAttach} attach
-   *   Add event listeners to tabs components in the attached context.
-   */
   cms.attach('tabsList', context => {
-    const tabs_list_elements = context.querySelectorAll('.tabs-list');
-
-    tabs_list_elements.forEach(tabs_list_element => {
-      const tabs_element = tabs_list_element.closest('.tabs');
-      const buttons = tabs_list_element.querySelectorAll('.tabs-list__button');
+    const tabs_lists = context.querySelectorAll('.tabs-list');
+    tabs_lists.forEach(tabs_list => {
+      tabs_list.addEventListener('keydown', onKeyDown);
+      const buttons = tabs_list.querySelectorAll('.tabs-list__button');
       buttons.forEach(button => {
-        button.addEventListener('click', () => {
-          document.getElementById(button.getAttribute('aria-controls')).dispatchEvent(
-            new CustomEvent('component:activate', {
-              detail: {
-                activation_type: 'USER_ACTIVATE',
-                original_activation_type: 'USER_ACTIVATE',
-              }
-            })
-          );
-        });
+        button.addEventListener('click', onClick);
       });
-      tabs_list_element.addEventListener('keydown', onKeyDown);
     });
+
+    // Auto-select a tab if the user is heading there.
+    if (context === document) {
+      const id = window.location.hash.replace('#', '');
+      const button = document.querySelector('[aria-controls="' + id + '"]');
+      if (button && button.getAttribute('aria-selected') === 'false') {
+        button.click();
+      }
+    }
   });
 
 })(cms);

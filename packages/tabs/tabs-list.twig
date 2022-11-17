@@ -1,0 +1,25 @@
+{% set classes = ['tabs-list'] %}
+{% if orientation %}
+  {% set classes = classes|merge(['tabs-list--' ~ orientation]) %}
+{% else %}
+  {% set classes = classes|merge(['tabs-list--automatic']) %}
+{% endif %}
+{% if borderless_inactive %}
+  {% set classes = classes|merge(['tabs-list--borderless-inactive']) %}
+{% endif %}
+{% if short %}
+  {% set classes = classes|merge(['tabs-list--short']) %}
+{% endif %}
+<div class="{{ classes|join(' ') }}" role="tablist" data-flex-wrap-aware>
+  {% for tab in tabs %}
+    <button class="tabs-list__button"
+            type="button"
+            role="tab"
+            aria-selected="{{ loop.first ? 'true' : 'false' }}"
+            aria-controls="{{ tab.id }}"
+            tabindex="{{ loop.first ? '0' : '-1' }}"
+            id="{{ (tab.id ~ '-button') }}">
+        {{ tab.title }}
+    </button>
+  {% endfor %}
+</div>
