@@ -18,9 +18,7 @@ function addCustomExtension(Environment $env) {
     $env->addFunction(new TwigFunction('get_component_scripts', function () {
         $scripts = '';
         foreach (glob('packages/*/dist/scripts.js') as $component) {
-          if ($component !== 'packages/tabs-list/dist/scripts.js') {
             $scripts .= file_get_contents($component);
-          }
         }
         return $scripts;
     }));

@@ -39,8 +39,7 @@
     "@psu-ooe/smart-datetime": "^1.0",
     "@psu-ooe/sprite": "^1.0",
     "@psu-ooe/sticky-panel": "^1.0",
-    "@psu-ooe/tabs": "^1.0",
-    "@psu-ooe/tabs-list": "^1.0",
+    "@psu-ooe/tabs": "^2.0",
     "@psu-ooe/upcoming-events": "^1.0",
     "@psu-ooe/webfonts": "^1.0"
   }
