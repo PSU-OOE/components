@@ -1,10 +1,10 @@
 {% set background_image_options = {
   'shield--left': ['community-shield'],
   'shield--right': ['community-shield'],
-  'shield--right-bottom-corner': ['community-shield'],
+  'shield--rightbottom': ['community-shield'],
+  'shield--topleft-bottomright': ['community-shield','community-shield'],
   'shield--program-page-banner-top': ['community-shield'],
   'shield--program-page-at-a-glance': ['community-shield'],
-  'shield--topleft-bottomright': ['community-shield','community-shield']
 } %}
 {% set classes = (classes|default([]))|merge(['bg', 'bg--' ~ color]) %}
 {% if padding %}
