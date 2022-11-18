@@ -13,12 +13,12 @@
  | light-grey   | Displays a light-grey background   |
  | primary-blue | Displays a primary-blue background |
 
-## Sprites
-| Sprite                      | Description                                                                                 |
+## Background images
+| Image                       | Description                                                                                 |
 |-----------------------------|---------------------------------------------------------------------------------------------|
 | shield--left                | Community shield positioned to the left side of the container.                              |
 | shield--right               | Community shield positioned to the right side of the container.                             |
-| shield--rightbottom | Community shield positioned to the right-bottom corner of the container                     |
+| shield--rightbottom         | Community shield positioned to the right-bottom corner of the container                     |
 | shield--topleft-bottomright | Dual community shields positioned to the top-left and bottom-right corners of the container |
 
 ## Paddings
