@@ -1,4 +1,4 @@
-&.bg--shield--left {
+&.bg--shield-left {
   .bg__sprite .sprite {
     position: absolute;
     z-index: -1;
@@ -55,7 +55,7 @@
   }
 }
 
-&.bg--shield--left.bg--narrow .bg__sprite .sprite {
+&.bg--shield-left.bg--narrow .bg__sprite .sprite {
   @supports (container-type: inline-size ) {
 
     //noinspection CssInvalidAtRule

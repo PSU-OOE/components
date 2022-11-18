@@ -1,10 +1,12 @@
+{% set classes = classes|default([]) %}
+
 {% set background_image_options = {
-  'shield--left': ['community-shield'],
-  'shield--right': ['community-shield'],
-  'shield--rightbottom': ['community-shield'],
-  'shield--topleft-bottomright': ['community-shield','community-shield'],
-  'shield--program-page-banner-top': ['community-shield'],
-  'shield--program-page-at-a-glance': ['community-shield'],
+  'shield:left': ['community-shield'],
+  'shield:right': ['community-shield'],
+  'shield:bottomright': ['community-shield'],
+  'shield:topleft-bottomright': ['community-shield','community-shield'],
+  'shield:program-page-banner-top': ['community-shield'],
+  'shield:program-page-at-a-glance': ['community-shield'],
 } %}
 {% set classes = (classes|default([]))|merge(['bg', 'bg--' ~ color]) %}
 {% if padding %}
@@ -16,7 +18,7 @@
 {% if background_image and background_image in background_image_options|keys %}
   {% set sprites = background_image_options[background_image] %}
   {% set classes = classes|merge([
-    'bg--' ~ background_image
+    'bg--' ~ background_image|replace({':':'-'})
   ]) %}
 {% endif %}
 <div class="{{ classes|join(' ') }}">
