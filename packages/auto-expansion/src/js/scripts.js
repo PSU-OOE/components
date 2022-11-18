@@ -49,10 +49,9 @@
           })
         );
       });
-
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         original_target.scrollIntoView(true);
-      }, 250);
+      });
     }
 
     // Handle visitors coming in with fragments in the URL.
