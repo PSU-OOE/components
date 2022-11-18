@@ -8,9 +8,14 @@
   {% set classes = classes|merge(['accordion--borderless']) %}
 {% endif %}
 
+{% set heading_classes = ['accordion__heading'] %}
+{% if heading_style %}
+  {% set heading_classes = heading_classes|merge(["heading", "heading--" ~ heading_style])%}
+{% endif %}
+
 <div class="{{ classes|join(' ') }}">
   {% if heading_level %}
-    <{{ heading_level }} class="accordion__heading">
+    <{{ heading_level }} class="{{ heading_classes|join(' ') }}">
   {% endif %}
   <button class="accordion__button" aria-expanded="{{ expanded ? 'true' : 'false' }}" aria-controls="{{ id }}">
     <span class="accordion__label">{{ label }}</span>

@@ -1,0 +1,49 @@
+<div class="bio">
+  {# @deprecated - legacy title to be removed in 2.0.0 #}
+  {% if legacy_title %}
+    <div class="bio__legacy-title heading heading--neutral">
+      {{ legacy_title }}
+    </div>
+  {% else %}
+    <div class="bio__title">
+      {% include '@atoms/heading/heading.twig' with title only %}
+    </div>
+  {% endif %}
+  {% if profile_photo %}
+    <div class="bio__profile-photo">
+      {{ profile_photo }}
+    </div>
+  {% endif %}
+  {% if job_title %}
+    <p class="bio__job-title">
+      {{ job_title }}
+    </p>
+  {% endif %}
+  {% if credentials %}
+    {% if credentials|length > 1 %}
+      <ul class="bio__credentials">
+        {% for credential in credentials %}
+          <li class="bio__credential">
+            {% include '@molecules/credential/credential.twig' with credential only %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="bio__credentials">
+        <div class="bio__credential">
+          {% include '@molecules/credential/credential.twig' with credentials[0] only %}
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+  {% if content %}
+    <div class="bio__content">
+      {{ content }}
+    </div>
+  {% endif %}
+  {% if link %}
+    <div class="bio__link">
+      {% include '@molecules/read-more/read-more.twig' with link|merge({size: 'small'}) only %}
+    </div>
+  {% endif %}
+</div>

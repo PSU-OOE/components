@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/cta",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides a CTA button.",
   "publishConfig": {
     "access": "public",

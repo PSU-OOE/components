@@ -145,6 +145,13 @@
           "paths": [
             "packages"
           ]
+        },
+        {
+          "id": "blocks",
+          "recursive": false,
+          "paths": [
+            "packages"
+          ]
         }
       ],
       "alterTwigEnv": [

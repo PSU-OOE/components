@@ -1,0 +1,11 @@
+{% if bios|length > 1 %}
+    <ul class="bio-collection">
+      {% for bio in bios %}
+        <li class="bio-collection__bio">
+          {{ bio }}
+        </li>
+      {% endfor %}
+    </ul>
+{% else %}
+  {{ bios[0] }}
+{% endif %}
