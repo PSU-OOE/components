@@ -1738,6 +1738,7 @@ __metadata:
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/quote": ^1.0
     "@psu-ooe/read-more": ^1.0
+    "@psu-ooe/skip-link": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/smart-datetime": ^1.0
     "@psu-ooe/sprite": ^1.0
@@ -1783,6 +1784,12 @@ __metadata:
   resolution: "@psu-ooe/read-more@workspace:packages/read-more"
   dependencies:
     "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/skip-link@^1.0, @psu-ooe/skip-link@workspace:packages/skip-link":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/skip-link@workspace:packages/skip-link"
   languageName: unknown
   linkType: soft
 
