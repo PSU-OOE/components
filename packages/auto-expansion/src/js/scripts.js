@@ -2,17 +2,20 @@
  * @file
  * Provides auto-expansion capabilities for interactive component paths.
  *
- * This means that users visiting pages with URL fragments that would otherwise
- * be hidden by progressive disclosure will still be able to be scrolled to the
- * correct location with all interactive elements that would have been in their
- * way automatically opened for them.
+ * This means that users visiting pages with URL fragments linking to
+ * inaccessible targets will now be scrolled to the correct location
+ * with all interactive elements that would have otherwise been in their
+ * way automatically activated.
  *
- * This also handles in-page anchor link clicks.
+ * This also handles in-page anchor link clicks and native navigation events.
+ *
+ * IMPORTANT:
+ *   This DOES NOT interfere with native events for history / focus management!
  */
-
 (cms => {
 
-  cms.attach('autoExpandComponentPath', context => {
+  cms.attach('autoExpansion', context => {
+
     /**
      * Activates all interactive ancestor components of target, including target.
      *
@@ -32,23 +35,37 @@
           // Since we're traversing upwards in the DOM, place each match at
           // the beginning of the array. This allows callers to traverse the
           // array directly in order to visit outermost elements first, and
-          // innermost elements last.
+          // innermost elements last -- exactly like manual activation would.
           interactive_path.unshift(target);
         }
         target = target.parentElement;
       }
       while (target.parentElement);
-      // Activate each component, being sure to disable animation.
+
+      // Attempt to activate each component, being sure to disable animation.
       interactive_path.forEach((component, index) => {
         component.dispatchEvent(
           new CustomEvent('component:activate', {
             detail: {
               disable_animation: true,
+
+              // For all elements except for the original target, set the
+              // activation type to 'AUTO_EXPAND'.  This separates "by-product"
+              // events from those initiated directly by an end user.
               activation_type: interactive_path.length - index > 1 ? 'AUTO_EXPAND' : activation_type,
             }
           })
         );
       });
+
+      // On the next animation frame, ensure that the user is scrolled to
+      // the proper location on the page.  After auto-expansion completes,
+      // it should be reasonably guaranteed that the original target is now
+      // in view, visible, and accessible as native browser events dictate.
+      //
+      // IMPORTANT: Since we have not interfered with any native browser
+      // events, the user-agent should have full control over history and
+      // focus management.  WE DO NOT HAVE TO EXPLICITLY FOCUS ON THE TARGET!
       requestAnimationFrame(() => {
         original_target.scrollIntoView(true);
       });
@@ -74,7 +91,7 @@
 
       // Any time the hash changes, we need to make sure that the new target
       // is accessible.  By tapping into popstate, we can auto-expand the
-      // component path before the native navigate to fragment behavior
+      // component path before the native "navigate to fragment" behavior
       // happens.
       window.addEventListener('popstate', () => {
         const fragment = location.hash;
