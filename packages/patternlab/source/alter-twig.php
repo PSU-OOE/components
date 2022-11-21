@@ -2,13 +2,14 @@
 
 use Twig\Environment;
 use Twig\TwigFunction;
+use Twig\TwigFilter;
 
 require_once('packages/smart-datetime/SmartDatetime.php');
-require_once('packages/random-item/RandomItem.php');
 
 function addCustomExtension(Environment $env) {
     $env->addExtension(new SmartDatetimeExtension);
-    $env->addExtension(new RandomItemExtension);
+    $env->addFilter(new TwigFilter('clean_unique_id', function($id) { return $id . '-' . uniqid(); }));
+
     $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
         $styles = '';
         foreach (glob('packages/*/dist/styles.css') as $component) {
