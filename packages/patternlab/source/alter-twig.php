@@ -4,9 +4,11 @@ use Twig\Environment;
 use Twig\TwigFunction;
 
 require_once('packages/smart-datetime/SmartDatetime.php');
+require_once('packages/random-item/RandomItem.php');
 
 function addCustomExtension(Environment $env) {
     $env->addExtension(new SmartDatetimeExtension);
+    $env->addExtension(new RandomItemExtension);
     $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
         $styles = '';
         foreach (glob('packages/*/dist/styles.css') as $component) {
