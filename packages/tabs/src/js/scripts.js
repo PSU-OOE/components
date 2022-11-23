@@ -83,7 +83,6 @@
             new CustomEvent('component:activate', {
               detail: {
                 activation_type: 'USER_ACTIVATE',
-                original_activation_type: 'USER_ACTIVATE',
               }
             })
           );
