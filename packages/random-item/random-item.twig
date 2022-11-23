@@ -1,9 +1,10 @@
-<div class="random-item">
+{% set identifier = 'random-item'|clean_unique_id %}
+<div id="{{ identifier }}" class="random-item">
   <script>
     (() => {
       const items = {{ items|json_encode()|raw }};
       if (items) {
-        document.currentScript.parentElement.outerHTML = items[~~(Math.random() * items.length)];
+        document.querySelector('#{{ identifier }}').outerHTML = items[~~(Math.random() * items.length)];
       }
     })();
   </script>
