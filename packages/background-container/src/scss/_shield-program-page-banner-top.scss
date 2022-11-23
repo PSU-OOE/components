@@ -1,0 +1,26 @@
+&.bg--shield-program-page-banner-top {
+  .bg__sprite .sprite {
+    position: absolute;
+    z-index: -1;
+    width: rem(53.2);
+    height: auto;
+    left: rem(-22.3);
+    top: rem(-47.5);
+    display: none;
+    //noinspection CssUnknownProperty
+    @supports (container-type: inline-size ) {
+      display: initial;
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 950px) {
+        width: rem(132.6);
+        left: calc(((100% - #{rem(39.5)}) / 2) - #{rem(108)});
+        bottom: 0;
+        top: unset;
+      }
+    }
+  }
+  &.bg--primary-blue .bg__sprite .sprite {
+    opacity: .25;
+  }
+}
