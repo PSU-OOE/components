@@ -1,0 +1,9 @@
+{
+  "name": "@psu-ooe/auto-expansion",
+  "version": "1.0.0",
+  "description": "Provides automatic expansion capabilities for interactive components.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

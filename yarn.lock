@@ -1507,6 +1507,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/auto-expansion@^1.0, @psu-ooe/auto-expansion@workspace:packages/auto-expansion":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/auto-expansion@workspace:packages/auto-expansion"
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/background-container@^2.0, @psu-ooe/background-container@workspace:packages/background-container":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/background-container@workspace:packages/background-container"
@@ -1707,6 +1713,7 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.16.2
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
+    "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/background-container": ^2.0
     "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^1.0
@@ -1736,8 +1743,7 @@ __metadata:
     "@psu-ooe/smart-datetime": ^1.0
     "@psu-ooe/sprite": ^1.0
     "@psu-ooe/sticky-panel": ^1.0
-    "@psu-ooe/tabs": ^1.0
-    "@psu-ooe/tabs-list": ^1.0
+    "@psu-ooe/tabs": ^2.0
     "@psu-ooe/upcoming-events": ^1.0
     "@psu-ooe/webfonts": ^1.0
   languageName: unknown
@@ -1818,21 +1824,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/tabs-list@^1.0, @psu-ooe/tabs-list@workspace:packages/tabs-list":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/tabs-list@workspace:packages/tabs-list"
-  dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/flex-wrap-listener": ^1.0
-  languageName: unknown
-  linkType: soft
-
-"@psu-ooe/tabs@^1.0, @psu-ooe/tabs@workspace:packages/tabs":
+"@psu-ooe/tabs@^2.0, @psu-ooe/tabs@workspace:packages/tabs":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/tabs@workspace:packages/tabs"
   dependencies:
     "@psu-ooe/base": ^1.0
-    "@psu-ooe/tabs-list": ^1.0
+    "@psu-ooe/flex-wrap-listener": ^1.0
   languageName: unknown
   linkType: soft
 

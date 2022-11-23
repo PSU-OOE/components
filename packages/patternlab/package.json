@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.40",
+  "version": "1.0.41",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -11,6 +11,7 @@
     "@pattern-lab/engine-twig-php": "^5.16.2",
     "@pattern-lab/uikit-workshop": "^5.16.2",
     "@psu-ooe/accordion": "^1.0",
+    "@psu-ooe/auto-expansion": "^1.0",
     "@psu-ooe/background-container": "^2.0",
     "@psu-ooe/band": "^2.0",
     "@psu-ooe/base": "^1.0",
@@ -40,8 +41,7 @@
     "@psu-ooe/smart-datetime": "^1.0",
     "@psu-ooe/sprite": "^1.0",
     "@psu-ooe/sticky-panel": "^1.0",
-    "@psu-ooe/tabs": "^1.0",
-    "@psu-ooe/tabs-list": "^1.0",
+    "@psu-ooe/tabs": "^2.0",
     "@psu-ooe/upcoming-events": "^1.0",
     "@psu-ooe/webfonts": "^1.0"
   }
