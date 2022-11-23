@@ -115,12 +115,10 @@
               else {
                 // If the current button was clicked, make sure it was not previously
                 // selected before changing any states.
-                if(target.getAttribute('aria-selected') !== 'true') {
-                  sibling.setAttribute('aria-selected', 'true');
-                  sibling.setAttribute('tabindex', '');
-                  sibling_panel.classList.add('tabs__panel--active');
-                  panel.dispatchEvent(new CustomEvent('component:activated', { detail: {target: target } }));
-                }
+                sibling.setAttribute('aria-selected', 'true');
+                sibling.setAttribute('tabindex', '');
+                sibling_panel.classList.add('tabs__panel--active');
+                panel.dispatchEvent(new CustomEvent('component:activated'));
               }
             });
           }
