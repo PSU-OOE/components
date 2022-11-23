@@ -1824,15 +1824,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/tabs-list@workspace:packages/tabs-list":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/tabs-list@workspace:packages/tabs-list"
-  dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/flex-wrap-listener": ^1.0
-  languageName: unknown
-  linkType: soft
-
 "@psu-ooe/tabs@^2.0, @psu-ooe/tabs@workspace:packages/tabs":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/tabs@workspace:packages/tabs"
