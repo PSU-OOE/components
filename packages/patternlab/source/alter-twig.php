@@ -1,6 +1,7 @@
 <?php
 
 use Twig\Environment;
+use Twig\TwigFilter;
 use Twig\TwigFunction;
 
 require_once('packages/smart-datetime/SmartDatetime.php');
@@ -8,7 +9,9 @@ require_once('packages/smart-datetime/SmartDatetime.php');
 function addCustomExtension(Environment $env) {
   $package_manifest = json_decode(file_get_contents('packages/patternlab/package.json'), TRUE);
     $env->addExtension(new SmartDatetimeExtension);
-    $dependencies = $package_manifest['dependencies'];
+  $env->addFilter(new TwigFilter('clean_unique_id', function($id) { return $id . '-' . uniqid(); }));
+
+  $dependencies = $package_manifest['dependencies'];
     $env->addFunction(new TwigFunction('get_component_stylesheets', function () use ($dependencies) {
         $styles = '';
         foreach (array_keys($dependencies) as $dependency) {
