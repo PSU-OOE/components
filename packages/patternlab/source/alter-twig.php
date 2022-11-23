@@ -1,38 +1,28 @@
 <?php
 
 use Twig\Environment;
-use Twig\TwigFilter;
 use Twig\TwigFunction;
+use Twig\TwigFilter;
 
 require_once('packages/smart-datetime/SmartDatetime.php');
 
 function addCustomExtension(Environment $env) {
-  $package_manifest = json_decode(file_get_contents('packages/patternlab/package.json'), TRUE);
     $env->addExtension(new SmartDatetimeExtension);
-  $env->addFilter(new TwigFilter('clean_unique_id', function($id) { return $id . '-' . uniqid(); }));
+    $env->addFilter(new TwigFilter('clean_unique_id', function($id) { return $id . '-' . uniqid(); }));
 
-  $dependencies = $package_manifest['dependencies'];
-    $env->addFunction(new TwigFunction('get_component_stylesheets', function () use ($dependencies) {
+    $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
         $styles = '';
-        foreach (array_keys($dependencies) as $dependency) {
-          $component = str_replace('@psu-ooe/', '', $dependency);
-          $css_file = "packages/$component/dist/styles.css";
-          if (file_exists($css_file)) {
-            $styles .= file_get_contents($css_file);
-          }
+        foreach (glob('packages/*/dist/styles.css') as $component) {
+            $styles .= file_get_contents($component);
         }
         return $styles;
     }));
 
-    $env->addFunction(new TwigFunction('get_component_scripts', function () use ($dependencies) {
+    $env->addFunction(new TwigFunction('get_component_scripts', function () {
         $scripts = '';
-      foreach (array_keys($dependencies) as $dependency) {
-        $component = str_replace('@psu-ooe/', '', $dependency);
-        $js_file = "packages/$component/dist/scripts.js";
-        if (file_exists($js_file)) {
-          $scripts .= file_get_contents($js_file);
+        foreach (glob('packages/*/dist/scripts.js') as $component) {
+            $scripts .= file_get_contents($component);
         }
-      }
         return $scripts;
     }));
 
