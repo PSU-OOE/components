@@ -2,11 +2,26 @@
 @import '../../../base/src/scss/imports/layout';
 
 .intro-form {
-  background-color: $light-grey;
+  background-color: transparent;
+  padding-top: rem(3);
+  overflow: hidden;
 
   @include bp(s) {
     padding-top: rem(3);
     margin-top: rem(3);
+  }
+
+  &__background {
+    overflow: visible;
+    padding: 0;
+
+    .bg__sprite {
+      display: none;
+
+      @include bp(s) {
+        display: initial;
+      }
+    }
   }
 
   &__container {
@@ -30,7 +45,7 @@
       box-shadow: rem(.1) rem(.2) $limestone;
       flex: 1;
       height: fit-content;
-      margin-top: rem(-6);
+      margin-top: rem(-3);
     }
   }
 
@@ -136,6 +151,7 @@
 
     @include bp(s) {
       padding: 0;
+      margin-top: rem(3);
       flex: 1;
     }
   }
