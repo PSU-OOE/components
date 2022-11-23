@@ -100,7 +100,6 @@
       const panels = tabs_element.querySelectorAll('.tabs__panel');
       panels.forEach(panel => {
         panel.addEventListener('component:activate', () => {
-          console.debug('Request to activate tab panel ' + panel.id + ' was received.');
           const target = tabs_element.querySelector('[aria-controls="' + panel.getAttribute('id') + '"]');
           if (target.getAttribute('aria-selected') === 'false') {
             const buttons = tabs_element.querySelectorAll('.tabs-list__button');
@@ -125,25 +124,16 @@
                 }
               }
             });
-            console.debug('Tab panel ' + panel.id + ' has been activated.');
-          }
-          else {
-            console.debug('Tab panel ' + panel.id + ' was already activated.');
           }
         });
 
         panel.addEventListener('component:deactivate', () => {
-          console.debug('Request to deactivate tab panel ' + panel.id + ' was received.');
           const button = context.querySelector('[aria-controls="' + panel.getAttribute('id') + '"]');
           if (button.getAttribute('aria-selected') === 'true') {
             button.setAttribute('aria-selected', 'false');
             button.setAttribute('tabindex', '-1');
             panel.classList.remove('tabs__panel--active');
             panel.dispatchEvent(new CustomEvent('component:deactivated'));
-            console.debug('Tab panel ' + panel.id + ' has been deactivated.');
-          }
-          else {
-            console.debug('Tab panel ' + panel.id + ' was already deactivated.');
           }
         });
       });
