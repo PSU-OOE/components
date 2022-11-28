@@ -8,4 +8,20 @@
 {% if compact %}
   {% set classes = classes|merge(['cta-block--compact']) %}
 {% endif %}
-<a class="{{ classes|join(' ') }}" href="{{ url }}">{{ label }}</a>
+<a class="{{ classes|join(' ') }}" href="{{ url }}">
+  {% if icon_before %}
+    <span class="cta-block__icon">
+      {% include '@atoms/sprite/sprite.twig' with {
+        name: icon_before
+      } only %}
+    </span>
+  {% endif %}
+  {{ label }}
+  {% if icon_after %}
+    <span class="cta-block__icon">
+      {% include '@atoms/sprite/sprite.twig' with {
+        name: icon_after
+      } only %}
+    </span>
+  {% endif %}
+</a>
