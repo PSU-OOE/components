@@ -13,14 +13,6 @@
   &__background {
     overflow: visible;
     padding: 0;
-
-    .bg__sprite {
-      display: none;
-
-      @include bp(s) {
-        display: initial;
-      }
-    }
   }
 
   &__container {
