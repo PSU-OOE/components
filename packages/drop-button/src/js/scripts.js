@@ -15,15 +15,15 @@
       });
 
       // Close an open drop-button menu when escape is pressed.
-      toggle.addEventListener('keydown', e => {
+      drop_button.addEventListener('keydown', e => {
         if (e.key.toLowerCase() === 'escape' && toggle.getAttribute('aria-expanded') === 'true') {
           toggle.setAttribute('aria-expanded', 'false');
         }
       });
 
       // Close an open drop-button menu when focus leaves the component.
-     toggle.addEventListener('focusout', (e) => {
-        if (!toggle.contains(e.relatedTarget)) {
+     drop_button.addEventListener('focusout', (e) => {
+        if (!drop_button.contains(e.relatedTarget)) {
           toggle.setAttribute('aria-expanded', 'false');
         }
       });
