@@ -1,8 +1,46 @@
-{% include '@organisms/tabs/tabs.twig' with {
-  tabs: [
-    { id: 'tab-1', section: 'Tab 1', title: 'Tab 1', content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque. Volutpat sed cras ornare arcu. Euismod quis viverra nibh cras pulvinar. Sit amet facilisis magna etiam. Orci porta non pulvinar neque laoreet. Nisl condimentum id venenatis a condimentum vitae sapien. Metus dictum at tempor commodo ullamcorper a lacus. Elementum tempus egestas sed sed risus pretium quam. Nunc sed augue lacus viverra vitae congue eu consequat ac. Ac orci phasellus egestas tellus rutrum. Semper eget duis at tellus at urna condimentum.</p>'},
-    { id: 'tab-2', section: 'Tab 2', title: 'Tab 2', content: '<p>Sed arcu non odio euismod lacinia. Sed nisi lacus sed viverra tellus in. Lorem ipsum dolor sit amet consectetur adipiscing. At auctor urna nunc id cursus metus aliquam eleifend. Pellentesque massa placerat duis ultricies. Non consectetur a erat nam at lectus urna duis. Convallis convallis tellus id interdum. Potenti nullam ac tortor vitae purus faucibus ornare. Scelerisque in dictum non consectetur a erat nam at. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Ac auctor augue mauris augue. Est ultricies integer quis auctor.</p><p>Enim eu turpis egestas pretium aenean. Faucibus turpis in eu mi. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Eu mi bibendum neque egestas congue quisque egestas diam. Nunc sed blandit libero volutpat sed cras ornare. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Viverra adipiscing at in tellus integer feugiat scelerisque. Velit egestas dui id ornare arcu odio. At quis risus sed vulputate. Est placerat in egestas erat. Risus viverra adipiscing at in tellus. Elementum facilisis leo vel fringilla est. Pretium fusce id velit ut tortor pretium.</p>'},
-    { id: 'tab-3', section: 'Tab 3', title: 'Tab 3', content: '<p>Enim eu turpis egestas pretium aenean. Faucibus turpis in eu mi. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Eu mi bibendum neque egestas congue quisque egestas diam. Nunc sed blandit libero volutpat sed cras ornare. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Viverra adipiscing at in tellus integer feugiat scelerisque. Velit egestas dui id ornare arcu odio. At quis risus sed vulputate. Est placerat in egestas erat. Risus viverra adipiscing at in tellus. Elementum facilisis leo vel fringilla est. Pretium fusce id velit ut tortor pretium.</p>'},
-    { id: 'tab-4', section: 'Tab 4', title: 'Tab 4', content: '<p>Suspendisse in est ante in. Vel pretium lectus quam id. Turpis nunc eget lorem dolor sed viverra ipsum nunc. Senectus et netus et malesuada. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque. Aliquam ultrices sagittis orci a scelerisque purus. Ut venenatis tellus in metus vulputate eu scelerisque. Eget gravida cum sociis natoque penatibus et. Enim nec dui nunc mattis. Pharetra vel turpis nunc eget lorem. Adipiscing commodo elit at imperdiet dui. Elit at imperdiet dui accumsan sit amet nulla. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Ut tellus elementum sagittis vitae et leo duis ut. Arcu felis bibendum ut tristique et egestas. Leo urna molestie at elementum eu facilisis sed odio. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Volutpat consequat mauris nunc congue nisi vitae. At consectetur lorem donec massa sapien faucibus et molestie. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus.</p>'},
-  ]
-} only %}
+<div style="max-width:80rem">
+  {% include '@organisms/tabs/tabs.twig' with {
+    tabs: [
+      { id: 'tab-1', section: 'Tab 1', title: 'Tab 1', content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque. Volutpat sed cras ornare arcu. Euismod quis viverra nibh cras pulvinar. Sit amet facilisis magna etiam. Orci porta non pulvinar neque laoreet. Nisl condimentum id venenatis a condimentum vitae sapien. Metus dictum at tempor commodo ullamcorper a lacus. Elementum tempus egestas sed sed risus pretium quam. Nunc sed augue lacus viverra vitae congue eu consequat ac. Ac orci phasellus egestas tellus rutrum. Semper eget duis at tellus at urna condimentum.</p>'},
+      { id: 'tab-2', section: 'Tab 2', title: 'Tab 2', content: '<p>Sed arcu non odio euismod lacinia. Sed nisi lacus sed viverra tellus in. Lorem ipsum dolor sit amet consectetur adipiscing. At auctor urna nunc id cursus metus aliquam eleifend. Pellentesque massa placerat duis ultricies. Non consectetur a erat nam at lectus urna duis. Convallis convallis tellus id interdum. Potenti nullam ac tortor vitae purus faucibus ornare. Scelerisque in dictum non consectetur a erat nam at. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas purus. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Ac auctor augue mauris augue. Est ultricies integer quis auctor.</p><p>Enim eu turpis egestas pretium aenean. Faucibus turpis in eu mi. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Eu mi bibendum neque egestas congue quisque egestas diam. Nunc sed blandit libero volutpat sed cras ornare. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Viverra adipiscing at in tellus integer feugiat scelerisque. Velit egestas dui id ornare arcu odio. At quis risus sed vulputate. Est placerat in egestas erat. Risus viverra adipiscing at in tellus. Elementum facilisis leo vel fringilla est. Pretium fusce id velit ut tortor pretium.</p>'},
+      { id: 'tab-3', section: 'Tab 3', title: 'Tab 3', content: '<p>Enim eu turpis egestas pretium aenean. Faucibus turpis in eu mi. Porta nibh venenatis cras sed felis eget velit aliquet sagittis. Eu mi bibendum neque egestas congue quisque egestas diam. Nunc sed blandit libero volutpat sed cras ornare. Egestas purus viverra accumsan in nisl nisi scelerisque eu. Viverra adipiscing at in tellus integer feugiat scelerisque. Velit egestas dui id ornare arcu odio. At quis risus sed vulputate. Est placerat in egestas erat. Risus viverra adipiscing at in tellus. Elementum facilisis leo vel fringilla est. Pretium fusce id velit ut tortor pretium.</p>'},
+      { id: 'tab-4', section: 'Tab 4', title: 'Tab 4', content: '<p>Suspendisse in est ante in. Vel pretium lectus quam id. Turpis nunc eget lorem dolor sed viverra ipsum nunc. Senectus et netus et malesuada. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque. Aliquam ultrices sagittis orci a scelerisque purus. Ut venenatis tellus in metus vulputate eu scelerisque. Eget gravida cum sociis natoque penatibus et. Enim nec dui nunc mattis. Pharetra vel turpis nunc eget lorem. Adipiscing commodo elit at imperdiet dui. Elit at imperdiet dui accumsan sit amet nulla. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Ut tellus elementum sagittis vitae et leo duis ut. Arcu felis bibendum ut tristique et egestas. Leo urna molestie at elementum eu facilisis sed odio. Ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Volutpat consequat mauris nunc congue nisi vitae. At consectetur lorem donec massa sapien faucibus et molestie. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus.</p>'},
+    ]
+  } only %}
+</div>
+<div class="debug-wrapper">
+  <label for="datalayer-debugger"><strong>Datalayer Content</strong></label>
+  <textarea disabled id="datalayer-debugger"></textarea>
+</div>
+<style>
+  .debug-wrapper {
+    padding: 2rem;
+    position: fixed;
+    top: 10%;
+    right: 2.5%;
+    width: 50rem;
+    height: 85%;
+    background: #f2f3f9;
+    z-index: 9999;
+  }
+
+  [for="datalayer-debugger"] {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  #datalayer-debugger {
+    height: 92.5%;
+  }
+</style>
+<script>
+  const datalayer_debugger = document.querySelector('#datalayer-debugger');
+  setInterval(() => {
+    let new_value = '';
+    window.dataLayer.forEach(record => {
+      new_value += JSON.stringify(record);
+      new_value += "\n";
+    });
+    datalayer_debugger.value = new_value;
+  }, 25);
+</script>
