@@ -8,6 +8,8 @@
   {% set items = items|merge([rendered_item]) %}
 {% endfor %}
 
-{% include '@molecules/grid/grid.twig' with {
-  items: items,
-} only %}
+<div style="max-width:119rem;padding:4rem;">
+  {% include '@molecules/grid/grid.twig' with {
+    items: items,
+  } only %}
+</div>
