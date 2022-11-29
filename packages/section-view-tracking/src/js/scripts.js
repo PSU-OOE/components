@@ -16,7 +16,6 @@
         section_view_title: current_section.getAttribute('data-section'),
       });
     }
-
   };
 
   cms.attach('sectionViewTracking', context => {
