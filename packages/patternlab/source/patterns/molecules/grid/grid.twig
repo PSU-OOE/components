@@ -1,13 +1,13 @@
+{% set items = [] %}
+{% for item in 1..9 %}
+  {% set rendered_item %}
+    <div style="padding:1.5rem 2rem;background:blue;color:white">
+      Item {{ item }}
+    </div>
+  {% endset %}
+  {% set items = items|merge([rendered_item]) %}
+{% endfor %}
+
 {% include '@molecules/grid/grid.twig' with {
-  items: [
-    'Item 1',
-    'Item 2',
-    'Item 3',
-    'Item 4',
-    'Item 5',
-    'Item 6',
-    'Item 7',
-    'Item 8',
-    'Item 9'
-  ],
+  items: items,
 } only %}
