@@ -53,6 +53,7 @@
     position: absolute;
     overflow: hidden;
     inset: 0 0 0 0;
+    z-index: -1;
   }
 
 	@import "shield-left";
