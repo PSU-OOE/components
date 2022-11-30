@@ -9,7 +9,6 @@
   padding-top: rem(3);
   padding-bottom: rem(3);
   position: relative;
-  overflow: hidden;
 
   //noinspection CssUnknownProperty
   @supports (container-type: inline-size ) {
@@ -48,6 +47,12 @@
     &--#{$color} {
       background-color: #{$scss_color};
     }
+  }
+
+  &__sprites {
+    position: absolute;
+    overflow: hidden;
+    inset: 0 0 0 0;
   }
 
 	@import "shield-left";

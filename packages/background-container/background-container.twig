@@ -23,11 +23,13 @@
 {% endif %}
 <div class="{{ classes|join(' ') }}">
   {% if sprites %}
+    <div class="bg__sprites">
     {% for sprite in sprites %}
       <div class="bg__sprite bg__sprite--{{sprite}} bg__sprite--{{loop.index}}">
 		    {% include '@atoms/sprite/sprite.twig' with { name: sprite } only %}
 		  </div>
     {% endfor %}
+    </div>
   {% endif %}
   {{ content }}
 </div>
