@@ -1517,6 +1517,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/background-container@workspace:packages/background-container"
   dependencies:
+    "@psu-ooe/background-container": ^2.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/sprite": ^1.0
   languageName: unknown
