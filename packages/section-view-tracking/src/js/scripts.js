@@ -20,11 +20,14 @@
 
   cms.attach('sectionViewTracking', context => {
 
-    // On page load, if there's no hash in the URL, or if there is a hash, but
-    // no corresponding element, track a "Header" view.
     if (context === document) {
       const hash = location.hash;
-      if (hash === '#' || (!hash && performance.getEntriesByType('navigation')[0].type === 'navigate')) {
+      // Only track a Header event if...
+      // There is a not a fragment or:
+      //   there is a fragment and
+      //   the navigation type is "navigate" and
+      //   there is no corresponding element on the page.
+      if (!hash || (performance.getEntriesByType('navigation')[0].type === 'navigate' && !document.querySelector(hash))) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'section_view',
