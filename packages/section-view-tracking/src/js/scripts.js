@@ -24,7 +24,7 @@
     // no corresponding element, track a "Header" view.
     if (context === document) {
       const hash = location.hash;
-      if ((hash && (hash === '#' || !document.querySelector(hash))) || (!hash && performance.getEntriesByType('navigation')[0].type === 'navigate')) {
+      if (hash === '#' || (!hash && performance.getEntriesByType('navigation')[0].type === 'navigate')) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'section_view',
