@@ -2,16 +2,12 @@
 @import '../../../base/src/scss/imports/layout';
 
 .intro-form {
-  padding-top: rem(3);
-  overflow: hidden;
 
   @include bp(s) {
     padding-top: rem(3);
-    margin-top: rem(3);
   }
 
   &__background {
-    overflow: visible;
     padding: 0;
   }
 

@@ -1,7 +1,6 @@
 &.bg--shield-bottomright {
   .bg__sprite {
     position: absolute;
-    z-index:-1;
     width: rem(8.6);
     height: rem(16.2);
     max-height: 100%;
@@ -11,7 +10,6 @@
 
     .sprite {
       position: absolute;
-      z-index: -1;
       height: auto;
       width: rem(72.2);
       right: rem(-6.9);
