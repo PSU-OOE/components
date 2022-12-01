@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -36,6 +36,7 @@
     "@psu-ooe/polyfill-focus-visible": "^1.0",
     "@psu-ooe/quote": "^1.0",
     "@psu-ooe/read-more": "^1.0",
+    "@psu-ooe/section-view-tracking": "^1.0",
     "@psu-ooe/skip-link": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0",
     "@psu-ooe/smart-datetime": "^1.0",
