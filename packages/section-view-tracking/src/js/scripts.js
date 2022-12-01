@@ -23,7 +23,8 @@
     // On page load, if there's no hash in the URL, or if there is a hash, but
     // no corresponding element, track a "Header" view.
     if (context === document) {
-      if (!location.hash || !document.querySelector(location.hash)) {
+      const hash = location.hash;
+      if ((hash && (hash === '#' || !document.querySelector(hash))) || (!hash && performance.getEntriesByType('navigation')[0].type === 'navigate')) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'section_view',
