@@ -27,7 +27,7 @@
       //   there is a fragment and
       //   the navigation type is "navigate" and
       //   there is no corresponding element on the page.
-      if (!hash || (performance.getEntriesByType('navigation')[0].type === 'navigate' && !document.querySelector(hash))) {
+      if (performance.getEntriesByType('navigation')[0].type === 'navigate' && (!hash || !document.querySelector(hash))) {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
           event: 'section_view',
