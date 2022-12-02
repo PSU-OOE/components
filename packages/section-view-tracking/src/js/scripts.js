@@ -19,6 +19,8 @@
 
         // Only track a "Header" view if there is no fragment, or an invalid fragment.
         if (!hash || !document.querySelector(hash)) {
+          console.log(performance.getEntriesByType('navigation')[0].type);
+          console.log(hash);
           console.log('pushed header');
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
