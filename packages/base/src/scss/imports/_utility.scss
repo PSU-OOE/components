@@ -144,6 +144,7 @@
 @mixin tile-nav-highlight-title($bg-color, $fg-color, $chevron-color) {
   background-color: $bg-color;
   box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   display: inline;
   max-width: 95%;
   padding: 9px 0 6px;
