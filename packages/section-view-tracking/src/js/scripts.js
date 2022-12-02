@@ -9,10 +9,11 @@
   cms.attach('sectionViewTracking', context => {
 
     if (context === document) {
+
+      // @see https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type
       const navigation_type = performance.getEntriesByType('navigation')[0].type;
 
       // Exclude back/forward, reload, and pre-render navigation types.
-      // @see https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type
       if (navigation_type === 'navigate') {
         const hash = location.hash;
 
@@ -28,6 +29,7 @@
     }
 
     const components = context.querySelectorAll('[data-interactive-component]');
+
     components.forEach(component => {
       component.addEventListener('component:activate', () => {
         const section = component.closest('[data-section]');
@@ -41,5 +43,6 @@
         }
       });
     });
+
   });
 })(cms);
