@@ -31,15 +31,17 @@
     const components = context.querySelectorAll('[data-interactive-component]');
 
     components.forEach(component => {
-      component.addEventListener('component:activate', () => {
-        const section = component.closest('[data-section]');
-        if (section && section !== current_section) {
-          current_section = section;
-          window.dataLayer = window.dataLayer || [];
-          window.dataLayer.push({
-            event: 'section_view',
-            section_view_title: current_section.getAttribute('data-section'),
-          });
+      component.addEventListener('component:activate', e => {
+        if (e.detail.activation_type !== 'AUTO_EXPAND') {
+          const section = component.closest('[data-section]');
+          if (section && section !== current_section) {
+            current_section = section;
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: 'section_view',
+              section_view_title: current_section.getAttribute('data-section'),
+            });
+          }
         }
       });
     });
