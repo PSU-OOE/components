@@ -19,11 +19,6 @@
 
         // Only track a "Header" view if there is no fragment, or an invalid fragment.
         if (!hash || !document.querySelector(hash)) {
-          const date = new Date();
-          console.log(date);
-          console.log(performance.getEntriesByType('navigation')[0].type);
-          console.log(hash);
-          console.log('pushed header');
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: 'section_view',
@@ -40,7 +35,6 @@
         const section = component.closest('[data-section]');
         if (section && section !== current_section) {
           current_section = section;
-          console.log('pushed ' + current_section.getAttribute('data-section'));
           window.dataLayer = window.dataLayer || [];
           window.dataLayer.push({
             event: 'section_view',
