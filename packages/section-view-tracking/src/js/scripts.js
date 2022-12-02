@@ -21,24 +21,27 @@
   cms.attach('sectionViewTracking', context => {
 
     if (context === document) {
-      const hash = location.hash;
-      // Only track a Header event if...
-      // There is a not a fragment or:
-      //   there is a fragment and
-      //   the navigation type is "navigate" and
-      //   there is no corresponding element on the page.
-      if (performance.getEntriesByType('navigation')[0].type === 'navigate' && (!hash || !document.querySelector(hash))) {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'section_view',
-          section_view_title: 'Header',
-        });
+      const navigation_type = performance.getEntriesByType('navigation')[0].type;
+
+      // Exclude back/forward, reload, and pre-render navigation types.
+      // @see https://developer.mozilla.org/en-US/docs/Web/API/PerformanceNavigationTiming/type
+      if (navigation_type === 'navigate') {
+        const hash = location.hash;
+
+        // Only track a "Header" view if there is no fragment, or an invalid fragment.
+        if (!hash || !document.querySelector(hash)) {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: 'section_view',
+            section_view_title: 'Header',
+          });
+        }
       }
     }
 
     const components = context.querySelectorAll('[data-interactive-component]');
     components.forEach(component => {
-      component.addEventListener('component:activate', e => {
+      component.addEventListener('component:activate', () => {
         revalidate_section_view(component);
       });
     });
