@@ -21,7 +21,8 @@
     'bg--' ~ background_image|replace({':':'-'})
   ]) %}
 {% endif %}
-<div class="{{ classes|join(' ') }}">
+{# @TODO: Implement more graceful attribute management... #}
+<div class="{{ classes|join(' ') }}" {{ attributes }}>
   {% if sprites %}
     <div class="bg__sprites">
     {% for sprite in sprites %}
