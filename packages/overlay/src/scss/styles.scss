@@ -52,6 +52,19 @@
     }
   }
 
+  .overlay__divider {
+
+    @include bp(s) {
+      display: none;
+    }
+
+    img {
+      height: 2rem;
+      object-fit: cover;
+      object-position: bottom;
+    }
+  }
+
   &--beaver-blue {
     .overlay__content {
       background: $beaver-blue;
