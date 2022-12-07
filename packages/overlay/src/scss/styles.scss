@@ -53,7 +53,7 @@
   }
 
   .overlay__divider {
-
+    overflow: hidden;
     @include bp(s) {
       display: none;
     }
@@ -62,6 +62,8 @@
       height: 2rem;
       object-fit: cover;
       object-position: bottom;
+      filter: blur(rem(.5));
+      transform: scale(2);
     }
   }
 
