@@ -13,18 +13,18 @@
   {% set heading_classes = heading_classes|merge(["heading", "heading--" ~ heading_style])%}
 {% endif %}
 
-<div class="{{ classes|join(' ') }}">
+<div class="{{ classes|join(' ') }}" id="{{ id }}" data-interactive-component>
   {% if heading_level %}
     <{{ heading_level }} class="{{ heading_classes|join(' ') }}">
   {% endif %}
-  <button class="accordion__button" aria-expanded="{{ expanded ? 'true' : 'false' }}" aria-controls="{{ id }}">
+  <button class="accordion__button" aria-expanded="{{ expanded ? 'true' : 'false' }}" aria-controls="{{ id }}-content">
     <span class="accordion__label">{{ label }}</span>
     {% include '@atoms/sprite/sprite.twig' with { name: 'fas-plus'} only %}
   </button>
   {% if heading_level %}
     </{{ heading_level }}>
   {% endif %}
-  <div class="accordion__expandable-content" id="{{ id }}" {% if not expanded %} style="height:0; overflow:hidden"{% endif %}>
+  <div class="accordion__expandable-content" id="{{ id }}-content" {% if not expanded %} style="height:0; overflow:hidden"{% endif %}>
     {{ expandable_content }}
   </div>
 </div>
