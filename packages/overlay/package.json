@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/overlay",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Provides an overlay implementation.",
   "publishConfig": {
     "access": "public",

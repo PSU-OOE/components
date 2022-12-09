@@ -21,5 +21,7 @@
   <div class="overlay__column">
     <div class="overlay__content"> {{ content }} </div>
   </div>
-  <div class="overlay__divider">{{ image }}</div>
+  {% if show_divider %}
+    <div class="overlay__divider">{{ image }}</div>
+  {% endif %}
 </div>
