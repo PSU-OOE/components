@@ -53,17 +53,17 @@
   }
 
   .overlay__divider {
+    height: 2rem;
     overflow: hidden;
+    position: relative;
+
     @include bp(s) {
       display: none;
     }
 
     img {
-      height: 2rem;
-      object-fit: cover;
-      object-position: bottom;
-      filter: blur(rem(.5));
-      transform: scale(2);
+      position: absolute;
+      bottom: 0;
     }
   }
 
