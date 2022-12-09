@@ -63,12 +63,12 @@
 
     img {
       position: absolute;
-      bottom: -10px;
+      bottom: rem(-1);
       max-width: unset;
-      width: calc(100% + 20px);
+      width: calc(100% + #{rem(2)});
       height: 5000%;
-      margin-left: -10px;
-      filter: blur(10px);
+      margin-left: rem(-1);
+      filter: blur(#{rem(1)});
     }
   }
 
