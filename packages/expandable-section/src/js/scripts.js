@@ -6,8 +6,8 @@
         const content = element.querySelector('.expandable-section__content');
         const collapse = element.querySelector('.expandable-section__collapse');
 
-        expand.addEventListener('click', () => {
-          content.style['transition-duration'] = (content.scrollHeight / 2) + 'ms';
+        element.addEventListener('component:activate', e => {
+          content.style['transition-duration'] = (e?.detail?.disable_animation ? 0 : (content.scrollHeight / 2)) + 'ms';
           collapse.setAttribute('aria-expanded', 'true');
           expand.setAttribute('aria-expanded', 'true');
           cms.expand(content);
@@ -19,8 +19,8 @@
 
         });
 
-        collapse.addEventListener('click', () => {
-          content.style['transition-duration'] = (content.scrollHeight / 2) + 'ms';
+        element.addEventListener('component:deactivate', e => {
+          content.style['transition-duration'] = (e?.detail?.disable_animation ? 0 : (content.scrollHeight / 2)) + 'ms';
 
           collapse.setAttribute('aria-expanded', 'false');
           expand.setAttribute('aria-expanded', 'false');
@@ -33,6 +33,15 @@
             collapse.style.display = 'none';
           }
           content.addEventListener('transitionend', afterCollapse);
+
+        });
+
+        expand.addEventListener('click', () => {
+          element.dispatchEvent(new CustomEvent('component:activate'));
+        });
+
+        collapse.addEventListener('click', () => {
+          element.dispatchEvent(new CustomEvent('component:deactivate'));
         });
       });
     });
