@@ -63,7 +63,11 @@
 
     img {
       position: absolute;
-      bottom: 0;
+      bottom: -5px;
+      max-width: unset;
+      width: 150%;
+      margin-left: -25%;
+      filter: blur(5px);
     }
   }
 
