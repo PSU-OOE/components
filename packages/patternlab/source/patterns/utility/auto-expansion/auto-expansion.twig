@@ -1,16 +1,28 @@
 <a href="#level-0" style="background:yellow;padding:1rem;display:inline-block;">Jump to level 0</a>—
 <a href="#level-1" style="background:lightgreen;padding:1rem;display:inline-block;">Jump to level 1</a>—
-<a href="#level-2" style="background:orange;padding:1rem;display:inline-block;">Jump to level 2</a>
+<a href="#level-2" style="background:orange;padding:1rem;display:inline-block;">Jump to level 2</a>—
+<a href="#level-3" style="background:lightgrey;padding:1rem;display:inline-block;">Jump to level 3</a>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla porttitor massa id neque. Volutpat sed cras ornare arcu. Euismod quis viverra nibh cras pulvinar. Sit amet facilisis magna etiam. Orci porta non pulvinar neque laoreet. Nisl condimentum id venenatis a condimentum vitae sapien. Metus dictum at tempor commodo ullamcorper a lacus. Elementum tempus egestas sed sed risus pretium quam. Nunc sed augue lacus viverra vitae congue eu consequat ac. Ac orci phasellus egestas tellus rutrum. Semper eget duis at tellus at urna condimentum.</p>
 <p>Vel pharetra vel turpis nunc eget lorem dolor sed. Ornare massa eget egestas purus viverra accumsan in nisl nisi. Sit amet massa vitae tortor. Nibh sed pulvinar proin gravida hendrerit lectus a. Neque sodales ut etiam sit amet nisl purus in mollis. Augue ut lectus arcu bibendum at varius vel pharetra. Pharetra magna ac placerat vestibulum lectus mauris ultrices eros. Augue mauris augue neque gravida. Fermentum leo vel orci porta. Sit amet purus gravida quis. Neque ornare aenean euismod elementum nisi quis eleifend.</p>
 <div style="background:#f2f3f9">
 
+  {% set expandable_section %}
+    <div style="padding: 2rem">
+      {% include '@organisms/expandable-section/expandable-section.twig' with {
+        id: "expandable-section-with-intro",
+        intro: "<div class=\"wysiwyg\"><h2 class=\"heading--neutral heading--flush\">Minors</h2><p>An expandable section (3 layers deep).</p></div>",
+        expand_label: "View Minors",
+        content: "<div class=\"grid grid--three-col\"><div class=\"grid__item\" style=\"min-height:10rem;margin:auto;line-height:10rem\"><a href=\"#\">Item 1</a></div><div class=\"grid__item\" style=\"min-height:10rem;margin:auto;line-height:10rem\"><a href=\"#\">Item 2</a></div><div class=\"grid__item\" style=\"min-height:10rem;margin:auto;line-height:10rem\"><a href=\"#\">Item 3</a></div><div class=\"grid__item\" style=\"min-height:10rem;margin:auto;line-height:10rem\"><a href=\"#\" id=\"level-3\" style=\"background:lightgrey;\">Item 4 (inside expandable section, inside accordion, inside tab...phwew!)</a></div><div class=\"grid__item\" style=\"min-height:10rem;margin:auto;line-height:10rem\"><a href=\"#\">Item 5</a></div></div>",
+        collapse_label: "Close Minors"
+      } only %}
+    </div>
+  {% endset %}
   {% set accordion %}
-    <div style="background:lightgreen;color:white;">
+    <div style="background:lightgreen;color:white;padding:2rem;">
       {% include '@molecules/accordion/accordion.twig' with {
         id: 'level-1',
         label: 'An accordion (2 layers deep)',
-        expandable_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p><p id="level-2"><strong style="background:orange;padding:1rem;display:block;">The destination for the level-1 skip link (inside the accordion!)</strong></p>'
+        expandable_content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p><p id="level-2"><strong style="background:orange;padding:1rem;display:block;">The destination for the level-1 skip link (inside the accordion!)</strong></p>' ~ expandable_section
       } only %}
     {% endset %}
   </div>
