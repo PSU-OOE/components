@@ -11,6 +11,7 @@
           expand.setAttribute('aria-expanded', 'true');
 
           if (e?.detail?.disable_animation) {
+            content.style['transition-duration'] = '0ms';
             content.style['height'] = null;
           }
           else {
@@ -26,16 +27,16 @@
         });
 
         element.addEventListener('component:deactivate', e => {
-          content.style['transition-duration'] = (e?.detail?.disable_animation ? 0 : (content.scrollHeight / 2)) + 'ms';
 
           collapse.setAttribute('aria-expanded', 'false');
           expand.setAttribute('aria-expanded', 'false');
           if (e?.detail?.disable_animation) {
+            content.style['transition-duration'] = '0ms';
             content.style['height'] = "0px";
           }
           else {
             content.style['transition-duration'] = (content.scrollHeight / 2) + 'ms';
-            cms.expand(content);
+            cms.collapse(content);
           }
           function afterCollapse() {
             content.removeEventListener('transitionend', afterCollapse);
@@ -48,7 +49,11 @@
         });
 
         expand.addEventListener('click', () => {
-          element.dispatchEvent(new CustomEvent('component:activate'));
+          element.dispatchEvent(new CustomEvent('component:activate', {
+            detail: {
+              activation_type: 'USER_ACTIVATE',
+            }
+          }));
         });
 
         collapse.addEventListener('click', () => {
