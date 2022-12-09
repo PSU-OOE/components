@@ -32,7 +32,7 @@
           expand.setAttribute('aria-expanded', 'false');
           if (e?.detail?.disable_animation) {
             content.style['transition-duration'] = '0ms';
-            content.style['height'] = "0px";
+            content.style['height'] = '0';
           }
           else {
             content.style['transition-duration'] = (content.scrollHeight / 2) + 'ms';
