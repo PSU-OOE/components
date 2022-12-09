@@ -7,10 +7,16 @@
         const collapse = element.querySelector('.expandable-section__collapse');
 
         element.addEventListener('component:activate', e => {
-          content.style['transition-duration'] = (e?.detail?.disable_animation ? 0 : (content.scrollHeight / 2)) + 'ms';
           collapse.setAttribute('aria-expanded', 'true');
           expand.setAttribute('aria-expanded', 'true');
-          cms.expand(content);
+
+          if (e?.detail?.disable_animation) {
+            content.style['height'] = null;
+          }
+          else {
+            content.style['transition-duration'] = (content.scrollHeight / 2) + 'ms';
+            cms.expand(content);
+          }
           collapse.style.display = 'block';
           expand.style.display = 'none';
 
@@ -24,8 +30,13 @@
 
           collapse.setAttribute('aria-expanded', 'false');
           expand.setAttribute('aria-expanded', 'false');
-          cms.collapse(content);
-
+          if (e?.detail?.disable_animation) {
+            content.style['height'] = "0px";
+          }
+          else {
+            content.style['transition-duration'] = (content.scrollHeight / 2) + 'ms';
+            cms.expand(content);
+          }
           function afterCollapse() {
             content.removeEventListener('transitionend', afterCollapse);
             expand.style.display = 'block';
