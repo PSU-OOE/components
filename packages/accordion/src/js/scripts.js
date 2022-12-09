@@ -49,9 +49,16 @@
       });
 
       button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        const event = expanded ? 'deactivate' : 'activate';
-        accordion.dispatchEvent(new CustomEvent('component:' + event));
+        if (button.getAttribute('aria-expanded') === 'false') {
+          accordion.dispatchEvent(new CustomEvent('component:activate', {
+            detail: {
+              activation_type: 'USER_ACTIVATE',
+            }
+          }));
+        }
+        else {
+          accordion.dispatchEvent(new CustomEvent('component:deactivate'));
+        }
       });
     });
   });
