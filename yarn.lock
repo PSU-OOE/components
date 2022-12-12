@@ -1618,6 +1618,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/expandable-section@workspace:packages/expandable-section"
   dependencies:
+    "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
