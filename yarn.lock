@@ -1620,6 +1620,7 @@ __metadata:
   dependencies:
     "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/cta": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
   languageName: unknown
