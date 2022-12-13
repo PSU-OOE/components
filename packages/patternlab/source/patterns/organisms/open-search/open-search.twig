@@ -44,8 +44,7 @@
     const input = search.querySelector('.open-search__input');
 
     search.addEventListener('open-search:searches_performed', e => {
-console.log(e.detail.searches);
-let total_results = 0;
+    let total_results = 0;
         result.classList.add('active');
         result.querySelectorAll('*').forEach(e => {
             e.remove();

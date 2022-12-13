@@ -7,8 +7,8 @@
       const close = open_search.querySelector('.open-search__close');
       const result = open_search.querySelector('.open-search__results');
       const input = open_search.querySelector('.open-search__input');
-
       const identifier = open_search.getAttribute('data-search-identifier');
+
       if (sources && identifier) {
         /**
          * Iterate over each element that is configured to emit search events.
