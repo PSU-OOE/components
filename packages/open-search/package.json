@@ -7,7 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "fuse.js": "../node_modules/fuse.js/dist/fuse.js",
     "@psu-ooe/base": "^1.0"
   }
 }
