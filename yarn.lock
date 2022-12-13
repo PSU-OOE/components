@@ -1674,6 +1674,7 @@ __metadata:
     "@pattern-lab/core": ^5.16.2
     "@pattern-lab/engine-twig-php": ^5.16.2
     "@pattern-lab/uikit-workshop": ^5.16.2
+    "@psu-ooe/open-search": "workspace:^"
     gulp: ^4.0
     gulp-cli: ^2.3.0
     gulp-concat: ^2.6.1
@@ -1688,6 +1689,14 @@ __metadata:
     sass: ^1.52.1
     svg-sprite: ^1.5.4
     yarn: ^1.22.19
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/open-search@^1.0, @psu-ooe/open-search@workspace:^, @psu-ooe/open-search@workspace:packages/open-search":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/open-search@workspace:packages/open-search"
+  dependencies:
+    "@psu-ooe/base": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1735,6 +1744,7 @@ __metadata:
     "@psu-ooe/heading": ^1.0
     "@psu-ooe/highlighted-text": ^1.0
     "@psu-ooe/intro-form": ^1.0
+    "@psu-ooe/open-search": ^1.0
     "@psu-ooe/overlay": ^1.0
     "@psu-ooe/parallel-navigation": ^1.0
     "@psu-ooe/polyfill-flex-gap": ^1.0

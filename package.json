@@ -34,5 +34,8 @@
   },
   "default": {
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  },
+  "dependencies": {
+    "@psu-ooe/open-search": "workspace:^"
   }
 }
