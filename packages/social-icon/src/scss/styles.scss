@@ -1,0 +1,35 @@
+@import "../../../base/src/scss/imports/variables";
+
+.social-icon {
+  display: inline-block;
+  transition: .3s opacity ease-in;
+  opacity: .8;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &--light {
+    color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+
+  &--dark {
+    color: $primary-blue;
+
+    &:hover,
+    &:focus {
+      color: $primary-blue;
+    }
+  }
+
+  .sprite {
+    width: rem(4.4);
+    height: rem(4.4);
+  }
+}
