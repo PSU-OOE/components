@@ -1,0 +1,183 @@
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
+{%
+  set configuration = {
+    programs: {
+      fuse_configuration: {
+        keys: [
+          {
+            name: 'keywords',
+            weight: '0.2'
+          },
+          {
+            name: 'subject',
+            weight: '3.8'
+          },
+        ],
+        minMatchCharLength: 1,
+        threshold: 0.2,
+        useExtendedSearch: true,
+        distance: 1000,
+      },
+      logical_operator: 'and',
+    },
+  }
+%}
+{% include '@organisms/open-search/open-search.twig' with {
+  label: "Start Typing to see the program results...",
+  data_sources: configuration,
+  identifier: "open-search",
+  close_text: "Close degree search"
+} only %}
+
+
+<script>
+    /**
+     * When there has been a search performed, build out
+     * the results container with the programs / applicable
+     * results of topic / level results.
+     *
+     * @TODO this needs replaced with web components...
+     */
+    const search = document.querySelector('[data-search-identifier="open-search"]');
+    const result = search.querySelector('.open-search__results');
+    const input = search.querySelector('.open-search__input');
+
+    search.addEventListener('open-search:searches_performed', e => {
+console.log(e.detail.searches);
+let total_results = 0;
+        result.classList.add('active');
+        result.querySelectorAll('*').forEach(e => {
+            e.remove();
+        });
+
+        e.detail.searches.forEach(search => {
+            const results = search.results;
+            const search_text = input.value;
+            total_results += results.length;
+            if (search.source === 'programs') {
+                if (search.results.length > 0) {
+                    const list = buildParallelNavigationResults(results, search_text);
+                    result.innerHTML = list.outerHTML;
+                }
+                else if (search_text.length > 0) {
+                    const result_wrapper = document.createElement('div');
+                    const no_result = document.createElement('em');
+                    const message = 'Sorry, we can\'t find any degrees or certificates that match "' + search_text + '."';
+                    no_result.classList.add('open-search__no_results');
+                    no_result.textContent = message;
+                    result_wrapper.append(no_result);
+                    result.innerHTML = result_wrapper.outerHTML;
+                }
+                else {
+                    result.classList.remove('active');
+                }
+            }
+            else {
+                results.forEach(term => {
+                    result.append(buildReadMoreLink(term.item.url, 'All ' + term.item.name + ' Degrees and Certificates'));
+                });
+            }
+        });
+        if (input.value.length > 0) {
+            result.append(buildReadMoreLink('/search?search=' + input.value, 'Search the entire Penn State World Campus site for "' + input.value + '"'));
+        }
+
+        result.querySelectorAll(".open-search__results a").forEach(link => {
+            link.addEventListener('click', e => {
+                if (typeof ga !== 'undefined') {
+                    e.preventDefault();
+                    dataLayer.push({
+                        'event': 'dfresultsclick',
+                        'dfclickText': link.textContent,
+                        'dfclickTextUrl': link.href,
+                        "dfsearchPhrase": input.value,
+                        'eventCallback': function () {
+                            window.location = link.href;
+                        },
+                        'eventTimeout': 1500,
+                    });
+                }
+            });
+        });
+
+
+
+    });
+
+    /**
+     * Constructs a parallel navigation component of results.
+     *
+     * @TODO: replace with web component.
+     *
+     * @param results
+     *   The data results from the Fuse search.
+     * @param search_string
+     *   The string that was used to search.
+     *
+     * @returns {string}
+     *   The HTML entity of the results.
+     */
+    function buildParallelNavigationResults(results, search_string = '') {
+        const result_list = document.createElement('ul');
+        result_list.classList.add('parallel-navigation__list', 'parallel-navigation__list--one-col');
+        results.forEach(result => {
+            const item = document.createElement('li');
+            item.classList.add('parallel-navigation__item');
+            const item_link = document.createElement('a');
+            item_link.classList.add('parallel-navigation__link', 'parallel-navigation__link--beaver-blue');
+            item_link.href = result.item.overview;
+
+            const search_strings = search_string.trim().split(/\s+/);
+            let string = (result.item.subject + " (" + result.item.degree_type + ")").trim();
+
+            var re = new RegExp(search_strings.join("|"), "gi");
+            string = string.replace(re, function (matched) {
+                return "<strong>" + matched + "</strong>";
+            });
+
+
+            item_link.innerHTML = string;
+            item.appendChild(item_link);
+            result_list.appendChild(item);
+        });
+
+        return result_list;
+    }
+
+
+    /**
+     * Builds a read more link.
+     *
+     * @TODO: replace with web component.
+     *
+     * @param url
+     *   The url of the link.
+     * @param label
+     *   The label of the link.
+     *
+     * @returns {HTMLSpanElement}
+     *   An HTML entity of the link.
+     */
+    function buildReadMoreLink(url, label) {
+        const span = document.createElement('span');
+
+        const read_more = document.createElement('a');
+        read_more.classList.add('read-more');
+        read_more.href = url;
+        read_more.textContent = label;
+        read_more.innerHTML = read_more.innerHTML + '&nbsp;';
+        const svg = Object.assign(document.createElementNS('http://www.w3.org/2000/svg', 'svg'), {
+            classList: 'sprite sprite--fas-chevron-right',
+            ariaHidden: true,
+            style: 'width: 1em',
+        });
+        svg.setAttributeNS('http://www.w3.org/2000/svg', 'viewBox', '0 0 320 512');
+        const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+        use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#fas-chevron-right');
+        svg.appendChild(use);
+        read_more.appendChild(svg);
+        span.appendChild(read_more);
+        return span;
+    }
+</script>

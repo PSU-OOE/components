@@ -1,0 +1,26 @@
+{#
+Variables:
+  label: string
+  data_sources: array[string]
+  identifier: string
+  close_text: string
+#}
+
+<div {% if identifier %}data-search-identifier="{{ identifier }}"{% endif %} class="open-search" data-search-config={{data_sources|json_encode}}>
+  {% if label %}<label for="{{ identifier }}--edit-search">{{ label }}</label>{% endif %}
+
+  <input autocomplete="off" data-fuse-searcher class="open-search__input" type="text" id="{{ identifier }}--edit-search" aria-describedby="{{ identifier }}--help" name="search">
+
+  <span class="open-search__icon icon">
+    {% include "@atoms/sprite/sprite.twig" with { name: "fa-magnifying-glass" } %}
+  </span>
+
+  <button type="button" class="open-search__close icon">
+    {% if close_text %}
+      <span class="visually-hidden">{{ close_text }}</span>
+    {% endif %}
+    {% include "@atoms/sprite/sprite.twig" with { name: "fa-times" } %}
+  </button>
+
+  <div tabindex="-1" class="open-search__results"></div>
+</div>

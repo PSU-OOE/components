@@ -1,0 +1,13 @@
+{
+  "name": "@psu-ooe/open-search",
+  "version": "1.0.0",
+  "description": "Provides a simple integration with the Fuse JS search library",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "fuse.js": "../node_modules/fuse.js/dist/fuse.js",
+    "@psu-ooe/base": "^1.0"
+  }
+}
