@@ -1824,6 +1824,7 @@ __metadata:
   resolution: "@psu-ooe/social-icon@workspace:packages/social-icon"
   dependencies:
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
   languageName: unknown
   linkType: soft
 
