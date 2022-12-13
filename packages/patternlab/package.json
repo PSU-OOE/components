@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.48",
+  "version": "1.0.49",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -40,6 +40,8 @@
     "@psu-ooe/skip-link": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0",
     "@psu-ooe/smart-datetime": "^1.0",
+    "@psu-ooe/social-icon": "^1.0",
+    "@psu-ooe/social-icons": "^1.0",
     "@psu-ooe/sprite": "^1.0",
     "@psu-ooe/sticky-panel": "^1.0",
     "@psu-ooe/tabs": "^2.0",
