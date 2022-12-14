@@ -1,0 +1,8 @@
+{% set nested_sprite %}
+  {% include '@atoms/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+{% endset %}
+{% include '@molecules/accordion/accordion.twig' with {
+    "id": "accordion-default",
+    "label": "Accordion item (default)",
+    "expandable_content": "This is the accordion content." ~ nested_sprite
+} only %}
