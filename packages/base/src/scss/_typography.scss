@@ -14,3 +14,55 @@ p {
   color: rgba($nittany-navy, .5);
   letter-spacing: -.0294em;
 }
+
+.text--default {
+  color: $nittany-navy;
+  font-size: rem(1.6);
+  font-weight: 400;
+  line-height: 1.875;
+}
+
+// Font weight modifiers.
+.text-weight--regular {
+  font-weight: 400;
+}
+
+.text-weight--semibold {
+  font-weight: 600;
+}
+
+.text-weight--bold {
+  font-weight: 700;
+}
+
+// Font size modifiers.
+.text-size--small {
+  font-size: rem(1.4);
+}
+
+.text-size--xsmall {
+  font-size: rem(1.2);
+}
+
+// Line height modifiers.
+.text-height--snug {
+  line-height: 1.5;
+}
+
+.text-height--xsnug {
+  line-height: calc(4/3);
+}
+
+// Color modifiers
+.text-color--default {
+  color: $nittany-navy;
+}
+
+.text-color--slate {
+  color: $slate;
+}
+
+// @TODO: This should probably be set to an automatic CSS variable.
+.text-color--reversed {
+  color: $white;
+}
