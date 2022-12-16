@@ -46,7 +46,7 @@
         text-decoration-color: $primary-blue;
       }
 
-      .sprite {
+      .accordion__sprite .sprite {
         transform: scale(1.25);
       }
     }
@@ -64,7 +64,7 @@
         text-decoration-color: $primary-blue;
       }
 
-      .sprite {
+      .accordion__sprite .sprite {
         transform: scale(1.25);
       }
     }
@@ -80,7 +80,7 @@
     transition: color .2s linear, text-decoration-color .2s linear;
   }
 
-  .sprite {
+  .accordion__sprite .sprite {
     color: $primary-blue;
     height: rem(1.6);
     margin: auto rem(1.5);
@@ -99,12 +99,12 @@
 
    > .accordion__button,
    > .accordion__heading {
-      .sprite {
+      .accordion__sprite .sprite {
         transform: rotate(45deg);
       }
 
       &:hover {
-        .sprite {
+        .accordion__sprite .sprite {
           transform: rotate(45deg) scale(1.25);
         }
       }
@@ -112,7 +112,7 @@
       &:focus-visible {
         margin-bottom: rem(.3);
 
-        .sprite {
+        .accordion__sprite .sprite {
           transform: rotate(45deg) scale(1.25);
         }
       }
@@ -138,13 +138,13 @@
       text-decoration-color: $primary-blue;
     }
 
-    .sprite {
+    .accordion__sprite .sprite {
       color: $primary-blue;
       transform: scale(1.25);
     }
   }
 
-  &--expanded .accordion__button.focus-visible .sprite {
+  &--expanded .accordion__button.focus-visible .accordion__sprite .sprite {
     transform: rotate(45deg) scale(1.25);
   }
 }
