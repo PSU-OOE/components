@@ -1596,6 +1596,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/divider@workspace:packages/divider":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/divider@workspace:packages/divider"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/drop-button@^1.0, @psu-ooe/drop-button@workspace:packages/drop-button":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
