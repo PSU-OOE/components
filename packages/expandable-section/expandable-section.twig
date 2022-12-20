@@ -1,4 +1,4 @@
-<div class="expandable-section" data-interactive-component{% if id %} id="{{ id }}"{% endif %}>
+<div class="expandable-section" data-interactive-component{% if id %} id="{{ id }}"{% endif %}{% if toc_label %} data-toc-label="{{ toc_label }}"{% endif %}>
   {% if intro %}
     <div class="expandable-section__intro">
       {{ intro }}
