@@ -15,7 +15,6 @@
     size in allowed_sizes ? 'heading--' ~ size,
     flush ? 'heading--flush',
     align in allowed_alignments ? 'heading--align-' ~ align
-
   ]) | filter(class => class is not empty) %}
 {% apply spaceless %}
   <h{{ level }}{% if classes %} class="{{ classes|join(' ') }}"{% endif %}>{{ content }}</h{{ level }}>
