@@ -9,6 +9,7 @@ title: Headings
 | level    | integer | false    | An integer, between 1 and 6 that denotes the heading level.  Defaults to 2. |
 | size     | string  | false    | Must match a documented size modifier (below).                              |
 | color    | string  | false    | Must match a documented color modifier (below).                             |
+| align    | string  | false    | Must match a documented align modifier (below).                             |
 
 ## Size modifiers
 | Size   | Description                         |
@@ -28,3 +29,10 @@ title: Headings
 | Modifier | Description                                                                                 |
 | -------- | ------------------------------------------------------------------------------------------- |
 | flush    | If specified, the heading will be shifted up to avoid extra space in the upper line-height. |
+
+## Align modifiers
+| Modifier | Description                                                                                 |
+| -------- | ------------------------------------------------------------------------------------------- |
+| left    | If specified, the heading will be left aligned.   |
+| center  | If specified, the heading will be center aligned. |
+| right   | If specified, the heading will be right aligned.  |

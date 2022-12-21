@@ -5,6 +5,7 @@
 {% set allowed_levels = 1..6 %}
 {% set allowed_colors = ['neutral']  %}
 {% set allowed_sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] %}
+{% set allowed_alignments = ['left', 'center', 'right'] %}
 
 {% if level in allowed_levels and content is not empty %}
 
@@ -13,6 +14,8 @@
     color in allowed_colors ? 'heading--' ~ color,
     size in allowed_sizes ? 'heading--' ~ size,
     flush ? 'heading--flush',
+    align in allowed_alignments ? 'heading--align-' ~ align
+
   ]) | filter(class => class is not empty) %}
 {% apply spaceless %}
   <h{{ level }}{% if classes %} class="{{ classes|join(' ') }}"{% endif %}>{{ content }}</h{{ level }}>

@@ -78,6 +78,15 @@ h5,
 .heading--neutral {
   color: $slate;
 }
+.heading--align-left {
+  text-align: left;
+}
+.heading--align-right {
+  text-align: right;
+}
+.heading--align-center {
+  text-align: center;
+}
 
 // @TODO: Eventually, get away from defining font sizing in here.
 .heading--hr {
@@ -118,3 +127,4 @@ h6 {
     color: rgba($nittany-navy, 0.62);
   }
 }
+
