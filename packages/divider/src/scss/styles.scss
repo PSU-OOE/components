@@ -1,0 +1,68 @@
+@import "../../../base/src/scss/imports/variables";
+
+.divider {
+  width: auto;
+  overflow: hidden;
+  position: relative;
+
+  &--thin-slate-light {
+    height: rem(.1);
+    background-color: $slate-light;
+  }
+
+  &--standard-light-grey {
+    height: rem(2);
+    background-color: $light-grey;
+  }
+
+  &--standard-white {
+    height: rem(2);
+    background-color: $white;
+  }
+
+  &--tall-medium-grey-shield,
+  &--tall-blue-gradient-shield {
+    height: rem(8);
+
+    .divider__top-band {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: rem(1);
+      background-color: $beaver-blue;
+    }
+
+    .sprite {
+      color: $white;
+      margin-top: rem(-6);
+      width: rem(130);
+      height: auto;
+      margin-left: 35.1%;
+      position: absolute;
+    }
+  }
+
+  &--tall-medium-grey-shield {
+    background-color: $medium-grey;
+
+    .divider__top-band {
+      background: linear-gradient(90deg, $beaver-blue 0, $true-blue 100%);
+    }
+  }
+
+  &--tall-blue-gradient-shield {
+    background: linear-gradient(90deg, $true-blue 0, $primary-blue 100%);
+
+    .divider__top-band {
+      background-color: $nittany-navy;
+    }
+  }
+
+  // Visually hide the semantic <hr> element.
+  &__rule {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+  }
+}
