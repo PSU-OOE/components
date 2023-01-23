@@ -1596,6 +1596,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/divider@workspace:packages/divider":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/divider@workspace:packages/divider"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/drop-button@^1.0, @psu-ooe/drop-button@workspace:packages/drop-button":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
@@ -1755,6 +1764,8 @@ __metadata:
     "@psu-ooe/skip-link": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/smart-datetime": ^1.0
+    "@psu-ooe/social-icon": ^1.0
+    "@psu-ooe/social-icons": ^1.0
     "@psu-ooe/sprite": ^1.0
     "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^2.0
@@ -1826,6 +1837,24 @@ __metadata:
   resolution: "@psu-ooe/smart-datetime@workspace:packages/smart-datetime"
   dependencies:
     "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/social-icon@^1.0, @psu-ooe/social-icon@workspace:packages/social-icon":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/social-icon@workspace:packages/social-icon"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/social-icons@^1.0, @psu-ooe/social-icons@workspace:packages/social-icons":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/social-icons@workspace:packages/social-icons"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/social-icon": ^1.0
   languageName: unknown
   linkType: soft
 

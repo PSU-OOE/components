@@ -2,17 +2,21 @@
 
 {%
   set configuration = {
-    programs: {
+    fruits: {
       fuse_configuration: {
         keys: [
           {
-            name: 'keywords',
+            name: 'taste',
             weight: '0.2'
           },
           {
-            name: 'subject',
-            weight: '3.8'
+            name: 'color',
+            weight: '1'
           },
+          {
+            name: 'name',
+            weight: '3.8'
+          }
         ],
         minMatchCharLength: 1,
         threshold: 0.2,
@@ -24,7 +28,7 @@
   }
 %}
 {% include '@organisms/open-search/open-search.twig' with {
-  label: "Start Typing to see the program results...",
+  label: "Search for fruit by name, color, or taste",
   data_sources: configuration,
   identifier: "open-search",
   close_text: "Close degree search"
@@ -54,33 +58,24 @@
             const results = search.results;
             const search_text = input.value;
             total_results += results.length;
-            if (search.source === 'programs') {
-                if (search.results.length > 0) {
-                    const list = buildParallelNavigationResults(results, search_text);
-                    result.innerHTML = list.outerHTML;
-                }
-                else if (search_text.length > 0) {
-                    const result_wrapper = document.createElement('div');
-                    const no_result = document.createElement('em');
-                    const message = 'Sorry, we can\'t find any degrees or certificates that match "' + search_text + '."';
-                    no_result.classList.add('open-search__no_results');
-                    no_result.textContent = message;
-                    result_wrapper.append(no_result);
-                    result.innerHTML = result_wrapper.outerHTML;
-                }
-                else {
-                    result.classList.remove('active');
-                }
+            if (search.results.length > 0) {
+                const list = buildParallelNavigationResults(results, search_text);
+                result.innerHTML = list.outerHTML;
+            }
+            else if (search_text.length > 0) {
+                const result_wrapper = document.createElement('div');
+                const no_result = document.createElement('em');
+                const message = 'Sorry, we can\'t find any fruits that match "' + search_text + '."';
+                no_result.classList.add('open-search__no_results');
+                no_result.textContent = message;
+                result_wrapper.append(no_result);
+                result.innerHTML = result_wrapper.outerHTML;
             }
             else {
-                results.forEach(term => {
-                    result.append(buildReadMoreLink(term.item.url, 'All ' + term.item.name + ' Degrees and Certificates'));
-                });
+                result.classList.remove('active');
             }
+
         });
-        if (input.value.length > 0) {
-            result.append(buildReadMoreLink('/search?search=' + input.value, 'Search the entire Penn State World Campus site for "' + input.value + '"'));
-        }
 
         result.querySelectorAll(".open-search__results a").forEach(link => {
             link.addEventListener('click', e => {
@@ -125,10 +120,10 @@
             item.classList.add('parallel-navigation__item');
             const item_link = document.createElement('a');
             item_link.classList.add('parallel-navigation__link', 'parallel-navigation__link--beaver-blue');
-            item_link.href = result.item.overview;
+            item_link.href = '#';
 
             const search_strings = search_string.trim().split(/\s+/);
-            let string = (result.item.subject + " (" + result.item.degree_type + ")").trim();
+            let string = (result.item.name);
 
             var re = new RegExp(search_strings.join("|"), "gi");
             string = string.replace(re, function (matched) {
