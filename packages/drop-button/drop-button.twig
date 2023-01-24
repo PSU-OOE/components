@@ -13,14 +13,14 @@
     {% set classes = classes|merge(['drop-button--align-' ~ align]) %}
 {% endif %}
 <div class="{{ classes|join(' ' ) }}">
-    <button class="drop-button__toggle" aria-expanded="false">
+    <div role="button" class="drop-button__toggle" tabindex="0" aria-expanded="false">
       {% if short or sticky_tab %}
         {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis-vertical' } only %}
       {% else %}
         {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis' } only %}
       {% endif %}
       <span class="drop-button__label">{{ button_label }}</span>
-    </button>
+    </div>
     <ul class="drop-button__list">
         {% for link in links %}
             <li class="drop-button__item">
