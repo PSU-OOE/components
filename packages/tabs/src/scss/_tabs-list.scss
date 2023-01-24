@@ -82,7 +82,7 @@
     @include bp(s) {
       font-size: rem(1.6);
       font-weight: 400;
-      letter-spacing: .01em;
+      letter-spacing: .02em;
       margin-left: rem(.45);
       margin-right: rem(.45);
       padding: rem(1) 0;
@@ -128,7 +128,7 @@
     &[aria-selected="true"] {
       cursor: default;
       font-weight: 700;
-      letter-spacing: rem(-0.03);
+      letter-spacing: rem(-0.04);
       box-shadow: 0 rem(.5) 0 0 $beaver-blue;
 
       .tabs__parenthetical {
