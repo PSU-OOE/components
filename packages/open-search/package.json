@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^1.0",
-    "@psu-ooe/sprite": "^1.0"
+    "@psu-ooe/sprite": "^1.0",
+    "fuse.js": "^6.6.2"
   }
 }
