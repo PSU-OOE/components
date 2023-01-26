@@ -22,6 +22,7 @@
     "@psu-ooe/cards-list": "^1.0",
     "@psu-ooe/credential": "^1.0",
     "@psu-ooe/cta": "^1.0",
+    "@psu-ooe/divider": "^1.0",
     "@psu-ooe/drop-button": "^1.0",
     "@psu-ooe/event-link": "^1.0",
     "@psu-ooe/expandable-section": "^1.0",
