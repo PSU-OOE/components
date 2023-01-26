@@ -10,6 +10,9 @@
 {% if short %}
   {% set classes = classes|merge(['tabs-list--short']) %}
 {% endif %}
+{% if expand_to_fit %}
+  {% set classes = classes|merge(['tabs-list--expand-to-fit']) %}
+{% endif %}
 <div class="{{ classes|join(' ') }}" role="tablist" data-flex-wrap-aware>
   {% for tab in tabs %}
     <button class="tabs-list__button"
