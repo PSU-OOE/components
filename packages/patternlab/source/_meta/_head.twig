@@ -72,7 +72,6 @@
         announce: (text, priority) => { /* @todo: implement */ },
         vendor_dir: '/vendor',
         data: name => {
-            console.log(exposed_data['fruits']);
             if (typeof exposed_data !== 'undefined' && exposed_data !== 'undefined') {
                 return exposed_data[name];
             }
