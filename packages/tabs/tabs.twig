@@ -14,6 +14,9 @@
   {% if borderless_inactive %}
     {% set tabs_list_data = tabs_list_data|merge({ borderless_inactive: true }) %}
   {% endif %}
+  {% if expand_to_fit %}
+    {% set tabs_list_data = tabs_list_data|merge({ expand_to_fit: true }) %}
+  {% endif %}
   <div class="tabs__list">
     {% include '@organisms/tabs/tabs-list.twig' with tabs_list_data only %}
   </div>
