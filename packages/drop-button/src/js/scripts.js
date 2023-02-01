@@ -6,11 +6,27 @@
 
       // Toggle the expanded state of drop-button menus on click.
       toggle.addEventListener('click', () => {
+        if (document.activeElement !== toggle) {
+          toggle.focus();
+        }
+
         if (toggle.getAttribute('aria-expanded') === 'true') {
           toggle.setAttribute('aria-expanded', 'false');
         }
         else {
           toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // @TODO: This is a hack needed for hacky Safari
+      toggle.addEventListener('keypress', e => {
+        if (e.key === 'Enter') {
+          if (toggle.getAttribute('aria-expanded') === 'true') {
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+          else {
+            toggle.setAttribute('aria-expanded', 'true');
+          }
         }
       });
 
