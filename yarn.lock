@@ -1507,7 +1507,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/background-container@^1.0, @psu-ooe/background-container@workspace:packages/background-container":
+"@psu-ooe/auto-expansion@^1.0, @psu-ooe/auto-expansion@workspace:packages/auto-expansion":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/auto-expansion@workspace:packages/auto-expansion"
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/background-container@^2.0, @psu-ooe/background-container@workspace:packages/background-container":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/background-container@workspace:packages/background-container"
   dependencies:
@@ -1590,6 +1596,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/divider@^1.0, @psu-ooe/divider@workspace:packages/divider":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/divider@workspace:packages/divider"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/drop-button@^1.0, @psu-ooe/drop-button@workspace:packages/drop-button":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
@@ -1612,7 +1627,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/expandable-section@workspace:packages/expandable-section"
   dependencies:
+    "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/cta": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
   languageName: unknown
@@ -1652,6 +1669,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
   dependencies:
+    "@psu-ooe/background-container": ^2.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/random-item": ^1.0
   languageName: unknown
@@ -1707,7 +1725,8 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.16.2
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
-    "@psu-ooe/background-container": ^1.0
+    "@psu-ooe/auto-expansion": ^1.0
+    "@psu-ooe/background-container": ^2.0
     "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^1.0
     "@psu-ooe/bio": ^1.0
@@ -1717,6 +1736,7 @@ __metadata:
     "@psu-ooe/cards-list": ^1.0
     "@psu-ooe/credential": ^1.0
     "@psu-ooe/cta": ^1.0
+    "@psu-ooe/divider": ^1.0
     "@psu-ooe/drop-button": ^1.0
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/expandable-section": ^1.0
@@ -1731,13 +1751,15 @@ __metadata:
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/quote": ^1.0
     "@psu-ooe/read-more": ^1.0
+    "@psu-ooe/section-view-tracking": ^1.0
     "@psu-ooe/skip-link": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/smart-datetime": ^1.0
+    "@psu-ooe/social-icon": ^1.0
+    "@psu-ooe/social-icons": ^1.0
     "@psu-ooe/sprite": ^1.0
     "@psu-ooe/sticky-panel": ^1.0
-    "@psu-ooe/tabs": ^1.0
-    "@psu-ooe/tabs-list": ^1.0
+    "@psu-ooe/tabs": ^2.0
     "@psu-ooe/upcoming-events": ^1.0
     "@psu-ooe/webfonts": ^1.0
   languageName: unknown
@@ -1781,6 +1803,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/section-view-tracking@^1.0, @psu-ooe/section-view-tracking@workspace:packages/section-view-tracking":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/section-view-tracking@workspace:packages/section-view-tracking"
+  dependencies:
+    "@psu-ooe/auto-expansion": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/skip-link@^1.0, @psu-ooe/skip-link@workspace:packages/skip-link":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/skip-link@workspace:packages/skip-link"
@@ -1801,6 +1831,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/social-icon@^1.0, @psu-ooe/social-icon@workspace:packages/social-icon":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/social-icon@workspace:packages/social-icon"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/social-icons@^1.0, @psu-ooe/social-icons@workspace:packages/social-icons":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/social-icons@workspace:packages/social-icons"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/social-icon": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/sprite@^1.0, @psu-ooe/sprite@workspace:packages/sprite":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/sprite@workspace:packages/sprite"
@@ -1818,21 +1866,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/tabs-list@^1.0, @psu-ooe/tabs-list@workspace:packages/tabs-list":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/tabs-list@workspace:packages/tabs-list"
-  dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/flex-wrap-listener": ^1.0
-  languageName: unknown
-  linkType: soft
-
-"@psu-ooe/tabs@^1.0, @psu-ooe/tabs@workspace:packages/tabs":
+"@psu-ooe/tabs@^2.0, @psu-ooe/tabs@workspace:packages/tabs":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/tabs@workspace:packages/tabs"
   dependencies:
     "@psu-ooe/base": ^1.0
-    "@psu-ooe/tabs-list": ^1.0
+    "@psu-ooe/flex-wrap-listener": ^1.0
   languageName: unknown
   linkType: soft
 

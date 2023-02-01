@@ -1,16 +1,36 @@
+{% set classes = classes|default([]) %}
+
+{% set background_image_options = {
+  'shield:left': ['community-shield'],
+  'shield:right': ['community-shield'],
+  'shield:bottomright': ['community-shield'],
+  'shield:topleft-bottomright': ['community-shield','community-shield'],
+  'shield:program-page-banner-top': ['community-shield'],
+  'shield:program-page-at-a-glance': ['community-shield'],
+} %}
 {% set classes = (classes|default([]))|merge(['bg', 'bg--' ~ color]) %}
-{% if sprite %}
-  {% set classes = classes|merge(['bg--' ~ sprite]) %}
-{% endif %}
-{% if position %}
-  {% set classes = classes|merge(['bg--' ~ position]) %}
-{% endif %}
 {% if padding %}
   {% set classes = classes|merge(['bg--padding-' ~ padding]) %}
 {% endif %}
 {% if width %}
   {% set classes = classes|merge(['bg--' ~ width]) %}
 {% endif %}
-<div class="{{ classes|join(' ') }}">
+{% if background_image and background_image in background_image_options|keys %}
+  {% set sprites = background_image_options[background_image] %}
+  {% set classes = classes|merge([
+    'bg--' ~ background_image|replace({':':'-'})
+  ]) %}
+{% endif %}
+{# @TODO: Implement more graceful attribute management... #}
+<div class="{{ classes|join(' ') }}" {{ attributes }}>
+  {% if sprites %}
+    <div class="bg__sprites">
+    {% for sprite in sprites %}
+      <div class="bg__sprite bg__sprite--{{sprite}} bg__sprite--{{loop.index}}">
+		    {% include '@atoms/sprite/sprite.twig' with { name: sprite } only %}
+		  </div>
+    {% endfor %}
+    </div>
+  {% endif %}
   {{ content }}
 </div>

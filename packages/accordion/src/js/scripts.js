@@ -12,7 +12,7 @@
 
         // Update the transition duration for the open/close animation.
         const transition = Math.max(content.scrollHeight / 2, 200) + 'ms';
-        button.querySelector('.sprite').style['transition-duration'] = transition;
+        button.querySelector('.accordion__sprite .sprite').style['transition-duration'] = transition;
         content.style['transition-duration'] = transition;
 
         const state = button.getAttribute('aria-expanded');

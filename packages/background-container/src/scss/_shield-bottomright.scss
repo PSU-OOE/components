@@ -1,0 +1,23 @@
+&.bg--shield-bottomright {
+  .bg__sprite {
+    position: absolute;
+    width: rem(8.6);
+    height: rem(16.2);
+    max-height: 100%;
+    right: 0;
+    bottom: 0;
+    overflow:hidden;
+
+    .sprite {
+      position: absolute;
+      height: auto;
+      width: rem(72.2);
+      right: rem(-6.9);
+      bottom: rem(-25.3);
+    }
+  }
+
+  &.bg--primary-blue .bg__sprite .sprite {
+    opacity: .5;
+  }
+}

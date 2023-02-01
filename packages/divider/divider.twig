@@ -1,0 +1,7 @@
+<div class="divider divider--{{ variant }}">
+  {% if variant == 'tall-blue-gradient-shield' or variant == 'tall-medium-grey-shield' %}
+    {% include '@atoms/sprite/sprite.twig' with { name: 'community-shield' } %}
+    <div class="divider__top-band"></div>
+  {% endif %}
+  <hr class="divider__rule">
+</div>

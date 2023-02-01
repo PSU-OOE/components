@@ -1,0 +1,75 @@
+&.bg--shield-topleft-bottomright {
+  .bg__sprite .sprite {
+    position: absolute;
+    height: auto;
+    display: none;
+
+    //noinspection CssUnknownProperty
+    @supports (container-type: inline-size ) {
+      display: initial;
+    }
+  }
+
+  .bg__sprite--1 .sprite {
+    width: rem(53.2);
+    left: rem(-30);
+    top: rem(-40);
+
+    //noinspection CssUnknownProperty
+    @supports (container-type: inline-size ) {
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 675px) {
+        width: rem(70);
+        left: rem(-40);
+        top: rem(-55);
+      }
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 800px) {
+        width: rem(132.6);
+        left: calc(((100% - #{rem(39.5)}) / 2) - #{rem(110)});
+        top: rem(-115);
+      }
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 950px) {
+        left: calc(((100% - #{rem(39.5)}) / 2) - #{rem(125)});
+      }
+    }
+  }
+  .bg__sprite--2 .sprite {
+    width: rem(53.2);
+    right: rem(-32);
+    bottom: rem(-46);
+
+    //noinspection CssUnknownProperty
+    @supports (container-type: inline-size ) {
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 550px) {
+        width: rem(75);
+        right: rem(-50);
+        bottom: rem(-60);
+      }
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 675px) {
+        width: rem(100);
+        right: rem(-70);
+        bottom: rem(-90);
+      }
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 800px) {
+        width: rem(132.6);
+        right: calc(((100% - #{rem(39.5)}) / 2) - #{rem(120)});
+        bottom: rem(-120);
+      }
+    }
+  }
+
+  &.bg--primary-blue .bg__sprite .sprite {
+    opacity: .25;
+  }
+}

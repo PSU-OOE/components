@@ -1,0 +1,13 @@
+{% set classes = [
+  'social-icon',
+  'social-icon--' ~ icon,
+] %}
+{% if color %}
+  {% set classes = classes|merge(['social-icon--' ~ color]) %}
+{% endif %}
+<a class="{{ classes|join(' ') }}" href="{{ url }}">
+  <span class="visually-hidden">{{ label }}</span>
+  <span class="social-icon__sprite">
+    {% include '@atoms/sprite/sprite.twig' with { name: icon } only %}
+  </span>
+</a>

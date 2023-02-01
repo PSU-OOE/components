@@ -1,0 +1,32 @@
+&.bg--shield-program-page-at-a-glance {
+  .bg__sprite .sprite {
+    position: absolute;
+    width: rem(53.2);
+    height: auto;
+    right: rem(-32);
+    bottom: rem(-46);
+    display: none;
+
+    //noinspection CssUnknownProperty
+    @supports (container-type: inline-size ) {
+      display: initial;
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 950px) {
+        width: rem(132.6);
+        right: rem(-113.8);
+        top: 0;
+        bottom: unset;
+      }
+
+      //noinspection CssInvalidAtRule
+      @container (min-width: 1280px) {
+        right: calc( ( ( 100% - #{rem(39.5)} ) / 2 ) - #{rem(158)} );
+      }
+    }
+  }
+
+  &.bg--primary-blue .bg__sprite .sprite {
+    opacity: .25;
+  }
+}

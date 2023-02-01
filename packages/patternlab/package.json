@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.38",
+  "version": "1.0.58",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -11,7 +11,8 @@
     "@pattern-lab/engine-twig-php": "^5.16.2",
     "@pattern-lab/uikit-workshop": "^5.16.2",
     "@psu-ooe/accordion": "^1.0",
-    "@psu-ooe/background-container": "^1.0",
+    "@psu-ooe/auto-expansion": "^1.0",
+    "@psu-ooe/background-container": "^2.0",
     "@psu-ooe/band": "^2.0",
     "@psu-ooe/base": "^1.0",
     "@psu-ooe/bio": "^1.0",
@@ -21,6 +22,7 @@
     "@psu-ooe/cards-list": "^1.0",
     "@psu-ooe/credential": "^1.0",
     "@psu-ooe/cta": "^1.0",
+    "@psu-ooe/divider": "^1.0",
     "@psu-ooe/drop-button": "^1.0",
     "@psu-ooe/event-link": "^1.0",
     "@psu-ooe/expandable-section": "^1.0",
@@ -35,13 +37,15 @@
     "@psu-ooe/polyfill-focus-visible": "^1.0",
     "@psu-ooe/quote": "^1.0",
     "@psu-ooe/read-more": "^1.0",
+    "@psu-ooe/section-view-tracking": "^1.0",
     "@psu-ooe/skip-link": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0",
     "@psu-ooe/smart-datetime": "^1.0",
+    "@psu-ooe/social-icon": "^1.0",
+    "@psu-ooe/social-icons": "^1.0",
     "@psu-ooe/sprite": "^1.0",
     "@psu-ooe/sticky-panel": "^1.0",
-    "@psu-ooe/tabs": "^1.0",
-    "@psu-ooe/tabs-list": "^1.0",
+    "@psu-ooe/tabs": "^2.0",
     "@psu-ooe/upcoming-events": "^1.0",
     "@psu-ooe/webfonts": "^1.0"
   }

@@ -4,16 +4,31 @@
       {{ intro }}
     </div>
   {% endif %}
+  {% set tabs_list_data = { tabs: tabs } %}
+  {% if orientation %}
+    {% set tabs_list_data = tabs_list_data|merge({ orientation: orientation }) %}
+  {% endif %}
+  {% if short %}
+    {% set tabs_list_data = tabs_list_data|merge({ short: true }) %}
+  {% endif %}
+  {% if borderless_inactive %}
+    {% set tabs_list_data = tabs_list_data|merge({ borderless_inactive: true }) %}
+  {% endif %}
+  {% if expand_to_fit %}
+    {% set tabs_list_data = tabs_list_data|merge({ expand_to_fit: true }) %}
+  {% endif %}
   <div class="tabs__list">
-    {% include '@molecules/tabs-list/tabs-list.twig' with { tabs: tabs } only %}
+    {% include '@organisms/tabs/tabs-list.twig' with tabs_list_data only %}
   </div>
-  {% for tab in tabs %}
+  <div class="tabs__panels">
+    {% for tab in tabs %}
       {% set panel_classes = ['tabs__panel'] %}
       {% if loop.first %}
         {% set panel_classes = panel_classes|merge(['tabs__panel--active']) %}
       {% endif %}
-      <div class="{{ panel_classes|join(' ') }}" id="{{ tab.id }}" role="tabpanel" tabindex="0" aria-labelledby="{{ tab.id ~ '-button' }}">
+      <div class="{{ panel_classes|join(' ') }}" id="{{ tab.id }}" role="tabpanel" tabindex="0" aria-labelledby="{{ tab.id ~ '-button' }}" data-interactive-component{% if tab.section %} data-section="{{ tab.section }}"{% endif %}>
         {{ tab.content }}
       </div>
     {% endfor %}
+  </div>
 </div>

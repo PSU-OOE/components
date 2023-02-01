@@ -1,0 +1,25 @@
+{% set social_medias = {
+  instagram: 'Instagram',
+  facebook: 'Facebook',
+  linkedin: 'LinkedIn',
+  twitter: 'Twitter',
+  youtube: 'YouTube',
+  flickr: 'Flickr',
+  pinterest: 'Pinterest',
+  blog: 'Blog',
+} %}
+
+{% set social_icons = [] %}
+{% for icon, label in social_medias %}
+  {% set social_icon %}
+    {% include '@molecules/social-icon/social-icon.twig' with {
+      color: 'dark',
+      icon: icon,
+      label: label,
+      url: '#',
+    } only %}
+  {% endset %}
+  {% set social_icons = social_icons|merge([social_icon]) %}
+{% endfor %}
+
+{% include '@organisms/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
