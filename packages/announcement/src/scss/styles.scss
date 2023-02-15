@@ -1,0 +1,255 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+@import "../../../base/src/scss/imports/utility";
+
+
+/**
+ * Contains styles for the announcement block.
+ */
+.announcement {
+  position: relative;
+
+  // Styles for the expanded announcement content.
+  &__expanded {
+    display: flex;
+    max-width: rem(119);
+    margin: auto;
+    padding: rem(3) rem(2);
+  }
+
+  &__inner {
+    // Stop text from wrapping around the icon.
+    @include bp(xs) {
+      display: flex;
+    }
+  }
+
+  // The icon that appears in the expanded content area.
+  &__icon {
+    background-size: cover;
+    display: inline-block;
+    float: left;
+    width: rem(4.2);
+    height: rem(4.2);
+    margin-right: rem(1);
+
+    @include bp(xs) {
+      float: none;
+      flex-shrink: 0;
+      margin: 0 rem(2) auto 0;
+      width: rem(6.2);
+      height: rem(6.2);
+    }
+
+    @include bp(m) {
+      width: rem(7.4);
+      height: rem(7.4);
+    }
+  }
+
+  // The WYSIWYG content that appears in the expanded content area.
+  &__content {
+    margin: auto 0;
+
+    a {
+      border-bottom-width: rem(0.1);
+      border-bottom-style: dotted;
+      transition: border-bottom-color .2s;
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-bottom-style: solid;
+      }
+    }
+    p {
+      line-height: rem(2.4);
+
+      @include bp(s) {
+        font-size: rem(1.7);
+        line-height: rem(2.5);
+      }
+    }
+  }
+
+  // Common styles for expand + collapse buttons.
+  &__expand,
+  &__collapse {
+    background-color: transparent;
+    border: none;
+    outline-offset: rem(-0.2);
+  }
+
+  // Expand button for the announcement.
+  &__expand {
+    border-color: transparent;
+    display: flex;
+    font-size: rem(1.8);
+    height: rem(4.5);
+    justify-content: center;
+    line-height: rem(2.5);
+    padding: 0;
+    width: 100%;
+    transition: background-color .2s, border .2s, color .2s;
+
+    & > * {
+      font-weight: 700;
+      margin: auto 0;
+    }
+
+    &-icon {
+      margin-right: rem(1);
+      position: relative;
+      height: rem(2.5);
+      width: rem(2.5);
+
+      background-size: cover;
+      display: inline-block;
+    }
+
+    &::after {
+      content: "\f078";
+      font-size: rem(1.6);
+      font-family: $font-awesome;
+      margin: auto 0 auto rem(1);
+    }
+  }
+
+  // Collapse button for the announcement.
+  &__collapse {
+    font-size: rem(3.5);
+    line-height: .7;
+    margin: 0 0 auto rem(0.8);
+    padding: rem(.8);
+    transition: background-color .2s, color .2s;
+    @include bp(xl) {
+      margin: 0;
+      position: absolute;
+      right: rem(1.4);
+      top: rem(2);
+    }
+
+    &::after {
+      font-family: $font-awesome;
+      content: "\f00d";
+      line-height: 0;
+      font-weight: 300;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $primary-blue;
+      color: $white;
+    }
+  }
+
+  &--notice {
+    background-color: $medium-grey;
+    color: $nittany-navy;
+
+    .announcement {
+      &__expand {
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: $white;
+          border-bottom: rem(0.1) solid $medium-grey;
+        }
+      }
+
+      &__expand-icon,
+      &__icon {
+        background-image: url("#{$img-path}/announcement/notice-1x.png");
+
+        @include hi-res {
+          background-image: url("#{$img-path}/announcement/notice-2x.png");
+        }
+      }
+
+      &__content {
+        a, p {
+          color: $beaver-blue;
+        }
+
+        a {
+          border-bottom-color: $beaver-blue;
+        }
+      }
+    }
+  }
+
+  &--warning {
+    background-color: $keystone;
+    color: $nittany-navy;
+
+    .announcement {
+      &__expand {
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: $invent-orange-light;
+        }
+      }
+
+      &__expand-icon,
+      &__icon {
+        background-image: url("#{$img-path}/announcement/warning-1x.png");
+
+        @include hi-res {
+          background-image: url("#{$img-path}/announcement/warning-2x.png");
+        }
+      }
+
+      &__content {
+        a, p {
+          color: $beaver-blue;
+        }
+
+        a {
+          border-bottom-color: $beaver-blue;
+        }
+      }
+    }
+  }
+
+  &--emergency {
+    background-color: $error-red;
+    color: $white;
+
+    .announcement {
+      &__expand {
+        &:active,
+        &:focus,
+        &:hover {
+          background-color: $invent-orange;
+          color: $nittany-navy;
+        }
+      }
+
+      &__expand-icon,
+      &__icon {
+        background-image: url("#{$img-path}/announcement/emergency-1x.png");
+
+        @include hi-res {
+          background-image: url("#{$img-path}/announcement/emergency-2x.png");
+        }
+      }
+
+      &__content {
+        a, p {
+          color: $white;
+        }
+
+        a {
+          // White with 75% opacity.
+          border-bottom-color: rgba(255, 255, 255, .75);
+
+          &:hover {
+            border-bottom-color: $white;
+          }
+        }
+      }
+    }
+  }
+}
