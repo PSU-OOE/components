@@ -3,44 +3,72 @@
     heading: object - containing heading component properties
     events: array - containing event-link objects
     compact: boolean - true to display in compact mode
+    max_featured: integer - max number of featured items to display (default 3).
+    overflow_columns: integer - number of columns to put overflow events in (default 1).
 #}
+{% set max_featured = (max_featured in 0..3) and max_featured is not null ? max_featured : 3 %}
+
+{% set columns = {
+  1: 'one',
+  2: 'two'
+}
+%}
+{% set overflow_columns = overflow_columns in 1..2 ? overflow_columns : 1 %}
+{% set more_classes = ['upcoming-events__more'] %}
+{% if columns[overflow_columns] %}
+  {% set more_classes = more_classes|merge(['upcoming-events__more--'~columns[overflow_columns]~'-col']) %}
+{% endif %}
+
 <div class="upcoming-events{% if compact %} upcoming-events--compact{% endif %}">
-  <div class="upcoming-events__featured">
-    {% if heading %}
-      {% set heading_classes = heading.classes|default([])|merge(['upcoming-events__heading']) %}
-      {% set heading = heading|merge({classes: heading_classes}) %}
-      {% include '@atoms/heading/heading.twig' with heading only %}
+  {% if max_featured > 0 %}
+    <div class="upcoming-events__featured">
+      {% if heading %}
+        {% set heading_classes = heading.classes|default([])|merge(['upcoming-events__heading']) %}
+        {% set heading = heading|merge({classes: heading_classes}) %}
+        {% include '@atoms/heading/heading.twig' with heading only %}
+      {% endif %}
+      {% for event in events|slice(0, max_featured) %}
+        <div class="upcoming-events__event">
+          {% include '@organisms/event-link/event-link.twig' with event|merge({
+            compact: compact,
+            featured: not compact
+          }) only %}
+        </div>
+      {% endfor %}
+    </div>
+    {% set events = events|slice(max_featured, (events|length - max_featured)) %}
+    {% set event_count = events|length %}
+    {% if events is not empty %}
+      {% set more %}
+        <div class="{{ more_classes|join(' ') }}">
+          {% for event in events %}
+            <div class="upcoming-events__event">
+              {% include '@organisms/event-link/event-link.twig' with event|merge({
+                compact: compact,
+                featured: false
+              }) only %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endset %}
+      <div class="upcoming-events__overflow">
+        {% include '@organisms/expandable-section/expandable-section.twig' with {
+          expand_label: event_count == 1 ? '1 More Event' : event_count ~ ' More Events',
+          collapse_label: 'Close Events',
+          content: more
+        } only %}
+      </div>
     {% endif %}
-    {% for event in events|slice(0, 3) %}
-      <div class="upcoming-events__event">
-        {% include '@organisms/event-link/event-link.twig' with event|merge({
-          compact: compact,
-          featured: not compact
-        }) only %}
-      </div>
-    {% endfor %}
-  </div>
-  {% set events = events|slice(3, (events|length - 3)) %}
-  {% set event_count = events|length %}
-  {% if events is not empty %}
-    {% set more %}
-      <div class="upcoming-events__more">
-        {% for event in events %}
-          <div class="upcoming-events__event">
-            {% include '@organisms/event-link/event-link.twig' with event|merge({
-              compact: compact,
-              featured: false
-            }) only %}
-          </div>
-        {% endfor %}
-      </div>
-    {% endset %}
-    <div class="upcoming-events__overflow">
-      {% include '@organisms/expandable-section/expandable-section.twig' with {
-        expand_label: event_count == 1 ? '1 More Event' : event_count ~ ' More Events',
-        collapse_label: 'Close Events',
-        content: more
-      } only %}
+  {% else %}
+    <div class="{{ more_classes|join(' ') }}">
+      {% for event in events %}
+        <div class="upcoming-events__event">
+          {% include '@organisms/event-link/event-link.twig' with event|merge({
+            compact: compact,
+            featured: false
+          }) only %}
+        </div>
+      {% endfor %}
     </div>
   {% endif %}
 </div>
