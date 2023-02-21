@@ -127,6 +127,13 @@
     display: inline-block;
     line-height: 1.375;
   }
+  &__description {
+    font-size: rem(1.4);
+    font-weight: normal;
+    display: inline-block;
+    margin-top: rem(1);
+    color: $nittany-navy;
+  }
 
   &__time {
     display: block;

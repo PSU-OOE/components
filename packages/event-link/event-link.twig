@@ -25,6 +25,11 @@
         timezone: timezone
       } only %}
     </span>
+    {% if description %}
+      <span class="event-link__description">
+        {{ description }}
+      </span>
+    {% endif %}
   </span>
   <span class="event-link__third">
     {% include '@atoms/sprite/sprite.twig' with {
