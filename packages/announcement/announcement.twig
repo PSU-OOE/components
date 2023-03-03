@@ -56,34 +56,41 @@
                   // Set the height to 'auto' in order to get the calculated height.
                   expanded_content.style.height = 'auto';
                   let h = expanded_content.scrollHeight;
-                  expand_button.animate({opacity: 0}, {duration: 200, fill: 'forwards'}).onfinish = (e) => {
+                  expand_button.animate({opacity: 0}, {duration: 200}).onfinish = (e) => {
                       expand_button.style.visibility = 'hidden';
                       expand_button.style.height = 0;
                   };
 
                   // Animate to the new height calculated earlier.
-                  announcement.animate({height: h + 'px'}, {duration: 500, fill: 'forwards'}).onfinish = (e) => {
-                      expanded_content.style.height = h + 'px';
-                      expanded_content.style.visibility = 'visible';
-                      expanded_content.animate({opacity: 1}, {duration: 200, fill: 'forwards'});
-                  };
+                  announcement.animate({height: h + 'px'}, {duration: 500}).onfinish = (e) => {
 
+                      announcement.classList.add('block--announcement--expanded');
+                      announcement.classList.remove('block--announcement--collapsed');
+                      announcement.style.height = h + 'px';
+                      expanded_content.style.height = h + 'px';
+                      expanded_content.style.opacity = 1;
+                      expanded_content.style.visibility = 'visible';
+                      expanded_content.animate({opacity: 1}, {duration: 200, fill:'forwards'});
+
+                  };
                   setLocalStorageItem(hash_key, 'expanded');
               });
 
               // Attach a click handler to the collapse button.
               collapse_button.addEventListener('click', function () {
-                  announcement.animate({height: COLLAPSED_HEIGHT}, {duration: 500, fill: 'forwards'}).onfinish = (e) => {
+                  announcement.animate({height: COLLAPSED_HEIGHT}, {duration: 500}).onfinish = (e) => {
                       expanded_content.style.opacity = '0';
                       expanded_content.style.visibility = 'hidden';
+                      announcement.style.height = COLLAPSED_HEIGHT;
 
                       expand_button.style.height = COLLAPSED_HEIGHT;
                       expand_button.style.visibility = 'visible';
 
-                      expand_button.animate({opacity: 1}, {duration: 200, fill: 'forwards'});
+                      expand_button.animate({opacity: 1}, {duration: 200, fill:'forwards'});
                   };
-                  expanded_content.animate({opacity: 0}, {duration: 200, fill: 'forwards'});
-
+                  expanded_content.animate({opacity: 0}, {duration: 200, fill:'forwards'});
+                  announcement.classList.remove('block--announcement--expanded');
+                  announcement.classList.add('block--announcement--collapsed');
                   setLocalStorageItem(hash_key, 'collapsed');
               });
 

@@ -37,7 +37,7 @@
     text-align: center;
     .sprite {
       margin: 0 auto;
-      font-size: 2.5rem;
+      font-size: rem(2.5);
     }
     @include bp(xs) {
       float: none;
@@ -45,12 +45,15 @@
       margin: 0 rem(2) auto 0;
       width: rem(6.2);
       height: rem(6.2);
+      .sprite {
+        font-size: rem(3.6);
+      }
     }
-      @include bp(m) {
+     @include bp(m) {
         width: rem(7.4);
         height: rem(7.4);
         .sprite {
-          font-size: 4rem;
+          font-size: rem(4);
         }
     }
 
