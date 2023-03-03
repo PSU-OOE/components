@@ -52,7 +52,6 @@
                   // Set the height to 'auto' in order to get the calculated height.
                   expanded_content.style.height = 'auto';
                   let h = expanded_content.scrollHeight;
-
                   expand_button.animate({opacity: 0}, {duration: 200, fill: 'forwards'}).onfinish = (e) => {
                       expand_button.style.visibility = 'hidden';
                       expand_button.style.height = 0;
@@ -83,6 +82,26 @@
 
                   setLocalStorageItem(hash_key, 'collapsed');
               });
+
+
+
+              // Since we are explicitly setting heights for animations...
+              // Note - jquery may not be available at this time.
+              window.addEventListener('resize', function () {
+                  if (announcement.classList.contains('block--announcement--expanded')) {
+                      announcement.querySelector('.announcement__expanded').style.height = 'auto';
+                      const h = announcement.querySelector('.announcement__expanded').scrollHeight;
+                      announcement.style.height = (h) + 'px';
+                  }
+              });
+
+
+
+            // Fix any height issues caused by timing events...
+            setTimeout(function () {
+                window.dispatchEvent(new Event('resize'));
+            }, 1500);
+
 
             /**
              * Attempts to get a local storage item.
