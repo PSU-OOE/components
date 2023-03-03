@@ -18,6 +18,7 @@
   }
 
   &__inner {
+    margin-right: rem(4.5);
     // Stop text from wrapping around the icon.
     @include bp(xs) {
       display: flex;
@@ -120,22 +121,26 @@
       }
     }
 
+    &-after {
+      margin-left: rem(1);
+      font-size: rem(1.6);
+    }
+
   }
 
   // Collapse button for the announcement.
   &__collapse {
     font-size: rem(3.5);
     line-height: .7;
-    margin: 0 0 auto rem(0.8);
-    padding: rem(.8);
+    margin: 0;
+    padding: 0;
     transition: background-color .2s, color .2s;
     cursor: pointer;
-    @include bp(xl) {
-      margin: 0;
-      position: absolute;
-      right: rem(1.4);
-      top: rem(2);
-    }
+    position: absolute;
+    right: rem(1.4);
+    top: rem(2);
+    min-width: rem(4.5);
+    min-height: rem(4.5);
 
     &:hover,
     &:active,

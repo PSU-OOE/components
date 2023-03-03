@@ -4,6 +4,11 @@
       {% include '@atoms/sprite/sprite.twig' with { name: 'fa-exclamation'} only %}
     </span>
     <span class="announcement__expand-label">{{ label }}</span>
+    <span class="announcement__expand-after">
+      {% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-down'} only %}
+    </span>
+
+
   </button>
   <div class="announcement__expanded">
     <div class="announcement__inner">
@@ -16,7 +21,6 @@
     </div>
     <button type="button" aria-label="Collapse announcements" class="announcement__collapse">
       {% include '@atoms/sprite/sprite.twig' with { name: 'fa-times'} only %}
-
     </button>
   </div>
 </div>
