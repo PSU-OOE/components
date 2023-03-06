@@ -1,0 +1,119 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+@import "../../../base/src/scss/imports/utility";
+
+.block--tile.block {
+
+  // The tile container must extend 1rem left and right of its container
+  // in order to make the title text line up with its container...
+  margin-left: rem(-1);
+  width: calc(100% + #{rem(2)});
+  background: $nittany-navy center;
+  background-size: cover;
+  overflow: hidden;
+  position:relative;
+  transition: all .2s ease-in-out;
+  padding-bottom: 56.25%;
+
+  @include bp(xs) {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  @include bp(m) {
+    height: rem(21);
+    padding-bottom: 0;
+  }
+
+  &:hover {
+    & .tile__link {
+      background-color: $tile-nav-active;
+    }
+
+    & .tile__title {
+      background-color: $primary-blue;
+      box-shadow: rem(1) 0 0 0 $primary-blue, rem(-1) 0 0 0 $primary-blue; // Hack for Edge + IE11
+
+      & span {
+        color: $white;
+      }
+    }
+
+    & .tile__read-more {
+      @include bp(m) {
+        opacity: 1;
+      }
+    }
+  }
+
+  .tile {
+    &__image {
+      position: absolute;
+    }
+
+    &__link {
+      background-color: transparent;
+      border-bottom: 0;
+      display: block;
+      height: 100%;
+      position:absolute;
+      width: 100%;
+      &:focus {
+        outline-offset: rem(-.2);
+      }
+    }
+
+    &__content {
+      pointer-events: none;
+      position:absolute;
+      top: rem(3);
+      left: rem(2);
+      max-width: 82%; // There is no calculation behind this number.
+
+      @include bp(m) {
+        min-height: rem(21);
+        left: rem(2.5);
+      }
+    }
+
+    &__title {
+      @include tile-nav-highlight-title($nittany-navy, $white, $white);
+    }
+
+    &__read-more {
+      @include tile-nav-read-more($white);
+      .read-more {
+        color: $white;
+      }
+    }
+
+    &__title,
+    &__link,
+    &__read-more {
+      transition: inherit;
+    }
+
+    // Hover effects.
+    &__link:active,
+    &__link:focus {
+      background-color: $tile-nav-active;
+
+      & ~ .tile__content {
+        .tile__title {
+          background-color: $primary-blue;
+          box-shadow: rem(1) 0 0 0 $primary-blue, rem(-1) 0 0 0 $primary-blue; // Hack for Edge + IE11
+          & span {
+            color: $white;
+          }
+        }
+      }
+
+      & ~ .tile__read-more {
+
+        @include bp(m) {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

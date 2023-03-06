@@ -1,0 +1,89 @@
+
+.description-navigation-tile {
+  background-color: $white;
+  position:relative;
+
+  &__link {
+    border-bottom: none;
+    display: block;
+    height: 100%;
+    position:absolute;
+    width: 100%;
+    z-index: 1;
+
+    @include bp(xs) {
+      box-shadow: rem(0.1) rem(0.2) 0 rgba(0,0,0,.15);
+    }
+
+    &:focus {
+      outline-offset: rem(-0.2);
+    }
+  }
+
+  &__content {
+    display:block;
+    padding: rem(1) rem(1);
+
+    @include bp(xs) {
+      padding: rem(3) rem(2.5) rem(5) rem(2.5);
+    }
+
+    @include bp(s) {
+      padding-left: rem(2.5);
+      padding-top: rem(3);
+    }
+
+    @include bp(m) {
+      min-height: rem(21);
+    }
+  }
+
+  &__title {
+    @include tile-nav-highlight-title($light-grey, $nittany-navy, $primary-blue);
+  }
+
+  &__description {
+    font-size: rem(1.4);
+    font-weight: 600;
+    line-height: rem(2.2);
+    margin-top: rem(1);
+    padding: rem(0.5) 0 rem(0.5) 0;
+
+    @include bp(m) {
+      margin-top: rem(2);
+    }
+  }
+
+  &__read-more {
+    @include tile-nav-read-more($primary-blue);
+  }
+
+  &__title,
+  &__link,
+  &__image,
+  &__read-more {
+    transition: all .2s ease-in-out;
+  }
+
+  // Throw in some custom hover effects.
+  &__link:active,
+  &__link:focus,
+  &__link:hover {
+    & ~ .description-navigation-tile__content {
+      .description-navigation-tile__title {
+        background-color: $primary-blue;
+        box-shadow: rem(1) 0 0 0 $primary-blue, rem(-1) 0 0 0 $primary-blue; // Hack for Edge + IE11
+
+        & span,
+        & span:after {
+          color: $white;
+        }
+      }
+    }
+    & ~ .description-navigation-tile__read-more {
+      @include bp(m) {
+        opacity: 1;
+      }
+    }
+  }
+}
