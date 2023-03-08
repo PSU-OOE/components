@@ -1,19 +1,22 @@
-<div class="description-navigation-tile">
+<div class="description-navigation-tile {% if background %}description-navigation-tile--{{ background }}{% endif %}">
   <a class="description-navigation-tile__link" href="{{ link.url }}"><span class="visually-hidden">{{ link.label }}</span></a>
   <div class="description-navigation-tile__content">
     <div class="description-navigation-tile__title" aria-hidden="true">
-      <span>{{ link.label }}</span>
+      <span>{{ link.label }}{% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}</span>
     </div>
     <div class="description-navigation-tile__description">{{ description }}</div>
-  </div>
-  {% if read_more %}
-    <div class="description-navigation-tile__read-more" aria-hidden="true">
+    {% if read_more %}
+      {% set read_more_label = read_more_label ?: 'Read More' %}
+      <div class="description-navigation-tile__read-more" aria-hidden="true">
       <span>
          {% include '@atoms/read-more/read-more.twig' with {
-           "url": link.url,
-           "title": read_more_label,
+           url: link.url,
+           title: read_more_label,
+           size: "small"
          } only %}
       </span>
-    </div>
-  {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
 </div>
