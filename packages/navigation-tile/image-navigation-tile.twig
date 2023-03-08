@@ -8,6 +8,8 @@
       </div>
     </div>
     {% if read_more %}
+      {% set read_more_label = read_more_label ?: 'Read More' %}
+
       <div class="tile__read-more">
         <span>
           {% include '@atoms/read-more/read-more.twig' with {
