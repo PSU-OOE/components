@@ -5,18 +5,6 @@
       <span>{{ link.label }}{% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}</span>
     </div>
     <div class="description-navigation-tile__description">{{ description }}</div>
-    {% if read_more %}
-      {% set read_more_label = read_more_label ?: 'Read More' %}
-      <div class="description-navigation-tile__read-more" aria-hidden="true">
-      <span>
-         {% include '@atoms/read-more/read-more.twig' with {
-           url: link.url,
-           title: read_more_label,
-           size: "small"
-         } only %}
-      </span>
-      </div>
-    {% endif %}
   </div>
 
 </div>

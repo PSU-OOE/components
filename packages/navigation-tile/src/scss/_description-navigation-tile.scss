@@ -1,8 +1,7 @@
-
 .description-navigation-tile {
   background-color: $white;
   position:relative;
-
+  transition: all .2s ease-in-out;
 
   &__link {
     border-bottom: none;
@@ -16,9 +15,6 @@
       box-shadow: rem(0.1) rem(0.2) 0 rgba(0,0,0,.15);
     }
 
-    &:focus {
-      outline-offset: rem(0.2);
-    }
   }
 
   &__content {
@@ -59,21 +55,9 @@
     }
   }
 
-  &__read-more {
-    opacity: 0;
-    text-align: right;
-    height: 0;
-    @include bp(m) {
-      margin-top: rem(2);
-      height: auto;
-    }
-  }
-
   &__title,
-  &__link,
-  &__image,
-  &__read-more {
-    transition: all .2s ease-in-out;
+  &__link {
+    transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
   }
 
   // Throw in some custom hover effects.
@@ -88,14 +72,6 @@
         & span,
         & span:after {
           color: $white;
-        }
-      }
-      .description-navigation-tile__read-more {
-        @include bp(m) {
-          opacity: 1;
-          .read-more {
-            border-color: $primary-blue;
-          }
         }
       }
     }

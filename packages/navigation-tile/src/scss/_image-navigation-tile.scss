@@ -41,12 +41,6 @@
         color: $white;
       }
     }
-
-    & .tile__read-more {
-      @include bp(m) {
-        opacity: 1;
-      }
-    }
   }
 
   .tile {
@@ -85,16 +79,8 @@
       }
     }
 
-    &__read-more {
-      @include tile-nav-read-more($white);
-      .read-more {
-        color: $white;
-      }
-    }
-
     &__title,
-    &__link,
-    &__read-more {
+    &__link {
       transition: all .2s ease-in-out;
     }
 
@@ -110,13 +96,6 @@
           & span {
             color: $white;
           }
-        }
-      }
-
-      & ~ .tile__read-more {
-
-        @include bp(m) {
-          opacity: 1;
         }
       }
     }

@@ -7,16 +7,4 @@
         <span>{{ link.label }}{% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}</span>
       </div>
     </div>
-    {% if read_more %}
-      {% set read_more_label = read_more_label ?: 'Read More' %}
-
-      <div class="tile__read-more">
-        <span>
-          {% include '@atoms/read-more/read-more.twig' with {
-            "url": link.url,
-            "title": read_more_label,
-          } only %}
-        </span>
-      </div>
-    {% endif %}
 </div>
