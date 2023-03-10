@@ -6,6 +6,7 @@
     secondary_label: 'Secondary Label'
   } only %}
 {% endset %}
+
 {% set basic_tile2 %}
   {% include '@molecules/basic-tile/basic-tile.twig' with {
     background_color: 'primary-blue',
@@ -14,6 +15,7 @@
     secondary_label: 'Secondary Label'
   } only %}
 {% endset %}
+
 {% include '@molecules/grid/grid.twig' with {
   items: [basic_tile, basic_tile, basic_tile, basic_tile2],
 } only %}
