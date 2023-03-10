@@ -1547,7 +1547,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/basic-tile@workspace:packages/basic-tile":
+"@psu-ooe/basic-tile@^1.0, @psu-ooe/basic-tile@workspace:packages/basic-tile":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/basic-tile@workspace:packages/basic-tile"
   dependencies:
@@ -1747,6 +1747,7 @@ __metadata:
     "@psu-ooe/background-container": ^2.0
     "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/basic-tile": ^1.0
     "@psu-ooe/bio": ^1.0
     "@psu-ooe/bio-collection": ^1.0
     "@psu-ooe/breadcrumbs": ^1.0
