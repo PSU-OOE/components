@@ -6,8 +6,6 @@
 
   // The tile container must extend 1rem left and right of its container
   // in order to make the title text line up with its container...
-  margin-left: rem(-1);
-  width: calc(100% + #{rem(2)});
   background: $nittany-navy center;
   background-size: cover;
   overflow: hidden;
@@ -15,14 +13,11 @@
   transition: all .2s ease-in-out, outline-offset 0;
   padding-bottom: 56.25%;
   height: 100%;
+  width: 100%;
 
   &:focus-within {
     outline: 0.2rem solid #009cde;
     outline-offset: 0.2rem;
-  }
-  @include bp(xs) {
-    margin-left: 0;
-    width: 100%;
   }
 
   @include bp(m) {
