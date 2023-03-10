@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/sprite",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Provides lightweight and efficient imagery.",
   "ooe": {
     "namespace": "atoms"
