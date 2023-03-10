@@ -1547,6 +1547,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/basic-tile@workspace:packages/basic-tile":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/basic-tile@workspace:packages/basic-tile"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/grid": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/bio-collection@^1.0, @psu-ooe/bio-collection@workspace:packages/bio-collection":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/bio-collection@workspace:packages/bio-collection"
