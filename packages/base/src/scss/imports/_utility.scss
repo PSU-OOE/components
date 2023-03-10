@@ -158,51 +158,5 @@
     line-height: 2.8rem;
     position: relative;
     transition: inherit;
-
-    &:after {
-      color: $chevron-color;
-      content: "\f054";
-      font-family: $font-awesome;
-      font-size: .9rem;
-      font-weight: 700;
-      margin-left: 10px;
-      vertical-align: middle;
-
-      @include bp(m) {
-        display: none;
-      }
-    }
-  }
-}
-
-// @TODO: Delete some day...
-@mixin tile-nav-read-more($color) {
-  bottom: 25px;
-  color: $color;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  line-height:20px;
-  opacity: 0;
-  padding: 0;
-  pointer-events: none;
-  position: absolute;
-  right: 25px;
-  text-transform: uppercase;
-
-  @include bp(m) {
-    display: inline;
-  }
-
-  &:after {
-    color: $color;
-    content: "\00a0\f105";
-    margin-left: 3px;
-    font-family: $font-awesome;
-    text-decoration: none;
-  }
-
-  span {
-    border-bottom: 1px solid $color;
   }
 }

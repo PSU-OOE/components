@@ -14,6 +14,8 @@
   position:relative;
   transition: all .2s ease-in-out, outline-offset 0;
   padding-bottom: 56.25%;
+  height: 100%;
+
   &:focus-within {
     outline: 0.2rem solid #009cde;
     outline-offset: 0.2rem;
@@ -76,6 +78,9 @@
       .sprite {
         font-size: rem(1.2);
         margin-left: rem(1);
+        @include bp(m) {
+          display: none;
+        }
       }
     }
 
