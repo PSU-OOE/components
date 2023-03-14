@@ -18,18 +18,19 @@
   </span>
   <span class="event-link__second">
     <span class="event-link__title">{{ title }}</span>
+    {% set all_day = all_day ? true : false %}
+    {% set hide_time = hide_time ? true : false %}
     {% if not hide_time %}
       <span class="event-link__time">
-        {% include '@molecules/smart-datetime/smart-time.twig' with {
-          start: start,
-          end: end,
-          timezone: timezone
-        } only %}
-      </span>
-    {% endif %}
-    {% if description %}
-      <span class="event-link__description text text--size-small text--height-snug">
-        {{ description }}
+        {% if not all_day %}
+          {% include '@molecules/smart-datetime/smart-time.twig' with {
+            start: start,
+            end: end,
+            timezone: timezone
+          } only %}
+        {% else %}
+          <span class="event-link__all-day">All Day</span>
+        {% endif %}
       </span>
     {% endif %}
   </span>
