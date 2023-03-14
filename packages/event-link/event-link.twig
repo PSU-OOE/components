@@ -18,8 +18,6 @@
   </span>
   <span class="event-link__second">
     <span class="event-link__title">{{ title }}</span>
-    {% set all_day = all_day ? true : false %}
-    {% set hide_time = hide_time ? true : false %}
     {% if not hide_time %}
       <span class="event-link__time">
         {% if not all_day %}
