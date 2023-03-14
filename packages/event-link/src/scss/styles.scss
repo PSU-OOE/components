@@ -127,6 +127,10 @@
     display: inline-block;
     line-height: 1.375;
   }
+  &__description {
+    display: block;
+    margin-top: rem(0.5);
+  }
 
   &__time {
     display: block;
