@@ -1731,6 +1731,7 @@ __metadata:
   resolution: "@psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item"
   dependencies:
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
   languageName: unknown
   linkType: soft
 
