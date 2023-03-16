@@ -1507,6 +1507,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/announcement@ ^1.0, @psu-ooe/announcement@workspace:packages/announcement":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/announcement@workspace:packages/announcement"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/auto-expansion@^1.0, @psu-ooe/auto-expansion@workspace:packages/auto-expansion":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/auto-expansion@workspace:packages/auto-expansion"
@@ -1535,6 +1544,15 @@ __metadata:
   resolution: "@psu-ooe/base@workspace:packages/base"
   dependencies:
     "@psu-ooe/webfonts": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/basic-tile@^1.0, @psu-ooe/basic-tile@workspace:packages/basic-tile":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/basic-tile@workspace:packages/basic-tile"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/grid": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1734,10 +1752,12 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.16.2
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
+    "@psu-ooe/announcement": " ^1.0"
     "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/background-container": ^2.0
     "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/basic-tile": ^1.0
     "@psu-ooe/bio": ^1.0
     "@psu-ooe/bio-collection": ^1.0
     "@psu-ooe/breadcrumbs": ^1.0

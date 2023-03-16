@@ -127,9 +127,8 @@
     display: inline-block;
     line-height: 1.375;
   }
-  
   &__description {
-    display: inline-block;
+    display: block;
     margin-top: rem(0.5);
   }
 
@@ -148,7 +147,10 @@
       display: none;
     }
   }
-
+  &__all-day {
+    font-weight: normal;
+    color: $black;
+  }
   &--featured {
     .date-range {
       &[data-same-month] {

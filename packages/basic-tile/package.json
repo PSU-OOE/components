@@ -1,13 +1,13 @@
 {
-  "name": "@psu-ooe/event-link",
-  "version": "1.2.0",
-  "description": "Provides an event link implementation.",
+  "name": "@psu-ooe/basic-tile",
+  "version": "1.0.0",
+  "description": "Provides a basic tile component.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@psu-ooe/base": "^1.0",
-    "@psu-ooe/smart-datetime": "^1.0"
+    "@psu-ooe/grid": "^1.0"
   }
 }

@@ -1,0 +1,141 @@
+<div class="announcement announcement--{{ severity }}" data-announcement-hash="{{ hash }}">
+  <button class="announcement__expand" type="button" aria-label="Expand announcements">
+    <span class="announcement__expand-icon" aria-hidden="true">
+      {% include '@atoms/sprite/sprite.twig' with { name: 'fa-exclamation'} only %}
+    </span>
+    <span class="announcement__expand-label">{{ label }}</span>
+    <span class="announcement__expand-after">
+      {% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-down'} only %}
+    </span>
+  </button>
+  <div class="announcement__expanded">
+    <div class="announcement__inner">
+      <span class="announcement__icon">
+        {% include '@atoms/sprite/sprite.twig' with { name: 'fa-exclamation'} only %}
+      </span>
+      <div class="announcement__content">
+        {{ content }}
+      </div>
+    </div>
+    <button type="button" aria-label="Collapse announcements" class="announcement__collapse">
+      {% include '@atoms/sprite/sprite.twig' with { name: 'fa-times'} only %}
+    </button>
+  </div>
+</div>
+
+<script>
+    (() => {
+      // The height of the collapsed banner.
+      const COLLAPSED_HEIGHT = '45px';
+      const announcement = document.querySelector('.announcement[data-announcement-hash="{{ hash }}"');
+      const expand_button = announcement.querySelector('.announcement__expand');
+      const expanded_content = announcement.querySelector('.announcement__expanded');
+      const collapse_button = announcement.querySelector('.announcement__collapse');
+
+      const hash = announcement.getAttribute('data-announcement-hash');
+      const hash_key = 'cms.announcements.' + hash;
+      const default_state = getLocalStorageItem(hash_key, 'expanded');
+      announcement.classList.add('block--announcement--' + default_state);
+      if (default_state === 'expanded') {
+        expand_button.style.visibility = 'hidden';
+        expand_button.style.height = '0';
+        expand_button.style.opacity = '0';
+      } else {
+        announcement.style.height = COLLAPSED_HEIGHT;
+        expanded_content.style.height = '0';
+        expanded_content.style.opacity = '0';
+      }
+
+      // Attach a click handler to the expand button.
+      expand_button.addEventListener('click', function () {
+
+        // Set the height to 'auto' in order to get the calculated height.
+        expanded_content.style.height = 'auto';
+        let h = expanded_content.scrollHeight;
+        expand_button.animate({opacity: 0}, {duration: 200}).onfinish = (e) => {
+          expand_button.style.visibility = 'hidden';
+          expand_button.style.height = 0;
+        };
+
+        // Animate to the new height calculated earlier.
+        announcement.animate({height: h + 'px'}, {duration: 500}).onfinish = (e) => {
+          announcement.classList.add('block--announcement--expanded');
+          announcement.classList.remove('block--announcement--collapsed');
+          announcement.style.height = h + 'px';
+          expanded_content.style.height = h + 'px';
+          expanded_content.style.opacity = 1;
+          expanded_content.style.visibility = 'visible';
+          expanded_content.animate({opacity: 1}, {duration: 200, fill:'forwards'});
+        };
+        setLocalStorageItem(hash_key, 'expanded');
+      });
+
+      // Attach a click handler to the collapse button.
+      collapse_button.addEventListener('click', function () {
+        announcement.animate({height: COLLAPSED_HEIGHT}, {duration: 500}).onfinish = (e) => {
+          expanded_content.style.opacity = '0';
+          expanded_content.style.visibility = 'hidden';
+          announcement.style.height = COLLAPSED_HEIGHT;
+          expand_button.style.height = COLLAPSED_HEIGHT;
+          expand_button.style.visibility = 'visible';
+          expand_button.animate({opacity: 1}, {duration: 200, fill:'forwards'});
+        };
+        expanded_content.animate({opacity: 0}, {duration: 200, fill:'forwards'});
+        announcement.classList.remove('block--announcement--expanded');
+        announcement.classList.add('block--announcement--collapsed');
+        setLocalStorageItem(hash_key, 'collapsed');
+      });
+
+      // Since we are explicitly setting heights for animations...
+      // Note - jquery may not be available at this time.
+      window.addEventListener('resize', function () {
+        if (announcement.classList.contains('block--announcement--expanded')) {
+          announcement.querySelector('.announcement__expanded').style.height = 'auto';
+          const h = announcement.querySelector('.announcement__expanded').scrollHeight;
+          announcement.style.height = (h) + 'px';
+        }
+      });
+
+      // Fix any height issues caused by timing events...
+      setTimeout(function () {
+        window.dispatchEvent(new Event('resize'));
+      }, 1500);
+
+      /**
+       * Attempts to get a local storage item.
+       *
+       * @param {string} key
+       *   The key to look up.
+       * @param {string} default_value
+       *   The default value to return if the key cannot be accessed.
+       *
+       * @returns {string}
+       *   The value pulled from local storage (if available), or the default.
+       */
+      function getLocalStorageItem(key, default_value) {
+        let value = default_value;
+        try {
+          value = window.localStorage.getItem(key) || default_value;
+        } catch (e) {
+          // Silently ignore it...
+        }
+        return value;
+      }
+
+      /**
+       * Attempts to set a local storage item.
+       *
+       * @param {string} key
+       *   The key to set.
+       * @param {string} value
+       *   The value to set.
+       */
+      function setLocalStorageItem(key, value) {
+        try {
+          window.localStorage.setItem(key, value);
+        } catch (e) {
+          // Silently ignore it...
+        }
+      }
+    })();
+</script>

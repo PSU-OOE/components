@@ -44,6 +44,10 @@ const compile_scss = done => {
   done();
 };
 
+const compile_twig = done => {
+  done();
+};
+
 /**
  * Compiles JS sources into an optimized build artifact.
  */
@@ -132,6 +136,16 @@ const watch_js = () => {
 };
 
 /**
+ * Watches all components for changes to twig templates.
+ */
+const watch_twig = () => {
+  gulp.watch(
+      'packages/*/*.twig',
+      gulp.series(compile_twig, update_build_id)
+  );
+};
+
+/**
  * Starts a local server instance of Pattern Lab and watches for changes.
  */
 const watch_patternlab = () => {
@@ -144,12 +158,14 @@ gulp.task('update_build_id', update_build_id);
 gulp.task('compile_scss', gulp.series(compile_scss, update_build_id));
 gulp.task('compile_js', gulp.series(compile_js, update_build_id));
 gulp.task('compile_sprites', gulp.series(compile_sprites, update_build_id));
+gulp.task('compile_twig', gulp.series(compile_twig, update_build_id));
 
 gulp.task('compile_all', gulp.series(
   gulp.parallel(
     compile_scss,
     compile_js,
-    compile_sprites
+    compile_sprites,
+    compile_twig
   ),
   update_build_id
 ));
@@ -158,13 +174,15 @@ gulp.task('default', gulp.series(
   gulp.parallel(
     compile_scss,
     compile_js,
-    compile_sprites
+    compile_sprites,
+    compile_twig
   ),
   update_build_id,
   gulp.parallel(
     watch_scss,
     watch_js,
     watch_sprites,
+    watch_twig,
     watch_patternlab
   )
 ));

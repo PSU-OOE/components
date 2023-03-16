@@ -1,0 +1,26 @@
+@import "../../../base/src/scss/imports/variables";
+
+.basic-tile {
+  padding: rem(1.5) rem(2);
+  transition: .2s background,.2s color,.2s border ease-in-out;
+  line-height: rem(2.2);
+  outline-offset: rem(-0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+
+  &--primary-blue {
+    background: $primary-blue;
+    color: $white;
+    &:hover,
+    &:focus {
+      background: $nittany-navy;
+      color: $white;
+    }
+  }
+
+  &__secondary-label {
+    font-weight: normal;
+  }
+}
