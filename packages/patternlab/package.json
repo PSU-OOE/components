@@ -40,7 +40,6 @@
     "@psu-ooe/polyfill-focus-visible": "^1.0",
     "@psu-ooe/quote": "^1.0",
     "@psu-ooe/read-more": "^1.0",
-    "@psu-ooe/related-navigation-item": "^1.0",
     "@psu-ooe/section-view-tracking": "^1.0",
     "@psu-ooe/skip-link": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0",

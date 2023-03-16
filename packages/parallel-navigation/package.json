@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^1.0",
-    "@psu-ooe/parallel-navigation-item": "^1.0",
-    "@psu-ooe/related-navigation-item": "^1.0"
+    "@psu-ooe/parallel-navigation-item": "^1.0"
   }
 }
