@@ -1,0 +1,63 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.related-navigation-item {
+  border-bottom: rem(.1) solid $slate-light;
+  display: inline-block;
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  font-size: rem(1.8);
+  line-height: calc(4/3);
+
+  &::before {
+    display: none;
+  }
+
+  &__link {
+    border-bottom: none;
+    color: $primary-blue;
+    display: block;
+    font-weight: 400;
+    text-decoration: none;
+    padding: rem(1.8) 0;
+    display: flex;
+
+    &:focus-visible {
+      outline: rem(.2) solid $sky-blue;
+      color: $primary-blue;
+    }
+
+    &:hover {
+      border-bottom: none;
+      color: $primary-blue;
+      text-decoration: underline;
+    }
+    &:focus,
+    &:hover {
+      .related-navigation-item__icon {
+        .sprite {
+          transform: scale(1.25);
+        }
+      }
+    }
+
+    &.active {
+      color: $nittany-navy;
+      font-weight: 700;
+      .related-navigation-item__icon {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    flex: 1;
+  }
+  &__icon {
+    .sprite {
+      width: rem(0.9);
+      transition: transform .2s linear;
+    }
+  }
+}

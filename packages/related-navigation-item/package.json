@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/related-navigation-item",
+  "version": "1.0.0",
+  "description": "Provides a related navigation item component.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^1.0"
+  }
+}

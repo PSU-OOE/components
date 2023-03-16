@@ -1726,11 +1726,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/parallel-navigation@^1.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
+"@psu-ooe/parallel-navigation-item@^1.0, @psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/parallel-navigation@^1.1, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
   dependencies:
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/parallel-navigation-item": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1766,11 +1775,13 @@ __metadata:
     "@psu-ooe/highlighted-text": ^1.0
     "@psu-ooe/intro-form": ^1.0
     "@psu-ooe/overlay": ^1.0
-    "@psu-ooe/parallel-navigation": ^1.0
+    "@psu-ooe/parallel-navigation": ^1.1
+    "@psu-ooe/parallel-navigation-item": ^1.0
     "@psu-ooe/polyfill-flex-gap": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/quote": ^1.0
     "@psu-ooe/read-more": ^1.0
+    "@psu-ooe/related-navigation-item": ^1.0
     "@psu-ooe/section-view-tracking": ^1.0
     "@psu-ooe/skip-link": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
@@ -1818,6 +1829,14 @@ __metadata:
 "@psu-ooe/read-more@^1.0, @psu-ooe/read-more@workspace:packages/read-more":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/read-more@workspace:packages/read-more"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/related-navigation-item@^1.0, @psu-ooe/related-navigation-item@workspace:packages/related-navigation-item":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/related-navigation-item@workspace:packages/related-navigation-item"
   dependencies:
     "@psu-ooe/base": ^1.0
   languageName: unknown

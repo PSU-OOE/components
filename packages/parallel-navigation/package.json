@@ -7,6 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0"
+    "@psu-ooe/base": "^1.0",
+    "@psu-ooe/parallel-navigation-item": "^1.0"
   }
 }
