@@ -14,7 +14,9 @@
     {% endif %}
     <ul class="parallel-navigation__list{% if column_classes[columns] is defined %} {{ column_classes[columns] }}{% endif %}">
       {% for item in items %}
+      <li class="parallel-navigation__item">
         {{ item }}
+      </li>
       {% endfor %}
     </ul>
   </nav>

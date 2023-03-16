@@ -17,11 +17,12 @@
 {% set parallel_navigation_items = [] %}
 {% for item in item_titles %}
   {% set content %}
-    {% include '@molecules/related-navigation-item/related-navigation-item.twig' with {
-      link_color: 'beaver-blue',
+    {% include '@molecules/parallel-navigation-item/parallel-navigation-item.twig' with {
       active: item.active,
       url: '#',
-      title: item.title
+      title: item.title,
+      variation: 'related',
+      icon: 'fas-chevron-right'
     } %}
   {% endset %}
   {% set parallel_navigation_items = parallel_navigation_items|merge([content]) %}

@@ -2,25 +2,16 @@
 @import "../../../base/src/scss/imports/layout";
 
 .parallel-navigation-item {
-  border-bottom: rem(.1) solid $slate-light;
-  display: inline-block;
-  list-style-type: none;
-  padding: rem(.4) 0;
-  width: 100%;
-  margin: 0;
-  &::before {
-    display: none;
-  }
-
   &__link {
     border-bottom: none;
     color: $nittany-navy;
-    display: block;
+    display: flex;
     font-size: rem(1.6);
     line-height: calc(4/3);
     font-weight: 400;
     text-decoration: none;
     padding: rem(1.1) 0;
+    align-items: center;
 
     &--beaver-blue {
       color: $beaver-blue;
@@ -41,10 +32,44 @@
       color: $primary-blue;
       text-decoration: underline;
     }
+    &:focus,
+    &:hover {
+      .sprite {
+        transform: scale(1.25);
+      }
+    }
 
     &.active {
       color: $primary-blue;
       font-weight: 700;
     }
+
+
+
+    &--related {
+      color: $primary-blue;
+      font-size: rem(1.8);
+      padding: rem(1.8) 0;
+
+
+      &.active {
+        color: $nittany-navy;
+
+        .sprite {
+          display: none;
+        }
+      }
+    }
   }
+  &__title {
+    flex: 1;
+  }
+  &__icon {
+    margin-left: rem(1);
+    .sprite {
+      transition: transform .2s linear;
+    }
+  }
+
+
 }
