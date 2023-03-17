@@ -63,7 +63,7 @@
   }
 
   &__icon {
-    margin-left: rem(1);
+    margin: 0 rem(1);
     .sprite {
       transition: transform .2s linear;
     }
