@@ -6,7 +6,14 @@
   <nav class="parallel-navigation" aria-labelledby="parallel-navigation-{{ id }}-label">
     {% if heading or intro_text %}
       <div class="parallel-navigation__intro">
-        <{{ heading_level }} class="parallel-navigation__heading heading heading--medium heading--neutral" id="parallel-navigation-{{ id }}-label">{{ heading }}</{{ heading_level }}>
+        {% set heading_classes = ['parallel-navigation__heading', 'heading'] %}
+        {% if heading_size %}
+          {% set heading_classes = heading_classes|merge(['heading--'~heading_size]) %}
+        {% endif %}
+        {% if heading_color %}
+          {% set heading_classes = heading_classes|merge(['heading--'~heading_color]) %}
+        {% endif %}
+        <{{ heading_level }} class="{{ heading_classes|join(' ') }}" id="parallel-navigation-{{ id }}-label">{{ heading }}</{{ heading_level }}>
         {% if intro_text %}
           <p class="parallel-navigation__text">{{ intro_text }}</p>
         {% endif %}

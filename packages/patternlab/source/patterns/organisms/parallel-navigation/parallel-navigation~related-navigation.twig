@@ -1,16 +1,12 @@
 {% set item_titles = [
-  { title: "Business (62)", active: true },
-  { title: "Education (22)" },
-  { title: "Energy and Sustainability (11)" },
-  { title: "Engineering (12)" },
-  { title: "Geospatial (10)" },
-  { title: "Health and Family Services (11)" },
-  { title: "Homeland Security (16)" },
-  { title: "Human Resources, Labor, and Employment Relations (8)" },
-  { title: "Liberal Arts and Communications (16)" },
-  { title: "Nursing (8)" },
-  { title: "Technology, Sciences, and Math (25)" },
-  { title: "Turfgrass (5)" }
+  { title: "Academic Calendar", active: true },
+  { title: "Academic Warning and Suspension" },
+  { title: "Preparing for and Attending Courses" },
+  { title: "Course Work and Success" },
+  { title: "Academic Advising" },
+  { title: "Military Benefits" },
+  { title: "Organization and project funding request" },
+  { title: "Care and Concern (financial hardship)" }
 ]
 %}
 
@@ -30,9 +26,11 @@
 
 {% include '@organisms/parallel-navigation/parallel-navigation.twig' with {
   id: "topics-2-col",
-  heading: "Explore All Topics",
-  intro_text: "Penn State World Campus offers 180 degrees and certificates spanning 11 topic areas:",
+  heading: "Related Topics",
+  intro_text: "Additional resources related to finances and financial need",
   heading_level: "h2",
+  heading_size: "large",
+  heading_color: "neutral",
   columns: 2,
   items: parallel_navigation_items
 } only %}
