@@ -1735,7 +1735,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/parallel-navigation@^1.1, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
+"@psu-ooe/parallel-navigation@^1.2, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
   dependencies:
@@ -1776,7 +1776,7 @@ __metadata:
     "@psu-ooe/highlighted-text": ^1.0
     "@psu-ooe/intro-form": ^1.0
     "@psu-ooe/overlay": ^1.0
-    "@psu-ooe/parallel-navigation": ^1.1
+    "@psu-ooe/parallel-navigation": ^1.2
     "@psu-ooe/parallel-navigation-item": ^1.0
     "@psu-ooe/polyfill-flex-gap": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
