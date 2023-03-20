@@ -37,6 +37,9 @@
         display: none;
       }
     }
+    span:after {
+      content: unset;
+    }
   }
 
   &--light-grey {
