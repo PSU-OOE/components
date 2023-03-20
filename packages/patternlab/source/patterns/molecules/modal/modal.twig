@@ -1,10 +1,10 @@
 <div class="modal">
   <div class="modal__overlay">
-    <div class="modal__content">
+    <div class="modal__wrapper">
       <span class="modal__close">
         {% include '@atoms/sprite/sprite.twig' with { name: 'fa-times' } %}
       </span>
-      <span class="modal__text"></span>
+      <span class="modal__content">{{ content }}</span>
     </div>
   </div>
 </div>
