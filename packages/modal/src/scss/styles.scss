@@ -13,4 +13,12 @@
     margin: 1rem;
   }
 
+  .modal__close {
+    .sprite--fa-times {
+      background: none;
+      color: #0064bf; //$primary-blue
+      width: 5rem;
+      height: 5rem;
+    }
+  }
 }
