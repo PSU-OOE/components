@@ -1,0 +1,16 @@
+.modal {
+  .modal__overlay {
+    background-color: #001e44; // $nittany-navy
+    position: fixed;
+    inset: 0;
+    opacity: 0.85;
+  }
+
+  .modal__content {
+    background-color: white;
+    height: auto;
+    padding: 5rem;
+    margin: 1rem;
+  }
+
+}
