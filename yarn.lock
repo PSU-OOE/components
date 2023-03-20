@@ -1723,7 +1723,7 @@ __metadata:
   resolution: "@psu-ooe/navigation-tile@workspace:packages/navigation-tile"
   dependencies:
     "@psu-ooe/base": ^1.0
-    "@psu-ooe/read-more": ^1.0
+    "@psu-ooe/sprite": ^1.0
   languageName: unknown
   linkType: soft
 
