@@ -19,6 +19,17 @@
       color: #0064bf; //$primary-blue
       width: 5rem;
       height: 5rem;
+
+      &:hover {
+        background-color: #0064bf;
+        color: white;
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: solid 0.2rem #009cde; // $sky-blue
+        outline-offset: 0.2rem;
+      }
     }
   }
 }
