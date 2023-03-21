@@ -1,5 +1,8 @@
 .modal {
   .modal__overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     background-color: #001e44; // $nittany-navy
     width: 100%;
@@ -10,14 +13,19 @@
   }
 
   .modal__container {
+    display: flex;
+    flex-direction: column;
     position: relative;
     background-color: white;
+    width: fit-content;
     height: auto;
     padding: 5rem;
     margin: 1rem;
   }
 
   .modal__close {
+    align-self: flex-end;
+
     .sprite--fa-times {
       background: none;
       color: #0064bf; //$primary-blue
