@@ -14,3 +14,10 @@ modal_close_sprite.addEventListener("click", () => {
   modal_container.style.display = "none";
   modal_overlay.style.display = "none";
 });
+
+modal_overlay.addEventListener("click", (e) => {
+  if ((e.target == modal_overlay) && (modal_container.style.display == "flex") && (modal_overlay.style.display == "flex")) {
+    modal_container.style.display = "none";
+    modal_overlay.style.display = "none";
+  }
+});
