@@ -25,7 +25,10 @@
   }
 
   .modal__close {
-    align-self: flex-end;
+    // align-self: flex-end;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
 
     .sprite--fa-times {
       background: none;
