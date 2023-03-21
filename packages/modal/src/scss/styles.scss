@@ -1,6 +1,6 @@
 .modal {
   .modal__overlay {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -13,7 +13,7 @@
   }
 
   .modal__container {
-    display: flex;
+    display: none;
     flex-direction: column;
     position: relative;
     background-color: white;
