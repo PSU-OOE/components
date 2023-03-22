@@ -4,6 +4,8 @@ const modal_container = document.querySelector(".modal__container");
 const modal_overlay = document.querySelector(".modal__overlay");
 
 modal_close_sprite.setAttribute("alt", "Close");
+modal_container.setAttribute("role", "dialog");
+modal_container.setAttribute("tabindex", "-1");
 
 modal_open_button.addEventListener("click", () => {
   modal_container.style.display = "flex";
