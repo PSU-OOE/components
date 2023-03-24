@@ -2,7 +2,7 @@ const modal_close_sprite = document.querySelector(".modal__close .sprite--fa-tim
 const modal_trigger = document.querySelector(".modal__trigger");
 const modal_container = document.querySelector(".modal__container");
 const modal_overlay = document.querySelector(".modal__overlay");
-const modal_svg = document.querySelector(".modal__close .sprite--fa-times")
+const modal_svg = document.querySelector(".modal__close .sprite--fa-times");
 
 modal_close_sprite.setAttribute("alt", "Close");
 modal_container.setAttribute("role", "dialog");
