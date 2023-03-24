@@ -36,7 +36,8 @@
       width: 5rem;
       height: 5rem;
 
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: #0064bf;
         color: white;
         cursor: pointer;
