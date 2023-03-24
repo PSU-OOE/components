@@ -1,0 +1,6 @@
+<p style="margin:0;padding:2.5rem;background-color:#ebecf4;text-align:center;">content above</p>
+{% include '@blocks/page-title/page-title.twig' with {
+  title: '<span class="text--contrasting">Extremely Super Long</span> Page Title with <span class="text--contrasting">Illustration</span> to Ensure Text Overflow Behaves Properly',
+  illustration: '<picture><source media="(max-width: 799px)" srcset="https://via.placeholder.com/300x150, https://via.placeholder.com/600x300 2x" /><source media="(min-width: 800px)" srcset="https://via.placeholder.com/542x271, https://via.placeholder.com/1084x542 2x" /><img src="https://via.placeholder.com/300x150" height="150" width="300" alt=""></picture>',
+} only %}
+<p style="margin:0;padding:2.5rem;background-color:#ebecf4;text-align:center;">content below</p>

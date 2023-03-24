@@ -1,0 +1,71 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.page-title {
+  padding: rem(3) rem(2) rem(2.5);
+  margin: auto;
+  max-width: rem(119);
+
+  @include bp(xs) {
+    padding: rem(3) rem(4) rem(2.5);
+  }
+
+  @include bp(l) {
+    padding: rem(6) rem(4) rem(5);
+  }
+
+  &__heading .heading {
+    font-size: rem(3);
+    margin-bottom: 0;
+
+    @include bp(xs) {
+      font-size: rem(4.2);
+    }
+  }
+
+  &--illustration {
+    display: flex;
+    flex-direction: column;
+    gap: rem(2.5);
+    padding: 0 rem(2) rem(3);
+
+    @include bp(xs) {
+      padding: 0 rem(4) rem(3);
+      gap: rem(3);
+    }
+
+    @include bp(s) {
+      padding: 0 rem(4) rem(.5);
+      flex-flow: row-reverse nowrap;
+      gap: rem(2.5);
+    }
+
+    .page-title {
+      &__heading {
+        flex-basis: 50%;
+        margin-top: auto;
+
+        .heading {
+          @include bp(s) {
+            margin-bottom: rem(2.5);
+          }
+
+          @include bp(l) {
+            margin-bottom: rem(4.5);
+          }
+        }
+      }
+
+      &__illustration {
+        flex-basis: 50%;
+        img {
+          margin-left: auto;
+
+          @include bp(s) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

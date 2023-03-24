@@ -1,0 +1,16 @@
+{% set classes = [
+  'page-title',
+  illustration ? 'page-title--illustration',
+] %}
+<div class="{{ classes|join(' ') }}">
+  <div class="page-title__illustration">
+    {{ illustration }}
+  </div>
+  <div class="page-title__heading">
+    {% include '@atoms/heading/heading.twig' with {
+      level: 1,
+      color: 'neutral',
+      content: title,
+    } only %}
+  </div>
+</div>
