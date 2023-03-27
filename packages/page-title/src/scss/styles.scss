@@ -16,11 +16,16 @@
 
   &__heading .heading {
     font-size: rem(3);
+    line-height: calc(4.8 / 4.2);
     margin-bottom: 0;
 
     @include bp(xs) {
       font-size: rem(4.2);
     }
+  }
+
+  &--narrow {
+    max-width: rem(95);
   }
 
   &--illustration {

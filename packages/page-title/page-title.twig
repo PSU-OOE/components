@@ -1,6 +1,7 @@
 {% set classes = [
   'page-title',
   illustration ? 'page-title--illustration',
+  width in ['narrow'] ? 'page-title--' ~ width,
 ] %}
 <div class="{{ classes|join(' ') }}">
   <div class="page-title__illustration">
