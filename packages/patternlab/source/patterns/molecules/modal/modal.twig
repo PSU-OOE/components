@@ -5,9 +5,9 @@
 <div class="modal">
   <div class="modal__overlay">
     <div class="modal__container">
-      <span class="modal__close">
+      <button class="modal__close">
         {% include '@atoms/sprite/sprite.twig' with { name: 'fa-times' } %}
-      </span>
+      </button>
       <span class="modal__content">
         <p class="modal__text">{{ content }}</p>
         <a class="modal__link" href="#">Link to something</a>
