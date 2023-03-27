@@ -6,6 +6,7 @@ const modal_svg = document.querySelector(".modal__close .sprite--fa-times");
 
 modal_close.setAttribute("alt", "Close");
 modal_container.setAttribute("role", "dialog");
+modal_container.setAttribute("aria-modal", "true");
 modal_svg.setAttribute("aria-hidden", "true");
 
 // Functions to show and hide modal
