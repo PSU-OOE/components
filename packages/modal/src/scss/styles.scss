@@ -31,26 +31,45 @@
     position: absolute;
     right: 1rem;
     top: 1rem;
+    width: fit-content;
+    border: none;
+    background: none;
+
+    &:hover,
+    &:focus {
+      background-color: #0064bf; //primary-blue
+      color: white;
+      cursor: pointer;
+
+      .sprite--fa-times {
+        color: white;
+      }
+    }
+
+    &:focus {
+      outline: solid 0.2rem #009cde; //sky-blue
+      outline-offset: 0.2rem;
+    }
 
     .sprite--fa-times {
       background: none;
       color: #0064bf; //$primary-blue
-      width: 5rem;
+      // width: 5rem;
       // 2.4rem in 5rem button
-      height: 5rem;
+      // height: 5rem;
       // 2.4rem in 5rem button
 
-      &:hover,
-      &:focus {
-        background-color: #0064bf;
-        color: white;
-        cursor: pointer;
-      }
+      // &:hover,
+      // &:focus {
+      //   // background-color: #0064bf;
+      //   color: white;
+      //   // cursor: pointer;
+      // }
 
-      &:focus {
-        outline: solid 0.2rem #009cde; // $sky-blue
-        outline-offset: 0.2rem;
-      }
+      // &:focus {
+      //   outline: solid 0.2rem #009cde; // $sky-blue
+      //   outline-offset: 0.2rem;
+      // }
     }
   }
 }
