@@ -27,11 +27,9 @@
   }
 
   .modal__close {
-    // align-self: flex-end;
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
-    // width: fit-content;
     width: 5rem;
     height: 5rem;
     padding: 0;
@@ -57,24 +55,8 @@
     .sprite--fa-times {
       background: none;
       color: #0064bf; //$primary-blue
-      // width: 5rem;
-      // 2.4rem in 5rem button
-      // height: 5rem;
-      // 2.4rem in 5rem button
       width: 2.4rem;
       height: 2.4rem;
-
-      // &:hover,
-      // &:focus {
-      //   // background-color: #0064bf;
-      //   color: white;
-      //   // cursor: pointer;
-      // }
-
-      // &:focus {
-      //   outline: solid 0.2rem #009cde; // $sky-blue
-      //   outline-offset: 0.2rem;
-      // }
     }
   }
 }
