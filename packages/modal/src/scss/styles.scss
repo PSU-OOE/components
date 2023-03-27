@@ -24,6 +24,10 @@
     height: auto;
     padding: 5rem;
     margin: 1rem;
+
+    // mobile only? Need to play with numbers and see if this kosher
+    // max-height: calc(100vh - 210px);
+    // overflow-y: auto;
   }
 
   .modal__close {
