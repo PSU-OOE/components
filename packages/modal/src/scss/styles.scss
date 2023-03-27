@@ -29,9 +29,11 @@
   .modal__close {
     // align-self: flex-end;
     position: absolute;
-    right: 1rem;
-    top: 1rem;
-    width: fit-content;
+    top: 0.5rem;
+    right: 0.5rem;
+    // width: fit-content;
+    width: 5rem;
+    height: 5rem;
     padding: 0;
     border: none;
     background: none;
