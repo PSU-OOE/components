@@ -1,0 +1,61 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.branding {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: rem(1) rem(.5);
+  gap: rem(1.5);
+  transition: background .2s linear, text-decoration-color .2s linear;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: .2em;
+  text-decoration-thickness: rem(.1);
+  outline-offset: rem(-.2);
+
+  @include bp(xs) {
+    gap: rem(3);
+    padding: rem(1.5);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: rem(.2) solid $sky-blue;
+  }
+
+  &:hover, &:focus-visible {
+    background: $light-grey;
+    text-decoration-color: $primary-blue;
+  }
+
+  &__logo {
+    color: $beaver-blue;
+    min-width: rem(18.8);
+    max-width: rem(18.8);
+
+    .sprite {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__name {
+    color: $primary-blue;
+    display: block;
+    font-size: rem(2.1);
+    line-height: calc(24/21);
+    font-weight: bold;
+    padding: rem(.7) 0 rem(1);
+    margin-top: auto;
+
+    @include bp(smaller) {
+      font-size: rem(2.4);
+      line-height: calc(26/24);
+    }
+  }
+}
