@@ -1,8 +1,10 @@
 // Expose breakpoint values, for edge-case media queries
 // @TODO: Eliminate *_max
+// @TODO: Rename breakpoints to something that makes sense again...bp_smaller?  Come on...
 $bp_xxs: 320px;
 $bp_xs: 550px;
 $bp_xs_max: 549px;
+$bp_smaller: 675px;
 $bp_s: 800px;
 $bp_s_max: 799px;
 $bp_m: 950px;
@@ -34,6 +36,11 @@ $bp_xl: 1280px;
   }
   @else if $point == s_max {
     @media (max-width: $bp_s_max) {
+      @content;
+    }
+  }
+  @else if $point == smaller {
+    @media (min-width: $bp-smaller) {
       @content;
     }
   }
@@ -87,4 +94,3 @@ $bp_xl: 1280px;
     }
   }
 }
-
