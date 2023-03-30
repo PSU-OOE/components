@@ -1,10 +1,4 @@
 // Variables
-const modal_close = document.querySelector(".modal__close");
-const modal_trigger = document.querySelector(".modal__trigger");
-const modal_container = document.querySelector(".modal__container");
-const modal_overlay = document.querySelector(".modal__overlay");
-const modal_svg = document.querySelector(".modal__close .sprite--fa-times");
-
 const modal_closes = document.querySelectorAll(".modal__close");
 const modal_triggers = document.querySelectorAll(".modal__trigger");
 const modal_containers = document.querySelectorAll(".modal__container");
@@ -19,23 +13,9 @@ modal_containers.forEach((container) => {
   container.setAttribute("aria-modal", "true");
 });
 
-// Functions
-// const showModal = () => {
-//   modal_container.style.display = "flex";
-//   modal_overlay.style.display = "flex";
-// }
-
-// const hideModal = () => {
-//   modal_container.style.display = "none";
-//   modal_overlay.style.display = "none";
-//   modal_trigger.focus();
-// }
-
-// Showing modal
-// modal_trigger.addEventListener("click", showModal);
-
+// Showing modal when clicking triggering element
 // Will likely need refactored based on final implementation/HTML/DOM structure
-// TODO: Figure out why it's only firing once per button
+// TODO: Figure out why it's only firing once per click per button
 modal_triggers.forEach((trigger) => trigger.addEventListener("click", (e) => {
   const modal = trigger.nextElementSibling;
   modal.classList.add("show-modal");
@@ -64,8 +44,14 @@ modal_closes.forEach((close) => {
 });
 
 // Hiding modal when clicking outside of it and moving focus back to triggering element
-modal_overlay.addEventListener("click", (e) => {
-  if ((e.target == modal_overlay) && (modal_container.style.display == "flex") && (modal_overlay.style.display == "flex")) {
-    hideModal();
+// TODO: Figure out why it's only firing once per click per overlay
+modal_overlays.forEach((overlay) => overlay.addEventListener("click", (e) => {
+  const modal = overlay.parentElement;
+  const modalTrigger = modal.previousElementSibling;
+
+  if ((e.target == overlay) && (modal.classList.contains("show-modal"))) {
+    modal.classList.add("hide-modal");
+    modal.classList.remove("show-modal");
+    modalTrigger.focus();
   }
-});
+}));
