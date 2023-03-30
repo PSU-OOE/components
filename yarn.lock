@@ -1693,6 +1693,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/modal@workspace:packages/modal":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/modal@workspace:packages/modal"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/monorepo-dev@workspace:.":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/monorepo-dev@workspace:."
