@@ -48,10 +48,6 @@
 
     &--related#{&}--active {
       color: $nittany-navy;
-
-      .parallel-navigation-item__icon .sprite {
-        display: none;
-      }
     }
   }
 
