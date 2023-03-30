@@ -1,0 +1,7 @@
+{% set content = 'Lorem ipsum dolor sit amet. <a href="#">Link to something</a>' %}
+
+<button class="modal__trigger">Click me to open the modal</button>
+
+{% include '@molecules/modal/modal.twig' with {
+  content: content,
+} only %}
