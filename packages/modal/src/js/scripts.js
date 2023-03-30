@@ -5,11 +5,19 @@ const modal_container = document.querySelector(".modal__container");
 const modal_overlay = document.querySelector(".modal__overlay");
 const modal_svg = document.querySelector(".modal__close .sprite--fa-times");
 
+const modal_closes = document.querySelectorAll(".modal__close");
+const modal_triggers = document.querySelectorAll(".modal__trigger");
+const modal_containers = document.querySelectorAll(".modal__container");
+const modal_overlays = document.querySelectorAll(".modal__overlay");
+const modal_svgs = document.querySelectorAll(".modal__close .sprite--fa-times");
+
 // Attributes
-modal_close.setAttribute("alt", "Close");
-modal_container.setAttribute("role", "dialog");
-modal_container.setAttribute("aria-modal", "true");
-modal_svg.setAttribute("aria-hidden", "true");
+modal_closes.forEach(close => close.setAttribute("alt", "Close"));
+modal_svgs.forEach(svg => svg.setAttribute("aria-hidden", "true"));
+modal_containers.forEach((container) => {
+  container.setAttribute("role", "dialog");
+  container.setAttribute("aria-modal", "true");
+});
 
 // Functions
 const showModal = () => {
