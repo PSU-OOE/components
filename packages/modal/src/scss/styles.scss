@@ -1,4 +1,10 @@
 .modal {
+  &.show-modal {
+    .modal__overlay,
+    .modal__container {
+      display: flex;
+    }
+  }
   .modal__overlay {
     display: none;
     align-items: center;
@@ -27,15 +33,15 @@
     margin: 1rem;
   }
 
-  .modal__overlay,
-  .modal__container {
-    &.show-modal {
-      display: flex;
-    }
-    &.hide-modal {
-      display: none;
-    }
-  }
+  // .modal__overlay,
+  // .modal__container {
+  //   &.show-modal {
+  //     display: flex;
+  //   }
+  //   &.hide-modal {
+  //     display: none;
+  //   }
+  // }
 
   .modal__close {
     position: absolute;
