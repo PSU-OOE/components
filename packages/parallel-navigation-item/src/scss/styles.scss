@@ -13,9 +13,6 @@
     padding: rem(1.4) 0;
     align-items: center;
 
-    &--beaver-blue {
-      color: $beaver-blue;
-    }
     @include bp(m) {
       font-size: rem(1.8);
       padding: rem(1.8) 0;
@@ -33,12 +30,12 @@
 
     &:focus,
     &:hover {
-      .sprite {
+      .parallel-navigation-item__icon .sprite {
         transform: scale(1.25);
       }
     }
 
-    &.active {
+    &--active {
       color: $primary-blue;
       font-weight: 700;
     }
@@ -47,13 +44,13 @@
       color: $primary-blue;
       font-size: rem(1.8);
       padding: rem(1.8) 0;
+    }
 
-      &.active {
-        color: $nittany-navy;
+    &--related.&--active {
+      color: $nittany-navy;
 
-        .sprite {
-          display: none;
-        }
+      .parallel-navigation-item__icon .sprite {
+        display: none;
       }
     }
   }
