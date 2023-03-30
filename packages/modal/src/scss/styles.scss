@@ -27,6 +27,16 @@
     margin: 1rem;
   }
 
+  .modal__overlay,
+  .modal__container {
+    &.show-modal {
+      display: flex;
+    }
+    &.hide-modal {
+      display: none;
+    }
+  }
+
   .modal__close {
     position: absolute;
     top: 0.5rem;
