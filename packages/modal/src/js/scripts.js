@@ -1,15 +1,17 @@
+// Variables
 const modal_close = document.querySelector(".modal__close");
 const modal_trigger = document.querySelector(".modal__trigger");
 const modal_container = document.querySelector(".modal__container");
 const modal_overlay = document.querySelector(".modal__overlay");
 const modal_svg = document.querySelector(".modal__close .sprite--fa-times");
 
+// Attributes
 modal_close.setAttribute("alt", "Close");
 modal_container.setAttribute("role", "dialog");
 modal_container.setAttribute("aria-modal", "true");
 modal_svg.setAttribute("aria-hidden", "true");
 
-// Functions to show and hide modal
+// Functions
 const showModal = () => {
   modal_container.style.display = "flex";
   modal_overlay.style.display = "flex";
