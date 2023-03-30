@@ -20,31 +20,38 @@ modal_containers.forEach((container) => {
 });
 
 // Functions
-const showModal = () => {
-  modal_container.style.display = "flex";
-  modal_overlay.style.display = "flex";
-}
+// const showModal = () => {
+//   modal_container.style.display = "flex";
+//   modal_overlay.style.display = "flex";
+// }
 
-const hideModal = () => {
-  modal_container.style.display = "none";
-  modal_overlay.style.display = "none";
-  modal_trigger.focus();
-}
+// const hideModal = () => {
+//   modal_container.style.display = "none";
+//   modal_overlay.style.display = "none";
+//   modal_trigger.focus();
+// }
 
 // Showing modal
 // modal_trigger.addEventListener("click", showModal);
 
+// Will likely need refactored based on final implementation/HTML/DOM structure
+// TODO: Figure out why it's only firing once per button
 modal_triggers.forEach((trigger) => trigger.addEventListener("click", (e) => {
-  // Will likely need refactored based on final implementation/HTML/DOM structure
   const modal = trigger.nextElementSibling;
   modal.classList.add("show-modal");
 }));
 
 // Hiding modal when clicking on x and moving focus back to triggering element
-modal_close.addEventListener("click", hideModal);
+// modal_close.addEventListener("click", hideModal);
 
 modal_closes.forEach((close) => close.addEventListener("click", (e) => {
-  alert("hi");
+  const modalContainer = close.parentElement;
+  const modalOverlay = modalContainer.parentElement;
+  const modal = modalOverlay.parentElement;
+  const modalTrigger = modal.previousElementSibling;
+  modal.classList.add("hide-modal");
+  modal.classList.remove("show-modal");
+  modalTrigger.focus();
 }));
 
 // Hiding modal when hitting the enter key on x and moving focus back to triggering element
