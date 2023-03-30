@@ -35,12 +35,17 @@ const hideModal = () => {
 // modal_trigger.addEventListener("click", showModal);
 
 modal_triggers.forEach((trigger) => trigger.addEventListener("click", (e) => {
+  // Will likely need refactored based on final implementation/HTML/DOM structure
   const modal = trigger.nextElementSibling;
   modal.classList.add("show-modal");
 }));
 
 // Hiding modal when clicking on x and moving focus back to triggering element
 modal_close.addEventListener("click", hideModal);
+
+modal_closes.forEach((close) => close.addEventListener("click", (e) => {
+  alert("hi");
+}));
 
 // Hiding modal when hitting the enter key on x and moving focus back to triggering element
 modal_close.addEventListener("keyup", (e) => {

@@ -5,6 +5,14 @@
       display: flex;
     }
   }
+
+  &.hide-modal {
+    .modal__overlay,
+    .modal__container {
+      display: none;
+    }
+  }
+
   .modal__overlay {
     display: none;
     align-items: center;
