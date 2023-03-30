@@ -61,6 +61,19 @@ modal_close.addEventListener("keyup", (e) => {
   }
 });
 
+modal_closes.forEach((close) => close.addEventListener("keyup", (e) => {
+  const modalContainer = close.parentElement;
+  const modalOverlay = modalContainer.parentElement;
+  const modal = modalOverlay.parentElement;
+  const modalTrigger = modal.previousElementSibling;
+
+  if (e.key === 'Enter' || e.keyCode === 13) {
+    modal.classList.add("hide-modal");
+    modal.classList.remove("show-modal");
+    modalTrigger.focus();
+  }
+}));
+
 // Hiding modal when clicking outside of it and moving focus back to triggering element
 modal_overlay.addEventListener("click", (e) => {
   if ((e.target == modal_overlay) && (modal_container.style.display == "flex") && (modal_overlay.style.display == "flex")) {
