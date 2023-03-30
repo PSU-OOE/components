@@ -46,7 +46,7 @@
       padding: rem(1.8) 0;
     }
 
-    &--related.&--active {
+    &--related#{&}--active {
       color: $nittany-navy;
 
       .parallel-navigation-item__icon .sprite {
