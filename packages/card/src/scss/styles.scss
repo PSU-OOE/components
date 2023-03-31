@@ -85,6 +85,9 @@
     line-height:calc(20/14);
   }
 
+  &__description {
+    margin-top: rem(1.5);
+  }
   &__link {
     position: absolute;
     inset: 0;
