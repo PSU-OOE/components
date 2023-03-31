@@ -11,6 +11,7 @@
       &--video {
         .sprite {
           color: #FF0000;
+          opacity: 1;
         }
       }
     }
@@ -71,9 +72,12 @@
       justify-content: center;
 
       .sprite {
-        transition: color .2s linear;
+        transition: color .1s cubic-bezier(0.4,0,1,1), opacity .1s cubic-bezier(0.4,0,1,1);
         width: calc(13% + 2rem);
         height: calc(13% + 2rem);
+        opacity: 0.8;
+        color: #212121;
+
       }
     }
 
