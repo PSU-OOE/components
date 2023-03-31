@@ -39,17 +39,9 @@
     height: auto;
     padding: 5rem;
     margin: 1rem;
+    overflow: auto;
+    max-height: 100%;
   }
-
-  // .modal__overlay,
-  // .modal__container {
-  //   &.show-modal {
-  //     display: flex;
-  //   }
-  //   &.hide-modal {
-  //     display: none;
-  //   }
-  // }
 
   .modal__close {
     position: absolute;
