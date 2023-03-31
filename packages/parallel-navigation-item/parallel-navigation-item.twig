@@ -1,10 +1,9 @@
-{% set link_classes = ['parallel-navigation-item__link'] %}
-{% if active %}
-  {% set link_classes = link_classes|merge(['parallel-navigation-item__link--active']) %}
-{% endif %}
-{% if variation %}
-  {% set link_classes = link_classes|merge(['parallel-navigation-item__link--' ~ variation]) %}
-{% endif %}
+{% set link_classes = [
+  'parallel-navigation-item__link',
+  active ? 'parallel-navigation-item__link--active',
+  variation in ['related']? 'parallel-navigation-item__link--' ~ variation,
+] %}
+
 <span class="parallel-navigation-item">
   <a class="{{ link_classes|join(' ') }}" href="{{ url }}">
     <span class="parallel-navigation-item__title">
