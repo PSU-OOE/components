@@ -54,6 +54,7 @@ modals.forEach((modal) => {
     }
   });
 
+  // Hiding modal when hitting the escape key
   modal.addEventListener("keyup", (e) => {
     if ((e.key == "Escape") || (e.keycode === 27) && (modal.classList.contains("show-modal"))) {
       hideModal(modal);
