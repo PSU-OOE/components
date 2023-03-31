@@ -44,7 +44,6 @@ modal_closes.forEach((close) => {
 });
 
 // Hiding modal when clicking outside of it and moving focus back to triggering element
-// TODO: Figure out why it's only firing once per click per overlay
 modal_overlays.forEach((overlay) => overlay.addEventListener("click", (e) => {
   const modal = overlay.parentElement;
   const modalTrigger = modal.previousElementSibling;
