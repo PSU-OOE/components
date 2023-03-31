@@ -15,10 +15,10 @@ modal_containers.forEach((container) => {
 
 // Showing modal when clicking triggering element
 // Will likely need refactored based on final implementation/HTML/DOM structure
-// TODO: Figure out why it's only firing once per click per button
 modal_triggers.forEach((trigger) => trigger.addEventListener("click", (e) => {
   const modal = trigger.nextElementSibling;
   modal.classList.add("show-modal");
+  modal.classList.remove("hide-modal");
 }));
 
 // Hiding modal and returning focus to triggering element after clicking or hitting enter key on close button
