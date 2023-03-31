@@ -7,6 +7,12 @@
   &:hover {
     .card__media-overlay {
       opacity: 1;
+
+      &--video {
+        .sprite {
+          color: #FF0000;
+        }
+      }
     }
     .card__title {
       text-decoration-color: $primary-blue;
@@ -51,11 +57,26 @@
   }
 
   &__media-overlay {
-    background: radial-gradient(circle, rgba($nittany-navy, 0) calc(100% / 3), rgba($nittany-navy, calc(1/3)), 75%, rgba($nittany-navy, calc(2/3)) 100%);
-    transition: opacity .2s linear;
-    opacity: 0;
     position: absolute;
     inset: 0;
+
+    &--standard {
+      transition: opacity .2s linear;
+      background: radial-gradient(circle, rgba($nittany-navy, 0) calc(100% / 3), rgba($nittany-navy, calc(1/3)), 75%, rgba($nittany-navy, calc(2/3)) 100%);
+      opacity: 0;
+    }
+    &--video {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .sprite {
+        transition: color .2s linear;
+        width: calc(13% + 2rem);
+        height: calc(13% + 2rem);
+      }
+    }
+
   }
 
   &__text {

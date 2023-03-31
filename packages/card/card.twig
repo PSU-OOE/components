@@ -22,7 +22,6 @@ Variables:
 {% endif %}
 
 {% set image_overlay_style = overlay_style in ['standard', 'video'] ? overlay_style : 'standard' %}
-{% set media_classes = media_classes|merge(['card__media--' ~ image_overlay_style]) %}
 
 <div class="{{ card_classes|join(' ') }}">
   <div class="card__content">
@@ -31,7 +30,11 @@ Variables:
         <div class="card__media-placeholder">
           <img class="card__media-image" src="{{ image }}" alt="{{ image_alt }}" loading="lazy"/>
         </div>
-        <span class="card__media-overlay"></span>
+        <span class="card__media-overlay card__media-overlay--{{ image_overlay_style }}">
+          {% if image_overlay_style == 'video' %}
+            {% include '@atoms/sprite/sprite.twig' with { name: 'youtube-player'} only %}
+          {% endif %}
+        </span>
       </div>
     {% endif %}
     <span class="card__text" aria-hidden="true">
