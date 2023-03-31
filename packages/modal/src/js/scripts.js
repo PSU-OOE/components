@@ -13,12 +13,22 @@ modal_containers.forEach((container) => {
   container.setAttribute("aria-modal", "true");
 });
 
+// Functions
+const showModal = (element) => {
+  element.classList.add("show-modal");
+  element.classList.remove("hide-modal");
+};
+
+const hideModal = (element) => {
+  element.classList.add("hide-modal");
+  element.classList.remove("show-modal");
+};
+
 // Showing modal when clicking triggering element
 // Will likely need refactored based on final implementation/HTML/DOM structure
 modal_triggers.forEach((trigger) => trigger.addEventListener("click", (e) => {
   const modal = trigger.nextElementSibling;
-  modal.classList.add("show-modal");
-  modal.classList.remove("hide-modal");
+  showModal(modal);
 }));
 
 // Hiding modal and returning focus to triggering element after clicking or hitting enter key on close button
@@ -27,15 +37,13 @@ modal_closes.forEach((close) => {
   const modalTrigger = modal.previousElementSibling;
 
   close.addEventListener("click", (e) => {
-    modal.classList.add("hide-modal");
-    modal.classList.remove("show-modal");
+    hideModal(modal);
     modalTrigger.focus();
   })
 
   close.addEventListener("keyup", (e) => {
     if (e.key === 'Enter' || e.keyCode === 13) {
-      modal.classList.add("hide-modal");
-      modal.classList.remove("show-modal");
+      hideModal(modal);
       modalTrigger.focus();
     }
   });
@@ -47,8 +55,7 @@ modal_overlays.forEach((overlay) => overlay.addEventListener("click", (e) => {
   const modalTrigger = modal.previousElementSibling;
 
   if ((e.target == overlay) && (modal.classList.contains("show-modal"))) {
-    modal.classList.add("hide-modal");
-    modal.classList.remove("show-modal");
+    hideModal(modal);
     modalTrigger.focus();
   }
 }));
