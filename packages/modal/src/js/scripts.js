@@ -53,4 +53,11 @@ modals.forEach((modal) => {
       modalTrigger.focus();
     }
   });
+
+  modal.addEventListener("keyup", (e) => {
+    if ((e.key == "Escape") || (e.keycode === 27) && (modal.classList.contains("show-modal"))) {
+      hideModal(modal);
+      moveFocus(modalTrigger);
+    }
+  })
 });
