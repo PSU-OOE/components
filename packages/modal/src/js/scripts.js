@@ -16,6 +16,10 @@ const moveFocus = (element) => {
   element.focus();
 };
 
+// TODO: All functionality to return focus to the triggering element will likely need to be refactored
+// based on final implementation/HTML/DOM structure. For now, it's a button that is the previous direct sibling
+// to the outer .modal div
+
 modals.forEach((modal) => {
   const modalTrigger = modal.previousElementSibling;
   const modalOverlay = modal.firstElementChild;
@@ -29,10 +33,6 @@ modals.forEach((modal) => {
   modalContainer.setAttribute("tabindex", "0");
   modalCloseBtn.setAttribute("alt", "Close");
   modalCloseBtnSvg.setAttribute("aria-hidden", "true");
-
-  // TODO: All functionality to return focus to the triggering element will likely need to be refactored
-  // based on final implementation/HTML/DOM structure. For now, it's a button that is the previous direct sibling
-  // to the outer .modal div
 
   // Showing modal when clicking triggering element
   modalTrigger.addEventListener("click", (e) => {
