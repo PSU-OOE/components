@@ -24,8 +24,11 @@ const hideModal = (element) => {
   element.classList.remove("show-modal");
 };
 
+// TODO: All functionality to return focus to the triggering element will likely need to be refactored
+// based on final implementation/HTML/DOM structure. For now, it's a button that is the previous direct sibling
+// to the outer .modal div
+
 // Showing modal when clicking triggering element
-// Will likely need refactored based on final implementation/HTML/DOM structure
 modal_triggers.forEach((trigger) => trigger.addEventListener("click", (e) => {
   const modal = trigger.nextElementSibling;
   showModal(modal);
