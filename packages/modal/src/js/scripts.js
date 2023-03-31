@@ -34,7 +34,7 @@ modals.forEach((modal) => {
   modalCloseBtn.setAttribute("alt", "Close");
   modalCloseBtnSvg.setAttribute("aria-hidden", "true");
 
-  // Showing modal when clicking triggering element
+  // Showing modal when clicking triggering element and moving focus to modal container
   modalTrigger.addEventListener("click", (e) => {
     showModal(modal);
     moveFocus(modalContainer);
@@ -54,7 +54,7 @@ modals.forEach((modal) => {
     }
   });
 
-  // Hiding modal when hitting the escape key
+  // Hiding modal when hitting the escape key and moving focus back to triggering element
   modal.addEventListener("keyup", (e) => {
     if ((e.key == "Escape") || (e.keycode === 27) && (modal.classList.contains("show-modal"))) {
       hideModal(modal);
