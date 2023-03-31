@@ -50,7 +50,7 @@ modals.forEach((modal) => {
   modalOverlay.addEventListener("click", (e) => {
     if ((e.target == modalOverlay) && (modal.classList.contains("show-modal"))) {
       hideModal(modal);
-      modalTrigger.focus();
+      moveFocus(modalTrigger);
     }
   });
 
