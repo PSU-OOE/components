@@ -23,9 +23,7 @@ modal_triggers.forEach((trigger) => trigger.addEventListener("click", (e) => {
 
 // Hiding modal and returning focus to triggering element after clicking or hitting enter key on close button
 modal_closes.forEach((close) => {
-  const modalContainer = close.parentElement;
-  const modalOverlay = modalContainer.parentElement;
-  const modal = modalOverlay.parentElement;
+  const modal = close.parentElement.parentElement.parentElement;
   const modalTrigger = modal.previousElementSibling;
 
   close.addEventListener("click", (e) => {
