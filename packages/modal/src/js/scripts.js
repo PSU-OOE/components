@@ -12,6 +12,10 @@ const hideModal = (element) => {
   element.classList.remove("show-modal");
 };
 
+const moveFocus = (element) => {
+  element.focus();
+};
+
 modals.forEach((modal) => {
   const modalTrigger = modal.previousElementSibling;
   const modalOverlay = modal.firstElementChild;
@@ -22,6 +26,7 @@ modals.forEach((modal) => {
   // Attributes
   modalContainer.setAttribute("role", "dialog");
   modalContainer.setAttribute("aria-modal", "true");
+  modalContainer.setAttribute("tabindex", "0");
   modalCloseBtn.setAttribute("alt", "Close");
   modalCloseBtnSvg.setAttribute("aria-hidden", "true");
 
@@ -32,12 +37,13 @@ modals.forEach((modal) => {
   // Showing modal when clicking triggering element
   modalTrigger.addEventListener("click", (e) => {
     showModal(modal);
+    moveFocus(modalContainer);
   });
 
   // Hiding modal and returning focus to triggering element after clicking/hitting enter key on close button
   modalCloseBtn.addEventListener("click", (e) => {
     hideModal(modal);
-    modalTrigger.focus();
+    moveFocus(modalTrigger);
   });
 
   // Hiding modal when clicking outside of it and moving focus back to triggering element
@@ -47,6 +53,4 @@ modals.forEach((modal) => {
       modalTrigger.focus();
     }
   });
-
-
 });
