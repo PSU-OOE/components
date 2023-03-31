@@ -1,17 +1,5 @@
 // Variables
-const modal_closes = document.querySelectorAll(".modal__close");
-const modal_triggers = document.querySelectorAll(".modal__trigger");
-const modal_containers = document.querySelectorAll(".modal__container");
-const modal_overlays = document.querySelectorAll(".modal__overlay");
-const modal_svgs = document.querySelectorAll(".modal__close .sprite--fa-times");
-
-// Attributes
-modal_closes.forEach(close => close.setAttribute("alt", "Close"));
-modal_svgs.forEach(svg => svg.setAttribute("aria-hidden", "true"));
-modal_containers.forEach((container) => {
-  container.setAttribute("role", "dialog");
-  container.setAttribute("aria-modal", "true");
-});
+const modals = document.querySelectorAll(".modal");
 
 // Functions
 const showModal = (element) => {
@@ -24,41 +12,41 @@ const hideModal = (element) => {
   element.classList.remove("show-modal");
 };
 
-// TODO: All functionality to return focus to the triggering element will likely need to be refactored
-// based on final implementation/HTML/DOM structure. For now, it's a button that is the previous direct sibling
-// to the outer .modal div
-
-// Showing modal when clicking triggering element
-modal_triggers.forEach((trigger) => trigger.addEventListener("click", (e) => {
-  const modal = trigger.nextElementSibling;
-  showModal(modal);
-}));
-
-// Hiding modal and returning focus to triggering element after clicking or hitting enter key on close button
-modal_closes.forEach((close) => {
-  const modal = close.parentElement.parentElement.parentElement;
+modals.forEach((modal) => {
   const modalTrigger = modal.previousElementSibling;
+  const modalOverlay = modal.firstElementChild;
+  const modalContainer = modalOverlay.firstElementChild;
+  const modalCloseBtn = modalContainer.firstElementChild;
+  const modalCloseBtnSvg = modalCloseBtn.firstElementChild;
 
-  close.addEventListener("click", (e) => {
+  // Attributes
+  modalContainer.setAttribute("role", "dialog");
+  modalContainer.setAttribute("aria-modal", "true");
+  modalCloseBtn.setAttribute("alt", "Close");
+  modalCloseBtnSvg.setAttribute("aria-hidden", "true");
+
+  // TODO: All functionality to return focus to the triggering element will likely need to be refactored
+  // based on final implementation/HTML/DOM structure. For now, it's a button that is the previous direct sibling
+  // to the outer .modal div
+
+  // Showing modal when clicking triggering element
+  modalTrigger.addEventListener("click", (e) => {
+    showModal(modal);
+  });
+
+  // Hiding modal and returning focus to triggering element after clicking/hitting enter key on close button
+  modalCloseBtn.addEventListener("click", (e) => {
     hideModal(modal);
     modalTrigger.focus();
-  })
+  });
 
-  close.addEventListener("keyup", (e) => {
-    if (e.key === 'Enter' || e.keyCode === 13) {
+  // Hiding modal when clicking outside of it and moving focus back to triggering element
+  modalOverlay.addEventListener("click", (e) => {
+    if ((e.target == modalOverlay) && (modal.classList.contains("show-modal"))) {
       hideModal(modal);
       modalTrigger.focus();
     }
   });
+
+
 });
-
-// Hiding modal when clicking outside of it and moving focus back to triggering element
-modal_overlays.forEach((overlay) => overlay.addEventListener("click", (e) => {
-  const modal = overlay.parentElement;
-  const modalTrigger = modal.previousElementSibling;
-
-  if ((e.target == overlay) && (modal.classList.contains("show-modal"))) {
-    hideModal(modal);
-    modalTrigger.focus();
-  }
-}));
