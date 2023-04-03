@@ -1,4 +1,5 @@
-<div class="grid grid--three-col">
+{% set column_map = {3: 'three-col', 4: 'four-col'} %}
+<div class="grid grid--{{ column_map[columns] ?: column_map[3] }}">
   {% for item in items %}
     <div class="grid__item">
       {{ item }}
