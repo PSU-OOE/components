@@ -1,0 +1,35 @@
+{% set item_titles = [
+  { title: "Academic Calendar", active: true },
+  { title: "Academic Warning and Suspension" },
+  { title: "Preparing for and Attending Courses" },
+  { title: "Course Work and Success" },
+  { title: "Academic Advising" },
+  { title: "Military Benefits" },
+  { title: "Organization and project funding request" },
+  { title: "Care and Concern (financial hardship)" }
+]
+%}
+
+{% set parallel_navigation_items = [] %}
+{% for item in item_titles %}
+  {% set content %}
+    {% include '@molecules/parallel-navigation-item/parallel-navigation-item.twig' with {
+      active: item.active,
+      url: '#',
+      title: item.title,
+      variation: 'related',
+    } %}
+  {% endset %}
+  {% set parallel_navigation_items = parallel_navigation_items|merge([content]) %}
+{% endfor %}
+
+{% include '@organisms/parallel-navigation/parallel-navigation.twig' with {
+  id: "related-navigation",
+  heading: "Related Topics",
+  intro_text: "Additional resources related to finances and financial need",
+  heading_level: "h2",
+  heading_size: "large",
+  heading_color: "neutral",
+  columns: 2,
+  items: parallel_navigation_items
+} only %}

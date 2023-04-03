@@ -1735,11 +1735,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/parallel-navigation@^1.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
+"@psu-ooe/parallel-navigation-item@^1.0, @psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/parallel-navigation@^2.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
   dependencies:
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/parallel-navigation-item": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1776,7 +1786,8 @@ __metadata:
     "@psu-ooe/intro-form": ^1.0
     "@psu-ooe/navigation-tile": ^1.0
     "@psu-ooe/overlay": ^1.0
-    "@psu-ooe/parallel-navigation": ^1.0
+    "@psu-ooe/parallel-navigation": ^2.0
+    "@psu-ooe/parallel-navigation-item": ^1.0
     "@psu-ooe/polyfill-flex-gap": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/quote": ^1.0

@@ -1,21 +1,38 @@
+{% set item_titles = [
+  { title: "Business (62)", active: true },
+  { title: "Education (22)" },
+  { title: "Energy and Sustainability (11)" },
+  { title: "Engineering (12)" },
+  { title: "Geospatial (10)" },
+  { title: "Health and Family Services (11)" },
+  { title: "Homeland Security (16)" },
+  { title: "Human Resources, Labor, and Employment Relations (8)" },
+  { title: "Liberal Arts and Communications (16)" },
+  { title: "Nursing (8)" },
+  { title: "Technology, Sciences, and Math (25)" },
+  { title: "Turfgrass (5)" }
+]
+%}
+
+{% set parallel_navigation_items = [] %}
+{% for item in item_titles %}
+  {% set content %}
+    {% include '@molecules/parallel-navigation-item/parallel-navigation-item.twig' with {
+      active: item.active,
+      url: '#',
+      title: item.title
+    } %}
+  {% endset %}
+  {% set parallel_navigation_items = parallel_navigation_items|merge([content]) %}
+{% endfor %}
+
 {% include '@organisms/parallel-navigation/parallel-navigation.twig' with {
   id: "topics-2-col",
   heading: "Explore All Topics",
   intro_text: "Penn State World Campus offers 180 degrees and certificates spanning 11 topic areas:",
   heading_level: "h2",
+  heading_size: "medium",
+  heading_color: "neutral",
   columns: 2,
-  items: [
-    { url: "#", title: "Business (62)", active: true },
-    { url: "#", title: "Education (22)" },
-    { url: "#", title: "Energy and Sustainability (11)" },
-    { url: "#", title: "Engineering (12)" },
-    { url: "#", title: "Geospatial (10)" },
-    { url: "#", title: "Health and Family Services (11)" },
-    { url: "#", title: "Homeland Security (16)" },
-    { url: "#", title: "Human Resources, Labor, and Employment Relations (8)" },
-    { url: "#", title: "Liberal Arts and Communications (16)" },
-    { url: "#", title: "Nursing (8)" },
-    { url: "#", title: "Technology, Sciences, and Math (25)" },
-    { url: "#", title: "Turfgrass (5)" }
-  ]
+  items: parallel_navigation_items
 } only %}
