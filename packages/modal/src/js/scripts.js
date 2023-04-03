@@ -28,10 +28,6 @@ modals.forEach((modal) => {
   const modalCloseBtnSvg = modalCloseBtn.firstElementChild;
 
   // Attributes
-  modalContainer.setAttribute("role", "dialog");
-  modalContainer.setAttribute("aria-modal", "true");
-  modalContainer.setAttribute("tabindex", "0");
-  modalCloseBtn.setAttribute("alt", "Close");
   modalCloseBtnSvg.setAttribute("aria-hidden", "true");
 
   // Showing modal when clicking triggering element and moving focus to modal container
