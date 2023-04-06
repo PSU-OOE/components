@@ -63,13 +63,14 @@
 
       modal.addEventListener("keydown", (e) => {
         if ((e.key == "Tab" || e.keyCode === 9) && modal.classList.contains("show-modal")) {
-          if (document.activeElement === lastFocusableElement) {
-            firstFocusableElement.focus();
-            e.preventDefault();
-          }
           if (e.shiftKey) {
             if (document.activeElement === firstFocusableElement) {
               lastFocusableElement.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
               e.preventDefault();
             }
           }
