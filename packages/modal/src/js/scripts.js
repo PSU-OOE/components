@@ -66,12 +66,12 @@
 
         if ((e.key == "Tab" || e.keyCode === 9) && modal.classList.contains("show-modal")) {
           if (e.shiftKey) {
-            if (context.activeElement === firstFocusableElement) {
+            if (document.activeElement === firstFocusableElement) {
               lastFocusableElement.focus();
               e.preventDefault();
             }
           } else {
-            if (context.activeElement === lastFocusableElement) {
+            if (document.activeElement === lastFocusableElement) {
               firstFocusableElement.focus();
               e.preventDefault();
             }
