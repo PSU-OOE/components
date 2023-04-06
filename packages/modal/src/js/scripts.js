@@ -1,7 +1,7 @@
 (cms => {
   cms.attach('modal', context => {
     // Variables
-    const modals = document.querySelectorAll(".modal");
+    const modals = context.querySelectorAll(".modal");
 
     // Functions
     const showModal = (element) => {
@@ -66,12 +66,12 @@
 
         if ((e.key == "Tab" || e.keyCode === 9) && modal.classList.contains("show-modal")) {
           if (e.shiftKey) {
-            if (document.activeElement === firstFocusableElement) {
+            if (context.activeElement === firstFocusableElement) {
               lastFocusableElement.focus();
               e.preventDefault();
             }
           } else {
-            if (document.activeElement === lastFocusableElement) {
+            if (context.activeElement === lastFocusableElement) {
               firstFocusableElement.focus();
               e.preventDefault();
             }
