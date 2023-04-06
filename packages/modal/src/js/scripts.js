@@ -55,10 +55,24 @@
         }
       });
 
-      // Hiding modal when hitting the escape key and moving focus back to triggering element
       modal.addEventListener("keyup", (e) => {
-        if ((e.key == "Escape") || (e.keycode === 27) && (modal.classList.contains("show-modal"))) {
+        if ((e.key == "Escape" || e.keyCode == 27) && modal.classList.contains("show-modal")) {
           modal.dispatchEvent(new CustomEvent('component:deactivate'));
+        }
+      });
+
+      modal.addEventListener("keydown", (e) => {
+        if ((e.key == "Tab" || e.keyCode === 9) && modal.classList.contains("show-modal")) {
+          if (document.activeElement === lastFocusableElement) {
+            firstFocusableElement.focus();
+            e.preventDefault();
+          }
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+              e.preventDefault();
+            }
+          }
         }
       })
     });
