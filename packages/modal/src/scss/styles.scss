@@ -1,3 +1,5 @@
+@import "../../../base/src/scss/imports/variables";
+
 .modal {
   &.show-modal {
     .modal__overlay,
@@ -58,6 +60,10 @@
       background-color: $primary-blue;
       color: $white;
       cursor: pointer;
+
+      .sprite--fa-times {
+        color: $white;
+      }
     }
 
     &:focus {
