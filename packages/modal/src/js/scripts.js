@@ -18,10 +18,6 @@
       element.focus();
     };
 
-    // TODO: All functionality to return focus to the triggering element will likely need to be refactored
-    // based on final implementation/HTML/DOM structure. For now, it's a button that is the previous direct sibling
-    // to the outer .modal div
-
     modals.forEach((modal) => {
       const modalOverlay = modal.firstElementChild;
       const modalContainer = modalOverlay.firstElementChild;
