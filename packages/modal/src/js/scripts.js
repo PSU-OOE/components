@@ -23,6 +23,10 @@
       const modalContainer = modalOverlay.firstElementChild;
       const modalCloseBtn = modalContainer.firstElementChild;
 
+      const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      const firstFocusableElement = focusableElements[0];
+      const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
       modal.addEventListener('component:activate', e => {
         if (!modal.classList.contains('show-modal')) {
           modal.modalTrigger = e.detail.modal_trigger;
