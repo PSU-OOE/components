@@ -25,10 +25,22 @@
   }
 
   &__title {
-    @include tile-nav-highlight-title($light-grey, $nittany-navy, $primary-blue);
-    span:after {
-      content: unset;
+    background-color: $light-grey;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline;
+    max-width: 95%;
+    padding: rem(0.9) 0 rem(0.6);
+    box-shadow: rem(1) 0 0 0 $light-grey, rem(-1) 0 0 0 $light-grey;
+
+    span {
+      color: $nittany-navy;
+      font-size: rem(2);
+      font-weight: 700;
+      line-height: rem(2.8);
+      position: relative;
     }
+
     .sprite {
       font-size: rem(1.2);
       margin-left: rem(1);
@@ -46,10 +58,8 @@
   &--light-grey {
     background: $light-grey;
     .description-navigation-tile__title {
-      @include tile-nav-highlight-title($white, $nittany-navy, $primary-blue);
-      span:after {
-        content: unset;
-      }
+      box-shadow: rem(1) 0 0 0 $white, rem(-1) 0 0 0 $white;
+      background-color: $white;
     }
   }
 

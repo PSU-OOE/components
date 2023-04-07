@@ -66,11 +66,24 @@
   }
 
   &__title {
-    @include tile-nav-highlight-title($beaver-blue, $white, $white);
+    background-color: $beaver-blue;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    display: inline;
+    max-width: 95%;
+    padding: rem(0.9) 0 rem(0.6);
+    box-shadow: rem(1) 0 0 0 $beaver-blue, rem(-1) 0 0 0 $beaver-blue;
     transition: all .2s ease-in-out;
-    span:after {
-      content: unset;
+
+    span {
+      color: $white;
+      font-size: rem(2);
+      font-weight: 700;
+      line-height: rem(2.8);
+      position: relative;
     }
+
+
     .sprite {
       font-size: rem(1.2);
       margin-left: rem(1);
