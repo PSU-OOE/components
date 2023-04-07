@@ -26,6 +26,9 @@
 
   &__title {
     @include tile-nav-highlight-title($light-grey, $nittany-navy, $primary-blue);
+    span:after {
+      content: unset;
+    }
     .sprite {
       font-size: rem(1.2);
       margin-left: rem(1);
@@ -37,15 +40,16 @@
         display: none;
       }
     }
-    span:after {
-      content: unset;
-    }
+
   }
 
   &--light-grey {
     background: $light-grey;
     .description-navigation-tile__title {
       @include tile-nav-highlight-title($white, $nittany-navy, $primary-blue);
+      span:after {
+        content: unset;
+      }
     }
   }
 

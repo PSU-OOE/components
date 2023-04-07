@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/navigation-tile",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a navigation tile component.",
   "publishConfig": {
     "access": "public",
