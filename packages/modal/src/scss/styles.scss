@@ -1,4 +1,5 @@
 @import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
 
 .modal {
   &.show-modal {
@@ -23,10 +24,9 @@
     left: 0;
     right: 0;
     inset: 0;
-    background-color: $nittany-navy;
+    background-color: rgba($nittany-navy, 0.85);
     width: 100%;
     height: 100%;
-    opacity: 0.85;
     overflow: auto;
     overscroll-behavior: contain;
     z-index: 1;
@@ -39,18 +39,28 @@
     background-color: $white;
     width: fit-content;
     height: auto;
-    padding: 5rem;
-    margin: 1rem;
+    padding: rem(5) rem(2) rem(3) rem(2);
+    margin: rem(2);
     overflow: auto;
     max-height: 100%;
+
+    @include bp(xs) {
+      padding: rem(5);
+    }
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      outline: rem(0.2) solid $sky-blue;
+    }
   }
 
   .modal__close {
     position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    width: 5rem;
-    height: 5rem;
+    top: 0;
+    right: 0;
+    width: rem(5);
+    height: rem(5);
     padding: 0;
     border: none;
     background: none;
@@ -67,15 +77,16 @@
     }
 
     &:focus {
-      outline: solid 0.2rem $sky-blue;
-      outline-offset: 0.2rem;
+      outline: solid rem(0.2) $white;
+      outline-offset: rem(-0.4);
+
     }
 
     .sprite--fa-times {
       background: none;
       color: $primary-blue;
-      width: 2.4rem;
-      height: 2.4rem;
+      width: rem(2.4);
+      height: rem(2.4);
     }
   }
 }
