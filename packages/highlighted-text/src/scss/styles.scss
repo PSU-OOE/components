@@ -20,14 +20,14 @@
   &--primary-blue {
     .highlighted-text__highlight {
       background-color: $primary-blue;
-      box-shadow: -1.5rem 0 $primary-blue, 1.5rem 0 $primary-blue;
+      box-shadow: rem(-1.5) 0 $primary-blue, rem(1.5) 0 $primary-blue;
     }
   }
 
   &--beaver-blue {
     .highlighted-text__highlight {
       background-color: $beaver-blue;
-      box-shadow: -1.5rem 0 $beaver-blue, 1.5rem 0 $beaver-blue;
+      box-shadow: rem(-1.5) 0 $beaver-blue, rem(1.5) 0 $beaver-blue;
     }
   }
 
