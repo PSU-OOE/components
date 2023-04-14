@@ -1,4 +1,4 @@
-{% set column_map = {3: 'three-col', 4: 'four-col'} %}
+{% set column_map = {2: 'two-col', 3: 'three-col', 4: 'four-col'} %}
 <div class="grid grid--{{ column_map[columns] ?: column_map[3] }}">
   {% for item in items %}
     <div class="grid__item">
