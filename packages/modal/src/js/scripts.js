@@ -29,7 +29,8 @@
         if (!modal.classList.contains('show-modal')) {
           modal.modalTrigger = e.detail.modal_trigger;
           showModal(modal);
-          moveFocus(modalContainer);
+          // moveFocus(modalContainer);
+          moveFocus(modalTitle);
         }
       });
 
