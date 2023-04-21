@@ -71,6 +71,68 @@ $bp_xl: 1280px;
   }
 }
 
+@mixin container($point) {
+  @if $point == xxs {
+    @container (min-width: #{$bp_xxs}) {
+      @content;
+    }
+  } @else if $point == xs {
+    @container (min-width: #{$bp_xs}) {
+      @content;
+    }
+  } @else if $point == xs_max {
+    @container (max-width: #{$bp_xs_max}) {
+      @content;
+    }
+  } @else if $point == s {
+    @container (min-width: #{$bp_s}) {
+      @content;
+    }
+  } @else if $point == s_max {
+    @container (max-width: #{$bp_s_max}) {
+      @content;
+    }
+  } @else if $point == smaller {
+    @container (min-width: #{$bp-smaller}) {
+      @content;
+    }
+  } @else if $point == m {
+    @container (min-width: #{$bp_m}) {
+      @content;
+    }
+  } @else if $point == m_max {
+    @container (max-width: #{$bp_m_max}) {
+      @content;
+    }
+  } @else if $point == l {
+    @container (min-width: #{$bp_l}) {
+      @content;
+    }
+  } @else if $point == 1030 {
+    @container (min-width: #{$bp_1030}) {
+      @content;
+    }
+  } @else if $point == xl {
+    @container (min-width: #{$bp_xl}) {
+      @content;
+    }
+  }
+}
+
+@mixin container-with-fallback($point) {
+  @supports (container-type: inline-size) {
+    @include container($point) {
+      @content;
+    }
+  }
+
+  @supports (not (container-type: inline-size)) {
+    @include bp($point) {
+      @content;
+    }
+  }
+}
+
 // @TODO: Remove when not referenced by legacy layout styles.
 @mixin full-width-container {
   box-sizing: border-box;

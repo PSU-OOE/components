@@ -1,0 +1,28 @@
+@import "../../../base/src/scss/imports/layout";
+
+#container-query-test {
+  container-type: inline-size;
+  margin-bottom: 5rem;
+  p {
+    background-color: red;
+    padding: 3rem;
+
+    @include container(xs) {
+      background-color: green;
+    }
+  }
+}
+
+
+#container-query-with-fallback-test {
+  container-type: inline-size;
+
+  p {
+    background-color: red;
+    padding: 3rem;
+
+    @include container-with-fallback(xs) {
+      background-color: green;
+    }
+  }
+}
