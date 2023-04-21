@@ -71,6 +71,20 @@ $bp_xl: 1280px;
   }
 }
 
+/// Container query output.
+///
+/// @param {String} $point - The point at which the query takes effect.
+///
+/// @example scss - Apply a style above 550px to `.some-element`
+///   .some-element-container {
+///     container-type: inline-size;
+///   }
+///
+///   .some-element {
+///     @include container(xs) {
+///       background-color: green;
+///     }
+///   }
 @mixin container($point) {
   @if $point == xxs {
     @container (min-width: #{$bp_xxs}) {
@@ -119,6 +133,23 @@ $bp_xl: 1280px;
   }
 }
 
+
+/// Container query output with media query fallback.
+///
+/// @param {String} $point - The point at which the query takes effect.
+///
+/// @example scss - Apply a style above 550px to `.some-element`
+///   .some-element-container {
+///     @supports (container-type: inline-size) {
+///       container-type: inline-size;
+///     }
+///   }
+///
+///   .some-element {
+///     @include container-with-fallback(xs) {
+///       background-color: green;
+///     }
+///   }
 @mixin container-with-fallback($point) {
   @supports (container-type: inline-size) {
     @include container($point) {
