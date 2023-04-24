@@ -1,0 +1,20 @@
+{% set link_classes = [
+  'parallel-navigation-item__link',
+  active ? 'parallel-navigation-item__link--active',
+  variation in ['related']? 'parallel-navigation-item__link--' ~ variation,
+] %}
+
+<span class="parallel-navigation-item">
+  <a class="{{ link_classes|join(' ') }}" href="{{ url }}">
+    <span class="parallel-navigation-item__title">
+      {{ title }}
+    </span>
+    {% if variation == 'related' and not active %}
+      <span class="parallel-navigation-item__icon">
+        {% include '@atoms/sprite/sprite.twig' with {
+          name: 'fas-chevron-right'
+        } only %}
+      </span>
+    {% endif %}
+  </a>
+</span>

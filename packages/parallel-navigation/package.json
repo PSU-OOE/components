@@ -1,12 +1,13 @@
 {
   "name": "@psu-ooe/parallel-navigation",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Provides a parallel navigation component.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0"
+    "@psu-ooe/base": "^1.0",
+    "@psu-ooe/parallel-navigation-item": "^1.0"
   }
 }
