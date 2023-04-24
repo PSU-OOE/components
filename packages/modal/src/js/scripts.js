@@ -22,14 +22,12 @@
       const modalOverlay = modal.firstElementChild;
       const modalContainer = modalOverlay.firstElementChild;
       const modalTitle = modalContainer.firstElementChild;
-      // const modalCloseBtn = modalContainer.firstElementChild;
       const modalCloseBtn = modalTitle.nextElementSibling;
 
       modal.addEventListener('component:activate', e => {
         if (!modal.classList.contains('show-modal')) {
           modal.modalTrigger = e.detail.modal_trigger;
           showModal(modal);
-          // moveFocus(modalContainer);
           moveFocus(modalTitle);
         }
       });
