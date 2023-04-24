@@ -87,47 +87,47 @@ $bp_xl: 1280px;
 ///   }
 @mixin container($point) {
   @if $point == xxs {
-    @container (min-width: #{$bp_xxs}) {
+    @container (min-width: #{$bp_xxs - 40px}) {
       @content;
     }
   } @else if $point == xs {
-    @container (min-width: #{$bp_xs}) {
+    @container (min-width: #{$bp_xs - 40px}) {
       @content;
     }
   } @else if $point == xs_max {
-    @container (max-width: #{$bp_xs_max}) {
+    @container (max-width: #{$bp_xs_max - 40px}) {
       @content;
     }
   } @else if $point == s {
-    @container (min-width: #{$bp_s}) {
+    @container (min-width: #{$bp_s - 40px}) {
       @content;
     }
   } @else if $point == s_max {
-    @container (max-width: #{$bp_s_max}) {
+    @container (max-width: #{$bp_s_max - 40px}) {
       @content;
     }
   } @else if $point == smaller {
-    @container (min-width: #{$bp-smaller}) {
+    @container (min-width: #{$bp-smaller - 40px}) {
       @content;
     }
   } @else if $point == m {
-    @container (min-width: #{$bp_m}) {
+    @container (min-width: #{$bp_m - 40px}) {
       @content;
     }
   } @else if $point == m_max {
-    @container (max-width: #{$bp_m_max}) {
+    @container (max-width: #{$bp_m_max - 40px}) {
       @content;
     }
   } @else if $point == l {
-    @container (min-width: #{$bp_l}) {
+    @container (min-width: #{$bp_l - 40px}) {
       @content;
     }
   } @else if $point == 1030 {
-    @container (min-width: #{$bp_1030}) {
+    @container (min-width: #{$bp_1030 - 40px}) {
       @content;
     }
   } @else if $point == xl {
-    @container (min-width: #{$bp_xl}) {
+    @container (min-width: #{$bp_xl - 40px}) {
       @content;
     }
   }
