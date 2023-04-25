@@ -23,17 +23,19 @@
         </li>
       {% endif %}
       {% for key, item in items.pages %}
-        {% set aria_current = false %}
-        <li class="pager__item{{ current == key ? ' is-active' : '' }}">
-          {% if current == key %}
-            {% set title = 'Current page' %}
-            {% set aria_current = true %}
-          {% else %}
-            {% set title = 'Go to page ' ~ key %}
-          {% endif %}
-          <a href="{{ item.href }}" title="{{ title }}" {% if aria_current %}aria-current="page"{% endif %}>
+        {% set is_current_page = false %}
+        {% if current == key %}
+          {% set is_current_page = true %}
+          {% set title = 'Current page' %}
+        {% else %}
+          {% set title = 'Go to page ' ~ key %}
+        {% endif %}
+
+        <li class="pager__item{{ is_current_page ? ' is-active' : '' }}">
+
+          <a href="{{ item.href }}" title="{{ title }}" {% if is_current_page %}aria-current="page"{% endif %}>
           <span class="visually-hidden">
-            {{ current == key ? 'Current page' : 'Page' }}
+            {{ is_current_page ? 'Current page' : 'Page' }}
           </span>
             {{- key -}}
           </a>
