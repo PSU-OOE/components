@@ -1,0 +1,40 @@
+{% include '@organisms/pager/pager.twig' with {
+  heading_id: 'pager-example-hidden-pages',
+  heading: 'Pagination',
+  items: {
+    pages: {
+      4: {
+        "href" : '#'
+      },
+      5: {
+        "href" : '#'
+      },
+      6: {
+        "href" : '#'
+      },
+      7: {
+        "href" : '#'
+      },
+      8: {
+        "href" : '#'
+      },
+      9: {
+        "href" : '#'
+      }
+    },
+    first: {
+      'href' : '#'
+    },
+    previous: {
+      'href' : '#'
+    },
+    next: {
+      'href' : '#'
+    },
+    last: {
+      'href' : '#'
+    }
+  },
+  current: 8
+} only %}
+
