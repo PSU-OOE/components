@@ -5,48 +5,48 @@
 .alert {
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
   padding: rem(2);
 
   &__icon {
-    float: left;
-    width: rem(4.2);
-    height: rem(4.2);
+    width: rem(5.5);
+    height: rem(5.5);
     margin-right: rem(1);
-    display: flex;
-    align-items: center;
-    text-align: center;
 
     .sprite {
-      margin: 0 auto;
-      font-size: rem(2.5);
+      width: rem(5.5);
+      height: rem(5.5);
     }
 
   }
-  
+
   &--error {
     background-color: mix($error-red, $white, 6%);
     border-top: rem(1) solid $error-red;
 
+    .sprite {
+      color: $error-red;
+    }
   }
 
   &--warning {
-    border-top: rem(1) solid $keystone;
     background-color: mix($keystone, $white, 20%);
+    border-top: rem(1) solid $keystone;
 
-    .alert__icon {
-      border-radius: 50%;
-      background-color: darken($invent-orange, 3.5%);
-
-      .sprite {
-        color: $white;
-      }
-
+    .sprite {
+      color: darken($invent-orange, 3.5%);
     }
   }
 
   &--status {
+    background-color: mix($creek, $white, 10%);
     border-top: rem(1) solid $creek;
-    background: #f4faf9;
+
+    .sprite {
+      color: $creek;
+    }
   }
 
   &__content {
