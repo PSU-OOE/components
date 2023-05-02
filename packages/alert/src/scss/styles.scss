@@ -8,7 +8,6 @@
   padding: rem(2);
 
   &__icon {
-    border-radius: 50%;
     float: left;
     width: rem(4.2);
     height: rem(4.2);
@@ -16,21 +15,33 @@
     display: flex;
     align-items: center;
     text-align: center;
+
     .sprite {
       margin: 0 auto;
       font-size: rem(2.5);
     }
 
   }
+  
   &--error {
-    background: #fdf3f3;
+    background-color: mix($error-red, $white, 6%);
     border-top: rem(1) solid $error-red;
 
   }
 
   &--warning {
     border-top: rem(1) solid $keystone;
-    background: #fffae5;
+    background-color: mix($keystone, $white, 20%);
+
+    .alert__icon {
+      border-radius: 50%;
+      background-color: darken($invent-orange, 3.5%);
+
+      .sprite {
+        color: $white;
+      }
+
+    }
   }
 
   &--status {
