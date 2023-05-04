@@ -21,7 +21,6 @@
           content.style['transition-duration'] = (content.scrollHeight / 2) + 'ms';
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
-
           cms.expand(content);
         }
       });
