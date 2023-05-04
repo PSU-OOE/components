@@ -13,7 +13,7 @@
   {% set heading_classes = heading_classes|merge(["heading", "heading--" ~ heading_style])%}
 {% endif %}
 
-<div class="{{ classes|join(' ') }}">
+<div class="{{ classes|join(' ') }}" data-interactive-component>
   {% if heading_level %}
     <{{ heading_level }} class="{{ heading_classes|join(' ') }}">
   {% endif %}

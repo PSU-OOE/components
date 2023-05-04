@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.72",
+  "version": "1.0.73",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
