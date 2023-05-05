@@ -1,7 +1,13 @@
+{% set icon_mapping = {
+  'status': 'fa-check-circle',
+  'warning': 'fa-exclamation-circle',
+  'error': 'fa-exclamation-triangle'
+}%}
+
 <div class="alert alert--{{ severity }}" role="{{ severity }}">
   <div class="alert__inner-wrapper">
     <div class="alert__icon">
-      {% include '@atoms/sprite/sprite.twig' with { name: icon} only %}
+      {% include '@atoms/sprite/sprite.twig' with { name: icon_mapping[severity]} only %}
     </div>
     <div class="alert__content">
       {{ content }}
