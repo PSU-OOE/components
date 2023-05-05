@@ -1507,6 +1507,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/alert@workspace:packages/alert":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/alert@workspace:packages/alert"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/announcement@ ^1.0, @psu-ooe/announcement@workspace:packages/announcement":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/announcement@workspace:packages/announcement"
