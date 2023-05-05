@@ -1,8 +1,10 @@
 <div class="alert alert--{{ severity }}" role="{{ severity }}">
-  <div class="alert__icon">
-    {% include '@atoms/sprite/sprite.twig' with { name: icon} only %}
-  </div>
-  <div class="alert__content">
-    {{ content }}
+  <div class="alert__inner-wrapper">
+    <div class="alert__icon">
+      {% include '@atoms/sprite/sprite.twig' with { name: icon} only %}
+    </div>
+    <div class="alert__content">
+      {{ content }}
+    </div>
   </div>
 </div>

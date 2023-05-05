@@ -4,23 +4,25 @@
 
 .alert {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   padding: rem(2);
-  max-width: 1110px;
-  margin: 0 auto;
 
-  &__icon {
-    width: rem(5.5);
-    height: rem(5.5);
-    margin-right: rem(1);
+  &__inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1110px;
+    margin: 0 auto;
 
-    .sprite {
+    .alert__icon {
       width: rem(5.5);
       height: rem(5.5);
-    }
+      margin-right: rem(1);
 
+      .sprite {
+        width: rem(5.5);
+        height: rem(5.5);
+      }
+    }
   }
 
   &--error {
