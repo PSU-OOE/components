@@ -1693,7 +1693,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/modal@workspace:packages/modal":
+"@psu-ooe/modal@^1.0, @psu-ooe/modal@workspace:packages/modal":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/modal@workspace:packages/modal"
   dependencies:
@@ -1802,6 +1802,7 @@ __metadata:
     "@psu-ooe/heading": ^1.0
     "@psu-ooe/highlighted-text": ^1.0
     "@psu-ooe/intro-form": ^1.0
+    "@psu-ooe/modal": ^1.0
     "@psu-ooe/navigation-tile": ^1.0
     "@psu-ooe/overlay": ^1.0
     "@psu-ooe/pager": ^1.0

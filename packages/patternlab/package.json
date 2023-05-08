@@ -33,6 +33,7 @@
     "@psu-ooe/heading": "^1.0",
     "@psu-ooe/highlighted-text": "^1.0",
     "@psu-ooe/intro-form": "^1.0",
+    "@psu-ooe/modal": "^1.0",
     "@psu-ooe/navigation-tile": "^1.0",
     "@psu-ooe/overlay": "^1.0",
     "@psu-ooe/pager": "^1.0",
