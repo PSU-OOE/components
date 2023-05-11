@@ -1,0 +1,50 @@
+@import "../../../base/src/scss/imports/variables";
+
+.ajax-spinner {
+  position: relative;
+  &--xlarge {
+    font-size: 15rem;
+  }
+  &--large {
+    font-size: 10rem;
+  }
+  &--medium {
+    font-size: 5rem;
+  }
+  &--small {
+    font-size: 2.5rem;
+  }
+  &--xsmall {
+    font-size: 1.6rem;
+  }
+
+  &__notch {
+    position: absolute;
+    color: $medium-grey;
+    .sprite {
+      animation: spin 2s linear infinite;
+    }
+  }
+
+  &__third {
+    position: absolute;
+    color: $beaver-blue;
+    opacity: 0.61;
+    .sprite {
+      animation: spin 1s linear infinite;
+
+
+    }
+
+    z-index: 2;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
