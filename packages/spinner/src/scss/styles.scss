@@ -39,7 +39,8 @@
   &__text {
     display: none;
     color: $nittany-navy;
-    text-shadow: .3rem .3rem 0 $white, -.1rem -.1rem 0 $white, .1rem .1rem 0 $white, -.1rem .1rem 0 $white, .1rem .1rem 0 $white;
+    font-weight: bold;
+    text-shadow: -0.1rem -0.1rem 0 $white, .1rem -.1rem 0 $white, -0.1rem .1rem - $white, .1rem .1rem $white;
 
     &--xlarge {
       font-size: 2.2rem;
