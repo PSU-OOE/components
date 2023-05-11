@@ -10,7 +10,8 @@
       const content = accordion.querySelector('.accordion__expandable-content');
 
       accordion.addEventListener('component:activate', e => {
-        if (e?.detail?.disable_animation) {
+
+        if (e?.detail?.disable_animation || window.matchMedia('(prefers-reduced-motion: reduce)')) {
           content.style['transition-duration'] = '0ms';
           content.style['height'] = null;
           accordion.classList.add('accordion--expanded');
@@ -25,7 +26,7 @@
       });
 
       accordion.addEventListener('component:deactivate', e => {
-        if (e?.detail?.disable_animation) {
+        if (e?.detail?.disable_animation || window.matchMedia('(prefers-reduced-motion: reduce)')) {
           content.style['transition-duration'] = '0ms';
           content.style['height'] = '0';
           accordion.classList.remove('accordion--expanded');
