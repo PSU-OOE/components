@@ -1,0 +1,66 @@
+{% if items %}
+  <nav class="pager" aria-labelledby="{{ heading_id }}">
+    <h4 id="{{ heading_id }}" class="visually-hidden">{{ 'Pagination' }}</h4>
+    <ul class="pager__items">
+      {% if items.first %}
+        <li class="pager__item pager__item--first">
+          <a href="{{ items.first.href }}" title="{{ 'Go to first page' }}">
+            <span class="visually-hidden">{{ 'First page' }}</span>
+            {% include '@atoms/sprite/sprite.twig' with {
+              name: 'fa-chevron-double-left'
+            } only %}
+          </a>
+        </li>
+      {% endif %}
+      {% if items.previous %}
+        <li class="pager__item pager__item--previous">
+          <a href="{{ items.previous.href }}" title="{{ 'Go to previous page' }}" rel="prev">
+            <span class="visually-hidden">{{ 'Previous page' }}</span>
+            {% include '@atoms/sprite/sprite.twig' with {
+              name: 'fa-chevron-left'
+            } only %}
+          </a>
+        </li>
+      {% endif %}
+      {% for key, item in items.pages %}
+        {% set is_current_page = false %}
+        {% if current == key %}
+          {% set is_current_page = true %}
+          {% set title = 'Current page' %}
+        {% else %}
+          {% set title = 'Go to page ' ~ key %}
+        {% endif %}
+
+        <li class="pager__item{{ is_current_page ? ' is-active' : '' }}">
+
+          <a href="{{ item.href }}" title="{{ title }}" {% if is_current_page %}aria-current="page"{% endif %}>
+          <span class="visually-hidden">
+            {{ is_current_page ? 'Current page' : 'Page' }}
+          </span>
+            {{- key -}}
+          </a>
+        </li>
+      {% endfor %}
+      {% if items.next %}
+        <li class="pager__item pager__item--next">
+          <a href="{{ items.next.href }}" title="{{ 'Go to next page' }}" rel="next">
+            <span class="visually-hidden">{{ 'Next page' }}</span>
+            {% include '@atoms/sprite/sprite.twig' with {
+              name: 'fas-chevron-right'
+            } only %}
+          </a>
+        </li>
+      {% endif %}
+      {% if items.last %}
+        <li class="pager__item pager__item--last">
+          <a href="{{ items.last.href }}" title="{{ 'Go to last page' }}">
+            <span class="visually-hidden">{{ 'Last page' }}</span>
+            {% include '@atoms/sprite/sprite.twig' with {
+              name: 'fa-chevron-double-right'
+            } only %}
+          </a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}

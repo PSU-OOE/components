@@ -1,0 +1,64 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.parallel-navigation-item {
+  &__link {
+    border-bottom: none;
+    color: $nittany-navy;
+    display: flex;
+    font-size: rem(1.6);
+    line-height: calc(4/3);
+    font-weight: 400;
+    text-decoration: none;
+    padding: rem(1.4) 0;
+    align-items: center;
+
+    @include bp(m) {
+      font-size: rem(1.8);
+      padding: rem(1.8) 0;
+    }
+    &:focus {
+      outline: rem(.2) solid $sky-blue;
+      color: $primary-blue;
+    }
+
+    &:hover {
+      border-bottom: none;
+      color: $primary-blue;
+      text-decoration: underline;
+    }
+
+    &:focus,
+    &:hover {
+      .parallel-navigation-item__icon .sprite {
+        transform: scale(1.25);
+      }
+    }
+
+    &--active {
+      color: $primary-blue;
+      font-weight: 700;
+    }
+
+    &--related {
+      color: $primary-blue;
+      font-size: rem(1.8);
+      padding: rem(1.8) 0;
+    }
+
+    &--related#{&}--active {
+      color: $nittany-navy;
+    }
+  }
+
+  &__title {
+    flex: 1;
+  }
+
+  &__icon {
+    margin: 0 rem(1);
+    .sprite {
+      transition: transform .2s linear;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.pager {
+  text-align: center;
+
+  &:not(:first-child) {
+    margin-top: rem(4);
+
+    @include bp(m) {
+      margin-top: rem(8);
+    }
+  }
+
+  .pager__items {
+    display: inline-flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+    .pager__item {
+      margin: 0 rem(1) rem(1) 0;
+
+      &::before {
+        display: none;
+      }
+
+      a {
+        font-size: rem(1.4);
+        background-color: $beaver-blue;
+        border-bottom: none;
+        color: $white;
+        cursor: pointer;
+        display: flex;
+        text-align: center;
+        width: rem(4);
+        height: rem(4);
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: background-color .25s ease;
+
+        &:hover,
+        &:focus {
+          background-color: $nittany-navy;
+          text-decoration: none;
+        }
+
+        &:focus {
+          outline-offset: rem(.2);
+        }
+      }
+
+      &--next,
+      &--previous,
+      &--first,
+      &--last {
+        a {
+          background: $light-grey;
+          color: $primary-blue;
+          font-weight: 400;
+
+          &:hover,
+          &:focus {
+            color: $white;
+          }
+        }
+      }
+
+      &--last {
+        margin: 0;
+      }
+
+      &.is-active {
+        a {
+          background-color: $primary-blue;
+
+          &:hover {
+            background-color: $primary-blue;
+          }
+        }
+      }
+    }
+  }
+}

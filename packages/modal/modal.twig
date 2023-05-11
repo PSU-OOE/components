@@ -1,0 +1,13 @@
+<div id="{{ id }}" class="modal" data-interactive-component>
+  <div class="modal__overlay">
+    <div class="modal__container" role="dialog" aria-modal="true">
+      <h2 class="modal__title visually-hidden" tabindex="-1">{{ title }}</h2>
+      <button class="modal__close" aria-label="Close">
+        {% include '@atoms/sprite/sprite.twig' with { name: 'fa-times' } %}
+      </button>
+      <span class="modal__content">
+        {{ content }}
+      </span>
+    </div>
+  </div>
+</div>

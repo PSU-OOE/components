@@ -100,10 +100,11 @@
     line-height: 1.15;
     font-weight: 400;
     background: $primary-blue;
-    padding: rem(1) rem(1.5);
-    margin: 0;
+    padding: rem(1) 0;
+    margin: 0 rem(1.5);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
+    box-shadow: rem(-1.5) 0 0 $primary-blue, rem(1.5) 0 0 $primary-blue;
     color: $white;
   }
 

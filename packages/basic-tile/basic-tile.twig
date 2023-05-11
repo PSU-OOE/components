@@ -1,0 +1,8 @@
+<a class="basic-tile {% if background_color %}basic-tile--{{ background_color }}{% endif %}" href="{{ url }}">
+  {% if primary_label %}
+    <span class="basic-tile__primary-label text--weight-bold">{{ primary_label }}</span>
+  {% endif %}
+  {% if secondary_label %}
+    <span class="basic-tile__secondary-label">{{ secondary_label }}</span>
+  {% endif %}
+</a>

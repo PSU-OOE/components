@@ -1507,6 +1507,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/announcement@ ^1.0, @psu-ooe/announcement@workspace:packages/announcement":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/announcement@workspace:packages/announcement"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/auto-expansion@^1.0, @psu-ooe/auto-expansion@workspace:packages/auto-expansion":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/auto-expansion@workspace:packages/auto-expansion"
@@ -1535,6 +1544,15 @@ __metadata:
   resolution: "@psu-ooe/base@workspace:packages/base"
   dependencies:
     "@psu-ooe/webfonts": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/basic-tile@^1.0, @psu-ooe/basic-tile@workspace:packages/basic-tile":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/basic-tile@workspace:packages/basic-tile"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/grid": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1596,7 +1614,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/divider@workspace:packages/divider":
+"@psu-ooe/divider@^1.0, @psu-ooe/divider@workspace:packages/divider":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/divider@workspace:packages/divider"
   dependencies:
@@ -1675,6 +1693,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/modal@^1.0, @psu-ooe/modal@workspace:packages/modal":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/modal@workspace:packages/modal"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/monorepo-dev@workspace:.":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/monorepo-dev@workspace:."
@@ -1700,6 +1727,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/navigation-tile@^1.0, @psu-ooe/navigation-tile@workspace:packages/navigation-tile":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/navigation-tile@workspace:packages/navigation-tile"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/overlay@^1.0, @psu-ooe/overlay@workspace:packages/overlay":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/overlay@workspace:packages/overlay"
@@ -1708,11 +1744,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/parallel-navigation@^1.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
+"@psu-ooe/pager@^1.0, @psu-ooe/pager@workspace:packages/pager":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/pager@workspace:packages/pager"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/parallel-navigation-item@^1.0, @psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/parallel-navigation@^2.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
   dependencies:
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/parallel-navigation-item": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1725,10 +1780,12 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.16.2
     "@pattern-lab/uikit-workshop": ^5.16.2
     "@psu-ooe/accordion": ^1.0
+    "@psu-ooe/announcement": " ^1.0"
     "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/background-container": ^2.0
     "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/basic-tile": ^1.0
     "@psu-ooe/bio": ^1.0
     "@psu-ooe/bio-collection": ^1.0
     "@psu-ooe/breadcrumbs": ^1.0
@@ -1736,6 +1793,7 @@ __metadata:
     "@psu-ooe/cards-list": ^1.0
     "@psu-ooe/credential": ^1.0
     "@psu-ooe/cta": ^1.0
+    "@psu-ooe/divider": ^1.0
     "@psu-ooe/drop-button": ^1.0
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/expandable-section": ^1.0
@@ -1744,8 +1802,12 @@ __metadata:
     "@psu-ooe/heading": ^1.0
     "@psu-ooe/highlighted-text": ^1.0
     "@psu-ooe/intro-form": ^1.0
+    "@psu-ooe/modal": ^1.0
+    "@psu-ooe/navigation-tile": ^1.0
     "@psu-ooe/overlay": ^1.0
-    "@psu-ooe/parallel-navigation": ^1.0
+    "@psu-ooe/pager": ^1.0
+    "@psu-ooe/parallel-navigation": ^2.0
+    "@psu-ooe/parallel-navigation-item": ^1.0
     "@psu-ooe/polyfill-flex-gap": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/quote": ^1.0

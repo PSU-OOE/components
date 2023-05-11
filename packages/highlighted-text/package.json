@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/highlighted-text",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides on-brand text highlighting capabilities.",
   "publishConfig": {
     "access": "public",

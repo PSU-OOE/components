@@ -1,0 +1,25 @@
+{% set tile %}
+  {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+    link: {
+      url: '#',
+      label: 'Navigation Title',
+    },
+    description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
+  } only %}
+
+{% endset %}
+{% set tile2 %}
+  {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+    link: {
+      url: '#',
+      label: 'Navigation Title with a really long title that will go to two lines eventually',
+    },
+    description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
+  } only %}
+
+{% endset %}
+<div class="pattern-lab-example" style="background: #f2f3f9; padding: 2rem">
+  {% include '@molecules/grid/grid.twig' with {
+    items: [tile, tile2, tile],
+  } only %}
+</div>

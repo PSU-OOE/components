@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/event-link",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Provides an event link implementation.",
   "publishConfig": {
     "access": "public",

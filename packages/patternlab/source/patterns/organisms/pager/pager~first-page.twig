@@ -1,0 +1,27 @@
+{% include '@organisms/pager/pager.twig' with {
+  heading_id: 'pager-example-first-page',
+  heading: 'Pagination',
+  items: {
+    pages: {
+      1: {
+        "href" : '#'
+      },
+      2: {
+        "href" : '#'
+      },
+      3: {
+        "href" : '#'
+      },
+      4: {
+        "href" : '#'
+      }
+    },
+    next: {
+      'href' : '#'
+    },
+    last: {
+      'href' : '#'
+    }
+  },
+  current: 1
+} only %}
