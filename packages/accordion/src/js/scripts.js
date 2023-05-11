@@ -8,23 +8,49 @@
     accordions.forEach(accordion => {
       const button = accordion.querySelector('.accordion__button');
       const content = accordion.querySelector('.accordion__expandable-content');
-      button.addEventListener('click', () => {
 
-        // Update the transition duration for the open/close animation.
-        const transition = Math.max(content.scrollHeight / 2, 200) + 'ms';
-        button.querySelector('.accordion__sprite .sprite').style['transition-duration'] = transition;
-        content.style['transition-duration'] = transition;
+      accordion.addEventListener('component:activate', e => {
+        if (e?.detail?.disable_animation) {
+          content.style['transition-duration'] = '0ms';
+          content.style['height'] = null;
+          accordion.classList.add('accordion--expanded');
+          button.setAttribute('aria-expanded', 'true');
+        }
+        else {
+          content.style['transition-duration'] = Math.max(content.scrollHeight / 2, 200) + 'ms';
+          accordion.classList.add('accordion--expanded');
+          button.setAttribute('aria-expanded', 'true');
+          cms.expand(content);
+        }
+      });
 
-        const state = button.getAttribute('aria-expanded');
-        if (state === 'true') {
+      accordion.addEventListener('component:deactivate', e => {
+        if (e?.detail?.disable_animation) {
+          content.style['transition-duration'] = '0ms';
+          content.style['height'] = '0';
+          accordion.classList.remove('accordion--expanded');
+          button.setAttribute('aria-expanded', 'false');
+        }
+        else {
+          content.style['transition-duration'] = Math.max(content.scrollHeight / 2, 200) + 'ms';
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
           cms.collapse(content);
         }
+      });
+
+      button.addEventListener('click', () => {
+
+        const state = button.getAttribute('aria-expanded');
+        if (state === 'true') {
+          accordion.dispatchEvent(new CustomEvent('component:deactivate'));
+        }
         else {
-          accordion.classList.add('accordion--expanded');
-          button.setAttribute('aria-expanded', 'true');
-          cms.expand(content);
+          accordion.dispatchEvent(new CustomEvent('component:activate', {
+            detail: {
+              activation_type: 'USER_ACTIVATE',
+            }
+          }));
         }
       });
     });
