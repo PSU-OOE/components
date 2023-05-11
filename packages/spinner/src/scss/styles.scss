@@ -2,40 +2,67 @@
 
 .spinner {
   position: relative;
-  &--xlarge {
-    font-size: 15rem;
+  display: inline-block;
+  &:focus {
+    outline: none;
   }
-  &--large {
-    font-size: 10rem;
+  &:focus-visible {
+    outline: rem(.2) solid $sky-blue;
+    outline-offset: rem(.2);
   }
-  &--medium {
-    font-size: 5rem;
-  }
-  &--small {
-    font-size: 2.5rem;
-  }
-  &--xsmall {
-    font-size: 1.6rem;
+  &__animation {
+    &--xlarge {
+      font-size: 15rem;
+    }
+    &--large {
+      font-size: 10rem;
+    }
+    &--medium {
+      font-size: 5rem;
+    }
+    &--small {
+      font-size: 2.5rem;
+    }
+    &--xsmall {
+      font-size: 1.6rem;
+    }
   }
 
+  &__text {
+    display: none;
+    @media (prefers-reduced-motion) {
+      display: block;
+    }
+  }
   &__notch {
     position: absolute;
     color: $medium-grey;
     .sprite {
       animation: spin 2s linear infinite;
     }
+    @media (prefers-reduced-motion) {
+      .sprite {
+        animation: none;
+      }
+      display: none;
+    }
   }
 
   &__third {
     color: $beaver-blue;
     opacity: 0.61;
+    z-index: 2;
+
     .sprite {
       animation: spin 1s linear infinite;
-
-
+    }
+    @media (prefers-reduced-motion) {
+      .sprite {
+        animation: none;
+      }
+      display: none;
     }
 
-    z-index: 2;
   }
 }
 
