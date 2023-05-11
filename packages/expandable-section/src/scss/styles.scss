@@ -10,9 +10,9 @@
     clear: both;
     overflow: hidden;
     visibility: hidden;
-    margin-bottom: 0;
     transition-property: height, margin-bottom, visibility;
     transition-timing-function: linear;
+    margin-bottom: 0;
   }
 
   &__expand[aria-expanded="true"] + .expandable-section__content {
