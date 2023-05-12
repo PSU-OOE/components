@@ -52,3 +52,6 @@ $base-rem-scale: 1 !default;
 @function rem($base) {
   @return unquote(($base * $base-rem-scale) + 'rem');
 }
+
+// z-index layers
+$modal: 1000;
