@@ -33,6 +33,7 @@ $invent-orange: #E98300;
 $invent-orange-light: #fca917;
 
 $penns-forest: #4A7729;
+$creek: #3ea39e;
 
 // Tile nav
 $tile-nav-image-overlay: rgba(0, 100, 191, 0.75);
@@ -52,3 +53,6 @@ $base-rem-scale: 1 !default;
 @function rem($base) {
   @return unquote(($base * $base-rem-scale) + 'rem');
 }
+
+// z-index layers
+$modal: 1000;

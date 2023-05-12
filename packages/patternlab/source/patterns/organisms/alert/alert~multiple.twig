@@ -1,0 +1,12 @@
+{% include '@organisms/alert/alert.twig' with {
+  content: "Here is an error alert",
+  severity: "error"
+} only %}
+{% include '@organisms/alert/alert.twig' with {
+  content: "Here is a status alert",
+  severity: "status"
+} only %}
+{% include '@organisms/alert/alert.twig' with {
+  content: "Here is a warning alert",
+  severity: "warning"
+} only %}

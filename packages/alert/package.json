@@ -1,7 +1,10 @@
 {
-  "name": "@psu-ooe/modal",
-  "version": "1.0.1",
-  "description": "Provides a modal component.",
+  "name": "@psu-ooe/alert",
+  "version": "1.0.0",
+  "description": "Provides an alert.",
+  "ooe": {
+    "namespace": "molecules"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
