@@ -1,0 +1,54 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+@import "../../../base/src/scss/imports/utility";
+
+.alert {
+  position: relative;
+  padding: rem(2);
+
+  &__inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: rem(110);
+    margin: 0 auto;
+
+    .alert__icon {
+      width: rem(5.5);
+      height: rem(5.5);
+      margin-right: rem(1);
+
+      .sprite {
+        width: rem(5.5);
+        height: rem(5.5);
+      }
+    }
+  }
+
+  &--error {
+    background-color: mix($error-red, $white, 6%);
+    border-top: rem(1) solid $error-red;
+
+    .sprite {
+      color: $error-red;
+    }
+  }
+
+  &--warning {
+    background-color: mix($keystone, $white, 20%);
+    border-top: rem(1) solid $keystone;
+
+    .sprite {
+      color: darken($invent-orange, 3.5%);
+    }
+  }
+
+  &--status {
+    background-color: mix($creek, $white, 10%);
+    border-top: rem(1) solid $creek;
+
+    .sprite {
+      color: $creek;
+    }
+  }
+}
