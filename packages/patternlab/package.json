@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.75",
+  "version": "1.0.76",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -11,6 +11,7 @@
     "@pattern-lab/engine-twig-php": "^5.16.2",
     "@pattern-lab/uikit-workshop": "^5.16.2",
     "@psu-ooe/accordion": "^1.0",
+    "@psu-ooe/alert": "^1.0",
     "@psu-ooe/announcement": " ^1.0",
     "@psu-ooe/auto-expansion": "^1.0",
     "@psu-ooe/background-container": "^2.0",
