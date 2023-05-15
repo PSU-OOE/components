@@ -23,6 +23,9 @@
         height: rem(5.5);
       }
     }
+    .alert__content {
+      flex: 1;
+    }
   }
 
   &--error {
