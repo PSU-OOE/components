@@ -1,0 +1,101 @@
+@import "../../../base/src/scss/imports/variables";
+
+.spinner {
+  position: relative;
+  display: inline-block;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: rem(.2) solid $sky-blue;
+    outline-offset: rem(.2);
+  }
+
+  &__animation {
+    &--xlarge {
+      font-size: rem(15);
+    }
+
+    &--large {
+      font-size: rem(10);
+    }
+
+    &--medium {
+      font-size: rem(5);
+    }
+
+    &--small {
+      font-size: rem(2.5);
+    }
+
+    &--xsmall {
+      font-size: rem(1.6);
+    }
+  }
+
+  &__text {
+    display: none;
+    color: $nittany-navy;
+    font-weight: bold;
+    text-shadow: rem(-0.1) rem(-0.1) 0 $white, rem(.1) rem(-0.1) 0 $white, rem(-0.1) rem(.1) 0 $white, rem(.1) rem(.1) 0 $white;
+
+    &--xlarge {
+      font-size: rem(2.2);
+    }
+
+    &--large {
+      font-size: rem(1.8);
+    }
+
+    &--medium {
+      font-size: rem(1.6);
+    }
+
+    &--small {
+      font-size: rem(1.2);
+    }
+
+    &--xsmall {
+      font-size: rem(1.1);
+    }
+  }
+
+  &__notch {
+    position: absolute;
+    color: $medium-grey;
+    .sprite {
+      animation: spin 2s linear infinite;
+    }
+  }
+
+  &__third {
+    color: $beaver-blue;
+    opacity: 0.61;
+    z-index: 2;
+
+    .sprite {
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    &__third,
+    &__notch {
+      display: none;
+    }
+    &__text {
+      display: block;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
