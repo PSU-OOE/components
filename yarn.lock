@@ -1930,6 +1930,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/spinner@workspace:packages/spinner":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/spinner@workspace:packages/spinner"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/sprite@^1.0, @psu-ooe/sprite@workspace:packages/sprite":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/sprite@workspace:packages/sprite"
