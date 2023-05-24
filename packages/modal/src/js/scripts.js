@@ -61,7 +61,7 @@
 
       // Trapping focus in modal
       modal.addEventListener("keydown", (e) => {
-        const focusableElements = modal.querySelectorAll(':not([style*="display: none"]), :not([disabled]), :not([style*="visibility: hidden"]), button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
         const firstFocusableElement = focusableElements[0];
         const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
