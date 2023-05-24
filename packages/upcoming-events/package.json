@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/upcoming-events",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides an upcoming events block implementation.",
   "publishConfig": {
     "access": "public",

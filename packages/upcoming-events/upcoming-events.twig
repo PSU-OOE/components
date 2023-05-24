@@ -5,12 +5,12 @@
     compact: boolean - true to display in compact mode
 #}
 <div class="upcoming-events{% if compact %} upcoming-events--compact{% endif %}">
+  {% if heading %}
+    {% set heading_classes = heading.classes|default([])|merge(['upcoming-events__heading']) %}
+    {% set heading = heading|merge({classes: heading_classes}) %}
+    {% include '@atoms/heading/heading.twig' with heading only %}
+  {% endif %}
   <div class="upcoming-events__featured">
-    {% if heading %}
-      {% set heading_classes = heading.classes|default([])|merge(['upcoming-events__heading']) %}
-      {% set heading = heading|merge({classes: heading_classes}) %}
-      {% include '@atoms/heading/heading.twig' with heading only %}
-    {% endif %}
     {% for event in events|slice(0, 3) %}
       <div class="upcoming-events__event">
         {% include '@organisms/event-link/event-link.twig' with event|merge({
