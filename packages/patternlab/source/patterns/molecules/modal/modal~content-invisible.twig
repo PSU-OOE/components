@@ -1,0 +1,25 @@
+{% set content = 'Lorem ipsum dolor sit amet. <button style="visibility: hidden">invisible Button</a>' %}
+
+
+<button id="modal-trigger-invisible" class="modal__trigger">Click me to open the modal</button>
+
+{% include '@molecules/modal/modal.twig' with {
+  content: content,
+  id: 'modal-invisible'
+} only %}
+
+<script>
+  (() => {
+      const modal = document.getElementById('modal-invisible');
+      const trigger = document.getElementById('modal-trigger-invisible');
+      // Showing modal when clicking triggering element and moving focus to modal container
+      trigger.addEventListener("click", (e) => {
+          modal.dispatchEvent(new CustomEvent('component:activate', {
+              detail: {
+                  modal_trigger: trigger,
+              }
+          }));
+      });
+  })();
+</script>
+
