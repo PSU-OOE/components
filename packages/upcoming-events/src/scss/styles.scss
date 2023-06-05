@@ -3,14 +3,6 @@
 
 .upcoming-events {
 
-  &__heading {
-    margin-bottom: 0;
-
-    @include bp(s) {
-      width: rem(19);
-    }
-  }
-
   &__featured {
     display: flex;
     flex-direction: column;
