@@ -1838,6 +1838,7 @@ __metadata:
     "@psu-ooe/smart-datetime": ^1.0
     "@psu-ooe/social-icon": ^1.0
     "@psu-ooe/social-icons": ^1.0
+    "@psu-ooe/spinner": ^1.0
     "@psu-ooe/sprite": ^1.0
     "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^2.0
@@ -1930,7 +1931,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/spinner@workspace:packages/spinner":
+"@psu-ooe/spinner@^1.0, @psu-ooe/spinner@workspace:packages/spinner":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/spinner@workspace:packages/spinner"
   dependencies:
