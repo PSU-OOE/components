@@ -1,4 +1,10 @@
-{% set content = 'Lorem ipsum dolor sit amet. <a style="display: none;" href="#">Link to something</a>' %}
+{% set content = '
+<h2 class="heading heading--neutral">Select <span class="text--contrasting">Modal Heading</span></h2>
+<select class="program-selector__programs-list-fallback form-select"><option value="">Select your favorite fruit</option><option value="banana">Banana</option></select>
+<button class="cta-block">Set Fruit</button>
+<div class="program-selector__recent-programs"></div>
+<button class="cta-block">Clear Fruit</button>
+' %}
 
 
 <button id="modal-trigger-hidden" class="modal__trigger">Click me to open the modal</button>
@@ -23,3 +29,8 @@
   })();
 </script>
 
+<style>
+  #modal-hidden .cta-block {
+    display: none;
+  }
+</style>
