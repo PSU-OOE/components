@@ -66,7 +66,7 @@
         let focusableElements = [];
         elements.forEach(function(element) {
           const styles = window.getComputedStyle(element);
-          if (element.style.display !== 'none' && !element.disabled && styles.visibility !== 'hidden') {
+          if (element.style.display !== 'none' && !element.disabled && styles.visibility !== 'hidden' && styles.display !== "none") {
             focusableElements.push(element);
           }
         });
