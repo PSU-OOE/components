@@ -12,7 +12,7 @@
         'cta-placement': tracked_cta.getAttribute('data-cta-placement') ?? 'unknown',
         'eventCallback': (container) => {
           const now = new Date();
-          console.log('Got callback in ' + (now - then) + ' milliseconds.');
+          console.log('Got callback in ' + (now - then) + ' milliseconds from container ID ' + container);
           // Remove this event.
           tracked_cta.removeEventListener('click', listener);
 
