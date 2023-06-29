@@ -5,13 +5,14 @@
       event.preventDefault();
 
       const tracked_cta = event.target;
-
+      const then = new Date();
       window.dataLayer.push({
         'event': 'cta-track',
         'cta-description': tracked_cta.getAttribute('data-cta-description') ?? 'unknown',
         'cta-placement': tracked_cta.getAttribute('data-cta-placement') ?? 'unknown',
-        'eventCallback': () => {
-
+        'eventCallback': (container) => {
+          const now = new Date();
+          console.log('Got callback in ' + (now - then) + ' milliseconds.');
           // Remove this event.
           tracked_cta.removeEventListener('click', listener);
 
