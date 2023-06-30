@@ -1,0 +1,9 @@
+{
+  "name": "@psu-ooe/cta-tracking",
+  "version": "1.0.0",
+  "description": "Provides analytics capabilities for calls to action.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

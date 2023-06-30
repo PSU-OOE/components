@@ -3,15 +3,15 @@
   <head>
     <title>{{ title }}</title>
     <meta charset="UTF-8">
-    <!-- Google Tag Manager -->
     <script>
-        window.dataLayer = window.dataLayer || [];
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-TXLS6TM');</script>
-    <!-- End Google Tag Manager -->
+        const cms = {
+            attach: (component, callback) => callback(document),
+            announce: (text, priority) => { /* @todo: implement */ },
+            vendor_dir: '/vendor',
+            gtm_container_id: 'GTM-TXLS6TM',
+        };
+    </script>
+    {% include '@global/gtm/gtm.twig' %}
     <meta name="viewport" content="width=device-width" />
     {% include '@global/webfonts/webfonts.twig' with { base_directory: '/fonts'} %}
 
@@ -44,13 +44,5 @@
     <style>
       {{ get_component_stylesheets() }}
     </style>
-
-    <script>
-      const cms = {
-        attach: (component, callback) => callback(document),
-        announce: (text, priority) => { /* @todo: implement */ },
-        vendor_dir: '/vendor'
-      };
-    </script>
   </head>
   <body class="{{ bodyClass }}">
