@@ -1,0 +1,66 @@
+<ul class="icon-list" role="list">
+  <li class="icon-list__item">
+    <div class="icon-list__content">
+      <div class="icon-list__icon">{% include '@atoms/sprite/sprite.twig' with { name: 'fas-money-bill' } only %}</div>
+      <div class="icon-list__text">
+        <div class="wysiwyg">
+          <p>Don't forget your wallet. This is a long item that probably spans multiple lines.</p>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="icon-list__item">
+    <div class="icon-list__content">
+      <div class="icon-list__icon">{% include '@atoms/sprite/sprite.twig' with { name: 'fas-calculator' } only %}</div>
+      <div class="icon-list__text">
+        <div class="wysiwyg">
+          <p>Remember your <span class="text--contrasting">calculator</span>.</p>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="icon-list__item">
+    <div class="icon-list__content">
+      <div class="icon-list__icon">{% include '@atoms/sprite/sprite.twig' with { name: 'fas-laptop' } only %}</div>
+      <div class="icon-list__text">
+        <div class="wysiwyg">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <em>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+  </li>
+  <li class="icon-list__item">
+    <div class="icon-list__content">
+      <div class="icon-list__icon">{% include '@atoms/sprite/sprite.twig' with { name: 'fas-certificate' } only %}</div>
+      <div class="icon-list__text">
+        <div class="wysiwyg">
+          <p>A <strong>fourth</strong> item.</p>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+<style>
+  .icon-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .icon-list__item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .icon-list__content {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+
+  .icon-list__icon .sprite {
+    color: #0064bf;
+    width: 3rem;
+    height: auto;
+  }
+</style>
