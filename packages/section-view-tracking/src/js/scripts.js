@@ -37,9 +37,13 @@
           if (section && section !== current_section) {
             current_section = section;
             window.dataLayer = window.dataLayer || [];
+
+            let tags = JSON.parse(current_section.getAttribute('data-section-tags') ?? '{}');
+            tags.activation_type = e.detail.activation_type;
             window.dataLayer.push({
               event: 'section_view',
               section_view_title: current_section.getAttribute('data-section'),
+              tags: tags,
             });
           }
         }
