@@ -1,0 +1,34 @@
+@import '../../../base/src/scss/imports/variables';
+
+.icon-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &--two-col {
+    column-count: 2;
+    column-width: rem(32);
+    column-gap: rem(3);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: rem(2);
+  }
+
+  &__content {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+  }
+
+  &__icon {
+    color: #0064bf;
+
+    .sprite {
+      width: 3rem;
+      height: auto;
+      max-height: 3rem;
+    }
+  }
+}
