@@ -1686,6 +1686,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/gtm@^1.0, @psu-ooe/gtm@workspace:packages/gtm":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/gtm@workspace:packages/gtm"
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/heading@^1.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
@@ -1819,6 +1825,7 @@ __metadata:
     "@psu-ooe/expandable-section": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
+    "@psu-ooe/gtm": ^1.0
     "@psu-ooe/heading": ^1.0
     "@psu-ooe/highlighted-text": ^1.0
     "@psu-ooe/intro-form": ^1.0
