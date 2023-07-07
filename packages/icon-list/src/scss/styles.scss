@@ -11,8 +11,12 @@
     column-gap: rem(3);
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: rem(2);
+  &__item {
+    break-inside: avoid;
+
+    &:not(:last-child) {
+      margin-bottom: rem(2);
+    }
   }
 
   &__content {
