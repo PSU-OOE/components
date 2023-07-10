@@ -1628,6 +1628,8 @@ __metadata:
 "@psu-ooe/cta-tracking@^1.0, @psu-ooe/cta-tracking@workspace:packages/cta-tracking":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta-tracking@workspace:packages/cta-tracking"
+  dependencies:
+    "@psu-ooe/gtm": ^1.0
   languageName: unknown
   linkType: soft
 
