@@ -71,11 +71,14 @@
     const tracked_ctas_async = context.querySelectorAll('[data-cta-track-async]');
     tracked_ctas_async.forEach(cta => {
       cta.addEventListener('click', () => {
-        window.dataLayer.push({
-          'event': 'cta-track',
-          'cta-description': cta.getAttribute('data-cta-description') ?? 'unknown',
-          'cta-placement': cta.getAttribute('data-cta-placement') ?? 'unknown',
-        });
+        // Check to see if analytics.js is loaded.
+        if (typeof window.dataLayer === 'object' && window.dataLayer?.push !== Array.prototype.push) {
+          window.dataLayer.push({
+            'event': 'cta-track',
+            'cta-description': cta.getAttribute('data-cta-description') ?? 'unknown',
+            'cta-placement': cta.getAttribute('data-cta-placement') ?? 'unknown',
+          });
+        }
       });
     });
   });
