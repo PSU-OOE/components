@@ -1651,12 +1651,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/drop-button@^1.0, @psu-ooe/drop-button@workspace:packages/drop-button":
+"@psu-ooe/drop-button@^2.0, @psu-ooe/drop-button@workspace:packages/drop-button":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
   dependencies:
     "@psu-ooe/base": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
+  peerDependencies:
+    "@psu-ooe/background-container": ^2.0
+  peerDependenciesMeta:
+    "@psu-ooe/background-container":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -1830,7 +1835,7 @@ __metadata:
     "@psu-ooe/cta": ^1.0
     "@psu-ooe/cta-tracking": ^1.0
     "@psu-ooe/divider": ^1.0
-    "@psu-ooe/drop-button": ^1.0
+    "@psu-ooe/drop-button": ^2.0
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/expandable-section": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0

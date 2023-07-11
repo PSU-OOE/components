@@ -249,39 +249,6 @@
     }
   }
 
-  // @deprecated - to be removed in 2.0.0
-  &--short {
-
-    .drop-button__toggle {
-      flex-direction: row;
-      justify-content: space-around;
-      height: auto;
-      width: auto;
-      padding: rem(.5) rem(.75);
-
-      @include bp(xs) {
-        padding: rem(.6) rem(.9);
-      }
-
-      @include bp(s) {
-        padding: rem(.8) rem(1.2);
-      }
-
-      @include bp(m) {
-        padding: rem(.9) rem(1.35);
-      }
-
-      @include bp(l) {
-        padding: rem(1) rem(1.5);
-      }
-    }
-
-    .sprite {
-      height: 1em;
-      margin-top: 0;
-    }
-  }
-
   &--full-width {
     .drop-button {
       &__toggle {

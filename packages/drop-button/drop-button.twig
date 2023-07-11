@@ -1,8 +1,4 @@
 {% set classes = ['drop-button'] %}
-{# @deprecated - short to be removed in 2.0.0 #}
-{% if short %}
-    {% set classes = classes|merge(['drop-button--short']) %}
-{% endif %}
 {% if sticky_tab %}
   {% set classes = classes|merge(['drop-button--sticky-tab']) %}
 {% endif %}
@@ -14,7 +10,7 @@
 {% endif %}
 <div class="{{ classes|join(' ' ) }}">
     <div role="button" class="drop-button__toggle" tabindex="0" aria-expanded="false">
-      {% if short or sticky_tab %}
+      {% if sticky_tab %}
         {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis-vertical' } only %}
       {% else %}
         {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis' } only %}
