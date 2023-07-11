@@ -12,7 +12,7 @@
       if (typeof window.dataLayer === 'object' && window.dataLayer?.push !== Array.prototype.push) {
         event.preventDefault();
 
-        const cta = event.target;
+        const cta = event.target.closest('[data-cta-track-sync]');
 
         const callbacks = [];
 
