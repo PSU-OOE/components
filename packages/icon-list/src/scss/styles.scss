@@ -23,16 +23,16 @@
     display: flex;
     align-items: baseline;
     flex-wrap: nowrap;
-    gap: 1.5rem;
+    gap: rem(1.5);
   }
 
   &__icon {
-    color: #0064bf;
+    color: $primary-blue;
 
     .sprite {
-      width: 3rem;
+      width: rem(3);
       height: auto;
-      max-height: 3rem;
+      max-height: rem(3);
     }
   }
 }
