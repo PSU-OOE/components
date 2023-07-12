@@ -309,6 +309,7 @@
   }
 }
 
+// Optional peer dependency can influence certain styles.
 .bg--light-grey {
   .drop-button__toggle {
     background: $white;
