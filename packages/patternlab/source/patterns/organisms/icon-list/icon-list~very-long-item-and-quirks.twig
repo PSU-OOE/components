@@ -1,0 +1,11 @@
+{% set items = [
+  { content: '<p><strong>Effectively engage</strong> students and trainees.</p>' },
+  { content: '<p><strong>Improve learner performance</strong> while enhancing the quality of learning experiences.</p>' },
+  { content: '<p><strong>Evaluate the impact of technology</strong> on learning.</p><p>But wait! There\'s more!</p>' },
+  { content: '<p><strong>Contact <a href="#">someverylongemailaddressthatmighthappen@someverylongdomainname.tld</a></strong> for more information.'},
+] %}
+
+{% include '@organisms/icon-list/icon-list.twig' with {
+  columns: 2,
+  items: items,
+} only %}

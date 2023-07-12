@@ -1,0 +1,15 @@
+{% set classes = [
+  'icon-list',
+  columns == 2 ? 'icon-list--two-col',
+] %}
+{% set element_type = ordered ? 'ol' : 'ul' %}
+<{{ element_type }} class="{{ classes|join(' ') }}" role="list">
+  {% for item in items %}
+    <li class="icon-list__item">
+      <div class="icon-list__content">
+        <div class="icon-list__icon">{% include '@atoms/sprite/sprite.twig' with { name: item.icon ?: 'fa-check-circle' } only %}</div>
+        <div class="icon-list__text">{{ item.content }}</div>
+      </div>
+    </li>
+  {% endfor %}
+</{{ element_type }}>

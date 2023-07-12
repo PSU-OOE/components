@@ -1794,6 +1794,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/icon-list@^1.0, @psu-ooe/icon-list@workspace:packages/icon-list":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/icon-list@workspace:packages/icon-list"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/intro-form@^1.0, @psu-ooe/intro-form@workspace:packages/intro-form":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
@@ -1915,6 +1924,7 @@ __metadata:
     "@psu-ooe/gtm": ^1.0
     "@psu-ooe/heading": ^1.0
     "@psu-ooe/highlighted-text": ^1.0
+    "@psu-ooe/icon-list": ^1.0
     "@psu-ooe/intro-form": ^1.0
     "@psu-ooe/modal": ^1.0
     "@psu-ooe/navigation-tile": ^1.0
