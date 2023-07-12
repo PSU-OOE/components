@@ -1,0 +1,17 @@
+{% set cta %}
+  {% include '@atoms/cta/cta-block.twig' with {
+    label: 'View Minors',
+    url: '#',
+    color: 'hollow-dotted',
+  } only %}
+{% endset %}
+
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'white',
+  content: cta,
+} only %}
+
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'light-grey',
+  content: cta,
+} only %}

@@ -1625,11 +1625,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/cta-tracking@^1.0, @psu-ooe/cta-tracking@workspace:packages/cta-tracking":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/cta-tracking@workspace:packages/cta-tracking"
+  dependencies:
+    "@psu-ooe/gtm": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/cta@^1.0, @psu-ooe/cta@workspace:packages/cta":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta@workspace:packages/cta"
   dependencies:
     "@psu-ooe/base": ^1.0
+    "@psu-ooe/cta-tracking": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1819,6 +1828,7 @@ __metadata:
     "@psu-ooe/cards-list": ^1.0
     "@psu-ooe/credential": ^1.0
     "@psu-ooe/cta": ^1.0
+    "@psu-ooe/cta-tracking": ^1.0
     "@psu-ooe/divider": ^1.0
     "@psu-ooe/drop-button": ^1.0
     "@psu-ooe/event-link": ^1.0

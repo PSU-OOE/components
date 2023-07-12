@@ -107,6 +107,7 @@
       opacity: .75;
       height: rem(.605);
       margin-top: rem(.3);
+      max-width: 100%;
 
       @include bp(xs) {
         height: rem(.66);
