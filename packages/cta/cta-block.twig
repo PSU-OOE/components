@@ -8,7 +8,15 @@
 {% if compact %}
   {% set classes = classes|merge(['cta-block--compact']) %}
 {% endif %}
-<a class="{{ classes|join(' ') }}" href="{{ url }}">
+<a
+  class="{{ classes|join(' ') }}"
+  href="{{ url }}"
+  {% if tracking_description and tracking_placement %}
+    data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }}
+    data-cta-description="{{ tracking_description }}"
+    data-cta-placement="{{ tracking_placement }}"
+  {% endif %}
+>
   {% if icon_before %}
     <span class="cta-block__icon">
       {% include '@atoms/sprite/sprite.twig' with {

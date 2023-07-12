@@ -1,4 +1,10 @@
-<a class="basic-tile {% if background_color %}basic-tile--{{ background_color }}{% endif %}" href="{{ url }}">
+<a class="basic-tile {% if background_color %}basic-tile--{{ background_color }}{% endif %}" href="{{ url }}"
+  {% if tracking_description and tracking_placement %}
+    data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }}
+    data-cta-description="{{ tracking_description }}"
+    data-cta-placement="{{ tracking_placement }}"
+  {% endif %}
+>
   {% if primary_label %}
     <span class="basic-tile__primary-label text--weight-bold">{{ primary_label }}</span>
   {% endif %}

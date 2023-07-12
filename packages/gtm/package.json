@@ -1,0 +1,9 @@
+{
+  "name": "@psu-ooe/gtm",
+  "version": "1.0.0",
+  "description": "Provides a GTM script snippet.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

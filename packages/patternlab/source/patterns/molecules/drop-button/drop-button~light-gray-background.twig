@@ -1,11 +1,16 @@
-<div class="layout--bg-light-grey" style="background: #f2f3f9; padding: 2rem;">
+{% set drop_button %}
   {% include '@molecules/drop-button/drop-button.twig' with {
-      button_label: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
+    button_label: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
     links: [
       { "url": "#", "label": "Item 1"},
       { "url": "#", "label": "Item 2"},
       { "url": "#", "label": "Item 3"},
       { "url": "#", "label": "Item 4"},
-    ]
+    ],
   } only %}
-</div>
+{% endset %}
+
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'light-grey',
+  content: drop_button,
+} only %}

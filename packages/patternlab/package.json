@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "1.0.82",
+  "version": "1.0.85",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -25,12 +25,14 @@
     "@psu-ooe/cards-list": "^1.0",
     "@psu-ooe/credential": "^1.0",
     "@psu-ooe/cta": "^1.0",
+    "@psu-ooe/cta-tracking": "^1.0",
     "@psu-ooe/divider": "^1.0",
-    "@psu-ooe/drop-button": "^1.0",
+    "@psu-ooe/drop-button": "^2.0",
     "@psu-ooe/event-link": "^1.0",
     "@psu-ooe/expandable-section": "^1.0",
     "@psu-ooe/flex-wrap-listener": "^1.0",
     "@psu-ooe/grid": "^1.0",
+    "@psu-ooe/gtm": "^1.0",
     "@psu-ooe/heading": "^1.0",
     "@psu-ooe/highlighted-text": "^1.0",
     "@psu-ooe/icon-list": "^1.0",
