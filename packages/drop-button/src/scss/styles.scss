@@ -309,9 +309,13 @@
   }
 }
 
-.layout--bg-light-grey {
+.bg--light-grey {
   .drop-button__toggle {
     background: $white;
+
+    &:hover {
+      background: $pugh-blue;
+    }
 
     &:focus-visible {
       background: $pugh-blue;
