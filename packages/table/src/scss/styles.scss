@@ -1,12 +1,10 @@
 @import '../../../base/src/scss/imports/variables';
 
 .a11y-table {
-  border-collapse: collapse;
-  width: 100%;
-  position: relative;
+  container-type: inline-size;
   overflow: visible;
   overflow-x: scroll;
-  scroll-snap-type: both mandatory;
+  position: relative;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 
@@ -20,12 +18,25 @@
   background-size: 3rem 100%, 1.5rem 100%, 3rem 100%, 1.5rem 100%;
   background-attachment: local, scroll, local, scroll;
 
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+  }
+
+  &__caption {
+    position: sticky;
+    left: 0;
+    background: #fff;
+    max-width: 100cqw;
+  }
 
   &__th, &__td {
     color: $nittany-navy;
     font-size: rem(1.6);
     line-height: 1.5;
     scroll-snap-align: start;
+    text-align: left;
   }
 
   &__th {
@@ -48,13 +59,13 @@
     background: $white;
   }
 
-  &__tbody &__tr > &__th,
-  &__tbody &__tr > &__td {
+  &__tbody > &__tr > &__th,
+  &__tbody > &__tr > &__td {
     padding-top: rem(2);
     padding-bottom: rem(2);
     border-bottom: rem(.1) solid $medium-grey;
 
-    &:not(:first-of-type) {
+    &:not(:first-child) {
       padding-left: rem(2);
     }
   }

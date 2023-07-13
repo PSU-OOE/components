@@ -1,17 +1,21 @@
-<table class="a11y-table">
-  <caption class="a11y-table__caption">2022–23 Academic Year Rates</caption>
-  <tbody class="a11y-table__tbody">
-    <tr class="a11y-table__tr">
-      <th class="a11y-table__th">How many credits do you plan to take per semester?</th>
-      <th class="a11y-table__th"><strong>Cost</strong></th>
-    </tr>
-    <tr class="a11y-table__tr">
-      <td class="a11y-table__td">11 or fewer</td>
-      <td class="a11y-table__td">$1,236 per credit</td>
-    </tr>
-    <tr class="a11y-table__tr">
-      <td class="a11y-table__td">12 or more*</td>
-      <td class="a11y-table__td">$14,832 per semester</td>
-    </tr>
-  </tbody>
-</table>
+<div class="a11y-table">
+  <table class="a11y-table__table">
+    <caption class="a11y-table__caption">The table caption that is pretty darn long...probably longer than it ever would be in "real" content?</caption>
+    <thead class="a11y-table__thead">
+      <tr class="a11y-table__tr">
+        {% for i in 1..15 %}
+          <th class="a11y-table__th" style="white-space: nowrap">Table header {{ i }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody class="a11y-table__tbody">
+      {% for i in 1..15 %}
+        <tr class="a11y-table__tr">
+          {% for j in 1..15 %}
+            <td class="a11y-table__td" style="white-space: nowrap">Table data ({{ i }}, {{ j }})</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
