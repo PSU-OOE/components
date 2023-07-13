@@ -1945,6 +1945,7 @@ __metadata:
     "@psu-ooe/spinner": ^1.0
     "@psu-ooe/sprite": ^1.0
     "@psu-ooe/sticky-panel": ^1.0
+    "@psu-ooe/table": ^1.0
     "@psu-ooe/tabs": ^2.0
     "@psu-ooe/upcoming-events": ^1.0
     "@psu-ooe/webfonts": ^1.0
@@ -2057,6 +2058,14 @@ __metadata:
   resolution: "@psu-ooe/sticky-panel@workspace:packages/sticky-panel"
   dependencies:
     "@psu-ooe/band": ^1.0 || ^2.0
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/table@^1.0, @psu-ooe/table@workspace:packages/table":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/table@workspace:packages/table"
+  dependencies:
     "@psu-ooe/base": ^1.0
   languageName: unknown
   linkType: soft

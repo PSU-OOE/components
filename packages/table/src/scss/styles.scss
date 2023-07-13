@@ -1,0 +1,68 @@
+@import '../../../base/src/scss/imports/variables';
+
+.a11y-table {
+  overflow: visible;
+  overflow-x: scroll;
+  scroll-snap-type: both mandatory;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+
+  background:
+    linear-gradient(to right, white 30%, rgba(255, 255, 255, 0)) left,
+    linear-gradient(to right, rgba($nittany-navy, 0.2), rgba($nittany-navy, 0)) left,
+    linear-gradient(to left, white 70%, rgba(255, 255, 255, 0)) right,
+    linear-gradient(to left, rgba($nittany-navy, .2), rgba($nittany-navy, 0)) right;
+
+  background-repeat: no-repeat;
+  background-size: 3rem 100%, 1.5rem 100%, 3rem 100%, 1.5rem 100%;
+  background-attachment: local, scroll, local, scroll;
+
+  &__table, &__caption, &__thead, &__tbody, &__tr, &__td, &__th {
+    all: revert;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    position: relative;
+  }
+
+  &__th, &__td {
+    color: $nittany-navy;
+    font-size: rem(1.6);
+    line-height: 1.5;
+    scroll-snap-align: start;
+  }
+
+  &__th {
+    font-weight: bold;
+  }
+
+  &__thead &__th {
+    padding-bottom: rem(1.5);
+    border-bottom: rem(.3) solid $medium-grey;
+
+    &:not(:first-of-type) {
+      padding-left: rem(2);
+    }
+  }
+
+  // If the first column is a header column, make it sticky.
+  &__tbody &__tr &__th:first-child {
+    position: sticky;
+    left: 0;
+    background: $white;
+  }
+
+  &__tbody &__tr > &__th,
+  &__tbody &__tr > &__td {
+    padding-top: rem(2);
+    padding-bottom: rem(2);
+    border-bottom: rem(.1) solid $medium-grey;
+
+    &:not(:first-of-type) {
+      padding-left: rem(2);
+    }
+  }
+}
