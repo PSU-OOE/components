@@ -38,13 +38,19 @@
             current_section = section;
             window.dataLayer = window.dataLayer || [];
 
-            let tags = JSON.parse(current_section.getAttribute('data-section-tags') ?? '{}');
-            tags.activation_type = e.detail.activation_type;
-            window.dataLayer.push({
-              event: 'section_view',
-              section_view_title: current_section.getAttribute('data-section'),
-              tags: tags,
-            });
+            try {
+              let tags = JSON.parse(current_section.getAttribute('data-section-tags') ?? '{}');
+              tags.activation_type = e.detail.activation_type;
+              window.dataLayer.push({
+                event: 'section_view',
+                section_view_title: current_section.getAttribute('data-section'),
+                tags: tags,
+              });
+            }
+            catch(error) {
+              // Prevent unwinding the stack; log the error and continue on.
+              console.error(error);
+            }
           }
         }
       });
