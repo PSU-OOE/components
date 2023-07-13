@@ -1,10 +1,12 @@
 @import '../../../base/src/scss/imports/variables';
 
 .a11y-table {
+  border-collapse: collapse;
+  width: 100%;
+  position: relative;
   overflow: visible;
   overflow-x: scroll;
   scroll-snap-type: both mandatory;
-  position: relative;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 
@@ -18,15 +20,6 @@
   background-size: 3rem 100%, 1.5rem 100%, 3rem 100%, 1.5rem 100%;
   background-attachment: local, scroll, local, scroll;
 
-  &__table, &__caption, &__thead, &__tbody, &__tr, &__td, &__th {
-    all: revert;
-  }
-
-  &__table {
-    border-collapse: collapse;
-    width: 100%;
-    position: relative;
-  }
 
   &__th, &__td {
     color: $nittany-navy;
