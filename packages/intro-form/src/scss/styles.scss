@@ -30,6 +30,7 @@
       flex: 1;
       height: fit-content;
       margin-top: 0;
+      margin-bottom: 1rem;
     }
   }
 
@@ -130,10 +131,10 @@
   }
 
   &__second {
-    padding: 0 rem(2);
+    padding: 0 rem(2) rem(1) rem(2);
 
     @include bp(xs) {
-      padding: 0 rem(4);
+      padding: 0 rem(4) rem(1) rem(4);
     }
 
     @include bp(s) {
