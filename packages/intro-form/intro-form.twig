@@ -2,12 +2,21 @@
   {% set heading_level = 'span' %}
 {% endif %}
 
+{% if color not in ['primary-blue'] %}
+  {% set color = 'light-grey' %}
+{% endif %}
+
 {# @deprecated - the 'image' variable is removed in 2.0.0, use 'images' instead #}
 {% if image and not images %}
  {% set images = [image] %}
 {% endif %}
 
-<div class="intro-form">
+{% set classes = [
+  'intro-form',
+  color in ['primary-blue'] ? 'intro-form--' ~ color,
+] %}
+
+<div class="{{ classes|join(' ') }}">
   {% set bg_content %}
     <div class="intro-form__container">
       <div class="intro-form__first">
@@ -34,8 +43,7 @@
     </div>
   {% endset %}
   {% include '@molecules/background-container/background-container.twig' with {
-    classes: ['intro-form__background'],
-    color: 'light-grey',
+    color: color,
     background_image: 'shield:topleft-bottomright',
     content: bg_content,
   } only %}
