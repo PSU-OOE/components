@@ -3,36 +3,34 @@
 
 .intro-form {
 
-  @include bp(s) {
-    padding-top: rem(3);
-  }
-
-  &__background {
-    padding: 0;
-  }
-
   &__container {
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: rem(3);
-    padding-bottom: rem(4);
 
     @include bp(s) {
       flex-direction: row;
       max-width: rem(97);
-      padding: 0 rem(4) rem(4) rem(4);
+      padding: 0 rem(4);
     }
   }
 
   &__first {
     position: relative;
 
+    margin-top: rem(-3);
+
+    @include bp(xs) {
+      margin-top: rem(-4);
+    }
+
     @include bp(s) {
-      box-shadow: rem(.1) rem(.2) $limestone;
+      box-shadow: rem(.1) rem(.2) rgba($nittany-navy, .4);
       flex: 1;
       height: fit-content;
-      margin-top: rem(-3);
+      margin-top: 0;
+      margin-bottom: rem(1);
     }
   }
 
@@ -115,7 +113,7 @@
   &__description {
     background: $white;
     display: block;
-    box-shadow: rem(.1) rem(.2) $limestone;
+    box-shadow: rem(.1) rem(.2) rgba($nittany-navy, .4);
     padding: rem(2.5) rem(2);
     margin: rem(.4) rem(1) 0 rem(1);
 
@@ -133,16 +131,27 @@
   }
 
   &__second {
-    padding: 0 rem(2);
+    padding: 0 rem(2) rem(1) rem(2);
 
     @include bp(xs) {
-      padding: 0 rem(4);
+      padding: 0 rem(4) rem(1) rem(4);
     }
 
     @include bp(s) {
       padding: 0;
-      margin-top: rem(3);
       flex: 1;
     }
+  }
+
+  &--primary-blue &__border {
+    @include bp(s) {
+      border-top: rem(.8) solid $beaver-blue;
+    }
+  }
+
+  &--primary-blue &__title {
+    background: $beaver-blue;
+    box-shadow: rem(-1.5) 0 0 $beaver-blue, rem(1.5) 0 0 $beaver-blue;
+
   }
 }
