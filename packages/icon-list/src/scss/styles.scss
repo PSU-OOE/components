@@ -11,6 +11,12 @@
     column-gap: rem(3);
   }
 
+  &--three-col {
+    column-count: 3;
+    column-width: rem(21);
+    column-gap: rem(3);
+  }
+
   &__item {
     break-inside: avoid;
 

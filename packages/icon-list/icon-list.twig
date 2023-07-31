@@ -1,6 +1,11 @@
+{% set column_map = {
+  2: 'icon-list--two-col',
+  3: 'icon-list--three-col',
+} %}
+
 {% set classes = [
   'icon-list',
-  columns == 2 ? 'icon-list--two-col',
+  columns in column_map|keys ? column_map[columns],
 ] %}
 {% set element_type = ordered ? 'ol' : 'ul' %}
 <{{ element_type }} class="{{ classes|join(' ') }}" role="list">
