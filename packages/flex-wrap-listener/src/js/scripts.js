@@ -189,7 +189,7 @@
       }
     });
 
-    const elements = context.querySelectorAll('[data-flex-wrap-aware]');
+    const elements = cms.once('flexWrapListener', '[data-flex-wrap-aware]', context)
     const init_first_item = new CustomEvent('flex-item-row-change', {
       detail: {
         old_row: null,

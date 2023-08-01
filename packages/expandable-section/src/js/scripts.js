@@ -1,6 +1,6 @@
 (cms => {
     cms.attach('expandableSection', context => {
-      const elements = context.querySelectorAll('.expandable-section');
+      const elements = cms.once('expandableSection', '.expandable-section', context);
       elements.forEach(element => {
         const expand = element.querySelector('.expandable-section__expand');
         const content = element.querySelector('.expandable-section__content');
