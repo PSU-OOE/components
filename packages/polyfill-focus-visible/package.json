@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/polyfill-focus-visible",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a light-weight polyfill for :focus-visible.",
   "publishConfig": {
     "access": "public",
