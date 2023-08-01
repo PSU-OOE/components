@@ -6,9 +6,11 @@
     <script>
         const cms = {
             attach: (component, callback) => callback(document),
+            detach: (component, callback) => callback(document),
             announce: (text, priority) => { /* @todo: implement */ },
             vendor_dir: '/vendor',
             gtm_container_id: 'GTM-TXLS6TM',
+            once: (id, selector, context = document) => context.querySelectorAll(selector),
         };
     </script>
     {% include '@global/gtm/gtm.twig' %}

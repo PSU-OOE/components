@@ -1,7 +1,7 @@
 (cms => {
   cms.attach('modal', context => {
     // Variables
-    const modals = context.querySelectorAll(".modal");
+    const modals = cms.once('modal', '.modal', context);
 
     // Functions
     const showModal = (element) => {

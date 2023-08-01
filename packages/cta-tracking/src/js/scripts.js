@@ -1,6 +1,6 @@
 ((cms) => {
 
-  cms.attach('cta', context => {
+  cms.attach('cta-tracking', context => {
 
     // This click listener is assigned to a variable so that it can be
     // referenced from within itself.  When this listener is invoked, it
@@ -62,13 +62,13 @@
     };
 
     // Set up synchronous tracking.
-    const tracked_ctas_sync = context.querySelectorAll('[data-cta-track-sync]');
+    const tracked_ctas_sync = cms.once('cta-tracking', '[data-cta-track-sync]', context);
     tracked_ctas_sync.forEach(cta => {
       cta.addEventListener('click', synchronous_listener);
     });
 
     // Set up asynchronous tracking.
-    const tracked_ctas_async = context.querySelectorAll('[data-cta-track-async]');
+    const tracked_ctas_async = cms.once('cta-tracking', '[data-cta-track-async]', context);
     tracked_ctas_async.forEach(cta => {
       cta.addEventListener('click', () => {
         // Check to see if analytics.js is loaded.

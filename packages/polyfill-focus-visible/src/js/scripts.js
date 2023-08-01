@@ -4,6 +4,10 @@
  */
 (cms => {
   cms.attach('polyfillFocusVisible', context => {
+    if (context !== document) {
+      return;
+    }
+
     const style = document.createElement('style');
     document.head.appendChild(style);
     try {
