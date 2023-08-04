@@ -1,52 +1,130 @@
-{% set sprites = [
-    'blog',
-    'community-shield',
-    'fa-check-circle',
-    'fas-ellipsis',
-    'fas-ellipsis-vertical',
-    'envelope',
-    'fa-exclamation-circle',
-    'fa-exclamation-triangle',
-    'fa-angle-up',
-    'fa-bars',
-    'fa-circle-notch',
-    'fa-circle-arrow-down',
-    'fa-exclamation',
-    'fa-filter-solid',
-    'fa-magnifying-glass',
-    'fa-plus-circle',
-    'fa-times',
-    'fas-arrow-up',
-    'fas-plus',
-    'fas-briefcase',
-    'fas-briefcase-medical',
-    'fas-building-columns',
-    'fas-certificate',
-    'fas-graduation-cap',
-    'fas-chevron-down',
-    'fa-chevron-left',
-    'fas-chevron-right',
-    'fas-chevron-up',
-    'fa-chevron-double-left',
-    'fa-chevron-double-right',
-    'fa-spinner-third',
-    'fas-file-pdf',
-    'fas-laptop',
-    'fas-message',
-    'fas-user-group',
-    'facebook',
-    'flickr',
-    'instagram',
-    'linkedin',
-    'pinterest',
-    'phone',
-    'psu-mark',
-    'twitter',
-    'youtube',
-    'youtube-player',
-    'wc-mark',
-] %}
-
-{% for sprite in sprites %}
-  {% include '@atoms/sprite/sprite.twig' with { name: sprite } %}
+{% set sprite_groups = {
+  logos: {
+    name: 'Logos and Branding Marks',
+    sprites: {
+      'psu-mark': 'Penn State Brand Mark',
+      'wc-mark': 'World Campus Brand Mark',
+    },
+  },
+  ambient: {
+    name: 'Ambient Backgrounds',
+    sprites: {
+      'community-shield': 'Community Shield',
+    },
+  },
+  social_media: {
+    name: 'Social Media',
+    sprites: {
+      'blog': 'Blog',
+      'facebook': 'Facebook',
+      'flickr': 'Flickr',
+      'instagram': 'Instagram',
+      'linkedin': 'Linkedin',
+      'pinterest': 'Pinterest',
+      'phone': 'Phone',
+      'twitter': 'Twitter',
+      'youtube': 'Youtube',
+    },
+  },
+  fa: {
+    name: 'Font Awesome',
+    sprites: {
+      'fa-check-circle': 'Check Circle',
+      'fas-ellipsis': 'Horizontal ellipsis',
+      'fas-ellipsis-vertical': 'Vertical ellipsis',
+      'envelope': 'Envelope',
+      'fa-exclamation-circle': 'Exclamation Circle',
+      'fa-exclamation-triangle': 'Exclamation Triangle',
+      'fa-angle-up': 'Angle Up',
+      'fa-bars': 'Bars',
+      'fa-circle-notch': 'Circle Notch',
+      'fa-circle-arrow-down': 'Circle Arrow Down',
+      'fa-exclamation': 'Exclamation',
+      'fa-filter-solid': 'Filter',
+      'fa-magnifying-glass': 'Magnifying Glass',
+      'fa-plus-circle': 'Plus Circle',
+      'fa-times': 'Times',
+      'fas-arrow-up': 'Arrow Up',
+      'fas-plus': 'Plus',
+      'fas-briefcase': 'Briefcase',
+      'fas-briefcase-medical': 'Briefcase Medical',
+      'fas-building-columns': 'Building Columns',
+      'fas-certificate': 'Certificate',
+      'fas-graduation-cap': 'Graduation Cap',
+      'fas-chevron-down': 'Chevron Down',
+      'fa-chevron-left': 'Chevron Left',
+      'fas-chevron-right': 'Chevron Right',
+      'fas-chevron-up': 'Chevron Up',
+      'fa-chevron-double-left': 'Chevron Double Left',
+      'fa-chevron-double-right': 'Chevron Double Right',
+      'fa-spinner-third': 'Spinner Third',
+      'fas-file-pdf': 'File PDF',
+      'fas-laptop': 'Laptop',
+      'fas-message': 'Message',
+      'fas-user-group': 'User Group',
+      'youtube-player': 'Youtube Player',
+    },
+  },
+} %}
+<form style="position: sticky;top:0; background: #fff; padding:2rem; box-shadow: 0 0.5rem 0.5rem #888;">
+  <label for="sprite-color" style="display: block;font-weight: bold;margin-bottom: 1rem;">Preview Sprite Color</label>
+  <select id="sprite-color">
+    <option value="primary-blue" selected>Primary Blue</option>
+    <option value="beaver-blue">Beaver Blue</option>
+    <option value="nittany-navy">Nittany Navy</option>
+  </select>
+  <script>
+      (() => {
+        const form = document.currentScript.closest('form');
+        const select = form.querySelector('#sprite-color');
+        select.addEventListener('change', () => {
+          const previews = document.querySelectorAll('.sprite-preview');
+          previews.forEach(preview => {
+            switch(select.value) {
+              case 'primary-blue':
+                preview.style.color = '#0064bf';
+                break;
+              case 'beaver-blue':
+                  preview.style.color = '#1e407c';
+                  break;
+              case 'nittany-navy':
+                  preview.style.color = '#001e44';
+                  break;
+            }
+          });
+        });
+      })();
+  </script>
+</form>
+{% for sprite_group in sprite_groups %}
+  <div style="margin-bottom: 3rem">
+    <h2>{{ sprite_group.name }}</h2>
+    {% set grid_items = [] %}
+    {% for sprite, label in sprite_group.sprites %}
+      {% set grid_item %}
+        <table style="margin: 0;padding: 0;">
+          <tbody>
+          <tr>
+            <th>Name</th>
+            <td>{{ label }}</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <td>{{ sprite }}</td>
+          </tr>
+          <tr>
+            <th>Preview</th>
+            <td>
+              <div class="sprite-preview" style="color:#0064bf; font-size: 5rem; text-align: center;">
+                {% include '@atoms/sprite/sprite.twig' with { name: sprite } %}
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      {% endset %}
+      {% set grid_items = grid_items|merge([grid_item]) %}
+    {% endfor %}
+    {% include '@molecules/grid/grid.twig' with { items: grid_items, columns: 3 } only %}
+  </div>
 {% endfor %}
