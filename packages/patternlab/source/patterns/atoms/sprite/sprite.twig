@@ -21,7 +21,6 @@
       'instagram': 'Instagram',
       'linkedin': 'Linkedin',
       'pinterest': 'Pinterest',
-      'phone': 'Phone',
       'twitter': 'Twitter',
       'youtube': 'Youtube',
     },
@@ -29,10 +28,13 @@
   general: {
     name: 'General Use',
     sprites: {
+      'fas-photo-film': 'Photo Film',
+      'fas-photo-film-music': 'Photo Film Music',
       'fa-check-circle': 'Check Circle',
       'fas-ellipsis': 'Horizontal ellipsis',
       'fas-ellipsis-vertical': 'Vertical ellipsis',
       'envelope': 'Envelope',
+      'phone': 'Phone',
       'fa-exclamation-circle': 'Exclamation Circle',
       'fa-exclamation-triangle': 'Exclamation Triangle',
       'fa-angle-up': 'Angle Up',
@@ -45,12 +47,22 @@
       'fa-plus-circle': 'Plus Circle',
       'fa-times': 'Times',
       'fas-arrow-up': 'Arrow Up',
+      'fas-comments': 'Comments',
+      'fas-earth-americas': 'Earth Americas',
+      'fas-pencil': 'Pencil',
+      'fas-list-check': 'List Check',
       'fas-plus': 'Plus',
+      'fas-plug-circle-check': 'Plug Circle Check',
+      'fas-bolt': 'Bolt',
+      'fas-chalkboard-user': 'Chalkboard User',
       'fas-briefcase': 'Briefcase',
       'fas-briefcase-medical': 'Briefcase Medical',
       'fas-building-columns': 'Building Columns',
       'fas-certificate': 'Certificate',
+      'fas-circle-bolt': 'Circle Bolt',
+      'fas-image': 'Image',
       'fas-graduation-cap': 'Graduation Cap',
+      'fas-handshake-simple': 'Handshake Simple',
       'fas-chevron-down': 'Chevron Down',
       'fa-chevron-left': 'Chevron Left',
       'fas-chevron-right': 'Chevron Right',
@@ -59,9 +71,17 @@
       'fa-chevron-double-right': 'Chevron Double Right',
       'fa-spinner-third': 'Spinner Third',
       'fas-file-pdf': 'File PDF',
+      'fas-landmark': 'Landmark',
       'fas-laptop': 'Laptop',
       'fas-message': 'Message',
+      'fas-newspaper': 'Newspaper Solid',
+      'fas-seedling': 'Seedling',
+      'fas-school': 'School',
       'fas-user-group': 'User Group',
+      'fas-lightbulb-on': 'Lightbulb On',
+      'fas-scale-balanced': 'Scale Balanced',
+      'fas-book-open-reader': 'Book Open Reader',
+      'fas-computer-classic': 'Computer Classic',
       'youtube-player': 'Youtube Player',
     },
   },
@@ -97,7 +117,7 @@
   </script>
 </form>
 {% for sprite_group in sprite_groups %}
-  <div style="margin-bottom: 3rem">
+  <div style="margin-bottom: 3rem; padding: 2rem;">
     <h2>{{ sprite_group.name }}</h2>
     {% set grid_items = [] %}
     {% for sprite, label in sprite_group.sprites %}
