@@ -73,7 +73,7 @@
   }
 
   cms.attach('tabsList', context => {
-    const tabs_list_elements = context.querySelectorAll('.tabs-list');
+    const tabs_list_elements = cms.once('tabsList', '.tabs-list', context);
 
     tabs_list_elements.forEach(tabs_list_element => {
       const buttons = tabs_list_element.querySelectorAll('.tabs-list__button');
@@ -93,7 +93,7 @@
   });
 
   cms.attach('tabs', context => {
-    const tabs_elements = context.querySelectorAll('.tabs');
+    const tabs_elements = cms.once('tabs', '.tabs', context);
 
     tabs_elements.forEach(tabs_element => {
       const panels = tabs_element.querySelectorAll('.tabs__panel');

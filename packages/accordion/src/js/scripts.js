@@ -4,7 +4,8 @@
  */
 ((cms) => {
   cms.attach('accordion', context => {
-    const accordions = context.querySelectorAll('.accordion');
+    const accordions = cms.once('accordion', '.accordion', context);
+
     accordions.forEach(accordion => {
       const button = accordion.querySelector('.accordion__button');
       const content = accordion.querySelector('.accordion__expandable-content');

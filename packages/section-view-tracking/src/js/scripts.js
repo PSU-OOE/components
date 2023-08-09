@@ -28,7 +28,7 @@
       }
     }
 
-    const components = context.querySelectorAll('[data-interactive-component]');
+    const components = cms.once('sectionViewTracking', '[data-interactive-component]', context);
 
     components.forEach(component => {
       component.addEventListener('component:activate', e => {

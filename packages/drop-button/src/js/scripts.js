@@ -1,6 +1,6 @@
 (cms => {
   cms.attach('dropbutton', context => {
-    const drop_buttons = context.querySelectorAll('.drop-button');
+    const drop_buttons = cms.once('dropbutton', '.drop-button', context);
     drop_buttons.forEach(drop_button => {
       const toggle = drop_button.querySelector('.drop-button__toggle');
 
