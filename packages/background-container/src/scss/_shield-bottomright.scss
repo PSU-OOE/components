@@ -1,5 +1,5 @@
 &.bg--shield-bottomright {
-  .bg__sprite {
+  & > .bg__sprites > .bg__sprite {
     position: absolute;
     width: rem(8.6);
     height: rem(16.2);
@@ -17,11 +17,11 @@
     }
   }
 
-  &.bg--primary-blue .bg__sprite .sprite {
+  &.bg--primary-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .5;
   }
 
-  &.bg--beaver-blue .bg__sprite .sprite {
+  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .22;
   }
 }
