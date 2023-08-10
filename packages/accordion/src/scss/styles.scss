@@ -93,6 +93,10 @@
     transition-property: height, margin-bottom, visibility;
     transition-timing-function: linear;
     visibility: hidden;
+
+    &--indent-content {
+      margin-left: 3.75%;
+    }
   }
 
   &--expanded {
