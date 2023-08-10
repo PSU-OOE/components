@@ -1,13 +1,27 @@
 {% set cta %}
-  {% include '@atoms/cta/cta-block.twig' with {
-    label: 'Expand items',
-    url: '#',
-    color: 'expand',
-  } only %}
+  <div style="padding: 0 4rem">
+    {% include '@atoms/cta/cta-block.twig' with {
+      label: 'Expand items',
+      url: '#',
+      color: 'expand',
+    } only %}
+  </div>
 {% endset %}
 
 {% include '@molecules/background-container/background-container.twig' with {
   color: 'light-grey',
   background_image: 'shield:right',
+  content: cta
+} only %}
+
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'primary-blue',
+  background_image: 'shield:right',
+  content: cta
+} only %}
+
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'beaver-blue',
+  background_image: 'shield:topleft-bottomright',
   content: cta
 } only %}

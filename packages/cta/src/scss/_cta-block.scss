@@ -179,7 +179,7 @@
     box-shadow: rem(.1) rem(.1) 0 0 rgba($nittany-navy, .5);
   }
 
-  &:is(.bg--light-grey *) {
+  &:is(.bg--light-grey *, .bg--primary-blue *, .bg--beaver-blue *) {
     --cta-block-expand-background-color: var(--cta-block-expand-background-color-light);
   }
 }
