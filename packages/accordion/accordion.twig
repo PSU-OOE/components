@@ -2,6 +2,7 @@
 
 {% if expanded %}
   {% set classes = classes|merge(['accordion--expanded']) %}
+  {# should the indent_content be here and the classing applied to the accordion instead of the div? #}
 {% endif %}
 
 {% if borderless %}
@@ -18,7 +19,12 @@
     <{{ heading_level }} class="{{ heading_classes|join(' ') }}">
   {% endif %}
   <button class="accordion__button" aria-expanded="{{ expanded ? 'true' : 'false' }}" aria-controls="{{ id }}">
-    <span class="accordion__label">{{ label }}</span>
+    {% set accordion_label_classes = ['accordion__label'] %}
+    {% if label_underline %}
+      {% set accordion_label_classes = accordion_label_classes|merge(['accordion__label--label-underline']) %}
+    {% endif %}
+
+    <span class="{{ accordion_label_classes|join(' ') }}">{{ label }}</span>
     <span class="accordion__sprite">
       {% include '@atoms/sprite/sprite.twig' with { name: 'fas-plus'} only %}
     </span>
@@ -26,7 +32,13 @@
   {% if heading_level %}
     </{{ heading_level }}>
   {% endif %}
-  <div class="accordion__expandable-content" id="{{ id }}" {% if not expanded %} style="height:0; overflow:hidden"{% endif %}>
+
+  {% set expandable_content_classes = ['accordion__expandable-content'] %}
+  {% if indent_content %}
+    {% set expandable_content_classes = expandable_content_classes|merge(['accordion__expandable-content--indent-content']) %}
+  {% endif %}
+
+  <div class="{{ expandable_content_classes|join(' ') }}" id="{{ id }}" {% if not expanded %} style="height:0; overflow:hidden"{% endif %}>
     {{ expandable_content }}
   </div>
 </div>
