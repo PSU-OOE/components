@@ -68,6 +68,36 @@
         transform: scale(1.25);
       }
     }
+
+    &:has(.accordion__label--label-underline) {
+      color: $primary-blue;
+      text-decoration-color: $primary-blue;
+      text-decoration-thickness: rem(.1);
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: .2em;
+      // transition: text-decoration-style .2s linear, text-decoration-color .2s linear;
+
+      &:hover,
+      &:active,
+      &:focus-visible {
+        text-decoration-color: transparent;
+        // text-decoration-thickness: rem(.1);
+        // text-decoration-line: underline;
+        text-decoration-style: solid;
+        // text-underline-offset: .2em;
+        // transition: text-decoration-style .2s linear, text-decoration-color .2s linear;
+
+        .accordion__label--label-underline {
+          text-decoration-color: $primary-blue;
+          // text-decoration-thickness: rem(.1);
+          // text-decoration-line: underline;
+          text-decoration-style: solid;
+          // text-underline-offset: .2em;
+          // transition: text-decoration-style .2s linear, text-decoration-color .2 linear;
+        }
+      }
+    }
   }
 
   &__label {
