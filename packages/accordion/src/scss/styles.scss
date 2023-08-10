@@ -76,25 +76,15 @@
       text-decoration-line: underline;
       text-decoration-style: dotted;
       text-underline-offset: .2em;
-      // transition: text-decoration-style .2s linear, text-decoration-color .2s linear;
 
       &:hover,
       &:active,
       &:focus-visible {
-        text-decoration-color: transparent;
-        // text-decoration-thickness: rem(.1);
-        // text-decoration-line: underline;
-        text-decoration-style: solid;
-        // text-underline-offset: .2em;
-        // transition: text-decoration-style .2s linear, text-decoration-color .2s linear;
+        text-decoration-line: none;
 
         .accordion__label--label-underline {
           text-decoration-color: $primary-blue;
-          // text-decoration-thickness: rem(.1);
-          // text-decoration-line: underline;
           text-decoration-style: solid;
-          // text-underline-offset: .2em;
-          // transition: text-decoration-style .2s linear, text-decoration-color .2 linear;
         }
       }
     }
