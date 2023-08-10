@@ -76,15 +76,18 @@
       text-decoration-line: underline;
       text-decoration-style: dotted;
       text-underline-offset: .2em;
+      transition: text-decoration-color .2s linear;
 
       &:hover,
       &:active,
       &:focus-visible {
         text-decoration-color: transparent;
+        transition: text-decoration-color .2s linear;
 
         .accordion__label--label-underline {
           text-decoration-color: $primary-blue;
           text-decoration-style: solid;
+          transition: text-decoration-color .2s linear, text-decoration-style .2s linear;
         }
       }
     }
