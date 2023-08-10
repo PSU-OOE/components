@@ -80,7 +80,7 @@
       &:hover,
       &:active,
       &:focus-visible {
-        text-decoration-line: none;
+        text-decoration-color: transparent;
 
         .accordion__label--label-underline {
           text-decoration-color: $primary-blue;
