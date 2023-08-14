@@ -44,6 +44,11 @@
 
       .accordion__label {
         text-decoration-color: $primary-blue;
+
+        &--label-underline {
+          text-decoration-style: solid;
+          transition: text-decoration-color .2s linear, text-decoration-style .2s linear;
+        }
       }
 
       .accordion__sprite .sprite {
@@ -83,12 +88,6 @@
       &:focus-visible {
         text-decoration-color: transparent;
         transition: text-decoration-color .2s linear;
-
-        .accordion__label--label-underline {
-          text-decoration-color: $primary-blue;
-          text-decoration-style: solid;
-          transition: text-decoration-color .2s linear, text-decoration-style .2s linear;
-        }
       }
     }
   }
