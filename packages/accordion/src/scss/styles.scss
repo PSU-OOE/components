@@ -79,7 +79,7 @@
       }
     }
 
-    &:has(.accordion__label--label-underline) {
+    .accordion__label--label-underline {
       color: $primary-blue;
       text-decoration-color: $primary-blue;
       text-decoration-thickness: rem(.1);
@@ -87,13 +87,6 @@
       text-decoration-style: dotted;
       text-underline-offset: .2em;
       transition: text-decoration-color .2s linear;
-
-      &:hover,
-      &:active,
-      &:focus-visible {
-        text-decoration-color: transparent;
-        transition: text-decoration-color .2s linear;
-      }
     }
   }
 
