@@ -8,6 +8,10 @@
 {% if compact %}
   {% set classes = classes|merge(['cta-block--compact']) %}
 {% endif %}
+{% if font_weight in ['bold'] %}
+  {% set classes = classes|merge(['cta-block--' ~ font_weight]) %}
+{% endif %}
+
 <a
   class="{{ classes|join(' ') }}"
   href="{{ url }}"
