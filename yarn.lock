@@ -1474,14 +1474,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pattern-lab/cli@npm:^5.16.2":
-  version: 5.17.0
-  resolution: "@pattern-lab/cli@npm:5.17.0"
+"@pattern-lab/cli@npm:^6.0":
+  version: 6.0.1
+  resolution: "@pattern-lab/cli@npm:6.0.1"
   dependencies:
-    "@pattern-lab/core": ^5.17.0
+    "@pattern-lab/core": ^6.0.1
     archiver: 5.3.0
     chalk: 4.1.0
-    commander: 6.2.1
+    commander: 9.4.1
     deepmerge: ^4.2.2
     execa: 5.0.0
     fs-extra: 10.0.0
@@ -1492,16 +1492,17 @@ __metadata:
     ora: 5.4.0
   bin:
     patternlab: bin/patternlab.js
-  checksum: 83c8ce5189a601e05180e6829eb84200dc2e6dc251927f57df13bf8eb67c8a61e5f9fd75be42138fc7cd96e1cf0ae3aeb9ad56b55c542b29777f70ac24d9ad38
+  checksum: 5f39eae54842dae726685fc6b6474b60f439bc9a8fd031e9188dbbac11d71a92776602a4c020417d8b2cf448ad6ad69dcd619fdb87fd708ddf2a56b947821494
   languageName: node
   linkType: hard
 
-"@pattern-lab/core@npm:^5.16.2, @pattern-lab/core@npm:^5.17.0":
-  version: 5.17.0
-  resolution: "@pattern-lab/core@npm:5.17.0"
+"@pattern-lab/core@npm:^6.0, @pattern-lab/core@npm:^6.0.1":
+  version: 6.0.1
+  resolution: "@pattern-lab/core@npm:6.0.1"
   dependencies:
-    "@pattern-lab/engine-mustache": ^5.16.4
-    "@pattern-lab/live-server": ^5.16.1
+    "@pattern-lab/engine-handlebars": ^6.0.0
+    "@pattern-lab/engine-mustache": ^6.0.0
+    "@pattern-lab/live-server": ^6.0.0
     chalk: 4.1.0
     chokidar: 3.5.1
     dive: 0.5.0
@@ -1515,35 +1516,46 @@ __metadata:
     node-fetch: 2.6.7
     recursive-copy: 2.0.13
     update-notifier: 5.1.0
-  checksum: c6474a1108c187c6c74a9f99bb156c55b4292aea17ad4abe48cf16ee4760a2b0d0380bfa01db3ca0be12f54252e7f9d091f9fb5db057d5166a4edf36b9db668c
+  checksum: ec3c3db8daa83d0b85644da6d9020fe4a38024e7278787f0914c4379d8f3de9cb086cc4dd4c9b439966922236cba229606af4a2111bbdd11e02d455c716d4fc9
   languageName: node
   linkType: hard
 
-"@pattern-lab/engine-mustache@npm:^5.16.4":
-  version: 5.16.4
-  resolution: "@pattern-lab/engine-mustache@npm:5.16.4"
+"@pattern-lab/engine-handlebars@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@pattern-lab/engine-handlebars@npm:6.0.0"
+  dependencies:
+    fs-extra: ^10.0.0
+    glob: ^7.1.6
+    handlebars: ^4.7.7
+  checksum: b2ef4ed803ff793588562240d2f0eef4f06e66c2a0db2d6f486d41ef9d7d0eaf191508d95a57c317fb3676b9b640cfedf22fda582113c3c8fe960746d766a2aa
+  languageName: node
+  linkType: hard
+
+"@pattern-lab/engine-mustache@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@pattern-lab/engine-mustache@npm:6.0.0"
   dependencies:
     fs-extra: 10.0.0
     mustache: 3.1.0
-  checksum: 6b6736da1c5186be16b428847f460f96b7875adc27968ce0171c3bcca30e7c99ca1fe2fae6e8a79d9c1e3504e270c42925a7ddbe04a907778f026a0fe1a7c09e
+  checksum: de8b967fe22c66a8006746d8db31267e54e6164f701c50c6ce14451a9895c4535839b056fb01ae453d8c00280e85ce3b74cc1576dbd86921166701a0fe46a8bb
   languageName: node
   linkType: hard
 
-"@pattern-lab/engine-twig-php@npm:^5.16.2":
-  version: 5.17.0
-  resolution: "@pattern-lab/engine-twig-php@npm:5.17.0"
+"@pattern-lab/engine-twig-php@npm:^6.0":
+  version: 6.0.1
+  resolution: "@pattern-lab/engine-twig-php@npm:6.0.1"
   dependencies:
     "@basalt/twig-renderer": ^2.0.0
-    "@pattern-lab/core": ^5.17.0
+    "@pattern-lab/core": ^6.0.1
     chalk: ^4.1.0
     fs-extra: 10.0.0
-  checksum: 778f2b19edaa7df7d4998de69605121a519d48db7f7efc0fabb2002cd31633a882f8f2d8b5a544c438218ab0f268d63fca0342d53f7a5f0ca1bf6096e1a88bde
+  checksum: 80dc1bb560c25ec64b2d2f384f0677da49f9f26096fe5147389ad18dc65a56a33c88b08bd7ff022efe7632adedd332cdde45af4df46ebe303ca3fe862da20c50
   languageName: node
   linkType: hard
 
-"@pattern-lab/live-server@npm:^5.16.1":
-  version: 5.16.1
-  resolution: "@pattern-lab/live-server@npm:5.16.1"
+"@pattern-lab/live-server@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "@pattern-lab/live-server@npm:6.0.0"
   dependencies:
     chokidar: 3.5.1
     colors: 1.4.0
@@ -1557,18 +1569,18 @@ __metadata:
     object-assign: 4.1.1
     open: 8.0.9
     proxy-middleware: 0.15.0
-    send: 0.17.2
+    send: 0.18.0
     serve-index: 1.9.1
   bin:
     live-server: live-server.js
-  checksum: f1d33f07cbb962b32d27298d6898205eb30dff6be0d8da94e9f3146417c64a02d47aaa434c445177473ac9a1b77065b31aeba80a7bc488569e9624eefbdc6a43
+  checksum: 627e4e856e51a3d57e4593324b0fb10d4a3df416bc3a2bce583a4868aa9b233bbb553e1c8c8f02ba53f123a94ceaefc43a2007628c542749e92bc5def18026cc
   languageName: node
   linkType: hard
 
-"@pattern-lab/uikit-workshop@npm:^5.16.2":
-  version: 5.17.0
-  resolution: "@pattern-lab/uikit-workshop@npm:5.17.0"
-  checksum: 55784e71f79b09a0940b3684482a4b4292a44b8df30eed7eec2b96601cdb0df3ee50e8bbca8404e25f34d4367fcdfef4f22663291c78adcbf70df28aa2cfd8ec
+"@pattern-lab/uikit-workshop@npm:^6.0":
+  version: 6.0.3
+  resolution: "@pattern-lab/uikit-workshop@npm:6.0.3"
+  checksum: bcd2989031d12474d041f7ff0ca022fde5989aa3151a28f07a09228d833d547c2c49efc02731a8070282afd508304684aaecf9c0b57296cdb2bd6856d8802de2
   languageName: node
   linkType: hard
 
@@ -1826,10 +1838,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/monorepo-dev@workspace:."
   dependencies:
-    "@pattern-lab/cli": ^5.16.2
-    "@pattern-lab/core": ^5.16.2
-    "@pattern-lab/engine-twig-php": ^5.16.2
-    "@pattern-lab/uikit-workshop": ^5.16.2
     gulp: ^4.0
     gulp-cli: ^2.3.0
     gulp-concat: ^2.6.1
@@ -1895,10 +1903,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/patternlab@workspace:packages/patternlab"
   dependencies:
-    "@pattern-lab/cli": ^5.16.2
-    "@pattern-lab/core": ^5.16.2
-    "@pattern-lab/engine-twig-php": ^5.16.2
-    "@pattern-lab/uikit-workshop": ^5.16.2
+    "@pattern-lab/cli": ^6.0
+    "@pattern-lab/core": ^6.0
+    "@pattern-lab/engine-twig-php": ^6.0
+    "@pattern-lab/uikit-workshop": ^6.0
     "@psu-ooe/accordion": ^1.0
     "@psu-ooe/alert": ^1.0
     "@psu-ooe/announcement": " ^1.0"
@@ -3475,10 +3483,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:6.2.1":
-  version: 6.2.1
-  resolution: "commander@npm:6.2.1"
-  checksum: d7090410c0de6bc5c67d3ca41c41760d6d268f3c799e530aafb73b7437d1826bbf0d2a3edac33f8b57cc9887b4a986dce307fa5557e109be40eadb7c43b21742
+"commander@npm:9.4.1":
+  version: 9.4.1
+  resolution: "commander@npm:9.4.1"
+  checksum: bfb18e325a5bdf772763c2213d5c7d9e77144d944124e988bcd8e5e65fb6d45d5d4e86b09155d0f2556c9a59c31e428720e57968bcd050b2306e910a0bf3cf13
   languageName: node
   linkType: hard
 
@@ -3992,7 +4000,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"depd@npm:^2.0.0, depd@npm:~2.0.0":
+"depd@npm:2.0.0, depd@npm:^2.0.0, depd@npm:~2.0.0":
   version: 2.0.0
   resolution: "depd@npm:2.0.0"
   checksum: abbe19c768c97ee2eed6282d8ce3031126662252c58d711f646921c9623f9052e3e1906443066beec1095832f534e57c523b7333f8e7e0d93051ab6baef5ab3a
@@ -4006,10 +4014,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"destroy@npm:~1.0.4":
-  version: 1.0.4
-  resolution: "destroy@npm:1.0.4"
-  checksum: da9ab4961dc61677c709da0c25ef01733042614453924d65636a7db37308fef8a24cd1e07172e61173d471ca175371295fbc984b0af5b2b4ff47cd57bd784c03
+"destroy@npm:1.2.0":
+  version: 1.2.0
+  resolution: "destroy@npm:1.2.0"
+  checksum: 0acb300b7478a08b92d810ab229d5afe0d2f4399272045ab22affa0d99dbaf12637659411530a6fcd597a9bdac718fc94373a61a95b4651bbc7b83684a565e38
   languageName: node
   linkType: hard
 
@@ -4930,6 +4938,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fs-extra@npm:^10.0.0":
+  version: 10.1.0
+  resolution: "fs-extra@npm:10.1.0"
+  dependencies:
+    graceful-fs: ^4.2.0
+    jsonfile: ^6.0.1
+    universalify: ^2.0.0
+  checksum: dc94ab37096f813cc3ca12f0f1b5ad6744dfed9ed21e953d72530d103cea193c2f81584a39e9dee1bea36de5ee66805678c0dddc048e8af1427ac19c00fffc50
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^7.0.1":
   version: 7.0.1
   resolution: "fs-extra@npm:7.0.1"
@@ -5283,7 +5302,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.2.0":
+"glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6, glob@npm:^7.2.0":
   version: 7.2.3
   resolution: "glob@npm:7.2.3"
   dependencies:
@@ -5644,6 +5663,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"handlebars@npm:^4.7.7":
+  version: 4.7.8
+  resolution: "handlebars@npm:4.7.8"
+  dependencies:
+    minimist: ^1.2.5
+    neo-async: ^2.6.2
+    source-map: ^0.6.1
+    uglify-js: ^3.1.4
+    wordwrap: ^1.0.0
+  dependenciesMeta:
+    uglify-js:
+      optional: true
+  bin:
+    handlebars: bin/handlebars
+  checksum: 00e68bb5c183fd7b8b63322e6234b5ac8fbb960d712cb3f25587d559c2951d9642df83c04a1172c918c41bcfc81bfbd7a7718bbce93b893e0135fc99edea93ff
+  languageName: node
+  linkType: hard
+
 "har-schema@npm:^2.0.0":
   version: 2.0.0
   resolution: "har-schema@npm:2.0.0"
@@ -5872,16 +5909,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"http-errors@npm:1.8.1":
-  version: 1.8.1
-  resolution: "http-errors@npm:1.8.1"
+"http-errors@npm:2.0.0":
+  version: 2.0.0
+  resolution: "http-errors@npm:2.0.0"
   dependencies:
-    depd: ~1.1.2
+    depd: 2.0.0
     inherits: 2.0.4
     setprototypeof: 1.2.0
-    statuses: ">= 1.5.0 < 2"
+    statuses: 2.0.1
     toidentifier: 1.0.1
-  checksum: d3c7e7e776fd51c0a812baff570bdf06fe49a5dc448b700ab6171b1250e4cf7db8b8f4c0b133e4bfe2451022a5790c1ca6c2cae4094dedd6ac8304a1267f91d2
+  checksum: 9b0a3782665c52ce9dc658a0d1560bcb0214ba5699e4ea15aefb2a496e2ca83db03ebc42e1cce4ac1f413e4e0d2d736a3fd755772c556a9a06853ba2a0b7d920
   languageName: node
   linkType: hard
 
@@ -7604,7 +7641,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.1.0, minimist@npm:^1.2.0, minimist@npm:^1.2.6":
+"minimist@npm:^1.1.0, minimist@npm:^1.2.0, minimist@npm:^1.2.5, minimist@npm:^1.2.6":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 75a6d645fb122dad29c06a7597bddea977258957ed88d7a6df59b5cd3fe4a527e253e9bbf2e783e4b73657f9098b96a5fe96ab8a113655d4109108577ecf85b0
@@ -7839,6 +7876,13 @@ __metadata:
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
   checksum: b8ffeb1e262eff7968fc90a2b6767b04cfd9842582a9d0ece0af7049537266e7b2506dfb1d107a32f06dd849ab2aea834d5830f7f4d0e5cb7d36e1ae55d021d9
+  languageName: node
+  linkType: hard
+
+"neo-async@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "neo-async@npm:2.6.2"
+  checksum: deac9f8d00eda7b2e5cd1b2549e26e10a0faa70adaa6fdadca701cc55f49ee9018e427f424bac0c790b7c7e2d3068db97f3093f1093975f2acb8f8818b936ed9
   languageName: node
   linkType: hard
 
@@ -8169,6 +8213,15 @@ __metadata:
     define-properties: ^1.1.4
     es-abstract: ^1.20.4
   checksum: f6fff9fd817c24cfd8107f50fb33061d81cd11bacc4e3dbb3852e9ff7692fde4dbce823d4333ea27cd9637ef1b6690df5fbb61f1ed314fa2959598dc3ae23d8e
+  languageName: node
+  linkType: hard
+
+"on-finished@npm:2.4.1":
+  version: 2.4.1
+  resolution: "on-finished@npm:2.4.1"
+  dependencies:
+    ee-first: 1.1.1
+  checksum: d20929a25e7f0bb62f937a425b5edeb4e4cde0540d77ba146ec9357f00b0d497cdb3b9b05b9c8e46222407d1548d08166bff69cc56dfa55ba0e4469228920ff0
   languageName: node
   linkType: hard
 
@@ -9393,24 +9446,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"send@npm:0.17.2":
-  version: 0.17.2
-  resolution: "send@npm:0.17.2"
+"send@npm:0.18.0":
+  version: 0.18.0
+  resolution: "send@npm:0.18.0"
   dependencies:
     debug: 2.6.9
-    depd: ~1.1.2
-    destroy: ~1.0.4
+    depd: 2.0.0
+    destroy: 1.2.0
     encodeurl: ~1.0.2
     escape-html: ~1.0.3
     etag: ~1.8.1
     fresh: 0.5.2
-    http-errors: 1.8.1
+    http-errors: 2.0.0
     mime: 1.6.0
     ms: 2.1.3
-    on-finished: ~2.3.0
+    on-finished: 2.4.1
     range-parser: ~1.2.1
-    statuses: ~1.5.0
-  checksum: c28f36deb4ccba9b8d6e6a1e472b8e7c40a1f51575bdf8f67303568cc9e71131faa3adc36fdb72611616ccad1584358bbe4c3ebf419e663ecc5de868ad3d3f03
+    statuses: 2.0.1
+  checksum: 74fc07ebb58566b87b078ec63e5a3e41ecd987e4272ba67b7467e86c6ad51bc6b0b0154133b6d8b08a2ddda360464f71382f7ef864700f34844a76c8027817a8
   languageName: node
   linkType: hard
 
@@ -9794,7 +9847,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"statuses@npm:>= 1.4.0 < 2, statuses@npm:>= 1.5.0 < 2, statuses@npm:~1.5.0":
+"statuses@npm:2.0.1":
+  version: 2.0.1
+  resolution: "statuses@npm:2.0.1"
+  checksum: 18c7623fdb8f646fb213ca4051be4df7efb3484d4ab662937ca6fbef7ced9b9e12842709872eb3020cc3504b93bde88935c9f6417489627a7786f24f8031cbcb
+  languageName: node
+  linkType: hard
+
+"statuses@npm:>= 1.4.0 < 2, statuses@npm:~1.5.0":
   version: 1.5.0
   resolution: "statuses@npm:1.5.0"
   checksum: c469b9519de16a4bb19600205cffb39ee471a5f17b82589757ca7bd40a8d92ebb6ed9f98b5a540c5d302ccbc78f15dc03cc0280dd6e00df1335568a5d5758a5c
@@ -10422,6 +10482,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"uglify-js@npm:^3.1.4":
+  version: 3.17.4
+  resolution: "uglify-js@npm:3.17.4"
+  bin:
+    uglifyjs: bin/uglifyjs
+  checksum: 7b3897df38b6fc7d7d9f4dcd658599d81aa2b1fb0d074829dd4e5290f7318dbca1f4af2f45acb833b95b1fe0ed4698662ab61b87e94328eb4c0a0d3435baf924
+  languageName: node
+  linkType: hard
+
 "unbox-primitive@npm:^1.0.2":
   version: 1.0.2
   resolution: "unbox-primitive@npm:1.0.2"
@@ -11020,6 +11089,13 @@ __metadata:
     triple-beam: ^1.3.0
     winston-transport: ^4.5.0
   checksum: 410f82b7a502106e7d93e62cd21d7e9bcfd37884d0d95921b12526d2fe163e654ec9cd39e18f9884fad5cf6506a45d07bd2519c1dc9c88e82f0f12b2ce9fa510
+  languageName: node
+  linkType: hard
+
+"wordwrap@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "wordwrap@npm:1.0.0"
+  checksum: 2a44b2788165d0a3de71fd517d4880a8e20ea3a82c080ce46e294f0b68b69a2e49cff5f99c600e275c698a90d12c5ea32aff06c311f0db2eb3f1201f3e7b2a04
   languageName: node
   linkType: hard
 
