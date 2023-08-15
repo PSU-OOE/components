@@ -1,5 +1,5 @@
 &.bg--shield-left {
-  .bg__sprite .sprite {
+  & > .bg__sprites > .bg__sprite .sprite {
     position: absolute;
     height: auto;
     width: rem(70);
@@ -49,16 +49,16 @@
     }
   }
 
-  &.bg--primary-blue .bg__sprite .sprite {
+  &.bg--primary-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .25;
   }
 
-  &.bg--beaver-blue .bg__sprite .sprite {
+  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .22;
   }
 }
 
-&.bg--shield-left.bg--narrow .bg__sprite .sprite {
+&.bg--shield-left.bg--narrow > .bg__sprites > .bg__sprite .sprite {
   @supports (container-type: inline-size ) {
 
     //noinspection CssInvalidAtRule
