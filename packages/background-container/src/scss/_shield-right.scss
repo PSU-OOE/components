@@ -1,5 +1,5 @@
 &.bg--shield-right {
-  .bg__sprite .sprite {
+  & > .bg__sprites > .bg__sprite .sprite {
     position: absolute;
     height: auto;
     width: rem(70);
@@ -48,17 +48,18 @@
       }
     }
   }
-  &.bg--primary-blue .bg__sprite .sprite {
+
+  &.bg--primary-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .25;
   }
 
-  &.bg--beaver-blue .bg__sprite .sprite {
+  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .22;
   }
 }
 
 // Adjustments for narrow widths with right side shield
-&.bg--shield-right.bg--narrow .bg__sprite .sprite {
+&.bg--shield-right.bg--narrow > .bg__sprites > .bg__sprite .sprite {
 
   //noinspection CssUnknownProperty
   @supports (container-type: inline-size ) {

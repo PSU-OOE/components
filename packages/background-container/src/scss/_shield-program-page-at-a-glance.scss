@@ -1,5 +1,5 @@
 &.bg--shield-program-page-at-a-glance {
-  .bg__sprite .sprite {
+  & > .bg__sprites > .bg__sprite .sprite {
     position: absolute;
     width: rem(53.2);
     height: auto;
@@ -26,11 +26,11 @@
     }
   }
 
-  &.bg--primary-blue .bg__sprite .sprite {
+  &.bg--primary-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .25;
   }
 
-  &.bg--beaver-blue .bg__sprite .sprite {
+  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .22;
   }
 }
