@@ -4,12 +4,13 @@ title: Headings
 ---
 # Variables
 | Variable | Type    | Required | Description                                                                 |
-| -------- | ------- | -------- | --------------------------------------------------------------------------- |
+| -------- | ------- | -------- |-----------------------------------------------------------------------------|
 | content  | string  | true     | The content to render within the heading.                                   |
 | level    | integer | false    | An integer, between 1 and 6 that denotes the heading level.  Defaults to 2. |
 | size     | string  | false    | Must match a documented size modifier (below).                              |
 | color    | string  | false    | Must match a documented color modifier (below).                             |
 | align    | string  | false    | Must match a documented align modifier (below).                             |
+ | vspace   | string  | false    | Must match a documented vertical space modifier (below).                    |
 
 ## Size modifiers
 | Size   | Description                         |
@@ -36,3 +37,9 @@ title: Headings
 | left    | If specified, the heading will be left aligned.   |
 | center  | If specified, the heading will be center aligned. |
 | right   | If specified, the heading will be right aligned.  |
+
+## Vertical space modifiers
+| Modifier | Description                                               |
+|----------|-----------------------------------------------------------|
+| small    | If specified, the heading will have a small margin bottom |
+| large    | If specified, the heading will have a large margin bottom |
