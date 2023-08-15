@@ -1,5 +1,5 @@
 &.bg--shield-topleft-bottomright {
-  .bg__sprite .sprite {
+  & > .bg__sprites > .bg__sprite .sprite {
     position: absolute;
     height: auto;
     display: none;
@@ -10,7 +10,7 @@
     }
   }
 
-  .bg__sprite--1 .sprite {
+  & > .bg__sprites > .bg__sprite--1 .sprite {
     width: rem(53.2);
     left: rem(-30);
     top: rem(-40);
@@ -38,7 +38,7 @@
       }
     }
   }
-  .bg__sprite--2 .sprite {
+  & > .bg__sprites > .bg__sprite--2 .sprite {
     width: rem(53.2);
     right: rem(-32);
     bottom: rem(-46);
@@ -69,11 +69,11 @@
     }
   }
 
-  &.bg--primary-blue .bg__sprite .sprite {
+  &.bg--primary-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .25;
   }
 
-  &.bg--beaver-blue .bg__sprite .sprite {
+  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
     opacity: .22;
   }
 }

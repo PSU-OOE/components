@@ -1,0 +1,33 @@
+{% set content %}
+  <div style="padding:10rem;">
+    I'm in pretty deep here...
+  </div>
+{% endset %}
+
+{% set third_generation %}
+  <div style="padding:10rem;">
+    {% include '@molecules/background-container/background-container.twig' with {
+        color: 'beaver-blue',
+        background_image: 'shield:topleft-bottomright',
+        content: content,
+      } only %}
+  </div>
+{% endset %}
+
+{% set second_generation %}
+  <div style="padding:10rem;">
+    {% include '@molecules/background-container/background-container.twig' with {
+      color: 'primary-blue',
+      background_image: 'shield:right',
+      content: third_generation,
+    } only %}
+  </div>
+{% endset %}
+
+<div style="text-align:center; color:#fff">
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'light-grey',
+    background_image: 'shield:left',
+    content: second_generation,
+  } only %}
+</div>
