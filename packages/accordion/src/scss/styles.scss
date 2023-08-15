@@ -47,7 +47,6 @@
 
         &--label-underline {
           text-decoration-style: solid;
-          transition: text-decoration-style .2s linear;
         }
       }
 
@@ -70,7 +69,6 @@
 
         &--label-underline {
           text-decoration-style: solid;
-          transition: text-decoration-style .2s linear;
         }
       }
 
@@ -86,7 +84,6 @@
       text-decoration-line: underline;
       text-decoration-style: dotted;
       text-underline-offset: .2em;
-      transition: text-decoration-style .2s linear;
     }
   }
 
