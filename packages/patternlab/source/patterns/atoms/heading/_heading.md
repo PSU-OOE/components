@@ -4,12 +4,13 @@ title: Headings
 ---
 # Variables
 | Variable | Type    | Required | Description                                                                 |
-| -------- | ------- | -------- | --------------------------------------------------------------------------- |
+| -------- | ------- | -------- |-----------------------------------------------------------------------------|
 | content  | string  | true     | The content to render within the heading.                                   |
 | level    | integer | false    | An integer, between 1 and 6 that denotes the heading level.  Defaults to 2. |
 | size     | string  | false    | Must match a documented size modifier (below).                              |
 | color    | string  | false    | Must match a documented color modifier (below).                             |
 | align    | string  | false    | Must match a documented align modifier (below).                             |
+ | vspace   | string  | false    | Must match a documented vertical space modifier (below).                    |
 
 ## Size modifiers
 | Size   | Description                         |
