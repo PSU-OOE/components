@@ -36,3 +36,9 @@ title: Headings
 | left    | If specified, the heading will be left aligned.   |
 | center  | If specified, the heading will be center aligned. |
 | right   | If specified, the heading will be right aligned.  |
+
+## Vertical space modifiers
+| Modifier | Description                                               |
+|----------|-----------------------------------------------------------|
+| small    | If specified, the heading will have a small margin bottom |
+| large    | If specified, the heading will have a large margin bottom |
