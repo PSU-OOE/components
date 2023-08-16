@@ -1,12 +1,12 @@
 // @deprecated - don't use.
 %button {
-  font-size: rem(1.5);
-  line-height: rem(1.5);
+  font-size: _rem(1.5);
+  line-height: _rem(1.5);
   display: inline-block;
   text-align: center;
-  padding: rem(1.5) rem(3);
+  padding: _rem(1.5) _rem(3);
   background-color: $primary-blue;
-  border-radius: rem(.2);
+  border-radius: _rem(.2);
   color: $white;
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
   position: relative;
@@ -20,25 +20,25 @@
   }
 
   &:focus {
-    outline-offset: rem(-.5);
+    outline-offset: _rem(-.5);
   }
 
   @include bp(m) {
-    padding: rem(1.7) rem(3.125);
+    padding: _rem(1.7) _rem(3.125);
   }
 }
 
 // @deprecated - don't use.
 %pdf-button-icon {
-  font-size: rem(2.4);
+  font-size: _rem(2.4);
   font-family: $font-awesome;
   color: $white;
   line-height: 0;
   display: inline-block;
   content: "\f1c1";
   vertical-align: baseline;
-  transform: translateY(rem(.2));
-  margin-left: rem(1.5);
+  transform: translateY(_rem(.2));
+  margin-left: _rem(1.5);
 }
 
 // @deprecated - don't use.
@@ -69,8 +69,8 @@
 // @deprecated - use `.read-more` utility class instead.
 @mixin read-more($color: $primary-blue, $hover-color: $primary-blue) {
   span {
-    font-size: rem(1.1);
-    line-height: rem(1.8);
+    font-size: _rem(1.1);
+    line-height: _rem(1.8);
     text-transform: uppercase;
     font-weight: 700;
     pointer-events: none;
@@ -91,7 +91,7 @@
     color: $color;
     font-weight: 700;
     pointer-events: auto;
-    border-bottom: rem(.1) solid transparent;
+    border-bottom: _rem(.1) solid transparent;
 
     &:after {
       content: "\00a0\f105";
@@ -104,7 +104,7 @@
     }
 
     &:focus {
-      outline-offset: rem(.2);
+      outline-offset: _rem(.2);
     }
   }
 }

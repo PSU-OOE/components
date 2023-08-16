@@ -1,9 +1,9 @@
 // "Clean" form styles
 input {
   display: block;
-  padding: rem(1.25);
+  padding: _rem(1.25);
   font-family: $source-sans-pro;
-  font-size: rem(1.6);
+  font-size: _rem(1.6);
   line-height: 145%;
   color: $font-color-default;
   transition: border .25s linear;
@@ -32,7 +32,7 @@ input:not([disabled]) {
   &[type="time"],
   &[type="url"],
   &[type="week"] {
-    border: rem(.1) solid;
+    border: _rem(.1) solid;
     border-color: $limestone $medium-grey $medium-grey $medium-grey;
   }
 }
@@ -40,17 +40,17 @@ input:not([disabled]) {
 textarea {
   display: block;
   width: 100%;
-  padding: rem(1.25);
+  padding: _rem(1.25);
   border-radius: 0;
   font-family: $source-sans-pro;
-  font-size: rem(1.6);
+  font-size: _rem(1.6);
   line-height: 145%;
   color: $font-color-default;
-  height: rem(10);
+  height: _rem(10);
 }
 
 textarea:not([disabled]) {
-  border: rem(.1) solid;
+  border: _rem(.1) solid;
   border-color: $limestone $medium-grey $medium-grey $medium-grey;
 }
 
@@ -69,11 +69,11 @@ fieldset {
 
 .fieldset-legend {
   display: block;
-  margin-bottom: rem(0.5);
+  margin-bottom: _rem(0.5);
 
   &.form-required::after {
     content: "*";
-    margin-left: rem(0.25);
+    margin-left: _rem(0.25);
     color: $primary-blue;
   }
 }
@@ -81,27 +81,27 @@ fieldset {
 // @TODO: These styles need some serious TLC.
 form {
   .js-form-type-processed-text {
-    margin-top: rem(1);
+    margin-top: _rem(1);
 
     p {
-      margin-bottom: rem(1);
+      margin-bottom: _rem(1);
     }
   }
 
   .js-form-type-datelist {
-    margin-top: rem(2);
+    margin-top: _rem(2);
 
     label {
       display: block;
-      margin-bottom: rem(0.5);
+      margin-bottom: _rem(0.5);
       font-family: $font-family-default;
-      font-size: rem(1.4);
+      font-size: _rem(1.4);
       font-weight: 600;
 
       &.form-required {
         &::after {
           content: "*";
-          margin-left: rem(0.25);
+          margin-left: _rem(0.25);
           color: $primary-blue;
         }
       }
@@ -112,12 +112,12 @@ form {
       justify-content: space-between;
 
       .js-form-type-select {
-        margin-top: rem(1);
-        width: calc(33.33% - #{rem(1)});
+        margin-top: _rem(1);
+        width: calc(33.33% - #{_rem(1)});
 
         @include bp(s) {
-          width: calc(33.33% - #{rem(2)});
-          margin-top: rem(0.5);
+          width: calc(33.33% - #{_rem(2)});
+          margin-top: _rem(0.5);
         }
       }
     }
@@ -127,7 +127,7 @@ form {
     position: relative;
 
     &:before {
-      font-size: rem(1.6);
+      font-size: _rem(1.6);
       pointer-events: none;
       content: "\f107";
       font-family: $font-awesome;
@@ -137,7 +137,7 @@ form {
       position: absolute;
       color: $medium-dark-grey;
       top: 50%;
-      right: rem(1.5);
+      right: _rem(1.5);
       transform: translateY(-50%);
       z-index: 1;
     }
@@ -148,7 +148,7 @@ form {
 
     .ajax-progress-throbber {
       position: absolute;
-      right: rem(1.5);
+      right: _rem(1.5);
       top: 67%;
       transform: translateY(-50%);
 
@@ -165,8 +165,8 @@ form {
   }
 
   .fieldset-legend {
-    font-size: rem(1.4);
-    line-height: rem(1.8);
+    font-size: _rem(1.4);
+    line-height: _rem(1.8);
     color: $beaver-blue;
     display: block;
     font-weight: 600;
@@ -174,10 +174,10 @@ form {
   }
 
   .js-form-type-checkbox {
-    font-size: rem(1.4);
-    line-height: rem(1.8);
+    font-size: _rem(1.4);
+    line-height: _rem(1.8);
     position: relative;
-    margin-bottom: rem(.25);
+    margin-bottom: _rem(.25);
 
     input[type="checkbox"] {
       opacity: 0;
@@ -204,11 +204,11 @@ form {
         &::before {
           background-color: $white;
           color: $medium-grey;
-          border: rem(.1) solid $medium-grey;
+          border: _rem(.1) solid $medium-grey;
         }
 
         &::after {
-          line-height: rem(2.2);
+          line-height: _rem(2.2);
           font-family: $font-awesome;
           content: '\f00c';
           position: absolute;
@@ -218,28 +218,28 @@ form {
           left: 0;
           // adjusted for padding
           top: 0;
-          height: rem(2.2);
-          width: rem(2.2);
+          height: _rem(2.2);
+          width: _rem(2.2);
           background-color: $primary-blue;
           color: $white;
-          border: rem(.1) solid $medium-grey;
-          border-radius: rem(.3);
+          border: _rem(.1) solid $medium-grey;
+          border-radius: _rem(.3);
         }
       }
 
       &::before {
         content: "";
         display: block;
-        flex: 0 0 rem(2.2);
-        margin-right: rem(1.2);
-        height: rem(2.2);
-        width: rem(2.2);
-        border: rem(.1) solid $medium-grey;
-        border-radius: rem(.3);
+        flex: 0 0 _rem(2.2);
+        margin-right: _rem(1.2);
+        height: _rem(2.2);
+        width: _rem(2.2);
+        border: _rem(.1) solid $medium-grey;
+        border-radius: _rem(.3);
       }
 
       &::after {
-        line-height: rem(2.2);
+        line-height: _rem(2.2);
         font-family: $font-awesome;
         content: '\f00c';
         position: absolute;
@@ -248,12 +248,12 @@ form {
         left: 0;
         // adjusted for padding
         top: 0;
-        height: rem(2.2);
-        width: rem(2.2);
+        height: _rem(2.2);
+        width: _rem(2.2);
         background-color: $primary-blue;
         color: $white;
-        border: rem(.1) solid $medium-grey;
-        border-radius: rem(.3);
+        border: _rem(.1) solid $medium-grey;
+        border-radius: _rem(.3);
       }
     }
 
@@ -274,23 +274,23 @@ form {
     }
 
     input[type="checkbox"]:hover + label::before {
-      border: rem(.1) solid $primary-blue;
+      border: _rem(.1) solid $primary-blue;
     }
 
     input[type="checkbox"]:focus + label::before {
-      outline: rem(.2) solid $sky-blue;
-      outline-offset: rem(.2);
+      outline: _rem(.2) solid $sky-blue;
+      outline-offset: _rem(.2);
     }
   }
 
   .form-item-middlename {
     input {
-      max-width: rem(6);
+      max-width: _rem(6);
     }
   }
 
   select {
-    font-size: rem(1.6);
+    font-size: _rem(1.6);
     background: $white;
     font-family: $source-sans-pro;
 
@@ -299,22 +299,22 @@ form {
     -o-appearance: none;
     appearance: none;
     width: 100%;
-    border: rem(.1) solid $medium-grey;
+    border: _rem(.1) solid $medium-grey;
     border-radius: 0;
-    padding: rem(1.6) rem(3.5) rem(1.6) rem(1);
+    padding: _rem(1.6) _rem(3.5) _rem(1.6) _rem(1);
   }
 
   button,
   input[type="button"],
   input[type="submit"],
   input[type="reset"] {
-    font-size: rem(1.5);
-    line-height: rem(1.5);
+    font-size: _rem(1.5);
+    line-height: _rem(1.5);
     display: inline-block;
     text-align: center;
-    padding: rem(1.5) rem(3);
+    padding: _rem(1.5) _rem(3);
     background-color: $primary-blue;
-    border-radius: rem(.2);
+    border-radius: _rem(.2);
     color: $white;
     transition: background-color .2s ease-in-out, color .2s ease-in-out;
     position: relative;
@@ -330,11 +330,11 @@ form {
     }
 
     &:focus {
-      outline-offset: rem(-.5);
+      outline-offset: _rem(-.5);
     }
 
     @include bp(m) {
-      padding: rem(1.7) rem(3.125);
+      padding: _rem(1.7) _rem(3.125);
     }
 
     &:hover {
@@ -352,8 +352,8 @@ form {
   .required-text,
   .rfi-element-required-text {
     margin-top: 0 !important;
-    margin-bottom: rem(3);
-    font-size: rem(1.2);
+    margin-bottom: _rem(3);
+    font-size: _rem(1.2);
     font-style: italic;
 
     p {
@@ -364,7 +364,7 @@ form {
     }
 
     span {
-      font-size: rem(1.4);
+      font-size: _rem(1.4);
       font-weight: 700;
       color: $primary-blue;
     }
@@ -372,7 +372,7 @@ form {
 
   .required-text {
     span {
-      line-height: rem(1.61);
+      line-height: _rem(1.61);
     }
   }
 
@@ -382,7 +382,7 @@ form {
     padding: 0;
     margin: 0;
     position: relative;
-    top: rem(-.2);
+    top: _rem(-.2);
     .throbber {
       display: inline-block;
       padding: 0;
@@ -413,38 +413,38 @@ form {
 
 [aria-label="Error message"] {
   width: 100%;
-  margin-bottom: rem(2);
-  padding: rem(2);
-  padding-left: rem(0.5);
-  border: rem(.1) solid $error-red;
+  margin-bottom: _rem(2);
+  padding: _rem(2);
+  padding-left: _rem(0.5);
+  border: _rem(.1) solid $error-red;
   background-image: url("#{$img-path}/error-icon.png");
-  background-size: rem(2.4);
-  background-position: rem(2) center;
+  background-size: _rem(2.4);
+  background-position: _rem(2) center;
   background-repeat: no-repeat;
 
   [role="alert"] {
-    padding-left: rem(5.5);
-    font-size: rem(1.4);
+    padding-left: _rem(5.5);
+    font-size: _rem(1.4);
 
     ul {
       margin: 0;
       padding: 0;
-      padding-left: rem(1.5);
+      padding-left: _rem(1.5);
       list-style: none;
 
       li {
         position: relative;
         margin: 0;
-        margin-bottom: rem(0.5);
+        margin-bottom: _rem(0.5);
         padding: 0;
 
         &::before {
           content: "";
           position: absolute;
-          width: rem(0.6);
-          height: rem(0.6);
-          top: calc(50% - #{rem(0.3)});
-          right: calc(100% + #{rem(0.75)});
+          width: _rem(0.6);
+          height: _rem(0.6);
+          top: calc(50% - #{_rem(0.3)});
+          right: calc(100% + #{_rem(0.75)});
           border-radius: 50%;
           background-color: $font-color-default;
         }

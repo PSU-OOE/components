@@ -3,7 +3,7 @@
 .expandable-section {
 
   &__intro {
-    margin-bottom: rem(2);
+    margin-bottom: _rem(2);
   }
 
   &__content {
@@ -17,7 +17,7 @@
 
   &__expand[aria-expanded="true"] + .expandable-section__content {
     visibility: visible;
-    margin-bottom: rem(3);
+    margin-bottom: _rem(3);
     overflow: visible;
   }
 

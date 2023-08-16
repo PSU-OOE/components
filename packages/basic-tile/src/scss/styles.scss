@@ -1,10 +1,10 @@
 @import "../../../base/src/scss/imports/variables";
 
 .basic-tile {
-  padding: rem(1.5) rem(2);
+  padding: _rem(1.5) _rem(2);
   transition: .2s background,.2s color,.2s border ease-in-out;
-  line-height: rem(2.2);
-  outline-offset: rem(-0.5);
+  line-height: _rem(2.2);
+  outline-offset: _rem(-0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;

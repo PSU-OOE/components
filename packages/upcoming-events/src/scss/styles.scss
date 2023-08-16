@@ -6,7 +6,7 @@
   &__featured {
     display: flex;
     flex-direction: column;
-    gap: rem(2) rem(3);
+    gap: _rem(2) _rem(3);
     width: 100%;
 
     @include bp(s) {
@@ -15,17 +15,17 @@
   }
 
   &__overflow {
-    margin-top: rem(2);
+    margin-top: _rem(2);
 
     @include bp(s) {
-      margin-top: rem(3);
+      margin-top: _rem(3);
     }
   }
 
   &__more {
     display: grid;
     grid-template-columns: 1fr;
-    gap: rem(2);
+    gap: _rem(2);
   }
 
   &__event {
@@ -44,7 +44,7 @@
       }
 
       &__overflow {
-        margin-top: rem(2);
+        margin-top: _rem(2);
       }
     }
   }

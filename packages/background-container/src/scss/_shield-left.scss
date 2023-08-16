@@ -2,9 +2,9 @@
   & > .bg__sprites > .bg__sprite .sprite {
     position: absolute;
     height: auto;
-    width: rem(70);
-    left: rem(-62);
-    top: rem(-42);
+    width: _rem(70);
+    left: _rem(-62);
+    top: _rem(-42);
     display: none; // @TODO: When container query support is more mainstream, simplify this.
 
     //noinspection CssUnknownProperty
@@ -13,38 +13,38 @@
 
       //noinspection CssInvalidAtRule
       @container (min-width: 550px) {
-        width: rem(90);
-        left: rem(-78);
-        top: rem(-49);
+        width: _rem(90);
+        left: _rem(-78);
+        top: _rem(-49);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 800px) {
-        width: rem(110);
-        left: rem(-98);
-        top: rem(-63);
+        width: _rem(110);
+        left: _rem(-98);
+        top: _rem(-63);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 950px) {
-        width: rem(130);
-        left: rem(-112);
-        top: rem(-76);
+        width: _rem(130);
+        left: _rem(-112);
+        top: _rem(-76);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1280px) {
-        left: rem(-98);
+        left: _rem(-98);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1500px) {
-        left: rem(-95);
+        left: _rem(-95);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1800px) {
-        left: rem(-83);
+        left: _rem(-83);
       }
     }
   }
@@ -63,27 +63,27 @@
 
     //noinspection CssInvalidAtRule
     @container (min-width: 950px) {
-      left: rem(-110);
+      left: _rem(-110);
     }
 
     //noinspection CssInvalidAtRule
     @container (min-width: 1024px) {
-      left: rem(-105);
+      left: _rem(-105);
     }
 
     //noinspection CssInvalidAtRule
     @container (min-width: 1280px) {
-      left: rem(-90);
+      left: _rem(-90);
     }
 
     //noinspection CssInvalidAtRule
     @container (min-width: 1500px) {
-      left: rem(-85);
+      left: _rem(-85);
     }
 
     //noinspection CssInvalidAtRule
     @container (min-width: 1800px) {
-      left: rem(-70);
+      left: _rem(-70);
     }
   }
 }

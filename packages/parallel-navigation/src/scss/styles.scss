@@ -3,19 +3,19 @@
 
 .parallel-navigation {
   &__intro {
-    margin-bottom: rem(.8);
+    margin-bottom: _rem(.8);
 
     @include bp(m) {
-      margin-bottom: rem(1.5);
+      margin-bottom: _rem(1.5);
     }
   }
 
   &__heading {
-    margin-bottom: rem(.8);
+    margin-bottom: _rem(.8);
   }
 
   &__text {
-    font-size: rem(1.4);
+    font-size: _rem(1.4);
     line-height: calc(13/7)
   }
 
@@ -26,16 +26,16 @@
 
     &--two-col {
       column-count: 2;
-      column-gap: rem(2);
-      column-width: rem(29);
+      column-gap: _rem(2);
+      column-width: _rem(29);
     }
   }
 
   &__item {
-    border-bottom: rem(.1) solid $slate-light;
+    border-bottom: _rem(.1) solid $slate-light;
     display: inline-block;
     list-style-type: none;
-    padding: rem(.4) 0;
+    padding: _rem(.4) 0;
     width: 100%;
     margin: 0;
     &::before {

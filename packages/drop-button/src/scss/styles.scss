@@ -12,66 +12,66 @@
     border: none;
     cursor: pointer;
     display: inline-flex;
-    gap: rem(.5);
+    gap: _rem(.5);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: rem(.5);
-    border-radius: rem(.4);
-    box-shadow: rem(.1) rem(.1) rgba($beaver-blue, .5);
+    padding: _rem(.5);
+    border-radius: _rem(.4);
+    box-shadow: _rem(.1) _rem(.1) rgba($beaver-blue, .5);
     transition: .3s color, .3s background-color, .3s box-shadow;
-    width: rem(4.4);
-    height: rem(4.4);
+    width: _rem(4.4);
+    height: _rem(4.4);
     color: $beaver-blue;
 
     font-family: $open-sans;
     font-weight: 400;
 
-    font-size: rem(1.1);
+    font-size: _rem(1.1);
 
     @include bp(xs) {
-      font-size: rem(1.2);
+      font-size: _rem(1.2);
     }
 
     @include bp(s) {
-      font-size: rem(1.4);
+      font-size: _rem(1.4);
     }
 
     @include bp(m) {
-      font-size: rem(1.5);
+      font-size: _rem(1.5);
     }
 
     @include bp(l) {
-      font-size: rem(1.6);
+      font-size: _rem(1.6);
     }
 
     @include bp(xs) {
-      padding: rem(.6);
-      width: rem(5.2);
-      height: rem(5.2);
+      padding: _rem(.6);
+      width: _rem(5.2);
+      height: _rem(5.2);
     }
 
     @include bp(s) {
-      padding: rem(.8);
-      width: rem(6.3);
-      height: rem(6.3);
+      padding: _rem(.8);
+      width: _rem(6.3);
+      height: _rem(6.3);
     }
 
     @include bp(m) {
-      padding: rem(.9);
-      width: rem(7.2);
-      height: rem(7.2);
+      padding: _rem(.9);
+      width: _rem(7.2);
+      height: _rem(7.2);
     }
 
     @include bp(l) {
-      padding: rem(1);
-      width: rem(8);
-      height: rem(8);
+      padding: _rem(1);
+      width: _rem(8);
+      height: _rem(8);
     }
 
     &:focus-visible {
       background: $pugh-blue;
-      box-shadow: rem(.1) rem(.1) $nittany-navy;
+      box-shadow: _rem(.1) _rem(.1) $nittany-navy;
       color: $nittany-navy;
       outline: none;
     }
@@ -82,7 +82,7 @@
 
     &.focus-visible {
       background: $pugh-blue;
-      box-shadow: rem(.1) rem(.1) $nittany-navy;
+      box-shadow: _rem(.1) _rem(.1) $nittany-navy;
       color: $nittany-navy;
       outline: none;
     }
@@ -90,12 +90,12 @@
 
     &:hover {
       background: $pugh-blue;
-      box-shadow: rem(.1) rem(.1) $nittany-navy;
+      box-shadow: _rem(.1) _rem(.1) $nittany-navy;
       color: $nittany-navy;
     }
 
     &[aria-expanded="true"] {
-      box-shadow: rem(-.1) rem(-.1) $beaver-blue;
+      box-shadow: _rem(-.1) _rem(-.1) $beaver-blue;
 
       & + .drop-button__list {
         visibility: visible;
@@ -105,24 +105,24 @@
 
     .sprite {
       opacity: .75;
-      height: rem(.605);
-      margin-top: rem(.3);
+      height: _rem(.605);
+      margin-top: _rem(.3);
       max-width: 100%;
 
       @include bp(xs) {
-        height: rem(.66);
+        height: _rem(.66);
       }
 
       @include bp(s) {
-        height: rem(.77);
+        height: _rem(.77);
       }
 
       @include bp(m) {
-        height: rem(.825);
+        height: _rem(.825);
       }
 
       @include bp(l) {
-        height: rem(.88);
+        height: _rem(.88);
       }
     }
   }
@@ -140,10 +140,10 @@
     list-style-type: none;
     border-style: solid;
     border-color: $slate-light $slate-light $slate-light $primary-blue;
-    border-width: rem(.1) rem(.1) rem(.1) rem(.3);
-    box-shadow: rem(.1) rem(.3) rem(.5) rgba($nittany-navy, .15);
-    padding: rem(1);
-    width: rem(28);
+    border-width: _rem(.1) _rem(.1) _rem(.1) _rem(.3);
+    box-shadow: _rem(.1) _rem(.3) _rem(.5) rgba($nittany-navy, .15);
+    padding: _rem(1);
+    width: _rem(28);
     z-index: 100;
     top: 100%;
 
@@ -152,29 +152,29 @@
       position: absolute;
       transform: rotateZ(45deg);
       background: $white;
-      width: rem(2);
-      height: rem(2);
-      top: rem(-1);
+      width: _rem(2);
+      height: _rem(2);
+      top: _rem(-1);
       z-index: -1;
-      border-width: rem(.1);
+      border-width: _rem(.1);
       border-style: solid;
       border-color: $slate-light transparent transparent $slate-light;
-      left: calc(#{rem(2.2)} - #{rem(math.div(math.sqrt(200), 10))});
+      left: calc(#{_rem(2.2)} - #{_rem(math.div(math.sqrt(200), 10))});
 
       @include bp(xs) {
-        left: calc(#{rem(2.6)} - #{rem(math.div(math.sqrt(200), 10))});
+        left: calc(#{_rem(2.6)} - #{_rem(math.div(math.sqrt(200), 10))});
       }
 
       @include bp(s) {
-        left: calc(#{rem(3.15)} - #{rem(math.div(math.sqrt(200), 10))});
+        left: calc(#{_rem(3.15)} - #{_rem(math.div(math.sqrt(200), 10))});
       }
 
       @include bp(m) {
-        left: calc(#{rem(3.6)} - #{rem(math.div(math.sqrt(200), 10))});
+        left: calc(#{_rem(3.6)} - #{_rem(math.div(math.sqrt(200), 10))});
       }
 
       @include bp(l) {
-        left: calc(#{rem(4)} - #{rem(math.div(math.sqrt(200), 10))});
+        left: calc(#{_rem(4)} - #{_rem(math.div(math.sqrt(200), 10))});
       }
     }
   }
@@ -182,17 +182,17 @@
   &__link {
     color: $nittany-navy;
     display: block;
-    padding: rem(1);
+    padding: _rem(1);
     font-weight: 400;
     line-height: 1.25;
-    font-size: rem(1.4);
+    font-size: _rem(1.4);
     text-decoration: underline;
     text-decoration-color: transparent;
-    text-underline-offset: rem(.3);
+    text-underline-offset: _rem(.3);
     transition: text-decoration-color .3s, color .3s;
 
     @include bp(xs) {
-      font-size: rem(1.6);
+      font-size: _rem(1.6);
     }
 
     &:hover, &:focus {
@@ -214,7 +214,7 @@
 
     .drop-button__list::before {
       left: 50%;
-      transform: rotateZ(45deg) translateX(calc(-50% + #{rem(.2)})) translateY(calc(50% - #{rem(.2)}));
+      transform: rotateZ(45deg) translateX(calc(-50% + #{_rem(.2)})) translateY(calc(50% - #{_rem(.2)}));
     }
   }
 
@@ -228,22 +228,22 @@
 
       &::before {
         left: revert;
-        right: rem(1.2);
+        right: _rem(1.2);
 
         @include bp(xs) {
-          right: rem(1.6);
+          right: _rem(1.6);
         }
 
         @include bp(s) {
-          right: rem(2.15);
+          right: _rem(2.15);
         }
 
         @include bp(m) {
-          right: rem(2.6);
+          right: _rem(2.6);
         }
 
         @include bp(l) {
-          right: rem(3);
+          right: _rem(3);
         }
       }
     }
@@ -255,22 +255,22 @@
         flex-direction: column;
         width: 100%;
         height: auto;
-        padding: rem(.8);
+        padding: _rem(.8);
 
         @include bp(xs) {
-          padding: rem(.9);
+          padding: _rem(.9);
         }
 
         @include bp(s) {
-          padding: rem(1);
+          padding: _rem(1);
         }
 
         @include bp(m) {
-          padding: rem(1.2);
+          padding: _rem(1.2);
         }
 
         @include bp(l) {
-          padding: rem(1.5);
+          padding: _rem(1.5);
         }
       }
 
@@ -288,22 +288,22 @@
         width: auto;
         height: auto;
         min-height: 100%;
-        padding: rem(1) rem(1.5);
+        padding: _rem(1) _rem(1.5);
 
         .sprite {
-          height: rem(1.4);
+          height: _rem(1.4);
           width: auto;
           margin-top: 0;
         }
       }
 
       &__label {
-        font-size: rem(1.1);
+        font-size: _rem(1.1);
         font-weight: 600;
       }
 
       &__list::before {
-        right: calc(#{rem(3.2845)} - #{rem(math.div(math.sqrt(200), 10))});
+        right: calc(#{_rem(3.2845)} - #{_rem(math.div(math.sqrt(200), 10))});
       }
     }
   }

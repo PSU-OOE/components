@@ -7,36 +7,36 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    gap: rem(3);
+    gap: _rem(3);
 
     @include bp(s) {
       flex-direction: row;
-      max-width: rem(97);
-      padding: 0 rem(4);
+      max-width: _rem(97);
+      padding: 0 _rem(4);
     }
   }
 
   &__first {
     position: relative;
 
-    margin-top: rem(-3);
+    margin-top: _rem(-3);
 
     @include bp(xs) {
-      margin-top: rem(-4);
+      margin-top: _rem(-4);
     }
 
     @include bp(s) {
-      box-shadow: rem(.1) rem(.2) rgba($nittany-navy, .4);
+      box-shadow: _rem(.1) _rem(.2) rgba($nittany-navy, .4);
       flex: 1;
       height: fit-content;
       margin-top: 0;
-      margin-bottom: rem(1);
+      margin-bottom: _rem(1);
     }
   }
 
   &__border {
     @include bp(s) {
-      border-top: rem(.8) solid $primary-blue;
+      border-top: _rem(.8) solid $primary-blue;
     }
   }
 
@@ -61,11 +61,11 @@
   }
 
   &__intro {
-    padding: 0 rem(1);
+    padding: 0 _rem(1);
     margin-top: calc(43.75% - 3.25rem);
 
     @include bp(xs) {
-      padding: 0 rem(2);
+      padding: 0 _rem(2);
     }
 
     @include bp(s) {
@@ -76,16 +76,16 @@
   }
 
   &__overlay {
-    margin-right: rem(4);
+    margin-right: _rem(4);
 
     @include bp(xs) {
-      margin-right: rem(5);
+      margin-right: _rem(5);
     }
 
     @include bp(s) {
-      min-height: rem(5.9);
-      margin-left: rem(-2);
-      margin-right: rem(3);
+      min-height: _rem(5.9);
+      margin-left: _rem(-2);
+      margin-right: _rem(3);
     }
   }
 
@@ -93,16 +93,16 @@
     display: inline;
     letter-spacing: normal;
     position: relative;
-    font-size: rem(3.4);
+    font-size: _rem(3.4);
     font-family: $open-sans;
     line-height: 1.15;
     font-weight: 400;
     background: $primary-blue;
-    padding: rem(1) 0;
-    margin: 0 rem(1.5);
+    padding: _rem(1) 0;
+    margin: 0 _rem(1.5);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-    box-shadow: rem(-1.5) 0 0 $primary-blue, rem(1.5) 0 0 $primary-blue;
+    box-shadow: _rem(-1.5) 0 0 $primary-blue, _rem(1.5) 0 0 $primary-blue;
     color: $white;
   }
 
@@ -113,28 +113,28 @@
   &__description {
     background: $white;
     display: block;
-    box-shadow: rem(.1) rem(.2) rgba($nittany-navy, .4);
-    padding: rem(2.5) rem(2);
-    margin: rem(.4) rem(1) 0 rem(1);
+    box-shadow: _rem(.1) _rem(.2) rgba($nittany-navy, .4);
+    padding: _rem(2.5) _rem(2);
+    margin: _rem(.4) _rem(1) 0 _rem(1);
 
     @include bp(xs) {
-      margin: rem(.4) rem(2) 0 rem(2);
+      margin: _rem(.4) _rem(2) 0 _rem(2);
     }
 
     @include bp(s) {
-      font-size: rem(1.8);
+      font-size: _rem(1.8);
       line-height: calc(33/18);
-      margin: rem(1.3) 0 0 0;
+      margin: _rem(1.3) 0 0 0;
       box-shadow: none;
-      padding: rem(2) rem(2) rem(3);
+      padding: _rem(2) _rem(2) _rem(3);
     }
   }
 
   &__second {
-    padding: 0 rem(2) rem(1) rem(2);
+    padding: 0 _rem(2) _rem(1) _rem(2);
 
     @include bp(xs) {
-      padding: 0 rem(4) rem(1) rem(4);
+      padding: 0 _rem(4) _rem(1) _rem(4);
     }
 
     @include bp(s) {
@@ -145,13 +145,13 @@
 
   &--primary-blue &__border {
     @include bp(s) {
-      border-top: rem(.8) solid $beaver-blue;
+      border-top: _rem(.8) solid $beaver-blue;
     }
   }
 
   &--primary-blue &__title {
     background: $beaver-blue;
-    box-shadow: rem(-1.5) 0 0 $beaver-blue, rem(1.5) 0 0 $beaver-blue;
+    box-shadow: _rem(-1.5) 0 0 $beaver-blue, _rem(1.5) 0 0 $beaver-blue;
 
   }
 }

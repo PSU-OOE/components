@@ -4,7 +4,7 @@
   @return math.div($n, $n * 0 + 1);
 }
 
-@mixin rem($property, $values) {
+@mixin _rem($property, $values) {
   $px: ();
   $rem: ();
 
@@ -40,10 +40,10 @@
 
 @mixin visually-hidden {
   position: absolute !important;
-  clip: rect(#{rem(.1)}, #{rem(.1)}, #{rem(.1)}, #{rem(.1)});
+  clip: rect(#{_rem(.1)}, #{_rem(.1)}, #{_rem(.1)}, #{_rem(.1)});
   overflow: hidden;
-  height: rem(.1);
-  width: rem(.1);
+  height: _rem(.1);
+  width: _rem(.1);
   word-wrap: normal;
 }
 
@@ -82,9 +82,9 @@
     content: "";
     position: absolute;
 
-    // +rem(.1) to account any rounding errors
-    width: calc(100vw + #{rem(.1)});
-    height: calc(100% + #{rem(.1)});
+    // +_rem(.1) to account any rounding errors
+    width: calc(100vw + #{_rem(.1)});
+    height: calc(100% + #{_rem(.1)});
     background: $bg-color;
     left: 50%;
     top: 0;
@@ -99,7 +99,7 @@
 }
 
 @mixin dotted-border($position: bottom) {
-  border-#{$position}: rem(.1) dotted rgba($nittany-navy, 0.25);
+  border-#{$position}: _rem(.1) dotted rgba($nittany-navy, 0.25);
 }
 
 @mixin edge {
@@ -125,11 +125,11 @@
   // Extend the background to the area beneath the end of the container.
   &:before {
     @include bp(xs) {
-      height: calc(100% + #{rem(3)});
+      height: calc(100% + #{_rem(3)});
     }
 
     @include bp(m) {
-      height: calc(100% + #{rem(6)});
+      height: calc(100% + #{_rem(6)});
     }
   }
 }

@@ -1,3 +1,5 @@
+@use 'sass:meta';
+
 // Fonts
 $open-sans: 'Open Sans', sans-serif;
 $roboto-slab: 'Roboto Slab', Georgia, serif;
@@ -52,6 +54,10 @@ $fa-font-path: '/themes/custom/worldcampus/webfonts/2021-04-12';
 $base-rem-scale: 1 !default;
 @function rem($base) {
   @return unquote(($base * $base-rem-scale) + 'rem');
+}
+
+@function _rem($base) {
+  @return meta.call(meta.get-function('rem'), $base);
 }
 
 // z-index layers

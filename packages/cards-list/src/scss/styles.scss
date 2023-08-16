@@ -37,12 +37,12 @@
     }
 
     & + .cards-list__overflow {
-      margin-top: rem(3);
+      margin-top: _rem(3);
     }
   }
 
   &__overflow-cards {
     display: grid;
-    gap: rem(.5);
+    gap: _rem(.5);
   }
 }

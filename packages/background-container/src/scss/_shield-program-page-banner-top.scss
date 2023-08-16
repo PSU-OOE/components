@@ -1,10 +1,10 @@
 &.bg--shield-program-page-banner-top {
   & > .bg__sprites > .bg__sprite .sprite {
     position: absolute;
-    width: rem(53.2);
+    width: _rem(53.2);
     height: auto;
-    left: rem(-22.3);
-    top: rem(-47.5);
+    left: _rem(-22.3);
+    top: _rem(-47.5);
     display: none;
     //noinspection CssUnknownProperty
     @supports (container-type: inline-size ) {
@@ -12,8 +12,8 @@
 
       //noinspection CssInvalidAtRule
       @container (min-width: 950px) {
-        width: rem(132.6);
-        left: calc(((100% - #{rem(39.5)}) / 2) - #{rem(108)});
+        width: _rem(132.6);
+        left: calc(((100% - #{_rem(39.5)}) / 2) - #{_rem(108)});
         bottom: 0;
         top: unset;
       }
