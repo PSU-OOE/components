@@ -1,52 +1,169 @@
-{% set sprites = [
-    'blog',
-    'community-shield',
-    'fa-check-circle',
-    'fas-ellipsis',
-    'fas-ellipsis-vertical',
-    'envelope',
-    'fa-exclamation-circle',
-    'fa-exclamation-triangle',
-    'fa-angle-up',
-    'fa-bars',
-    'fa-circle-notch',
-    'fa-circle-arrow-down',
-    'fa-exclamation',
-    'fa-filter-solid',
-    'fa-magnifying-glass',
-    'fa-plus-circle',
-    'fa-times',
-    'fas-arrow-up',
-    'fas-plus',
-    'fas-briefcase',
-    'fas-briefcase-medical',
-    'fas-building-columns',
-    'fas-certificate',
-    'fas-graduation-cap',
-    'fas-chevron-down',
-    'fa-chevron-left',
-    'fas-chevron-right',
-    'fas-chevron-up',
-    'fa-chevron-double-left',
-    'fa-chevron-double-right',
-    'fa-spinner-third',
-    'fas-file-pdf',
-    'fas-laptop',
-    'fas-message',
-    'fas-user-group',
-    'facebook',
-    'flickr',
-    'instagram',
-    'linkedin',
-    'pinterest',
-    'phone',
-    'psu-mark',
-    'twitter',
-    'youtube',
-    'youtube-player',
-    'wc-mark',
-] %}
-
-{% for sprite in sprites %}
-  {% include '@atoms/sprite/sprite.twig' with { name: sprite } %}
+{% set sprite_groups = {
+  logos: {
+    name: 'Logos and Branding Marks',
+    sprites: {
+      'psu-mark': 'Penn State Brand Mark',
+      'wc-mark': 'World Campus Brand Mark',
+    },
+  },
+  ambient: {
+    name: 'Ambient Backgrounds',
+    sprites: {
+      'community-shield': 'Community Shield',
+    },
+  },
+  social_media: {
+    name: 'Social Media',
+    sprites: {
+      'blog': 'Blog',
+      'facebook': 'Facebook',
+      'flickr': 'Flickr',
+      'instagram': 'Instagram',
+      'linkedin': 'Linkedin',
+      'pinterest': 'Pinterest',
+      'twitter': 'Twitter',
+      'youtube': 'Youtube',
+    },
+  },
+  general: {
+    name: 'General Use',
+    sprites: {
+      'envelope': 'Envelope',
+      'fa-angle-up': 'Angle Up',
+      'fa-bars': 'Bars',
+      'fa-check-circle': 'Check Circle',
+      'fa-chevron-double-left': 'Chevron Double Left',
+      'fa-chevron-double-right': 'Chevron Double Right',
+      'fa-chevron-left': 'Chevron Left',
+      'fa-circle-arrow-down': 'Circle Arrow Down',
+      'fa-circle-notch': 'Circle Notch',
+      'fa-exclamation': 'Exclamation',
+      'fa-exclamation-circle': 'Circle Exclamation',
+      'fa-exclamation-triangle': 'Triangle Exclamation',
+      'fa-filter-solid': 'Filter',
+      'fa-plus-circle': 'Plus Circle',
+      'fa-spinner-third': 'Spinner Third',
+      'fa-times': 'Times',
+      'fas-arrow-up': 'Arrow Up',
+      'fas-arrow-up-right-from-square': 'Arrow Up Right From Square',
+      'fas-bolt': 'Bolt',
+      'fas-book': 'Book',
+      'fas-book-open-reader': 'Book Open Reader',
+      'fas-briefcase': 'Briefcase',
+      'fas-briefcase-medical': 'Briefcase Medical',
+      'fas-building-columns': 'Building Columns',
+      'fas-building-user': 'Building User',
+      'fas-calculator': 'Calculator',
+      'fas-calendar-days': 'Calendar Days',
+      'fas-certificate': 'Certificate',
+      'fas-chalkboard-user': 'Chalkboard User',
+      'fas-chart-line': 'Chart Line',
+      'fas-chevron-down': 'Chevron Down',
+      'fas-chevron-right': 'Chevron Right',
+      'fas-chevron-up': 'Chevron Up',
+      'fas-child-reaching': 'Child Reaching',
+      'fas-circle-bolt': 'Circle Bolt',
+      'fas-comments': 'Comments',
+      'fas-computer-classic': 'Classic Computer',
+      'fas-earth-americas': 'Earth Americas',
+      'fas-ellipsis': 'Horizontal ellipsis',
+      'fas-ellipsis-vertical': 'Vertical ellipsis',
+      'fas-file-pdf': 'File PDF',
+      'fas-flower-tulip': 'Flower Tulip',
+      'fas-graduation-cap': 'Graduation Cap',
+      'fas-handshake-simple': 'Handshake Simple',
+      'fas-house': 'House',
+      'fas-image': 'Image',
+      'fas-landmark': 'Landmark',
+      'fas-laptop': 'Laptop',
+      'fas-layer-group': 'Layer Group',
+      'fas-leaf-maple': 'Leaf Maple',
+      'fas-lightbulb-on': 'Lightbulb On',
+      'fas-list-check': 'List Check',
+      'fas-magnifying-glass': 'Magnifying Glass',
+      'fas-magnifying-glass-chart': 'Magnifying Glass Chart',
+      'fas-message': 'Message',
+      'fas-money-bill': 'Money Bill',
+      'fas-newspaper': 'Newspaper',
+      'fas-notes-medical': 'Notes Medical',
+      'fas-object-group': 'Object Group',
+      'fas-pencil': 'Pencil',
+      'fas-people-roof': 'People Roof',
+      'fas-photo-film': 'Photo Film',
+      'fas-photo-film-music': 'Photo Film Music',
+      'fas-plug-circle-check': 'Plug Circle Check',
+      'fas-plus': 'Plus',
+      'fas-raindrops': 'Raindrops',
+      'fas-scale-balanced': 'Scale Balanced',
+      'fas-school': 'School',
+      'fas-seedling': 'Seedling',
+      'fas-sitemap': 'Sitemap',
+      'fas-sun': 'Sun',
+      'fas-user-group': 'User Group',
+      'phone': 'Phone',
+      'youtube-player': 'Youtube Player',
+    },
+  },
+} %}
+<form style="position: sticky;top:0; background: #fff; padding:2rem; box-shadow: 0 0.5rem 0.5rem #888;">
+  <label for="sprite-color" style="display: block;font-weight: bold;margin-bottom: 1rem;">Preview Sprite Color</label>
+  <select id="sprite-color">
+    <option value="primary-blue" selected>Primary Blue</option>
+    <option value="beaver-blue">Beaver Blue</option>
+    <option value="nittany-navy">Nittany Navy</option>
+  </select>
+  <script>
+      (() => {
+        const form = document.currentScript.closest('form');
+        const select = form.querySelector('#sprite-color');
+        select.addEventListener('change', () => {
+          const previews = document.querySelectorAll('.sprite-preview');
+          previews.forEach(preview => {
+            switch(select.value) {
+              case 'primary-blue':
+                preview.style.color = '#0064bf';
+                break;
+              case 'beaver-blue':
+                  preview.style.color = '#1e407c';
+                  break;
+              case 'nittany-navy':
+                  preview.style.color = '#001e44';
+                  break;
+            }
+          });
+        });
+      })();
+  </script>
+</form>
+{% for sprite_group in sprite_groups %}
+  <div style="margin-bottom: 3rem; padding: 2rem;">
+    <h2>{{ sprite_group.name }}</h2>
+    {% set grid_items = [] %}
+    {% for sprite, label in sprite_group.sprites %}
+      {% set grid_item %}
+        <table style="margin: 0;padding: 0;">
+          <tbody>
+          <tr>
+            <th>Name</th>
+            <td>{{ label }}</td>
+          </tr>
+          <tr>
+            <th>Code</th>
+            <td>{{ sprite }}</td>
+          </tr>
+          <tr>
+            <th>Preview</th>
+            <td>
+              <div class="sprite-preview" style="color:#0064bf; font-size: 5rem; text-align: center;">
+                {% include '@atoms/sprite/sprite.twig' with { name: sprite } %}
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      {% endset %}
+      {% set grid_items = grid_items|merge([grid_item]) %}
+    {% endfor %}
+    {% include '@molecules/grid/grid.twig' with { items: grid_items, columns: 3 } only %}
+  </div>
 {% endfor %}

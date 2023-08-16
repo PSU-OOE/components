@@ -88,6 +88,14 @@ h5,
   text-align: center;
 }
 
+.heading--vspace-small {
+  margin-bottom: rem(1);
+}
+
+.heading--vspace-large {
+  margin-bottom: rem(3);
+}
+
 // @TODO: Eventually, get away from defining font sizing in here.
 .heading--hr {
   display: flex;
