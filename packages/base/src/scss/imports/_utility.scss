@@ -5,7 +5,7 @@
 }
 
 @mixin rem($property, $values) {
-  @warn('The "rem" function is deprecated and will be removed in 2.0.0, use "_rem" instead');
+  @warn('The "rem" mixin is deprecated and will be removed in 2.0.0, use "_rem" instead');
 
   $px: ();
   $rem: ();
