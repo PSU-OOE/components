@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/skip-link",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides a skip link element.",
   "publishConfig": {
     "access": "public",

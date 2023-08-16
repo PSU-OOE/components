@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/modal",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provides a modal component.",
   "publishConfig": {
     "access": "public",
