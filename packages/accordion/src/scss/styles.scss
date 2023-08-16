@@ -44,6 +44,10 @@
 
       .accordion__label {
         text-decoration-color: $primary-blue;
+
+        &--label-underline {
+          text-decoration-style: solid;
+        }
       }
 
       .accordion__sprite .sprite {
@@ -62,11 +66,24 @@
 
       .accordion__label {
         text-decoration-color: $primary-blue;
+
+        &--label-underline {
+          text-decoration-style: solid;
+        }
       }
 
       .accordion__sprite .sprite {
         transform: scale(1.25);
       }
+    }
+
+    .accordion__label--label-underline {
+      color: $primary-blue;
+      text-decoration-color: $primary-blue;
+      text-decoration-thickness: rem(.1);
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: .2em;
     }
   }
 
@@ -93,6 +110,10 @@
     transition-property: height, margin-bottom, visibility;
     transition-timing-function: linear;
     visibility: hidden;
+
+    &--indent-content {
+      margin-left: 3.75%;
+    }
   }
 
   &--expanded {
