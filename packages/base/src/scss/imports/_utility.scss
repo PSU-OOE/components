@@ -4,7 +4,9 @@
   @return math.div($n, $n * 0 + 1);
 }
 
-@mixin _rem($property, $values) {
+@mixin rem($property, $values) {
+  @warn('The "rem" function is deprecated and will be removed in 2.0.0, use "_rem" instead');
+
   $px: ();
   $rem: ();
 

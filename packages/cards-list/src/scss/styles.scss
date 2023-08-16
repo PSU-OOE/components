@@ -5,7 +5,7 @@
   &__featured {
     display: flex;
     flex-flow: column wrap;
-    gap: 2rem 2%;
+    gap: _rem(2) 2%;
 
     &--2,
     &--4 {
