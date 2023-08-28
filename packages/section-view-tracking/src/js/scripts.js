@@ -23,6 +23,10 @@
           window.dataLayer.push({
             event: 'section_view',
             section_view_title: 'Header',
+            tags: {
+              activation_type: 'PAGE_LOAD',
+              section_type: 'header',
+            }
           });
         }
       }
