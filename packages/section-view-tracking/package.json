@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/section-view-tracking",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Provides a unified section view tracking algorithm.",
   "publishConfig": {
     "access": "public",
