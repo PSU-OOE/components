@@ -9,7 +9,7 @@
 }
 
 *:focus {
-  outline: rem(.2) solid $sky-blue;
+  outline: _rem(.2) solid $sky-blue;
 }
 
 // Type selectors.
@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font-size: rem(1.6);
+  font-size: _rem(1.6);
   font-family: $font-family-default;
   color: $font-color-default;
   background: $white;
@@ -53,13 +53,13 @@ a {
   }
 
   &.hidden {
-    left: rem(-99.9);
+    left: _rem(-99.9);
     position: absolute;
 
     &:focus {
       background-color: transparent;
       color: #ffffff;
-      left: rem(.5);
+      left: _rem(.5);
     }
   }
 }
@@ -72,12 +72,12 @@ img {
 
 hr {
   border: none;
-  margin: rem(2) 0;
+  margin: _rem(2) 0;
   padding: 0;
   background: transparent;
-  height: rem(.1);
+  height: _rem(.1);
   width: 100%;
-  border-bottom: rem(.1) dotted rgba($nittany-navy, 0.25);
+  border-bottom: _rem(.1) dotted rgba($nittany-navy, 0.25);
 }
 
 nav {
@@ -99,12 +99,12 @@ nav {
 }
 
 caption {
-  font-size: rem(2.2);
-  line-height: rem(2.8);
+  font-size: _rem(2.2);
+  line-height: _rem(2.8);
   clear: both;
   color: $nittany-navy;
   font-weight: 700;
-  padding-bottom: rem(2);
+  padding-bottom: _rem(2);
   text-align:left;
 }
 
@@ -129,9 +129,9 @@ blockquote {
       content: close-quote;
     }
     color: $beaver-blue;
-    font-size: rem(1.4);
-    line-height: rem(2.4);
-    text-indent:rem(-.5);
+    font-size: _rem(1.4);
+    line-height: _rem(2.4);
+    text-indent:_rem(-.5);
   }
 }
 

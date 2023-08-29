@@ -75,15 +75,15 @@ $bp_xl: 1280px;
 @mixin full-width-container {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0 rem(2);
+  padding: 0 _rem(2);
 
   @include bp(xs) {
-    padding: 0 rem(4);
+    padding: 0 _rem(4);
   }
 
 
   @include bp(l) {
-    max-width: rem(119);
+    max-width: _rem(119);
   }
 }
 

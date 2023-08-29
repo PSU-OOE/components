@@ -2,9 +2,9 @@
   & > .bg__sprites > .bg__sprite .sprite {
     position: absolute;
     height: auto;
-    width: rem(70);
-    right: rem(-58);
-    top: rem(-40);
+    width: _rem(70);
+    right: _rem(-58);
+    top: _rem(-40);
     display: none;
 
     //noinspection CssUnknownProperty
@@ -13,38 +13,38 @@
 
       //noinspection CssInvalidAtRule
       @container (min-width: 550px) {
-        width: rem(90);
-        right: rem(-75);
-        top: rem(-47);
+        width: _rem(90);
+        right: _rem(-75);
+        top: _rem(-47);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 800px) {
-        width: rem(110);
-        right: rem(-92);
-        top: rem(-63);
+        width: _rem(110);
+        right: _rem(-92);
+        top: _rem(-63);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 950px) {
-        width: rem(130);
-        right: rem(-110);
-        top: rem(-76);
+        width: _rem(130);
+        right: _rem(-110);
+        top: _rem(-76);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1280px) {
-        right: rem(-96);
+        right: _rem(-96);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1500px) {
-        right: rem(-85);
+        right: _rem(-85);
       }
 
       //noinspection CssInvalidAtRule
       @container (min-width: 1800px) {
-        right: rem(-75);
+        right: _rem(-75);
       }
     }
   }
@@ -66,27 +66,27 @@
 
     //noinspection CssInvalidAtRule
     @container (min-width: 950px) {
-      right: rem(-108);
+      right: _rem(-108);
     }
 
     //noinspection CssInvalidAtRule
     @container (min-width: 1024px) {
-      right: rem(-100);
+      right: _rem(-100);
     }
 
     //noinspection CssInvalidAtRule
     @container (min-width: 1280px) {
-      right: rem(-88);
+      right: _rem(-88);
     }
 
     //noinspection CssInvalidAtRule
     @container (min-width: 1500px) {
-      right: rem(-87);
+      right: _rem(-87);
     }
 
     //noinspection CssInvalidAtRule
     @container (min-width: 1800px) {
-      right: rem(-65);
+      right: _rem(-65);
     }
   }
 }

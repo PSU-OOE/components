@@ -6,19 +6,19 @@
     border-bottom: none;
     color: $nittany-navy;
     display: flex;
-    font-size: rem(1.6);
+    font-size: _rem(1.6);
     line-height: calc(4/3);
     font-weight: 400;
     text-decoration: none;
-    padding: rem(1.4) 0;
+    padding: _rem(1.4) 0;
     align-items: center;
 
     @include bp(m) {
-      font-size: rem(1.8);
-      padding: rem(1.8) 0;
+      font-size: _rem(1.8);
+      padding: _rem(1.8) 0;
     }
     &:focus {
-      outline: rem(.2) solid $sky-blue;
+      outline: _rem(.2) solid $sky-blue;
       color: $primary-blue;
     }
 
@@ -42,8 +42,8 @@
 
     &--related {
       color: $primary-blue;
-      font-size: rem(1.8);
-      padding: rem(1.8) 0;
+      font-size: _rem(1.8);
+      padding: _rem(1.8) 0;
     }
 
     &--related#{&}--active {
@@ -56,7 +56,7 @@
   }
 
   &__icon {
-    margin: 0 rem(1);
+    margin: 0 _rem(1);
     .sprite {
       transition: transform .2s linear;
     }

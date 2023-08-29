@@ -7,20 +7,20 @@
   background-color: $light-mauve;
 
   &__content {
-    padding: rem(1.2) 2.6%;
+    padding: _rem(1.2) 2.6%;
 
     @include bp(m) {
-      padding: rem(1.6) rem(2);
+      padding: _rem(1.6) _rem(2);
     }
   }
 
   &--padding-compact .band__content {
-    padding-top: rem(.8);
-    padding-bottom: rem(.8);
+    padding-top: _rem(.8);
+    padding-bottom: _rem(.8);
 
     @include bp(m) {
-      padding-top: rem(.8);
-      padding-bottom: rem(.8);
+      padding-top: _rem(.8);
+      padding-bottom: _rem(.8);
     }
   }
 
@@ -29,8 +29,8 @@
     padding-bottom: 0;
 
     @include bp(m) {
-      padding-top: rem(0);
-      padding-bottom: rem(0);
+      padding-top: _rem(0);
+      padding-bottom: _rem(0);
     }
   }
 

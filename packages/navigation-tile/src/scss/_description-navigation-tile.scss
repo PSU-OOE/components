@@ -12,15 +12,15 @@
     z-index: 1;
 
     @include bp(xs) {
-      box-shadow: rem(0.1) rem(0.2) 0 rgba(0,0,0,.15);
+      box-shadow: _rem(0.1) _rem(0.2) 0 rgba(0,0,0,.15);
     }
 
   }
 
   &__content {
     display:block;
-    padding: rem(2);
-    box-shadow: rgba(0, 0, 0, 0.15) rem(0.1) rem(0.2) 0 0;
+    padding: _rem(2);
+    box-shadow: rgba(0, 0, 0, 0.15) _rem(0.1) _rem(0.2) 0 0;
     height: 100%;
   }
 
@@ -30,20 +30,20 @@
     -webkit-box-decoration-break: clone;
     display: inline;
     max-width: 95%;
-    padding: rem(0.9) 0 rem(0.6);
-    box-shadow: rem(1) 0 0 0 $light-grey, rem(-1) 0 0 0 $light-grey;
+    padding: _rem(0.9) 0 _rem(0.6);
+    box-shadow: _rem(1) 0 0 0 $light-grey, _rem(-1) 0 0 0 $light-grey;
 
     span {
       color: $nittany-navy;
-      font-size: rem(2);
+      font-size: _rem(2);
       font-weight: 700;
-      line-height: rem(2.8);
+      line-height: _rem(2.8);
       position: relative;
     }
 
     .sprite {
-      font-size: rem(1.2);
-      margin-left: rem(1);
+      font-size: _rem(1.2);
+      margin-left: _rem(1);
       &:hover,
       &:focus {
         color: $white;
@@ -58,20 +58,20 @@
   &--light-grey {
     background: $light-grey;
     .description-navigation-tile__title {
-      box-shadow: rem(1) 0 0 0 $white, rem(-1) 0 0 0 $white;
+      box-shadow: _rem(1) 0 0 0 $white, _rem(-1) 0 0 0 $white;
       background-color: $white;
     }
   }
 
   &__description {
-    font-size: rem(1.4);
+    font-size: _rem(1.4);
     font-weight: 600;
-    line-height: rem(2.2);
-    margin-top: rem(1);
-    padding: rem(0.5) 0 rem(0.5) 0;
+    line-height: _rem(2.2);
+    margin-top: _rem(1);
+    padding: _rem(0.5) 0 _rem(0.5) 0;
 
     @include bp(m) {
-      margin-top: rem(2);
+      margin-top: _rem(2);
     }
   }
 
@@ -87,7 +87,7 @@
     & ~ .description-navigation-tile__content {
       .description-navigation-tile__title {
         background-color: $primary-blue;
-        box-shadow: rem(1) 0 0 0 $primary-blue, rem(-1) 0 0 0 $primary-blue; // Hack for Edge + IE11
+        box-shadow: _rem(1) 0 0 0 $primary-blue, _rem(-1) 0 0 0 $primary-blue; // Hack for Edge + IE11
 
         & span {
           color: $white;

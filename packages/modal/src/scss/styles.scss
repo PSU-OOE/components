@@ -39,19 +39,19 @@
     background-color: $white;
     width: fit-content;
     height: auto;
-    padding: rem(5) rem(2) rem(3) rem(2);
-    margin: rem(2);
+    padding: _rem(5) _rem(2) _rem(3) _rem(2);
+    margin: _rem(2);
     overflow: auto;
     max-height: 100%;
 
     @include bp(xs) {
-      padding: rem(5);
+      padding: _rem(5);
     }
     &:focus {
       outline: none;
     }
     &:focus-visible {
-      outline: rem(0.2) solid $sky-blue;
+      outline: _rem(0.2) solid $sky-blue;
     }
   }
 
@@ -59,8 +59,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: rem(5);
-    height: rem(5);
+    width: _rem(5);
+    height: _rem(5);
     padding: 0;
     border: none;
     background: none;
@@ -77,16 +77,16 @@
     }
 
     &:focus {
-      outline: solid rem(0.2) $white;
-      outline-offset: rem(-0.4);
+      outline: solid _rem(0.2) $white;
+      outline-offset: _rem(-0.4);
 
     }
 
     .sprite--fa-times {
       background: none;
       color: $primary-blue;
-      width: rem(2.4);
-      height: rem(2.4);
+      width: _rem(2.4);
+      height: _rem(2.4);
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/pager",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a pager component.",
   "publishConfig": {
     "access": "public",

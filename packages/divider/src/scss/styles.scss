@@ -6,36 +6,36 @@
   position: relative;
 
   &--thin-slate-light {
-    height: rem(.1);
+    height: _rem(.1);
     background-color: $slate-light;
   }
 
   &--standard-light-grey {
-    height: rem(2);
+    height: _rem(2);
     background-color: $light-grey;
   }
 
   &--standard-white {
-    height: rem(2);
+    height: _rem(2);
     background-color: $white;
   }
 
   &--tall-medium-grey-shield,
   &--tall-blue-gradient-shield {
-    height: rem(8);
+    height: _rem(8);
 
     .divider__top-band {
       position: absolute;
       top: 0;
       width: 100%;
-      height: rem(1);
+      height: _rem(1);
       background-color: $beaver-blue;
     }
 
     .sprite {
       color: $white;
-      margin-top: rem(-6);
-      width: rem(130);
+      margin-top: _rem(-6);
+      width: _rem(130);
       height: auto;
       margin-left: 35.1%;
       position: absolute;

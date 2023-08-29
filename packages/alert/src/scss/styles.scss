@@ -4,23 +4,23 @@
 
 .alert {
   position: relative;
-  padding: rem(2);
+  padding: _rem(2);
 
   &__inner-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    max-width: rem(110);
+    max-width: _rem(110);
     margin: 0 auto;
 
     .alert__icon {
-      width: rem(5.5);
-      height: rem(5.5);
-      margin-right: rem(1);
+      width: _rem(5.5);
+      height: _rem(5.5);
+      margin-right: _rem(1);
 
       .sprite {
-        width: rem(5.5);
-        height: rem(5.5);
+        width: _rem(5.5);
+        height: _rem(5.5);
       }
     }
     .alert__content {
@@ -31,7 +31,7 @@
 
   &--error {
     background-color: mix($error-red, $white, 6%);
-    border-top: rem(1) solid $error-red;
+    border-top: _rem(1) solid $error-red;
 
     .sprite {
       color: $error-red;
@@ -40,7 +40,7 @@
 
   &--warning {
     background-color: mix($keystone, $white, 20%);
-    border-top: rem(1) solid $keystone;
+    border-top: _rem(1) solid $keystone;
 
     .sprite {
       color: darken($invent-orange, 3.5%);
@@ -49,7 +49,7 @@
 
   &--status {
     background-color: mix($creek, $white, 10%);
-    border-top: rem(1) solid $creek;
+    border-top: _rem(1) solid $creek;
 
     .sprite {
       color: $creek;

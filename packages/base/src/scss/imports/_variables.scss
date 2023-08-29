@@ -1,3 +1,5 @@
+@use 'sass:meta';
+
 // Fonts
 $open-sans: 'Open Sans', sans-serif;
 $roboto-slab: 'Roboto Slab', Georgia, serif;
@@ -50,8 +52,16 @@ $img-path: "/themes/custom/worldcampus/images";
 
 $fa-font-path: '/themes/custom/worldcampus/webfonts/2021-04-12';
 $base-rem-scale: 1 !default;
-@function rem($base) {
+
+@function rem($base, $deprecated: true) {
+  @if $deprecated {
+    @warn('The "rem" function is deprecated and will be removed in 2.0.0, use "_rem" instead');
+  }
   @return unquote(($base * $base-rem-scale) + 'rem');
+}
+
+@function _rem($base) {
+  @return meta.call(meta.get-function('rem'), $base, false);
 }
 
 // z-index layers

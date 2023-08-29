@@ -6,8 +6,8 @@
 
 .bg {
   background: none;
-  padding-top: rem(3);
-  padding-bottom: rem(3);
+  padding-top: _rem(3);
+  padding-bottom: _rem(3);
   position: relative;
 
   //noinspection CssUnknownProperty
@@ -17,29 +17,29 @@
   }
 
   &--padding-large {
-    padding-top: rem(5);
-    padding-bottom: rem(5);
+    padding-top: _rem(5);
+    padding-bottom: _rem(5);
   }
 
   @include bp(xs) {
-    padding-top: rem(4);
-    padding-bottom: rem(4);
+    padding-top: _rem(4);
+    padding-bottom: _rem(4);
 
     &--padding-small {
-      padding-top: rem(3);
-      padding-bottom: rem(3);
+      padding-top: _rem(3);
+      padding-bottom: _rem(3);
     }
 
     &--padding-large {
-      padding-top: rem(5);
-      padding-bottom: rem(5);
+      padding-top: _rem(5);
+      padding-bottom: _rem(5);
     }
   }
 
   @include bp(m) {
     &--padding-large {
-      padding-top: rem(6);
-      padding-bottom: rem(6);
+      padding-top: _rem(6);
+      padding-bottom: _rem(6);
     }
   }
 

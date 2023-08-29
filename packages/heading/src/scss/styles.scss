@@ -7,71 +7,71 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 rem(2);
+  margin: 0 0 _rem(2);
 }
 
 h1,
 .heading--xlarge {
   color: $beaver-blue;
-  font-size: rem(4.2);
+  font-size: _rem(4.2);
   font-weight: 400;
   letter-spacing: -0.0294em;
-  line-height: rem(4.8);
+  line-height: _rem(4.8);
 
   &.heading--flush {
-    margin-top: rem(-0.7);
+    margin-top: _rem(-0.7);
   }
 }
 
 h2,
 .heading--large {
   color: $primary-blue;
-  font-size: rem(3.4);
+  font-size: _rem(3.4);
   font-weight: 400;
   letter-spacing: -0.0294em;
   line-height: calc(4 / 3.4);
 
   &.heading--flush {
-    margin-top: rem(-0.7);
+    margin-top: _rem(-0.7);
   }
 }
 
 h3,
 .heading--medium {
   color: $nittany-navy;
-  font-size: rem(2.2);
+  font-size: _rem(2.2);
   font-weight: 700;
   letter-spacing: normal;
   line-height: calc(2.8 / 2.2);
 
   &.heading--flush {
-    margin-top: rem(-0.6);
+    margin-top: _rem(-0.6);
   }
 }
 
 h4,
 .heading--small {
   color: $nittany-navy;
-  font-size: rem(1.8);
+  font-size: _rem(1.8);
   font-weight: 700;
   letter-spacing: normal;
   line-height: calc(2.4 / 1.8);
 
   &.heading--flush {
-    margin-top: rem(-0.5);
+    margin-top: _rem(-0.5);
   }
 }
 
 h5,
 .heading--xsmall {
   color: $nittany-navy;
-  font-size: rem(1.6);
+  font-size: _rem(1.6);
   font-weight: 700;
   line-height: calc(2.2 / 1.6);
   letter-spacing: normal;
 
   &.heading--flush {
-    margin-top: rem(-0.4);
+    margin-top: _rem(-0.4);
   }
 }
 
@@ -89,11 +89,11 @@ h5,
 }
 
 .heading--vspace-small {
-  margin-bottom: rem(1);
+  margin-bottom: _rem(1);
 }
 
 .heading--vspace-large {
-  margin-bottom: rem(3);
+  margin-bottom: _rem(3);
 }
 
 // @TODO: Eventually, get away from defining font sizing in here.
@@ -105,23 +105,23 @@ h5,
   color: $slate;
   font-weight: 600;
   font-family: $open-sans;
-  font-size: rem(1.4);
-  line-height: rem(2.1);
+  font-size: _rem(1.4);
+  line-height: _rem(2.1);
 
   &::before,
   &::after {
-    border-bottom: rem(0.1) dotted rgba(0, 30, 68, 0.25);
+    border-bottom: _rem(0.1) dotted rgba(0, 30, 68, 0.25);
     content: " ";
     flex: 1;
     margin: auto 0;
   }
 
   &::before {
-    margin-right: rem(0.5);
+    margin-right: _rem(0.5);
   }
 
   &::after {
-    margin-left: rem(0.5);
+    margin-left: _rem(0.5);
   }
 }
 

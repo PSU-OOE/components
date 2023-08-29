@@ -5,7 +5,7 @@
   &__featured {
     display: flex;
     flex-flow: column wrap;
-    gap: 2rem 2%;
+    gap: _rem(2) 2%;
 
     &--2,
     &--4 {
@@ -37,12 +37,12 @@
     }
 
     & + .cards-list__overflow {
-      margin-top: rem(3);
+      margin-top: _rem(3);
     }
   }
 
   &__overflow-cards {
     display: grid;
-    gap: rem(.5);
+    gap: _rem(.5);
   }
 }

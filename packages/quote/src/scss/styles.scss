@@ -23,15 +23,15 @@ figure.quote__figure {
 
   .quote__wrapper {
     display: flex;
-    gap: rem(2);
+    gap: _rem(2);
     align-items: center;
 
     @include bp(s) {
-      gap: rem(3);
+      gap: _rem(3);
     }
 
     .quote__headshot {
-      max-width: rem(20);
+      max-width: _rem(20);
       flex: 0 1 25%;
       align-self: flex-start;
 
@@ -56,10 +56,10 @@ figure.quote__figure {
       .quote__content {
         font-family: $roboto-slab;
         font-weight: 200;
-        font-size: rem(1.8);
+        font-size: _rem(1.8);
 
         @include bp(s) {
-          font-size: rem(2);
+          font-size: _rem(2);
         }
 
         line-height: 1.5;
@@ -69,23 +69,23 @@ figure.quote__figure {
       .quote__caption {
         font-family: $open-sans;
         font-weight: 700;
-        font-size: rem(1.4);
+        font-size: _rem(1.4);
         line-height: calc(2/1.4);
       }
 
       .quote__content + .quote__caption {
-        margin-top: rem(1.5);
+        margin-top: _rem(1.5);
 
         @include bp(s) {
-          margin-top: rem(2);
+          margin-top: _rem(2);
         }
       }
       // mirroring what is being done above
       .quote__after {
-        margin-top: rem(1.5);
+        margin-top: _rem(1.5);
 
         @include bp(s) {
-          margin-top: rem(2);
+          margin-top: _rem(2);
         }
       }
     }

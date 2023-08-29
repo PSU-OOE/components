@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/drop-button",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "An accessible drop-button component.",
   "ooe": {
     "namespace": "global"

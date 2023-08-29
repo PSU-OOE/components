@@ -10,20 +10,20 @@
   &__item {
     color: $beaver-blue;
     display: inline-block;
-    font-size: rem(1.4);
+    font-size: _rem(1.4);
     font-weight: 700;
 
     &:not(:last-of-type)::after {
       content: "›";
       color: $primary-blue;
-      font-size: rem(1.6);
+      font-size: _rem(1.6);
       font-weight: 700;
-      padding: 0 rem(.4);
+      padding: 0 _rem(.4);
     }
   }
 
   &__link {
-    font-size: rem(1.4);
+    font-size: _rem(1.4);
     color: $beaver-blue;
     border-bottom: none;
     font-weight: 600;
@@ -35,7 +35,7 @@
 
     &:focus {
       color: $primary-blue;
-      outline-offset: rem(.2);
+      outline-offset: _rem(.2);
     }
   }
 }

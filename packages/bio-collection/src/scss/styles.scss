@@ -6,6 +6,6 @@
   list-style-type: none;
 
   &__bio:not(:last-of-type) {
-    margin-bottom: rem(3);
+    margin-bottom: _rem(3);
   }
 }

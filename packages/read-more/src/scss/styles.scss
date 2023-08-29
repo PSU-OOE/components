@@ -2,9 +2,9 @@
 
 .read-more {
   text-decoration: none;
-  border-bottom: rem(.1) solid transparent;
+  border-bottom: _rem(.1) solid transparent;
   color: $primary-blue;
-  font-size: rem(1.4);
+  font-size: _rem(1.4);
   line-height: calc(16/14);
   text-transform: uppercase;
   font-weight: 700;
@@ -15,11 +15,11 @@
   }
 
   &:focus {
-    outline-offset: rem(0.2);
+    outline-offset: _rem(0.2);
   }
 
   &--small {
-    font-size: rem(1.1);
+    font-size: _rem(1.1);
     line-height: calc(16/11);
   }
 
@@ -37,7 +37,7 @@
   }
 
   .sprite {
-    font-size: rem(1);
+    font-size: _rem(1);
     vertical-align: -6%;
   }
 }
