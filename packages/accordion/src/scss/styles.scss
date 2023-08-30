@@ -80,7 +80,7 @@
     .accordion__label--label-underline {
       color: $primary-blue;
       text-decoration-color: $primary-blue;
-      text-decoration-thickness: rem(.1);
+      text-decoration-thickness: _rem(.1);
       text-decoration-line: underline;
       text-decoration-style: dotted;
       text-underline-offset: .2em;
