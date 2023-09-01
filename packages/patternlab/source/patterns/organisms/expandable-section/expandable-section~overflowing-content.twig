@@ -1,0 +1,21 @@
+{% set overflowing_content %}
+  <div style="margin-left: -2rem; margin-right: -2rem;background: red;">
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+  </div>
+{% endset %}
+<div style="margin: 2rem;">
+  {% include '@organisms/expandable-section/expandable-section.twig' with {
+    id: 'minors',
+    toc_label: 'Minors',
+    intro: "<div class=\"wysiwyg\"><h2 class=\"heading--neutral heading--flush\">Minors</h2><p>Penn State World Campus students can optionally supplement their degree with a minor.</p></div>",
+    expand_label: "View Minors",
+    content: overflowing_content,
+    collapse_label: "Close Minors"
+  } only %}
+</div>

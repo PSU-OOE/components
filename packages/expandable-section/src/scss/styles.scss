@@ -8,7 +8,7 @@
 
   &__content {
     clear: both;
-    overflow: hidden;
+    overflow: visible clip;
     visibility: hidden;
     transition-property: height, margin-bottom, visibility;
     transition-timing-function: linear;

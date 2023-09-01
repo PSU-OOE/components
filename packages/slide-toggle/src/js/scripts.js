@@ -13,7 +13,7 @@
     const target = e.target;
     target.removeEventListener('transitionend', removeHeight);
     target.style.height = null;
-    target.style.overflow = '';
+    target.style.overflowY = 'visible';
   }
 
   /**
@@ -31,7 +31,7 @@
     const height = target.scrollHeight;
     const transition = window.getComputedStyle(target).getPropertyValue('transition');
     target.style.transition = '';
-    target.style.overflow = 'hidden';
+    target.style.overflowY = 'clip';
     target.removeEventListener('transitionend', removeHeight);
     requestAnimationFrame(function() {
       target.style.height = height + 'px';

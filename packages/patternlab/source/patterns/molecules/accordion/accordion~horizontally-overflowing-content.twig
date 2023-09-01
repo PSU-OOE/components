@@ -1,0 +1,18 @@
+{% set overflowing_content %}
+  <div style="margin-left: -2rem; margin-right: -2rem; background: red;">
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+    <p>This content should overhang to the left and right by 2rem.</p>
+  </div>
+{% endset %}
+<div style="margin-left: 2rem; margin-right: 2rem;">
+  {% include '@molecules/accordion/accordion.twig' with {
+    "id": "accordion-overflowing-horizontal-content",
+    "label": "Accordion item (overflowing horizontal content)",
+    "expandable_content": overflowing_content
+  } only %}
+</div>

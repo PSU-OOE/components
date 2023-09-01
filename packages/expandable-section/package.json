@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/expandable-section",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Provides an expandable section implementation.",
   "publishConfig": {
     "access": "public",
