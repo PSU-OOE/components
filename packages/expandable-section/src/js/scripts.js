@@ -15,7 +15,7 @@
             content.style['height'] = null;
           }
           else {
-            content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 500) + 'ms';
+            content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
             cms.expand(content);
           }
           collapse.style.display = 'block';
@@ -35,7 +35,7 @@
             content.style['height'] = '0';
           }
           else {
-            content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 500) + 'ms';
+            content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
             cms.collapse(content);
           }
           function afterCollapse() {
