@@ -108,7 +108,7 @@
 
   &__expandable-content {
     transition-property: height, margin-bottom, visibility;
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
     visibility: hidden;
 
     &--indent-content {
