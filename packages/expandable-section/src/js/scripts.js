@@ -35,7 +35,7 @@
             content.style['height'] = '0';
           }
           else {
-            content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 1500) + 'ms';
+            content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 500) + 'ms';
             cms.collapse(content);
           }
           function afterCollapse() {
