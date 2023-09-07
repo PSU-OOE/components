@@ -11,7 +11,7 @@
     overflow: hidden;
     visibility: hidden;
     transition-property: height, margin-bottom, visibility;
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
     margin-bottom: 0;
   }
 
