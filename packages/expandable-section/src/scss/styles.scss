@@ -13,6 +13,7 @@
     transition-property: height, margin-bottom, visibility;
     transition-timing-function: ease-in-out;
     margin-bottom: 0;
+    position: relative;
   }
 
   &__expand[aria-expanded="true"] + .expandable-section__content {
