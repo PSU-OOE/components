@@ -3,6 +3,10 @@
 
 @import "normalize";
 
+:root {
+  --font-family-default: 'proxima-nova, sans-serif';
+}
+
 // Universal selectors.
 *, *:before, *:after {
   box-sizing: border-box;
