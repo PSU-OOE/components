@@ -1,8 +1,6 @@
 @import "imports/variables";
 @import "imports/layout";
 
-@import "normalize";
-
 // Universal selectors.
 *, *:before, *:after {
   box-sizing: border-box;
@@ -15,8 +13,6 @@
 // Type selectors.
 html {
   font-size: 62.5%;
-
-  /* set up for rem() use */
   overflow: hidden;
   overflow-y: auto;
   -webkit-font-smoothing: antialiased;
@@ -26,15 +22,10 @@ html {
   @media (prefers-reduced-motion) {
     scroll-behavior: auto;
   }
-
-  &.no-scroll-mobile {
-    @include bp(s_max) {
-      overflow: hidden;
-    }
-  }
 }
 
 body {
+  margin: 0;
   font-size: _rem(1.6);
   font-family: $font-family-default;
   color: $font-color-default;
@@ -154,7 +145,3 @@ span {
     }
   }
 }
-
-@include visible_at(xs);
-@include visible_at(s);
-@include visible_at(m);

@@ -1,15 +1,1 @@
-{% set webfonts = [
-    { family: 'Open Sans', style: 'normal', weight: 400, src: 'url(' ~ base_directory ~ '/open-sans-v27-latin-regular.woff2)' },
-    { family: 'Open Sans', style: 'italic', weight: 400, src: 'url(' ~ base_directory ~ '/open-sans-v27-latin-italic.woff2)' },
-    { family: 'Open Sans', style: 'normal', weight: 600, src: 'url(' ~ base_directory ~ '/open-sans-v27-latin-600.woff2)' },
-    { family: 'Open Sans', style: 'italic', weight: 600, src: 'url(' ~ base_directory ~ '/open-sans-v27-latin-600italic.woff2)' },
-    { family: 'Open Sans', style: 'normal', weight: 700, src: 'url(' ~ base_directory ~ '/open-sans-v27-latin-700.woff2)' },
-    { family: 'Open Sans', style: 'italic', weight: 700, src: 'url(' ~ base_directory ~ '/open-sans-v27-latin-700italic.woff2)' },
-    { family: 'Open Sans', style: 'normal', weight: 800, src: 'url(' ~ base_directory ~ '/open-sans-v27-latin-800.woff2)' },
-    { family: 'Roboto Slab', style: 'normal', weight: 300, src: 'url(' ~ base_directory ~ '/roboto-slab-v16-latin-300.woff2)' },
-    { family: 'Roboto Slab', style: 'normal', weight: 400, src: 'url(' ~ base_directory ~ '/roboto-slab-v16-latin-regular.woff2)' },
-    { family: 'Roboto Slab', style: 'normal', weight: 700, src: 'url(' ~ base_directory ~ '/roboto-slab-v16-latin-700.woff2)' },
-    { family: 'Source Sans Pro', style: 'normal', weight: 400, src: 'url(' ~ base_directory ~ '/source-sans-pro-v18-latin-regular.woff2)' },
-  ]
-%}
-<style>{% for webfont in webfonts %}@font-face{font-family:{{ webfont.family }};font-style: {{ webfont.style }};font-weight:{{ webfont.weight }};src:{{ webfont.src }}}{% endfor %}</style>
+<link rel="stylesheet" href="https://use.typekit.net/lwk5qvj.css">
