@@ -49,6 +49,7 @@
       "css": "packages/patternlab/source/css",
       "js": "packages/patternlab/source/js",
       "images": "packages/patternlab/source/images",
+      "fonts": "node_modules/@psu-ooe/webfonts",
       "annotations": "packages/patternlab/source/_annotations/",
       "polyfill_focus_visible": "node_modules/focus-visible/dist/",
       "styleguide": "dist/",
@@ -69,6 +70,7 @@
       "css": "packages/patternlab/public/css/",
       "js": "packages/patternlab/public/js",
       "images": "packages/patternlab/public/images",
+      "fonts": "packages/patternlab/public/fonts",
       "polyfill_focus_visible": "packages/patternlab/public/vendor/polyfill_focus_visible"
     }
   },
