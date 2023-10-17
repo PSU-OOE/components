@@ -49,7 +49,7 @@
       "css": "packages/patternlab/source/css",
       "js": "packages/patternlab/source/js",
       "images": "packages/patternlab/source/images",
-      "fonts": "node_modules/@psu-ooe/webfonts",
+      "fonts": "packages/patternlab/source/fonts",
       "annotations": "packages/patternlab/source/_annotations/",
       "polyfill_focus_visible": "node_modules/focus-visible/dist/",
       "styleguide": "dist/",
