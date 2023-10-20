@@ -17,14 +17,26 @@
   --font-size--large: 2rem;
   --font-size--mlarge: 1.8rem;
   --font-size--medium: 1.7rem;
+  --font-size--msmall: 1.6rem;
   --font-size--small: 1.5rem;
   --font-size--xsmall: 1.4rem;
   --font-size--2xsmall: 1.3rem;
   --font-size--3xsmall: 1.2rem;
-  --font-size--4xsmall: 1.3rem;
+  --font-size--4xsmall: 1.1rem;
 
   --font-size--default: var(--font-size--medium);
+}
 
+@include bp(s) {
+  :root {
+    --font-size--6xlarge: 7.9rem;
+    --font-size--5xlarge: 6rem;
+    --font-size--4xlarge: 4.5rem;
+    --font-size--3xlarge: 3.2rem;
+    --font-size--2xlarge: 2.8rem;
+    --font-size--xlarge: 2.4rem;
+    --font-size--large: 2.1rem;
+  }
 }
 
 p {
