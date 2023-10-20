@@ -2,12 +2,14 @@
   // fonts
   --font-family--text: 'Promixa Nova', sans-serif;
   --font-family--display: 'Serifa', serif;
-  // mappings
+
+  // font mappings
   --font-family--default: var(--font-family--text);
   --font-family--headings: var(--font-family--display);
   --font-family--page-title: var(--font-family--text);
   --font-family--quotes: var(--font-family--display);
-  // sizing
+
+  // font sizing
   --font-size--6xlarge: 6.2rem;
   --font-size--5xlarge: 4.8rem;
   --font-size--4xlarge: 3.2rem;
@@ -25,6 +27,7 @@
   --font-size--4xsmall: 1.1rem;
 
   --font-size--default: var(--font-size--medium);
+
   // line height
   --line-height--medium: calc(30/17);
   --line-height--snug: calc(24/17);
@@ -34,6 +37,28 @@
   --line-height--nospace: 1;
 
   --line-height--default: var(--line-height--medium);
+
+  // letter spacing
+  --letter-spacing--2xloose: 0.06em;
+  --letter-spacing--xloose: 0.03em;
+  --letter-spacing--loose: 0.02em;
+  --letter-spacing--mloose: 0.01em;
+  --letter-spacing--medium: 0;
+  --letter-spacing--msnug: -0.01em;
+  --letter-spacing--snug: -0.02em;
+  --letter-spacing--xsnug: -0.03em;
+  --letter-spacing--2xsnug: -0.06em;
+
+  --letter-spacing--default: var(--letter-spacing--medium);
+
+  // font weights
+  --font-weight--regular: 400;
+  --font-weight--medium: 500;
+  --font-weight--semibold: 600;
+  --font-weight--bold: 700;
+  --font-weight--extrabold: 800;
+
+  --font-weight--default: var(--font-weight--regular);
 }
 
 @include bp(s) {
