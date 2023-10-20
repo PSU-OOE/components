@@ -1,7 +1,7 @@
 :root {
-  --text-element-vertical-space--medium: 2rem;
-  --text-element-vertical-space--small: 1rem;
-  --text-element-vertical-space--large: 3rem;
+  --text-element-vertical-space--medium: _rem(2);
+  --text-element-vertical-space--small: _rem(1);
+  --text-element-vertical-space--large: _rem(3);
 
   --text-element-vertical-space--default: var(--text-element-vertical-space--medium);
 }

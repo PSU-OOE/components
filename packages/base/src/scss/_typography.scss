@@ -10,21 +10,21 @@
   --font-family--quotes: var(--font-family--display);
 
   // font sizing
-  --font-size--6xlarge: 6.2rem;
-  --font-size--5xlarge: 4.8rem;
-  --font-size--4xlarge: 3.2rem;
-  --font-size--3xlarge: 2.8rem;
-  --font-size--2xlarge: 2.5rem;
-  --font-size--xlarge: 2.2rem;
-  --font-size--large: 2rem;
-  --font-size--mlarge: 1.8rem;
-  --font-size--medium: 1.7rem;
-  --font-size--msmall: 1.6rem;
-  --font-size--small: 1.5rem;
-  --font-size--xsmall: 1.4rem;
-  --font-size--2xsmall: 1.3rem;
-  --font-size--3xsmall: 1.2rem;
-  --font-size--4xsmall: 1.1rem;
+  --font-size--6xlarge: _rem(6.2);
+  --font-size--5xlarge: _rem(4.8);
+  --font-size--4xlarge: _rem(3.2);
+  --font-size--3xlarge: _rem(2.8);
+  --font-size--2xlarge: _rem(2.5);
+  --font-size--xlarge: _rem(2.2);
+  --font-size--large: _rem(2);
+  --font-size--mlarge: _rem(1.8);
+  --font-size--medium: _rem(1.7);
+  --font-size--msmall: _rem(1.6);
+  --font-size--small: _rem(1.5);
+  --font-size--xsmall: _rem(1.4);
+  --font-size--2xsmall: _rem(1.3);
+  --font-size--3xsmall: _rem(1.2);
+  --font-size--4xsmall: _rem(1.1);
 
   --font-size--default: var(--font-size--medium);
 
@@ -63,13 +63,13 @@
 
 @include bp(s) {
   :root {
-    --font-size--6xlarge: 7.9rem;
-    --font-size--5xlarge: 6rem;
-    --font-size--4xlarge: 4.5rem;
-    --font-size--3xlarge: 3.2rem;
-    --font-size--2xlarge: 2.8rem;
-    --font-size--xlarge: 2.4rem;
-    --font-size--large: 2.1rem;
+    --font-size--6xlarge: _rem(7.9);
+    --font-size--5xlarge: _rem(6);
+    --font-size--4xlarge: _rem(4.5);
+    --font-size--3xlarge: _rem(3.2);
+    --font-size--2xlarge: _rem(2.8);
+    --font-size--xlarge: _rem(2.4);
+    --font-size--large: _rem(2.1);
   }
 }
 
