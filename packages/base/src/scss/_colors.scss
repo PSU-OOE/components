@@ -1,0 +1,13 @@
+@import "imports/variables";
+
+:root {
+  --text-color--dark: $nittany-navy;
+  --text-color--slate: $slate;
+  --text-color--light: $white;
+  --link-color--dark: $pa-link;
+  --link-color--light: $pa-link-light;
+
+  --text-color--default: var(--text-color--default);
+  --link-color--default: var(--link-color--dark);
+  --headings-color: var(--text-color--slate);
+}
