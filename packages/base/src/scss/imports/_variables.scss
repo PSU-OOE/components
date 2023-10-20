@@ -9,11 +9,11 @@ $white: #FFF;
 $black: #000;
 
 // Penn State World Campus Colors
-$primary-blue:     #0064bf;
+$primary-blue:     #0064bf; //depreciated - brand refresh 2023
 $beaver-blue:      #1e407c;
 $nittany-navy:     #001e44;
 $nittany-navy-faded: rgba($nittany-navy, .5);
-$true-blue:        #0057ae;
+$true-blue:        #0057ae; //depreciated - brand refresh 2023
 $sky-blue:         #009cde;
 $pugh-blue:        #96bee6;
 $light-mauve:      #ebecf4;
@@ -34,6 +34,9 @@ $invent-orange-light: #fca917;
 
 $penns-forest: #4A7729;
 $creek: #3ea39e;
+
+$pa-link: #005fa9;
+$pa-link-light: $cce9ff;
 
 // Tile nav
 $tile-nav-image-overlay: rgba(0, 100, 191, 0.75);
