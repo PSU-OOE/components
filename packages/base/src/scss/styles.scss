@@ -30,7 +30,7 @@ body {
   font-size: _rem(1.6);
   font-family: var(--font-family--default);
   color: var(--text-color--default);
-  background: var(--text-color--light);
+  background: $white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
