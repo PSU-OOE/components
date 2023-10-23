@@ -175,19 +175,29 @@ p {
 
 // Line height modifiers.
 .text--height-snug {
-  // line-height: 1.5;
   line-height: var( --line-height--snug);
 }
 
 .text--height-xsnug {
-  line-height: calc(4/3);
   line-height: var(--line-height--xsnug);
+}
+
+.text--height-2xsnug {
+  line-height: var(--line-height--2xsnug);
+}
+
+.text--height-3xsnug {
+  line-height: var(--line-height--3xsnug);
+}
+
+.text--height-nospace {
+  line-height: var(--line-height--nospace);
 }
 
 // Color modifiers
 
 .text--color-slate {
-  color: $slate;
+  color: var(--text-color--slate);
 }
 
 // @TODO: This should probably be set to an automatic CSS variable.
