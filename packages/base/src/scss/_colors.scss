@@ -5,7 +5,7 @@
   --link-color--dark: $pa-link;
   --link-color--light: $pa-link-light;
 
-  --text-color--default: var(--text-color--default);
+  --text-color--default: var(--text-color--dark);
   --link-color--default: var(--link-color--dark);
   --headings-color: var(--text-color--slate);
 }
