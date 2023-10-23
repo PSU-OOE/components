@@ -10,21 +10,21 @@
   --font-family--quotes: var(--font-family--display);
 
   // font sizing
-  --font-size--6xlarge: _rem(6.2);
-  --font-size--5xlarge: _rem(4.8);
-  --font-size--4xlarge: _rem(3.2);
-  --font-size--3xlarge: _rem(2.8);
-  --font-size--2xlarge: _rem(2.5);
-  --font-size--xlarge: _rem(2.2);
-  --font-size--large: _rem(2);
-  --font-size--mlarge: _rem(1.8);
-  --font-size--medium: _rem(1.7);
-  --font-size--msmall: _rem(1.6);
-  --font-size--small: _rem(1.5);
-  --font-size--xsmall: _rem(1.4);
-  --font-size--2xsmall: _rem(1.3);
-  --font-size--3xsmall: _rem(1.2);
-  --font-size--4xsmall: _rem(1.1);
+  --font-size--6xlarge: #{ _rem(6.2) };
+  --font-size--5xlarge: #{ _rem(4.8) };
+  --font-size--4xlarge: #{ _rem(3.2) };
+  --font-size--3xlarge: #{ _rem(2.8) };
+  --font-size--2xlarge: #{ _rem(2.5) };
+  --font-size--xlarge: #{ _rem(2.2) };
+  --font-size--large: #{ _rem(2) };
+  --font-size--mlarge: #{ _rem(1.8) };
+  --font-size--medium: #{ _rem(1.7) };
+  --font-size--msmall: #{ _rem(1.6) };
+  --font-size--small: #{ _rem(1.5) };
+  --font-size--xsmall: #{ _rem(1.4) };
+  --font-size--2xsmall: #{ _rem(1.3) };
+  --font-size--3xsmall: #{ _rem(1.2) };
+  --font-size--4xsmall: #{ _rem(1.1) };
 
   --font-size--default: var(--font-size--medium);
 
@@ -63,13 +63,13 @@
 
 @include bp(s) {
   :root {
-    --font-size--6xlarge: _rem(7.9);
-    --font-size--5xlarge: _rem(6);
-    --font-size--4xlarge: _rem(4.5);
-    --font-size--3xlarge: _rem(3.2);
-    --font-size--2xlarge: _rem(2.8);
-    --font-size--xlarge: _rem(2.4);
-    --font-size--large: _rem(2.1);
+    --font-size--6xlarge: #{ _rem(7.9) };
+    --font-size--5xlarge: #{ _rem(6) };
+    --font-size--4xlarge: #{ _rem(4.5) };
+    --font-size--3xlarge: #{ _rem(3.2) };
+    --font-size--2xlarge: #{ _rem(2.8) };
+    --font-size--xlarge: #{ _rem(2.4) };
+    --font-size--large: #{ _rem(2.1) };
   }
 }
 
