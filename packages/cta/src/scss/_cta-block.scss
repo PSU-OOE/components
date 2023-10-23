@@ -11,15 +11,15 @@
   display:inline-block;
   padding: _rem(1.5) _rem(3);
   font-family: $open-sans;
-  font-size: _rem(1.5);
-  line-height:1em;
+  font-size: var(--font-size--msmall);
+  line-height: var(--line-height--2xsnug);
   font-weight:600;
   text-decoration:none;
-  border-radius: _rem(0.2);
+  border-radius: var(--button-border-radius--default);
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
   text-align:center;
-  color: $white;
-  background: $primary-blue;
+  color: var(--text-color--light);
+  background: $pa-link;
   margin-bottom: 0;
   outline-offset: _rem(-.5);
   position: relative;
@@ -35,7 +35,7 @@
   &:hover {
     background-color: $nittany-navy;
     border-bottom: none;
-    color: $white;
+    color: var(--text-color--light);
     cursor: pointer;
   }
 
@@ -44,7 +44,7 @@
     outline-offset: _rem(-.5);
     background-color: $nittany-navy;
     border-bottom: none;
-    color: $white;
+    color: var(--text-color--light);
   }
 
   // @TODO: Remove safari polyfill.
@@ -61,13 +61,8 @@
   }
 
   &--compact {
-    font-size: _rem(1.1);
-    padding: _rem(1.4) _rem(0.8);
-
-    @include bp(m) {
-      padding: _rem(1.4) _rem(2.2);
-      font-size: _rem(1.5);
-    }
+    font-size: var(--font-size--small);
+    padding: _rem(1.4) _rem(2.2);
   }
 
   &--campaign-legacy {
@@ -161,8 +156,9 @@
 
 @include cta-color('alt', $beaver-blue, $white, $nittany-navy, $white, $sky-blue, $light-mauve, $light-mauve);
 @include cta-color('reversed', $white, $nittany-navy,$nittany-navy, $white, $sky-blue, $primary-blue, $light-mauve);
-@include cta-color('color-keystone', $keystone, $black,$invent-orange-light, $black, $black, $black, $black);
+@include cta-color('color-keystone', $keystone, $nittany-navy, $invent-orange-light, $black, $nittany-navy, $black, $black);
 @include cta-color('expand', var(--cta-block-expand-background-color), $beaver-blue, $pugh-blue, $nittany-navy, $nittany-navy, $beaver-blue, $nittany-navy);
+@include cta-color('expand-reversed', var(--text-color--light), $beaver-blue, $pugh-blue, $nittany-navy, $nittany-navy, $beaver-blue, $nittany-navy);
 @include cta-color('hollow-solid', transparent, $beaver-blue, $pugh-blue, $nittany-navy, $nittany-navy, $beaver-blue, $nittany-navy);
 @include cta-color('hollow-dotted', transparent, $beaver-blue, $pugh-blue, $nittany-navy, $nittany-navy, $beaver-blue, $nittany-navy);
 
@@ -188,14 +184,14 @@
 
   &-dotted {
     &, &:hover, &:focus {
-      border: _rem(.1) $primary-blue dotted;
+      border: _rem(.1) $pa-link dotted;
 
     }
   }
 
   &-solid {
     &, &:hover, &:focus {
-      border: _rem(.1) $primary-blue solid;
+      border: _rem(.1) $pa-link solid;
     }
   }
 }
