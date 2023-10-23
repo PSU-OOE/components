@@ -195,13 +195,10 @@ p {
 }
 
 // Color modifiers
-
 .text--color-slate {
   color: var(--text-color--slate);
 }
 
-// @TODO: This should probably be set to an automatic CSS variable.
 .text--color-reversed {
-  // color: $white;
   color: var(--text-color--light);
 }
