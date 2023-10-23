@@ -101,29 +101,76 @@ p {
 
 // Font weight modifiers.
 .text--weight-regular {
-  // font-weight: 400;
   font-weight: var(--font-weight--regular);
 }
 
 .text--weight-semibold {
-  // font-weight: 600;
   font-weight: var(--font-weight--semibold);
 }
 
 .text--weight-bold {
-  // font-weight: 700;
   font-weight: var(--font-weight--bold);
 }
 
 // Font size modifiers.
+.text--size-6xlarge {
+  font-size: var(--font-size--6xlarge);
+}
+
+.text--size-5xlarge {
+  font-size: var(--font-size--5xlarge);
+}
+
+.text--size-4xlarge {
+  font-size: var(--font-size--4xlarge);
+}
+
+.text--size-3xlarge {
+  font-size: var(--font-size--3xlarge);
+}
+
+.text--size-2xlarge {
+  font-size: var(--font-size--2xlarge);
+}
+
+.text--size-xlarge {
+  font-size: var(--font-size--xlarge);
+}
+
+.text--size-large {
+  font-size: var(--font-size--large);
+}
+
+.text--size-mlarge {
+  font-size: var(--font-size--mlarge);
+}
+
+.text--size-medium {
+  font-size: var(--font-size--medium);
+}
+
+.text--size-msmall {
+  font-size: var(--font-size--msmall);
+}
+
 .text--size-small {
-  // font-size: _rem(1.4);
   font-size: var(--font-size--small);
 }
 
 .text--size-xsmall {
-  // font-size: _rem(1.2);
   font-size: var(--font-size--xsmall);
+}
+
+.text--size-2xsmall {
+  font-size: var(--font-size--2xsmall);
+}
+
+.text--size-3xsmall {
+  font-size: var(--font-size--3xsmall);
+}
+
+.text--size-4xsmall {
+  font-size: var(--font-size--4xsmall);
 }
 
 // Line height modifiers.
