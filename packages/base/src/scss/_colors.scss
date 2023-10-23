@@ -1,42 +1,42 @@
 :root {
   // Color custom properties for color variables
   // Basic colors
-  --white: $white;
-  --black: $black;
+  --white: #{ $white };
+  --black: #{ $black };
 
   // Penn State World Campus Colors
-  --beaver-blue: $beaver-blue;
-  --nittany-navy: $nittany-navy;
-  --nittany-navy-faded: $nittany-navy-faded;
-  --sky-blue: $sky-blue;
-  --pugh-blue: $pugh-blue;
-  --light-mauve: $light-mauve;
+  --beaver-blue: #{ $beaver-blue };
+  --nittany-navy: #{ $nittany-navy };
+  --nittany-navy-faded: #{ $nittany-navy-faded };
+  --sky-blue: #{ $sky-blue };
+  --pugh-blue: #{ $pugh-blue };
+  --light-mauve: #{ $light-mauve };
 
-  --light-grey: $light-grey;
-  --medium-grey: $medium-grey;
-  --medium-dark-grey: $medium-dark-grey;
-  --slate: $slate;
-  --slate-light: $slate-light;
+  --light-grey: #{ $light-grey };
+  --medium-grey: #{ $medium-grey };
+  --medium-dark-grey: #{ $medium-dark-grey };
+  --slate: #{ $slate };
+  --slate-light: #{ $slate-light };
 
-  --limestone: $limestone;
+  --limestone: #{ $limestone };
 
-  --keystone: $keystone;
-  --keystone-light: $keystone-light;
+  --keystone: #{ $keystone };
+  --keystone-light: #{ $keystone-light };
 
-  --invent-orange: $invent-orange;
-  --invent-orange-light: $invent-orange-light;
+  --invent-orange: #{ $invent-orange };
+  --invent-orange-light: #{ $invent-orange-light };
 
-  --penns-forest: $penns-forest;
-  --creek: $creek;
+  --penns-forest: #{ $penns-forest };
+  --creek: #{ $creek };
 
-  --pa-link: $pa-link;
-  --pa-link-light: $pa-link-light;
+  --pa-link: #{ $pa-link };
+  --pa-link-light: #{ $pa-link-light };
 
   // Tile nav
-  --tile-nav-image-overlay: $tile-nav-image-overlay;
-  --tile-nav-active: $tile-nav-active;
+  --tile-nav-image-overlay: #{ $tile-nav-image-overlay };
+  --tile-nav-active: #{ $tile-nav-active };
 
-  --error-red: $error-red;
+  --error-red: #{ $error-red };
 
   // Brand refresh colors
   --text-color--dark: var(--nittany-navy);
