@@ -155,7 +155,7 @@
 }
 
 @include cta-color('alt', $beaver-blue, $white, $nittany-navy, $white, $sky-blue, $light-mauve, $light-mauve);
-@include cta-color('reversed', $white, $nittany-navy,$nittany-navy, $white, $sky-blue, $primary-blue, $light-mauve);
+@include cta-color('reversed', $white, $nittany-navy,$nittany-navy, $white, $sky-blue, $pa-link, $light-mauve);
 @include cta-color('color-keystone', $keystone, $nittany-navy, $invent-orange-light, $black, $nittany-navy, $black, $black);
 @include cta-color('expand', var(--cta-block-expand-background-color), $beaver-blue, $pugh-blue, $nittany-navy, $nittany-navy, $beaver-blue, $nittany-navy);
 @include cta-color('expand-reversed', var(--text-color--light), $beaver-blue, $pugh-blue, $nittany-navy, $nittany-navy, $beaver-blue, $nittany-navy);
