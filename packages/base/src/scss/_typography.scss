@@ -74,7 +74,8 @@
 }
 
 p {
-  color: $font-color-default;
+  // color: $font-color-default;
+  color: var(--text-color--default);
   font-size: _rem(1.6);
   line-height: _rem(3);
   margin: 0 0 _rem(2);
@@ -99,33 +100,40 @@ p {
 
 // Font weight modifiers.
 .text--weight-regular {
-  font-weight: 400;
+  // font-weight: 400;
+  font-weight: var(--font-weight--regular);
 }
 
 .text--weight-semibold {
-  font-weight: 600;
+  // font-weight: 600;
+  font-weight: var(--font-weight--semibold);
 }
 
 .text--weight-bold {
-  font-weight: 700;
+  // font-weight: 700;
+  font-weight: var(--font-weight--bold);
 }
 
 // Font size modifiers.
 .text--size-small {
-  font-size: _rem(1.4);
+  // font-size: _rem(1.4);
+  font-size: var(--font-size--small);
 }
 
 .text--size-xsmall {
-  font-size: _rem(1.2);
+  // font-size: _rem(1.2);
+  font-size: var(--font-size--xsmall);
 }
 
 // Line height modifiers.
 .text--height-snug {
-  line-height: 1.5;
+  // line-height: 1.5;
+  line-height: var( --line-height--snug);
 }
 
 .text--height-xsnug {
   line-height: calc(4/3);
+  line-height: var(--line-height--xsnug);
 }
 
 // Color modifiers
@@ -136,5 +144,6 @@ p {
 
 // @TODO: This should probably be set to an automatic CSS variable.
 .text--color-reversed {
-  color: $white;
+  // color: $white;
+  color: var(--text-color--light);
 }
