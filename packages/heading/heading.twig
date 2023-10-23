@@ -3,7 +3,6 @@
 {% set flush = flush|default(false) %}
 
 {% set allowed_levels = 1..6 %}
-{% set allowed_colors = ['neutral']  %}
 {% set allowed_sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] %}
 {% set allowed_alignments = ['left', 'center', 'right'] %}
 {% set allowed_vspaces = ['small', 'large'] %}
@@ -12,11 +11,11 @@
 
   {% set classes = classes|merge([
     'heading',
-    color in allowed_colors ? 'heading--' ~ color,
     size in allowed_sizes ? 'heading--' ~ size,
     flush ? 'heading--flush',
     align in allowed_alignments ? 'heading--align-' ~ align,
     vspace in allowed_vspaces ? 'heading--vspace-' ~ vspace,
+    no_overline ? 'heading--no-overline',
   ]) | filter(class => class is not empty) %}
 {% apply spaceless %}
   <h{{ level }}{% if classes %} class="{{ classes|join(' ') }}"{% endif %}>{{ content }}</h{{ level }}>
