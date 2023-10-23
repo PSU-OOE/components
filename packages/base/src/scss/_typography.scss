@@ -86,10 +86,11 @@ p {
 }
 
 .text {
-  color: $nittany-navy;
-  font-size: _rem(1.6);
-  font-weight: 400;
-  line-height: 1.875;
+  color: var(--text-color--default);
+  font-size: var(--font-size--default);
+  font-weight: var(--font-weight--default);
+  line-height: var(--line-height--default);
+  letter-spacing: var(--letter-spacing--default);
 }
 
 .text--contrasting {
