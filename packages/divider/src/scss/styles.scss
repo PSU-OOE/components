@@ -7,21 +7,23 @@
 
   &--thin-slate-light {
     height: _rem(.1);
-    background-color: $slate-light;
+    background-color: var(--slate-light);
   }
 
   &--standard-light-grey {
     height: _rem(2);
-    background-color: $light-grey;
+    background-color: var(--light-grey);
   }
 
   &--standard-white {
     height: _rem(2);
-    background-color: $white;
+    background-color: var(--white);
   }
 
   &--tall-medium-grey-shield,
-  &--tall-blue-gradient-shield {
+  &--tall-medium-grey-geometric,
+  &--tall-blue-gradient-shield,
+  &--tall-blue-gradient-geometric {
     height: _rem(8);
 
     .divider__top-band {
@@ -29,15 +31,15 @@
       top: 0;
       width: 100%;
       height: _rem(1);
-      background-color: $beaver-blue;
+
     }
 
     .sprite {
-      color: $white;
-      margin-top: _rem(-6);
+      color: var(--white);
       width: _rem(130);
       height: auto;
       margin-left: 35.1%;
+      margin-top: _rem(-6);
       position: absolute;
     }
   }
@@ -46,15 +48,56 @@
     background-color: $medium-grey;
 
     .divider__top-band {
-      background: linear-gradient(90deg, $beaver-blue 0, $true-blue 100%);
+      background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
+    }
+  }
+
+  &--tall-medium-grey-geometric {
+    background: var(--medium-grey);
+    overflow: hidden;
+
+    .divider__top-band {
+      background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
+    }
+    .sprite {
+      margin-right: _rem(-1);
+      margin-top: _rem(-39.6);
+      width: _rem(139);
+      position: absolute;
+    }
+    .divider__rule {
+      top: _rem(1);
+      height: 100%;
+      background: linear-gradient(90deg, var(--medium-grey) 0, transparent 100%);
+      margin: 0;
     }
   }
 
   &--tall-blue-gradient-shield {
-    background: linear-gradient(90deg, $true-blue 0, $primary-blue 100%);
+    background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
 
     .divider__top-band {
       background-color: $nittany-navy;
+    }
+  }
+
+  &--tall-blue-gradient-geometric {
+    background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
+
+    .divider__top-band {
+      background-color: $nittany-navy;
+    }
+    .sprite {
+      margin-right: _rem(-1);
+      margin-top: _rem(-39.6);
+      width: _rem(139);
+      position: absolute;
+    }
+    .divider__rule {
+      top: _rem(1);
+      height: 100%;
+      background: linear-gradient(90deg, var(--beaver-blue) 0, transparent 100%);
+      margin: 0;
     }
   }
 

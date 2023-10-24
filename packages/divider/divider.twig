@@ -3,5 +3,9 @@
     {% include '@atoms/sprite/sprite.twig' with { name: 'community-shield' } %}
     <div class="divider__top-band"></div>
   {% endif %}
+  {% if variant == 'tall-medium-grey-geometric' or variant == 'tall-blue-gradient-geometric' %}
+    {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } %}
+    <div class="divider__top-band"></div>
+  {% endif %}
   <hr class="divider__rule">
 </div>
