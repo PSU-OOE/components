@@ -1,6 +1,5 @@
 {% set headings_examples %}
   <div style="padding: 0 2rem">
-    <p class="text text--color-reversed">@TODO: Need specification for reversed text contrasting.</p>
     {% for level in range(1, 6) %}
       {% include '@atoms/heading/heading.twig' with {
         content: 'Heading ' ~ level ~ ': The quick brown fox <span class=\"text--contrasting\">jumps</span> over the lazy dog',
