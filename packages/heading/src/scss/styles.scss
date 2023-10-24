@@ -135,9 +135,12 @@ h2, .heading--large {
   }
 
   &.heading--reversed {
-    // @TODO: Replace with --headings-color: color-mix... when fallback is not required.
-    color: var(--text-color--light);
     color: color-mix(in srgb, var(--text-color--light) 85%, transparent);
+
+    // @TODO: Remove fallback when appropriate.
+    @supports not (color: color-mix(in srgb, white, white)) {
+      color: var(--text-color--light);
+    }
   }
 }
 
@@ -147,9 +150,12 @@ h4, .heading--small,
 h5, .heading--xsmall,
 h6, .heading--2xsmall {
   &.heading--reversed {
-    // @TODO: Replace with --headings-color: color-mix... when fallback is not required.
-    color: var(--text-color--light);
-    color: color-mix(in srgb, var(--text-color--light) 90%, transparent);
+    color: color-mix(in srgb, var(--text-color--light) 90%, transparent) !important;
+
+    // @TODO: Remove fallback when appropriate.
+    @supports not (color: color-mix(in srgb, white, white)) {
+      color: var(--text-color--light) !important;
+    }
   }
 }
 
