@@ -177,6 +177,11 @@ p {
 }
 
 // Line height modifiers.
+
+.text--height-default {
+  line-height: var(--line-height--default);
+}
+
 .text--height-snug {
   line-height: var( --line-height--snug);
 }
@@ -198,6 +203,10 @@ p {
 }
 
 // Color modifiers
+.text--color-default {
+  color: var(--text-color--default);
+}
+
 .text--color-slate {
   color: var(--text-color--slate);
 }
