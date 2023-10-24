@@ -39,12 +39,20 @@ body {
 }
 
 a {
-  color: $primary-blue;
-  font-weight: 600;
-  text-decoration: none;
+  color: var(--link-color--default);
+  font-weight: var(--font-weight--semibold);
+  text-decoration-line: underline;
+  text-decoration-color: var(--link-color--default);
+  text-decoration-style: dotted;
+  text-decoration-thickness: _rem(0.1);
 
-  &:hover {
-    color: $beaver-blue;
+  &:hover,
+  &:focus {
+    text-decoration-style: solid;
+  }
+
+  &:focus {
+    outline-offset: _rem(0.2);
   }
 
   &.hidden {
