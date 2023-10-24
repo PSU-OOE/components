@@ -38,7 +38,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
+a,
+.link--default {
   color: var(--link-color--default);
   font-weight: var(--font-weight--semibold);
   text-decoration-line: underline;
