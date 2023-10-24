@@ -1,6 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
 
+// Common properties.
 h1, h2, h3, h4, h5, h6, .heading {
   color: var(--headings-color);
   margin: 0 0 var(--text-element-vertical-space--default);
@@ -10,6 +11,7 @@ h1, h2, h3, h4, h5, h6, .heading {
   }
 }
 
+// <h1> specific properties.
 h1, .heading--xlarge {
   font-family: var(--font-family--text);
   font-size: var(--font-size--4xlarge);
@@ -30,6 +32,7 @@ h1, .heading--xlarge {
   }
 }
 
+// <h2> specific properties.
 h2, .heading--large {
   font-family: var(--font-family--headings);
   font-size: var(--font-size--2xlarge);
@@ -50,19 +53,7 @@ h2, .heading--large {
   }
 }
 
-h1, .heading--xlarge,
-h2, .heading--large {
-  &:not(.heading--no-overline)::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: .125em;
-    background-color: var(--sky-blue);
-    max-width: _rem(8);
-    margin-bottom: _rem(1.5);
-  }
-}
-
+// <h3> specific properties.
 h3, .heading--medium {
   font-family: var(--font-family--headings);
   font-size: var(--font-size--xlarge);
@@ -79,6 +70,7 @@ h3, .heading--medium {
   }
 }
 
+// <h4> specific properties.
 h4, .heading--small {
   font-family: var(--font-family--headings);
   font-size: var(--font-size--mlarge);
@@ -95,6 +87,7 @@ h4, .heading--small {
   }
 }
 
+// <h5> specific properties.
 h5, .heading--xsmall {
   font-family: var(--font-family--headings);
   font-size: var(--font-size--small);
@@ -111,6 +104,7 @@ h5, .heading--xsmall {
   }
 }
 
+// <h6> specific properties.
 h6, .heading--2xsmall {
   font-family: var(--font-family--headings);
   font-size: var(--font-size--2xsmall);
@@ -127,11 +121,49 @@ h6, .heading--2xsmall {
   }
 }
 
-.heading {
-  &--reversed {
-    color: var(--text-color--light);
+// Styles specific to <h1> and <h2> elements.
+h1, .heading--xlarge,
+h2, .heading--large {
+  &:not(.heading--no-overline)::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: .125em;
+    background-color: var(--sky-blue);
+    max-width: _rem(8);
+    margin-bottom: _rem(1.5);
+  }
 
-    // @TODO: Need behavior for contrasting.
+  &.heading--reversed {
+    --headings-color: color-mix(in srgb, var(--text-color--light) 85%, transparent);
+
+    // @TODO: Remove fallback when appropriate.
+    @supports not (color: color-mix(in srgb, white, white)) {
+      --headings-color: var(--text-color--light);
+    }
+  }
+}
+
+// Styles specific to <h3>, <h4>, <h5>, and <h6> elements.
+h3, .heading--medium,
+h4, .heading--small,
+h5, .heading--xsmall,
+h6, .heading--2xsmall {
+  &.heading--reversed {
+    --headings-color: color-mix(in srgb, var(--text-color--light) 90%, transparent) !important;
+
+    // @TODO: Remove fallback when appropriate.
+    @supports not (color: color-mix(in srgb, white, white)) {
+      --headings-color: var(--text-color--light) !important;
+    }
+  }
+}
+
+// Modifiers.
+.heading {
+
+  &--reversed .text--contrasting {
+    color: var(--text-color--light);
   }
 
   &--align-left {
