@@ -68,6 +68,11 @@ a,
   }
 }
 
+.link--color-reversed {
+  color: var(--link-color--light);
+  text-decoration-color: var(--link-color--light);
+}
+
 img {
   display: block;
   max-width: 100%;
