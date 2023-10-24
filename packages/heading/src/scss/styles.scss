@@ -136,6 +136,11 @@ h2, .heading--large {
 
   &.heading--reversed {
     --headings-color: color-mix(in srgb, var(--text-color--light) 85%, transparent);
+
+    // @TODO: remove this color-mix fallback when possible.
+    @supports not (color: color-mix(in srgb, var(--text-color--light) 85%, transparent)) {
+      --headings-color: var(--text-color--light);
+    }
   }
 }
 
@@ -146,16 +151,16 @@ h5, .heading--xsmall,
 h6, .heading--2xsmall {
   &.heading--reversed {
     --headings-color: color-mix(in srgb, var(--text-color--light) 90%, transparent);
+
+    // @TODO: remove this color-mix fallback when possible.
+    @supports not (color: color-mix(in srgb, var(--text-color--light) 90%, transparent)) {
+      --headings-color: var(--text-color--light);
+    }
   }
 }
 
 // Modifiers.
 .heading {
-
-  &--reversed {
-    // @TODO: remove this color-mix fallback when possible.
-    --headings-color: var(--text-color--light);
-  }
 
   &--reversed .text--contrasting {
     color: var(--text-color--light);
