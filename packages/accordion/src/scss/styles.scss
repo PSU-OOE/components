@@ -83,8 +83,8 @@
     }
 
     .accordion__label--label-underline {
-      color: $primary-blue;
-      text-decoration-color: $primary-blue;
+      color: var(--pa-link);
+      text-decoration-color: var(--pa-link);
       text-decoration-thickness: _rem(.1);
       text-decoration-line: underline;
       text-decoration-style: dotted;
