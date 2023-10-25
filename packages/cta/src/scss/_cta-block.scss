@@ -174,12 +174,12 @@
   box-shadow: var(--box-shadow);
 
   &:focus-visible, &:hover {
-    box-shadow: _rem(.1) _rem(.1) 0 0 var(--nittany-navy);
+    box-shadow: 0.1rem 0.1rem 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
   }
 
   // @TODO: Remove safari polyfill.
   &.focus-visible {
-    box-shadow: _rem(.1) _rem(.1) 0 0 var(--nittany-navy);
+    box-shadow: 0.1rem 0.1rem 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
   }
 
   &:is(.bg--light-grey *, .bg--primary-blue *, .bg--beaver-blue *) {
