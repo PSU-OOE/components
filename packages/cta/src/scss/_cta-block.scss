@@ -68,7 +68,23 @@
 
   &--compact {
     font-size: var(--font-size--small);
-    padding: _rem(1.4) _rem(2.2);
+    padding: _rem(1.3) _rem(2.2);
+  }
+
+  &--xcompact,
+  &--compact-responsive {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--font-size--4xsmall);
+    min-height: _rem(3.6);
+    padding: _rem(0.5) _rem(1);
+  }
+
+  &--compact-responsive {
+    @include bp(m) {
+      padding: _rem(1.5) _rem(2);
+      font-size: var(--font-size--small);
+    }
   }
 
   &--campaign-legacy {
@@ -161,12 +177,13 @@
 }
 
 @include cta-color('alt', var(--beaver-blue), var(--white), var(--nittany-navy), var(--white), var(--sky-blue), var(--light-mauve), var(--light-mauve));
-@include cta-color('reversed', var(--white), var(--nittany-navy),var(--nittany-navy), var(--white), var(--sky-blue), var(--pa-link), var(--light-mauve));
+@include cta-color('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy), var(--pa-link), var(--pa-link));
 @include cta-color('color-keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy), var(--black), var(--black));
 @include cta-color('expand', var(--cta-block-expand-background-color), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy), var(--beaver-blue), var(--nittany-navy));
 @include cta-color('expand-reversed', var(--text-color--light), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy), var(--beaver-blue), var(--nittany-navy));
 @include cta-color('hollow-solid', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy), var(--beaver-blue), var(--nittany-navy));
 @include cta-color('hollow-dotted', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy), var(--beaver-blue), var(--nittany-navy));
+@include cta-color('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy), var(--pa-link), var(--pa-link));
 
 .cta-block--expand {
   transition: color .3s linear, background-color .3s linear, box-shadow .3s linear;

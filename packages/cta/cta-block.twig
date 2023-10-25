@@ -8,6 +8,12 @@
 {% if compact %}
   {% set classes = classes|merge(['cta-block--compact']) %}
 {% endif %}
+{% if xcompact %}
+  {% set classes = classes|merge(['cta-block--xcompact']) %}
+{% endif %}
+{% if compact_responsive %}
+  {% set classes = classes|merge(['cta-block--compact-responsive']) %}
+{% endif %}
 {% if font_weight in ['bold'] %}
   {% set classes = classes|merge(['cta-block--' ~ font_weight]) %}
 {% endif %}
