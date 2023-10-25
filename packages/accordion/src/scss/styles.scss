@@ -30,13 +30,18 @@
     border: none;
     cursor: pointer;
     display: flex;
-    font-family: $open-sans;
-    font-size: _rem(1.6);
-    line-height: _rem(2.4);
-    color: $beaver-blue;
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--default);
+    font-weight: var(--font-weight--semibold);
+    line-height: var(--line-height--snug);
+    color: var(--beaver-blue);
     padding: _rem(2) 0;
     width: 100%;
     text-align: left;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: transparent;
+    text-underline-offset: 20%;
     transition: color .2s linear, margin-bottom .2s linear;
 
     &:hover {
