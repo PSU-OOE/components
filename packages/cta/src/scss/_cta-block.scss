@@ -4,6 +4,12 @@
   --cta-block-expand-background-color-light: var(--white);
 
   --cta-block-expand-background-color: var(--cta-block-expand-background-color-default);
+
+  --box-shadow: #{_rem(.1)} #{_rem(.1)} 0 0 color-mix(in srgb, var(--nittany-navy) 50%, transparent);
+  // @TODO: Remove fallback when appropriate.
+  @supports not (color: color-mix(in srgb, white, white)) {
+    --box-shadow: _rem(.1) _rem(.1) 0 0 rgba($nittany-navy, .5);
+  }
 }
 
 .cta-block {
@@ -164,15 +170,16 @@
 
 .cta-block--expand {
   transition: color .3s linear, background-color .3s linear, box-shadow .3s linear;
-  box-shadow: _rem(.1) _rem(.1) 0 0 rgba(var(--beaver-blue), .5);
+
+  box-shadow: var(--box-shadow);
 
   &:focus-visible, &:hover {
-    box-shadow: _rem(.1) _rem(.1) 0 0 rgba(var(--nittany-navy), .5);
+    box-shadow: 0.1rem 0.1rem 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
   }
 
   // @TODO: Remove safari polyfill.
   &.focus-visible {
-    box-shadow: _rem(.1) _rem(.1) 0 0 rgba(var(--nittany-navy), .5);
+    box-shadow: 0.1rem 0.1rem 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
   }
 
   &:is(.bg--light-grey *, .bg--primary-blue *, .bg--beaver-blue *) {

@@ -59,12 +59,7 @@
     .divider__top-band {
       background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
     }
-    .sprite {
-      right: _rem(-1);
-      top: _rem(-39.6);
-      width: _rem(139);
-      position: absolute;
-    }
+    
     .divider__rule {
       top: _rem(1);
       height: 100%;
@@ -87,17 +82,31 @@
     .divider__top-band {
       background-color: $nittany-navy;
     }
-    .sprite {
-      right: _rem(-1);
-      top: _rem(-39.6);
-      width: _rem(139);
-      position: absolute;
-    }
     .divider__rule {
       top: _rem(1);
       height: 100%;
       background: linear-gradient(90deg, var(--beaver-blue) 0, transparent 100%);
       margin: 0;
+    }
+  }
+
+  &--tall-blue-gradient-geometric,
+  &--tall-medium-grey-geometric {
+    .divider__sprite_1 {
+      .sprite {
+        position: absolute;
+        right: _rem(71);
+        margin-top: _rem(-19);
+        width: _rem(67);
+      }
+    }
+    .divider__sprite_2 {
+      .sprite {
+        position: absolute;
+        right: _rem(-1);
+        margin-top: _rem(-33);
+        width: _rem(67);
+      }
     }
   }
 
