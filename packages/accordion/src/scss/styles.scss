@@ -45,10 +45,10 @@
     transition: color var(--transition-duration--default) linear, text-decoration-color var(--transition-duration--default) linear;
 
     &:hover {
-      color: $primary-blue;
+      color: var(--pa-link);
 
       .accordion__label {
-        text-decoration-color: $primary-blue;
+        text-decoration-color: var(--pa-link);
 
         &--label-underline {
           text-decoration-style: solid;
@@ -67,10 +67,10 @@
     &:focus-visible {
       outline: _rem(.2) solid $sky-blue;
       outline-offset: _rem(.2);
-      color: $primary-blue;
+      color: var(--pa-link);
 
       .accordion__label {
-        text-decoration-color: $primary-blue;
+        text-decoration-color: var(--pa-link);
 
         &--label-underline {
           text-decoration-style: solid;
