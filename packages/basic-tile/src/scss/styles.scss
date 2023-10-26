@@ -1,26 +1,44 @@
 @import "../../../base/src/scss/imports/variables";
 
 .basic-tile {
+  font-size: var(--font-size--default);
+  line-height: var(--line-height--snug);
+  font-family: var(--font-family--default);
+  color: var(--text-color--light);
+  background: var(--pa-link);
   padding: _rem(1.5) _rem(2);
-  transition: .2s background,.2s color,.2s border ease-in-out;
-  line-height: _rem(2.2);
-  outline-offset: _rem(-0.5);
+  transition: background var(--transition-duration--default) linear,
+              outline-color var(--transition-duration--default) linear;
+  outline: solid _rem(.2) transparent;
+  outline-offset: _rem(-0.4);
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  text-decoration: none;
 
-  &--primary-blue {
-    background: $primary-blue;
-    color: $white;
-    &:hover,
-    &:focus {
-      background: $nittany-navy;
-      color: $white;
-    }
+  &:hover {
+    background: var(--nittany-navy);
+  }
+
+  &:focus-visible {
+    background: var(--nittany-navy);
+    outline-color: var(--sky-blue);
+    outline-offset: _rem(-0.4);
+  }
+
+  // @TODO: Remove after polyfill is no longer needed.
+  &.focus-visible {
+    background: var(--nittany-navy);
+    outline-color: var(--sky-blue);
+    outline-offset: _rem(-0.4);
+  }
+
+  &__primary-label {
+    font-weight: var(--font-weight--bold);
   }
 
   &__secondary-label {
-    font-weight: normal;
+    font-weight: var(--font-weight--regular);
   }
 }
