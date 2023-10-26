@@ -6,7 +6,8 @@
   border-top: _rem(.2) solid var(--sky-blue);
   padding: _rem(2);
   position: relative;
-  transition: background-color var(--transition-duration--default) linear;
+  transition: background-color var(--transition-duration--default) linear,
+              border-top-color var(--transition-duration--default) linear;
 
   &--light-grey {
     background-color: var(--light-grey);
@@ -15,7 +16,7 @@
   &:hover,
   &:focus-within {
     background-color: var(--pa-link-light);
-
+    border-top-color: var(--pa-link);
     .description-navigation-tile__title {
       color: var(--nittany-navy);
     }
