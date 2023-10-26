@@ -41,7 +41,7 @@
 
   &__overlay {
     position: relative;
-    height: _rem(7.5);
+    height: min(20%, _rem(7.5));
     background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
 
     &::after {
