@@ -1,98 +1,68 @@
-.description-navigation-tile {
-  background-color: $white;
-  position:relative;
-  transition: all .2s ease-in-out;
-  height: 100%;
-  &__link {
-    border-bottom: none;
-    display: block;
-    height: 100%;
-    position:absolute;
-    width: 100%;
-    z-index: 1;
+@import '../../../base/src/scss/imports/variables';
 
-    @include bp(xs) {
-      box-shadow: _rem(0.1) _rem(0.2) 0 rgba(0,0,0,.15);
+.description-navigation-tile {
+  background-color: var(--white);
+  box-shadow: _rem(.1) _rem(.2) _rem(.3) color-mix(in srgb, var(--nittany-navy) 25%, transparent);
+  border-top: _rem(.2) solid var(--sky-blue);
+  padding: _rem(2);
+  position: relative;
+  transition: background-color var(--transition-duration--default) linear;
+
+  &--light-grey {
+    background-color: var(--light-grey);
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: var(--pa-link-light);
+
+    .description-navigation-tile__title {
+      color: var(--nittany-navy);
+    }
+  }
+
+
+  &__link {
+    outline: transparent _rem(.2) solid;
+    outline-offset: _rem(-.4);
+
+    position: absolute;
+    inset: 0 0 0 0;
+    text-decoration: none;
+    transition: outline-color var(--transition-duration--default) linear;
+
+    &:focus-visible {
+      outline-color: var(--pa-link);
+      outline-offset: _rem(-.4);
     }
 
+    // @TODO: Remove after polyfill is no longer needed.
+    .focus-visible {
+      outline-color: var(--pa-link);
+      outline-offset: _rem(-.4);
+    }
   }
 
   &__content {
-    display:block;
-    padding: _rem(2);
-    box-shadow: rgba(0, 0, 0, 0.15) _rem(0.1) _rem(0.2) 0 0;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: _rem(2);
   }
 
   &__title {
-    background-color: $light-grey;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    display: inline;
-    max-width: 95%;
-    padding: _rem(0.9) 0 _rem(0.6);
-    box-shadow: _rem(1) 0 0 0 $light-grey, _rem(-1) 0 0 0 $light-grey;
-
-    span {
-      color: $nittany-navy;
-      font-size: _rem(2);
-      font-weight: 700;
-      line-height: _rem(2.8);
-      position: relative;
-    }
-
-    .sprite {
-      font-size: _rem(1.2);
-      margin-left: _rem(1);
-      &:hover,
-      &:focus {
-        color: $white;
-      }
-      @include bp(m) {
-        display: none;
-      }
-    }
-
-  }
-
-  &--light-grey {
-    background: $light-grey;
-    .description-navigation-tile__title {
-      box-shadow: _rem(1) 0 0 0 $white, _rem(-1) 0 0 0 $white;
-      background-color: $white;
-    }
+    color: var(--pa-link);
+    font-family: var(--font-family--display);
+    font-size: var(--font-size--large);
+    line-height: var(--line-height--2xsnug);
+    font-weight: var(--font-weight--medium);
+    transition: color var(--transition-duration--default) linear;
   }
 
   &__description {
-    font-size: _rem(1.4);
-    font-weight: 600;
-    line-height: _rem(2.2);
-    margin-top: _rem(1);
-    padding: _rem(0.5) 0 _rem(0.5) 0;
-
-    @include bp(m) {
-      margin-top: _rem(2);
-    }
-  }
-
-  &__title,
-  &__link {
-    transition: background .2s ease-in-out, box-shadow .2s ease-in-out;
-  }
-
-  // Throw in some custom hover effects.
-  &__link:active,
-  &__link:focus,
-  &__link:hover {
-    & ~ .description-navigation-tile__content {
-      .description-navigation-tile__title {
-        background-color: $primary-blue;
-        box-shadow: _rem(1) 0 0 0 $primary-blue, _rem(-1) 0 0 0 $primary-blue; // Hack for Edge + IE11
-
-        & span {
-          color: $white;
-        }
-      }
-    }
+    color: var(--nittany-navy);
+    font-size: var(--font-size--small);
+    font-family: var(--font-family--text);
+    line-height: var(--line-height--snug);
+    font-weight: var(--font-weight--semibold);
   }
 }

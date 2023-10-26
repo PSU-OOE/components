@@ -1,11 +1,6 @@
-<div class="image-navigation-tile" style="background-image: url('{{ image }}');">
-  <a class="image-navigation-tile__link" href="{{ link.url }}">
-    <span class="visually-hidden">{{ link.label }}</span>
-  </a>
-  <div class="image-navigation-tile__content">
-    <div class="image-navigation-tile__title" aria-hidden="true">
-      <span>{{ link.label }}{% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}</span>
-    </div>
-  </div>
-</div>
+<a class="image-navigation-tile" href="{{ link.url }}">
+  <img class="image-navigation-tile__img" alt="" src="{{ image }}" loading="lazy">
+  <div class="image-navigation-tile__overlay"></div>
+  <div class="image-navigation-tile__title">{{ link.label }}</div>
+</a>
 
