@@ -10,19 +10,14 @@
 
       &--video {
         .sprite {
-          color: $error-red;
+          color: color-mix(in srgb, var(--error-red) 100%, transparent);
           opacity: 1;
         }
       }
     }
     .card__title {
-      text-decoration-color: $primary-blue;
+      text-decoration-color: var(--pa-link);
     }
-  }
-
-  &:focus-within {
-    outline: _rem(.2) solid $sky-blue;
-    outline-offset: _rem(.2);
   }
 
   &__content {
@@ -33,28 +28,24 @@
   }
 
   &__media {
+    aspect-ratio: 16/9;
     flex: 1 1 _rem(26);
     position: relative;
+    overflow: hidden;
 
     &--warning {
       &::after {
         position: absolute;
         content: "Missing alt text!";
-        color: $white;
-        background: $error-red;
-        font-family: $roboto-slab;
+        color: var(--white);
+        background: var(--error-red);
+        font-family: var(--font-family--display);
         top: _rem(1);
         right: _rem(1);
-        font-size: _rem(1.5);
+        font-size: var(--font-size--default);
         padding: _rem(.5);
       }
     }
-  }
-
-  // Required to prevent layout shifts while images are loading.
-  &__media-placeholder {
-    height: 0;
-    padding-bottom: 56.25%;
   }
 
   &__media-overlay {
@@ -76,7 +67,7 @@
         width: calc(13% + _rem(2));
         height: calc(13% + _rem(2));
         opacity: 0.8;
-        color: fade-out($black, 0.4);
+        color: color-mix(in srgb, var(--black) 40%, transparent);
       }
     }
 
@@ -88,41 +79,51 @@
   }
 
   &__title {
-    color: $primary-blue;
+    color: var(--pa-link);
     display: block;
-    font-family: $open-sans;
-    font-size: _rem(1.8);
-    font-weight: 700;
-    line-height: calc(25/18);
-    transition: text-decoration-color .2s linear;
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--large);
+    font-weight: var(--font-weight--bold);
+    line-height: var(--line-height--xsnug);
+    transition: text-decoration-color var(--transition-duration--default) linear;
     text-decoration: underline;
     text-decoration-color: transparent;
     text-underline-offset: .2em;
   }
 
   &__attribution {
-    color: $slate;
+    color: var(--slate);
     display: block;
-    font-family: $open-sans;
-    font-size: _rem(1.4);
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--small);
     font-style: italic;
-    line-height:calc(20/14);
+    font-weight: var(--font-weight--regular);
+    line-height: var(--line-height--snug);
   }
 
   &__description {
     margin-top: _rem(1.5);
   }
+
   &__link {
     position: absolute;
     inset: 0;
+    outline: transparent _rem(.2) solid;
+    outline-offset: _rem(.2);
+    transition: outline-color var(--transition-duration--default) linear;
 
-    &:focus {
-      outline: none;
+    &:focus-visible {
+      outline-color: var(--sky-blue);
+    }
+
+    // @TODO: Remove after polyfill is no longer needed.
+    &.focus-visible {
+      outline-color: var(--sky-blue);
     }
   }
 
   &--list {
-    border-bottom: _rem(.1) solid $medium-grey;
+    border-bottom: _rem(.1) solid var(--medium-grey);
     padding: _rem(1.5) 0;
 
     .card__content {
@@ -135,7 +136,7 @@
 
       &--warning {
         &::after {
-          font-size: _rem(1);
+          font-size: var(--font-size--4xsmall);
           top: _rem(.25);
           right: _rem(.25);
         }
@@ -143,8 +144,8 @@
     }
 
     .card__title {
-      font-size: _rem(1.6);
-      line-height: calc(21/16);
+      font-size: var(--font-size--default);
+      line-height: var(--line-height--xsnug);
     }
   }
 }
