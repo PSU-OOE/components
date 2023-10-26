@@ -54,6 +54,7 @@
 
     &--standard {
       transition: opacity .2s linear;
+      // @TODO: Custom properties don't seem to work with radial gradients?
       background: radial-gradient(circle, rgba($nittany-navy, 0) calc(100% / 3), rgba($nittany-navy, calc(1/3)), 75%, rgba($nittany-navy, calc(2/3)) 100%);
       opacity: 0;
     }
