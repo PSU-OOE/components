@@ -1,5 +1,5 @@
 {% set classes = classes|default([]) %}
-{% set level = level|default(2) %}
+{% set level = level|default(2)|replace({'h': ''}) %}
 {% set flush = flush|default(false) %}
 
 {% set allowed_levels = 1..6 %}
