@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^1.0",
-    "@psu-ooe/slide-toggle": "^1.0"
+    "@psu-ooe/heading": "^1.0",
+    "@psu-ooe/slide-toggle": "^1.0",
+    "@psu-ooe/sprite": "^1.0"
   }
 }
