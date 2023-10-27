@@ -34,32 +34,84 @@
 
     .tabs-list__button {
       width: 100%;
+      padding: _rem(.6) 0;
+
+      @include bp(xs) {
+        padding: _rem(.8) 0;
+      }
+
+      @include bp(s) {
+        padding: _rem(1) 0;
+      }
+
+      @include bp(m) {
+        padding: _rem(1.1) 0;
+      }
+
+      @include bp(l) {
+        padding: _rem(1.2) 0;
+      }
+
+      @include bp(xl) {
+        padding: _rem(1.3) 0;
+      }
+    }
+
+    &.tabs-list--short .tabs-list__button {
+      padding: _rem(1.2) 0;
+
+      @include bp(xs) {
+        padding: _rem(1.4) 0;
+      }
+
+      @include bp(s) {
+        padding: _rem(1.5) 0;
+      }
+
+      @include bp(m) {
+        padding: _rem(2) 0;
+      }
     }
   }
 
   &--borderless-inactive {
     .tabs-list__button {
-      box-shadow: 0 _rem(.1) 0 0 rgba($beaver-blue, 0);
+      box-shadow: 0 _rem(.1) 0 0 color-mix(in srgb, transparent 100%, transparent);
+
+      // @TODO: Remove fallback when appropriate.
+      @supports not (color: color-mix(in srgb, white, white)) {
+        box-shadow: 0 _rem(.1) 0 0 transparent;
+      }
     }
   }
 
   &--short {
     .tabs-list__button {
-      font-size: _rem(1.1);
+      line-height: var(--line-height--xsnug);
+      padding: _rem(1.2) 0;
+      font-size: _rem(1.2);
+
       @include bp(xs) {
-        font-size: _rem(1.2);
+        padding: _rem(1.4) 0;
+        font-size: _rem(1.3);
       }
 
-      @include bp(s) {
+      @include bp(smaller) {
         font-size: _rem(1.4);
       }
 
-      @include bp(m) {
+      @include bp(s) {
+        padding: _rem(1.5) 0;
         font-size: _rem(1.5);
       }
 
-      @include bp(l) {
+      @include bp(m) {
+        padding: _rem(2) 0;
         font-size: _rem(1.6);
+      }
+
+      @include bp(l) {
+        font-size: _rem(1.7);
       }
 
       @include bp(xl) {
@@ -72,74 +124,87 @@
     /* @TODO: Replace with gap when flex-gap is available. */
     margin-left: _rem(.4);
     margin-right: _rem(.4);
-    padding: _rem(.6) 0;
 
-    @include bp(xs) {
-      font-size: _rem(1.3);
-      padding: _rem(.8) 0;
-    }
-
-    @include bp(s) {
-      font-size: _rem(1.6);
-      font-weight: 400;
-      letter-spacing: .02em;
-      margin-left: _rem(.45);
-      margin-right: _rem(.45);
-      padding: _rem(1) 0;
-    }
-
-    @include bp(m) {
-      font-size: _rem(1.8);
-      padding: _rem(1.1) 0;
-    }
-
-    @include bp(l) {
-      font-size: _rem(1.9);
-      padding: _rem(1.2) 0;
-    }
-
-    @include bp(xl) {
-      font-size: _rem(2.1);
-      margin-left: _rem(.5);
-      margin-right: _rem(.5);
-      padding: _rem(1.3) 0;
-    }
-
+    color: var(--beaver-blue);
+    font-size: _rem(1.2);
+    font-family: var(--font-family--default);
+    font-weight: var(--font-weight--semibold);
+    line-height: calc(26/22);
+    letter-spacing: -0.002em;
+    padding: 0 0 _rem(.6) 0;
     flex: 1 1 0;
     width: _rem(20);
     min-width: min-content;
     vertical-align: bottom;
     background-color: transparent;
     border: none;
-    color: $beaver-blue;
-    font-family: $open-sans;
-    font-size: _rem(1.1);
-    font-weight: 600;
-    line-height: 1.3;
-    letter-spacing: -.011em;
     text-align: left;
-    outline-offset: _rem(.5);
-    box-shadow: 0 _rem(.1) 0 0 rgba($beaver-blue, .67);
+    outline-offset: _rem(.7);
+    transition: color var(--transition-duration--default) linear;
+    box-shadow: 0 _rem(.1) 0 0 color-mix(in srgb, var(--beaver-blue) calc(100% / 1.5), transparent);
+
+    // @TODO: Remove fallback when appropriate.
+    @supports not (color: color-mix(in srgb, white, white)) {
+      box-shadow: 0 _rem(.1) 0 0 rgba($beaver-blue, calc(1 / 1.5));
+    }
 
     @media screen and (prefers-reduced-motion: no-preference) {
-      transition: color .3s linear, box-shadow .3s linear;
+      transition: color var(--transition-duration--default) linear,
+                  box-shadow var(--transition-duration--default) linear;
+    }
+
+    @include bp(xs) {
+      font-size: _rem(1.4);
+      padding: 0 0 _rem(.8) 0;
+    }
+
+    @include bp(s) {
+      font-size: _rem(1.7);
+      font-weight: var(--font-weight--regular);
+      letter-spacing: .01em;
+      margin-left: _rem(.45);
+      margin-right: _rem(.45);
+      padding: 0 0 _rem(1) 0;
+    }
+
+    @include bp(m) {
+      font-size: _rem(1.9);
+      padding: 0 0 _rem(1.1) 0;
+    }
+
+    @include bp(l) {
+      font-size: _rem(2);
+      padding: 0 0 _rem(1.2) 0;
+    }
+
+    @include bp(xl) {
+      font-size: _rem(2.2);
+      margin-left: _rem(.5);
+      margin-right: _rem(.5);
+      padding: 0 0 _rem(1.3) 0;
     }
 
     &[aria-selected="true"] {
       cursor: default;
-      font-weight: 700;
-      letter-spacing: -.031em;
-      box-shadow: 0 _rem(.5) 0 0 $beaver-blue;
+      font-weight: var(--font-weight--bold);
+      letter-spacing: -.007em;
+      box-shadow: 0 _rem(.5) 0 0 color-mix(in srgb, var(--beaver-blue) 100%, transparent);
 
-      @include bp(s) {
-        letter-spacing: -.02em;
+      // @TODO: Remove fallback when appropriate.
+      @supports not (color: color-mix(in srgb, white, white)) {
+        box-shadow: 0 _rem(.1) 0 0 $beaver-blue;
       }
     }
 
     &[aria-selected="false"]:hover {
-      color: $primary-blue;
+      color: var(--pa-link);
       cursor: pointer;
-      box-shadow: 0 _rem(.5) 0 0 $primary-blue;
+      box-shadow: 0 _rem(.5) 0 0 color-mix(in srgb, var(--pa-link) 100%, transparent);
+
+      // @TODO: Remove fallback when appropriate.
+      @supports not (color: color-mix(in srgb, white, white)) {
+        box-shadow: 0 _rem(.1) 0 0 $pa-link;
+      }
     }
 
     &:focus {
@@ -147,32 +212,37 @@
     }
 
     &:focus-visible {
-      outline: _rem(.2) solid $sky-blue;
-      box-shadow: 0 _rem(.3) 0 0 $beaver-blue;
+      outline: _rem(.2) solid var(--sky-blue);
+      box-shadow: 0 _rem(.5) 0 0 color-mix(in srgb, var(--beaver-blue) 100%, transparent);
+
+      // @TODO: Remove fallback when appropriate.
+      @supports not (color: color-mix(in srgb, white, white)) {
+        box-shadow: 0 _rem(.1) 0 0 $beaver-blue;
+      }
     }
   }
 
   &__parenthetical {
     display: inline-block;
-    font-size: _rem(1.1);
-    font-weight: 400;
+    font-size: _rem(1.2);
+    font-weight: var(--font-weight--regular);
     letter-spacing: .01em;
     pointer-events: none;
 
     @include bp(xs) {
-      font-size: _rem(1.2);
+      font-size: _rem(1.3);
     }
 
     @include bp(s) {
-      font-size: _rem(1.4);
-    }
-
-    @include bp(m) {
       font-size: _rem(1.5);
     }
 
-    @include bp(xl) {
+    @include bp(m) {
       font-size: _rem(1.6);
+    }
+
+    @include bp(xl) {
+      font-size: _rem(1.7);
     }
 
     &::before {
@@ -186,6 +256,11 @@
 // @TODO: Delete when safari polyfills are no longer needed. */
 // These styles are repeated from the canonical :focus-visible selector.
 .tabs-list__button.focus-visible {
-  outline: _rem(.2) solid $sky-blue;
-  box-shadow: 0 _rem(.3) 0 0 $beaver-blue;
+  outline: _rem(.2) solid var(--sky-blue);
+  box-shadow: 0 _rem(.3) 0 0 color-mix(in srgb, var(--beaver-blue) 100%, transparent);
+
+  // @TODO: Remove fallback when appropriate.
+  @supports not (color: color-mix(in srgb, white, white)) {
+    box-shadow: 0 _rem(.3) 0 0 $beaver-blue;
+  }
 }
