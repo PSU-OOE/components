@@ -112,7 +112,7 @@
   &__label {
     font-family: var(--font-family--default);
     font-weight: var(--font-weight--regular);
-    line-height: var(--line-height--default);
+    line-height: var(--line-height--nospace);
     font-size: _rem(1.2);
 
     @include bp(xs) {
