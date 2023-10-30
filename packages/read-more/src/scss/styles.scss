@@ -3,15 +3,16 @@
 .read-more {
   text-decoration: none;
   border-bottom: _rem(.1) solid transparent;
-  color: $primary-blue;
-  font-size: _rem(1.4);
-  line-height: calc(16/14);
+  color: var(--pa-link);
+  font-size: var(--font-size--small);
+  font-family: var(--font-family--default);
+  line-height: var(--line-height--2xsnug);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: var(--font-weight--bold);
 
-  &:hover {
-    color: $primary-blue;
-    border-color: $primary-blue;
+  &:hover,
+  &:focus {
+    border-color: var(--pa-link);
   }
 
   &:focus {
@@ -19,20 +20,21 @@
   }
 
   &--small {
-    font-size: _rem(1.1);
-    line-height: calc(16/11);
+    font-size: var(--font-size--3xsmall);
   }
 
   &--reverse {
-    color: $white;
+    color: var(--pa-link-light);
 
     &:hover {
-      color: $white;
-      border-color: $white;
+      text-decoration: underline _rem(0.1) solid var(--pa-link-light);
+      text-underline-offset: 0.2em;
     }
 
     &:focus {
       outline-color: $white;
+      text-decoration: underline _rem(0.1) solid var(--pa-link-light);
+      text-underline-offset: 0.2em;
     }
   }
 
