@@ -37,6 +37,7 @@
     .tabs-list__button {
       width: 100%;
       padding: _rem(1.2) 0;
+      outline-offset: _rem(.2);
 
       @include bp(xs) {
         padding: _rem(1.4) 0;
