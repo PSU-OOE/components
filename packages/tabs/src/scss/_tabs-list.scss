@@ -29,31 +29,25 @@
     }
   }
 
+  &--automatic[data-flex-mode="vertical"],
+  &--automatic[data-flex-mode="mixed"],
   &--vertical {
     display: block;
 
     .tabs-list__button {
       width: 100%;
-      padding: _rem(.6) 0;
+      padding: _rem(1.2) 0;
 
       @include bp(xs) {
-        padding: _rem(.8) 0;
+        padding: _rem(1.4) 0;
       }
 
       @include bp(s) {
-        padding: _rem(1) 0;
+        padding: _rem(1.5) 0;
       }
 
       @include bp(m) {
-        padding: _rem(1.1) 0;
-      }
-
-      @include bp(l) {
-        padding: _rem(1.2) 0;
-      }
-
-      @include bp(xl) {
-        padding: _rem(1.3) 0;
+        padding: _rem(2) 0;
       }
     }
 
