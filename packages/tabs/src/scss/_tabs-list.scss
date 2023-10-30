@@ -179,7 +179,7 @@
 
       // @TODO: Remove fallback when appropriate.
       @supports not (color: color-mix(in srgb, white, white)) {
-        box-shadow: 0 _rem(.1) 0 0 $beaver-blue;
+        box-shadow: 0 _rem(.5) 0 0 $beaver-blue;
       }
     }
 
@@ -190,7 +190,7 @@
 
       // @TODO: Remove fallback when appropriate.
       @supports not (color: color-mix(in srgb, white, white)) {
-        box-shadow: 0 _rem(.1) 0 0 $pa-link;
+        box-shadow: 0 _rem(.5) 0 0 $pa-link;
       }
     }
 
@@ -204,7 +204,7 @@
 
       // @TODO: Remove fallback when appropriate.
       @supports not (color: color-mix(in srgb, white, white)) {
-        box-shadow: 0 _rem(.1) 0 0 $beaver-blue;
+        box-shadow: 0 _rem(.5) 0 0 $beaver-blue;
       }
     }
   }
