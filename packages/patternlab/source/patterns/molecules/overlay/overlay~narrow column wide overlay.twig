@@ -9,13 +9,11 @@
 } %}
 {% endset %}
 {% set image %}
-<picture>
-  <source srcset="//test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2018-12/1920x1018_Engel_feature.webp?itok=Zb1tP_sm 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
-  <source srcset="//test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2018-12/1920x1018_Engel_feature.webp?itok=A1yNaUjl 1x" type="image/webp" width="950" height="534">
-  <source srcset="//test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2018-12/1920x1018_Engel_feature.jpg?itok=Zb1tP_sm 1x" media="(min-width:800px)" type="image/jpeg" width="1920" height="840">
-  <source srcset="//test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2018-12/1920x1018_Engel_feature.jpg?itok=A1yNaUjl 1x" type="image/jpeg" width="950" height="534">
-  <img src="//test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2018-12/1920x1018_Engel_feature.jpg?itok=Zb1tP_sm" width="1920" height="840" alt="Renata Engel" loading="lazy">
-</picture>
+  <picture class="responsive-image responsive-image--feature-banner">
+    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2018-12/1920x1018_Engel_feature.jpg.webp?itok=hp_mRFyd 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
+    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2018-12/1920x1018_Engel_feature.jpg.webp?itok=p_K2UHCV 1x" type="image/webp" width="950" height="534">
+    <img src="https://test.worldcampus.psu.edu/sites/default/files/2018-12/1920x1018_Engel_feature.jpg" alt="">
+  </picture>
 {% endset %}
 {% include '@molecules/overlay/overlay.twig' with {
   image: image,
