@@ -48,6 +48,7 @@
   }
 
   &__after {
+    margin-left: _rem(2.8);
     margin-top: var(--text-element-vertical-space--small);
 
     @include bp(s) {
