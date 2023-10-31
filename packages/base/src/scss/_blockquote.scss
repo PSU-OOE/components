@@ -10,7 +10,6 @@ blockquote {
   &::before, &::after {
     color: var(--sky-blue);
     font-weight: var(--font-weight--bold);
-    line-height: var(--line-height--nospace);
     font-size: _rem(4.6);
 
     @include bp(s) {
@@ -22,17 +21,18 @@ blockquote {
     content: '“';
     position: absolute;
     text-indent: _rem(-2.8);
+    line-height: var(--line-height--nospace);
   }
 
   &::after {
     content: '”';
     margin-left: 0.5rem;
     position: static;
-    line-height: .2;
-    vertical-align: bottom;
+    line-height: 0;
+    vertical-align: -.375em;
 
     @include bp(s) {
-      line-height: .25;
+      vertical-align: -.36em;
     }
   }
 
