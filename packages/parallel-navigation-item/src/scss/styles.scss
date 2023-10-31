@@ -3,51 +3,78 @@
 
 .parallel-navigation-item {
   &__link {
-    border-bottom: none;
-    color: $nittany-navy;
+    color: var(--nittany-navy);
     display: flex;
-    font-size: _rem(1.6);
-    line-height: calc(4/3);
-    font-weight: 400;
-    text-decoration: none;
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--medium);
+    font-weight: var(--font-weight--regular);
+    line-height: var(--line-height--xsnug);
     padding: _rem(1.4) 0;
+    text-decoration-color: transparent;
+    text-decoration-style: solid;
+    transition: text-decoration-color var(--transition-duration--default) linear,
+                outline var(--transition-duration--default) linear;
     align-items: center;
 
     @include bp(m) {
-      font-size: _rem(1.8);
-      padding: _rem(1.8) 0;
-    }
-    &:focus {
-      outline: _rem(.2) solid $sky-blue;
-      color: $primary-blue;
+      font-size: var(--font-size--large);
+      padding: _rem(1.7) 0;
     }
 
     &:hover {
-      border-bottom: none;
-      color: $primary-blue;
-      text-decoration: underline;
+      text-decoration-color: var(--pa-link);
+      color: var(--pa-link);
+
+      .parallel-navigation-item__icon .sprite {
+        transform: scale(1.25);
+      }
     }
 
-    &:focus,
-    &:hover {
+    &:focus-visible {
+      text-decoration-color: var(--pa-link);
+      color: var(--pa-link);
+
+      .parallel-navigation-item__icon .sprite {
+        transform: scale(1.25);
+      }
+    }
+
+    // @TODO: Remove after polyfill is no longer needed.
+    &.focus-visible {
+      text-decoration-color: var(--pa-link);
+      color: var(--pa-link);
+
       .parallel-navigation-item__icon .sprite {
         transform: scale(1.25);
       }
     }
 
     &--active {
-      color: $primary-blue;
-      font-weight: 700;
+      color: var(--pa-link);
+      font-weight: var(--font-weight--bold);
     }
 
     &--related {
-      color: $primary-blue;
-      font-size: _rem(1.8);
-      padding: _rem(1.8) 0;
+      color: var(--pa-link);
+      font-size: var(--font-size--large);
+      padding: _rem(1.7) 0;
     }
 
     &--related#{&}--active {
-      color: $nittany-navy;
+      color: var(--nittany-navy);
+
+      &:hover {
+        text-decoration-color: var(--nittany-navy);
+      }
+
+      &:focus-visible {
+        text-decoration-color: var(--nittany-navy);
+      }
+
+      // @TODO: Remove after polyfill is no longer needed.
+      &.focus-visible {
+        text-decoration-color: var(--nittany-navy);
+      }
     }
   }
 
