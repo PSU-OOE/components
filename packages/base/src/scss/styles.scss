@@ -38,7 +38,8 @@ a,
 .link--default {
   color: var(--link-color--default);
   font-weight: var(--font-weight--semibold);
-  text-decoration: underline dotted;
+  text-decoration: underline;
+  text-decoration-style: dotted;
   text-decoration-color: inherit;
   text-decoration-thickness: _rem(0.1);
   outline: solid _rem(.2) transparent;
@@ -47,12 +48,14 @@ a,
   text-underline-offset: .2em;
 
   &:hover {
-    text-decoration: underline solid;
+    text-decoration: underline;
+    text-decoration-style: solid;
     text-decoration-thickness: _rem(.1);
   }
 
   &:focus-visible {
-    text-decoration: underline solid;
+    text-decoration: underline;
+    text-decoration-style: solid;
     text-decoration-thickness: _rem(.1);
     outline-color: var(--sky-blue);
     outline-offset: _rem(0.2);
@@ -60,7 +63,8 @@ a,
 
   // @TODO: Remove after polyfill is no longer needed.
   &.focus-visible {
-    text-decoration: underline solid;
+    text-decoration: underline;
+    text-decoration-style: solid;
     text-decoration-thickness: _rem(.1);
     text-decoration-color: var(--link-color--default);
     outline-color: var(--sky-blue);

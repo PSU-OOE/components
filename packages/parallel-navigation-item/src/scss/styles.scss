@@ -10,10 +10,12 @@
     font-weight: var(--font-weight--regular);
     line-height: var(--line-height--xsnug);
     padding: _rem(1.4) 0;
-    text-decoration: underline solid;
+    text-decoration: underline;
+    text-decoration-style: solid;
     text-decoration-color: transparent;
     text-decoration-thickness: _rem(.1);
-    transition: text-decoration-color var(--transition-duration--default) linear,
+    transition: color  var(--transition-duration--default) linear,
+                text-decoration var(--transition-duration--default) linear,
                 outline var(--transition-duration--default) linear;
     align-items: center;
 
