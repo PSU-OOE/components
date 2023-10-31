@@ -27,13 +27,8 @@ blockquote {
   &::after {
     content: '”';
     margin-left: 0.5rem;
-    position: static;
     line-height: 0;
     vertical-align: -.375em;
-
-    @include bp(s) {
-      vertical-align: -.36em;
-    }
   }
 
   & + figcaption {
