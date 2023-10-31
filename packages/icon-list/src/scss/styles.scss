@@ -31,7 +31,7 @@
   }
 
   &__icon {
-    color: $primary-blue;
+    color: var(--beaver-blue);
 
     .sprite {
       width: _rem(3);
