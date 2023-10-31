@@ -66,18 +66,22 @@
         font-size: _rem(4.8);
       }
     }
-
     &::before {
-      position: absolute;
       content: '“';
-      margin-left: _rem(-2.8);
-      margin-right: _rem(.5);
+      position: absolute;
+      text-indent: _rem(-2.8);
     }
 
     &::after {
       content: '”';
-      margin-left: _rem(.5);
-      vertical-align: top;
+      margin-left: 0.5rem;
+      position: static;
+      line-height: .2;
+      vertical-align: bottom;
+
+      @include bp(s) {
+        line-height: .25;
+      }
     }
   }
 
