@@ -1,16 +1,21 @@
-<nav class="breadcrumbs" aria-labelledby="{{ id }}">
-  <{{ heading_level}} class="visually-hidden" id="{{ id }}">{{ heading }}</{{ heading_level}}>
-  <ol class="breadcrumbs__list">
-    {% for crumb in breadcrumbs %}
-        {% if crumb.url %}
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ crumb.url }}">{{ crumb.text }}</a>
-          </li>
-        {% else %}
-          <li class="breadcrumbs__item">
-            {{ crumb.text }}
-          </li>
-        {% endif %}
-    {% endfor %}
-  </ol>
-</nav>
+{% apply spaceless %}
+  <nav class="breadcrumbs" aria-labelledby="{{ id }}">
+    <{{ heading_level}} class="visually-hidden" id="{{ id }}">{{ heading }}</{{ heading_level}}>
+    <ol class="breadcrumbs__list">
+      {% for crumb in breadcrumbs %}
+          {% if crumb.url %}
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="{{ crumb.url }}">{{ crumb.text }}</a>
+              {% if not loop.last %}
+                {% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
+              {% endif %}
+            </li>
+          {% else %}
+            <li class="breadcrumbs__item">
+              {{ crumb.text }}
+            </li>
+          {% endif %}
+      {% endfor %}
+    </ol>
+  </nav>
+{% endapply %}
