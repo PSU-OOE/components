@@ -10,10 +10,10 @@
     font-weight: var(--font-weight--regular);
     line-height: var(--line-height--xsnug);
     padding: _rem(1.4) 0;
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-color: transparent;
-    text-decoration-thickness: _rem(.1);
+//    text-decoration: underline;
+//    text-decoration-style: solid;
+//    text-decoration-color: transparent;
+//    text-decoration-thickness: _rem(.1);
     transition: color  var(--transition-duration--default) linear,
                 text-decoration var(--transition-duration--default) linear,
                 outline var(--transition-duration--default) linear;
@@ -25,7 +25,7 @@
     }
 
     &:hover {
-      text-decoration-color: var(--pa-link);
+//      text-decoration-color: var(--pa-link);
       color: var(--pa-link);
 
       .parallel-navigation-item__icon .sprite {
@@ -34,7 +34,7 @@
     }
 
     &:focus-visible {
-      text-decoration-color: var(--pa-link);
+//      text-decoration-color: var(--pa-link);
       color: var(--pa-link);
 
       .parallel-navigation-item__icon .sprite {
@@ -44,7 +44,7 @@
 
     // @TODO: Remove after polyfill is no longer needed.
     &.focus-visible {
-      text-decoration-color: var(--pa-link);
+//      text-decoration-color: var(--pa-link);
       color: var(--pa-link);
 
       .parallel-navigation-item__icon .sprite {
