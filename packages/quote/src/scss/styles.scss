@@ -14,12 +14,8 @@
 
   &__wrapper {
     display: flex;
-    gap: _rem(2);
+    gap: 2.5%;
     align-items: center;
-
-    @include bp(s) {
-      gap: _rem(3);
-    }
   }
 
   &__headshot {
