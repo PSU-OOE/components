@@ -66,6 +66,7 @@
         font-size: _rem(4.8);
       }
     }
+
     &::before {
       content: '“';
       position: absolute;
@@ -88,7 +89,7 @@
   &__caption {
     margin-left: _rem(2.8);
     font-family: var(--font-family--default);
-    font-weight: var(--font-weight--regular);
+    font-weight: var(--font-weight--semibold);
     font-size: var(--font-size--small);
     line-height: var(--line-height--snug);
   }
