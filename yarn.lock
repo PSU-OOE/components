@@ -1769,6 +1769,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/infographic@workspace:packages/infographic":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/infographic@workspace:packages/infographic"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/intro-form@^1.0, @psu-ooe/intro-form@workspace:packages/intro-form":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"

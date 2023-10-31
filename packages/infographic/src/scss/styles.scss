@@ -1,0 +1,83 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.infographic {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+
+  &__emphasis {
+    color: color-mix(in srgb, var(--nittany-navy) 50%, transparent);
+    display: inline-block;
+    font-family: var(--font-family--default);
+    font-weight: var(--font-weight--extrabold);
+    font-size: var(--font-size--6xlarge);
+    line-height: var(--line-height--nospace);
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @supports not (color: color-mix(in srgb, white, white)) {
+      color: rgba($nittany-navy, .5);
+    }
+  }
+
+  &__emphasis + &__stacked {
+    margin-left: _rem(1.5);
+  }
+
+  &__stacked {
+    display: inline-block;
+  }
+
+  &__preliminary {
+    display: block;
+    color: var(--slate);
+    font-family: var(--font-family--display);
+    font-size: var(--font-size--mlarge);
+    letter-spacing: var(--letter-spacing--medium);
+    font-weight: var(--font-weight--medium);
+    line-height: var(--line-height--3xsnug);
+  }
+
+  &__primary {
+    display: block;
+    font-size: var(--font-size--4xlarge);
+    font-weight: var(--font-weight--regular);
+    line-height: var(--line-height--snug);
+    letter-spacing: -.002em;
+  }
+
+  // Draw primary back to the left a bit...
+  &__preliminary + &__primary {
+    margin-left: _rem(-.25);
+  }
+
+  // Tighten up emphasis-less stacked variety.
+  &__stacked &__preliminary + &__primary {
+    margin-top: _rem(-.9);
+  }
+
+  // Tweak margins when emphasis + stacked is in use.
+  &__emphasis + &__stacked {
+    .infographic__preliminary {
+      margin-top: _rem(.8);
+
+      @include bp(s) {
+        margin-top: _rem(.9);
+      }
+
+      & + .infographic__primary {
+        margin-top: _rem(-.7);
+
+        @include bp(s) {
+          margin-top: _rem(-.9);
+        }
+      }
+    }
+
+    .infographic__primary {
+      margin-top: _rem(-.4);
+    }
+  }
+}
