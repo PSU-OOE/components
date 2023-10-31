@@ -11,20 +11,20 @@
   }
 
   &--light {
-    color: $white;
+    color: var(--white);
 
     &:hover,
     &:focus {
-      color: $white;
+      color: var(--white);
     }
   }
 
   &--dark {
-    color: $primary-blue;
+    color: var(--pa-link);
 
     &:hover,
     &:focus {
-      color: $primary-blue;
+      color: var(--pa-link);
     }
   }
 
