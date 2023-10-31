@@ -29,6 +29,10 @@ blockquote {
     margin-left: 0.5rem;
     line-height: 0;
     vertical-align: -.375em;
+
+    @include bp(s) {
+      vertical-align: -.385em;
+    }
   }
 
   & + figcaption {
