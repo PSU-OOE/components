@@ -1,0 +1,50 @@
+blockquote {
+  position: relative;
+  margin: 0 0 0 _rem(2.8);
+  font-family: var(--font-family--display);
+  font-weight: var(--font-weight--regular);
+  font-size: var(--font-size--large);
+  line-height: var(--line-height--snug);
+  letter-spacing: var(--letter-spacing--default);
+
+  &::before, &::after {
+    color: var(--sky-blue);
+    font-weight: var(--font-weight--bold);
+    line-height: var(--line-height--nospace);
+    font-size: _rem(4.6);
+
+    @include bp(s) {
+      font-size: _rem(4.8);
+    }
+  }
+
+  &::before {
+    content: '“';
+    position: absolute;
+    text-indent: _rem(-2.8);
+  }
+
+  &::after {
+    content: '”';
+    margin-left: 0.5rem;
+    position: static;
+    line-height: .2;
+    vertical-align: bottom;
+
+    @include bp(s) {
+      line-height: .25;
+    }
+  }
+
+  & + figcaption {
+    margin: var(--text-element-vertical-space--small) 0 0 _rem(2.8);
+    font-family: var(--font-family--default);
+    font-weight: var(--font-weight--semibold);
+    font-size: var(--font-size--small);
+    line-height: var(--line-height--snug);
+
+    @include bp(s) {
+      margin-top: var(--text-element-vertical-space--default);
+    }
+  }
+}

@@ -10,10 +10,6 @@
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: _rem(.2) solid $sky-blue;
-}
-
 // Type selectors.
 html {
   font-size: 62.5%;
@@ -46,16 +42,29 @@ a,
   text-decoration-color: var(--link-color--default);
   text-decoration-style: dotted;
   text-decoration-thickness: _rem(0.1);
+  outline: solid _rem(.2) transparent;
+  outline-offset: _rem(0.2);
+  transition: outline-color var(--transition-duration--default) linear;
+  text-underline-offset: .2em;
 
-  &:hover,
-  &:focus {
+  &:hover {
     text-decoration-style: solid;
   }
 
-  &:focus {
+  &:focus-visible {
+    text-decoration-style: solid;
+    outline-color: var(--sky-blue);
     outline-offset: _rem(0.2);
   }
 
+  &.focus-visible {
+    text-decoration-style: solid;
+    text-decoration-color: var(--link-color--default);
+    outline-color: var(--sky-blue);
+    outline-offset: _rem(0.2);
+  }
+
+  // @TODO: This probably isn't used...
   &.hidden {
     left: _rem(-99.9);
     position: absolute;
@@ -71,6 +80,14 @@ a,
 .link--color-reversed {
   color: var(--link-color--light);
   text-decoration-color: var(--link-color--light);
+
+  &:hover {
+    text-decoration-color: var(--link-color--light);
+  }
+
+  &:focus-visible {
+    text-decoration-color: var(--link-color--light);
+  }
 }
 
 img {
@@ -96,14 +113,6 @@ nav {
     margin: 0;
     padding: 0;
     text-align: left;
-
-    li {
-      &.expanded,
-      &.collapsed,
-      &.leaf {
-        padding: 0;
-      }
-    }
   }
 }
 
@@ -126,24 +135,8 @@ footer {
   overflow: hidden;
 }
 
-blockquote {
-  margin: 0;
-
-  p {
-    &::before {
-      content: open-quote;
-    }
-
-    &::after {
-      content: close-quote;
-    }
-    color: $beaver-blue;
-    font-size: _rem(1.4);
-    line-height: _rem(2.4);
-    text-indent:_rem(-.5);
-  }
-}
-
+@import 'blockquote';
+@import 'figure';
 @import "buttons";
 @import "fields";
 @import "tables";
