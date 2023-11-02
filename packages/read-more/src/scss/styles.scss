@@ -2,22 +2,11 @@
 
 .read-more {
   text-decoration: none;
-  border-bottom: _rem(.1) solid transparent;
-  color: var(--pa-link);
   font-size: var(--font-size--small);
   font-family: var(--font-family--default);
   line-height: var(--line-height--2xsnug);
   text-transform: uppercase;
   font-weight: var(--font-weight--bold);
-
-  &:hover,
-  &:focus {
-    border-color: var(--pa-link);
-  }
-
-  &:focus {
-    outline-offset: _rem(0.2);
-  }
 
   &--small {
     font-size: var(--font-size--3xsmall);
