@@ -2,11 +2,32 @@
 
 .read-more {
   text-decoration: none;
+  color: var(--pa-link);
   font-size: var(--font-size--small);
   font-family: var(--font-family--default);
   line-height: var(--line-height--2xsnug);
   text-transform: uppercase;
   font-weight: var(--font-weight--bold);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: _rem(0.1);
+
+  }
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+    &::after {
+      background: var(--pa-link);
+    }
+  }
+
 
   &--small {
     font-size: var(--font-size--3xsmall);
@@ -15,15 +36,16 @@
   &--reverse {
     color: var(--pa-link-light);
 
-    &:hover {
-      text-decoration: underline _rem(0.1) solid var(--pa-link-light);
-      text-underline-offset: 0.2em;
+    &:focus-visible {
+      outline-color: $white;
     }
 
-    &:focus {
-      outline-color: $white;
-      text-decoration: underline _rem(0.1) solid var(--pa-link-light);
-      text-underline-offset: 0.2em;
+    &:hover,
+    &:focus-visible {
+      text-decoration: none;
+      &::after {
+        background: var(--pa-link-light);
+      }
     }
   }
 
@@ -32,3 +54,4 @@
     vertical-align: -6%;
   }
 }
+
