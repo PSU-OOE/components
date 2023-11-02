@@ -1752,6 +1752,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/header@workspace:packages/header":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/header@workspace:packages/header"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/heading@^1.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
