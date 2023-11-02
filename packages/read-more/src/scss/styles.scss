@@ -2,32 +2,11 @@
 
 .read-more {
   text-decoration: none;
-  color: var(--pa-link);
   font-size: var(--font-size--small);
   font-family: var(--font-family--default);
   line-height: var(--line-height--2xsnug);
   text-transform: uppercase;
   font-weight: var(--font-weight--bold);
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: _rem(0.1);
-
-  }
-
-  &:hover,
-  &:focus-visible {
-    text-decoration: none;
-    &::after {
-      background: var(--pa-link);
-    }
-  }
-
 
   &--small {
     font-size: var(--font-size--3xsmall);
@@ -37,21 +16,13 @@
     color: var(--pa-link-light);
 
     &:focus-visible {
-      outline-color: $white;
-    }
-
-    &:hover,
-    &:focus-visible {
-      text-decoration: none;
-      &::after {
-        background: var(--pa-link-light);
-      }
+      outline-color: var(--white);
     }
   }
 
   .sprite {
     font-size: _rem(1);
     vertical-align: -6%;
+    margin-left: _rem(.4);
   }
 }
-
