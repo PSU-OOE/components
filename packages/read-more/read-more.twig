@@ -9,7 +9,8 @@
 {% endif %}
 
 {% apply spaceless %}
-<a class="{{ classes|join(' ') }}" href="{{ url }}">{{ title }}{% include '@atoms/sprite/sprite.twig' with {
-  name: "fas-chevron-right",
-} %}</a>
+<a class="{{ classes|join(' ') }}" href="{{ url }}">
+  <span class="read-more__text">{{ title }}</span>
+  <span class="read-more__chevron">{% include '@atoms/sprite/sprite.twig' with { name: "fas-chevron-right" } %}</span>
+  </a>
 {% endapply %}
