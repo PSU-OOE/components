@@ -73,19 +73,15 @@
   }
 }
 
-p {
+p, .paragraph--default {
   color: var(--text-color--default);
-  font-size: _rem(1.6);
-  line-height: _rem(3);
+  font-size: var(--font-size--default);
+  line-height: var(--line-height--default);
   margin: 0 0 var(--text-element-vertical-space--default);
 
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.paragraph--default {
-  margin-bottom: var(--text-element-vertical-space--default);
 }
 
 .text {
