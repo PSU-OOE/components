@@ -33,7 +33,7 @@
   }
 
   &__item {
-    border-bottom: _rem(.1) solid $slate-light;
+    border-bottom: _rem(.1) solid var(--medium-grey);
     display: inline-block;
     list-style-type: none;
     padding: _rem(.4) 0;
