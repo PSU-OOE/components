@@ -61,6 +61,49 @@ input {
   }
 }
 
+.js-form-type-checkbox {
+  font-size: _rem(1.4);
+  line-height: _rem(1.8);
+  margin-bottom: _rem(.25);
+  display: flex;
+
+  &:hover input[type="checkbox"] {
+    accent-color: var(--beaver-blue);
+
+    &:not(:checked) {
+      outline: _rem(.1) solid var(--sky-blue);
+      outline-offset: _rem(-.1);
+    }
+  }
+
+  input[type="checkbox"] {
+    margin: 0;
+    width: _rem(2.2);
+    height: _rem(2.2);
+    flex: 0 0 auto;
+    accent-color: var(--pa-link);
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: solid _rem(.2) var(--sky-blue);
+      outline-offset: _rem(.2);
+      accent-color: var(--beaver-blue);
+    }
+
+    &.focus-visible {
+      outline: solid _rem(.2) var(--sky-blue);
+      outline-offset: _rem(.2);
+      accent-color: var(--beaver-blue);
+    }
+  }
+
+  label {
+    cursor: pointer;
+    padding-left: _rem(1);
+    margin: auto 0;
+  }
+}
+
 fieldset {
   border: 0;
   padding: 0;
@@ -151,116 +194,6 @@ form {
     display: block;
     font-weight: 600;
     text-transform: uppercase;
-  }
-
-  .js-form-type-checkbox {
-    font-size: _rem(1.4);
-    line-height: _rem(1.8);
-    position: relative;
-    margin-bottom: _rem(.25);
-
-    input[type="checkbox"] {
-      opacity: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-
-      @include bp(m) {
-        z-index: -1;
-      }
-    }
-
-    label {
-      display: inline;
-      cursor: pointer;
-      transition: color .2s ease-in-out;
-      vertical-align: middle;
-      z-index: 1;
-
-      &:hover {
-        &::before {
-          background-color: $white;
-          color: $medium-grey;
-          border: _rem(.1) solid $medium-grey;
-        }
-
-        &::after {
-          line-height: _rem(2.2);
-          font-family: $font-awesome;
-          content: '\f00c';
-          position: absolute;
-          display: inline-block;
-          float: left;
-          text-align: center;
-          left: 0;
-          // adjusted for padding
-          top: 0;
-          height: _rem(2.2);
-          width: _rem(2.2);
-          background-color: $primary-blue;
-          color: $white;
-          border: _rem(.1) solid $medium-grey;
-          border-radius: _rem(.3);
-        }
-      }
-
-      &::before {
-        content: "";
-        display: block;
-        flex: 0 0 _rem(2.2);
-        margin-right: _rem(1.2);
-        height: _rem(2.2);
-        width: _rem(2.2);
-        border: _rem(.1) solid $medium-grey;
-        border-radius: _rem(.3);
-      }
-
-      &::after {
-        line-height: _rem(2.2);
-        font-family: $font-awesome;
-        content: '\f00c';
-        position: absolute;
-        display: block;
-        text-align: center;
-        left: 0;
-        // adjusted for padding
-        top: 0;
-        height: _rem(2.2);
-        width: _rem(2.2);
-        background-color: $primary-blue;
-        color: $white;
-        border: _rem(.1) solid $medium-grey;
-        border-radius: _rem(.3);
-      }
-    }
-
-    /*Hide the checkmark by default*/
-    input[type="checkbox"] + label::after {
-      content: none;
-    }
-
-    /*Unhide the checkmark on the checked state*/
-    input[type="checkbox"]:checked + label::after {
-      font-family: $font-awesome;
-      content: '\f00c';
-    }
-
-    input[type="checkbox"]:checked + label:hover::after {
-      color: $white;
-      background-color: $primary-blue;
-    }
-
-    input[type="checkbox"]:hover + label::before {
-      border: _rem(.1) solid $primary-blue;
-    }
-
-    input[type="checkbox"]:focus + label::before {
-      outline: _rem(.2) solid $sky-blue;
-      outline-offset: _rem(.2);
-    }
   }
 
   .form-item-middlename {
