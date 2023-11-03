@@ -84,6 +84,11 @@ input {
     accent-color: var(--pa-link);
     cursor: pointer;
 
+    &.error {
+      outline: _rem(.1) solid var(--error-red);
+      outline-offset: _rem(-.1);
+    }
+
     &:focus-visible {
       outline: solid _rem(.2) var(--sky-blue);
       outline-offset: _rem(.2);
@@ -94,11 +99,6 @@ input {
       outline: solid _rem(.2) var(--sky-blue);
       outline-offset: _rem(.2);
       accent-color: var(--beaver-blue);
-    }
-
-    &.error {
-      outline: _rem(.1) solid var(--error-red);
-      outline-offset: _rem(-.1);
     }
   }
 
