@@ -61,276 +61,65 @@ input {
   }
 }
 
-.js-form-type-checkbox {
-  font-size: _rem(1.4);
-  line-height: _rem(1.8);
-  margin-bottom: _rem(.25);
-  display: flex;
-
-  &:hover input[type="checkbox"] {
-    accent-color: var(--beaver-blue);
-
-    &:not(:checked) {
-      outline: _rem(.1) solid var(--sky-blue);
-      outline-offset: _rem(-.1);
-    }
-  }
-
-  input[type="checkbox"] {
-    margin: 0;
-    width: _rem(2.2);
-    height: _rem(2.2);
-    flex: 0 0 auto;
-    accent-color: var(--pa-link);
-    cursor: pointer;
-
-    &.error {
-      outline: _rem(.1) solid var(--error-red);
-      outline-offset: _rem(-.1);
-    }
-
-    &:focus-visible {
-      outline: solid _rem(.2) var(--sky-blue);
-      outline-offset: _rem(.2);
-      accent-color: var(--beaver-blue);
-    }
-
-    &.focus-visible {
-      outline: solid _rem(.2) var(--sky-blue);
-      outline-offset: _rem(.2);
-      accent-color: var(--beaver-blue);
-    }
-  }
-
-  label {
-    cursor: pointer;
-    padding-left: _rem(1);
-    margin: auto 0;
-  }
-}
-
 fieldset {
   border: 0;
   padding: 0;
   margin: 0;
 }
 
-.fieldset-legend {
-  display: block;
-  margin-bottom: _rem(0.5);
-}
-
-// @TODO: These styles need some serious TLC.
-form {
-  .js-form-type-processed-text {
-    margin-top: _rem(1);
-
-    p {
-      margin-bottom: _rem(1);
-    }
-  }
-
-  .js-form-type-datelist {
-    margin-top: _rem(2);
-
-    label {
-      display: block;
-      margin-bottom: _rem(0.5);
-      font-family: $font-family-default;
-      font-size: _rem(1.4);
-      font-weight: 600;
-    }
-
-    .container-inline {
-      display: flex;
-      justify-content: space-between;
-
-      .js-form-type-select {
-        margin-top: _rem(1);
-        width: calc(33.33% - #{_rem(1)});
-
-        @include bp(s) {
-          width: calc(33.33% - #{_rem(2)});
-          margin-top: _rem(0.5);
-        }
-      }
-    }
-  }
-
-  .js-form-type-textfield {
-    position: relative;
-
-    .ajax-progress-throbber {
-      position: absolute;
-      right: _rem(1.5);
-      top: 67%;
-      transform: translateY(-50%);
-    }
-
-    & input.error + .ajax-progress-throbber {
-      top: 55%;
-    }
-  }
-
-  .fieldset-legend {
-    font-size: _rem(1.4);
-    line-height: _rem(1.8);
-    color: $beaver-blue;
-    display: block;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-
-  .form-item-middlename {
-    input {
-      max-width: _rem(6);
-    }
-  }
-
-  select {
-    font-size: _rem(1.6);
-    background: $white;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-    background-repeat: no-repeat;
-    background-position: right 1.5rem center;
-    background-size: 1em;
-    width: 100%;
-    border: _rem(.1) solid $medium-grey;
-    border-radius: 0;
-    padding: _rem(1.6) _rem(3.5) _rem(1.6) _rem(1);
-  }
-
-  button,
-  input[type="button"],
-  input[type="submit"],
-  input[type="reset"] {
-    font-size: _rem(1.5);
-    line-height: _rem(1.5);
-    display: inline-block;
-    text-align: center;
-    padding: _rem(1.5) _rem(3);
-    background-color: $primary-blue;
-    border-radius: _rem(.2);
-    color: $white;
-    transition: background-color .2s ease-in-out, color .2s ease-in-out;
-    position: relative;
-    border: none;
-    cursor: pointer;
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $nittany-navy;
-      text-decoration: none;
-      color: $white;
-    }
-
-    &:focus {
-      outline-offset: _rem(-.5);
-    }
-
-    @include bp(m) {
-      padding: _rem(1.7) _rem(3.125);
-    }
-
-    &:hover {
-      background-color: $nittany-navy;
-      color: $white;
-    }
-
-    &:focus {
-      background-color: $nittany-navy;
-      color: $white;
-    }
-  }
-
-  // form required message
-  .required-text,
-  .rfi-element-required-text {
-    margin-top: 0 !important;
-    margin-bottom: _rem(3);
-    font-size: _rem(1.2);
-    font-style: italic;
-
-    p {
-      margin: 0;
-      font-size: inherit !important;
-      font-style: inherit;
-      line-height: 100%;
-    }
-
-    span {
-      font-size: _rem(1.4);
-      font-weight: 700;
-      color: $primary-blue;
-    }
-  }
-
-  .required-text {
-    span {
-      line-height: _rem(1.61);
-    }
-  }
-}
-
-/***********************/
-/* Form Error Message */
-/*********************/
-
-[data-drupal-messages] {
-  width: 100%;
-}
-
-[aria-label="Error message"] {
-  width: 100%;
-  margin-bottom: _rem(2);
-  padding: _rem(2);
-  padding-left: _rem(0.5);
-  border: _rem(.1) solid $error-red;
-  background-image: url("#{$img-path}/error-icon.png");
-  background-size: _rem(2.4);
-  background-position: _rem(2) center;
+select {
+  font-size: var(--font-size--msmall);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
-
-  [role="alert"] {
-    padding-left: _rem(5.5);
-    font-size: _rem(1.4);
-
-    ul {
-      margin: 0;
-      padding: 0;
-      padding-left: _rem(1.5);
-      list-style: none;
-
-      li {
-        position: relative;
-        margin: 0;
-        margin-bottom: _rem(0.5);
-        padding: 0;
-
-        &::before {
-          content: "";
-          position: absolute;
-          width: _rem(0.6);
-          height: _rem(0.6);
-          top: calc(50% - #{_rem(0.3)});
-          right: calc(100% + #{_rem(0.75)});
-          border-radius: 50%;
-          background-color: $font-color-default;
-        }
-      }
-    }
-  }
+  background-position: right 1.5rem center;
+  background-size: 1em;
+  width: 100%;
+  border: _rem(.1) solid var(--medium-grey);
+  border-radius: 0;
+  padding: _rem(1.6) _rem(3.5) _rem(1.6) _rem(1);
 }
 
 button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  font-size: var(--font-size--small);
+  line-height: var(--line-height--nospace);
+  display: inline-block;
+  text-align: center;
+  padding: _rem(1.5) _rem(3);
+  background-color: var(--beaver-blue);
+  border-radius: _rem(.2);
+  color: var(--white);
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  position: relative;
+  border: none;
+  cursor: pointer;
+
+  @include bp(m) {
+    padding: _rem(1.7) _rem(3.125);
+  }
+
+  &:hover {
+    background-color: var(--nittany-navy);
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    background-color: var(--nittany-navy);
+    text-decoration: none;
+    outline: _rem(.2) solid var(--sky-blue);
+    outline-offset: _rem(-.5);
+  }
+
+  &.focus-visible {
+    background-color: var(--nittany-navy);
+    text-decoration: none;
+    outline: _rem(.2) solid var(--sky-blue);
+    outline-offset: _rem(-.5);
+  }
 }
