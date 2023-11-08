@@ -36,7 +36,11 @@ form {
       border: _rem(.1) solid;
       border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
 
-      &:focus {
+      &:focus-visible {
+        border-color: var(--sky-blue);
+      }
+
+      &.focus-visible {
         border-color: var(--sky-blue);
       }
     }
@@ -58,7 +62,11 @@ form {
     border: _rem(.1) solid;
     border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
 
-    &:focus {
+    &:focus-visible {
+      border-color: var(--sky-blue);
+    }
+
+    &.focus-visible {
       border-color: var(--sky-blue);
     }
   }
@@ -91,7 +99,11 @@ form {
     border-radius: 0;
     padding: _rem(1.6) _rem(3.5) _rem(1.6) _rem(1);
 
-    &:focus {
+    &:focus-visible {
+      border-color: var(--sky-blue);
+    }
+
+    &.focus-visible {
       border-color: var(--sky-blue);
     }
   }
