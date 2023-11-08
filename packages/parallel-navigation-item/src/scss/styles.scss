@@ -11,9 +11,13 @@
     line-height: var(--line-height--xsnug);
     padding: _rem(1.4) 0;
     text-decoration: underline;
+    -webkit-text-decoration: underline;
     text-decoration-style: solid;
+    -webkit-text-decoration-style: solid;
     text-decoration-color: transparent;
+    -webkit-text-decoration-color: transparent;
     text-decoration-thickness: _rem(.1);
+    -webkit-text-decoration-thickness: _rem(.1);
     transition: color  var(--transition-duration--default) linear,
                 text-decoration-color var(--transition-duration--default) linear,
                 outline var(--transition-duration--default) linear;
@@ -25,7 +29,8 @@
     }
 
     &:hover {
-//      text-decoration-color: var(--pa-link);
+      text-decoration-color: var(--pa-link);
+      -webkit-text-decoration-color: var(--pa-link);
       color: var(--pa-link);
 
       .parallel-navigation-item__icon .sprite {
@@ -34,7 +39,8 @@
     }
 
     &:focus-visible {
-//      text-decoration-color: var(--pa-link);
+      text-decoration-color: var(--pa-link);
+      -webkit-text-decoration-color: var(--pa-link);
       color: var(--pa-link);
 
       .parallel-navigation-item__icon .sprite {
@@ -44,7 +50,8 @@
 
     // @TODO: Remove after polyfill is no longer needed.
     &.focus-visible {
-//      text-decoration-color: var(--pa-link);
+      text-decoration-color: var(--pa-link);
+      -webkit-text-decoration-color: var(--pa-link);
       color: var(--pa-link);
 
       .parallel-navigation-item__icon .sprite {
@@ -68,15 +75,18 @@
 
       &:hover {
         text-decoration-color: var(--nittany-navy);
+        -webkit-text-decoration-color: var(--nittany-navy);
       }
 
       &:focus-visible {
         text-decoration-color: var(--nittany-navy);
+        -webkit-text-decoration-color: var(--nittany-navy);
       }
 
       // @TODO: Remove after polyfill is no longer needed.
       &.focus-visible {
         text-decoration-color: var(--nittany-navy);
+        -webkit-text-decoration-color: var(--nittany-navy);
       }
     }
   }
