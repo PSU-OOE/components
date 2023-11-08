@@ -37,11 +37,11 @@ form {
       border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
 
       &:focus-visible {
-        border-color: var(--sky-blue);
+        outline-color: var(--sky-blue);
       }
 
       &.focus-visible {
-        border-color: var(--sky-blue);
+        outline-color: var(--sky-blue);
       }
     }
   }
@@ -63,11 +63,11 @@ form {
     border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
 
     &:focus-visible {
-      border-color: var(--sky-blue);
+      outline-color: var(--sky-blue);
     }
 
     &.focus-visible {
-      border-color: var(--sky-blue);
+      outline-color: var(--sky-blue);
     }
   }
 
@@ -100,11 +100,11 @@ form {
     padding: _rem(1.6) _rem(3.5) _rem(1.6) _rem(1);
 
     &:focus-visible {
-      border-color: var(--sky-blue);
+      outline-color: var(--sky-blue);
     }
 
     &.focus-visible {
-      border-color: var(--sky-blue);
+      outline-color: var(--sky-blue);
     }
   }
 
