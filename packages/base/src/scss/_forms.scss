@@ -2,17 +2,17 @@
 input {
   display: block;
   padding: _rem(1.25);
-  font-family: $source-sans-pro;
-  font-size: _rem(1.6);
-  line-height: 145%;
-  color: $font-color-default;
+  font-family: var(--font-family--text);
+  font-size: var(--font-size--msmall);
+  line-height: var(--line-height--snug);
+  color: var(--text-color--default);
   transition: border .25s linear;
 }
 
 input[type="submit"],
 button {
-  font-family: $open-sans;
-  font-weight: 600;
+  font-family: var(--font-family--text);
+  font-weight: var(--font-weight--semibold);
 }
 
 input:not([type="submit"]) {
@@ -33,7 +33,7 @@ input:not([disabled]) {
   &[type="url"],
   &[type="week"] {
     border: _rem(.1) solid;
-    border-color: $limestone $medium-grey $medium-grey $medium-grey;
+    border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
   }
 }
 
@@ -42,22 +42,22 @@ textarea {
   width: 100%;
   padding: _rem(1.25);
   border-radius: 0;
-  font-family: $source-sans-pro;
-  font-size: _rem(1.6);
-  line-height: 145%;
-  color: $font-color-default;
+  font-family: var(--font-family--text);
+  font-size: var(--font-size--msmall);
+  line-height: var(--line-height--snug);
+  color: var(--text-color--default);
   height: _rem(10);
 }
 
 textarea:not([disabled]) {
   border: _rem(.1) solid;
-  border-color: $limestone $medium-grey $medium-grey $medium-grey;
+  border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
 }
 
 textarea,
 input {
   &.error:not([disabled]) {
-    border-color: $error-red;
+    border-color: var(--error-red);
   }
 }
 
@@ -118,12 +118,6 @@ fieldset {
 .fieldset-legend {
   display: block;
   margin-bottom: _rem(0.5);
-
-  &.form-required::after {
-    content: "*";
-    margin-left: _rem(0.25);
-    color: $primary-blue;
-  }
 }
 
 // @TODO: These styles need some serious TLC.
@@ -145,14 +139,6 @@ form {
       font-family: $font-family-default;
       font-size: _rem(1.4);
       font-weight: 600;
-
-      &.form-required {
-        &::after {
-          content: "*";
-          margin-left: _rem(0.25);
-          color: $primary-blue;
-        }
-      }
     }
 
     .container-inline {
@@ -179,12 +165,6 @@ form {
       right: _rem(1.5);
       top: 67%;
       transform: translateY(-50%);
-
-      .fas {
-        &.fa-circle-notch {
-          color: #666;
-        }
-      }
     }
 
     & input.error + .ajax-progress-throbber {
@@ -293,32 +273,6 @@ form {
   .required-text {
     span {
       line-height: _rem(1.61);
-    }
-  }
-
-
-  .ajax-progress-throbber {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    top: _rem(-.2);
-    .throbber {
-      display: inline-block;
-      padding: 0;
-      background: none;
-      .fas {
-        position: absolute;
-        right: 0;
-        top: 0;
-        &.fa-circle-notch {
-          color: #666;
-        }
-        &.fa-spinner-third {
-          color: $white;
-          opacity: .5;
-        }
-      }
     }
   }
 }
