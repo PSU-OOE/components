@@ -35,6 +35,10 @@ form {
     &[type="week"] {
       border: _rem(.1) solid;
       border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
+
+      &:focus {
+        border-color: var(--sky-blue);
+      }
     }
   }
 
@@ -53,6 +57,10 @@ form {
   textarea:not([disabled]) {
     border: _rem(.1) solid;
     border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
+
+    &:focus {
+      border-color: var(--sky-blue);
+    }
   }
 
   textarea,
@@ -82,6 +90,10 @@ form {
     border: _rem(.1) solid var(--medium-grey);
     border-radius: 0;
     padding: _rem(1.6) _rem(3.5) _rem(1.6) _rem(1);
+
+    &:focus {
+      border-color: var(--sky-blue);
+    }
   }
 
   button,
