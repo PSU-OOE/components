@@ -62,12 +62,30 @@
     &--active {
       color: var(--pa-link);
       font-weight: var(--font-weight--bold);
+
+      &:hover {
+        & > .parallel-navigation-item__title {
+          // outline: 3px red solid;
+          text-decoration: underline;
+          text-decoration-line: dotted;
+          text-decoration-color: red;
+        }
+      }
     }
 
     &--related {
       color: var(--pa-link);
       font-size: var(--font-size--large);
       padding: _rem(1.7) 0;
+
+      &:hover {
+        & > .parallel-navigation-item__title {
+          // outline: 3px purple solid;
+          text-decoration: underline;
+          text-decoration-line: dotted;
+          text-decoration-color: purple;
+        }
+      }
     }
 
     &--related#{&}--active {
@@ -76,6 +94,12 @@
       &:hover {
         text-decoration-color: var(--nittany-navy);
         -webkit-text-decoration-color: var(--nittany-navy);
+        & > .parallel-navigation-item__title {
+          // outline: 3px green solid;
+          text-decoration: underline;
+          text-decoration-line: dotted;
+          text-decoration-color: green;
+        }
       }
 
       &:focus-visible {
