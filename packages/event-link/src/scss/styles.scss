@@ -3,6 +3,7 @@
 
 .event-link {
   display: flex;
+  text-decoration: none;
 
   // @TODO: Remove when :focus-visible is globally adopted.
   &:focus {
@@ -11,6 +12,8 @@
 
   // @TODO: Consolidate states after safari polyfill is no longer needed.
   &:hover {
+    text-decoration: none;
+
     .event-link__title {
       color: $primary-blue;
       text-decoration: underline;
@@ -24,6 +27,7 @@
   }
 
   &:focus-visible {
+    text-decoration: none;
     outline: _rem(.2) solid $sky-blue;
     outline-offset: _rem(.5);
 
@@ -202,6 +206,7 @@
 .event-link.focus-visible {
   outline: _rem(.2) solid $sky-blue;
   outline-offset: _rem(.5);
+  text-decoration: none;
 
   .event-link__title {
     color: $primary-blue;
