@@ -26,10 +26,10 @@ html {
 
 body {
   margin: 0;
-  font-size: _rem(1.6);
+  font-size: var(--font-size--default);
   font-family: var(--font-family--default);
   color: var(--text-color--default);
-  background: $white;
+  background: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
