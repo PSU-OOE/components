@@ -149,6 +149,12 @@ h3, .heading--medium,
 h4, .heading--small,
 h5, .heading--xsmall,
 h6, .heading--2xsmall {
+
+  // Forcibly remove any overlines that might be present.
+  &::before {
+    display: none;
+  }
+
   &.heading--reversed {
     --headings-color: color-mix(in srgb, var(--text-color--light) 90%, transparent) !important;
 

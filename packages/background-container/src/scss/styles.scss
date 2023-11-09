@@ -56,6 +56,9 @@
     z-index: -1;
   }
 
+  @import "hub-geometric-left";
+  @import "hub-geometric-right";
+
 	@import "shield-left";
 	@import "shield-right";
 	@import "shield-bottomright";
