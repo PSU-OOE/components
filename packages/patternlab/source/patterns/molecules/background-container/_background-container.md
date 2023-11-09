@@ -17,6 +17,8 @@
 ## Background images
 | Image                      | Description                                                                                 |
 |----------------------------|---------------------------------------------------------------------------------------------|
+| hub-geometric:left         | Hub geometric positioned to the left side of the container.                                 |
+| hub-geometric:right        | Hub geometric positioned to the right side of the container.                                |
 | shield:left                | Community shield positioned to the left side of the container.                              |
 | shield:right               | Community shield positioned to the right side of the container.                             |
 | shield:bottomright         | Community shield positioned to the right-bottom corner of the container                     |
