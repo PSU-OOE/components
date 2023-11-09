@@ -152,7 +152,7 @@ h6, .heading--2xsmall {
 
   // Forcibly remove any overlines that might be present.
   &::before {
-    display: none;
+    display: none !important;
   }
 
   &.heading--reversed {
