@@ -39,13 +39,9 @@ a,
   color: var(--link-color--default);
   font-weight: var(--font-weight--semibold);
   text-decoration: underline;
-  -webkit-text-decoration: underline;
   text-decoration-style: dotted;
-  -webkit-text-decoration-style: dotted;
   text-decoration-color: inherit;
-  -webkit-text-decoration-color: inherit;
   text-decoration-thickness: _rem(0.1);
-  -webkit-text-decoration-thickness: _rem(0.1);
   outline: solid _rem(.2) transparent;
   outline-offset: _rem(0.2);
   transition: outline-color var(--transition-duration--default) linear;
@@ -53,20 +49,14 @@ a,
 
   &:hover {
     text-decoration: underline;
-    -webkit-text-decoration: underline;
     text-decoration-style: solid;
-    -webkit-text-decoration-style: solid;
     text-decoration-thickness: _rem(.1);
-    -webkit-text-decoration-thickness: _rem(.1);
   }
 
   &:focus-visible {
     text-decoration: underline;
-    -webkit-text-decoration: underline;
     text-decoration-style: solid;
-    -webkit-text-decoration-style: solid;
     text-decoration-thickness: _rem(.1);
-    -webkit-text-decoration-thickness: _rem(.1);
     outline-color: var(--sky-blue);
     outline-offset: _rem(0.2);
   }
@@ -74,13 +64,9 @@ a,
   // @TODO: Remove after polyfill is no longer needed.
   &.focus-visible {
     text-decoration: underline;
-    -webkit-text-decoration: underline;
     text-decoration-style: solid;
-    -webkit-text-decoration-style: solid;
     text-decoration-thickness: _rem(.1);
-    -webkit-text-decoration-thickness: _rem(.1);
     text-decoration-color: var(--link-color--default);
-    -webkit-text-decoration-color: var(--link-color--default);
     outline-color: var(--sky-blue);
     outline-offset: _rem(0.2);
   }
@@ -101,16 +87,13 @@ a,
 .link--color-reversed {
   color: var(--link-color--light);
   text-decoration-color: var(--link-color--light);
-  -webkit-text-decoration-color: var(--link-color--light);
 
   &:hover {
     text-decoration-color: var(--link-color--light);
-    -webkit-text-decoration-color: var(--link-color--light);
   }
 
   &:focus-visible {
     text-decoration-color: var(--link-color--light);
-    -webkit-text-decoration-color: var(--link-color--light);
   }
 }
 
