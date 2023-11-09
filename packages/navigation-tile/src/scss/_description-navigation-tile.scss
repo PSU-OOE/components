@@ -4,6 +4,7 @@
   background-color: var(--white);
   box-shadow: _rem(.1) _rem(.2) _rem(.3) color-mix(in srgb, var(--nittany-navy) 25%, transparent);
   border-top: _rem(.2) solid var(--sky-blue);
+  height: 100%;
   padding: _rem(2);
   position: relative;
   transition: background-color var(--transition-duration--default) linear,

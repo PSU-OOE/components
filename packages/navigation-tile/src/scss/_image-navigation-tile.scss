@@ -14,6 +14,7 @@
 
   &:hover,
   &:focus {
+    text-decoration: none;
     .image-navigation-tile__overlay::after {
        opacity: 1;
     }
@@ -24,12 +25,14 @@
   }
 
   &:focus-visible {
+    text-decoration: none;
     outline-color: var(--sky-blue);
     outline-offset: _rem(.2);
   }
 
   // @TODO: Remove after polyfill is no longer needed.
   &.focus-visible {
+    text-decoration: none;
     outline-color: var(--sky-blue);
     outline-offset: _rem(.2);
   }
