@@ -39,6 +39,7 @@
   }
 
   &:hover {
+    text-decoration: none;
     background-color: var(--nittany-navy);
     border-bottom: none;
     color: var(--text-color--light);
@@ -46,6 +47,7 @@
   }
 
   &:focus-visible {
+    text-decoration: none;
     outline: _rem(.2) solid var(--sky-blue);
     outline-offset: _rem(-.5);
     background-color: var(--nittany-navy);
@@ -55,6 +57,7 @@
 
   // @TODO: Remove safari polyfill.
   &.focus-visible {
+    text-decoration: none;
     outline: _rem(.2) solid var(--sky-blue);
     outline-offset: _rem(-.5);
     background-color: var(--nittany-navy);
