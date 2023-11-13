@@ -11,14 +11,6 @@
     //noinspection CssUnknownProperty
     @supports (container-type: inline-size ) {
       display: initial;
-
-      //noinspection CssInvalidAtRule
-      @container (min-width: 950px) {
-        width: _rem(67);
-        left: calc(50% + _rem(39.5));
-        right: initial;
-        bottom: _rem(-58);
-      }
     }
   }
 
@@ -37,6 +29,20 @@
     //noinspection CssInvalidAtRule
     @container (min-width: 950px) {
       left: calc(50% + _rem(31.9));
+    }
+  }
+}
+
+&.bg--hub-geometric-bottomright:not(.bg--narrow) > .bg__sprites > .bg__sprite .sprite {
+  //noinspection CssUnknownProperty
+  @supports (container-type: inline-size ) {
+
+    //noinspection CssInvalidAtRule
+    @container (min-width: 1024px) {
+      width: _rem(67);
+      left: calc(50% + _rem(39.5));
+      right: initial;
+      bottom: _rem(-58);
     }
   }
 }
