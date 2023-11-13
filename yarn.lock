@@ -1768,6 +1768,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/highlighted-text@workspace:packages/highlighted-text":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/highlighted-text@workspace:packages/highlighted-text"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/icon-list@^1.0, @psu-ooe/icon-list@workspace:packages/icon-list":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/icon-list@workspace:packages/icon-list"
