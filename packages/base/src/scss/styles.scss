@@ -37,7 +37,7 @@ body {
 a,
 .link--default {
   color: var(--link-color--default);
-  font-weight: var(--font-weight--semibold);
+  font-weight: inherit;
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: inherit;
