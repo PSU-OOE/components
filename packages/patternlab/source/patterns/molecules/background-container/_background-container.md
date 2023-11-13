@@ -11,7 +11,6 @@
 | Color        | Description                        |
 |--------------|------------------------------------|
  | light-grey   | Displays a light-grey background   |
- | primary-blue | Displays a primary-blue background |
  | beaver-blue  | Displays a beaver-blue background  |
 
 ## Background images
