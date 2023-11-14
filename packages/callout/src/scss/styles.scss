@@ -33,7 +33,11 @@
 
   // @TODO: What's this supposed to be?
   &--blue-gradient {
-    background: linear-gradient(to right, $true-blue, $primary-blue);
+    background: linear-gradient(to right, var(--beaver-blue), var(--nittany-navy));
+  }
+
+  &--blue {
+    background: var(--beaver-blue);
   }
 
   &--narrow {

@@ -14,6 +14,7 @@ title: Callouts
 |---------------|-----------------------------------------------------------|
 | light-grey    | If specified, renders a light grey background variant.    |
 | blue-gradient | If specified, renders a blue gradient background variant. |
+ | blue          | If specified, renders a blue background variant.          |
 
 ## Width modifiers
 | Modifier | Description                                                  |
