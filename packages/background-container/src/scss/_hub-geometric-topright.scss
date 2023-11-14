@@ -28,6 +28,8 @@
 
     //noinspection CssInvalidAtRule
     @container (min-width: 950px) {
+      width: _rem(67);
+      top: _rem(-43.5);
       left: calc(50% + _rem(31.9));
       right: initial;
     }
