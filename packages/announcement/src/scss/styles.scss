@@ -141,7 +141,7 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: var(--nittany-navy);
+      background-color: var(--beaver-blue);
       color: var(--white);
     }
   }
@@ -159,7 +159,7 @@
           border-bottom: _rem(0.1) solid var(--medium-grey);
         }
         &-icon {
-          background: var(--nittany-navy);
+          background: var(--beaver-blue);
           color: var(--white);
         }
       }
@@ -170,7 +170,7 @@
       }
 
       &__icon {
-        background: var(--nittany-navy);
+        background: var(--beaver-blue);
         .sprite {
           color: var(--white);
         }
@@ -191,7 +191,7 @@
         }
         &-icon {
           background: var(--white);
-          color: var(--nittany-navy);
+          color: var(--beaver-blue);
         }
       }
 
@@ -205,7 +205,7 @@
         background: var(--white);
 
         .sprite {
-          color: var(--nittany-navy);
+          color: var(--beaver-blue);
         }
       }
     }
