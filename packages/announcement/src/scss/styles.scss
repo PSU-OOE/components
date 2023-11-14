@@ -38,7 +38,7 @@
     text-align: center;
     .sprite {
       margin: 0 auto;
-      font-size: _rem(2.5);
+      font-size: var(--font-size--2xlarge);
     }
     @include bp(xs) {
       float: none;
@@ -50,12 +50,12 @@
         font-size: _rem(3.6);
       }
     }
-     @include bp(m) {
-        width: _rem(7.4);
-        height: _rem(7.4);
-        .sprite {
-          font-size: _rem(4);
-        }
+    @include bp(m) {
+      width: _rem(7.4);
+      height: _rem(7.4);
+      .sprite {
+        font-size: var(--font-size--4xlarge);
+      }
     }
 
   }
@@ -64,24 +64,13 @@
   &__content {
     margin: auto 0;
     flex: 1;
-    
-    a {
-      border-bottom-width: _rem(0.1);
-      border-bottom-style: dotted;
-      transition: border-bottom-color .2s;
 
-      &:hover,
-      &:focus,
-      &:active {
-        border-bottom-style: solid;
-      }
-    }
     p {
       line-height: _rem(2.4);
 
       @include bp(s) {
-        font-size: _rem(1.7);
-        line-height: _rem(2.5);
+        font-size: var(--font-size--mlarge);
+        line-height: var(--line-height--snug);
       }
     }
   }
@@ -92,18 +81,20 @@
     background-color: transparent;
     border: none;
     outline-offset: _rem(-0.2);
+    color: inherit;
+
   }
 
   // Expand button for the announcement.
   &__expand {
     display: flex;
-    font-size: _rem(1.8);
+    font-size: var(--font-size--large);
     height: _rem(4.5);
     justify-content: center;
-    line-height: _rem(2.5);
+    line-height: var(--line-height--2xsnug);
     padding: 0;
     width: 100%;
-    transition: background-color .2s, border .2s, color .2s;
+    transition: background-color var(--transition-duration--medium), border var(--transition-duration--medium), color var(--transition-duration--medium);
     cursor: pointer;
     border-bottom: 0.1rem solid transparent;
     & > * {
@@ -139,7 +130,7 @@
     line-height: .7;
     margin: 0;
     padding: 0;
-    transition: background-color .2s, color .2s;
+    transition: background-color var(--transition-duration--medium), color var(--transition-duration--medium);
     cursor: pointer;
     position: absolute;
     right: _rem(1.4);
@@ -150,122 +141,105 @@
     &:hover,
     &:active,
     &:focus {
-      background-color: $primary-blue;
-      color: $white;
+      background-color: var(--nittany-navy);
+      color: var(--white);
     }
   }
 
   &--notice {
-    background-color: $medium-grey;
-    color: $nittany-navy;
+    background-color: var(--medium-grey);
+    color: var(--nittany-navy);
 
     .announcement {
       &__expand {
         &:active,
         &:focus,
         &:hover {
-          background-color: $white;
-          border-bottom: _rem(0.1) solid $medium-grey;
+          background-color: var(--white);
+          border-bottom: _rem(0.1) solid var(--medium-grey);
         }
         &-icon {
-          background: $primary-blue;
-          color: $white;
+          background: var(--nittany-navy);
+          color: var(--white);
         }
       }
       &__content {
         a, p {
-          color: $beaver-blue;
-        }
-
-        a {
-          border-bottom-color: $beaver-blue;
+          color: var(--beaver-blue);
         }
       }
 
       &__icon {
-        background: $primary-blue;
+        background: var(--nittany-navy);
         .sprite {
-          color: $white;
+          color: var(--white);
         }
       }
     }
   }
 
   &--warning {
-    background-color: $keystone;
-    color: $nittany-navy;
+    background-color: var(--keystone);
+    color: var(--nittany-navy);
 
     .announcement {
       &__expand {
         &:active,
         &:focus,
         &:hover {
-          background-color: $invent-orange-light;
+          background-color: var(--invent-orange-light);
         }
         &-icon {
-          background: $white;
-          color: $primary-blue;
+          background: var(--white);
+          color: var(--nittany-navy);
         }
       }
 
       &__content {
         a, p {
-          color: $beaver-blue;
-        }
-
-        a {
-          border-bottom-color: $beaver-blue;
+          color: var(--beaver-blue);
         }
       }
 
       &__icon {
-        background: $white;
+        background: var(--white);
 
         .sprite {
-          color: $primary-blue;
+          color: var(--nittany-navy);
         }
       }
     }
   }
 
   &--emergency {
-    background-color: $error-red;
-    color: $white;
+    background-color: var(--error-red);
+    color: var(--white);
 
     .announcement {
       &__expand {
         &:active,
         &:focus,
         &:hover {
-          background-color: $invent-orange;
-          color: $nittany-navy;
+          background-color: var(--invent-orange);
+          color: var(--nittany-navy);
         }
         &-icon {
-          background: $white;
-          color: $error-red;
+          background: var(--white);
+          color: var(--error-red);
         }
       }
 
       &__content {
         a, p {
-          color: $white;
-        }
-
-        a {
-          // White with 75% opacity.
-          border-bottom-color: rgba(255, 255, 255, .75);
-
-          &:hover {
-            border-bottom-color: $white;
-          }
+          color: var(--white);
         }
       }
 
       &__icon {
-        background: $white;
+        background: var(--white);
 
         .sprite {
-          color: $error-red;
+          color: var(--error-red);
         }
       }
     }
