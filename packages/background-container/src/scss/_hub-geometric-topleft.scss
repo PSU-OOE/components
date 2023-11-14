@@ -30,6 +30,7 @@
     @container (min-width: 950px) {
       top: _rem(-36.6);
       right: calc(50% + _rem(30));
+      left: initial;
     }
   }
 }

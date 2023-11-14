@@ -29,6 +29,7 @@
     //noinspection CssInvalidAtRule
     @container (min-width: 950px) {
       right: calc(50% + _rem(30));
+      left: initial;
     }
   }
 }
