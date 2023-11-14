@@ -6,7 +6,7 @@
   &__featured {
     display: flex;
     flex-direction: column;
-    gap: _rem(2) _rem(3);
+    gap: var(--text-element-vertical-space--default) _rem(3);
     width: 100%;
 
     @include bp(s) {
@@ -15,17 +15,17 @@
   }
 
   &__overflow {
-    margin-top: _rem(2);
+    margin-top: var(--text-element-vertical-space--medium);
 
     @include bp(s) {
-      margin-top: _rem(3);
+      margin-top: var(--text-element-vertical-space--large);
     }
   }
 
   &__more {
     display: grid;
     grid-template-columns: 1fr;
-    gap: _rem(2);
+    gap: var(--text-element-vertical-space--medium);
   }
 
   &__event {
@@ -41,10 +41,6 @@
       &__top,
       &__featured {
         flex-direction: column;
-      }
-
-      &__overflow {
-        margin-top: _rem(2);
       }
     }
   }
