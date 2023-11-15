@@ -1,0 +1,54 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.callout {
+  display: flex;
+  padding: _rem(4) _rem(2);
+
+  @include bp(xs) {
+    padding-left: _rem(4);
+    padding-right: _rem(4);
+  }
+  &--padding-small {
+    padding-top: _rem(3);
+    padding-bottom: _rem(3);
+  }
+
+  &--padding-large {
+    padding-top: _rem(5);
+    padding-bottom: _rem(5)
+  }
+
+  @include bp(m) {
+    &--padding-large {
+      padding-top: _rem(6);
+      padding-bottom: _rem(6);
+    }
+  }
+
+
+  &--light-grey {
+    background: var(--light-grey);
+  }
+
+  // @TODO: What's this supposed to be?
+  &--blue-gradient {
+    background: linear-gradient(to right, var(--beaver-blue), var(--nittany-navy));
+  }
+
+  &--blue {
+    background: var(--beaver-blue);
+  }
+
+  &--narrow {
+    .callout__content {
+      max-width: _rem(87);
+    }
+  }
+
+  &__content {
+    margin: auto;
+    max-width: _rem(111);
+    width: 100%;
+  }
+}

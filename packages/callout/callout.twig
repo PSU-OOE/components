@@ -1,0 +1,17 @@
+{% if content %}
+  {% set classes = ['callout'] %}
+  {% if background %}
+    {% set classes = classes|merge(['callout--' ~ background]) %}
+  {% endif %}
+  {% if width %}
+    {% set classes = classes|merge(['callout--' ~ width]) %}
+  {% endif %}
+  {% if padding %}
+    {% set classes = classes|merge(['callout--padding-' ~ padding]) %}
+  {% endif %}
+  <div class="{{ classes|join(' ') }}">
+    <div class="callout__content">
+      {{ content }}
+    </div>
+  </div>
+{% endif %}

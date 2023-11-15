@@ -1,0 +1,51 @@
+&.bg--hub-geometric-topright {
+  & > .bg__sprites > .bg__sprite .sprite {
+    color: var(--white);
+    position: absolute;
+    height: auto;
+    width: _rem(60);
+    right: _rem(-44);
+    top: _rem(-33.5);
+    display: none; // @TODO: When container query support is more mainstream, simplify this.
+
+    //noinspection CssUnknownProperty
+    @supports (container-type: inline-size ) {
+      display: initial;
+    }
+  }
+
+  &.bg--primary-blue > .bg__sprites > .bg__sprite .sprite {
+    opacity: .25;
+  }
+
+  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
+    opacity: .22;
+  }
+}
+
+&.bg--hub-geometric-topright.bg--narrow > .bg__sprites > .bg__sprite .sprite {
+  @supports (container-type: inline-size ) {
+
+    //noinspection CssInvalidAtRule
+    @container (min-width: 950px) {
+      width: _rem(67);
+      top: _rem(-43.5);
+      left: calc(50% + _rem(31.9));
+      right: initial;
+    }
+  }
+}
+
+&.bg--hub-geometric-topright:not(.bg--narrow) > .bg__sprites > .bg__sprite .sprite {
+  //noinspection CssUnknownProperty
+  @supports (container-type: inline-size ) {
+
+    //noinspection CssInvalidAtRule
+    @container (min-width: 1024px) {
+      width: _rem(67);
+      left: calc(50% + _rem(39.5));
+      right: initial;
+      top: _rem(-43.5);
+    }
+  }
+}

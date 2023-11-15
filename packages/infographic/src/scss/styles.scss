@@ -53,11 +53,6 @@
     margin-left: _rem(-.25);
   }
 
-  // Tighten up emphasis-less stacked variety.
-  &__stacked &__preliminary + &__primary {
-    margin-top: _rem(-.9);
-  }
-
   // Tweak margins when emphasis + stacked is in use.
   &__emphasis + &__stacked {
     .infographic__preliminary {
@@ -68,16 +63,16 @@
       }
 
       & + .infographic__primary {
-        margin-top: _rem(-.7);
+        margin-top: _rem(-.3);
 
         @include bp(s) {
-          margin-top: _rem(-.9);
+          margin-top: _rem(-.1);
         }
       }
     }
 
     .infographic__primary {
-      margin-top: _rem(-.4);
+      margin-top: _rem(.3);
     }
   }
 }

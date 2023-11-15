@@ -7,6 +7,7 @@
   line-height: var(--line-height--2xsnug);
   text-transform: uppercase;
   font-weight: var(--font-weight--bold);
+  position: relative;
 
   &--small {
     font-size: var(--font-size--3xsmall);
@@ -20,8 +21,13 @@
     }
   }
 
-  .sprite {
+  &__text {
+    margin-right: _rem(.4);
+  }
+
+  &__chevron {
+    position: absolute;
     font-size: _rem(1);
-    margin-left: _rem(.4);
+    margin-top: _rem(.55);
   }
 }

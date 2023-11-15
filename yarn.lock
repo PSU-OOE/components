@@ -1645,6 +1645,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/callout@workspace:packages/callout":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/callout@workspace:packages/callout"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/card@^1.0, @psu-ooe/card@workspace:packages/card":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/card@workspace:packages/card"
@@ -1764,6 +1772,14 @@ __metadata:
 "@psu-ooe/heading@^1.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/highlighted-text@workspace:packages/highlighted-text":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/highlighted-text@workspace:packages/highlighted-text"
   dependencies:
     "@psu-ooe/base": ^1.0
   languageName: unknown

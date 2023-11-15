@@ -11,12 +11,15 @@
 | Color        | Description                        |
 |--------------|------------------------------------|
  | light-grey   | Displays a light-grey background   |
- | primary-blue | Displays a primary-blue background |
  | beaver-blue  | Displays a beaver-blue background  |
 
 ## Background images
 | Image                      | Description                                                                                 |
 |----------------------------|---------------------------------------------------------------------------------------------|
+| hub-geometric:topleft      | Hub geometric positioned to the left top corner of the container.                           |
+| hub-geometric:topright     | Hub geometric positioned to the right top corner of the container.                          |
+| hub-geometric:bottomleft   | Hub geometric positioned to the left bottom corner of the container.                        |
+| hub-geometric:bottomright  | Hub geometric positioned to the right bottom corner of the container.                       |
 | shield:left                | Community shield positioned to the left side of the container.                              |
 | shield:right               | Community shield positioned to the right side of the container.                             |
 | shield:bottomright         | Community shield positioned to the right-bottom corner of the container                     |

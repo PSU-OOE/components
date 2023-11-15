@@ -15,8 +15,9 @@
   }
 
   &__text {
-    font-size: _rem(1.4);
-    line-height: calc(13/7)
+    font-size: var(--font-size--small);
+    font-weight: var(--font-weight--regular);
+    line-height: var(--line-height--medium);
   }
 
   &__list {
@@ -32,7 +33,7 @@
   }
 
   &__item {
-    border-bottom: _rem(.1) solid $slate-light;
+    border-bottom: _rem(.1) solid var(--medium-grey);
     display: inline-block;
     list-style-type: none;
     padding: _rem(.4) 0;
