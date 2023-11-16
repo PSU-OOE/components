@@ -1,8 +1,57 @@
 @import '../../../base/src/scss/imports/variables';
 @import '../../../base/src/scss/imports/layout';
 
+.header {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  height: 30rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0 50% 0 0;
+    background: var(--beaver-blue);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 50%;
+    background: var(--nittany-navy);
+  }
+
+  &__gradient {
+    position: relative;
+    width: _rem(88);
+    margin: auto;
+    height: 100%;
+    max-width: 100%;
+    background: linear-gradient(90deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 100%);
+    z-index: 1;
+  }
+
+  &__geometrics {
+    --hub-geometric-gradient: url(#hub-geometric-header-gradient);
+    .sprite {
+      position: absolute;
+      width: 71.8rem;
+      top: -42.7rem;
+      height: auto;
+      color: var(--sky-blue);
+      z-index: 1;
+
+      &:nth-child(2) {
+        left: calc(50% - 33rem);
+      }
+
+      &:nth-child(3) {
+        left: calc(50% + 38rem);
+      }
+    }
+  }
+}
 header {
-  background-color: var(--beaver-blue);
   padding-bottom: 1rem;
 }
 

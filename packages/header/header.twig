@@ -12,18 +12,34 @@
   } only %}
 {% endset %}
 
-<header class="header">
-  <div class="header__content">
-    <a href="/" class="header__branding">
-      {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
-      <span class="visually-hidden">Penn State World Campus</span>
-    </a>
-    <div class="header__minimal">
-      <h2 class="header__tagline">A World of Possibilities. <strong>Online.</strong></h2>
-    </div>
-  </div>
-</header>
+<div class="header">
+  <div class="header__gradient"></div>
+  <div class="header__geometrics">
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <linearGradient id="hub-geometric-header-gradient" x1=".2" x2=".2" y1=".6" y2=".7" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="var(--sky-blue)"/>
+          <stop offset="1" stop-color="var(--sky-blue)" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
+    {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
 
+  </div>
+<!--  <header class="header">
+    <div class="header__content">
+      <a href="/" class="header__branding">
+        {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+        <span class="visually-hidden">Penn State World Campus</span>
+      </a>
+      <div class="header__minimal">
+        <h2 class="header__tagline">A World of Possibilities. <strong>Online.</strong></h2>
+      </div>
+    </div>
+  </header> -->
+</div>
+<!--
 <br />
 <br />
 
@@ -73,3 +89,4 @@
     </div>
   </div>
 </header>
+-->
