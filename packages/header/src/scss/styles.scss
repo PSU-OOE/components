@@ -2,33 +2,37 @@
 @import '../../../base/src/scss/imports/layout';
 
 .header {
-  display: flex;
   position: relative;
   overflow: hidden;
-  height: 30rem;
+  z-index: 0;
 
-  &::before {
+  &::before, &::after {
     content: '';
     position: absolute;
+  }
+
+  &::before {
     inset: 0 50% 0 0;
     background: var(--beaver-blue);
+    z-index: -1;
   }
 
   &::after {
-    content: '';
-    position: absolute;
     inset: 0 0 0 50%;
     background: var(--nittany-navy);
+    z-index: -2;
   }
 
   &__gradient {
-    position: relative;
+    position: absolute;
     width: _rem(88);
-    margin: auto;
-    height: 100%;
+    left: 0;
+    right: 0;
     max-width: 100%;
+    height: 100%;
+    margin: auto;
     background: linear-gradient(90deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 100%);
-    z-index: 1;
+    z-index: -1;
   }
 
   &__geometrics {
@@ -38,8 +42,6 @@
       width: 71.8rem;
       top: -42.7rem;
       height: auto;
-      color: var(--sky-blue);
-      z-index: 1;
 
       &:nth-child(2) {
         left: calc(50% - 33rem);
@@ -51,7 +53,7 @@
     }
   }
 }
-header {
+.header__header {
   padding-bottom: 1rem;
 }
 
@@ -61,23 +63,28 @@ header {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  z-index: 1;
 }
 
 .header__branding {
-  background-color: var(--white);
   margin: 0 55px 0 0;
-  padding: 1rem 0 1rem 1rem;
   position: relative;
-  color: var(--beaver-blue);
-  font-size: 3.5rem;
-  line-height: 0;
-  height: min-content;
 
   &::before {
     content: '';
     background-color: var(--white);
-    inset: 0 100% 0 calc((-100vw + 1190px) / 2);
+    background-image: linear-gradient(90deg, rgba(204,218,230,0.5) 0%, rgba(0,30,68,0) 100%);
     position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .sprite {
+    color: var(--beaver-blue);
+    width: _rem(18.5);
+    height: auto;
+    max-width: 100%;
+    padding: 1rem 0 1rem 1rem;
   }
 
   &::after {
@@ -86,9 +93,15 @@ header {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 60px 60px 0 0;
+    border-width: calc(90px * tan(40deg)) 90px 0 0;
     border-color: var(--white) transparent transparent transparent;
     bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .header__branding::before {
+    inset: 0 0 0 calc((-100vw + 1190px) / 2);
   }
 }
 
@@ -108,17 +121,6 @@ header {
 
 .header__tagline::before {
   margin-bottom: .5rem !important;
-}
-
-@media screen and (min-width: 550px) {
-  .header__branding {
-    font-size: 5rem;
-    margin-right: 70px;
-  }
-
-  .header__branding::after {
-    border-width: 70px 70px 0 0;
-  }
 }
 
 .header__small {
