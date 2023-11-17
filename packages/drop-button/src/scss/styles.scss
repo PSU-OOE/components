@@ -8,138 +8,51 @@
   position: relative;
 
   &__toggle {
-    background: var(--light-mauve);
-    border: none;
-    color: var(--beaver-blue);
     cursor: pointer;
-    display: inline-flex;
-    gap: _rem(.5);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: var(--button-border-radius--default);
-    box-shadow: _rem(.1) _rem(.1) color-mix(in srgb, var(--beaver-blue) 50%, transparent);
-    transition: color var(--transition-duration--default) linear,
-                background-color var(--transition-duration--default) linear
-                box-shadow var(--transition-duration--default) linear;
-    padding: _rem(.5);
-    width: _rem(4.4);
-    height: _rem(4.4);
-
-    @include bp(xs) {
-      padding: _rem(.6);
-      width: _rem(5.2);
-      height: _rem(5.2);
-    }
-
-    @include bp(s) {
-      padding: _rem(.8);
-      width: _rem(6.3);
-      height: _rem(6.3);
-    }
-
-    @include bp(m) {
-      padding: _rem(.9);
-      width: _rem(7.2);
-      height: _rem(7.2);
-    }
-
-    @include bp(l) {
-      padding: _rem(1);
-      width: _rem(8);
-      height: _rem(8);
-    }
+    position: relative;
+    overflow: hidden;
 
     &:focus-visible {
-      background: var(--pugh-blue);
-      box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
-      color: var(--nittany-navy);
-      outline: none;
-    }
-
-    &:focus {
-      outline: none;
+      outline: .2rem solid var(--sky-blue);
     }
 
     &.focus-visible {
-      background: var(--pugh-blue);
-      box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
-      color: var(--nittany-navy);
-      outline: none;
-    }
-
-
-    &:hover {
-      background: var(--pugh-blue);
-      box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
-      color: var(--nittany-navy);
+      outline: .2rem solid var(--sky-blue);
     }
 
     &[aria-expanded="true"] {
-      box-shadow: _rem(-.1) _rem(-.1) var(--beaver-blue);
+      overflow: visible;
 
-      & + .drop-button__list {
+      & + .drop-button__content {
         visibility: visible;
         opacity: 1;
       }
     }
 
-    .sprite {
-      opacity: .75;
-      height: _rem(.605);
-      margin-top: _rem(.3);
-      max-width: 100%;
-      overflow: visible;
-
-      @include bp(xs) {
-        height: _rem(.66);
-      }
-
-      @include bp(s) {
-        height: _rem(.77);
-      }
-
-      @include bp(m) {
-        height: _rem(.825);
-      }
-
-      @include bp(l) {
-        height: _rem(.88);
-      }
+    &::after {
+      content: "";
+      position: absolute;
+      transform: translateX(calc(50% - #{_rem(math.div(math.sqrt(200), 10) - 1)})) rotateZ(45deg);
+      background: var(--white);
+      width: _rem(2);
+      height: _rem(2);
+      top: calc(100% + #{_rem(math.div(math.sqrt(200), 10) - 1)} + .2em);
+      left: 0;
+      right: 0;
+      border-width: _rem(.1);
+      border-style: solid;
+      border-color: var(--slate-light) transparent transparent var(--slate-light);
+      z-index: 101;
     }
   }
 
-  &__label {
-    font-family: var(--font-family--default);
-    font-weight: var(--font-weight--regular);
-    line-height: var(--line-height--nospace);
-    font-size: _rem(1.2);
-
-    @include bp(xs) {
-      font-size: _rem(1.3);
-    }
-
-    @include bp(s) {
-      font-size: _rem(1.5);
-    }
-
-    @include bp(m) {
-      font-size: _rem(1.6);
-    }
-
-    @include bp(l) {
-      font-size: _rem(1.7);
-    }
-  }
-
-  &__list {
+  &__content {
     background: var(--white);
     position: absolute;
     visibility: hidden;
     opacity: 0;
     transition: opacity var(--transition-duration--default) linear,
                 visibility (--transition-duration--default) linear;
-    list-style-type: none;
     border-style: solid;
     border-color: var(--slate-light) var(--slate-light) var(--slate-light) var(--sky-blue);
     border-width: _rem(.1) _rem(.1) _rem(.1) _rem(.3);
@@ -147,73 +60,8 @@
     padding: _rem(2);
     width: _rem(28);
     z-index: 100;
-    top: 100%;
-
-    &::before {
-      content: "";
-      position: absolute;
-      transform: rotateZ(45deg);
-      background: var(--white);
-      width: _rem(2);
-      height: _rem(2);
-      top: _rem(-1);
-      z-index: -1;
-      border-width: _rem(.1);
-      border-style: solid;
-      border-color: var(--slate-light) transparent transparent var(--slate-light);
-      left: calc(#{_rem(2.2)} - #{_rem(math.div(math.sqrt(200), 10))});
-
-      @include bp(xs) {
-        left: calc(#{_rem(2.6)} - #{_rem(math.div(math.sqrt(200), 10))});
-      }
-
-      @include bp(s) {
-        left: calc(#{_rem(3.15)} - #{_rem(math.div(math.sqrt(200), 10))});
-      }
-
-      @include bp(m) {
-        left: calc(#{_rem(3.6)} - #{_rem(math.div(math.sqrt(200), 10))});
-      }
-
-      @include bp(l) {
-        left: calc(#{_rem(4)} - #{_rem(math.div(math.sqrt(200), 10))});
-      }
-    }
-  }
-
-  &__link {
-    color: var(--nittany-navy);
-    display: block;
-    padding: _rem(1);
-    font-family: var(--font-family--default);
-    font-size: var(--font-size--default);
-    font-weight: var(--font-weight--regular);
-    line-height: var(--line-height--xsnug);
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: _rem(.3);
-    outline: .2rem solid transparent;
-    outline-offset: 0;
-    transition: text-decoration-color var(--transition-duration--default) linear,
-                color var(--transition-duration--default) linear,
-                outline-color var(--transition-duration--default) linear;
-
-    &:hover {
-      color: var(--pa-link);
-      text-decoration-color: var(--pa-link);
-    }
-
-    &:focus-visible {
-      outline-color: var(--sky-blue);
-      outline-offset: 0;
-      text-decoration-color: var(--pa-link);
-    }
-
-    &.focus-visible {
-      outline-color: var(--sky-blue);
-      outline-offset: 0;
-      text-decoration-color: var(--pa-link);
-    }
+    top: calc(100% + #{_rem(math.div(math.sqrt(200), 10))} + .2em);
+    left: _rem(-2);
   }
 
   &--align-center {
@@ -222,12 +70,12 @@
       margin-right: auto;
     }
 
-    .drop-button__list {
+    .drop-button__content {
       left: 50%;
       transform: translate(-50%);
     }
 
-    .drop-button__list::before {
+    .drop-button__content::before {
       left: 50%;
       transform: rotateZ(45deg) translateX(calc(-50% + #{_rem(.2)})) translateY(calc(50% - #{_rem(.2)}));
     }
@@ -238,29 +86,9 @@
       margin-left: auto;
     }
 
-    .drop-button__list {
-      right: 0;
-
-      &::before {
-        left: revert;
-        right: _rem(1.2);
-
-        @include bp(xs) {
-          right: _rem(1.6);
-        }
-
-        @include bp(s) {
-          right: _rem(2.15);
-        }
-
-        @include bp(m) {
-          right: _rem(2.6);
-        }
-
-        @include bp(l) {
-          right: _rem(3);
-        }
-      }
+    .drop-button__content {
+      left: initial;
+      right: _rem(-2);
     }
   }
 
@@ -289,7 +117,7 @@
         }
       }
 
-      &__list {
+      &__content {
         width: 100%;
       }
     }
@@ -317,28 +145,9 @@
         font-weight: 600;
       }
 
-      &__list::before {
+      &__content::before {
         right: calc(#{_rem(3.2845)} - #{_rem(math.div(math.sqrt(200), 10))});
       }
-    }
-  }
-}
-
-// Optional peer dependency can influence certain styles.
-.bg--light-grey {
-  .drop-button__toggle {
-    background: var(--white);
-
-    &:hover {
-      background: var(--pugh-blue);
-    }
-
-    &:focus-visible {
-      background: var(--pugh-blue);
-    }
-
-    &.focus-visible {
-      background: var(--pugh-blue);
     }
   }
 }

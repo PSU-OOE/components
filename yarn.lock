@@ -1671,6 +1671,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/compact-menu@workspace:packages/compact-menu":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/compact-menu@workspace:packages/compact-menu"
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/compact-search@workspace:packages/compact-search":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/compact-search@workspace:packages/compact-search"
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/credential@^1.0, @psu-ooe/credential@workspace:packages/credential":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/credential@workspace:packages/credential"

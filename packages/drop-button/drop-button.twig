@@ -1,7 +1,4 @@
 {% set classes = ['drop-button'] %}
-{% if sticky_tab %}
-  {% set classes = classes|merge(['drop-button--sticky-tab']) %}
-{% endif %}
 {% if full_width %}
     {%  set classes = classes|merge(['drop-button--full-width']) %}
 {% endif %}
@@ -10,18 +7,9 @@
 {% endif %}
 <div class="{{ classes|join(' ' ) }}">
     <div role="button" class="drop-button__toggle" tabindex="0" aria-expanded="false">
-      {% if sticky_tab %}
-        {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis-vertical' } only %}
-      {% else %}
-        {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis' } only %}
-      {% endif %}
-      <span class="drop-button__label">{{ button_label }}</span>
+      {{ toggle_content }}
     </div>
-    <ul class="drop-button__list">
-        {% for link in links %}
-            <li class="drop-button__item">
-                <a class="drop-button__link" href="{{ link.url }}">{{ link.label }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="drop-button__content" tabindex="0">
+      {{ panel_content }}
+    </div>
 </div>

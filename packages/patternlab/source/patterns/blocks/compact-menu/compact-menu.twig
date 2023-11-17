@@ -1,0 +1,10 @@
+{% set menu %}
+  {% include '@blocks/compact-menu/compact-menu.twig' with {
+    menu: 'The menu goes here.'
+  } only %}
+{% endset %}
+
+{% include '@molecules/callout/callout.twig' with {
+  background: 'blue-gradient',
+  content: menu,
+} only %}

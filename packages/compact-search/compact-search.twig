@@ -1,0 +1,16 @@
+{% set toggle_content %}
+  <div class="compact-search__toggle">
+    <div class="compact-search__toggle-sprite">
+      {% include '@atoms/sprite/sprite.twig' with { name: 'fas-magnifying-glass' } only %}
+    </div>
+    <span class="compact-search__toggle-label">{{ search_label|default('Search') }}</span>
+  </div>
+{% endset %}
+
+<div class="compact-search">
+  {% include '@molecules/drop-button/drop-button.twig' with {
+    align: align,
+    toggle_content: toggle_content,
+    panel_content: search_form
+  } only %}
+</div>

@@ -1,0 +1,54 @@
+@import '../../../base/src/scss/imports/variables';
+
+.compact-menu {
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: _rem(.5);
+
+    &:where(:hover) &-sprite {
+      color: var(--white);
+    }
+
+    &:hover &-label {
+      text-decoration-color: var(--white);
+    }
+
+    &-sprite {
+      color: var(--pugh-blue);
+      transition: color var(--transition-duration--default) linear;
+
+      &:is([aria-expanded="true"] *, :focus *) {
+        color: var(--keystone-light);
+      }
+
+      .sprite {
+        width: 2.1rem;
+        height: auto;
+      }
+    }
+
+    &-label {
+      color: var(--white);
+      display: block;
+      font-size: var(--font-size--5xsmall);
+      line-height: var(--line-height--nospace);
+      text-decoration-color: transparent;
+      text-decoration-line: underline;
+      text-decoration-thickness: _rem(.1);
+      text-underline-offset: .2em;
+      transition: text-decoration-color var(--transition-duration--default) linear;
+      padding-bottom: .2em;
+
+      &:is(:focus-visible *) {
+        text-decoration-color: var(--white);
+      }
+
+      &:is(.focus-visible *) {
+        text-decoration-color: var(--white);
+      }
+    }
+  }
+}
