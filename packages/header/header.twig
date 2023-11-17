@@ -12,6 +12,27 @@
   } only %}
 {% endset %}
 
+{% set search_horizontal %}
+  {% include '@blocks/compact-search/compact-search.twig' with {
+    align: 'right',
+    orientation: 'horizontal',
+    search_form: 'The search form goes here.'
+  } only %}
+{% endset %}
+
+{% set search_vertical %}
+  {% include '@blocks/compact-search/compact-search.twig' with {
+    align: 'right',
+    search_form: 'The search form goes here.'
+  } only %}
+{% endset %}
+
+{% set menu %}
+  {% include '@blocks/compact-menu/compact-menu.twig' with {
+    align: 'right',
+    menu: 'The menu goes here.'
+  } only %}
+{% endset %}
 <div class="header">
   <div class="header__gradient"></div>
   <div class="header__geometrics">
@@ -34,7 +55,7 @@
           <span class="visually-hidden">Penn State World Campus</span>
         </a>
       </div>
-      <div class="header__content">
+      <div class="header__content header__content--minimal">
         <span class="header__tagline">A World of Possibilities. <strong>Online.</strong></span>
       </div>
     </div>
@@ -67,23 +88,29 @@
       </div>
       <div class="header__content">
         <div class="header__small">
-          <div class="header__utility">
+          <div class="header__small-utility">
             <div class="header__search">
-              {% include '@molecules/drop-button/drop-button.twig' with {
-                button_label: 'Search',
-                links: [{url: '#', label: 'Dummy'}],
-                align: 'right',
-              } only %}
+              {{ search_vertical }}
             </div>
             <div class="header__menu">
-              {% include '@molecules/drop-button/drop-button.twig' with {
-                button_label: 'Menu',
-                links: [{url: '#', label: 'Dummy'}],
-                align: 'right',
-              } only %}
+              {{ menu }}
             </div>
           </div>
-          <div class="header__cta">
+        </div>
+        <div class="header__large">
+          <div class="header__large-utility">
+            <nav class="header__large-utility-menu" aria-label="Popular links">
+              <ul class="header__large-utility-links">
+                <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Current Students</a></li>
+                <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Alumni</a></li>
+                <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Events</a></li>
+              </ul>
+            </nav>
+            <div class="header__large-search">
+              {{ search_horizontal }}
+            </div>
+          </div>
+          <div class="header__large-cta">
             {% include '@atoms/cta/cta-group.twig' with {
               ctas: [how_to_apply, request_info],
               expand_to_fit: true,
@@ -91,6 +118,12 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="header__small-cta">
+      {% include '@atoms/cta/cta-group.twig' with {
+        ctas: [how_to_apply, request_info],
+        expand_to_fit: true,
+      } only %}
     </div>
   </header>
 </div>

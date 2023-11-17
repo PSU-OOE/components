@@ -3,7 +3,6 @@
 
 .header {
   position: relative;
-  overflow: hidden;
   z-index: 0;
 
   &::before, &::after {
@@ -36,7 +35,11 @@
   }
 
   &__geometrics {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
     --hub-geometric-gradient: url(#hub-geometric-header-gradient);
+
     .sprite {
       position: absolute;
       width: 71.8rem;
@@ -99,19 +102,25 @@
 .header__content {
   display: flex;
   flex: 1 0 auto;
-  min-width: _rem(26);
+  align-items: center;
+  padding-right: _rem(1);
+  min-width: _rem(16);
+
+  &--minimal {
+    min-width: _rem(26);
+  }
 
   &::before {
     background: var(--white);
     content: "";
     height: 100%;
-    z-index: -2;
-    aspect-ratio: 1 / #{"calc(tan(40deg))"};
-    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    aspect-ratio: 1/calc(tan(40deg));
+    clip-path: polygon(1% 0, 1% 101%, 99% 0);
     display: inline-block;
+    margin-left: -0.12rem;
+    margin-top: -0.1rem;
     position: relative;
-    vertical-align: middle;
-    margin-left: -.05rem;
+    z-index: -2;
   }
 }
 
@@ -119,7 +128,7 @@
 .header__tagline {
   font-family: var(--font-family--default);
   color: var(--white);
-  font-size: var(--font-size--3xsmall);
+  font-size: var(--font-size--5xsmall);
   font-weight: var(--font-weight--semibold);
   margin-top: auto;
   margin-bottom: _rem(1);
@@ -142,11 +151,59 @@
 
 .header__small {
   display: flex;
-  gap: 4rem;
+  gap: _rem(4);
   margin-left: auto;
+
+  @include bp(m) {
+    display: none;
+  }
 }
 
-.header__utility {
+.header__small-utility {
   display: flex;
-  gap: 1rem;
+  gap: _rem(1);
+}
+
+.header__small-cta {
+  display: flex;
+  max-width: _rem(122);
+  margin: auto;
+  padding: 0 -rem(1) _rem(1) _rem(1);
+
+  @include bp(m) {
+    display: none;
+  }
+}
+
+.header__large {
+  display: none;
+  margin-left: auto;
+  @include bp(m) {
+    display: flex;
+    gap: _rem(4);
+  }
+}
+
+.header__large-utility {
+  display: flex;
+  align-items: center;
+  gap: _rem(2);
+}
+
+.header__large-utility-links {
+  display: flex;
+  align-items: center;
+  gap: _rem(2);
+}
+
+.header__large-utility-link {
+  color: var(--text-color--light);
+  text-decoration: none;
+  font-size: var(--font-size--xsmall);
+  line-height: var(--line-height--nospace);
+  letter-spacing: var(--letter-spacing--medium);
+
+  @include bp(xl) {
+    font-size: var(--font-size--msmall);
+  }
 }

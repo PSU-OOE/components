@@ -1,12 +1,11 @@
 @import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
 
 .compact-search {
   &__toggle {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: _rem(.5);
 
     &:where(:hover) &-sprite {
       color: var(--white);
@@ -23,11 +22,6 @@
       &:is([aria-expanded="true"] *, :focus *) {
         color: var(--keystone-light);
       }
-
-      .sprite {
-        width: 2.1rem;
-        height: auto;
-      }
     }
 
     &-label {
@@ -40,7 +34,6 @@
       text-decoration-thickness: _rem(.1);
       text-underline-offset: .2em;
       transition: text-decoration-color var(--transition-duration--default) linear;
-      padding-bottom: .2em;
 
       &:is(:focus-visible *) {
         text-decoration-color: var(--white);
@@ -48,6 +41,38 @@
 
       &:is(.focus-visible *) {
         text-decoration-color: var(--white);
+      }
+    }
+
+    &--vertical {
+      flex-direction: column;
+      gap: _rem(.5);
+
+      .compact-search__toggle-icon .sprite {
+        width: 2.1rem;
+        height: auto;
+      }
+
+      .compact-search__toggle-label {
+        padding-bottom: .2em;
+      }
+    }
+
+    &--horizontal {
+      flex-direction: row;
+      gap: _rem(.6);
+
+      .compact-search__toggle-icon .sprite {
+        width: 1.6rem;
+        height: auto;
+      }
+
+      .compact-search__toggle-label {
+        font-size: var(--font-size--xsmall);
+
+        @include bp(xl) {
+          font-size: var(--font-size--msmall);
+        }
       }
     }
   }
