@@ -104,9 +104,10 @@
 
 .header__content {
   display: flex;
-  flex: 1 0 auto;
+  flex: 1 1 auto;
   align-items: center;
   min-width: _rem(18);
+  padding-right: _rem(2);
 
   &::before {
     background: var(--white);
@@ -125,7 +126,6 @@
 .header__small {
   display: flex;
   gap: _rem(4);
-  padding-right: _rem(2);
   margin-left: auto;
 
   @include bp(m) {
@@ -154,7 +154,6 @@
   @include bp(m) {
     display: flex;
     margin-left: auto;
-    padding-right: _rem(3);
     gap: _rem(4);
   }
 }
@@ -196,9 +195,9 @@
 
 // Minimal representation.
 .tagline {
+  line-height: 0;
   margin-top: auto;
   margin-bottom: _rem(1);
-  min-width: _rem(26);
 
   &::before {
     content: '';
