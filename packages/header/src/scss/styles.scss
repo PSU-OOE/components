@@ -114,12 +114,12 @@
     content: "";
     height: 100%;
     aspect-ratio: 1/1;
-    clip-path: polygon(1% 0, 1% 101%, 99% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 0);
     display: inline-block;
-    margin-left: -0.12rem;
-    margin-top: -0.1rem;
     position: relative;
     z-index: -2;
+    box-sizing: content-box;
+    border-top: _rem(.1) solid var(--white);
   }
 }
 
