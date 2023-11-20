@@ -2,6 +2,8 @@
 @import '../../../base/src/scss/imports/layout';
 
 .header {
+  color: var(--white);
+  overflow-x: clip;
   position: relative;
   z-index: 0;
 
@@ -106,10 +108,6 @@
   align-items: center;
   min-width: _rem(18);
 
-  &--minimal {
-    min-width: _rem(26);
-  }
-
   &::before {
     background: var(--white);
     content: "";
@@ -121,52 +119,6 @@
     margin-top: -0.1rem;
     position: relative;
     z-index: -2;
-  }
-}
-
-// Minimal representation.
-.header__tagline {
-  color: var(--white);
-  margin-top: auto;
-  font-family: var(--font-family--default);
-  font-size: var(--font-size--5xsmall);
-  font-weight: var(--font-weight--bold);
-  line-height: var(--line-height--xsnug);
-  margin-bottom: _rem(1);
-
-  @include bp(xs) {
-    font-size: var(--font-size--3xsmall);
-    margin-bottom: _rem(1.5);
-  }
-
-  @include bp(m) {
-    font-size: var(--font-size--mlarge);
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    width: 100%;
-    background-color: var(--sky-blue);
-    height: _rem(.1);
-    width: _rem(6);
-    margin-bottom: _rem(.6);
-
-    @include bp(xs) {
-      height: _rem(.2);
-      width: _rem(7);
-      margin-bottom: _rem(.7);
-    }
-
-    @include bp(m) {
-      height: _rem(.3);
-      width: _rem(8);
-      margin-bottom: _rem(.8);
-    }
-  }
-
-  strong {
-    font-weight: var(--font-weight--extrabold);
   }
 }
 
@@ -239,5 +191,53 @@
     justify-content: center;
     align-items: center;
     padding: 0 _rem(3);
+  }
+}
+
+// Minimal representation.
+.tagline {
+  margin-top: auto;
+  margin-bottom: _rem(1);
+  min-width: _rem(26);
+
+  &::before {
+    content: '';
+    display: block;
+    background-color: var(--sky-blue);
+    height: _rem(.1);
+    width: _rem(6);
+    margin-bottom: _rem(.6);
+
+    @include bp(xs) {
+      height: _rem(.2);
+      width: _rem(7);
+      margin-bottom: _rem(.7);
+    }
+
+    @include bp(m) {
+      height: _rem(.3);
+      width: _rem(8);
+      margin-bottom: _rem(.8);
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--5xsmall);
+    font-weight: var(--font-weight--bold);
+    line-height: var(--line-height--xsnug);
+
+    @include bp(xs) {
+      font-size: var(--font-size--3xsmall);
+      margin-bottom: _rem(1.5);
+    }
+
+    @include bp(m) {
+      font-size: var(--font-size--mlarge);
+    }
+  }
+
+  &__strong {
+    font-weight: var(--font-weight--extrabold);
   }
 }

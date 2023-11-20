@@ -1,0 +1,10 @@
+{% set logo %}
+  {% include '@molecules/sprite/sprite.twig' with { name: 'psu-mark' } only %}
+{% endset %}
+{% set site_name = 'Penn State Example Site' %}
+{% set content %}
+  <div class="tagline">
+    <span class="tagline__text">Secure, on-brand sites. <strong class="tagline__strong">Made Easy.</strong></span>
+  </div>
+{% endset %}
+{% include '@regions/header/header.twig' %}

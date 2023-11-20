@@ -1,0 +1,13 @@
+{% set logo %}
+  {% include '@molecules/sprite/sprite.twig' with { name: 'psu-mark' } only %}
+{% endset %}
+{% set site_name = 'Penn State Example Site' %}
+{% set content %}
+  <div style="padding:1rem;text-align:center;display:flex;align-items:center;justify-content:center;outline:.2rem dashed white;outline-offset:-.4rem;width:100%;">
+    Content area for the header.
+  </div>
+{% endset %}
+{% set overflow %}
+  <div style="padding:1rem;text-align:center;display:flex;align-items:center;justify-content:center;outline:.2rem dashed white;outline-offset:-.4rem;width:100%;">Optional, overflow area for things that might not quite fit otherwise.</div>
+{% endset %}
+{% include '@regions/header/header.twig' %}
