@@ -93,8 +93,12 @@
 
 .header__branding {
   display: inline-block;
-  padding: _rem(1) 0 _rem(1) _rem(1);
+  padding: _rem(1) _rem(.4) _rem(1) _rem(1);
   position: relative;
+
+  &:focus-visible {
+    outline-offset: _rem(-.2);
+  }
 
   .sprite {
     height: auto;
