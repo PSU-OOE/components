@@ -10,26 +10,30 @@
   &__toggle {
     cursor: pointer;
     position: relative;
-    overflow: hidden;
 
     &:focus-visible {
-      outline: .2rem solid var(--sky-blue);
+      // Note - focus states are delegated to drop-button contents.
+      outline: none;
     }
 
     &.focus-visible {
-      outline: .2rem solid var(--sky-blue);
+      // Note - focus states are delegated to drop-button contents.
+      outline: none;
     }
 
     &[aria-expanded="true"] {
-      overflow: visible;
-
       & + .drop-button__content {
         visibility: visible;
+        opacity: 1;
+      }
+
+      &::after {
         opacity: 1;
       }
     }
 
     &::after {
+      pointer-events: none;
       content: "";
       position: absolute;
       transform: translateX(-50%) rotateZ(45deg);
@@ -42,6 +46,7 @@
       border-style: solid;
       border-color: var(--slate-light) transparent transparent var(--slate-light);
       z-index: 101;
+      opacity: 0;
     }
   }
 

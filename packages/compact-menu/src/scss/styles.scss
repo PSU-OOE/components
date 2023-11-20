@@ -8,6 +8,16 @@
     align-items: center;
     gap: _rem(.5);
 
+    &:is(:focus-visible > .compact-menu__toggle) {
+      outline: _rem(.2) solid var(--sky-blue);
+      outline-offset: _rem(.2);
+    }
+
+    &:is(.focus-visible > .compact-menu__toggle) {
+      outline: _rem(.2) solid var(--sky-blue);
+      outline-offset: _rem(.2);
+    }
+
     &:where(:hover) &-sprite {
       color: var(--white);
     }
@@ -20,7 +30,7 @@
       color: var(--pugh-blue);
       transition: color var(--transition-duration--default) linear;
 
-      &:is([aria-expanded="true"] *, :focus *) {
+      &:is([aria-expanded="true"] *) {
         color: var(--keystone-light);
       }
 

@@ -35,6 +35,7 @@
   }
 
   &__geometrics {
+    pointer-events: none;
     position: absolute;
     inset: 0;
     overflow: hidden;
@@ -103,8 +104,7 @@
   display: flex;
   flex: 1 0 auto;
   align-items: center;
-  padding-right: _rem(1);
-  min-width: _rem(16);
+  min-width: _rem(18);
 
   &--minimal {
     min-width: _rem(26);
@@ -126,32 +126,54 @@
 
 // Minimal representation.
 .header__tagline {
-  font-family: var(--font-family--default);
   color: var(--white);
-  font-size: var(--font-size--5xsmall);
-  font-weight: var(--font-weight--semibold);
   margin-top: auto;
+  font-family: var(--font-family--default);
+  font-size: var(--font-size--5xsmall);
+  font-weight: var(--font-weight--bold);
+  line-height: var(--line-height--xsnug);
   margin-bottom: _rem(1);
 
   @include bp(xs) {
-    font-size: var(--font-size--small);
+    font-size: var(--font-size--3xsmall);
     margin-bottom: _rem(1.5);
+  }
+
+  @include bp(m) {
+    font-size: var(--font-size--mlarge);
   }
 
   &::before {
     content: '';
     display: block;
     width: 100%;
-    height: .125em;
     background-color: var(--sky-blue);
-    max-width: _rem(8);
-    margin-bottom: _rem(.5);
+    height: _rem(.1);
+    width: _rem(6);
+    margin-bottom: _rem(.6);
+
+    @include bp(xs) {
+      height: _rem(.2);
+      width: _rem(7);
+      margin-bottom: _rem(.7);
+    }
+
+    @include bp(m) {
+      height: _rem(.3);
+      width: _rem(8);
+      margin-bottom: _rem(.8);
+    }
+  }
+
+  strong {
+    font-weight: var(--font-weight--extrabold);
   }
 }
 
 .header__small {
   display: flex;
   gap: _rem(4);
+  padding-right: _rem(2);
   margin-left: auto;
 
   @include bp(m) {
@@ -177,9 +199,10 @@
 
 .header__large {
   display: none;
-  margin-left: auto;
   @include bp(m) {
     display: flex;
+    margin-left: auto;
+    padding-right: _rem(3);
     gap: _rem(4);
   }
 }
@@ -205,5 +228,16 @@
 
   @include bp(xl) {
     font-size: var(--font-size--msmall);
+  }
+}
+
+.header__large-menu {
+  display: none;
+
+  @include bp(m) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 _rem(3);
   }
 }
