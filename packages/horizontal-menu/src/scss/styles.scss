@@ -1,0 +1,125 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.horizontal-menu {
+  outline: .2rem dashed var(--white);
+
+  &__menu {
+    display: flex;
+
+    &--2 {
+      background: var(--white);
+      flex-direction: column;
+      position:absolute;
+      top: 100%;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: .1rem .3rem .5rem rgba($nittany-navy, .75);
+      border-left: .3rem solid var(--sky-blue);
+      padding: .5rem 2rem;
+      min-width: _rem(23);
+      z-index: 2;
+    }
+  }
+
+  &__item {
+    &--1 {
+      display: flex;
+      position: relative;
+      flex: 1 0 auto;
+
+      &:last-child .horizontal-menu__menu {
+        right: 0;
+      }
+    }
+
+    &--2 {
+      &:not(:last-child) {
+        border-bottom: _rem(.1) solid $medium-grey;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-family: var(--font-family--default);
+    text-decoration: none;
+    width: 100%;
+
+    &--1 {
+      text-align: center;
+      font-size: var(--font-size--msmall);
+      line-height: var(--line-height--nospace);
+      letter-spacing: var(--letter-spacing--medium);
+      color: var(--text-color--light);
+      padding: 2.4rem 1.6rem;
+      transition: background-color var(--transition-duration--default) linear;
+
+      &:focus-within, &:hover {
+        background-color: var(--pa-link);
+        text-decoration: none;
+      }
+
+      &:focus-visible {
+        outline: .2rem solid var(--sky-blue);
+        outline-offset: 0;
+      }
+
+      &.horizontal-menu__link--active-trail {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          inset: calc(100% - .9rem) .5rem .5rem .5rem;
+          background-color: var(--sky-blue);
+        }
+      }
+
+    }
+
+    &--2 {
+      color: var(--text-color--default);
+      font-size: var(--font-size--xsmall);
+      line-height: var(--line-height--xsnug);
+      letter-spacing: var(--letter-spacing--medium);
+      padding: _rem(1.6);
+      @include bp(xl) {
+        font-size: var(--font-size--msmall);
+      }
+
+      &:focus-visible {
+        outline-offset: _rem(-.1);
+      }
+    }
+  }
+
+  &__toggle {
+    background: var(--pa-link);
+    border: none;
+    position: absolute;
+    inset: 0 -.8rem 0 calc(100% - .8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 1;
+
+    &:focus-visible {
+      opacity: 1;
+      outline: .2rem solid var(--sky-blue);
+      outline-offset: 0;
+    }
+
+    &[aria-expanded="true"] + .horizontal-menu__menu {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__chevron .sprite {
+    color: var(--white);
+    width: 1.6rem;
+    height: auto;
+  }
+}
