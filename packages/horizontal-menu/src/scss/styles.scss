@@ -2,10 +2,9 @@
 @import '../../../base/src/scss/imports/layout';
 
 .horizontal-menu {
-  outline: .2rem dashed var(--white);
-
   &__menu {
     display: flex;
+    flex-wrap: wrap;
 
     &--2 {
       background: var(--white);
@@ -19,6 +18,7 @@
       padding: .5rem 2rem;
       min-width: _rem(23);
       z-index: 2;
+      height: 0;
     }
   }
 
@@ -114,6 +114,7 @@
     &[aria-expanded="true"] + .horizontal-menu__menu {
       visibility: visible;
       opacity: 1;
+      height: auto;
     }
   }
 

@@ -1,5 +1,9 @@
 <header class="header">
-  <div class="header__gradient"></div>
+  <div class="header__gradient">
+    <div class="header__gradient-left"></div>
+    <div class="header__gradient-right"></div>
+    <div class="header__gradient-center"></div>
+  </div>
   <div class="header__geometrics">
     <svg width="0" height="0" style="position:absolute">
       <defs>
@@ -29,33 +33,3 @@
   </div>
   {% endif %}
 </header>
-{#
-
-<header class="header">
-  <div class="header__gradient"></div>
-  <div class="header__geometrics">
-    <svg width="0" height="0" style="position:absolute">
-      <defs>
-        <linearGradient id="hub-geometric-header-gradient" x1=".182" x2=".174" y1=".579" y2=".706" gradientUnits="objectBoundingBox">
-          <stop offset="0" stop-color="var(--sky-blue)"/>
-          <stop offset="1" stop-color="var(--sky-blue)" stop-opacity="0"/>
-        </linearGradient>
-      </defs>
-    </svg>
-    {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
-    {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
-  </div>
-  <div class="header__inner">
-    <div class="header__dogear">
-      <a class="header__branding" href="/">
-        {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
-        <span class="visually-hidden">Penn State World Campus</span>
-      </a>
-    </div>
-    <div class="header__content">
-
-    </div>
-  </div>
-
-</header>
-#}

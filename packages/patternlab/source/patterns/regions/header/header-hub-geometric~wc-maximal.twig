@@ -38,6 +38,57 @@
   } only %}
 {% endset %}
 
+{% set horizontal_menu %}
+  {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
+    menu_name: 'Example',
+    items: [
+      { title: 'Home', url: '#', in_active_trail: true },
+      { title: 'About Us', url: '#', below: [
+        { title: 'Our Story', url: '#' },
+        { title: 'Mission', url: '#' },
+        { title: 'Our Leadership', url: '#' },
+        { title: 'Our Students', url: '#' },
+        { title: 'Why World Campus', url: '#' },
+        { title: 'News and Features', url: '#' },
+        { title: 'Success Stories', url: '#' },
+        { title: 'Employment', url: '#' },
+      ]},
+      { title: 'Degrees and Certificates', url: '#', below: [
+
+      ]},
+      { title: 'How Online Learning Works', url: '#', below: [
+        { title: 'Online Learning Experience', url: '#' },
+        { title: 'Student Services', url: '#' },
+        { title: 'Dedication to Accessibility', url: '#' },
+        { title: 'How it Works (FAQs)', url: '#' },
+      ]},
+      { title: 'Admissions', url: '#', below: [
+        { title: 'How to Apply', url: '#' },
+        { title: 'Returning Students', url: '#' },
+        { title: 'Transfer Students', url: '#' },
+        { title: 'International Students', url: '#' },
+        { title: 'Academic Calendar', url: '#' },
+        { title: 'Planning Resources', url: '#' },
+      ]},
+      { title: 'Tuition and Financial Aid', url: '#', below: [
+        { title: 'Tuition and Costs', url: '#' },
+        { title: 'Financial Aid', url: '#' },
+        { title: 'Scholarships', url: '#' },
+        { title: 'Payment Options', url: '#' },
+      ]},
+      { title: 'Military', url: '#', below: [
+        { title: 'Education Benefits and Financial Aid', url: '#' },
+        { title: 'Admissions and Transfer Credits', url: '#' },
+        { title: 'Military Support', url: '#' },
+        { title: 'What You Can Expect', url: '#' },
+        { title: 'Awards and Affiliations', url: '#' },
+        { title: 'Events', url: '#' },
+        { title: 'Service Members', url: '#' },
+        { title: 'Veterans', url: '#' },
+      ]},
+    ],
+  } only %}
+{% endset %}
 {% set content %}
   <div class="header__small">
     <div class="header__small-utility">
@@ -78,7 +129,7 @@
     } only %}
   </div>
   <div class="header__large-menu">
-    <p style="display:flex;align-items:center;justify-content: center;color:white;outline:.2rem dashed white;min-height:5rem;outline-offset:-.2rem;width:100%;">Menu Goes Here.</p>
+    {{ horizontal_menu }}
   </div>
 {% endset %}
 {% include '@regions/header/header.twig' %}
