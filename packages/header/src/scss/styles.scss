@@ -133,9 +133,13 @@
 
   &__overflow {
     position: relative;
-    padding: 0 _rem(4);
+    padding: 0 _rem(2);
     max-width: _rem(122);
     margin: auto;
+
+    @include bp(m) {
+      padding: 0 _rem(4);
+    }
   }
 }
 

@@ -1,0 +1,71 @@
+@import '../../../base/src/scss/imports/variables';
+
+.vertical-menu {
+
+  &__menu--2 {
+    margin-left: _rem(2);
+    flex-basis: 100%;
+    visibility: hidden;
+    transition: height var(--transition-duration--default) ease-in-out,
+                visibility var(--transition-duration--default) ease-in-out;
+  }
+
+  &__toggle {
+    background: transparent;
+    color: var(--pa-link);
+    border: none;
+    font-size: _rem(1.6);
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: _rem(.2) solid var(--sky-blue);
+      outline-offset: 0;
+    }
+
+    .sprite {
+      transition: transform var(--transition-duration--default) linear;
+    }
+
+    &[aria-expanded="true"] {
+      .sprite {
+        transform: rotateX(-180deg)
+      }
+      & + .vertical-menu__menu {
+        visibility: inherit;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--1 {
+      border-bottom: _rem(.2) solid var(--slate-light);
+    }
+  }
+
+  &__link {
+    color: var(--text-color--default);
+    display: block;
+    font-weight: var(--font-weight--regular);
+    flex: 1;
+    padding: _rem(1) 0;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--pa-link);
+    }
+
+    &:focus-visible {
+      color: var(--pa-link);
+      outline-offset: 0;
+      text-decoration: underline;
+    }
+
+    &.focus-visible {
+      color: var(--pa-link);
+      text-decoration: underline;
+    }
+  }
+}
