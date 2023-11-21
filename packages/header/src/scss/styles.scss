@@ -130,6 +130,8 @@
   &__overflow {
     position: relative;
     padding: 0 _rem(4);
+    max-width: _rem(122);
+    margin: auto;
   }
 }
 
