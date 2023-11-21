@@ -39,7 +39,6 @@
 
       // Close an open drop-button menu when focus leaves the component.
       drop_button.addEventListener('focusout', (e) => {
-        console.log(e);
         if (!drop_button.contains(e.relatedTarget)) {
           toggle.setAttribute('aria-expanded', 'false');
         }

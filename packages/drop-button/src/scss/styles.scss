@@ -92,11 +92,11 @@
 
     .drop-button__content {
       left: initial;
-      right: _rem(-2);
+      right: calc(_rem(-2.5) + 50%);
     }
   }
 
-  &--full-width {
+  &--stretch {
     .drop-button {
       &__toggle {
         flex-direction: column;

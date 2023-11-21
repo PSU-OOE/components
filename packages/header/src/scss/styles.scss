@@ -113,7 +113,11 @@
     align-items: center;
     position: relative;
     min-width: _rem(18);
-    padding-right: _rem(4);
+    padding-right: _rem(2);
+
+    @include bp(m) {
+      padding-right: _rem(4);
+    }
 
     &::before {
       background: var(--white);
