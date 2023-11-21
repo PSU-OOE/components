@@ -56,83 +56,84 @@
       }
     }
   }
-}
 
-.header__inner {
-  max-width: 122rem;
-  margin: 0 auto;
-  display: flex;
-  padding-bottom: _rem(1);
-}
-
-.header__dogear {
-  position: relative;
-  flex: 0 1 auto;
-  &::before {
-    content: '';
-    background-color: var(--white);
-    background-image: linear-gradient(90deg, rgba(204,218,230,0.5) 0%, rgba(0,30,68,0) 100%);
-    position: absolute;
-    inset: 0;
+  &__inner {
+    max-width: 122rem;
+    margin: 0 auto;
+    display: flex;
   }
 
-  // Work around a rendering glitch that can show a vertical line due to rounding errors.
-  &::after {
-    position: absolute;
-    inset: 0 -0.1rem 0.1rem 100%;
-    content: "";
-    background: white;
-  }
-}
-
-@media screen and (min-width: 1220px) {
-  .header__dogear::before {
-    inset: 0 0 0 calc((-100vw + 1220px) / 2);
-  }
-}
-
-.header__branding {
-  display: inline-block;
-  padding: _rem(1) _rem(.4) _rem(1) _rem(1);
-  position: relative;
-
-  &:focus-visible {
-    outline-offset: _rem(-.2);
-  }
-
-  .sprite {
-    height: auto;
-    color: var(--beaver-blue);
-    width: 100%;
-    min-width: _rem(10);
-    max-width: _rem(18.5);
-  }
-}
-
-.header__content {
-  display: flex;
-  flex: 1 0 auto;
-  align-items: center;
-  position: relative;
-  min-width: _rem(18);
-  padding-right: _rem(2);
-
-  &::before {
-    background: var(--white);
-    content: "";
-    height: 100%;
-    aspect-ratio: 1/1;
-    clip-path: polygon(0 0, 0 100%, 100% 0);
-    display: inline-block;
+  &__dogear {
     position: relative;
-    border-top: _rem(.1) solid var(--white);
+    flex: 0 1 auto;
+
+    &::before {
+      content: '';
+      background-color: var(--white);
+      background-image: linear-gradient(90deg, rgba(204,218,230,0.5) 0%, rgba(0,30,68,0) 100%);
+      position: absolute;
+      inset: 0;
+
+      // Extends the pseudo-element all the way to the viewport left edge, but no further.
+      @media screen and (min-width: 1220px) {
+        inset: 0 0 0 calc((-100vw + 1220px) / 2);
+      }
+    }
+
+    // Work around a rendering glitch that can show a vertical line due to rounding errors.
+    &::after {
+      position: absolute;
+      inset: 0.1rem -0.1rem 0.1rem 99%;
+      content: "";
+      background: white;
+    }
+  }
+
+  &__branding {
+    display: inline-block;
+    padding: _rem(1.5) _rem(1.5) _rem(1.5) _rem(2);
+    position: relative;
+
+    &:focus-visible {
+      outline-offset: _rem(-.2);
+    }
+
+    .sprite {
+      height: auto;
+      color: var(--beaver-blue);
+      width: 100%;
+      min-width: _rem(10);
+      max-width: _rem(18.5);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    position: relative;
+    min-width: _rem(18);
+    padding-right: _rem(4);
+
+    &::before {
+      background: var(--white);
+      content: "";
+      height: 101%;
+      aspect-ratio: 1/1;
+      clip-path: polygon(0 0, 0 100%, 100% 0);
+      display: inline-block;
+      position: relative;
+      border-top: _rem(.1) solid var(--white);
+    }
+  }
+
+  &__overflow {
+    position: relative;
+    padding: 0 _rem(4);
   }
 }
 
-.header__overflow {
-  position: relative;
-}
-
+// Prospect site specifics -- move to prospect site.
 .header__small {
   display: flex;
   gap: _rem(4);
@@ -141,21 +142,21 @@
   @include bp(m) {
     display: none;
   }
-}
 
-.header__small-utility {
-  display: flex;
-  gap: _rem(1);
-}
+  &-utility {
+    display: flex;
+    gap: _rem(1);
+  }
 
-.header__small-cta {
-  display: flex;
-  max-width: _rem(122);
-  margin: auto;
-  padding: 0 -rem(1) _rem(1) _rem(1);
+  &-cta {
+    display: flex;
+    max-width: _rem(122);
+    margin: auto;
+    padding: _rem(1);
 
-  @include bp(m) {
-    display: none;
+    @include bp(m) {
+      display: none;
+    }
   }
 }
 
@@ -166,51 +167,55 @@
     margin-left: auto;
     gap: _rem(4);
   }
-}
 
-.header__large-utility {
-  display: flex;
-  align-items: center;
-  gap: _rem(2);
-}
+  &-utility {
+    display: flex;
+    align-items: center;
+    gap: _rem(2);
+  }
 
-.header__large-utility-links {
-  display: flex;
-  align-items: center;
-  gap: _rem(2);
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
+  &-utility-links {
+    display: flex;
+    align-items: center;
+    gap: _rem(2);
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
 
-.header__large-utility-link {
-  color: var(--text-color--light);
-  text-decoration: none;
-  font-size: var(--font-size--xsmall);
-  line-height: var(--line-height--nospace);
-  letter-spacing: var(--letter-spacing--medium);
+  &-utility-link {
+    color: var(--text-color--light);
+    text-decoration: none;
+    font-size: var(--font-size--xsmall);
+    line-height: var(--line-height--nospace);
+    letter-spacing: var(--letter-spacing--medium);
 
-  @include bp(xl) {
-    font-size: var(--font-size--msmall);
+    @include bp(xl) {
+      font-size: var(--font-size--msmall);
+    }
+  }
+
+  &-menu {
+    display: none;
+
+    @include bp(m) {
+      display: initial;
+    }
   }
 }
 
-.header__large-menu {
-  display: none;
+// Minimal representation (i.e. campaign pages).
+.tagline {
+  margin-top: _rem(1);
+  line-height: 0;
+
+  @include bp(xs) {
+    margin-left: _rem(2);
+  }
 
   @include bp(m) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 _rem(3);
+    margin-left: _rem(4);
   }
-}
-
-// Minimal representation.
-.tagline {
-  line-height: 0;
-  margin-top: auto;
-  margin-bottom: _rem(1);
 
   &::before {
     content: '';
@@ -251,5 +256,17 @@
 
   &__strong {
     font-weight: var(--font-weight--extrabold);
+  }
+}
+
+.overflow-gap {
+  padding: _rem(.5) 0;
+}
+
+.header__small-overflow {
+  padding: .5rem 0;
+
+  @include bp(m) {
+    display: none;
   }
 }
