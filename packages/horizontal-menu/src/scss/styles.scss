@@ -56,7 +56,7 @@
       padding: 2.4rem 1.6rem;
       transition: background-color var(--transition-duration--default) linear;
 
-      &:focus-within, &:hover {
+      &:focus-within, &:hover, &:is(.horizontal-menu__item:has([aria-expanded="true"]) *) {
         background-color: var(--pa-link);
         text-decoration: none;
       }
