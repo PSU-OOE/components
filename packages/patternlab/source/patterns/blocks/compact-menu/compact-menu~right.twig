@@ -1,8 +1,10 @@
 {% set menu %}
-  {% include '@blocks/compact-menu/compact-menu.twig' with {
-    align: 'right',
-    menu: 'The menu goes here.'
-  } only %}
+  <div style="display:flex; justify-content: flex-end">
+    {% include '@blocks/compact-menu/compact-menu.twig' with {
+      align: 'right',
+      menu: 'The menu goes here.'
+    } only %}
+  </div>
 {% endset %}
 
 {% include '@molecules/callout/callout.twig' with {
