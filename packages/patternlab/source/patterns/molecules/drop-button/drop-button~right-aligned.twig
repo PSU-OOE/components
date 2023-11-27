@@ -1,5 +1,12 @@
-{% include '@molecules/drop-button/drop-button.twig' with {
-    align: 'right',
-    toggle_content: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
-    panel_content: 'Test content',
+{% set menu %}
+  <div style="display:flex; justify-content: flex-end">
+    {% include '@molecules/drop-button/drop-button.twig' with {
+      align: 'right',
+      toggle_content: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
+      panel_content: 'Test content',
+    } only %}
+  </div>
+{% endset %}
+{% include '@molecules/callout/callout.twig' with {
+  content: menu,
 } only %}

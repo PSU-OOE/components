@@ -1,4 +1,9 @@
-{% include '@molecules/drop-button/drop-button.twig' with {
+{% set menu %}
+  {% include '@molecules/drop-button/drop-button.twig' with {
     toggle_content: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
     panel_content: 'Test content',
+  } only %}
+{% endset %}
+{% include '@molecules/callout/callout.twig' with {
+  content: menu,
 } only %}
