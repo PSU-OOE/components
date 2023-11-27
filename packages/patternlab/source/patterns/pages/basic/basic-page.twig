@@ -1,0 +1,306 @@
+{% set header_logo %}
+  {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+{% endset %}
+{% set site_name = 'Penn State World Campus' %}
+{% set how_to_apply %}
+  {% include '@atoms/cta/cta-block.twig' with {
+    label: 'How to Apply',
+    url: '#',
+    color: 'light-blue',
+    compact: true,
+  } only %}{% endset %}
+{% set request_info %}
+  {% include '@atoms/cta/cta-block.twig' with {
+    label: 'Request Info',
+    url: '#',
+    color: 'reversed',
+    compact: true,
+  } only %}
+{% endset %}
+
+{% set search_horizontal %}
+  {% include '@blocks/compact-search/compact-search.twig' with {
+    align: 'right',
+    orientation: 'horizontal',
+    search_form: 'The search form goes here.'
+  } only %}
+{% endset %}
+
+{% set search_vertical %}
+  {% include '@blocks/compact-search/compact-search.twig' with {
+    align: 'right',
+    search_form: 'The search form goes here.'
+  } only %}
+{% endset %}
+
+{% set horizontal_menu %}
+  {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
+    menu_name: 'Primary navigation menu',
+    items: [
+      { title: 'Home', url: '#', in_active_trail: true },
+      { title: 'About Us', url: '#', below: [
+        { title: 'Our Story', url: '#' },
+        { title: 'Mission', url: '#' },
+        { title: 'Our Leadership', url: '#' },
+        { title: 'Our Students', url: '#' },
+        { title: 'Why World Campus', url: '#' },
+        { title: 'News and Features', url: '#' },
+        { title: 'Success Stories', url: '#' },
+        { title: 'Employment', url: '#' },
+      ]},
+      { title: 'Degrees and Certificates', url: '#', below: [
+
+      ]},
+      { title: 'How Online Learning Works', url: '#', below: [
+        { title: 'Online Learning Experience', url: '#' },
+        { title: 'Student Services', url: '#' },
+        { title: 'Dedication to Accessibility', url: '#' },
+        { title: 'How it Works (FAQs)', url: '#' },
+      ]},
+      { title: 'Admissions', url: '#', below: [
+        { title: 'How to Apply', url: '#' },
+        { title: 'Returning Students', url: '#' },
+        { title: 'Transfer Students', url: '#' },
+        { title: 'International Students', url: '#' },
+        { title: 'Academic Calendar', url: '#' },
+        { title: 'Planning Resources', url: '#' },
+      ]},
+      { title: 'Tuition and Financial Aid', url: '#', below: [
+        { title: 'Tuition and Costs', url: '#' },
+        { title: 'Financial Aid', url: '#' },
+        { title: 'Scholarships', url: '#' },
+        { title: 'Payment Options', url: '#' },
+      ]},
+      { title: 'Military', url: '#', below: [
+        { title: 'Education Benefits and Financial Aid', url: '#' },
+        { title: 'Admissions and Transfer Credits', url: '#' },
+        { title: 'Military Support', url: '#' },
+        { title: 'What You Can Expect', url: '#' },
+        { title: 'Awards and Affiliations', url: '#' },
+        { title: 'Events', url: '#' },
+        { title: 'Service Members', url: '#' },
+        { title: 'Veterans', url: '#' },
+      ]},
+    ],
+  } only %}
+{% endset %}
+
+{% set vertical_menu %}
+  {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+    menu_name: 'Primary navigation menu',
+    items: [
+      { title: 'Home', url: '#', in_active_trail: true },
+      { title: 'About Us', url: '#', below: [
+        { title: 'Our Story', url: '#' },
+        { title: 'Mission', url: '#' },
+        { title: 'Our Leadership', url: '#' },
+        { title: 'Our Students', url: '#' },
+        { title: 'Why World Campus', url: '#' },
+        { title: 'News and Features', url: '#' },
+        { title: 'Success Stories', url: '#' },
+        { title: 'Employment', url: '#' },
+      ]},
+      { title: 'Degrees and Certificates', url: '#', below: [
+
+      ]},
+      { title: 'How Online Learning Works', url: '#', below: [
+        { title: 'Online Learning Experience', url: '#' },
+        { title: 'Student Services', url: '#' },
+        { title: 'Dedication to Accessibility', url: '#' },
+        { title: 'How it Works (FAQs)', url: '#' },
+      ]},
+      { title: 'Admissions', url: '#', below: [
+        { title: 'How to Apply', url: '#' },
+        { title: 'Returning Students', url: '#' },
+        { title: 'Transfer Students', url: '#' },
+        { title: 'International Students', url: '#' },
+        { title: 'Academic Calendar', url: '#' },
+        { title: 'Planning Resources', url: '#' },
+      ]},
+      { title: 'Tuition and Financial Aid', url: '#', below: [
+        { title: 'Tuition and Costs', url: '#' },
+        { title: 'Financial Aid', url: '#' },
+        { title: 'Scholarships', url: '#' },
+        { title: 'Payment Options', url: '#' },
+      ]},
+      { title: 'Military', url: '#', below: [
+        { title: 'Education Benefits and Financial Aid', url: '#' },
+        { title: 'Admissions and Transfer Credits', url: '#' },
+        { title: 'Military Support', url: '#' },
+        { title: 'What You Can Expect', url: '#' },
+        { title: 'Awards and Affiliations', url: '#' },
+        { title: 'Events', url: '#' },
+        { title: 'Service Members', url: '#' },
+        { title: 'Veterans', url: '#' },
+      ]},
+    ],
+  } only %}
+{% endset %}
+
+{% set menu %}
+  {% include '@blocks/compact-menu/compact-menu.twig' with {
+    align: 'right',
+    menu: vertical_menu
+  } only %}
+{% endset %}
+
+{% set header_content %}
+  <div class="header__small">
+    <div class="header__small-utility">
+      <div class="header__search">
+        {{ search_vertical }}
+      </div>
+      <div class="header__menu">
+        {{ menu }}
+      </div>
+    </div>
+  </div>
+  <div class="header__large">
+    <div class="header__large-utility">
+      <ul class="header__large-utility-links" role="list">
+        <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Current Students</a></li>
+        <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Alumni</a></li>
+        <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Events</a></li>
+      </ul>
+      <div class="header__large-search">
+        {{ search_horizontal }}
+      </div>
+    </div>
+    <div class="header__large-cta">
+      {% include '@atoms/cta/cta-group.twig' with {
+        ctas: [how_to_apply, request_info],
+        expand_to_fit: true,
+      } only %}
+    </div>
+  </div>
+{% endset %}
+{% set header_overflow %}
+  <div class="header__small-cta">
+    {% include '@atoms/cta/cta-group.twig' with {
+      ctas: [how_to_apply, request_info],
+      expand_to_fit: true,
+    } only %}
+  </div>
+  <div class="header__large-menu">
+    {{ horizontal_menu }}
+  </div>
+{% endset %}
+{% include '@regions/header/header.twig' with {
+  logo: header_logo,
+  site_name: site_name,
+  content: header_content,
+  overflow: header_overflow,
+} only %}
+{% set page_title %}
+  <div style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;padding:0 4rem;">
+    <h1>Basic Page</h1>
+  </div>
+{% endset %}
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'light-grey',
+  background_image: 'hub-geometric:topleft',
+  content: page_title,
+} only %}
+{% set page_content %}
+  <div style="margin: auto;display:flex;flex-wrap:wrap; gap:5%; max-width: 119rem;padding:0 4rem;">
+    <p style="flex: 1 1 0; min-width: 40rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras. Neque gravida in fermentum et sollicitudin ac. Gravida in fermentum et sollicitudin ac. Duis convallis convallis tellus id interdum. Neque volutpat ac tincidunt vitae semper. Non nisi est sit amet facilisis magna etiam tempor orci. Sit amet commodo nulla facilisi nullam vehicula. Eu volutpat odio facilisis mauris sit amet massa vitae tortor. Ante metus dictum at tempor commodo ullamcorper a lacus. Et molestie ac feugiat sed lectus vestibulum. Risus commodo viverra maecenas accumsan. Pretium vulputate sapien nec sagittis aliquam.</p>
+    <div style="flex: 1 1 0;min-width: 40rem;">
+      {% include '@organisms/quote/quote.twig' with {
+        headshot: "<img src=\"https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg\" width=\"400\" height=\"400\" alt=\"carrie tilley and family\">",
+        reverse: false,
+        quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+        attribution: "Carrie Tilley",
+        byline: "Master of Engineering in Systems Engineering graduate",
+        after_quote: ""
+      } only %}
+    </div>
+  </div>
+{% endset %}
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'white',
+  content: page_content,
+} only %}
+
+{% set tile_nav_content %}
+  <div style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;padding:0 4rem;">
+    {% set tile %}
+      {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+        link: {
+          url: '#',
+          label: 'Navigation Title',
+        },
+        description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
+      } only %}
+
+    {% endset %}
+    {% set tile2 %}
+      {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+        link: {
+          url: '#',
+          label: 'Navigation Title with a really long title that will go to two lines eventually',
+        },
+        description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
+      } only %}
+    {% endset %}
+    {% include '@molecules/grid/grid.twig' with {
+      items: [tile, tile2, tile],
+    } only %}
+  </div>
+{% endset %}
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'light-grey',
+  background_image: 'hub-geometric:topright',
+  content: tile_nav_content,
+} only %}
+{% set overlay_content %}
+  {% set headshot %}
+    <img src="https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg" width="400" height="400" alt="carrie tilley and family" loading="lazy">
+  {% endset %}
+  {% include '@organisms/quote/quote.twig' with {
+    headshot: headshot,
+    reverse: true,
+    quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+    attribution: "Carrie Tilley",
+    byline: "Master of Engineering in Systems Engineering graduate",
+    after_quote: ""
+  } %}
+{% endset %}
+{% set overlay_image %}
+  <picture class="responsive-image responsive-image--feature-banner">
+    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2021-12/quote-background-entry-gates-snow.jpg.webp?itok=8J4_R3Oq 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
+    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2021-12/quote-background-entry-gates-snow.jpg.webp?itok=GOfpUKe2 1x" type="image/webp" width="950" height="534">
+    <img src="https://test.worldcampus.psu.edu/sites/default/files/2021-12/quote-background-entry-gates-snow.jpg?itok=8J4_R3Oq" width="1920" height="840" alt="Snowy sidewalk at Penn State's University Park campus" loading="lazy">
+  </picture>
+{% endset %}
+
+{% include '@molecules/overlay/overlay.twig' with {
+  image: overlay_image,
+  content: overlay_content,
+  overlay_bg_color: "blue-gradient",
+  column_width: "normal",
+  overlay_width: "wide"
+} %}
+
+{% set footer_top %}
+  <div style="max-width: 119rem;margin:auto;display:flex;padding:0 4rem;min-height:25rem;">
+    Footer top content
+  </div>
+{% endset %}
+{% set footer_bottom %}
+  <div style="color:#fff;max-width: 119rem;margin:auto;display:flex;padding:0 4rem;min-height:12rem;">
+    Footer bottom content
+  </div>
+{% endset %}
+<footer>
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'light-grey',
+    background_image: 'hub-geometric:topleft',
+    content: footer_top,
+  } only %}
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'beaver-blue',
+    background_image: 'hub-geometric:bottomright',
+    content: footer_bottom,
+  } only %}
+</footer>
+

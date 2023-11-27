@@ -159,6 +159,13 @@
           "paths": [
             "packages"
           ]
+        },
+        {
+          "id": "pages",
+          "recursive": false,
+          "paths": [
+            "packages"
+          ]
         }
       ],
       "alterTwigEnv": [
