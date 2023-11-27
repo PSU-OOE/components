@@ -1867,6 +1867,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/more-menu@workspace:packages/more-menu":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/more-menu@workspace:packages/more-menu"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/polyfill-focus-visible": ^1.0
+  peerDependencies:
+    "@psu-ooe/background-container": ^2.0
+  peerDependenciesMeta:
+    "@psu-ooe/background-container":
+      optional: true
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/navigation-tile@^1.0, @psu-ooe/navigation-tile@workspace:packages/navigation-tile":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/navigation-tile@workspace:packages/navigation-tile"
