@@ -1,9 +1,4 @@
 <header class="header">
-  <div class="header__gradient">
-    <div class="header__gradient-left"></div>
-    <div class="header__gradient-right"></div>
-    <div class="header__gradient-center"></div>
-  </div>
   <div class="header__geometrics">
     <svg width="0" height="0" style="position:absolute">
       <defs>
@@ -18,18 +13,19 @@
   </div>
   <div class="header__inner">
     <div class="header__dogear">
-      <a class="header__branding" href="/">
-        {{ logo }}
-        <span class="visually-hidden">{{ site_name }}</span>
-      </a>
+      {% block dogear_content %}
+        {{ dogear_content }}
+      {% endblock %}
     </div>
-    <div class="header__content header__content">
-      {{ content }}
+    <div class="header__content">
+      {% block content %}
+        {{ content }}
+      {% endblock %}
     </div>
   </div>
-  {% if overflow %}
   <div class="header__overflow">
-    {{ overflow }}
+    {% block overflow %}
+      {{ overflow }}
+    {% endblock %}
   </div>
-  {% endif %}
 </header>

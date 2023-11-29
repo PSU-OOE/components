@@ -58,13 +58,25 @@
       flex-direction: column;
       gap: _rem(.5);
 
-      .compact-search__toggle-icon .sprite {
-        width: 2.1rem;
+      @include bp(xs) {
+        gap: _rem(.7);
+      }
+
+      .compact-search__toggle-sprite .sprite {
+        width: _rem(2.1);
         height: auto;
+
+        @include bp(xs) {
+          width: _rem(2.6);
+        }
       }
 
       .compact-search__toggle-label {
         padding-bottom: .2em;
+
+        @include bp(xs) {
+          font-size: var(--font-size--3xsmall);
+        }
       }
     }
 
@@ -72,7 +84,7 @@
       flex-direction: row;
       gap: _rem(.6);
 
-      .compact-search__toggle-icon .sprite {
+      .compact-search__toggle-sprite .sprite {
         width: 1.6rem;
         height: auto;
       }

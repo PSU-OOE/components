@@ -22,6 +22,6 @@
   }
 
   & > .cta-block:not(:last-of-type) {
-    margin-right: .5rem;
+    margin-right: min(5%, _rem(1));
   }
 }

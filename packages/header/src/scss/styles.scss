@@ -2,44 +2,36 @@
 @import '../../../base/src/scss/imports/layout';
 
 .header {
-  color: var(--white);
-  overflow-x: clip;
   position: relative;
 
-  &__gradient {
-    &-left, &-right {
-      content: '';
-      position: absolute;
-    }
-
-    &-left {
-      inset: 0 50% 0 0;
-      background: var(--beaver-blue);
-    }
-
-    &-right {
-      inset: 0 0 0 50%;
-      background: var(--nittany-navy);
-    }
-    &-center {
-      position: absolute;
-      width: _rem(88);
-      left: 0;
-      right: 0;
-      max-width: 100%;
-      height: 100%;
-      margin: auto;
-      background: linear-gradient(90deg, rgba(30,64,124,1) 0%, rgba(0,30,68,1) 100%);
-    }
-  }
+  // Straight beaver blue from 0% to 44rem left of center, then transition
+  // from beaver blue to nittany navy from 44rem left of center to 44rem right
+  // of center, then straight nittany navy from 44rem right of center to 100%.
+  background: linear-gradient(
+    to right,
+    var(--beaver-blue) 0%,
+    var(--beaver-blue) calc(50% - _rem(44)),
+    var(--nittany-navy) calc(50% + _rem(44)),
+    var(--nittany-navy) 100%
+  );
 
   &__geometrics {
-    pointer-events: none;
     position: absolute;
     inset: 0;
     overflow: hidden;
+
+    // The design calls for a sky-blue linear gradient at a 2% angle overlaid
+    // on the geometric lines. The hub geometric sprite has an API that takes
+    // an optional fill property, so we can apply this unique gradient, tightly
+    // scoped to this particular context.
+    //
+    // @see https://github.com/PSU-OOE/components/blob/bleeding-edge-headers/packages/sprite/src/assets/hub-geometric.svg
     --hub-geometric-gradient: url(#hub-geometric-header-gradient);
 
+    // Two sprites are used to form the header geometrics design.  Since the
+    // element that provides the gradient occupies the :first-child position
+    // in the geometrics container, the sprites occupy the second and third
+    // positions.
     .sprite {
       position: absolute;
       width: 71.8rem;
@@ -58,76 +50,129 @@
   }
 
   &__inner {
-    max-width: 122rem;
+    max-width: _rem(122);
     margin: 0 auto;
-    display: flex;
+    padding: 0 _rem(2);
+    display: grid;
+    grid-template-columns: min(50%, _rem(24)) auto;
+
+    @include bp(m) {
+      padding: 0 _rem(4);
+    }
   }
 
   &__dogear {
+    height: min-content;
     position: relative;
-    flex: 0 1 auto;
+    padding: _rem(1) clamp(_rem(5), #{'calc(100% / 3)'}, _rem(7.5)) _rem(1) 0;
+
+    // This clip path forms the "45 degree" part of the dogear.  There are a
+    // few unique things going on here.  First off, the top of the clip path
+    // starts at -.1rem above the dogear to work around what seems to be a
+    // rounding error that sometimes shows an extremely thin blue line above
+    // the dogear.  Second, because the dogear breaks free of its container
+    // on the left-hand side to extend to the viewport edge, the clip-path
+    // also has to extend to the left-hand edge. This is accomplished by using
+    // a -2rem left bound.  Finally, to form the 45 degree angle, I've chosen
+    // to extend the clip path from the upper-right-hand corner of the element
+    // to an arbitrarily chosen 100vw down and to the left.  The important bit
+    // here is that the lower-left end of the clip-path should be taller and
+    // wider than the dogear.  A length of 100vw should ensure this.
+    clip-path: polygon(
+      _rem(-2) _rem(-.1),
+      100% _rem(-.1),
+      calc(100% - 100vw) 100vw
+    );
+
+    @include bp(m) {
+      padding-top: _rem(1.5);
+      padding-bottom: _rem(1.5);
+
+      // Update the clip-path to extend -4rem to the left to account for the
+      // increased padding on the container.
+      clip-path: polygon(
+        _rem(-4) _rem(-.1),
+        100% _rem(-.1),
+        calc(100% - 100vw) 100vw
+      );
+    }
+
+    @media screen and (min-width: 1180px) {
+      // Update the clip path to extend to the ege of the viewport using the
+      // same math as the ::before pseudo-element of the dogear element.
+      clip-path: polygon(
+        calc((-100vw + _rem(110)) / 2) _rem(-.1),
+        100% _rem(-.1),
+        calc(100% - 100vw) 100vw
+      );
+    }
 
     &::before {
       content: '';
+      position: absolute;
+
+      // Extend the pseudo-element -2rem to the left to meet the viewport edge.
+      inset: 0 0 0 _rem(-2);
+
       background-color: var(--white);
-      background-image: linear-gradient(90deg, rgba(204,218,230,0.5) 0%, rgba(0,30,68,0) 100%);
-      position: absolute;
-      inset: 0;
+      background-image: linear-gradient(
+        to right,
+        #{'color-mix(in srgb, var(--slate-light) 50%, transparent)'},
+        transparent 100%
+      );
 
-      // Extends the pseudo-element all the way to the viewport left edge, but no further.
-      @media screen and (min-width: 1220px) {
-        inset: 0 0 0 calc((-100vw + 1220px) / 2);
+      // @TODO: Remove fallback when appropriate.
+      @supports not (color: color-mix(in srgb, white, white)) {
+        background-image: linear-gradient(
+          to right,
+          rgba($slate-light, 50%),
+          transparent 100%
+        );
       }
-    }
 
-    // Work around a rendering glitch that can show a vertical line due to rounding errors.
-    &::after {
-      position: absolute;
-      inset: 0.1rem -0.1rem 0.1rem 99%;
-      content: "";
-      background: white;
+      @include bp(m) {
+        // Extend the pseudo-element -4rem to compensate for the wider padding.
+        inset: 0 0 0 _rem(-4);
+      }
+
+      @media screen and (min-width: 1180px) {
+
+        // Extends the pseudo-element all the way to the viewport left edge by
+        // taking the negative viewport width, adding the max-width of the
+        // containing element, and dividing that by 2.  It's important not to
+        // overshoot the viewport on the left due to the gradient that must
+        // be applied to the dogear.
+        inset: 0 0 0 calc((-100vw + _rem(110)) / 2);
+      }
     }
   }
 
   &__branding {
-    display: inline-block;
-    padding: _rem(1.5) _rem(1.5) _rem(1.5) _rem(2);
     position: relative;
-
-    &:focus-visible {
-      outline-offset: _rem(-.2);
-    }
+    display: block;
+    color: var(--beaver-blue);
+    width: fit-content;
 
     .sprite {
       height: auto;
-      color: var(--beaver-blue);
-      width: 100%;
-      min-width: _rem(10);
-      max-width: _rem(18.5);
+      width: _rem(13);
+      min-width: _rem(3);
+      max-width: 100%;
+
+      @include bp(xs) {
+        width: _rem(18.5);
+      }
     }
   }
 
   &__content {
     display: flex;
-    flex: 1 0 auto;
     align-items: center;
     position: relative;
-    min-width: _rem(18);
-    padding-right: _rem(2);
+    padding: _rem(.3) 0;
 
     @include bp(m) {
-      padding-right: _rem(4);
-    }
-
-    &::before {
-      background: var(--white);
-      content: "";
-      height: 101%;
-      aspect-ratio: 1/1;
-      clip-path: polygon(0 0, 0 100%, 100% 0);
-      display: inline-block;
-      position: relative;
-      border-top: _rem(.1) solid var(--white);
+      padding: _rem(1) 0 0 0;
     }
   }
 
@@ -155,14 +200,12 @@
 
   &-utility {
     display: flex;
-    gap: _rem(1);
+    align-items: flex-end;
+    gap: _rem(2);
   }
 
   &-cta {
-    display: flex;
-    max-width: _rem(122);
-    margin: auto;
-    padding: _rem(1);
+    padding: _rem(1) 0;
 
     @include bp(m) {
       display: none;
@@ -216,7 +259,6 @@
 
 // Minimal representation (i.e. campaign pages).
 .tagline {
-  margin-top: _rem(1);
   line-height: 0;
 
   @include bp(xs) {
@@ -249,6 +291,7 @@
   }
 
   &__text {
+    color: var(--text-color--light);
     font-family: var(--font-family--default);
     font-size: var(--font-size--5xsmall);
     font-weight: var(--font-weight--bold);
@@ -270,7 +313,7 @@
 }
 
 .overflow-gap {
-  padding: _rem(.5) 0;
+  padding: _rem(.6) 0;
 }
 
 .header__small-overflow {

@@ -1,13 +1,16 @@
-{% set logo %}
-  {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
-{% endset %}
-{% set site_name = 'Penn State World Campus' %}
-{% set content %}
-  <div class="tagline" style="min-width: 26rem;">
-    <span class="tagline__text">A World of Possibilities. <strong class="tagline__strong">Online.</strong></span>
-  </div>
-{% endset %}
-{% set overflow %}
-  <div class="overflow-gap"></div>
-{% endset %}
-{% include '@regions/header/header.twig' %}
+{% embed '@regions/header/header.twig' %}
+  {% block dogear_content %}
+    <a class="header__branding" href="/">
+      {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+      <span class="visually-hidden">Penn State World Campus</span>
+    </a>
+  {% endblock %}
+  {% block content %}
+    <div class="tagline">
+      <span class="tagline__text">A World of Possibilities. <strong class="tagline__strong">Online.</strong></span>
+    </div>
+  {% endblock %}
+  {% block overflow %}
+    <div class="overflow-gap"></div>
+  {% endblock %}
+{% endembed %}
