@@ -48,13 +48,21 @@
 
     &--1 {
       text-align: center;
-      font-size: var(--font-size--msmall);
+      font-size: var(--font-size--xsmall);
       font-weight: var(--font-weight--semibold);
       line-height: var(--line-height--nospace);
       letter-spacing: var(--letter-spacing--medium);
       color: var(--text-color--light);
       padding: 2.4rem 1.6rem;
       transition: background-color var(--transition-duration--default) linear;
+
+      @include bp(l) {
+        font-size: var(--font-size--small);
+      }
+
+      @include bp(xl) {
+        font-size: var(--font-size--msmall);
+      }
 
       &:focus-within, &:hover, &:is(.horizontal-menu__item:has([aria-expanded="true"]) *) {
         background-color: var(--pa-link);

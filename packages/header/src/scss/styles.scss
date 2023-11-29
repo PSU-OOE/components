@@ -258,31 +258,6 @@
   }
 }
 
-.header__large {
-
-  &-utility-links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: _rem(2);
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-
-  &-utility-link {
-    color: var(--text-color--light);
-    text-decoration: none;
-    font-size: var(--font-size--xsmall);
-    line-height: var(--line-height--nospace);
-    letter-spacing: var(--letter-spacing--medium);
-
-    @include bp(xl) {
-      font-size: var(--font-size--msmall);
-    }
-  }
-}
-
 .region--header-tagline {
   color: var(--text-color--light);
 
@@ -294,3 +269,26 @@
     margin-left: _rem(4);
   }
 }
+
+.header__large-utility-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: _rem(2);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.header__large-utility-link {
+  color: var(--text-color--light);
+  text-decoration: none;
+  font-size: var(--font-size--xsmall);
+  line-height: var(--line-height--nospace);
+  letter-spacing: var(--letter-spacing--medium);
+
+  @include bp(xl) {
+    font-size: var(--font-size--msmall);
+  }
+}
+
