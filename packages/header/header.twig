@@ -22,10 +22,12 @@
         {{ content }}
       {% endblock %}
     </div>
-    <div class="header__overflow">
-      {% block overflow %}
-        {{ overflow }}
-      {% endblock %}
-    </div>
+    {% apply spaceless %}
+      <div class="header__overflow">
+        {% block overflow %}
+          {{ overflow }}
+        {% endblock %}
+      </div>
+    {% endapply %}
   </div>
 </header>

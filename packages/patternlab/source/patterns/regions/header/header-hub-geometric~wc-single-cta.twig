@@ -1,93 +1,90 @@
-{% set how_to_apply %}
-  {% include '@atoms/cta/cta-block.twig' with {
-    label: 'How to Apply',
-    url: '#',
-    color: 'light-blue',
-    compact: true,
-  } only %}{% endset %}
-
-{% set search_horizontal %}
-  {% include '@blocks/compact-search/compact-search.twig' with {
-    align: 'right',
-    orientation: 'horizontal',
-    search_form: 'The search form goes here.'
-  } only %}
-{% endset %}
-
-{% set search_vertical %}
-  {% include '@blocks/compact-search/compact-search.twig' with {
-    align: 'right',
-    search_form: 'The search form goes here.'
-  } only %}
-{% endset %}
-
-{% set horizontal_menu %}
-  {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
-    menu_name: 'Primary navigation menu',
-    items: [
-      { title: 'Home', url: '#', in_active_trail: true },
-      { title: 'About Us', url: '#' },
-      { title: 'Degrees and Certificates', url: '#' },
-      { title: 'How Online Learning Works' },
-      { title: 'Admissions', url: '#' },
-      { title: 'Tuition and Financial Aid', url: '#' },
-      { title: 'Military', url: '#'},
-    ],
-  } only %}
-{% endset %}
-
-{% set vertical_menu %}
-  {% include '@organisms/vertical-menu/vertical-menu.twig' with {
-    menu_name: 'Primary navigation menu',
-    items: [
-      { title: 'Home', url: '#', in_active_trail: true },
-      { title: 'About Us', url: '#' },
-      { title: 'Degrees and Certificates', url: '#' },
-      { title: 'How Online Learning Works' },
-      { title: 'Admissions', url: '#' },
-      { title: 'Tuition and Financial Aid', url: '#' },
-      { title: 'Military', url: '#'},
-    ],
-  } only %}
-{% endset %}
-
-{% set menu %}
-  {% include '@blocks/compact-menu/compact-menu.twig' with {
-    align: 'right',
-    menu: vertical_menu
-  } only %}
-{% endset %}
-
 {% embed '@regions/header/header.twig' %}
+
+  {% set how_to_apply %}
+    {% include '@atoms/cta/cta-block.twig' with {
+      label: 'How to Apply',
+      url: '#',
+      color: 'light-blue',
+      compact: true,
+    } only %}{% endset %}
+
+  {% set search_horizontal %}
+    {% include '@blocks/compact-search/compact-search.twig' with {
+      align: 'right',
+      orientation: 'horizontal',
+      search_form: 'The search form goes here.'
+    } only %}
+  {% endset %}
+
+  {% set search_vertical %}
+    {% include '@blocks/compact-search/compact-search.twig' with {
+      align: 'right',
+      search_form: 'The search form goes here.'
+    } only %}
+  {% endset %}
+
+  {% set horizontal_menu %}
+    {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
+      menu_name: 'Primary navigation menu',
+      items: [
+        { title: 'Home', url: '#', in_active_trail: true },
+        { title: 'About Us', url: '#' },
+        { title: 'Degrees and Certificates', url: '#' },
+        { title: 'How Online Learning Works' },
+        { title: 'Admissions', url: '#' },
+        { title: 'Tuition and Financial Aid', url: '#' },
+        { title: 'Military', url: '#'},
+      ],
+    } only %}
+  {% endset %}
+
+  {% set vertical_menu %}
+    {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+      menu_name: 'Primary navigation menu',
+      items: [
+        { title: 'Home', url: '#', in_active_trail: true },
+        { title: 'About Us', url: '#' },
+        { title: 'Degrees and Certificates', url: '#' },
+        { title: 'How Online Learning Works' },
+        { title: 'Admissions', url: '#' },
+        { title: 'Tuition and Financial Aid', url: '#' },
+        { title: 'Military', url: '#'},
+      ],
+    } only %}
+  {% endset %}
+
+  {% set menu %}
+    {% include '@blocks/compact-menu/compact-menu.twig' with {
+      align: 'right',
+      menu: vertical_menu
+    } only %}
+  {% endset %}
+
   {% block dogear_content %}
-    <a class="header__branding" href="/">
-      {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
-      <span class="visually-hidden">Penn State World Campus</span>
-    </a>
+    <div class="region region--header-branding">
+      <a class="branding-block" href="/">
+        {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+        <span class="visually-hidden">Penn State World Campus</span>
+      </a>
+    </div>
   {% endblock %}
   {% block content %}
-    <div class="header__small">
-      <div class="header__small-utility">
-        <div class="header__search">
-          {{ search_vertical }}
-        </div>
-        <div class="header__menu">
-          {{ menu }}
-        </div>
+    <div class="region--header-small-content">
+      <div class="region--header-small-utility">
+        {{ search_vertical }}
+        {{ menu }}
       </div>
     </div>
-    <div class="header__large">
-      <div class="header__large-utility">
+    <div class="region--header-large-content">
+      <div class="region--header-large-utility">
         <ul class="header__large-utility-links" role="list">
           <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Current Students</a></li>
           <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Alumni</a></li>
           <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Events</a></li>
         </ul>
-        <div class="header__large-search">
-          {{ search_horizontal }}
-        </div>
+        {{ search_horizontal }}
       </div>
-      <div class="header__large-cta">
+      <div class="region--header-large-cta">
         {% include '@atoms/cta/cta-group.twig' with {
           ctas: [how_to_apply],
           expand_to_fit: true,
@@ -96,13 +93,13 @@
     </div>
   {% endblock %}
   {% block overflow %}
-    <div class="header__small-cta">
+    <div class="region--header-small-overflow">
       {% include '@atoms/cta/cta-group.twig' with {
         ctas: [how_to_apply],
         expand_to_fit: true,
       } only %}
     </div>
-    <div class="header__large-menu">
+    <div class="region--header-large-overflow">
       {{ horizontal_menu }}
     </div>
   {% endblock %}

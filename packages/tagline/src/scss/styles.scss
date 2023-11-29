@@ -1,0 +1,47 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.tagline {
+  line-height: 0;
+
+  &::before {
+    content: '';
+    display: block;
+    background-color: var(--sky-blue);
+    height: _rem(.1);
+    width: _rem(6);
+    margin-bottom: _rem(.6);
+
+    @include bp(xs) {
+      height: _rem(.2);
+      width: _rem(7);
+      margin-bottom: _rem(.7);
+    }
+
+    @include bp(m) {
+      height: _rem(.3);
+      width: _rem(8);
+      margin-bottom: _rem(.8);
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--5xsmall);
+    font-weight: var(--font-weight--bold);
+    line-height: var(--line-height--xsnug);
+
+    @include bp(xs) {
+      font-size: var(--font-size--3xsmall);
+      margin-bottom: _rem(1.5);
+    }
+
+    @include bp(m) {
+      font-size: var(--font-size--mlarge);
+    }
+  }
+
+  &__strong {
+    font-weight: var(--font-weight--extrabold);
+  }
+}

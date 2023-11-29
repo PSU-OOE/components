@@ -1,16 +1,17 @@
 {% embed '@regions/header/header.twig' %}
   {% block dogear_content %}
-    <a class="header__branding" href="/">
-      {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
-      <span class="visually-hidden">Penn State World Campus</span>
-    </a>
-  {% endblock %}
-  {% block content %}
-    <div class="tagline">
-      <span class="tagline__text">A World of Possibilities. <strong class="tagline__strong">Online.</strong></span>
+    <div class="region region--header-branding">
+      <a class="branding-block" href="/">
+        {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+        <span class="visually-hidden">Penn State World Campus</span>
+      </a>
     </div>
   {% endblock %}
-  {% block overflow %}
-    <div class="overflow-gap"></div>
+  {% block content %}
+    <div class="region region--header-tagline">
+      {% include '@molecules/tagline/tagline.twig' with {
+        content: 'A World of Possibilities. <strong class="tagline__strong">Online.</strong>'
+      } only %}
+    </div>
   {% endblock %}
 {% endembed %}

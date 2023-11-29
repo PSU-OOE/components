@@ -1,16 +1,17 @@
 {% embed '@regions/header/header.twig' %}
   {% block dogear_content %}
-    <a class="header__branding" href="/">
-      {% include '@molecules/sprite/sprite.twig' with { name: 'psu-mark' } only %}
-      <span class="visually-hidden">Penn State Example Site</span>
-    </a>
-  {% endblock %}
-  {% block content %}
-    <div class="tagline">
-      <span class="tagline__text">Secure, accessible, beautiful sites. <wbr><strong class="tagline__strong">Made&nbsp;Easy.</strong></span>
+    <div class="region region--header-branding">
+      <a class="branding-block" href="/">
+        {% include '@molecules/sprite/sprite.twig' with { name: 'psu-mark' } only %}
+        <span class="visually-hidden">Penn State Example Site</span>
+      </a>
     </div>
   {% endblock %}
-  {% block overflow %}
-    <div class="overflow-gap"></div>
+  {% block content %}
+    <div class="region region--header-tagline">
+      {% include '@molecules/tagline/tagline.twig' with {
+        content: 'Secure, accessible, beautiful sites. <wbr><strong class="tagline__strong">Made&nbsp;Easy.</strong>'
+      } only %}
+    </div>
   {% endblock %}
 {% endembed %}

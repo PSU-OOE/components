@@ -65,9 +65,9 @@
   }
 
   &__dogear {
-    grid-area: dogear;
-    height: min-content;
     position: relative;
+    grid-area: dogear;
+    height: fit-content;
 
     // Quote the calc in order to prevent SCSS from evaluating it.  Instead,
     // we want the browser to run the calculation to prevent rounding errors.
@@ -115,6 +115,7 @@
     }
 
     &::before {
+      z-index: -1;
       content: '';
       position: absolute;
 
@@ -154,29 +155,11 @@
     }
   }
 
-  &__branding {
-    position: relative;
-    display: block;
-    color: var(--beaver-blue);
-    width: fit-content;
-
-    .sprite {
-      height: auto;
-      width: _rem(13);
-      min-width: _rem(3);
-      max-width: 100%;
-
-      @include bp(xs) {
-        width: _rem(18.5);
-      }
-    }
-  }
-
   &__content {
+    position: relative;
     grid-area: content;
     display: flex;
     align-items: center;
-    position: relative;
     padding: _rem(.3) 0;
 
     @include bp(m) {
@@ -187,11 +170,31 @@
   &__overflow {
     position: relative;
     grid-area: overflow;
+
+    &:empty {
+      padding: _rem(.6) 0;
+    }
   }
 }
 
-// Prospect site specifics -- move to prospect site.
-.header__small {
+// Prospect site specifics -- move to prospect site (or use components, otherwise...).
+.region--header-branding .branding-block {
+  display: block;
+  color: var(--beaver-blue);
+
+  .sprite {
+    height: auto;
+    width: _rem(13);
+    min-width: _rem(3);
+    max-width: 100%;
+
+    @include bp(xs) {
+      width: _rem(18.5);
+    }
+  }
+}
+
+.region--header-small-content {
   display: flex;
   gap: _rem(4);
   margin-left: auto;
@@ -199,39 +202,63 @@
   @include bp(m) {
     display: none;
   }
+}
 
-  &-utility {
-    display: flex;
-    align-items: flex-end;
-    gap: _rem(2);
+.region--header-small-utility {
+  display: flex;
+  align-items: flex-end;
+  gap: _rem(2);
+}
+
+.region--header-small-overflow {
+  padding: _rem(1.2) 0;
+
+  &:empty {
+    padding: _rem(.6) 0;
   }
-
-  &-cta {
-    padding: _rem(1) 0;
-
-    @include bp(m) {
-      display: none;
-    }
+  @include bp(m) {
+    display: none;
   }
 }
 
-.header__large {
+.region--header-large-content {
   display: none;
+
   @include bp(m) {
     display: flex;
     width: 100%;
     justify-content: flex-end;
     gap: _rem(4);
   }
+}
 
-  &-utility {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: max-content;
-    gap: _rem(2);
-    flex: 1 1 auto;
+.region--header-large-utility {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: max-content;
+  gap: _rem(2);
+  flex: 1 1 auto;
+}
+
+.region--header-large-cta {
+  flex: 1 1 0;
+  min-width: _rem(28);
+}
+
+.region--header-large-overflow {
+  display: none;
+
+  &:empty {
+    padding: .6rem 0;
   }
+
+  @include bp(m) {
+    display: block;
+  }
+}
+
+.header__large {
 
   &-utility-links {
     display: flex;
@@ -254,24 +281,10 @@
       font-size: var(--font-size--msmall);
     }
   }
-
-  &-menu {
-    display: none;
-
-    @include bp(m) {
-      display: initial;
-    }
-  }
-
-  &-cta {
-    flex: 1 1 0;
-    min-width: _rem(28);
-  }
 }
 
-// Minimal representation (i.e. campaign pages).
-.tagline {
-  line-height: 0;
+.region--header-tagline {
+  color: var(--text-color--light);
 
   @include bp(xs) {
     margin-left: _rem(2);
@@ -279,59 +292,5 @@
 
   @include bp(m) {
     margin-left: _rem(4);
-  }
-
-  &::before {
-    content: '';
-    display: block;
-    background-color: var(--sky-blue);
-    height: _rem(.1);
-    width: _rem(6);
-    margin-bottom: _rem(.6);
-
-    @include bp(xs) {
-      height: _rem(.2);
-      width: _rem(7);
-      margin-bottom: _rem(.7);
-    }
-
-    @include bp(m) {
-      height: _rem(.3);
-      width: _rem(8);
-      margin-bottom: _rem(.8);
-    }
-  }
-
-  &__text {
-    color: var(--text-color--light);
-    font-family: var(--font-family--default);
-    font-size: var(--font-size--5xsmall);
-    font-weight: var(--font-weight--bold);
-    line-height: var(--line-height--xsnug);
-
-    @include bp(xs) {
-      font-size: var(--font-size--3xsmall);
-      margin-bottom: _rem(1.5);
-    }
-
-    @include bp(m) {
-      font-size: var(--font-size--mlarge);
-    }
-  }
-
-  &__strong {
-    font-weight: var(--font-weight--extrabold);
-  }
-}
-
-.overflow-gap {
-  padding: _rem(.6) 0;
-}
-
-.header__small-overflow {
-  padding: _rem(.5) 0;
-
-  @include bp(m) {
-    display: none;
   }
 }

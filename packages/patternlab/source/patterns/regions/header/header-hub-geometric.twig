@@ -1,9 +1,11 @@
 {% embed '@regions/header/header.twig' %}
   {% block dogear_content %}
-    <a class="header__branding" href="/">
-      {% include '@molecules/sprite/sprite.twig' with { name: 'psu-mark' } only %}
-      <span class="visually-hidden">Penn State Example Site</span>
-    </a>
+    <div class="region region--header-branding">
+      <a class="branding-block" href="/">
+        {% include '@molecules/sprite/sprite.twig' with { name: 'psu-mark' } only %}
+        <span class="visually-hidden">Penn State Example Site</span>
+      </a>
+    </div>
   {% endblock %}
   {% block content %}
     <div style="height:100%;color:white;padding:1rem;text-align:center;display:flex;align-items:center;justify-content:center;outline:.2rem dashed white;outline-offset:-.4rem;width:100%;">
