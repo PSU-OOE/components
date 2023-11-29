@@ -34,17 +34,17 @@
     // positions.
     .sprite {
       position: absolute;
-      width: 71.8rem;
-      top: -42.7rem;
+      width: _rem(71.8);
+      top: _rem(-42.7);
       height: auto;
       opacity: .3;
 
       &:nth-child(2) {
-        left: calc(50% - 33rem);
+        left: calc(50% - #{_rem(33)});
       }
 
       &:nth-child(3) {
-        left: calc(50% + 38rem);
+        left: calc(50% + #{_rem(38)});
       }
     }
   }
@@ -54,6 +54,9 @@
     margin: 0 auto;
     padding: 0 _rem(2);
     display: grid;
+    grid-template-areas:
+      "dogear content"
+      "overflow overflow";
     grid-template-columns: min(50%, _rem(24)) auto;
 
     @include bp(m) {
@@ -62,8 +65,12 @@
   }
 
   &__dogear {
+    grid-area: dogear;
     height: min-content;
     position: relative;
+
+    // Quote the calc in order to prevent SCSS from evaluating it.  Instead,
+    // we want the browser to run the calculation to prevent rounding errors.
     padding: _rem(1) clamp(_rem(5), #{'calc(100% / 3)'}, _rem(7.5)) _rem(1) 0;
 
     // This clip path forms the "45 degree" part of the dogear.  There are a
@@ -142,7 +149,7 @@
         // containing element, and dividing that by 2.  It's important not to
         // overshoot the viewport on the left due to the gradient that must
         // be applied to the dogear.
-        inset: 0 0 0 calc((-100vw + _rem(110)) / 2);
+        inset: 0 0 0 calc((-100vw + #{_rem(110)}) / 2);
       }
     }
   }
@@ -166,6 +173,7 @@
   }
 
   &__content {
+    grid-area: content;
     display: flex;
     align-items: center;
     position: relative;
@@ -178,13 +186,7 @@
 
   &__overflow {
     position: relative;
-    padding: 0 _rem(2);
-    max-width: _rem(122);
-    margin: auto;
-
-    @include bp(m) {
-      padding: 0 _rem(4);
-    }
+    grid-area: overflow;
   }
 }
 
@@ -217,18 +219,23 @@
   display: none;
   @include bp(m) {
     display: flex;
-    margin-left: auto;
+    width: 100%;
+    justify-content: flex-end;
     gap: _rem(4);
   }
 
   &-utility {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    width: max-content;
     gap: _rem(2);
+    flex: 1 1 auto;
   }
 
   &-utility-links {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: _rem(2);
     margin: 0;
@@ -254,6 +261,11 @@
     @include bp(m) {
       display: initial;
     }
+  }
+
+  &-cta {
+    flex: 1 1 0;
+    min-width: _rem(28);
   }
 }
 
@@ -317,7 +329,7 @@
 }
 
 .header__small-overflow {
-  padding: .5rem 0;
+  padding: _rem(.5) 0;
 
   @include bp(m) {
     display: none;

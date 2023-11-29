@@ -1,196 +1,122 @@
-{% set header_logo %}
-  {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
-{% endset %}
-{% set site_name = 'Penn State World Campus' %}
-{% set how_to_apply %}
-  {% include '@atoms/cta/cta-block.twig' with {
-    label: 'How to Apply',
-    url: '#',
-    color: 'light-blue',
-    compact: true,
-  } only %}{% endset %}
-{% set request_info %}
-  {% include '@atoms/cta/cta-block.twig' with {
-    label: 'Request Info',
-    url: '#',
-    color: 'reversed',
-    compact: true,
-  } only %}
-{% endset %}
+{% embed '@regions/header/header.twig' %}
 
-{% set search_horizontal %}
-  {% include '@blocks/compact-search/compact-search.twig' with {
-    align: 'right',
-    orientation: 'horizontal',
-    search_form: 'The search form goes here.'
-  } only %}
-{% endset %}
+  {% set how_to_apply %}
+    {% include '@atoms/cta/cta-block.twig' with {
+      label: 'How to Apply',
+      url: '#',
+      color: 'light-blue',
+      compact: true,
+    } only %}{% endset %}
+  {% set request_info %}
+    {% include '@atoms/cta/cta-block.twig' with {
+      label: 'Request Info',
+      url: '#',
+      color: 'reversed',
+      compact: true,
+    } only %}
+  {% endset %}
 
-{% set search_vertical %}
-  {% include '@blocks/compact-search/compact-search.twig' with {
-    align: 'right',
-    search_form: 'The search form goes here.'
-  } only %}
-{% endset %}
+  {% set search_horizontal %}
+    {% include '@blocks/compact-search/compact-search.twig' with {
+      align: 'right',
+      orientation: 'horizontal',
+      search_form: 'The search form goes here.'
+    } only %}
+  {% endset %}
 
-{% set horizontal_menu %}
-  {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
-    menu_name: 'Primary navigation menu',
-    items: [
-      { title: 'Home', url: '#', in_active_trail: true },
-      { title: 'About Us', url: '#', below: [
-        { title: 'Our Story', url: '#' },
-        { title: 'Mission', url: '#' },
-        { title: 'Our Leadership', url: '#' },
-        { title: 'Our Students', url: '#' },
-        { title: 'Why World Campus', url: '#' },
-        { title: 'News and Features', url: '#' },
-        { title: 'Success Stories', url: '#' },
-        { title: 'Employment', url: '#' },
-      ]},
-      { title: 'Degrees and Certificates', url: '#', below: [
+  {% set search_vertical %}
+    {% include '@blocks/compact-search/compact-search.twig' with {
+      align: 'right',
+      search_form: 'The search form goes here.'
+    } only %}
+  {% endset %}
 
-      ]},
-      { title: 'How Online Learning Works', url: '#', below: [
-        { title: 'Online Learning Experience', url: '#' },
-        { title: 'Student Services', url: '#' },
-        { title: 'Dedication to Accessibility', url: '#' },
-        { title: 'How it Works (FAQs)', url: '#' },
-      ]},
-      { title: 'Admissions', url: '#', below: [
-        { title: 'How to Apply', url: '#' },
-        { title: 'Returning Students', url: '#' },
-        { title: 'Transfer Students', url: '#' },
-        { title: 'International Students', url: '#' },
-        { title: 'Academic Calendar', url: '#' },
-        { title: 'Planning Resources', url: '#' },
-      ]},
-      { title: 'Tuition and Financial Aid', url: '#', below: [
-        { title: 'Tuition and Costs', url: '#' },
-        { title: 'Financial Aid', url: '#' },
-        { title: 'Scholarships', url: '#' },
-        { title: 'Payment Options', url: '#' },
-      ]},
-      { title: 'Military', url: '#', below: [
-        { title: 'Education Benefits and Financial Aid', url: '#' },
-        { title: 'Admissions and Transfer Credits', url: '#' },
-        { title: 'Military Support', url: '#' },
-        { title: 'What You Can Expect', url: '#' },
-        { title: 'Awards and Affiliations', url: '#' },
-        { title: 'Events', url: '#' },
-        { title: 'Service Members', url: '#' },
-        { title: 'Veterans', url: '#' },
-      ]},
-    ],
-  } only %}
-{% endset %}
+  {% set horizontal_menu %}
+    {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
+      menu_name: 'Primary navigation menu',
+      items: [
+        { title: 'Home', url: '#', in_active_trail: true },
+        { title: 'About Us', url: '#' },
+        { title: 'Degrees and Certificates', url: '#' },
+        { title: 'How Online Learning Works' },
+        { title: 'Admissions', url: '#' },
+        { title: 'Tuition and Financial Aid', url: '#' },
+        { title: 'Military', url: '#'},
+      ],
+    } only %}
+  {% endset %}
 
-{% set vertical_menu %}
-  {% include '@organisms/vertical-menu/vertical-menu.twig' with {
-    menu_name: 'Primary navigation menu',
-    items: [
-      { title: 'Home', url: '#', in_active_trail: true },
-      { title: 'About Us', url: '#', below: [
-        { title: 'Our Story', url: '#' },
-        { title: 'Mission', url: '#' },
-        { title: 'Our Leadership', url: '#' },
-        { title: 'Our Students', url: '#' },
-        { title: 'Why World Campus', url: '#' },
-        { title: 'News and Features', url: '#' },
-        { title: 'Success Stories', url: '#' },
-        { title: 'Employment', url: '#' },
-      ]},
-      { title: 'Degrees and Certificates', url: '#', below: [
+  {% set vertical_menu %}
+    {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+      menu_name: 'Primary navigation menu',
+      items: [
+        { title: 'Home', url: '#', in_active_trail: true },
+        { title: 'About Us', url: '#' },
+        { title: 'Degrees and Certificates', url: '#' },
+        { title: 'How Online Learning Works' },
+        { title: 'Admissions', url: '#' },
+        { title: 'Tuition and Financial Aid', url: '#' },
+        { title: 'Military', url: '#'},
+      ],
+    } only %}
+  {% endset %}
 
-      ]},
-      { title: 'How Online Learning Works', url: '#', below: [
-        { title: 'Online Learning Experience', url: '#' },
-        { title: 'Student Services', url: '#' },
-        { title: 'Dedication to Accessibility', url: '#' },
-        { title: 'How it Works (FAQs)', url: '#' },
-      ]},
-      { title: 'Admissions', url: '#', below: [
-        { title: 'How to Apply', url: '#' },
-        { title: 'Returning Students', url: '#' },
-        { title: 'Transfer Students', url: '#' },
-        { title: 'International Students', url: '#' },
-        { title: 'Academic Calendar', url: '#' },
-        { title: 'Planning Resources', url: '#' },
-      ]},
-      { title: 'Tuition and Financial Aid', url: '#', below: [
-        { title: 'Tuition and Costs', url: '#' },
-        { title: 'Financial Aid', url: '#' },
-        { title: 'Scholarships', url: '#' },
-        { title: 'Payment Options', url: '#' },
-      ]},
-      { title: 'Military', url: '#', below: [
-        { title: 'Education Benefits and Financial Aid', url: '#' },
-        { title: 'Admissions and Transfer Credits', url: '#' },
-        { title: 'Military Support', url: '#' },
-        { title: 'What You Can Expect', url: '#' },
-        { title: 'Awards and Affiliations', url: '#' },
-        { title: 'Events', url: '#' },
-        { title: 'Service Members', url: '#' },
-        { title: 'Veterans', url: '#' },
-      ]},
-    ],
-  } only %}
-{% endset %}
+  {% set menu %}
+    {% include '@blocks/compact-menu/compact-menu.twig' with {
+      align: 'right',
+      menu: vertical_menu
+    } only %}
+  {% endset %}
 
-{% set menu %}
-  {% include '@blocks/compact-menu/compact-menu.twig' with {
-    align: 'right',
-    menu: vertical_menu
-  } only %}
-{% endset %}
-
-{% set header_content %}
-  <div class="header__small">
-    <div class="header__small-utility">
-      <div class="header__search">
-        {{ search_vertical }}
-      </div>
-      <div class="header__menu">
-        {{ menu }}
+  {% block dogear_content %}
+    <a class="header__branding" href="/">
+      {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+      <span class="visually-hidden">Penn State World Campus</span>
+    </a>
+  {% endblock %}
+  {% block content %}
+    <div class="header__small">
+      <div class="header__small-utility">
+        <div class="header__search">
+          {{ search_vertical }}
+        </div>
+        <div class="header__menu">
+          {{ menu }}
+        </div>
       </div>
     </div>
-  </div>
-  <div class="header__large">
-    <div class="header__large-utility">
-      <ul class="header__large-utility-links" role="list">
-        <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Current Students</a></li>
-        <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Alumni</a></li>
-        <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Events</a></li>
-      </ul>
-      <div class="header__large-search">
-        {{ search_horizontal }}
+    <div class="header__large">
+      <div class="header__large-utility">
+        <ul class="header__large-utility-links" role="list">
+          <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Current Students</a></li>
+          <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Alumni</a></li>
+          <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Events</a></li>
+        </ul>
+        <div class="header__large-search">
+          {{ search_horizontal }}
+        </div>
+      </div>
+      <div class="header__large-cta">
+        {% include '@atoms/cta/cta-group.twig' with {
+          ctas: [how_to_apply, request_info],
+          expand_to_fit: true,
+        } only %}
       </div>
     </div>
-    <div class="header__large-cta">
+  {% endblock %}
+  {% block overflow %}
+    <div class="header__small-cta">
       {% include '@atoms/cta/cta-group.twig' with {
         ctas: [how_to_apply, request_info],
         expand_to_fit: true,
       } only %}
     </div>
-  </div>
-{% endset %}
-{% set header_overflow %}
-  <div class="header__small-cta">
-    {% include '@atoms/cta/cta-group.twig' with {
-      ctas: [how_to_apply, request_info],
-      expand_to_fit: true,
-    } only %}
-  </div>
-  <div class="header__large-menu">
-    {{ horizontal_menu }}
-  </div>
-{% endset %}
-{% include '@regions/header/header.twig' with {
-  logo: header_logo,
-  site_name: site_name,
-  content: header_content,
-  overflow: header_overflow,
-} only %}
+    <div class="header__large-menu">
+      {{ horizontal_menu }}
+    </div>
+  {% endblock %}
+{% endembed %}
+
 {% set page_title %}
   <div style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;padding:0 4rem;">
     <h1>Basic Page</h1>
