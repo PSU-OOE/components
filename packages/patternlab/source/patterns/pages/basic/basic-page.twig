@@ -78,8 +78,12 @@
   {% block content %}
     <div class="region--header-small-content">
       <div class="region--header-small-utility">
-        {{ search_vertical }}
-        {{ menu }}
+        <div data-section="Header mobile search" data-section-tags='{"section_type":"drop-button"}'>
+          {{ search_vertical }}
+        </div>
+        <div data-section="Header primary navigation mobile menu" data-section-tags='{"section_type":"drop-button"}'>
+          {{ menu }}
+        </div>
       </div>
     </div>
     <div class="region--header-large-content">
@@ -89,7 +93,9 @@
           <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Alumni</a></li>
           <li class="header__large-utility-item"><a class="header__large-utility-link" href="#">Events</a></li>
         </ul>
-        {{ search_horizontal }}
+        <div data-section="Header desktop search" data-section-tags='{"section_type":"drop-button"}'>
+          {{ search_horizontal }}
+        </div>
       </div>
       <div class="region--header-large-cta">
         {% include '@atoms/cta/cta-group.twig' with {

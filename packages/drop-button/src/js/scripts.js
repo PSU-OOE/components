@@ -11,7 +11,6 @@
   // effectively translate the relative coordinates by an appropriate amount
   // in order to mimic viewport positioning quite well.
   const revalidate_registry = (viewport_width) => {
-    console.log(drop_button_registry);
     drop_button_registry.forEach(drop_button => {
       const bounds = drop_button.getBoundingClientRect();
       if (viewport_width < 800) {
@@ -69,11 +68,8 @@
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
         const panel = entry.target;
-        const drop_button = panel.closest('.drop-button');
-        const bounds = drop_button.getBoundingClientRect();
         intersection_observer.unobserve(panel);
-        drop_button.style.setProperty('--drop-button--left', -(bounds.left / px_to_rems_conversion) + 'rem');
-        drop_button.style.setProperty('--drop-button--right', '-' + ((width - bounds.right) / px_to_rems_conversion) + 'rem');
+        revalidate_registry(width)
         intersection_observer.observe(panel);
       }
     });
@@ -98,27 +94,35 @@
       const panel = drop_button.querySelector('.drop-button__content');
 
       drop_button.addEventListener('component:activate', () => {
-        // Add the button to the registry.
-        drop_button_registry.push(drop_button);
+        if (toggle.getAttribute('aria-expanded') !== 'true') {
+          // Add the button to the registry.
+          drop_button_registry.push(drop_button);
 
-        // Start watching for intersections.
-        intersection_observer.observe(panel);
+          // Start watching for intersections.
+          intersection_observer.observe(panel);
 
-        // Show the panel.
-        toggle.setAttribute('aria-expanded', 'true');
+          // Show the panel.
+          toggle.setAttribute('aria-expanded', 'true');
+
+          drop_button.dispatchEvent(new CustomEvent('component:activated'));
+        }
       });
 
       drop_button.addEventListener('component:deactivate', () => {
-        // Hide the panel.
-        toggle.setAttribute('aria-expanded', 'false');
+        if (toggle.getAttribute('aria-expanded') !== 'false') {
+          // Hide the panel.
+          toggle.setAttribute('aria-expanded', 'false');
 
-        // Stop watching for intersections.
-        intersection_observer.unobserve(panel);
+          // Stop watching for intersections.
+          intersection_observer.unobserve(panel);
 
-        // Remove the button from the registry.
-        drop_button_registry = drop_button_registry.filter(candidate => {
-          return candidate !== drop_button;
-        });
+          // Remove the button from the registry.
+          drop_button_registry = drop_button_registry.filter(candidate => {
+            return candidate !== drop_button;
+          });
+
+          drop_button.dispatchEvent(new CustomEvent('component:deactivated'));
+        }
       });
 
       // Toggle the expanded state of drop-button menus on click.
