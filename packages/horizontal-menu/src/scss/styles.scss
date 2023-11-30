@@ -53,7 +53,7 @@
       line-height: var(--line-height--nospace);
       letter-spacing: var(--letter-spacing--medium);
       color: var(--text-color--light);
-      padding: 2.4rem 1.6rem;
+      padding: 2.4rem 1.25rem;
       transition: background-color var(--transition-duration--default) linear;
 
       @include bp(l) {
@@ -62,6 +62,7 @@
 
       @include bp(xl) {
         font-size: var(--font-size--msmall);
+        padding: 2.4rem 1.6rem;
       }
 
       &:focus-within, &:hover, &:is(.horizontal-menu__item:has([aria-expanded="true"]) *) {

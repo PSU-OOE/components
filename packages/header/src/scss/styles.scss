@@ -200,6 +200,7 @@
   display: flex;
   gap: _rem(4);
   margin-left: auto;
+  margin-top: auto;
 
   @include bp(m) {
     display: none;
