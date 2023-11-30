@@ -1,8 +1,4 @@
-{% set classes = ['drop-button'] %}
-{% if align in ['left', 'center', 'right'] %}
-  {% set classes = classes|merge(['drop-button--align-' ~ align]) %}
-{% endif %}
-<div class="{{ classes|join(' ' ) }}">
+<div class="drop-button" data-interactive-component>
   <div role="button" class="drop-button__toggle" tabindex="0" aria-expanded="false">
     {{ toggle_content }}
   </div>

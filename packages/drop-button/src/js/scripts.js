@@ -1,6 +1,5 @@
 (cms => {
 
-  let last_registry_update = Date.now();
   let drop_button_registry = [];
   const px_to_rems_conversion = parseFloat(getComputedStyle(document.documentElement).fontSize);
 
@@ -12,18 +11,9 @@
   // effectively translate the relative coordinates by an appropriate amount
   // in order to mimic viewport positioning quite well.
   const revalidate_registry = (viewport_width) => {
-    const now = Date.now();
-    if (now - last_registry_update < 1000) {
-      console.warn('Dropbutton registry revalidation is happening too rapidly; something is wrong.');
-    }
-    last_registry_update = Date.now();
+    console.log(drop_button_registry);
     drop_button_registry.forEach(drop_button => {
-      const toggle = drop_button.querySelector('.drop-button__toggle');
-      if (toggle.getAttribute('aria-expanded') !== 'true') {
-        return;
-      }
       const bounds = drop_button.getBoundingClientRect();
-      console.log(viewport_width);
       if (viewport_width < 800) {
         drop_button.style.setProperty('--drop-button--left', -((bounds.left - 5) / px_to_rems_conversion) + 'rem');
         drop_button.style.setProperty('--drop-button--right', -((viewport_width - bounds.right - 5) / px_to_rems_conversion) + 'rem');
@@ -34,13 +24,11 @@
         // If the center of the dropbutton is further left than the center of
         // the viewport, then the panel must open to the right.
         if (dropbutton_center < viewport_center) {
-          // 28rem - width of dropbutton - dropbutton--left
           drop_button.style.setProperty('--drop-button--left', (-35 / px_to_rems_conversion) + 'rem');
-          drop_button.style.setProperty('--drop-button--right', ((-240 + bounds.width) / px_to_rems_conversion) + 'rem');
-          drop_button.style.setProperty('--drop-button--right', ((-240 + bounds.width) / px_to_rems_conversion) + 'rem');
+          drop_button.style.setProperty('--drop-button--right', 'calc(-1 * (var(--drop-button-panel-width, 28rem) - ' + ((bounds.width + 35) / px_to_rems_conversion) + 'rem))');
         }
         else {
-          drop_button.style.setProperty('--drop-button--left', ((-240 + bounds.width) / px_to_rems_conversion) + 'rem');
+          drop_button.style.setProperty('--drop-button--left', 'calc(-1 * (var(--drop-button-panel-width, 28rem) - ' + ((bounds.width + 35) / px_to_rems_conversion) + 'rem))');
           drop_button.style.setProperty('--drop-button--right', (-35 / px_to_rems_conversion) + 'rem');
         }
       }
@@ -106,10 +94,33 @@
   cms.attach('dropbutton', context => {
     const drop_buttons = cms.once('dropbutton', '.drop-button', context);
     drop_buttons.forEach(drop_button => {
-      drop_button_registry.push(drop_button);
       const toggle = drop_button.querySelector('.drop-button__toggle');
       const panel = drop_button.querySelector('.drop-button__content');
-      intersection_observer.observe(panel);
+
+      drop_button.addEventListener('component:activate', () => {
+        // Add the button to the registry.
+        drop_button_registry.push(drop_button);
+
+        // Start watching for intersections.
+        intersection_observer.observe(panel);
+
+        // Show the panel.
+        toggle.setAttribute('aria-expanded', 'true');
+      });
+
+      drop_button.addEventListener('component:deactivate', () => {
+        // Hide the panel.
+        toggle.setAttribute('aria-expanded', 'false');
+
+        // Stop watching for intersections.
+        intersection_observer.unobserve(panel);
+
+        // Remove the button from the registry.
+        drop_button_registry = drop_button_registry.filter(candidate => {
+          return candidate !== drop_button;
+        });
+      });
+
       // Toggle the expanded state of drop-button menus on click.
       toggle.addEventListener('click', () => {
         if (document.activeElement !== toggle) {
@@ -117,10 +128,14 @@
         }
 
         if (toggle.getAttribute('aria-expanded') === 'true') {
-          toggle.setAttribute('aria-expanded', 'false');
+          drop_button.dispatchEvent(new CustomEvent('component:deactivate'));
         }
         else {
-          toggle.setAttribute('aria-expanded', 'true');
+          drop_button.dispatchEvent(new CustomEvent('component:activate', {
+            detail: {
+              activation_type: 'USER_ACTIVATE',
+            }
+          }));
         }
       });
 
@@ -128,10 +143,14 @@
       toggle.addEventListener('keypress', e => {
         if (e.key === 'Enter') {
           if (toggle.getAttribute('aria-expanded') === 'true') {
-            toggle.setAttribute('aria-expanded', 'false');
+            drop_button.dispatchEvent(new CustomEvent('component:deactivate'));
           }
           else {
-            toggle.setAttribute('aria-expanded', 'true');
+            drop_button.dispatchEvent(new CustomEvent('component:activate', {
+              detail: {
+                activation_type: 'USER_ACTIVATE',
+              }
+            }));
           }
         }
       });
@@ -139,14 +158,14 @@
       // Close an open drop-button menu when escape is pressed.
       drop_button.addEventListener('keydown', e => {
         if (e.key.toLowerCase() === 'escape' && toggle.getAttribute('aria-expanded') === 'true') {
-          toggle.setAttribute('aria-expanded', 'false');
+          drop_button.dispatchEvent(new CustomEvent('component:deactivate'));
         }
       });
 
       // Close an open drop-button menu when focus leaves the component.
       drop_button.addEventListener('focusout', (e) => {
         if (!drop_button.contains(e.relatedTarget)) {
-          toggle.setAttribute('aria-expanded', 'false');
+          drop_button.dispatchEvent(new CustomEvent('component:deactivate'));
         }
       });
     });

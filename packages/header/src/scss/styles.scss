@@ -59,7 +59,7 @@
       "overflow overflow";
     grid-template-columns: min(50%, _rem(24)) auto;
 
-    @include bp(m) {
+    @include bp(s) {
       padding: 0 _rem(4);
     }
   }
@@ -91,17 +91,19 @@
       calc(100% - 100vw) 100vw
     );
 
-    @include bp(m) {
-      padding-top: _rem(1.5);
-      padding-bottom: _rem(1.5);
-
+    @include bp(s) {
       // Update the clip-path to extend -4rem to the left to account for the
       // increased padding on the container.
       clip-path: polygon(
-        _rem(-4) _rem(-.1),
-        100% _rem(-.1),
-        calc(100% - 100vw) 100vw
+          _rem(-4) _rem(-.1),
+          100% _rem(-.1),
+          calc(100% - 100vw) 100vw
       );
+    }
+
+    @include bp(m) {
+      padding-top: _rem(1.5);
+      padding-bottom: _rem(1.5);
     }
 
     @media screen and (min-width: 1180px) {
@@ -138,7 +140,7 @@
         );
       }
 
-      @include bp(m) {
+      @include bp(s) {
         // Extend the pseudo-element -4rem to compensate for the wider padding.
         inset: 0 0 0 _rem(-4);
       }
