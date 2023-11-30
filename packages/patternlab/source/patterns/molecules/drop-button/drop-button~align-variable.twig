@@ -1,0 +1,25 @@
+{% set menu %}
+  <div id="drop-button-align-variable" style="position: relative;left:45%;transition: left 5s linear;">
+    {% include '@molecules/drop-button/drop-button.twig' with {
+      align: 'right',
+      toggle_content: '<span style="outline: 2px dotted black"><span class="visually-hidden">4</span> More <span class="visually-hidden">options</span></span>',
+      panel_content: 'Test content',
+    } only %}
+  </div>
+{% endset %}
+{% include '@molecules/callout/callout.twig' with {
+  content: menu,
+} only %}
+<script>
+    (() => {
+      const example = document.querySelector('#drop-button-align-variable');
+      setInterval(() => {
+        if (example.style.left === '45%') {
+          example.style.left = '55%';
+        }
+        else {
+          example.style.left = '45%';
+        }
+      }, 5000);
+    })();
+</script>

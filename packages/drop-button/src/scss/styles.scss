@@ -2,10 +2,12 @@
 
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
-
+.pl-c-main {
+  padding: 0 !important;
+}
 .drop-button {
-  display: flex;
   position: relative;
+  display: inline-block;
 
   &__toggle {
     cursor: pointer;
@@ -56,51 +58,15 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity var(--transition-duration--default) linear,
-                visibility (--transition-duration--default) linear;
+    visibility (--transition-duration--default) linear;
     border-style: solid;
     border-color: var(--slate-light) var(--slate-light) var(--slate-light) var(--sky-blue);
     border-width: _rem(.1) _rem(.1) _rem(.1) _rem(.3);
     box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 15%, transparent);
     padding: _rem(2);
-    width: _rem(28);
     z-index: 100;
+    left: var(--drop-button--left);
+    right: var(--drop-button--right);
     top: calc(100% + #{_rem(math.div(math.sqrt(200), 10))} + .2em);
-    left: _rem(-2);
-
-    &--wide {
-      width: _rem(37);
-    }
-
-    &--stretch {
-      width: 100%;
-    }
-  }
-
-  &--align-center {
-    .drop-button__toggle {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .drop-button__content {
-      left: 50%;
-      transform: translate(-50%);
-    }
-
-    .drop-button__content::before {
-      left: 50%;
-      transform: rotateZ(45deg) translateX(calc(-50% + #{_rem(.2)})) translateY(calc(50% - #{_rem(.2)}));
-    }
-  }
-
-  &--align-right {
-    .drop-button__toggle {
-      margin-left: auto;
-    }
-
-    .drop-button__content {
-      left: initial;
-      right: calc(_rem(-2.5) + 50%);
-    }
   }
 }
