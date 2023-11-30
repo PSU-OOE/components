@@ -14,6 +14,7 @@
     target.removeEventListener('transitionend', removeHeight);
     target.style.height = null;
     target.style.overflow = '';
+    console.log('removeHeight called');
   }
 
   /**
