@@ -1,5 +1,15 @@
-{% embed '@regions/header/header.twig' %}
+<style>
+    .basic-page-content {
+        padding: 0 2rem;
+    }
+    @media screen and(min-width: 550px) {
+        .basic-page-content {
+            padding: 0 4rem;
+        }
+    }
+</style>
 
+{% embed '@regions/header/header.twig' %}
   {% set how_to_apply %}
     {% include '@atoms/cta/cta-block.twig' with {
       label: 'How to Apply',
@@ -119,7 +129,7 @@
 {% endembed %}
 
 {% set page_title %}
-  <div style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;padding:0 4rem;">
+  <div class="basic-page-content" style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;">
     <h1>Basic Page</h1>
   </div>
 {% endset %}
@@ -128,93 +138,94 @@
   background_image: 'hub-geometric:topleft',
   content: page_title,
 } only %}
-{% set page_content %}
-  <div style="margin: auto;display:flex;flex-wrap:wrap; gap:5%; max-width: 119rem;padding:0 4rem;">
-    <p style="flex: 1 1 0; min-width: 28rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras. Neque gravida in fermentum et sollicitudin ac. Gravida in fermentum et sollicitudin ac. Duis convallis convallis tellus id interdum. Neque volutpat ac tincidunt vitae semper. Non nisi est sit amet facilisis magna etiam tempor orci. Sit amet commodo nulla facilisi nullam vehicula. Eu volutpat odio facilisis mauris sit amet massa vitae tortor. Ante metus dictum at tempor commodo ullamcorper a lacus. Et molestie ac feugiat sed lectus vestibulum. Risus commodo viverra maecenas accumsan. Pretium vulputate sapien nec sagittis aliquam.</p>
-    <div style="flex: 1 1 0;min-width: 28rem;">
-      {% include '@organisms/quote/quote.twig' with {
-        headshot: "<img src=\"https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg\" width=\"400\" height=\"400\" alt=\"carrie tilley and family\">",
-        reverse: false,
-        quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
-        attribution: "Carrie Tilley",
-        byline: "Master of Engineering in Systems Engineering graduate",
-        after_quote: ""
+<main class="basic-page-content">
+  {% set page_content %}
+    <div style="margin: auto;display:flex;flex-wrap:wrap; gap:5%; max-width: 119rem;">
+      <p style="flex: 1 1 0; min-width: 28rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras. Neque gravida in fermentum et sollicitudin ac. Gravida in fermentum et sollicitudin ac. Duis convallis convallis tellus id interdum. Neque volutpat ac tincidunt vitae semper. Non nisi est sit amet facilisis magna etiam tempor orci. Sit amet commodo nulla facilisi nullam vehicula. Eu volutpat odio facilisis mauris sit amet massa vitae tortor. Ante metus dictum at tempor commodo ullamcorper a lacus. Et molestie ac feugiat sed lectus vestibulum. Risus commodo viverra maecenas accumsan. Pretium vulputate sapien nec sagittis aliquam.</p>
+      <div style="flex: 1 1 0;min-width: 28rem;">
+        {% include '@organisms/quote/quote.twig' with {
+          headshot: "<img src=\"https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg\" width=\"400\" height=\"400\" alt=\"carrie tilley and family\">",
+          reverse: false,
+          quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+          attribution: "Carrie Tilley",
+          byline: "Master of Engineering in Systems Engineering graduate",
+          after_quote: ""
+        } only %}
+      </div>
+    </div>
+  {% endset %}
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'white',
+    content: page_content,
+  } only %}
+
+  {% set tile_nav_content %}
+    <div class="basic-page-content" style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;">
+      {% set tile %}
+        {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+          link: {
+            url: '#',
+            label: 'Navigation Title',
+          },
+          description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
+        } only %}
+
+      {% endset %}
+      {% set tile2 %}
+        {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+          link: {
+            url: '#',
+            label: 'Navigation Title with a really long title that will go to two lines eventually',
+          },
+          description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
+        } only %}
+      {% endset %}
+      {% include '@molecules/grid/grid.twig' with {
+        items: [tile, tile2, tile],
       } only %}
     </div>
-  </div>
-{% endset %}
-{% include '@molecules/background-container/background-container.twig' with {
-  color: 'white',
-  content: page_content,
-} only %}
-
-{% set tile_nav_content %}
-  <div style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;padding:0 4rem;">
-    {% set tile %}
-      {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
-        link: {
-          url: '#',
-          label: 'Navigation Title',
-        },
-        description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
-      } only %}
-
-    {% endset %}
-    {% set tile2 %}
-      {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
-        link: {
-          url: '#',
-          label: 'Navigation Title with a really long title that will go to two lines eventually',
-        },
-        description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
-      } only %}
-    {% endset %}
-    {% include '@molecules/grid/grid.twig' with {
-      items: [tile, tile2, tile],
-    } only %}
-  </div>
-{% endset %}
-{% include '@molecules/background-container/background-container.twig' with {
-  color: 'light-grey',
-  background_image: 'hub-geometric:topright',
-  content: tile_nav_content,
-} only %}
-{% set overlay_content %}
-  {% set headshot %}
-    <img src="https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg" width="400" height="400" alt="carrie tilley and family" loading="lazy">
   {% endset %}
-  {% include '@organisms/quote/quote.twig' with {
-    headshot: headshot,
-    reverse: true,
-    quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
-    attribution: "Carrie Tilley",
-    byline: "Master of Engineering in Systems Engineering graduate",
-    after_quote: ""
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'light-grey',
+    background_image: 'hub-geometric:topright',
+    content: tile_nav_content,
+  } only %}
+  {% set overlay_content %}
+    {% set headshot %}
+      <img src="https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg" width="400" height="400" alt="carrie tilley and family" loading="lazy">
+    {% endset %}
+    {% include '@organisms/quote/quote.twig' with {
+      headshot: headshot,
+      reverse: true,
+      quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+      attribution: "Carrie Tilley",
+      byline: "Master of Engineering in Systems Engineering graduate",
+      after_quote: ""
+    } %}
+  {% endset %}
+  {% set overlay_image %}
+    <picture class="responsive-image responsive-image--feature-banner">
+      <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2021-12/quote-background-entry-gates-snow.jpg.webp?itok=8J4_R3Oq 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
+      <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2021-12/quote-background-entry-gates-snow.jpg.webp?itok=GOfpUKe2 1x" type="image/webp" width="950" height="534">
+      <img src="https://test.worldcampus.psu.edu/sites/default/files/2021-12/quote-background-entry-gates-snow.jpg?itok=8J4_R3Oq" width="1920" height="840" alt="Snowy sidewalk at Penn State's University Park campus" loading="lazy">
+    </picture>
+  {% endset %}
+
+  {% include '@molecules/overlay/overlay.twig' with {
+    image: overlay_image,
+    content: overlay_content,
+    overlay_bg_color: "blue-gradient",
+    column_width: "normal",
+    overlay_width: "wide"
   } %}
-{% endset %}
-{% set overlay_image %}
-  <picture class="responsive-image responsive-image--feature-banner">
-    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2021-12/quote-background-entry-gates-snow.jpg.webp?itok=8J4_R3Oq 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
-    <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2021-12/quote-background-entry-gates-snow.jpg.webp?itok=GOfpUKe2 1x" type="image/webp" width="950" height="534">
-    <img src="https://test.worldcampus.psu.edu/sites/default/files/2021-12/quote-background-entry-gates-snow.jpg?itok=8J4_R3Oq" width="1920" height="840" alt="Snowy sidewalk at Penn State's University Park campus" loading="lazy">
-  </picture>
-{% endset %}
-
-{% include '@molecules/overlay/overlay.twig' with {
-  image: overlay_image,
-  content: overlay_content,
-  overlay_bg_color: "blue-gradient",
-  column_width: "normal",
-  overlay_width: "wide"
-} %}
-
+</main>
 {% set footer_top %}
-  <div style="max-width: 119rem;margin:auto;display:flex;padding:0 4rem;min-height:25rem;">
+  <div class="basic-page-content" style="max-width: 119rem;margin:auto;display:flex;min-height:25rem;">
     Footer top content
   </div>
 {% endset %}
 {% set footer_bottom %}
-  <div style="color:#fff;max-width: 119rem;margin:auto;display:flex;padding:0 4rem;min-height:12rem;">
+  <div class="basic-page-content" style="color:#fff;max-width: 119rem;margin:auto;display:flex;min-height:12rem;">
     Footer bottom content
   </div>
 {% endset %}
