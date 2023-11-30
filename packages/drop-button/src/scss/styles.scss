@@ -2,9 +2,7 @@
 
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
-.pl-c-main {
-  padding: 0 !important;
-}
+
 .drop-button {
   position: relative;
   display: inline-block;
@@ -50,7 +48,7 @@
     background: var(--white);
     position: absolute;
     transition: opacity var(--transition-duration--default) linear,
-    visibility (--transition-duration--default) linear;
+                visibility (--transition-duration--default) linear;
     border-style: solid;
     border-color: var(--slate-light) var(--slate-light) var(--slate-light) var(--sky-blue);
     border-width: _rem(.1) _rem(.1) _rem(.1) _rem(.3);

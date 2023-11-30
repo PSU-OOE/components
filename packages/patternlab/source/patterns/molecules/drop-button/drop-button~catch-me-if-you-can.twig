@@ -1,14 +1,12 @@
 {% set drop_button %}
   <style>
-      @keyframes backandforth {0%{left:0;} 100%{left:80%;}}
+      @keyframes backandforth {0%{margin-left:0;} 100%{margin-left:80%;}}
   </style>
-  <div style="position:relative;height:10rem;">
-    <div style="position:absolute;animation-timing-function: linear;animation-name: backandforth; animation-direction:alternate;animation-iteration-count: infinite;animation-duration:5s;">
-      {% include '@molecules/drop-button/drop-button.twig' with {
-        toggle_content: '<div style="outline: 2px dotted black;text-align:center">More<br>(may shake violently)</div>',
-        panel_content: 'Test content',
-      } only %}
-    </div>
+  <div style="padding: 4rem 0;height:10rem;animation-timing-function: linear;animation-name: backandforth; animation-direction:alternate;animation-iteration-count: infinite;animation-duration:5s;">
+    {% include '@molecules/drop-button/drop-button.twig' with {
+      toggle_content: '<div style="outline: 2px dotted black;text-align:center">More<br>(may shake violently)</div>',
+      panel_content: 'Test content',
+    } only %}
   </div>
 {% endset %}
 
