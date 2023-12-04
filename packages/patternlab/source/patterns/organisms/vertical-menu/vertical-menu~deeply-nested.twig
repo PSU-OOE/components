@@ -1,0 +1,79 @@
+{% set menu %}
+  {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+    menu_name: 'Example',
+    items: [
+      { title: 'Home', url: '#', in_active_trail: true },
+      { title: 'Item 1', url: '#', below: [
+        { title: 'Item 1a', url: '#', below: [
+          { title: 'Subitem 1a', url: '#' },
+          { title: 'Subitem 1b', url: '#' },
+          { title: 'Subitem 1c', url: '#', below: [
+            { title: 'Sub-sub-item 1a', url: '#' },
+            { title: 'Sub-sub-item 1b', url: '#', below: [
+              { title: 'Sub-sub-sub-item 1a', url: '#' },
+              { title: 'Sub-sub-sub-item 1b', url: '#' },
+              { title: 'Sub-sub-sub-item 1c', url: '#' },
+            ]},
+            { title: 'Sub-sub-item 1c', url: '#' },
+          ]},
+        ]},
+        { title: 'Item 1b', url: '#' },
+        { title: 'Item 1c', url: '#' },
+        { title: 'Item 1d', url: '#' },
+      ]},
+      { title: 'Item 2', url: '#', below: [
+        { title: 'Item 2a', url: '#' },
+        { title: 'Item 2b', url: '#', below: [
+          { title: 'Subitem 2a', url: '#' },
+          { title: 'Subitem 2b', url: '#' },
+          { title: 'Subitem 2c', url: '#' },
+        ]},
+        { title: 'Item 2c', url: '#' },
+        { title: 'Item 2d', url: '#' },
+      ]},
+      { title: 'Item 3', url: '#', below: [
+        { title: 'Item 3a', url: '#' },
+        { title: 'Item 3b', url: '#' },
+        { title: 'Item 3c', url: '#', below: [
+          { title: 'Subitem 3a', url: '#' },
+          { title: 'Subitem 3b', url: '#' },
+          { title: 'Subitem 3c', url: '#' },
+        ]},
+        { title: 'Item 3d', url: '#' },
+      ]},
+      { title: 'Item 4', url: '#', below: [
+        { title: 'Item 4a', url: '#' },
+        { title: 'Item 4b', url: '#', below: [
+          { title: 'Subitem 4a', url: '#' },
+          { title: 'Subitem 4b', url: '#' },
+          { title: 'Subitem 4c', url: '#' },
+        ]},
+        { title: 'Item 4c', url: '#' },
+        { title: 'Item 4d', url: '#' },
+      ]},
+      { title: 'Item 5', url: '#', below: [
+        { title: 'Item 5a', url: '#' },
+        { title: 'Item 5b', url: '#' },
+        { title: 'Item 5c', url: '#' },
+        { title: 'Item 5d', url: '#', below: [
+          { title: 'Subitem 5a', url: '#' },
+          { title: 'Subitem 5b', url: '#' },
+          { title: 'Subitem 5c', url: '#' },
+        ]},
+      ]},
+      { title: 'Item 6', url: '#', below: [
+        { title: 'Item 6a', url: '#', below: [
+          { title: 'Subitem 6a', url: '#' },
+          { title: 'Subitem 6b', url: '#' },
+          { title: 'Subitem 6c', url: '#' },
+        ]},
+        { title: 'Item 6b', url: '#' },
+        { title: 'Item 6c', url: '#' },
+        { title: 'Item 6d', url: '#' },
+      ]},
+    ],
+  } only %}
+{% endset %}
+{% include '@molecules/callout/callout.twig' with {
+  content: menu,
+} only %}
