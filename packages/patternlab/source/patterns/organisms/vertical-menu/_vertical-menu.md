@@ -1,8 +1,16 @@
 # Variables
-| Variable         | Type   | Required | Description                                               |
-|------------------|--------|----------|-----------------------------------------------------------|
-| menu_name        | string | true     | The name of the menu (visible in the accessibility tree). |
-| items            | array  | true     | The items to include in the menu.                         |
+| Variable               | Type    | Required | Description                                                                              |
+|------------------------|---------|----------|------------------------------------------------------------------------------------------|
+| menu_name              | string  | true     | The name of the menu (visible in the accessibility tree).                                |
+ | density                | enum    | false    | Overrides the layout density of the menu; must be one of the documented density presets. |
+ | highlight_active_trail | boolean | false    | Should the active trail be highlighted with a vertical highlight?                        |
+| items                  | array   | true     | The items to include in the menu.                                                        |
+
+## Menu Densities
+| Density | Description                                      |
+|---------|--------------------------------------------------|
+ | tight   | The menu will be displayed with a tight density. |
+ | loose   | The menu will be displayed with a loose density. |
 
 ## Menu item structure
 The menu item structure is recursive.  Each item has the following attributes:

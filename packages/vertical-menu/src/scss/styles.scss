@@ -43,6 +43,19 @@
     &--1 {
       border-bottom: _rem(.2) solid var(--slate-light);
     }
+
+    &--highlight {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -1.2rem;
+        border-left: 0.3rem solid var(--sky-blue);
+        content: "";
+        display: block;
+        height: 100%;
+      }
+    }
   }
 
   &__link {
@@ -50,8 +63,16 @@
     display: block;
     font-weight: var(--font-weight--regular);
     flex: 1;
-    padding: _rem(1) 0;
+    padding: _rem(1.5) 0;
     text-decoration: none;
+
+    &--tight {
+      padding: _rem(1) 0;
+    }
+
+    &--loose {
+      padding: _rem(2) 0;
+    }
 
     &:hover {
       color: var(--pa-link);
@@ -66,6 +87,10 @@
     &.focus-visible {
       color: var(--pa-link);
       text-decoration: underline;
+    }
+
+    &--active-trail {
+      font-weight: var(--font-weight--bold);
     }
   }
 }

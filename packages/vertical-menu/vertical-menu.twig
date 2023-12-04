@@ -1,35 +1,18 @@
-{#
-/**
- * @file
- * Olivero's theme implementation for the main menu.
- *
- * Available variables:
- * - menu_name: The machine name of the menu.
- * - items: A nested list of menu items. Each menu item contains:
- *   - attributes: HTML attributes for the menu item.
- *   - below: The menu item child items.
- *   - title: The menu link title.
- *   - url: The menu link url, instance of \Drupal\Core\Url
- *   - localized_options: Menu link localized options.
- *   - is_expanded: TRUE if the link has visible children within the current
- *     menu tree.
- *   - is_collapsed: TRUE if the link has children within the current menu tree
- *     that are not currently visible.
- *   - in_active_trail: TRUE if the link is in the active trail.
- *
- * @ingroup themeable
- */
-#}
-
-{% macro menu_links(items, menu_level, id) %}
+{% macro menu_links(items, menu_level, id, density, highlight_active_trail) %}
   {% apply spaceless %}
     {% if items %}
       <ul class="vertical-menu__menu vertical-menu__menu--{{ menu_level }}" id="{{ id }}"{% if menu_level > 1 %} style="height:0;overflow:hidden;"{% endif %}>
         {% for item in items %}
-          <li class="vertical-menu__item vertical-menu__item--{{ menu_level }}">
+          {% set item_classes = [
+            'vertical-menu__item',
+            'vertical-menu__item--' ~ menu_level,
+            item.in_active_trail and highlight_active_trail ? 'vertical-menu__item--highlight',
+          ] %}
+          <li class="{{ item_classes|join(' ') }}">
             {% set link_classes = [
               'vertical-menu__link',
               'vertical-menu__link--' ~ menu_level,
+              density ? 'vertical-menu__link--' ~ density,
               item.in_active_trail ? 'vertical-menu__link--active-trail',
             ]|filter(v => v is not empty)
             %}
@@ -52,5 +35,5 @@
 {% import _self as menus %}
 
 <nav class="vertical-menu" aria-label="{{ menu_name }}">
-  {{ menus.menu_links(items, 1, menu_name|clean_unique_id) }}
+  {{ menus.menu_links(items, 1, menu_name|clean_unique_id, density, highlight_active_trail) }}
 </nav>
