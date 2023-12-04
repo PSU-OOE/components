@@ -2,7 +2,7 @@
   {% include '@organisms/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Example',
     items: [
-      { title: 'Home', url: '#', in_active_trail: true },
+      { title: 'Home', url: '#' },
       { title: 'Item 1', url: '#', below: [
         { title: 'Item 1a', url: '#', below: [
           { title: 'Subitem 1a', url: '#' },
@@ -21,7 +21,7 @@
         { title: 'Item 1c', url: '#' },
         { title: 'Item 1d', url: '#' },
       ]},
-      { title: 'Item 2', url: '#', below: [
+      { title: 'Item 2', url: '#', in_active_trail: true, below: [
         { title: 'Item 2a', url: '#' },
         { title: 'Item 2b', url: '#', below: [
           { title: 'Subitem 2a', url: '#' },
