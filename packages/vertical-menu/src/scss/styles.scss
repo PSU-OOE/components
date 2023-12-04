@@ -65,7 +65,7 @@
       border-bottom: _rem(.1) solid var(--slate-light);
     }
 
-    &--highlight {
+    &--1#{&}--highlight {
       position: relative;
       &::before {
         position: absolute;
