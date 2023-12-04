@@ -2,7 +2,7 @@
 
 .vertical-menu {
 
-  &__menu--2 {
+  &__menu:not(&__menu--1) {
     margin-left: _rem(2);
     flex-basis: 100%;
     visibility: hidden;
