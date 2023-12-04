@@ -35,5 +35,8 @@
 {% import _self as menus %}
 
 <nav class="vertical-menu" aria-label="{{ menu_name }}">
+  {% if parent_item %}
+    <a class="vertical-menu__parent" href="{{ parent_item.url }}">{{ parent_item.title }}</a>
+  {% endif %}
   {{ menus.menu_links(items, 1, menu_name|clean_unique_id, false, density, highlight_active_trail) }}
 </nav>

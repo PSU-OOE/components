@@ -1,6 +1,23 @@
 @import '../../../base/src/scss/imports/variables';
 
 .vertical-menu {
+  &__parent {
+    display: block;
+    font-size: var(--font-size--large);
+    font-weight: var(--font-weight--bold);
+    color: var(--text-color--default);
+    border-bottom: _rem(.2) solid var(--slate-light);
+    text-decoration: none;
+    padding: _rem(1.5) 0;
+
+    &--tight {
+      padding: _rem(1) 0;
+    }
+
+    &--loose {
+      padding: _rem(2) 0;
+    }
+  }
 
   &__menu:not(&__menu--1) {
     margin-left: _rem(2);
