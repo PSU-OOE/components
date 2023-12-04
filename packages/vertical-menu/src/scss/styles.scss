@@ -6,7 +6,7 @@
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--bold);
     color: var(--text-color--default);
-    border-bottom: _rem(.2) solid var(--slate-light);
+    border-bottom: _rem(.2) solid var(--pugh-blue);
     text-decoration: none;
     padding: _rem(1.5) 0;
 
@@ -58,7 +58,7 @@
     flex-wrap: wrap;
 
     &--1 {
-      border-bottom: _rem(.2) solid var(--slate-light);
+      border-bottom: _rem(.1) solid var(--pugh-blue);
     }
 
     &--highlight {
