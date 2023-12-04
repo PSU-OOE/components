@@ -61,6 +61,10 @@
       border-bottom: _rem(.1) solid var(--pugh-blue);
     }
 
+    &:not(&--1):not(:last-child) {
+      border-bottom: _rem(.1) solid var(--slate-light);
+    }
+
     &--highlight {
       position: relative;
       &::before {
@@ -80,15 +84,31 @@
     display: block;
     font-weight: var(--font-weight--regular);
     flex: 1;
-    padding: _rem(1.5) 0;
     text-decoration: none;
 
-    &--tight {
+    &--1 {
+      padding: _rem(1.5) 0;
+    }
+
+    &:not(&--1) {
+      padding: _rem(1) 0;
+      font-size: var(--font-size--msmall);
+    }
+
+    &--tight#{&}--1 {
       padding: _rem(1) 0;
     }
 
-    &--loose {
+    &--tight#{&}:not(&--1) {
+      padding: _rem(.7) 0;
+    }
+
+    &--loose#{&}--1 {
       padding: _rem(2) 0;
+    }
+
+    &--loose#{&}:not(&--1) {
+      padding: _rem(1.5) 0;
     }
 
     &:hover {
