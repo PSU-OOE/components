@@ -96,6 +96,7 @@
   {% set vertical_menu %}
     {% include '@organisms/vertical-menu/vertical-menu.twig' with {
       menu_name: 'Primary navigation menu',
+      density: 'tight',
       items: [
         { title: 'Home', url: '#', in_active_trail: true },
         { title: 'About Us', url: '#', below: [
