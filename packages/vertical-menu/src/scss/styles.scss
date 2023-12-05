@@ -61,6 +61,10 @@
       border-bottom: _rem(.1) solid var(--pugh-blue);
     }
 
+    &:not(&--1):first-child {
+      border-top: _rem(.1) solid var(--slate-light);
+    }
+
     &:not(&--1):not(:last-child) {
       border-bottom: _rem(.1) solid var(--slate-light);
     }
