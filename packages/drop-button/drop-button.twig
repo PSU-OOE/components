@@ -1,12 +1,12 @@
-<div class="drop-button" data-interactive-component>
+{% set classes = [
+  'drop-button',
+  width in ['wide'] ? 'drop-button--' ~ width,
+]|filter(v => v is not empty) %}
+<div class="{{ classes|join(' ') }}" data-interactive-component>
   <div role="button" class="drop-button__toggle" tabindex="0" aria-expanded="false">
     {{ toggle_content }}
   </div>
-  {% set content_classes = [
-    'drop-button__content',
-    width in ['stretch', 'wide'] ? 'drop-button__content--' ~ width,
-  ]|filter(v => v is not empty) %}
-  <div class="{{ content_classes|join(' ') }}" tabindex="0">
+  <div class="drop-button__content" tabindex="0">
     {{ panel_content }}
   </div>
 </div>
