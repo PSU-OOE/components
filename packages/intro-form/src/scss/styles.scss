@@ -36,12 +36,12 @@
 
   &__border {
     @include bp(s) {
-      border-top: _rem(.8) solid $primary-blue;
+      border-top: _rem(.8) solid var(--sky-blue);
     }
   }
 
   &__image {
-    background-color: $white;
+    background-color: var(--white);
     position: absolute;
     aspect-ratio: 16/7;
     width: 100%;
@@ -62,16 +62,16 @@
 
   &__intro {
     padding: 0 _rem(1);
-    margin-top: calc(43.75% - 3.25rem);
+    margin-top: calc(43.75% - _rem(3.25));
 
     @include bp(xs) {
       padding: 0 _rem(2);
     }
 
     @include bp(s) {
-      background: $white;
+      background: var(--white);
       padding: 0;
-      margin-top: calc(50% - 7.25rem);
+      margin-top: calc(50% - _rem(7.25));
     }
   }
 
@@ -94,16 +94,16 @@
     letter-spacing: normal;
     position: relative;
     font-size: _rem(3.4);
-    font-family: $open-sans;
+    font-family: var(--font-family--headings);
     line-height: 1.15;
-    font-weight: 400;
-    background: $primary-blue;
+    font-weight: var(--font-weight--medium);
+    background: var(--nittany-navy);
     padding: _rem(1) 0;
     margin: 0 _rem(1.5);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-    box-shadow: _rem(-1.5) 0 0 $primary-blue, _rem(1.5) 0 0 $primary-blue;
-    color: $white;
+    box-shadow: _rem(-1.5) 0 0 var(--nittany-navy), _rem(1.5) 0 0 var(--nittany-navy);
+    color: var(--white);
   }
 
   &__relative {
@@ -111,7 +111,7 @@
   }
 
   &__description {
-    background: $white;
+    background: var(--white);
     display: block;
     box-shadow: _rem(.1) _rem(.2) rgba($nittany-navy, .4);
     padding: _rem(2.5) _rem(2);
@@ -122,8 +122,7 @@
     }
 
     @include bp(s) {
-      font-size: _rem(1.8);
-      line-height: calc(33/18);
+      font-size: var(--font-size--large);
       margin: _rem(1.3) 0 0 0;
       box-shadow: none;
       padding: _rem(2) _rem(2) _rem(3);
@@ -141,17 +140,5 @@
       padding: 0;
       flex: 1;
     }
-  }
-
-  &--primary-blue &__border {
-    @include bp(s) {
-      border-top: _rem(.8) solid $beaver-blue;
-    }
-  }
-
-  &--primary-blue &__title {
-    background: $beaver-blue;
-    box-shadow: _rem(-1.5) 0 0 $beaver-blue, _rem(1.5) 0 0 $beaver-blue;
-
   }
 }
