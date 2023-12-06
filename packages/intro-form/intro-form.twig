@@ -2,7 +2,7 @@
   {% set heading_level = 'span' %}
 {% endif %}
 
-{% if color not in ['light-grey', 'primary-blue'] %}
+{% if color not in ['light-grey', 'beaver-blue'] %}
   {% set color = 'light-grey' %}
 {% endif %}
 
@@ -13,7 +13,7 @@
 
 {% set classes = [
   'intro-form',
-  color in ['primary-blue'] ? 'intro-form--' ~ color,
+  color in ['beaver-blue'] ? 'intro-form--' ~ color,
 ] %}
 
 <div class="{{ classes|join(' ') }}">

@@ -1,0 +1,20 @@
+{# @TODO: Replace with a real form when base styles allow... #}
+{% include '@molecules/intro-form/intro-form.twig' with {
+  "color": "beaver-blue",
+  "images": [
+    "<img src=\"https://via.placeholder.com/800x350\" alt=\"\">",
+  ],
+  "title": "Ready to Learn More?",
+  "description": "Get the resources you need to make informed decisions about your education. Request information on this program and other programs of interest by completing this form.",
+  "form": '<span style=\"color:white;\"><form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email"><br>
+  <label for="phone">Phone</label><br>
+  <input type="telephone" id="phone" name="phone"><br><br>
+  <input style="background: none;" class="cta cta-block" type="submit" value="Submit">
+</form> </span>'
+} only %}
