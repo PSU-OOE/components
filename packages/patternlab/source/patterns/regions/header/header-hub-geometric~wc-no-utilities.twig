@@ -30,8 +30,10 @@
   {% endblock %}
   {% block content %}
     <div class="region region--cta-large-viewports">
-      {{ how_to_apply }}
-      {{ request_info }}
+      {% apply spaceless %}
+        {{ how_to_apply }}
+        {{ request_info }}
+      {% endapply %}
     </div>
   {% endblock %}
   {% block overflow %}
