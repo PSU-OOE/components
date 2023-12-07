@@ -290,6 +290,8 @@
 .header__large-utility-link {
   color: var(--text-color--light);
   text-decoration: none;
+  font-family: var(--font-family--default);
+  font-weight: var(--font-weight--semibold);
   font-size: var(--font-size--xsmall);
   line-height: var(--line-height--nospace);
   letter-spacing: var(--letter-spacing--medium);
