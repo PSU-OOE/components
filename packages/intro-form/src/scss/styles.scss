@@ -93,7 +93,7 @@
     display: inline;
     letter-spacing: normal;
     position: relative;
-    font-size: _rem(3.4);
+    font-size: var(--font-size--3xlarge);
     font-family: var(--font-family--headings);
     line-height: 1.15;
     font-weight: var(--font-weight--medium);
