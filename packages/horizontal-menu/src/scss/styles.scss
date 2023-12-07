@@ -64,12 +64,12 @@
         padding: 2.4rem 1.6rem;
       }
 
-      &:focus-within, &:hover, &:is(.horizontal-menu__item:has([aria-expanded="true"]) *) {
+      &:focus-within, &:hover, &:has(+ [aria-expanded="true"]) {
         background-color: var(--pa-link);
         text-decoration: none;
       }
 
-      &:is(.horizontal-menu__item:has([aria-expanded="true"]) *) {
+      &:has(+ [aria-expanded="true"]) {
         position: relative;
 
         &::before {
