@@ -28,7 +28,7 @@
   &__text {
     font-family: var(--font-family--default);
     font-size: var(--font-size--5xsmall);
-    font-weight: var(--font-weight--bold);
+    font-weight: var(--font-weight--regular);
     line-height: var(--line-height--xsnug);
 
     @include bp(xs) {
@@ -42,6 +42,6 @@
   }
 
   &__strong {
-    font-weight: var(--font-weight--extrabold);
+    font-weight: var(--font-weight--bold);
   }
 }
