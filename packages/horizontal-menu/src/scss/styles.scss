@@ -69,6 +69,20 @@
         text-decoration: none;
       }
 
+      &:is(.horizontal-menu__item:has([aria-expanded="true"]) *) {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: _rem(.3);
+          background-color: var(--sky-blue);
+        }
+      }
+
       &:focus-visible {
         outline: .2rem solid var(--sky-blue);
         outline-offset: 0;
@@ -92,7 +106,7 @@
       font-size: var(--font-size--xsmall);
       line-height: var(--line-height--xsnug);
       letter-spacing: var(--letter-spacing--medium);
-      padding: _rem(1.6);
+      padding: _rem(1.6) 0;
       @include bp(xl) {
         font-size: var(--font-size--msmall);
       }
