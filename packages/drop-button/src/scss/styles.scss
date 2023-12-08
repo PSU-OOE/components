@@ -57,10 +57,19 @@
     border-color: var(--slate-light) var(--slate-light) var(--slate-light) var(--sky-blue);
     border-width: _rem(.1) _rem(.1) _rem(.1) _rem(.3);
     box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 15%, transparent);
-    padding: _rem(2);
     z-index: 100;
     left: var(--drop-button--left);
     right: var(--drop-button--right);
     top: calc(100% + #{_rem(math.div(math.sqrt(200), 10))} + .2em);
+
+    &--padding {
+      &-default {
+        padding: _rem(2);
+      }
+
+      &-small {
+        padding: _rem(1);
+      }
+    }
   }
 }

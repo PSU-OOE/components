@@ -7,10 +7,19 @@
   </div>
 {% endset %}
 
+{% set panel_content %}
+  <div class="compact-menu__content">
+    {% block panel_content %}
+        {{ menu }}
+    {% endblock %}
+  </div>
+{% endset %}
+
 <div class="compact-menu">
   {% include '@molecules/drop-button/drop-button.twig' with {
     width: 'wide',
     toggle_content: toggle_content,
-    panel_content: menu,
+    panel_padding: 'none',
+    panel_content: panel_content,
   } only %}
 </div>

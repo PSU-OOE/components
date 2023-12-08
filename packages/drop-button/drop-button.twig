@@ -6,7 +6,11 @@
   <div role="button" class="drop-button__toggle" tabindex="0" aria-expanded="false">
     {{ toggle_content }}
   </div>
-  <div class="drop-button__content" tabindex="0">
+  {% set content_classes = [
+    'drop-button__content',
+    'drop-button__content--padding-' ~ (panel_padding in ['none'] ? panel_padding : 'default'),
+  ] %}
+  <div class="{{ content_classes|join(' ') }}" tabindex="0">
     {{ panel_content }}
   </div>
 </div>
