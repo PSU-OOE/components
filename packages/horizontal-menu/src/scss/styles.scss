@@ -16,7 +16,8 @@
       box-shadow: .1rem .3rem .5rem rgba($nittany-navy, .75);
       border-left: .3rem solid var(--sky-blue);
       padding: .5rem 2rem;
-      min-width: _rem(23);
+      min-width: 100%;
+      width: _rem(23);
       z-index: 2;
     }
   }
