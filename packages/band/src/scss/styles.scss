@@ -4,7 +4,8 @@
 @import "../../../base/src/scss/imports/layout";
 
 .band {
-  background-color: $light-mauve;
+  background-color: var(--beaver-blue);
+  color: var(--text-color--light);
 
   &__content {
     padding: _rem(1.2) 2.6%;
@@ -35,6 +36,6 @@
   }
 
   &--secondary {
-    background-color: color.mix($light-mauve, $white);
+    background-color: var(--nittany-navy);
   }
 }
