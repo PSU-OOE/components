@@ -11,7 +11,7 @@
     > .cta-block {
       flex: 1 1 auto;
 
-      &:not(.cta-block--compact) {
+      &:not(.cta-block--compact, .cta-block--xcompact, .cta-block--compact-responsive) {
         padding: 1.5rem;
 
         @include bp(m) {
