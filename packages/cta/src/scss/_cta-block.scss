@@ -105,7 +105,9 @@
   }
 
   &--expand-to-fit {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: stretch; /* official name - not supported by major browsers yet */
     width: -webkit-fill-available;
     width: -moz-available;
