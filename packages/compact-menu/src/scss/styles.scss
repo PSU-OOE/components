@@ -40,11 +40,13 @@
       }
 
       .sprite {
-        width: 2.1rem;
+        width: _rem(2.1);
+        min-height: _rem(2.1);
         height: auto;
 
         @include bp(xs) {
           width: _rem(2.6);
+          min-height: _rem(2.6);
         }
       }
     }
