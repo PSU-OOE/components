@@ -91,11 +91,11 @@
 
   &__title {
     display: inline;
-    letter-spacing: normal;
+    letter-spacing: var(--letter-spacing--msnug);
     position: relative;
     font-size: var(--font-size--3xlarge);
     font-family: var(--font-family--headings);
-    line-height: 1.15;
+    line-height: var(--line-height--xsnug);
     font-weight: var(--font-weight--medium);
     background: var(--nittany-navy);
     padding: _rem(1) 0;
