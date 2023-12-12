@@ -4,6 +4,12 @@
 .horizontal-menu {
   position: relative;
 
+  // Create a stacking context so that both child and grand-child elements
+  // are able to use the menu root for relative positioning.
+  //
+  // @see https://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/
+  transform: rotate(0deg);
+
   &__menu {
     display: flex;
     flex-wrap: wrap;
@@ -11,19 +17,22 @@
     &--2 {
       background: var(--white);
       flex-direction: column;
-      position:absolute;
+      position: absolute;
       top: 100%;
       opacity: 0;
       visibility: hidden;
       box-shadow: .1rem .3rem .5rem rgba($nittany-navy, .75);
       border-left: .3rem solid var(--sky-blue);
       padding: .5rem 2rem;
-      min-width: _rem(23);
+      min-width: 100%;
+      width: _rem(23);
       z-index: 2;
     }
   }
 
   &__item {
+    position: relative;
+
     &--1 {
       display: flex;
       flex: 1 0 auto;
@@ -131,13 +140,13 @@
   &__toggle {
     background: var(--pa-link);
     border: none;
+    position: absolute;
+    inset: 0 -.8rem 0 calc(100% - .8rem);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     z-index: 1;
-    margin-left: _rem(-1.8);
-    width: _rem(1.6);
 
     &:focus-visible {
       opacity: 1;
