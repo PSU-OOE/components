@@ -2,6 +2,8 @@
 @import '../../../base/src/scss/imports/layout';
 
 .horizontal-menu {
+  position: relative;
+
   &__menu {
     display: flex;
     flex-wrap: wrap;
@@ -16,8 +18,7 @@
       box-shadow: .1rem .3rem .5rem rgba($nittany-navy, .75);
       border-left: .3rem solid var(--sky-blue);
       padding: .5rem 2rem;
-      min-width: 100%;
-      width: _rem(23);
+      min-width: _rem(23);
       z-index: 2;
     }
   }
@@ -25,7 +26,6 @@
   &__item {
     &--1 {
       display: flex;
-      position: relative;
       flex: 1 0 auto;
 
       &:last-child .horizontal-menu__menu {
@@ -131,13 +131,13 @@
   &__toggle {
     background: var(--pa-link);
     border: none;
-    position: absolute;
-    inset: 0 -.8rem 0 calc(100% - .8rem);
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     z-index: 1;
+    margin-left: _rem(-1.8);
+    width: _rem(1.6);
 
     &:focus-visible {
       opacity: 1;
