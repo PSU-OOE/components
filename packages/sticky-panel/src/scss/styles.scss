@@ -4,6 +4,8 @@
 .sticky-panel {
   position: sticky;
   top: var(--sticky-panel-vertical-offset, 0);
+  left: var(--sticky-panel-horizontal-offset, 0);
+  width: var(--sticky-panel-width, 100%);
 
   &__content {
     position: relative;
