@@ -9,16 +9,6 @@
   &__gradient {
     &::before {
       content: "";
-      position: absolute;
-      width: 10000px;
-      left: calc(50% - 5000px);
-      top: 0;
-      bottom:0;
-      background: linear-gradient(22deg, var(--nittany-navy) 41%, transparent 50%);
-    }
-
-    &::after {
-      content: "";
       display:block;
       position: absolute;
       left: calc(50% - 1260px);
@@ -28,6 +18,16 @@
       transform: rotate(17deg);
       background: radial-gradient(closest-side, var(--nittany-navy), transparent);
       mix-blend-mode: multiply;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10000px;
+      left: calc(50% - 5000px);
+      top: 0;
+      bottom:0;
+      background: linear-gradient(22deg, var(--nittany-navy) 41%, transparent 50%);
     }
   }
 
