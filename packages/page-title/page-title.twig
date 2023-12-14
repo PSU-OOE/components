@@ -1,5 +1,11 @@
 <div class="page-title">
-  <img class="page-title__image" src="https://test.worldcampus.psu.edu/sites/default/files/2018-12/1920x840_campus_hp.jpg" alt>
+  {% if image %}
+    <div class="page-title__image">
+      {{ image }}
+    </div>
+  {% else %}
+    <div class="page-title__no-image"></div>
+  {% endif %}
   <div class="page-title__content">
     <h1 class="page-title__heading">
       {% if subtitle_before %}
