@@ -1,0 +1,14 @@
+<div class="page-title">
+  <img class="page-title__image" src="https://test.worldcampus.psu.edu/sites/default/files/2018-12/1920x840_campus_hp.jpg" alt>
+  <div class="page-title__content">
+    <h1 class="page-title__heading">
+      {% if subtitle_before %}
+        <span class="page-title__subtitle-before">{{ subtitle_before }}</span>
+      {% endif %}
+      <span class="page-title__title">{{ title }}</span>
+      {% if subtitle_after %}
+        <span class="page-title__subtitle-after">{{ subtitle_after }}</span>
+      {% endif %}
+    </h1>
+  </div>
+</div>

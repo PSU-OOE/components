@@ -1854,6 +1854,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/page-title@workspace:packages/page-title":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/page-title@workspace:packages/page-title"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/pager@^1.0, @psu-ooe/pager@workspace:packages/pager":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/pager@workspace:packages/pager"

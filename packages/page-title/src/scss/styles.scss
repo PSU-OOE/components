@@ -1,0 +1,67 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.page-title {
+  position: relative;
+  height: _rem(40);
+  overflow: hidden;
+
+  &__image {
+    position: absolute;
+    object-fit: contain;
+    object-position: top center;
+    width: 100%;
+  }
+
+  &__gradient {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(ellipse at 0% 100%, var(--nittany-navy) 0%, transparent 100%);
+  }
+
+  &__content {
+    position: relative;
+    padding: 0 var(--page-side-padding);
+    margin: auto;
+    max-width: _rem(119);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0 calc(100% - 45rem) 0 calc((-100vw + 119rem)/2);
+      background-image: radial-gradient(
+        ellipse at 0% 100%,
+        var(--nittany-navy) 0%,
+        rgba($nittany-navy, 50%) 50%,
+        transparent 100%
+      );
+    }
+  }
+
+  &__heading {
+    position: relative;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    text-shadow: var(--nittany-navy) _rem(.5) 0 _rem(1);
+    margin-bottom: 0;
+    width: _rem(45);
+    padding-bottom: _rem(4);
+  }
+
+  &__subtitle-before {
+    font-size: var(--font-size--large);
+  }
+
+  &__title {
+    font-size: var(--font-size--4xlarge);
+  }
+
+  &__subtitle-after {
+    font-size: var(--font-size--large);
+  }
+}
