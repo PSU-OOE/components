@@ -1,0 +1,103 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.compact-search {
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:is(:focus-visible > .compact-search__toggle) {
+      outline: _rem(.2) solid var(--sky-blue);
+      outline-offset: _rem(.2);
+    }
+
+    &:is(.focus-visible > .compact-search__toggle) {
+      outline: _rem(.2) solid var(--sky-blue);
+      outline-offset: _rem(.2);
+    }
+
+    &:where(:hover) &-sprite {
+      color: var(--white);
+    }
+
+    &:hover &-label {
+      text-decoration-color: var(--white);
+    }
+
+    &-sprite {
+      color: var(--pugh-blue);
+      transition: color var(--transition-duration--default) linear;
+
+      &:is([aria-expanded="true"] > .compact-search__toggle > .compact-search__toggle-sprite) {
+        color: var(--keystone-light);
+      }
+    }
+
+    &-label {
+      color: var(--white);
+      display: block;
+      font-family: var(--font-family--default);
+      font-weight: var(--font-weight--semibold);
+      font-size: var(--font-size--5xsmall);
+      line-height: var(--line-height--nospace);
+      text-decoration-color: transparent;
+      text-decoration-line: underline;
+      text-decoration-thickness: _rem(.1);
+      text-underline-offset: .2em;
+      transition: text-decoration-color var(--transition-duration--default) linear;
+
+      &:is(:focus-visible  > .compact-search__toggle > .compact-search__toggle-label) {
+        text-decoration-color: var(--white);
+      }
+
+      &:is(.focus-visible  > .compact-search__toggle > .compact-search__toggle-label) {
+        text-decoration-color: var(--white);
+      }
+    }
+
+    &--vertical {
+      flex-direction: column;
+      gap: _rem(.5);
+
+      @include bp(xs) {
+        gap: _rem(.7);
+      }
+
+      .compact-search__toggle-sprite .sprite {
+        width: _rem(2.1);
+        height: auto;
+
+        @include bp(xs) {
+          width: _rem(2.6);
+        }
+      }
+
+      .compact-search__toggle-label {
+        padding-bottom: .2em;
+
+        @include bp(xs) {
+          font-size: var(--font-size--3xsmall);
+        }
+      }
+    }
+
+    &--horizontal {
+      flex-direction: row;
+      gap: _rem(.6);
+
+      .compact-search__toggle-sprite .sprite {
+        width: 1.6rem;
+        height: auto;
+      }
+
+      .compact-search__toggle-label {
+        font-size: var(--font-size--xsmall);
+
+        @include bp(xl) {
+          font-size: var(--font-size--msmall);
+        }
+      }
+    }
+  }
+}

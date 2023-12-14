@@ -1,0 +1,24 @@
+{
+  "name": "@psu-ooe/more-menu",
+  "version": "2.0.2",
+  "description": "An more menu block.",
+  "ooe": {
+    "namespace": "global"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^1.0",
+    "@psu-ooe/polyfill-focus-visible": "^1.0"
+  },
+  "peerDependencies": {
+    "@psu-ooe/background-container": "^2.0"
+  },
+  "peerDependenciesMeta": {
+    "@psu-ooe/background-container": {
+      "optional": true
+    }
+  }
+}

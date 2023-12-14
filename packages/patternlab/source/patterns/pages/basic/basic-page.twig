@@ -1,0 +1,254 @@
+<style>
+  {# Regions backport from wcprospect8 #}
+  .region--utility-small-viewports{display:flex;gap:2rem;width:100%;height:100%;align-items:flex-end;justify-content:flex-end}@media(min-width: 950px){.region--utility-small-viewports{display:none}}.region--cta-small-viewports{display:flex;gap:clamp(0.5rem,1.25vw,1rem);padding:1.2rem 0}@media(min-width: 950px){.region--cta-small-viewports{display:none}}.region--cta-small-viewports:empty{padding:0.6rem 0}.region--utility-large-viewports{display:none}@media(min-width: 950px){.region--utility-large-viewports{display:flex;width:100%;gap:1.5rem;align-items:center;justify-content:flex-end}}@media(min-width: 950px)and (min-width: 1024px){.region--utility-large-viewports{gap:2rem}}@media(min-width: 950px){.region--utility-large-viewports+.region--cta-large-viewports{margin-left:3rem}}@media(min-width: 950px)and (min-width: 1024px){.region--utility-large-viewports+.region--cta-large-viewports{margin-left:4rem}}.region--cta-large-viewports{display:none}@media(min-width: 950px){.region--cta-large-viewports{display:flex;gap:clamp(0.5rem,1.25vw,1rem);margin-left:auto;white-space:nowrap}}.region--overflow-large-viewports{display:none}@media(min-width: 950px){.region--overflow-large-viewports{display:block}}.region--overflow-large-viewports:empty{padding:0.6rem 0}
+
+  {# "System branding block" backport from wcprospect8 #}
+  .block--system-branding-block .sprite{color:var(--beaver-blue);height:auto;width:13rem;min-width:3rem;max-width:100%}@media(min-width: 550px){.block--system-branding-block .sprite{width:18.5rem}}
+
+  {# "Utility menu" backport from wcprospect8 #}
+  .utility-menu{display:flex;justify-content:flex-end;align-items:center;gap:1.5rem;margin:0;padding:0;list-style-type:none}@media(min-width: 1024px){.utility-menu{gap:2rem}}.utility-menu__link{color:var(--text-color--light);text-decoration:none;font-family:var(--font-family--default);font-weight:var(--font-weight--semibold);font-size:var(--font-size--xsmall);line-height:var(--line-height--nospace);letter-spacing:var(--letter-spacing--medium)}@media(min-width: 1280px){.utility-menu__link{font-size:var(--font-size--msmall)}}
+
+</style>
+<style>
+    .basic-page-content {
+        padding: 0 2rem;
+    }
+    @media screen and(min-width: 550px) {
+        .basic-page-content {
+            padding: 0 4rem;
+        }
+    }
+</style>
+
+{% embed '@regions/header/header.twig' %}
+
+  {% set how_to_apply %}
+    {% include '@atoms/cta/cta-block.twig' with {
+      label: 'How to Apply',
+      url: '#',
+      color: 'light-blue',
+      compact: true,
+    } only %}{% endset %}
+  {% set request_info %}
+    {% include '@atoms/cta/cta-block.twig' with {
+      label: 'Request Info',
+      url: '#',
+      color: 'reversed',
+      compact: true,
+    } only %}
+  {% endset %}
+
+  {% set search_horizontal %}
+    {% include '@blocks/compact-search/compact-search.twig' with {
+      align: 'right',
+      orientation: 'horizontal',
+      search_form: 'The search form goes here.'
+    } only %}
+  {% endset %}
+
+  {% set search_vertical %}
+    {% include '@blocks/compact-search/compact-search.twig' with {
+      align: 'right',
+      search_form: 'The search form goes here.'
+    } only %}
+  {% endset %}
+
+  {% set horizontal_menu %}
+    {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
+      menu_name: 'Primary navigation menu',
+      items: [
+        { title: 'Home', url: '#', in_active_trail: true },
+        { title: 'About Us', url: '#' },
+        { title: 'Degrees and Certificates', url: '#' },
+        { title: 'How Online Learning Works' },
+        { title: 'Admissions', url: '#' },
+        { title: 'Tuition and Financial Aid', url: '#' },
+        { title: 'Military', url: '#'},
+      ],
+    } only %}
+  {% endset %}
+
+  {% set vertical_menu %}
+    {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+      menu_name: 'Primary navigation menu',
+      density: 'tight',
+      items: [
+        { title: 'Home', url: '#', in_active_trail: true },
+        { title: 'About Us', url: '#' },
+        { title: 'Degrees and Certificates', url: '#' },
+        { title: 'How Online Learning Works' },
+        { title: 'Admissions', url: '#' },
+        { title: 'Tuition and Financial Aid', url: '#' },
+        { title: 'Military', url: '#'},
+      ],
+    } only %}
+  {% endset %}
+
+  {% set menu %}
+    {% include '@blocks/compact-menu/compact-menu.twig' with {
+      align: 'right',
+      menu: vertical_menu
+    } only %}
+  {% endset %}
+
+  {% block dogear_content %}
+    <div class="region region--branding">
+      <div class="block block--system-branding-block">
+        <a href="/">
+          <svg class="sprite sprite--wc-mark" aria-hidden="true" viewBox="0 0 229 72">
+            <use xlink:href="#wc-mark"></use>
+          </svg>
+          <span class="visually-hidden">Penn State World Campus</span>
+        </a>
+      </div>
+    </div>
+  {% endblock %}
+  {% block content %}
+    <div class="region region--utility-small-viewports">
+      {{ search_vertical }}
+      {{ menu }}
+    </div>
+    <div class="region region--utility-large-viewports">
+      <ul class="utility-menu" role="list">
+        <li class="utility-menu__item"><a class="utility-menu__link" href="#">Current Students</a></li>
+        <li class="utility-menu__item"><a class="utility-menu__link" href="#">Alumni</a></li>
+        <li class="utility-menu__item"><a class="utility-menu__link" href="#">Events</a></li>
+      </ul>
+      {{ search_horizontal }}
+    </div>
+    <div class="region region--cta-large-viewports">
+      {% apply spaceless %}
+        {{ how_to_apply }}
+        {{ request_info }}
+      {% endapply %}
+    </div>
+  {% endblock %}
+  {% block overflow %}
+    <div class="region region--cta-small-viewports">
+      {% apply spaceless %}
+        {% include '@atoms/cta/cta-group.twig' with {
+          ctas: [how_to_apply, request_info],
+          expand_to_fit: true,
+        } only %}
+      {% endapply %}
+    </div>
+    <div class="region region--overflow-large-viewports">
+      {{ horizontal_menu }}
+    </div>
+  {% endblock %}
+{% endembed %}
+
+{% set page_title %}
+  <div class="basic-page-content" style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;">
+    <h1>Basic Page</h1>
+  </div>
+{% endset %}
+{% include '@molecules/background-container/background-container.twig' with {
+  color: 'light-grey',
+  background_image: 'hub-geometric:topleft',
+  content: page_title,
+} only %}
+<main>
+  {% set page_content %}
+    <div class="basic-page-content" style="margin: auto;display:flex;flex-wrap:wrap; gap:5%; max-width: 119rem;">
+      <p style="flex: 1 1 0; min-width: 28rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras. Neque gravida in fermentum et sollicitudin ac. Gravida in fermentum et sollicitudin ac. Duis convallis convallis tellus id interdum. Neque volutpat ac tincidunt vitae semper. Non nisi est sit amet facilisis magna etiam tempor orci. Sit amet commodo nulla facilisi nullam vehicula. Eu volutpat odio facilisis mauris sit amet massa vitae tortor. Ante metus dictum at tempor commodo ullamcorper a lacus. Et molestie ac feugiat sed lectus vestibulum. Risus commodo viverra maecenas accumsan. Pretium vulputate sapien nec sagittis aliquam.</p>
+      <div style="flex: 1 1 0;min-width: 28rem;">
+        {% include '@organisms/quote/quote.twig' with {
+          headshot: "<img src=\"https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg\" width=\"400\" height=\"400\" alt=\"carrie tilley and family\">",
+          reverse: false,
+          quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+          attribution: "Carrie Tilley",
+          byline: "Master of Engineering in Systems Engineering graduate",
+          after_quote: ""
+        } only %}
+      </div>
+    </div>
+  {% endset %}
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'white',
+    content: page_content,
+  } only %}
+
+  {% set tile_nav_content %}
+    <div class="basic-page-content" style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;">
+      {% set tile %}
+        {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+          link: {
+            url: '#',
+            label: 'Navigation Title',
+          },
+          description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
+        } only %}
+
+      {% endset %}
+      {% set tile2 %}
+        {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+          link: {
+            url: '#',
+            label: 'Navigation Title with a really long title that will go to two lines eventually',
+          },
+          description: "The Office of the Vice Provost for Online Education is led by Dr. Renata S. Engel and is responsible for all aspects of Penn State World Campus.",
+        } only %}
+      {% endset %}
+      {% include '@molecules/grid/grid.twig' with {
+        items: [tile, tile2, tile],
+      } only %}
+    </div>
+  {% endset %}
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'light-grey',
+    background_image: 'hub-geometric:topright',
+    content: tile_nav_content,
+  } only %}
+  {% set overlay_content %}
+    {% set headshot %}
+      <img src="https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg" width="400" height="400" alt="carrie tilley and family" loading="lazy">
+    {% endset %}
+    {% include '@organisms/quote/quote.twig' with {
+      headshot: headshot,
+      reverse: true,
+      quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+      attribution: "Carrie Tilley",
+      byline: "Master of Engineering in Systems Engineering graduate",
+      after_quote: ""
+    } %}
+  {% endset %}
+  {% set overlay_image %}
+    <picture class="responsive-image responsive-image--feature-banner">
+      <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_7_xl/public/2021-12/quote-background-entry-gates-snow.jpg.webp?itok=8J4_R3Oq 1x" media="(min-width:800px)" type="image/webp" width="1920" height="840">
+      <source srcset="https://test.worldcampus.psu.edu/sites/default/files/styles/feature_banner_16_9_m/public/2021-12/quote-background-entry-gates-snow.jpg.webp?itok=GOfpUKe2 1x" type="image/webp" width="950" height="534">
+      <img src="https://test.worldcampus.psu.edu/sites/default/files/2021-12/quote-background-entry-gates-snow.jpg?itok=8J4_R3Oq" width="1920" height="840" alt="Snowy sidewalk at Penn State's University Park campus" loading="lazy">
+    </picture>
+  {% endset %}
+
+  {% include '@molecules/overlay/overlay.twig' with {
+    image: overlay_image,
+    content: overlay_content,
+    overlay_bg_color: "blue-gradient",
+    column_width: "normal",
+    overlay_width: "wide"
+  } %}
+</main>
+{% set footer_top %}
+  <div class="basic-page-content" style="max-width: 119rem;margin:auto;display:flex;min-height:25rem;">
+    Footer top content
+  </div>
+{% endset %}
+{% set footer_bottom %}
+  <div class="basic-page-content" style="color:#fff;max-width: 119rem;margin:auto;display:flex;min-height:12rem;">
+    Footer bottom content
+  </div>
+{% endset %}
+<footer>
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'light-grey',
+    background_image: 'hub-geometric:topleft',
+    content: footer_top,
+  } only %}
+  {% include '@molecules/background-container/background-container.twig' with {
+    color: 'beaver-blue',
+    background_image: 'hub-geometric:bottomright',
+    content: footer_bottom,
+  } only %}
+</footer>
+

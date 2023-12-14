@@ -1,0 +1,13 @@
+{
+  "name": "@psu-ooe/compact-menu",
+  "version": "1.0.0",
+  "description": "Provides a compact menu block.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/drop-button": "^2.0.0",
+    "@psu-ooe/vertical-menu": "^1.0.0"
+  }
+}

@@ -1671,6 +1671,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/compact-menu@workspace:packages/compact-menu":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/compact-menu@workspace:packages/compact-menu"
+  dependencies:
+    "@psu-ooe/drop-button": ^2.0.0
+    "@psu-ooe/vertical-menu": ^1.0.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/compact-search@workspace:packages/compact-search":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/compact-search@workspace:packages/compact-search"
+  dependencies:
+    "@psu-ooe/drop-button": ^2.0.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/credential@^1.0, @psu-ooe/credential@workspace:packages/credential":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/credential@workspace:packages/credential"
@@ -1705,7 +1722,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/drop-button@^2.0, @psu-ooe/drop-button@workspace:packages/drop-button":
+"@psu-ooe/drop-button@^2.0, @psu-ooe/drop-button@^2.0.0, @psu-ooe/drop-button@workspace:packages/drop-button":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
   dependencies:
@@ -1760,6 +1777,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/header@workspace:packages/header":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/header@workspace:packages/header"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/heading@^1.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
@@ -1773,6 +1799,15 @@ __metadata:
   resolution: "@psu-ooe/highlighted-text@workspace:packages/highlighted-text"
   dependencies:
     "@psu-ooe/base": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/horizontal-menu@workspace:packages/horizontal-menu":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/horizontal-menu@workspace:packages/horizontal-menu"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/sprite": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1834,6 +1869,20 @@ __metadata:
     sass: ^1.69.5
     svg-sprite: ^2.0.2
     yarn: ^1.22.19
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/more-menu@workspace:packages/more-menu":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/more-menu@workspace:packages/more-menu"
+  dependencies:
+    "@psu-ooe/base": ^1.0
+    "@psu-ooe/polyfill-focus-visible": ^1.0
+  peerDependencies:
+    "@psu-ooe/background-container": ^2.0
+  peerDependenciesMeta:
+    "@psu-ooe/background-container":
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -2077,7 +2126,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/vertical-menu@workspace:packages/vertical-menu":
+"@psu-ooe/vertical-menu@^1.0.0, @psu-ooe/vertical-menu@workspace:packages/vertical-menu":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/vertical-menu@workspace:packages/vertical-menu"
   dependencies:

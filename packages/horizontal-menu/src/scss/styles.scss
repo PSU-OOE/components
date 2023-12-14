@@ -1,0 +1,169 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.horizontal-menu {
+  position: relative;
+
+  // Create a stacking context so that both child and grand-child elements
+  // are able to use the menu root for relative positioning.
+  //
+  // @see https://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/
+  transform: rotate(0deg);
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--2 {
+      background: var(--white);
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: .1rem .3rem .5rem rgba($nittany-navy, .75);
+      border-left: .3rem solid var(--sky-blue);
+      padding: .5rem 2rem;
+      min-width: 100%;
+      width: _rem(23);
+      z-index: 2;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    &--1 {
+      display: flex;
+      flex: 1 0 auto;
+
+      &:last-child .horizontal-menu__menu {
+        right: 0;
+      }
+    }
+
+    &--2 {
+      &:not(:last-child) {
+        border-bottom: _rem(.1) solid var(--slate-light);
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-family: var(--font-family--default);
+    text-decoration: none;
+    width: 100%;
+
+    &--1 {
+      text-align: center;
+      font-size: var(--font-size--xsmall);
+      font-weight: var(--font-weight--semibold);
+      line-height: var(--line-height--nospace);
+      letter-spacing: var(--letter-spacing--medium);
+      color: var(--text-color--light);
+      padding: 2.4rem 1.1rem;
+      transition: background-color var(--transition-duration--default) linear;
+
+      @include bp(l) {
+        font-size: var(--font-size--small);
+      }
+
+      @include bp(xl) {
+        font-size: var(--font-size--msmall);
+        padding: 2.4rem 1.6rem;
+      }
+
+      &:focus-within, &:hover, &:has(+ [aria-expanded="true"]) {
+        background-color: var(--pa-link);
+        text-decoration: none;
+      }
+
+      &:has(+ [aria-expanded="true"]) {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: _rem(.3);
+          background-color: var(--sky-blue);
+        }
+      }
+
+      &:focus-visible {
+        outline: .2rem solid var(--sky-blue);
+        outline-offset: 0;
+      }
+
+      &.horizontal-menu__link--active-trail {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          inset: calc(100% - .9rem) .5rem .5rem .5rem;
+          background-color: var(--sky-blue);
+        }
+      }
+
+    }
+
+    &--2 {
+      color: var(--text-color--default);
+      font-size: var(--font-size--xsmall);
+      line-height: var(--line-height--xsnug);
+      letter-spacing: var(--letter-spacing--medium);
+      padding: _rem(1.6) 0;
+      @include bp(xl) {
+        font-size: var(--font-size--msmall);
+      }
+
+      &:hover {
+        color: var(--pa-link);
+      }
+
+      &:focus-visible {
+        color: var(--pa-link);
+        outline-offset: _rem(-.1);
+      }
+
+      &.focus-visible {
+        color: var(--pa-link);
+        outline-offset: _rem(-.1);
+      }
+    }
+  }
+
+  &__toggle {
+    background: var(--pa-link);
+    border: none;
+    position: absolute;
+    inset: 0 -.8rem 0 calc(100% - .8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 1;
+
+    &:focus-visible {
+      opacity: 1;
+      outline: .2rem solid var(--sky-blue);
+      outline-offset: 0;
+    }
+
+    &[aria-expanded="true"] + .horizontal-menu__menu {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+    }
+  }
+
+  &__chevron .sprite {
+    color: var(--white);
+    width: 1.6rem;
+    height: auto;
+  }
+}

@@ -1,0 +1,120 @@
+{% set primary_content %}
+  <div class="sticky-content">
+    <div class="sticky-content__dogear">
+      <div class="sticky-content__branding">
+        <a class="sticky-content__branding-block" href="/">
+          {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+          <span class="visually-hidden">Penn State World Campus</span>
+        </a>
+      </div>
+    </div>
+    <div class="sticky-content__content">
+      <div class="sticky-content__utility">
+        {% include '@blocks/compact-search/compact-search.twig' with {
+          align: 'right',
+          search_form: 'The search form goes here.'
+        } only %}
+        {% set vertical_menu %}
+          {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+            menu_name: 'Primary navigation menu',
+            density: 'tight',
+            items: [
+              { title: 'Home', url: '#', in_active_trail: true },
+              { title: 'About Us', url: '#', below: [
+                { title: 'Our Story', url: '#' },
+                { title: 'Mission', url: '#' },
+                { title: 'Our Leadership', url: '#' },
+                { title: 'Our Students', url: '#' },
+                { title: 'Why World Campus', url: '#' },
+                { title: 'News and Features', url: '#' },
+                { title: 'Success Stories', url: '#' },
+                { title: 'Employment', url: '#' },
+              ]},
+              { title: 'Degrees and Certificates', url: '#', below: [
+
+              ]},
+              { title: 'How Online Learning Works', url: '#', below: [
+                { title: 'Online Learning Experience', url: '#' },
+                { title: 'Student Services', url: '#' },
+                { title: 'Dedication to Accessibility', url: '#' },
+                { title: 'How it Works (FAQs)', url: '#' },
+              ]},
+              { title: 'Admissions', url: '#', below: [
+                { title: 'How to Apply', url: '#' },
+                { title: 'Returning Students', url: '#' },
+                { title: 'Transfer Students', url: '#' },
+                { title: 'International Students', url: '#' },
+                { title: 'Academic Calendar', url: '#' },
+                { title: 'Planning Resources', url: '#' },
+              ]},
+              { title: 'Tuition and Financial Aid', url: '#', below: [
+                { title: 'Tuition and Costs', url: '#' },
+                { title: 'Financial Aid', url: '#' },
+                { title: 'Scholarships', url: '#' },
+                { title: 'Payment Options', url: '#' },
+              ]},
+              { title: 'Military', url: '#', below: [
+                { title: 'Education Benefits and Financial Aid', url: '#' },
+                { title: 'Admissions and Transfer Credits', url: '#' },
+                { title: 'Military Support', url: '#' },
+                { title: 'What You Can Expect', url: '#' },
+                { title: 'Awards and Affiliations', url: '#' },
+                { title: 'Events', url: '#' },
+                { title: 'Service Members', url: '#' },
+                { title: 'Veterans', url: '#' },
+              ]},
+            ],
+          } only %}
+        {% endset %}
+        {% include '@blocks/compact-menu/compact-menu.twig' with {
+          align: 'right',
+          menu: vertical_menu
+        } only %}
+      </div>
+      <div class="sticky-content__cta">
+        {% set how_to_apply %}
+          {% include '@atoms/cta/cta-block.twig' with {
+            label: 'How to Apply',
+            url: '#',
+            color: 'light-blue',
+            size: 'compact-responsive',
+          } only %}
+        {% endset %}
+        {% set request_info %}
+          {% include '@atoms/cta/cta-block.twig' with {
+            label: 'Request Info',
+            url: '#',
+            color: 'reversed',
+            size: 'compact-responsive',
+          } only %}
+        {% endset %}
+        {% include '@atoms/cta/cta-group.twig' with {
+          ctas: [how_to_apply, request_info],
+        } only %}
+      </div>
+    </div>
+  </div>
+{% endset %}
+{% set primary_band %}
+  {% include '@molecules/band/band.twig' with {
+    background: 'hub-geometric',
+    content: primary_content,
+    padding: 'none'
+  } only %}
+{% endset %}
+
+{% include '@organisms/sticky-panel/sticky-panel.twig' with {
+  bands: [primary_band]
+} only %}
+<div style="max-width:87rem;padding:4rem;margin:auto">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst. Sit amet porttitor eget dolor. Volutpat odio facilisis mauris sit amet massa vitae tortor. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Sit amet volutpat consequat mauris. Augue ut lectus arcu bibendum at varius. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra. Condimentum lacinia quis vel eros donec ac odio. Odio tempor orci dapibus ultrices in iaculis nunc sed. Penatibus et magnis dis parturient montes nascetur ridiculus mus. Id neque aliquam vestibulum morbi. Platea dictumst quisque sagittis purus. Vel eros donec ac odio.</p>
+  <p>Vel risus commodo viverra maecenas accumsan lacus. Sapien pellentesque habitant morbi tristique. Mauris rhoncus aenean vel elit scelerisque mauris. Scelerisque in dictum non consectetur a erat nam at lectus. Eget velit aliquet sagittis id consectetur purus ut. Consequat semper viverra nam libero justo laoreet sit. Felis eget nunc lobortis mattis aliquam faucibus purus in massa. Lorem mollis aliquam ut porttitor leo a diam. Malesuada fames ac turpis egestas. Dignissim enim sit amet venenatis urna cursus eget. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Id semper risus in hendrerit gravida rutrum quisque non. Ipsum faucibus vitae aliquet nec ullamcorper. Et malesuada fames ac turpis egestas integer eget aliquet nibh. Semper viverra nam libero justo laoreet sit. Leo urna molestie at elementum eu facilisis sed odio morbi. Pellentesque habitant morbi tristique senectus et netus. Rhoncus dolor purus non enim praesent elementum.</p>
+  <p>Fames ac turpis egestas maecenas pharetra convallis posuere. Risus in hendrerit gravida rutrum quisque non tellus. Eros in cursus turpis massa tincidunt dui ut. Amet dictum sit amet justo donec enim. Elit ut aliquam purus sit amet luctus venenatis lectus. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Felis donec et odio pellentesque diam volutpat. Cras fermentum odio eu feugiat pretium nibh ipsum. Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit. Dolor sit amet consectetur adipiscing elit. Nunc sed id semper risus in hendrerit gravida rutrum. Bibendum est ultricies integer quis auctor elit sed vulputate. Vitae turpis massa sed elementum tempus egestas sed. Congue mauris rhoncus aenean vel elit. Mauris nunc congue nisi vitae suscipit tellus mauris a diam.</p>
+  <p>Vitae congue mauris rhoncus aenean vel elit scelerisque. Ipsum suspendisse ultrices gravida dictum fusce ut. Suspendisse potenti nullam ac tortor vitae purus. Aliquet bibendum enim facilisis gravida neque convallis a cras. Consectetur adipiscing elit duis tristique sollicitudin. Duis convallis convallis tellus id interdum velit laoreet id donec. Egestas quis ipsum suspendisse ultrices gravida dictum fusce. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Amet commodo nulla facilisi nullam vehicula. Quis risus sed vulputate odio. At urna condimentum mattis pellentesque. At erat pellentesque adipiscing commodo elit. Augue ut lectus arcu bibendum at. Facilisi nullam vehicula ipsum a arcu cursus. Nulla facilisi cras fermentum odio eu feugiat pretium nibh.</p>
+  <p>Venenatis tellus in metus vulputate. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Viverra adipiscing at in tellus integer. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Pellentesque massa placerat duis ultricies. Donec ac odio tempor orci dapibus ultrices in. Euismod elementum nisi quis eleifend. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Eget nullam non nisi est sit. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus. Posuere sollicitudin aliquam ultrices sagittis.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In hac habitasse platea dictumst. Sit amet porttitor eget dolor. Volutpat odio facilisis mauris sit amet massa vitae tortor. Tempor nec feugiat nisl pretium fusce id velit ut tortor. Sit amet volutpat consequat mauris. Augue ut lectus arcu bibendum at varius. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra. Condimentum lacinia quis vel eros donec ac odio. Odio tempor orci dapibus ultrices in iaculis nunc sed. Penatibus et magnis dis parturient montes nascetur ridiculus mus. Id neque aliquam vestibulum morbi. Platea dictumst quisque sagittis purus. Vel eros donec ac odio.</p>
+  <p>Vel risus commodo viverra maecenas accumsan lacus. Sapien pellentesque habitant morbi tristique. Mauris rhoncus aenean vel elit scelerisque mauris. Scelerisque in dictum non consectetur a erat nam at lectus. Eget velit aliquet sagittis id consectetur purus ut. Consequat semper viverra nam libero justo laoreet sit. Felis eget nunc lobortis mattis aliquam faucibus purus in massa. Lorem mollis aliquam ut porttitor leo a diam. Malesuada fames ac turpis egestas. Dignissim enim sit amet venenatis urna cursus eget. Turpis egestas integer eget aliquet nibh praesent tristique magna sit. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Id semper risus in hendrerit gravida rutrum quisque non. Ipsum faucibus vitae aliquet nec ullamcorper. Et malesuada fames ac turpis egestas integer eget aliquet nibh. Semper viverra nam libero justo laoreet sit. Leo urna molestie at elementum eu facilisis sed odio morbi. Pellentesque habitant morbi tristique senectus et netus. Rhoncus dolor purus non enim praesent elementum.</p>
+  <p>Fames ac turpis egestas maecenas pharetra convallis posuere. Risus in hendrerit gravida rutrum quisque non tellus. Eros in cursus turpis massa tincidunt dui ut. Amet dictum sit amet justo donec enim. Elit ut aliquam purus sit amet luctus venenatis lectus. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Felis donec et odio pellentesque diam volutpat. Cras fermentum odio eu feugiat pretium nibh ipsum. Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit. Dolor sit amet consectetur adipiscing elit. Nunc sed id semper risus in hendrerit gravida rutrum. Bibendum est ultricies integer quis auctor elit sed vulputate. Vitae turpis massa sed elementum tempus egestas sed. Congue mauris rhoncus aenean vel elit. Mauris nunc congue nisi vitae suscipit tellus mauris a diam.</p>
+  <p>Vitae congue mauris rhoncus aenean vel elit scelerisque. Ipsum suspendisse ultrices gravida dictum fusce ut. Suspendisse potenti nullam ac tortor vitae purus. Aliquet bibendum enim facilisis gravida neque convallis a cras. Consectetur adipiscing elit duis tristique sollicitudin. Duis convallis convallis tellus id interdum velit laoreet id donec. Egestas quis ipsum suspendisse ultrices gravida dictum fusce. Venenatis a condimentum vitae sapien pellentesque habitant morbi tristique. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Mattis molestie a iaculis at erat pellentesque adipiscing commodo. Amet commodo nulla facilisi nullam vehicula. Quis risus sed vulputate odio. At urna condimentum mattis pellentesque. At erat pellentesque adipiscing commodo elit. Augue ut lectus arcu bibendum at. Facilisi nullam vehicula ipsum a arcu cursus. Nulla facilisi cras fermentum odio eu feugiat pretium nibh.</p>
+  <p>Venenatis tellus in metus vulputate. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Viverra adipiscing at in tellus integer. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Pellentesque massa placerat duis ultricies. Donec ac odio tempor orci dapibus ultrices in. Euismod elementum nisi quis eleifend. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Eget nullam non nisi est sit. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus et netus. Posuere sollicitudin aliquam ultrices sagittis.</p>
+</div>

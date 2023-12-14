@@ -1,0 +1,13 @@
+{
+  "name": "@psu-ooe/header",
+  "version": "1.0.0",
+  "description": "Temporary - do not release packages for.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^1.0",
+    "@psu-ooe/sprite": "^1.0"
+  }
+}

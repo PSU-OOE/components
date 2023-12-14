@@ -1,0 +1,82 @@
+{% set menu %}
+  {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
+    menu_name: 'Example',
+    items: [
+      { title: 'Home', url: '#', in_active_trail: true },
+      { title: 'About Us', url: '#', below: [
+        { title: 'Our Story', url: '#' },
+        { title: 'Mission', url: '#' },
+        { title: 'Our Leadership', url: '#' },
+        { title: 'Our Students', url: '#' },
+        { title: 'Why World Campus', url: '#' },
+        { title: 'News and Features', url: '#' },
+        { title: 'Success Stories', url: '#' },
+        { title: 'Employment', url: '#' },
+      ]},
+      { title: 'Degrees and Certificates', url: '#', below: [
+        { title: 'Undergraduate', url: '#', below: [
+          { title: 'Bachelor\'s Degrees', url: '#' },
+          { title: 'Associate Degrees', url: '#' },
+          { title: 'Certificates', url: '#' },
+          { title: 'Minors', url: '#' },
+        ]},
+        { title: 'Graduate', url: '#', below: [
+          { title: 'Master\'s Degrees', url: '#' },
+          { title: 'Doctoral Degrees', url: '#' },
+          { title: 'Certificates', url: '#' },
+          { title: 'Minors', url: '#' },
+        ]},
+        { title: 'Topics', url: '#', below: [
+          { title: 'Business', url: '#' },
+          { title: 'Education', url: '#' },
+          { title: 'Energy and Sustainability', url: '#' },
+          { title: 'Engineering', url: '#' },
+          { title: 'Geospatial', url: '#' },
+          { title: 'Health and Family Services', url: '#' },
+          { title: 'Homeland Security', url: '#' },
+          { title: 'Human Resources, Labor, and Employee Relations', url: '#' },
+          { title: 'Law and Public Policy', url: '#' },
+          { title: 'Liberal Arts and Communications', url: '#' },
+          { title: 'Nursing', url: '#' },
+          { title: 'Technology, Sciences, and Math', url: '#' },
+          { title: 'Turfgrass', url: '#' },
+        ]},
+        { title: 'View All Programs', url: '#'},
+      ]},
+      { title: 'How Online Learning Works', url: '#', below: [
+        { title: 'Online Learning Experience', url: '#' },
+        { title: 'Student Services', url: '#' },
+        { title: 'Dedication to Accessibility', url: '#' },
+        { title: 'How it Works (FAQs)', url: '#' },
+      ]},
+      { title: 'Admissions', url: '#', below: [
+        { title: 'How to Apply', url: '#' },
+        { title: 'Returning Students', url: '#' },
+        { title: 'Transfer Students', url: '#' },
+        { title: 'International Students', url: '#' },
+        { title: 'Academic Calendar', url: '#' },
+        { title: 'Planning Resources', url: '#' },
+      ]},
+      { title: 'Tuition and Financial Aid', url: '#', below: [
+        { title: 'Tuition and Costs', url: '#' },
+        { title: 'Financial Aid', url: '#' },
+        { title: 'Scholarships', url: '#' },
+        { title: 'Payment Options', url: '#' },
+      ]},
+      { title: 'Military', url: '#', below: [
+        { title: 'Education Benefits and Financial Aid', url: '#' },
+        { title: 'Admissions and Transfer Credits', url: '#' },
+        { title: 'Military Support', url: '#' },
+        { title: 'What You Can Expect', url: '#' },
+        { title: 'Awards and Affiliations', url: '#' },
+        { title: 'Events', url: '#' },
+        { title: 'Service Members', url: '#' },
+        { title: 'Veterans', url: '#' },
+      ]},
+    ],
+  } only %}
+{% endset %}
+{% include '@molecules/callout/callout.twig' with {
+  background: 'blue-gradient',
+  content: menu,
+} only %}
