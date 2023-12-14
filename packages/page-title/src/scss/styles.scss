@@ -6,17 +6,36 @@
   height: _rem(40);
   overflow: hidden;
 
+  &__gradient {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10000px;
+      left: calc(50% - 5000px);
+      top: 0;
+      bottom:0;
+      background: linear-gradient(22deg, var(--nittany-navy) 41%, transparent 50%);
+    }
+
+    &::after {
+      content: "";
+      display:block;
+      position: absolute;
+      left: calc(50% - 1260px);
+      top: -80px;
+      width: 1750px;
+      height: 840px;
+      transform: rotate(17deg);
+      background: radial-gradient(closest-side, var(--nittany-navy), transparent);
+      mix-blend-mode: multiply;
+    }
+  }
+
   &__image {
     position: absolute;
     object-fit: contain;
     object-position: top center;
     width: 100%;
-  }
-
-  &__gradient {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(ellipse at 0% 100%, var(--nittany-navy) 0%, transparent 100%);
   }
 
   &__content {
@@ -28,19 +47,6 @@
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
-
-    &::before {
-      content: "";
-      position: absolute;
-      inset: -10vw calc((-100vw + 119rem)/2) 0vw -100vw;
-      background-image: radial-gradient(
-        ellipse at 50% 100%,
-        var(--nittany-navy) 0%,
-        rgba(0, 30, 68, .6) 25%,
-        rgba(0, 30, 68, 0.5) 30%,
-        transparent 48%
-      );
-    }
   }
 
   &__heading {
