@@ -138,16 +138,13 @@
   {% endblock %}
 {% endembed %}
 
-{% set page_title %}
-  <div class="basic-page-content" style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;">
-    <h1>Basic Page</h1>
-  </div>
-{% endset %}
-{% include '@molecules/background-container/background-container.twig' with {
-  color: 'light-grey',
-  background_image: 'hub-geometric:topleft',
-  content: page_title,
+{% include '@blocks/page-title/page-title.twig' with {
+  subtitle_before: 'Penn State World Campus',
+  title: 'Design System',
+  subtitle_after: 'Basic Page',
+  image: '<img src="https://test.worldcampus.psu.edu/sites/default/files/2018-12/1920x840_campus_hp.jpg" alt>',
 } only %}
+
 <main>
   {% set page_content %}
     <div class="basic-page-content" style="margin: auto;display:flex;flex-wrap:wrap; gap:5%; max-width: 119rem;">
