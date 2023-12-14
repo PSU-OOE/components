@@ -4,4 +4,10 @@
   --text-element-vertical-space--large: #{ _rem(3) };
 
   --text-element-vertical-space--default: var(--text-element-vertical-space--medium);
+
+  --page-side-padding: #{ _rem(2) };
+
+  @include bp(xs) {
+    --page-side-padding: #{ _rem(4) };
+  }
 }
