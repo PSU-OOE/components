@@ -10,6 +10,7 @@
   <div class="{{ background_classes|join(' ') }}">
     {% if image %}
       {{ image }}
+      <div class="page-title__gradient"></div>
       <div class="page-title__geometrics page-title__geometrics--image">
         <svg width="0" height="0" style="position:absolute">
           <defs>
@@ -22,7 +23,6 @@
         {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
         {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
       </div>
-      <div class="page-title__gradient"></div>
     {% else %}
       <div class="page-title__geometrics page-title__geometrics--no-image">
         <svg width="0" height="0" style="position:absolute">
