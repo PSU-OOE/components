@@ -1,14 +1,52 @@
-<div class="page-title">
-  {% if image %}
-    <div class="page-title__image">
+{% set classes = [
+  'page-title',
+  image ? 'page-title--image',
+] %}
+<div class="{{ classes|join(' ') }}">
+  {% set background_classes = [
+    'page-title__background',
+    image ? 'page-title__background--image' : 'page-title__background--no-image',
+  ] %}
+  <div class="{{ background_classes|join(' ') }}">
+    {% if image %}
       {{ image }}
+      <div class="page-title__geometrics page-title__geometrics--image">
+        <svg width="0" height="0" style="position:absolute">
+          <defs>
+            <linearGradient id="hub-geometric-page-title-image-gradient" x1="0.588" x2="1.272" gradientUnits="objectBoundingBox">
+              <stop offset="0" stop-color="var(--white)" stop-opacity="1"/>
+              <stop offset="1" stop-color="var(--white)" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
+        {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
+      </div>
       <div class="page-title__gradient"></div>
-    </div>
-  {% else %}
-    <div class="page-title__no-image"></div>
-  {% endif %}
-  <div class="page-title__content">
-    <h1 class="page-title__heading">
+    {% else %}
+      <div class="page-title__geometrics page-title__geometrics--no-image">
+        <svg width="0" height="0" style="position:absolute">
+          <defs>
+            <linearGradient id="hub-geometric-page-title-no-image-gradient" x1="0.539" y1="0.24" x2="0.02" y2="0.066" gradientUnits="objectBoundingBox">
+              <stop offset="0" stop-color="var(--sky-blue)"/>
+              <stop offset="1" stop-color="var(--sky-blue)" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
+      </div>
+    {% endif %}
+  </div>
+  {% set content_classes = [
+    'page-title__content',
+    image ? 'page-title__content--image' : 'page-title__content--no-image'
+  ] %}
+  <div class="{{ content_classes|join(' ') }}">
+    {% set heading_classes = [
+    'page-title__heading',
+      image ? 'page-title__heading--reversed',
+    ] %}
+    <h1 class="{{ heading_classes|join(' ') }}">
       {% if subtitle_before %}
         <span class="page-title__subtitle-before">{{ subtitle_before }}</span>
       {% endif %}
