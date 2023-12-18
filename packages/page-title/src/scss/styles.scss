@@ -31,10 +31,11 @@
     }
   }
 
-  &__image {
+  &__image img {
     position: absolute;
-    object-fit: contain;
+    object-fit: cover;
     object-position: top center;
+    height: 100%;
     inset: 0;
   }
 
