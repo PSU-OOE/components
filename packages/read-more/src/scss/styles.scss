@@ -9,8 +9,23 @@
   font-weight: var(--font-weight--bold);
   position: relative;
 
+
+  &__chevron {
+    position: absolute;
+    font-size: _rem(1);
+    margin-top: _rem(.65);
+  }
+
+
+  &__text {
+    margin-right: _rem(.4);
+  }
+
   &--small {
     font-size: var(--font-size--3xsmall);
+    .read-more__chevron {
+      margin-top: _rem(0.69);
+    }
   }
 
   &--reverse {
@@ -21,13 +36,5 @@
     }
   }
 
-  &__text {
-    margin-right: _rem(.4);
-  }
 
-  &__chevron {
-    position: absolute;
-    font-size: _rem(1);
-    margin-top: _rem(.55);
-  }
 }
