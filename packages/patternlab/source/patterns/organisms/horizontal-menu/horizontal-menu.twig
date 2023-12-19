@@ -2,13 +2,13 @@
   {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
     menu_name: 'Example',
     items: [
-      { title: 'Home', url: '#', in_active_trail: true },
-      { title: 'About Us', url: '#', below: [
+      { title: 'Home', url: '#' },
+      { title: 'About Us', url: '#', in_active_trail: true, below: [
         { title: 'Our Story', url: '#' },
         { title: 'Mission', url: '#' },
         { title: 'Our Leadership', url: '#' },
         { title: 'Our Students', url: '#' },
-        { title: 'Why World Campus', url: '#' },
+        { title: 'Why World Campus', url: '#', in_active_trail: true },
         { title: 'News and Features', url: '#' },
         { title: 'Success Stories', url: '#' },
         { title: 'Employment', url: '#' },
