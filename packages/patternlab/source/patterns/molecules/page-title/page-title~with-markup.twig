@@ -1,0 +1,12 @@
+{% set page_title %}
+  {% include '@molecules/page-title/page-title.twig' with {
+    subtitle_before: '<strong>Awesome</strong> Subtitle-before',
+    title: '<span class="text--contrasting">Amazing</span> Title',
+    subtitle_after: '<em>Excellent</em> Subtitle-after',
+  } only %}
+{% endset %}
+
+{% include '@molecules/callout/callout.twig' with {
+  content: page_title,
+  background: 'light-grey',
+} only %}

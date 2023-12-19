@@ -1,13 +1,13 @@
 {
-  "name": "@psu-ooe/page-title",
+  "name": "@psu-ooe/page-title-banner-plain",
   "version": "1.0.0",
-  "description": "Provides a page title component.",
+  "description": "Provides a plain page title banner component.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@psu-ooe/base": "^1.0",
-    "@psu-ooe/heading": "^1.0"
+    "@psu-ooe/page-title": "^1.0"
   }
 }
