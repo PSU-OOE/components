@@ -111,7 +111,7 @@
 
     }
 
-    &--2 {
+    &:not(&--1) {
       color: var(--text-color--default);
       font-size: var(--font-size--xsmall);
       line-height: var(--line-height--xsnug);
@@ -133,6 +133,10 @@
       &.focus-visible {
         color: var(--pa-link);
         outline-offset: _rem(-.1);
+      }
+
+      &.horizontal-menu__link--active-trail {
+        font-weight: var(--font-weight--bold);
       }
     }
   }
