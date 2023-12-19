@@ -134,6 +134,10 @@
         color: var(--pa-link);
         outline-offset: _rem(-.1);
       }
+
+      &.horizontal-menu__link--active-trail {
+        font-weight: var(--font-weight--bold);
+      }
     }
   }
 
