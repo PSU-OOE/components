@@ -13,6 +13,7 @@
 
   &__subtitle-before,
   &__subtitle-after {
+    font-family: var(--font-family--display);
     font-size: var(--font-size--xlarge);
     line-height: var(--line-height--2xsnug);
   }
