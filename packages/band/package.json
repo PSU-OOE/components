@@ -1,12 +1,12 @@
 {
   "name": "@psu-ooe/band",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Provides a simple band container.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-ooe/base": "^1.0 || ^2.0"
   }
 }
