@@ -28,7 +28,7 @@
     "@psu-ooe/cta-tracking": "^1.0",
     "@psu-ooe/divider": "^2.0",
     "@psu-ooe/drop-button": "^3.0",
-    "@psu-ooe/event-link": "^1.0",
+    "@psu-ooe/event-link": "^2.0",
     "@psu-ooe/expandable-section": "^1.0",
     "@psu-ooe/flex-wrap-listener": "^1.0",
     "@psu-ooe/grid": "^1.0",
@@ -56,7 +56,7 @@
     "@psu-ooe/sprite": "^2.0",
     "@psu-ooe/sticky-panel": "^1.0",
     "@psu-ooe/tabs": "^2.0",
-    "@psu-ooe/upcoming-events": "^1.0",
+    "@psu-ooe/upcoming-events": "^2.0",
     "@psu-ooe/webfonts": "^1.0"
   }
 }

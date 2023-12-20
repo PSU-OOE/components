@@ -1722,7 +1722,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/event-link@^1.0, @psu-ooe/event-link@workspace:packages/event-link":
+"@psu-ooe/event-link@^2.0, @psu-ooe/event-link@workspace:packages/event-link":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/event-link@workspace:packages/event-link"
   dependencies:
@@ -1910,7 +1910,7 @@ __metadata:
     "@psu-ooe/cta-tracking": ^1.0
     "@psu-ooe/divider": ^2.0
     "@psu-ooe/drop-button": ^3.0
-    "@psu-ooe/event-link": ^1.0
+    "@psu-ooe/event-link": ^2.0
     "@psu-ooe/expandable-section": ^1.0
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
@@ -1938,7 +1938,7 @@ __metadata:
     "@psu-ooe/sprite": ^2.0
     "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^2.0
-    "@psu-ooe/upcoming-events": ^1.0
+    "@psu-ooe/upcoming-events": ^2.0
     "@psu-ooe/webfonts": ^1.0
   languageName: unknown
   linkType: soft
@@ -2062,12 +2062,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/upcoming-events@^1.0, @psu-ooe/upcoming-events@workspace:packages/upcoming-events":
+"@psu-ooe/upcoming-events@^2.0, @psu-ooe/upcoming-events@workspace:packages/upcoming-events":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/upcoming-events@workspace:packages/upcoming-events"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/event-link": ^1.0
+    "@psu-ooe/event-link": ^2.0
     "@psu-ooe/expandable-section": ^1.0
   languageName: unknown
   linkType: soft
