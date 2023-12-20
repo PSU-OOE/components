@@ -26,7 +26,7 @@
     "@psu-ooe/credential": "^2.0",
     "@psu-ooe/cta": "^2.0",
     "@psu-ooe/cta-tracking": "^1.0",
-    "@psu-ooe/divider": "^1.0",
+    "@psu-ooe/divider": "^2.0",
     "@psu-ooe/drop-button": "^3.0",
     "@psu-ooe/event-link": "^1.0",
     "@psu-ooe/expandable-section": "^1.0",
