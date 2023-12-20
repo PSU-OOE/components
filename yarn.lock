@@ -1628,11 +1628,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/bio@^1.0, @psu-ooe/bio@^1.0 || 2.0, @psu-ooe/bio@workspace:packages/bio":
+"@psu-ooe/bio@^1.0 || 2.0, @psu-ooe/bio@^2.0, @psu-ooe/bio@workspace:packages/bio":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/bio@workspace:packages/bio"
   dependencies:
-    "@psu-ooe/credential": ^1.0
+    "@psu-ooe/credential": ^1.0 || ^2.0
+    "@psu-ooe/heading": ^1.0 || ^2.0
+    "@psu-ooe/read-more": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1670,7 +1672,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/credential@^1.0, @psu-ooe/credential@workspace:packages/credential":
+"@psu-ooe/credential@^1.0, @psu-ooe/credential@^1.0 || ^2.0, @psu-ooe/credential@workspace:packages/credential":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/credential@workspace:packages/credential"
   dependencies:
@@ -1759,7 +1761,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/heading@^2.0, @psu-ooe/heading@workspace:packages/heading":
+"@psu-ooe/heading@^1.0 || ^2.0, @psu-ooe/heading@^2.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
   dependencies:
@@ -1896,7 +1898,7 @@ __metadata:
     "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^2.0
     "@psu-ooe/basic-tile": ^2.0
-    "@psu-ooe/bio": ^1.0
+    "@psu-ooe/bio": ^2.0
     "@psu-ooe/bio-collection": ^2.0
     "@psu-ooe/breadcrumbs": ^1.0
     "@psu-ooe/card": ^1.0
@@ -1969,7 +1971,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/read-more@^1.0, @psu-ooe/read-more@workspace:packages/read-more":
+"@psu-ooe/read-more@^1.0, @psu-ooe/read-more@^1.0 || ^2.0, @psu-ooe/read-more@workspace:packages/read-more":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/read-more@workspace:packages/read-more"
   dependencies:
