@@ -1,12 +1,12 @@
 {
   "name": "@psu-ooe/bio-collection",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Provides a bio collection component.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/bio": "^1.0"
+    "@psu-ooe/bio": "^1.0 || 2.0"
   }
 }

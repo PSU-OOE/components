@@ -1620,15 +1620,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/bio-collection@^1.0, @psu-ooe/bio-collection@workspace:packages/bio-collection":
+"@psu-ooe/bio-collection@^2.0, @psu-ooe/bio-collection@workspace:packages/bio-collection":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/bio-collection@workspace:packages/bio-collection"
   dependencies:
-    "@psu-ooe/bio": ^1.0
+    "@psu-ooe/bio": ^1.0 || 2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/bio@^1.0, @psu-ooe/bio@workspace:packages/bio":
+"@psu-ooe/bio@^1.0, @psu-ooe/bio@^1.0 || 2.0, @psu-ooe/bio@workspace:packages/bio":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/bio@workspace:packages/bio"
   dependencies:
@@ -1897,7 +1897,7 @@ __metadata:
     "@psu-ooe/base": ^2.0
     "@psu-ooe/basic-tile": ^2.0
     "@psu-ooe/bio": ^1.0
-    "@psu-ooe/bio-collection": ^1.0
+    "@psu-ooe/bio-collection": ^2.0
     "@psu-ooe/breadcrumbs": ^1.0
     "@psu-ooe/card": ^1.0
     "@psu-ooe/cards-list": ^1.0
