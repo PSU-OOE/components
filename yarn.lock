@@ -1674,7 +1674,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/credential@^1.0, @psu-ooe/credential@^1.0 || ^2.0, @psu-ooe/credential@workspace:packages/credential":
+"@psu-ooe/credential@^1.0 || ^2.0, @psu-ooe/credential@^2.0, @psu-ooe/credential@workspace:packages/credential":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/credential@workspace:packages/credential"
   dependencies:
@@ -1905,7 +1905,7 @@ __metadata:
     "@psu-ooe/breadcrumbs": ^2.0
     "@psu-ooe/card": ^2.0
     "@psu-ooe/cards-list": ^1.0
-    "@psu-ooe/credential": ^1.0
+    "@psu-ooe/credential": ^2.0
     "@psu-ooe/cta": ^1.0
     "@psu-ooe/cta-tracking": ^1.0
     "@psu-ooe/divider": ^1.0
