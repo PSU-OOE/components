@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@psu-ooe/background-container": "^2.0",
-    "@psu-ooe/base": "^1.0",
+    "@psu-ooe/base": "^2.0",
     "@psu-ooe/random-item": "^1.0"
   }
 }

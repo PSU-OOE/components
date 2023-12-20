@@ -1551,14 +1551,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@psu-ooe/accordion@^1.0, @psu-ooe/accordion@workspace:packages/accordion":
+"@psu-ooe/accordion@^2.0, @psu-ooe/accordion@workspace:packages/accordion":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/accordion@workspace:packages/accordion"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/heading": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/heading": ^2.0
     "@psu-ooe/slide-toggle": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1566,8 +1566,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/alert@workspace:packages/alert"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1575,8 +1575,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/announcement@workspace:packages/announcement"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1590,8 +1590,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/background-container@workspace:packages/background-container"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1599,11 +1599,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/band@workspace:packages/band"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/base@^1.0, @psu-ooe/base@workspace:packages/base":
+"@psu-ooe/base@^2.0, @psu-ooe/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/base@workspace:packages/base"
   dependencies:
@@ -1615,7 +1615,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/basic-tile@workspace:packages/basic-tile"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/cta-tracking": ^1.0
     "@psu-ooe/grid": ^1.0
   languageName: unknown
@@ -1641,7 +1641,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/breadcrumbs@workspace:packages/breadcrumbs"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1649,7 +1649,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/callout@workspace:packages/callout"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1657,7 +1657,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/card@workspace:packages/card"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1665,7 +1665,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cards-list@workspace:packages/cards-list"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/card": ^1.0
     "@psu-ooe/expandable-section": ^1.0
   languageName: unknown
@@ -1675,7 +1675,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/credential@workspace:packages/credential"
   dependencies:
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1691,7 +1691,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta@workspace:packages/cta"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/cta-tracking": ^1.0
   languageName: unknown
   linkType: soft
@@ -1700,8 +1700,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/divider@workspace:packages/divider"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1709,7 +1709,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
   peerDependencies:
     "@psu-ooe/background-container": ^2.0
@@ -1723,7 +1723,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/event-link@workspace:packages/event-link"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/smart-datetime": ^1.0
   languageName: unknown
   linkType: soft
@@ -1733,7 +1733,7 @@ __metadata:
   resolution: "@psu-ooe/expandable-section@workspace:packages/expandable-section"
   dependencies:
     "@psu-ooe/auto-expansion": ^1.0
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/cta": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
@@ -1750,7 +1750,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/grid@workspace:packages/grid"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1760,11 +1760,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/heading@^1.0, @psu-ooe/heading@workspace:packages/heading":
+"@psu-ooe/heading@^2.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1772,7 +1772,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/highlighted-text@workspace:packages/highlighted-text"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1780,8 +1780,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/icon-list@workspace:packages/icon-list"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1789,7 +1789,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/infographic@workspace:packages/infographic"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1798,7 +1798,7 @@ __metadata:
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
   dependencies:
     "@psu-ooe/background-container": ^2.0
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/random-item": ^1.0
   languageName: unknown
   linkType: soft
@@ -1807,8 +1807,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/modal@workspace:packages/modal"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1841,8 +1841,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/navigation-tile@workspace:packages/navigation-tile"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1850,7 +1850,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/overlay@workspace:packages/overlay"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1858,8 +1858,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/pager@workspace:packages/pager"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1867,8 +1867,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1876,7 +1876,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/parallel-navigation-item": ^1.0
   languageName: unknown
   linkType: soft
@@ -1889,13 +1889,13 @@ __metadata:
     "@pattern-lab/core": ^5.17.0
     "@pattern-lab/engine-twig-php": ^5.17.0
     "@pattern-lab/uikit-workshop": ^5.17.0
-    "@psu-ooe/accordion": ^1.0
+    "@psu-ooe/accordion": ^2.0
     "@psu-ooe/alert": ^1.0
     "@psu-ooe/announcement": " ^1.0"
     "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/background-container": ^2.0
     "@psu-ooe/band": ^2.0
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/basic-tile": ^1.0
     "@psu-ooe/bio": ^1.0
     "@psu-ooe/bio-collection": ^1.0
@@ -1912,7 +1912,7 @@ __metadata:
     "@psu-ooe/flex-wrap-listener": ^1.0
     "@psu-ooe/grid": ^1.0
     "@psu-ooe/gtm": ^1.0
-    "@psu-ooe/heading": ^1.0
+    "@psu-ooe/heading": ^2.0
     "@psu-ooe/icon-list": ^1.0
     "@psu-ooe/intro-form": ^1.0
     "@psu-ooe/modal": ^1.0
@@ -1932,7 +1932,7 @@ __metadata:
     "@psu-ooe/social-icon": ^1.0
     "@psu-ooe/social-icons": ^1.0
     "@psu-ooe/spinner": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/sprite": ^2.0
     "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^2.0
     "@psu-ooe/upcoming-events": ^1.0
@@ -1944,7 +1944,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/polyfill-flex-gap@workspace:packages/polyfill-flex-gap"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1960,7 +1960,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/quote@workspace:packages/quote"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1974,7 +1974,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/read-more@workspace:packages/read-more"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -2002,7 +2002,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/smart-datetime@workspace:packages/smart-datetime"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -2010,8 +2010,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/social-icon@workspace:packages/social-icon"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -2019,7 +2019,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/social-icons@workspace:packages/social-icons"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/social-icon": ^1.0
   languageName: unknown
   linkType: soft
@@ -2028,16 +2028,16 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/spinner@workspace:packages/spinner"
   dependencies:
-    "@psu-ooe/base": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/sprite@^1.0, @psu-ooe/sprite@workspace:packages/sprite":
+"@psu-ooe/sprite@^2.0, @psu-ooe/sprite@workspace:packages/sprite":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/sprite@workspace:packages/sprite"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -2046,7 +2046,7 @@ __metadata:
   resolution: "@psu-ooe/sticky-panel@workspace:packages/sticky-panel"
   dependencies:
     "@psu-ooe/band": ^1.0 || ^2.0
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -2054,7 +2054,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/tabs@workspace:packages/tabs"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/flex-wrap-listener": ^1.0
   languageName: unknown
   linkType: soft
@@ -2063,7 +2063,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/upcoming-events@workspace:packages/upcoming-events"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/event-link": ^1.0
     "@psu-ooe/expandable-section": ^1.0
   languageName: unknown
@@ -2073,9 +2073,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/vertical-menu@workspace:packages/vertical-menu"
   dependencies:
-    "@psu-ooe/base": ^1.0
+    "@psu-ooe/base": ^2.0
     "@psu-ooe/slide-toggle": ^1.0
-    "@psu-ooe/sprite": ^1.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 

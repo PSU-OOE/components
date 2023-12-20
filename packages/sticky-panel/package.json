@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "@psu-ooe/band": "^1.0 || ^2.0",
-    "@psu-ooe/base": "^1.0"
+    "@psu-ooe/base": "^2.0"
   }
 }
