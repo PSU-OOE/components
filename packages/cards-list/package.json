@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^2.0",
-    "@psu-ooe/card": "^1.0",
+    "@psu-ooe/card": "^1.0 || 2.0",
     "@psu-ooe/expandable-section": "^1.0"
   }
 }
