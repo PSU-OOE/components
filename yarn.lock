@@ -1690,7 +1690,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cta@^1.0, @psu-ooe/cta@workspace:packages/cta":
+"@psu-ooe/cta@^2.0, @psu-ooe/cta@workspace:packages/cta":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta@workspace:packages/cta"
   dependencies:
@@ -1737,7 +1737,7 @@ __metadata:
   dependencies:
     "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/cta": ^1.0
+    "@psu-ooe/cta": ^2.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
   languageName: unknown
@@ -1906,7 +1906,7 @@ __metadata:
     "@psu-ooe/card": ^2.0
     "@psu-ooe/cards-list": ^1.0
     "@psu-ooe/credential": ^2.0
-    "@psu-ooe/cta": ^1.0
+    "@psu-ooe/cta": ^2.0
     "@psu-ooe/cta-tracking": ^1.0
     "@psu-ooe/divider": ^1.0
     "@psu-ooe/drop-button": ^3.0
