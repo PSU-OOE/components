@@ -1866,7 +1866,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/parallel-navigation-item@^1.0, @psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item":
+"@psu-ooe/parallel-navigation-item@^2.0, @psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation-item@workspace:packages/parallel-navigation-item"
   dependencies:
@@ -1875,12 +1875,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/parallel-navigation@^2.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
+"@psu-ooe/parallel-navigation@^3.0, @psu-ooe/parallel-navigation@workspace:packages/parallel-navigation":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/parallel-navigation@workspace:packages/parallel-navigation"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/parallel-navigation-item": ^1.0
+    "@psu-ooe/parallel-navigation-item": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1922,8 +1922,8 @@ __metadata:
     "@psu-ooe/navigation-tile": ^1.0
     "@psu-ooe/overlay": ^2.0
     "@psu-ooe/pager": ^2.0
-    "@psu-ooe/parallel-navigation": ^2.0
-    "@psu-ooe/parallel-navigation-item": ^1.0
+    "@psu-ooe/parallel-navigation": ^3.0
+    "@psu-ooe/parallel-navigation-item": ^2.0
     "@psu-ooe/polyfill-flex-gap": ^1.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
     "@psu-ooe/quote": ^1.0
