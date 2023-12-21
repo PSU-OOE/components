@@ -2025,8 +2025,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/spinner@workspace:packages/spinner"
   dependencies:
-    "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
+    "@psu-ooe/base": ^1.0 || ^2.0
+    "@psu-ooe/sprite": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
 
