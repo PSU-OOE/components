@@ -54,7 +54,7 @@
     "@psu-ooe/spinner": "^1.0",
     "@psu-ooe/sprite": "^2.0",
     "@psu-ooe/sticky-panel": "^1.0",
-    "@psu-ooe/tabs": "^2.0",
+    "@psu-ooe/tabs": "^3.0",
     "@psu-ooe/upcoming-events": "^2.0",
     "@psu-ooe/webfonts": "^1.0"
   }

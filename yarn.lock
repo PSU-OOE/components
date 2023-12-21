@@ -1936,7 +1936,7 @@ __metadata:
     "@psu-ooe/spinner": ^1.0
     "@psu-ooe/sprite": ^2.0
     "@psu-ooe/sticky-panel": ^1.0
-    "@psu-ooe/tabs": ^2.0
+    "@psu-ooe/tabs": ^3.0
     "@psu-ooe/upcoming-events": ^2.0
     "@psu-ooe/webfonts": ^1.0
   languageName: unknown
@@ -2047,7 +2047,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/tabs@^2.0, @psu-ooe/tabs@workspace:packages/tabs":
+"@psu-ooe/tabs@^3.0, @psu-ooe/tabs@workspace:packages/tabs":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/tabs@workspace:packages/tabs"
   dependencies:
