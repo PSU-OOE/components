@@ -1753,7 +1753,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/grid@workspace:packages/grid"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-ooe/base": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
 
