@@ -1928,7 +1928,7 @@ __metadata:
     "@psu-ooe/quote": ^2.0
     "@psu-ooe/read-more": ^2.0
     "@psu-ooe/section-view-tracking": ^1.0
-    "@psu-ooe/skip-link": ^1.0
+    "@psu-ooe/skip-link": ^2.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/smart-datetime": ^1.0
     "@psu-ooe/social-icon": ^1.0
@@ -1981,9 +1981,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/skip-link@^1.0, @psu-ooe/skip-link@workspace:packages/skip-link":
+"@psu-ooe/skip-link@^2.0, @psu-ooe/skip-link@workspace:packages/skip-link":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/skip-link@workspace:packages/skip-link"
+  dependencies:
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
