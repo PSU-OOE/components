@@ -1925,7 +1925,7 @@ __metadata:
     "@psu-ooe/parallel-navigation": ^3.0
     "@psu-ooe/parallel-navigation-item": ^2.0
     "@psu-ooe/polyfill-focus-visible": ^1.0
-    "@psu-ooe/quote": ^1.0
+    "@psu-ooe/quote": ^2.0
     "@psu-ooe/read-more": ^1.0
     "@psu-ooe/section-view-tracking": ^1.0
     "@psu-ooe/skip-link": ^1.0
@@ -1950,7 +1950,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/quote@^1.0, @psu-ooe/quote@workspace:packages/quote":
+"@psu-ooe/quote@^2.0, @psu-ooe/quote@workspace:packages/quote":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/quote@workspace:packages/quote"
   dependencies:
