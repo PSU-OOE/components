@@ -1607,7 +1607,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/base@workspace:packages/base"
   dependencies:
-    "@psu-ooe/webfonts": ^1.0
+    "@psu-ooe/webfonts": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1938,7 +1938,7 @@ __metadata:
     "@psu-ooe/sticky-panel": ^1.0
     "@psu-ooe/tabs": ^3.0
     "@psu-ooe/upcoming-events": ^2.0
-    "@psu-ooe/webfonts": ^1.0
+    "@psu-ooe/webfonts": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -2076,7 +2076,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/webfonts@^1.0, @psu-ooe/webfonts@workspace:packages/webfonts":
+"@psu-ooe/webfonts@^2.0, @psu-ooe/webfonts@workspace:packages/webfonts":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/webfonts@workspace:packages/webfonts"
   languageName: unknown

@@ -10,6 +10,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/webfonts": "^1.0"
+    "@psu-ooe/webfonts": "^2.0"
   }
 }
