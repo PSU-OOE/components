@@ -38,7 +38,7 @@
     "@psu-ooe/intro-form": "^2.0",
     "@psu-ooe/modal": "^2.0",
     "@psu-ooe/navigation-tile": "^1.0",
-    "@psu-ooe/overlay": "^1.0",
+    "@psu-ooe/overlay": "^2.0",
     "@psu-ooe/pager": "^1.0",
     "@psu-ooe/parallel-navigation": "^2.0",
     "@psu-ooe/parallel-navigation-item": "^1.0",
