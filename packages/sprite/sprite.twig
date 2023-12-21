@@ -1,14 +1,5 @@
 {% apply spaceless %}
 
-  {#
-    Legacy mappings to be removed in 2.0
-      Some sprites were misnamed early-on in this component.
-  #}
-
-  {% if name == 'fa-magnifying-glass' %}
-    {% set name = 'fas-magnifying-glass' %}
-  {% endif %}
-  
   {% set viewboxes = {
     'blog': '0 0 448 448',
     'community-shield': '0 0 1033.5 1143.1',
