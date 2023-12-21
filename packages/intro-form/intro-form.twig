@@ -6,11 +6,6 @@
   {% set color = 'light-grey' %}
 {% endif %}
 
-{# @deprecated - the 'image' variable is removed in 2.0.0, use 'images' instead #}
-{% if image and not images %}
- {% set images = [image] %}
-{% endif %}
-
 {% set classes = [
   'intro-form',
   color in ['beaver-blue'] ? 'intro-form--' ~ color,

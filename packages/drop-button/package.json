@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/drop-button",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "An accessible drop-button component.",
   "ooe": {
     "namespace": "global"
@@ -10,11 +10,11 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0",
+    "@psu-ooe/base": "^2.0",
     "@psu-ooe/polyfill-focus-visible": "^1.0"
   },
   "peerDependencies": {
-    "@psu-ooe/background-container": "^2.0"
+    "@psu-ooe/background-container": "^3.0"
   },
   "peerDependenciesMeta": {
     "@psu-ooe/background-container": {
