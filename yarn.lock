@@ -2043,7 +2043,7 @@ __metadata:
   resolution: "@psu-ooe/sticky-panel@workspace:packages/sticky-panel"
   dependencies:
     "@psu-ooe/band": ^1.0 || ^2.0
-    "@psu-ooe/base": ^2.0
+    "@psu-ooe/base": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
 
