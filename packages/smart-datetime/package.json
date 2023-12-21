@@ -1,12 +1,12 @@
 {
   "name": "@psu-ooe/smart-datetime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a date and time implementation.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-ooe/base": "^1.0 || ^2.0"
   }
 }
