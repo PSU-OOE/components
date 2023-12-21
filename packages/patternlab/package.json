@@ -36,7 +36,7 @@
     "@psu-ooe/heading": "^2.0",
     "@psu-ooe/icon-list": "^2.0",
     "@psu-ooe/intro-form": "^2.0",
-    "@psu-ooe/modal": "^1.0",
+    "@psu-ooe/modal": "^2.0",
     "@psu-ooe/navigation-tile": "^1.0",
     "@psu-ooe/overlay": "^1.0",
     "@psu-ooe/pager": "^1.0",
