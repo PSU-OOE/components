@@ -1,6 +1,6 @@
 @import "../../../base/src/scss/imports/variables";
 
-.image-navigation-tile {
+.navigation-tile-image {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -15,11 +15,11 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    .image-navigation-tile__overlay::after {
-       opacity: 1;
+    .navigation-tile-image__overlay::after {
+      opacity: 1;
     }
 
-    .image-navigation-tile__title {
+    .navigation-tile-image__title {
       background-color: var(--pa-link);
     }
   }

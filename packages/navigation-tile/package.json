@@ -1,13 +1,13 @@
 {
   "name": "@psu-ooe/navigation-tile",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Provides a navigation tile component.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0",
-    "@psu-ooe/sprite": "^1.0"
+    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/sprite": "^2.0"
   }
 }

@@ -7,7 +7,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/drop-button": "^2.0.0",
+    "@psu-ooe/drop-button": "^3.0.0",
     "@psu-ooe/vertical-menu": "^1.0.0"
   }
 }

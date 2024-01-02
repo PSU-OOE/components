@@ -1,7 +1,7 @@
 {
-  "name": "@psu-ooe/parallel-navigation-item",
-  "version": "2.0.0",
-  "description": "Provides a parallel navigation item component.",
+  "name": "@psu-ooe/navigation-tile-image",
+  "version": "1.0.0",
+  "description": "Provides a navigation tile component that supports an image.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
