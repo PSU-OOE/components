@@ -12,7 +12,6 @@
     }
   }
 
-
   &__heading {
     margin-bottom: 0;
 
@@ -39,7 +38,7 @@
     width: 100%;
     text-align: left;
 
-    &:hover {
+    &:hover, &:focus-visible {
       color: var(--pa-link);
 
       .accordion__label {
@@ -53,28 +52,11 @@
       .accordion__sprite .sprite {
         transform: scale(1.25);
       }
-    }
-
-    &:focus, &:active {
-      outline: none;
     }
 
     &:focus-visible {
       outline: _rem(.2) solid $sky-blue;
       outline-offset: _rem(.2);
-      color: var(--pa-link);
-
-      .accordion__label {
-        text-decoration-color: var(--pa-link);
-
-        &--label-underline {
-          text-decoration-style: solid;
-        }
-      }
-
-      .accordion__sprite .sprite {
-        transform: scale(1.25);
-      }
     }
 
     .accordion__label--label-underline {
@@ -119,7 +101,7 @@
         transform: rotate(45deg);
       }
 
-      &:hover {
+      &:hover, &:focus-visible {
         .accordion__sprite .sprite {
           transform: rotate(45deg) scale(1.25);
         }
@@ -127,10 +109,6 @@
 
       &:focus-visible {
         margin-bottom: _rem(.3);
-
-        .accordion__sprite .sprite {
-          transform: rotate(45deg) scale(1.25);
-        }
       }
     }
 
@@ -141,26 +119,3 @@
   }
 }
 
-// @TODO: Delete when focus-visible polyfill is removed.
-.accordion {
-
-  &__button.focus-visible {
-    outline: _rem(.2) solid $sky-blue;
-    outline-offset: _rem(.2);
-    color: $primary-blue;
-    margin-bottom: _rem(.3);
-
-    .accordion__label {
-      text-decoration-color: $primary-blue;
-    }
-
-    .accordion__sprite .sprite {
-      color: $primary-blue;
-      transform: scale(1.25);
-    }
-  }
-
-  &--expanded .accordion__button.focus-visible .accordion__sprite .sprite {
-    transform: rotate(45deg) scale(1.25);
-  }
-}

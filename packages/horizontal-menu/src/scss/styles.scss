@@ -122,17 +122,11 @@
         font-size: var(--font-size--msmall);
       }
 
-      &:hover {
+      &:hover, &:focus-visible {
         color: var(--pa-link);
       }
 
       &:focus-visible {
-        color: var(--pa-link);
-        outline-offset: _rem(-.1);
-      }
-
-      &.focus-visible {
-        color: var(--pa-link);
         outline-offset: _rem(-.1);
       }
 

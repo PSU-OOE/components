@@ -116,11 +116,6 @@
     &:focus-visible {
       outline-color: var(--sky-blue);
     }
-
-    // @TODO: Remove after polyfill is no longer needed.
-    &.focus-visible {
-      outline-color: var(--sky-blue);
-    }
   }
 
   &--list {

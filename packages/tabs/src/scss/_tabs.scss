@@ -73,22 +73,3 @@
     }
   }
 }
-
-// @TODO: Delete when safari polyfills are no longer needed. */
-// These styles are repeated from the canonical :focus-visible selector.
-
-.tabs__panel.focus-visible {
-  outline: none;
-  &::before {
-    content: '';
-    pointer-events: none;
-    inset: 0 100% 0 0;
-    position: absolute;
-    border-left: _rem(.4) solid var(--sky-blue);
-    left: _rem(-1);
-
-    @include bp(xs) {
-      margin-left: _rem(-2);
-    }
-  }
-}

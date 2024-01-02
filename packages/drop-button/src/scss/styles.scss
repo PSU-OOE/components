@@ -20,11 +20,6 @@
       outline: none;
     }
 
-    &.focus-visible {
-      // Note - focus states are delegated to drop-button contents.
-      outline: none;
-    }
-
     &[aria-expanded="false"] {
       &::after, & + .drop-button__content {
       display: none;
