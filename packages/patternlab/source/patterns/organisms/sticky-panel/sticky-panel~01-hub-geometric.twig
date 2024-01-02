@@ -1,15 +1,15 @@
 {% set primary_content %}
-  <div class="sticky-content">
-    <div class="sticky-content__dogear">
-      <div class="sticky-content__branding">
-        <a class="sticky-content__branding-block" href="/">
-          {% include '@molecules/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+  <div class="general-sticky">
+    <div class="general-sticky__dogear">
+      <div class="block block--system-branding-block">
+        <a href="/">
+          {% include '@atoms/sprite/sprite.twig' with { name: 'wc-mark' } only %}
           <span class="visually-hidden">Penn State World Campus</span>
         </a>
       </div>
     </div>
-    <div class="sticky-content__content">
-      <div class="sticky-content__utility">
+    <div class="general-sticky__content">
+      <div class="general-sticky__utility">
         {% include '@blocks/compact-search/compact-search.twig' with {
           align: 'right',
           search_form: 'The search form goes here.'
@@ -71,7 +71,7 @@
           menu: vertical_menu
         } only %}
       </div>
-      <div class="sticky-content__cta">
+      <div class="general-sticky__cta">
         {% set how_to_apply %}
           {% include '@atoms/cta/cta-block.twig' with {
             label: 'How to Apply',
