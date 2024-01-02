@@ -26,7 +26,7 @@
     --hub-geometric-gradient: url(#hub-geometric-page-title-banner-plain-gradient);
 
     @include bp(m) {
-      left: calc(min(50%, _rem(59.5)) + _rem(22));
+      left: calc(max(50%, _rem(59.5)) + _rem(22));
       right: unset;
       width: _rem(67);
     }

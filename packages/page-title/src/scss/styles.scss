@@ -17,4 +17,8 @@
     font-size: var(--font-size--xlarge);
     line-height: var(--line-height--2xsnug);
   }
+
+  &__subtitle-after {
+    margin-top: _rem(.3);
+  }
 }

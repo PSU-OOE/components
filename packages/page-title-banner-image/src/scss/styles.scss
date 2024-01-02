@@ -31,12 +31,9 @@
 
   &__gradient {
     &::before {
-      position: absolute;
-      content: "";
-      inset: calc(100% - 8rem) 0 0 0;
-      background: linear-gradient(to bottom, transparent, var(--nittany-navy));
-
       @include bp(m) {
+        position: absolute;
+        content: "";
         display:block;
         left: calc(50% - 1260px);
         top: -80px;
@@ -125,6 +122,17 @@
     @include bp(m) {
       padding: _rem(8) var(--page-side-padding) _rem(4.5) var(--page-side-padding);
       background: transparent;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      inset: _rem(-8) 0 100% 0;
+      background: linear-gradient(to bottom, transparent, var(--nittany-navy));
+
+      @include bp(m) {
+        display: none;
+      }
     }
   }
 
