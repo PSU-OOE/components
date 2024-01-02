@@ -1,7 +1,7 @@
 {
   "name": "@psu-ooe/header",
   "version": "1.0.0",
-  "description": "Temporary - do not release packages for.",
+  "description": "Provides a semantic header component.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
