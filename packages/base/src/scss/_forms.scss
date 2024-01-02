@@ -98,14 +98,12 @@ form {
       padding: _rem(1.7) _rem(3.125);
     }
 
-    &:hover {
+    &:hover, &:focus-visible {
       background-color: var(--nittany-navy);
       text-decoration: none;
     }
 
     &:focus-visible {
-      background-color: var(--nittany-navy);
-      text-decoration: none;
       outline: _rem(.2) solid var(--sky-blue);
       outline-offset: _rem(-.5);
     }

@@ -47,16 +47,13 @@ a,
   transition: outline-color var(--transition-duration--default) linear;
   text-underline-offset: .2em;
 
-  &:hover {
+  &:hover, &:focus-visible {
     text-decoration: underline;
     text-decoration-style: solid;
     text-decoration-thickness: _rem(.1);
   }
 
   &:focus-visible {
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: _rem(.1);
     outline-color: var(--sky-blue);
     outline-offset: _rem(0.2);
   }
@@ -78,11 +75,7 @@ a,
   color: var(--link-color--light);
   text-decoration-color: var(--link-color--light);
 
-  &:hover {
-    text-decoration-color: var(--link-color--light);
-  }
-
-  &:focus-visible {
+  &:hover, &:focus-visible {
     text-decoration-color: var(--link-color--light);
   }
 }
