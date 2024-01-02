@@ -100,10 +100,6 @@
       @include bp(l) {
         font-size: _rem(1.7);
       }
-
-      @include bp(xl) {
-        font-size: _rem(1.6);
-      }
     }
   }
 
