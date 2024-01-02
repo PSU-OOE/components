@@ -16,7 +16,7 @@
 {% set items = [] %}
 {% for tile in tiles %}
   {% set rendered_tile %}
-    {% include '@organisms/navigation-tile/image-navigation-tile.twig' with tile only %}
+    {% include '@organisms/navigation-tile-image/navigation-tile-image.twig' with tile only %}
   {% endset %}
   {% set items = items|merge([rendered_tile]) %}
 {% endfor %}
