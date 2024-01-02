@@ -115,14 +115,12 @@
       padding: _rem(1.5) 0;
     }
 
-    &:hover {
+    &:hover, &:focus-visible {
       color: var(--pa-link);
     }
 
     &:focus-visible {
-      color: var(--pa-link);
       outline-offset: 0;
-      text-decoration: underline;
     }
 
     &--active-trail {
