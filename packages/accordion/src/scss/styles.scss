@@ -38,11 +38,6 @@
     padding: _rem(2) 0;
     width: 100%;
     text-align: left;
-    text-decoration: underline;
-    text-decoration-style: dotted;
-    text-decoration-color: transparent;
-    text-underline-offset: 20%;
-    transition: color var(--transition-duration--default) linear, text-decoration-color var(--transition-duration--default) linear;
 
     &:hover {
       color: var(--pa-link);
@@ -83,12 +78,7 @@
     }
 
     .accordion__label--label-underline {
-      color: var(--pa-link);
       text-decoration-color: var(--pa-link);
-      text-decoration-thickness: _rem(.1);
-      text-decoration-line: underline;
-      text-decoration-style: dotted;
-      text-underline-offset: .2em;
     }
   }
 
