@@ -1840,7 +1840,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/navigation-tile@^1.0, @psu-ooe/navigation-tile@workspace:packages/navigation-tile":
+"@psu-ooe/navigation-tile-image@workspace:packages/navigation-tile-image":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/navigation-tile-image@workspace:packages/navigation-tile-image"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/navigation-tile@^2.0, @psu-ooe/navigation-tile@workspace:packages/navigation-tile":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/navigation-tile@workspace:packages/navigation-tile"
   dependencies:
@@ -1919,7 +1928,7 @@ __metadata:
     "@psu-ooe/icon-list": ^2.0
     "@psu-ooe/intro-form": ^2.0
     "@psu-ooe/modal": ^2.0
-    "@psu-ooe/navigation-tile": ^1.0
+    "@psu-ooe/navigation-tile": ^2.0
     "@psu-ooe/overlay": ^2.0
     "@psu-ooe/pager": ^2.0
     "@psu-ooe/parallel-navigation": ^3.0
