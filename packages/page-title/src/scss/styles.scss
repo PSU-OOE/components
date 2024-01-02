@@ -6,6 +6,7 @@
     flex-direction: column;
 
     &--reversed {
+      color: var(--white);
       text-shadow: var(--nittany-navy) 0 0 _rem(.6);
     }
   }
