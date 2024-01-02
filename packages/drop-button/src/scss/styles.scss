@@ -7,10 +7,6 @@
   position: relative;
   display: inline-block;
 
-  &--wide {
-    --drop-button-panel-width: #{_rem(37)};
-  }
-
   &__toggle {
     cursor: pointer;
     position: relative;
@@ -56,10 +52,15 @@
     left: var(--drop-button--left);
     right: var(--drop-button--right);
     top: calc(100% + #{_rem(math.div(math.sqrt(200), 10))} + .2em);
+    padding: _rem(2);
+
+    &--wide {
+      --drop-button-panel-width: #{_rem(37)};
+    }
 
     &--padding {
-      &-default {
-        padding: _rem(2);
+      &-none {
+        padding: 0;
       }
 
       &-small {

@@ -78,7 +78,7 @@
       gap: _rem(.6);
 
       .compact-search__toggle-sprite .sprite {
-        width: 1.6rem;
+        width: _rem(1.6);
         height: auto;
         vertical-align: _rem(-.2);
       }
