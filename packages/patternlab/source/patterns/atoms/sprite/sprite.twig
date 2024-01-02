@@ -113,9 +113,9 @@
 <form style="position: sticky;top:0; background: #fff; padding:2rem; box-shadow: 0 0.5rem 0.5rem #888;">
   <label for="sprite-color" style="display: block;font-weight: bold;margin-bottom: 1rem;">Preview Sprite Color</label>
   <select id="sprite-color">
-    <option value="primary-blue" selected>Primary Blue</option>
-    <option value="beaver-blue">Beaver Blue</option>
-    <option value="nittany-navy">Nittany Navy</option>
+    <option value="--beaver-blue" selected>Beaver Blue</option>
+    <option value="--nittany-navy">Nittany Navy</option>
+    <option value="--sky-blue">Sky Blue</option>
   </select>
   <script>
       (() => {
@@ -124,17 +124,7 @@
         select.addEventListener('change', () => {
           const previews = document.querySelectorAll('.sprite-preview');
           previews.forEach(preview => {
-            switch(select.value) {
-              case 'primary-blue':
-                preview.style.color = '#0064bf';
-                break;
-              case 'beaver-blue':
-                  preview.style.color = '#1e407c';
-                  break;
-              case 'nittany-navy':
-                  preview.style.color = '#001e44';
-                  break;
-            }
+            preview.style.color = 'var(' + select.value + ')';
           });
         });
       })();
@@ -159,7 +149,7 @@
           <tr>
             <th>Preview</th>
             <td>
-              <div class="sprite-preview" style="color:#0064bf; font-size: 5rem; text-align: center;">
+              <div class="sprite-preview" style="color:var(--beaver-blue); font-size: 5rem; text-align: center;">
                 {% include '@atoms/sprite/sprite.twig' with { name: sprite } %}
               </div>
             </td>
