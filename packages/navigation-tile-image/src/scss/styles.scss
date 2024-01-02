@@ -13,7 +13,7 @@
   text-decoration: none;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     text-decoration: none;
     .navigation-tile-image__overlay::after {
       opacity: 1;
@@ -25,7 +25,6 @@
   }
 
   &:focus-visible {
-    text-decoration: none;
     outline-color: var(--sky-blue);
     outline-offset: _rem(.2);
   }
