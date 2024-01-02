@@ -31,19 +31,7 @@
       padding: _rem(1.7) 0;
     }
 
-    &:hover {
-      color: var(--pa-link);
-
-      .parallel-navigation-item__title {
-        text-decoration-color: var(--pa-link);
-      }
-
-      .parallel-navigation-item__icon .sprite {
-        transform: scale(1.25);
-      }
-    }
-
-    &:focus-visible {
+    &:hover, &:focus-visible {
       color: var(--pa-link);
 
       .parallel-navigation-item__title {
@@ -69,13 +57,7 @@
     &--related#{&}--active {
       color: var(--nittany-navy);
 
-      &:hover {
-        .parallel-navigation-item__title {
-          text-decoration-color: var(--nittany-navy);
-        }
-      }
-
-      &:focus-visible {
+      &:hover, &:focus-visible {
         .parallel-navigation-item__title {
           text-decoration-color: var(--nittany-navy);
         }
