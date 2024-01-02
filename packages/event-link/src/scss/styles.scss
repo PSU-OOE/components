@@ -6,8 +6,7 @@
   font-family: var(--font-family--default);
   text-decoration: none;
 
-  // @TODO: Consolidate states after safari polyfill is no longer needed.
-  &:hover {
+  &:hover, &:focus-visible {
     text-decoration: none;
 
     .event-link__title {
@@ -21,18 +20,8 @@
   }
 
   &:focus-visible {
-    text-decoration: none;
     outline: _rem(.2) solid var(--sky-blue);
     outline-offset: _rem(.5);
-
-    .event-link__title {
-      color: var(--pa-link);
-      text-decoration: underline;
-    }
-
-    .event-link__third .sprite {
-      transform: scale(1.25);
-    }
   }
 
   &__first {
