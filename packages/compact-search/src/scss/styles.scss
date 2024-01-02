@@ -12,11 +12,6 @@
       outline-offset: _rem(.2);
     }
 
-    &:is(.focus-visible > .compact-search__toggle) {
-      outline: _rem(.2) solid var(--sky-blue);
-      outline-offset: _rem(.2);
-    }
-
     &:where(:hover) &-sprite {
       color: var(--white);
     }
@@ -48,10 +43,6 @@
       transition: text-decoration-color var(--transition-duration--default) linear;
 
       &:is(:focus-visible  > .compact-search__toggle > .compact-search__toggle-label) {
-        text-decoration-color: var(--white);
-      }
-
-      &:is(.focus-visible  > .compact-search__toggle > .compact-search__toggle-label) {
         text-decoration-color: var(--white);
       }
     }

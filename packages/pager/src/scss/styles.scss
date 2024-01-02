@@ -27,18 +27,7 @@
     transition: background-color var(--transition-duration--default) linear,
                 color var(--transition-duration--default) linear;
 
-    &:hover {
-      background-color: var(--beaver-blue);
-      text-decoration: none;
-    }
-
-    &:focus-visible {
-      background-color: var(--beaver-blue);
-      text-decoration: none;
-    }
-
-    // @TODO: Delete when focus-visible polyfill is removed.
-    &.focus-visible {
+    &:hover, &:focus-visible {
       background-color: var(--beaver-blue);
       text-decoration: none;
     }
@@ -63,18 +52,7 @@
       color: var(--pa-link);
       font-size: var(--font-size--xsmall);
 
-      &:hover {
-        background-color: var(--medium-grey);
-        color: var(--beaver-blue);
-      }
-
-      &:focus-visible {
-        background-color: var(--medium-grey);
-        color: var(--beaver-blue);
-      }
-
-      // @TODO: Delete when focus-visible polyfill is removed.
-      &.focus-visible {
+      &:hover, &:focus-visible {
         background-color: var(--medium-grey);
         color: var(--beaver-blue);
       }

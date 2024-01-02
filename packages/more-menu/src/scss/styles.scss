@@ -96,16 +96,6 @@
     }
 
     &:is(:focus-visible > .more-menu__toggle) {
-      background: var(--pugh-blue);
-      box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
-      color: var(--nittany-navy);
-      outline: none;
-    }
-
-    &:is(.focus-visible > .more-menu__toggle) {
-      background: var(--pugh-blue);
-      box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
-      color: var(--nittany-navy);
       outline: none;
     }
 
@@ -113,7 +103,7 @@
       box-shadow: _rem(-.1) _rem(-.1) var(--beaver-blue);
     }
 
-    &:hover {
+    &:hover, &:is(:focus-visible > .more-menu__toggle) {
       background: var(--pugh-blue);
       box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
       color: var(--nittany-navy);
@@ -157,10 +147,6 @@
     }
 
     &:focus-visible {
-      background: var(--pugh-blue);
-    }
-
-    &.focus-visible {
       background: var(--pugh-blue);
     }
   }
