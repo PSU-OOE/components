@@ -17,14 +17,12 @@
   height: 100%;
   text-decoration: none;
 
-  &:hover {
+  &:hover, &:focus-visible {
     text-decoration: none;
     background: var(--nittany-navy);
   }
 
   &:focus-visible {
-    text-decoration: none;
-    background: var(--nittany-navy);
     outline-color: var(--sky-blue);
     outline-offset: _rem(-0.4);
   }
