@@ -172,7 +172,7 @@
   {% set tile_nav_content %}
     <div class="basic-page-content" style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;">
       {% set tile %}
-        {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+        {% include '@organisms/navigation-tile/navigation-tile.twig' with {
           link: {
             url: '#',
             label: 'Navigation Title',
@@ -182,7 +182,7 @@
 
       {% endset %}
       {% set tile2 %}
-        {% include '@organisms/navigation-tile/description-navigation-tile.twig' with {
+        {% include '@organisms/navigation-tile/navigation-tile.twig' with {
           link: {
             url: '#',
             label: 'Navigation Title with a really long title that will go to two lines eventually',
