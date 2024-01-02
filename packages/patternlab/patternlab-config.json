@@ -51,7 +51,6 @@
       "images": "packages/patternlab/source/images",
       "fonts": "packages/patternlab/source/fonts",
       "annotations": "packages/patternlab/source/_annotations/",
-      "polyfill_focus_visible": "node_modules/focus-visible/dist/",
       "styleguide": "dist/",
       "patternlabFiles": {
         "general-header": "views/partials/general-header.mustache",
@@ -70,8 +69,7 @@
       "css": "packages/patternlab/public/css/",
       "js": "packages/patternlab/public/js",
       "images": "packages/patternlab/public/images",
-      "fonts": "packages/patternlab/public/fonts",
-      "polyfill_focus_visible": "packages/patternlab/public/vendor/polyfill_focus_visible"
+      "fonts": "packages/patternlab/public/fonts"
     }
   },
   "patternExtension": "twig",
