@@ -10,15 +10,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/polyfill-focus-visible": "^1.0"
-  },
-  "peerDependencies": {
-    "@psu-ooe/background-container": "^3.0"
-  },
-  "peerDependenciesMeta": {
-    "@psu-ooe/background-container": {
-      "optional": true
-    }
+    "@psu-ooe/base": "^2.0"
   }
 }

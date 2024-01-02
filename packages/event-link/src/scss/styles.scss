@@ -193,18 +193,3 @@
     }
   }
 }
-
-// @TODO: Delete Safari polyfill when not needed.
-.event-link.focus-visible {
-  outline-offset: _rem(.5);
-  text-decoration: none;
-
-  .event-link__title {
-    color: var(--pa-link);
-    text-decoration: underline;
-  }
-
-  .event-link__third .sprite {
-    transform: scale(1.25);
-  }
-}

@@ -61,14 +61,6 @@
       outline: none;
     }
 
-    &.focus-visible {
-      background: var(--pugh-blue);
-      box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
-      color: var(--nittany-navy);
-      outline: none;
-    }
-
-
     &:hover {
       background: var(--pugh-blue);
       box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
@@ -208,12 +200,6 @@
       outline-offset: 0;
       text-decoration-color: var(--pa-link);
     }
-
-    &.focus-visible {
-      outline-color: var(--sky-blue);
-      outline-offset: 0;
-      text-decoration-color: var(--pa-link);
-    }
   }
 
   &--align-center {
@@ -334,10 +320,6 @@
     }
 
     &:focus-visible {
-      background: var(--pugh-blue);
-    }
-
-    &.focus-visible {
       background: var(--pugh-blue);
     }
   }

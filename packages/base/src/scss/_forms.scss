@@ -39,10 +39,6 @@ form {
       &:focus-visible {
         outline-color: var(--sky-blue);
       }
-
-      &.focus-visible {
-        outline-color: var(--sky-blue);
-      }
     }
   }
 
@@ -63,10 +59,6 @@ form {
     border-color: var(--limestone) var(--medium-grey) var(--medium-grey) var(--medium-grey);
 
     &:focus-visible {
-      outline-color: var(--sky-blue);
-    }
-
-    &.focus-visible {
       outline-color: var(--sky-blue);
     }
   }
@@ -117,13 +109,6 @@ form {
       outline: _rem(.2) solid var(--sky-blue);
       outline-offset: _rem(-.5);
     }
-
-    &.focus-visible {
-      background-color: var(--nittany-navy);
-      text-decoration: none;
-      outline: _rem(.2) solid var(--sky-blue);
-      outline-offset: _rem(-.5);
-    }
   }
 
   legend {
@@ -148,10 +133,6 @@ select {
   padding: _rem(1.6) _rem(3.5) _rem(1.6) _rem(1);
 
   &:focus-visible {
-    outline-color: var(--sky-blue);
-  }
-
-  &.focus-visible {
     outline-color: var(--sky-blue);
   }
 }

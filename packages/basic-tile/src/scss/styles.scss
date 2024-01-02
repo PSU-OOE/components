@@ -29,14 +29,6 @@
     outline-offset: _rem(-0.4);
   }
 
-  // @TODO: Remove after polyfill is no longer needed.
-  &.focus-visible {
-    text-decoration: none;
-    background: var(--nittany-navy);
-    outline-color: var(--sky-blue);
-    outline-offset: _rem(-0.4);
-  }
-
   &__primary-label {
     font-weight: var(--font-weight--bold);
   }

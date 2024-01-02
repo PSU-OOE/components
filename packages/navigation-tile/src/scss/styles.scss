@@ -37,12 +37,6 @@
       outline-color: var(--pa-link);
       outline-offset: _rem(-.4);
     }
-
-    // @TODO: Remove after polyfill is no longer needed.
-    .focus-visible {
-      outline-color: var(--pa-link);
-      outline-offset: _rem(-.4);
-    }
   }
 
   &__content {

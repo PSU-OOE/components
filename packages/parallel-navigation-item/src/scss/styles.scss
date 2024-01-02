@@ -55,19 +55,6 @@
       }
     }
 
-    // @TODO: Remove after polyfill is no longer needed.
-    &.focus-visible {
-      color: var(--pa-link);
-
-      .parallel-navigation-item__title {
-        text-decoration-color: var(--pa-link);
-      }
-
-      .parallel-navigation-item__icon .sprite {
-        transform: scale(1.25);
-      }
-    }
-
     &--active {
       color: var(--pa-link);
       font-weight: var(--font-weight--bold);
@@ -89,13 +76,6 @@
       }
 
       &:focus-visible {
-        .parallel-navigation-item__title {
-          text-decoration-color: var(--nittany-navy);
-        }
-      }
-
-      // @TODO: Remove after polyfill is no longer needed.
-      &.focus-visible {
         .parallel-navigation-item__title {
           text-decoration-color: var(--nittany-navy);
         }

@@ -61,16 +61,6 @@ a,
     outline-offset: _rem(0.2);
   }
 
-  // @TODO: Remove after polyfill is no longer needed.
-  &.focus-visible {
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: _rem(.1);
-    text-decoration-color: var(--link-color--default);
-    outline-color: var(--sky-blue);
-    outline-offset: _rem(0.2);
-  }
-
   // @TODO: This probably isn't used...
   &.hidden {
     left: _rem(-99.9);

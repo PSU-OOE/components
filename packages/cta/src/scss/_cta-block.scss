@@ -55,16 +55,6 @@
     color: var(--text-color--light);
   }
 
-  // @TODO: Remove safari polyfill.
-  &.focus-visible {
-    text-decoration: none;
-    outline: _rem(.2) solid var(--sky-blue);
-    outline-offset: _rem(-.5);
-    background-color: var(--nittany-navy);
-    border-bottom: none;
-    color: var(--white);
-  }
-
   &:hover {
     outline: none;
   }
@@ -165,17 +155,6 @@
       }
     }
 
-    // @TODO: Remove safari polyfill.
-    &.focus-visible {
-      outline-color: $outline;
-      background: $background-active;
-      color: $foreground-active;
-
-      .cta-block__icon {
-        color: $icon-active;
-      }
-    }
-
     .cta-block__icon {
       color: $icon;
     }
@@ -197,11 +176,6 @@
   box-shadow: var(--box-shadow);
 
   &:focus-visible, &:hover {
-    box-shadow: 0.1rem 0.1rem 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
-  }
-
-  // @TODO: Remove safari polyfill.
-  &.focus-visible {
     box-shadow: 0.1rem 0.1rem 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
   }
 
