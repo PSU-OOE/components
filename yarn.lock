@@ -1679,6 +1679,7 @@ __metadata:
   resolution: "@psu-ooe/compact-menu@workspace:packages/compact-menu"
   dependencies:
     "@psu-ooe/drop-button": ^3.0.0
+    "@psu-ooe/sprite": ^2.0.0
     "@psu-ooe/vertical-menu": ^1.0.0
   languageName: unknown
   linkType: soft
@@ -1688,6 +1689,7 @@ __metadata:
   resolution: "@psu-ooe/compact-search@workspace:packages/compact-search"
   dependencies:
     "@psu-ooe/drop-button": ^3.0.0
+    "@psu-ooe/sprite": ^2.0.0
   languageName: unknown
   linkType: soft
 
@@ -2098,7 +2100,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/sprite@^1.0 || ^2.0, @psu-ooe/sprite@^2.0, @psu-ooe/sprite@workspace:packages/sprite":
+"@psu-ooe/sprite@^1.0 || ^2.0, @psu-ooe/sprite@^2.0, @psu-ooe/sprite@^2.0.0, @psu-ooe/sprite@workspace:packages/sprite":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/sprite@workspace:packages/sprite"
   dependencies:

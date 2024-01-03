@@ -1,10 +1,10 @@
 {% set menu %}
   <div style="padding: 4rem 0">
     {% include '@molecules/drop-button/drop-button.twig' with {
-      width: 'wide',
       toggle_content: '<span style="outline: 2px dotted black"><span class="visually-hidden">4</span> More <span class="visually-hidden">options</span></span>',
-      panel_padding: 'none',
       panel_content: 'Padding control may delegated to panel content. Be sure to allow at least 1.414rem of padding on the top to prevent intersecting with the caret (unlike this example).',
+      panel_width: 'wide',
+      panel_padding: 'none',
     } only %}
   </div>
 {% endset %}
