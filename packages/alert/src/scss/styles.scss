@@ -15,8 +15,6 @@
     container-type: inline-size;
 
     .alert__icon {
-      width: _rem(2);
-      height: _rem(2);
       margin-right: _rem(1);
 
       .sprite {
@@ -27,7 +25,6 @@
     }
     @supports (container-type: inline-size ) {
       @container (min-width: 425px) {
-        .alert__icon,
         .alert__icon .sprite {
           width: _rem(5.5);
           height: _rem(5.5);
