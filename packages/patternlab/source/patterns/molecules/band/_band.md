@@ -6,9 +6,10 @@
  | padding    | string | false    | May match a documented padding modifier (below). If not overridden, a default amount of vertical padding is added to the container. |
 
 ## Backgrounds
-| Background | Description                                   |
-|------------|-----------------------------------------------|
-| secondary  | Display the band in a secondary color profile |
+| Background    | Description                                      |
+|---------------|--------------------------------------------------|
+| secondary     | Display the band in a secondary color profile    |
+| hub-geometric | Display the band with a hub geometric background |
 
 ## Paddings
 | Padding | Description                                                    |
