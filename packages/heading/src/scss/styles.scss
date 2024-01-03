@@ -131,7 +131,6 @@ h2, .heading--large {
     height: .125em;
     background-color: var(--sky-blue);
     max-width: _rem(8);
-    margin-bottom: _rem(1.5);
   }
 
   &.heading--reversed {
@@ -141,6 +140,20 @@ h2, .heading--large {
     @supports not (color: color-mix(in srgb, white, white)) {
       --headings-color: var(--text-color--light);
     }
+  }
+}
+
+// Styles specific to <h1> elements.
+h1, .heading--xlarge {
+  &:not(.heading--no-overline)::before {
+    margin-bottom: _rem(1);
+  }
+}
+
+// Styles specific to <h2> elements.
+h2, .heading--large {
+  &:not(.heading--no-overline)::before {
+    margin-bottom: _rem(1.5);
   }
 }
 
