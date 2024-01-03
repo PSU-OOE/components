@@ -7,7 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-ooe/base": "^2.0"
   }
 }
