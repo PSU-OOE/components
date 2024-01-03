@@ -1888,7 +1888,6 @@ __metadata:
   resolution: "@psu-ooe/navigation-tile-image@workspace:packages/navigation-tile-image"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -1897,7 +1896,6 @@ __metadata:
   resolution: "@psu-ooe/navigation-tile@workspace:packages/navigation-tile"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
