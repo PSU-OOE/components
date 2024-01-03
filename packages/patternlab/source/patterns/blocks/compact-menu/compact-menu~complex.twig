@@ -51,7 +51,10 @@
   } only %}
 {% endset %}
 {% set menu %}
-  {% embed '@blocks/compact-menu/compact-menu.twig' with { menu: vertical_menu } only %}
+  {% embed '@blocks/compact-menu/compact-menu.twig' with {
+    menu: vertical_menu,
+    menu_label: '<em>Awesome</em> Menu',
+  } only %}
     {% block panel_content %}
       {{ parent() }}
       <div style="padding-top:2.5rem">Arbitrary content after!</div>
