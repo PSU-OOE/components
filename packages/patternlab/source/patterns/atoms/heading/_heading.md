@@ -3,16 +3,17 @@ order: 3
 title: Headings
 ---
 # Variables
-| Variable    | Type    | Required | Description                                                                 |
-|-------------|---------|----------|-----------------------------------------------------------------------------|
-| content     | string  | true     | The content to render within the heading. May contain arbitrary HTML.       |
-| level       | integer | false    | An integer, between 1 and 6 that denotes the heading level.  Defaults to 2. |
-| size        | string  | false    | Must match a documented size modifier (below).                              |
-| align       | string  | false    | Must match a documented align modifier (below).                             |
- | vspace      | string  | false    | Must match a documented vertical space modifier (below).                    |
- | position    | string  | false    | Must match a documented position modifier (below).                          |
- | no_overline | boolean | false    | If specified, the heading will never render with an overline decoration.    |
- | reversed    | boolean | false    | If specified, the heading will render with an inverse color profile         |
+| Variable     | Type    | Required | Description                                                                 |
+|--------------|---------|----------|-----------------------------------------------------------------------------|
+| content      | string  | true     | The content to render within the heading. May contain arbitrary HTML.       |
+| level        | integer | false    | An integer, between 1 and 6 that denotes the heading level.  Defaults to 2. |
+| size         | string  | false    | Must match a documented size modifier (below).                              |
+| align        | string  | false    | Must match a documented align modifier (below).                             |
+| vspace       | string  | false    | Must match a documented vertical space modifier (below).                    |
+| position     | string  | false    | Must match a documented position modifier (below).                          |
+| no_overline  | boolean | false    | If specified, the heading will never render with an overline decoration.    |
+| reversed     | boolean | false    | If specified, the heading will render with an inverse color profile         |
+| subtle       | boolean | false    | If specified, the heading will render with a subtle look.                   |
 
 ## Size modifiers
 | Size    | Description                         |
