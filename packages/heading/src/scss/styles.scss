@@ -185,6 +185,18 @@ h6, .heading--2xsmall {
     color: var(--text-color--light);
   }
 
+  &--subtle {
+    font-family: var(--font-family--default);
+    font-weight: var(--font-weight--bold);
+    font-size: var(--font-size--medium);
+    line-height: var(--line-height--2xsnug);
+    letter-spacing: 0.02em;
+
+    .text--contrasting {
+      font-weight: var(--font-weight--extrabold);
+    }
+  }
+
   &--align-left {
     text-align: left;
   }
