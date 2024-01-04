@@ -1603,7 +1603,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/base@^1.0 || ^2.0, @psu-ooe/base@^2.0, @psu-ooe/base@workspace:packages/base":
+"@psu-ooe/base@^1.0 || ^2.0, @psu-ooe/base@^2.0, @psu-ooe/base@^2.0.0, @psu-ooe/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/base@workspace:packages/base"
   dependencies:
@@ -1678,6 +1678,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/compact-menu@workspace:packages/compact-menu"
   dependencies:
+    "@psu-ooe/base": ^2.0.0
     "@psu-ooe/drop-button": ^3.0.0
     "@psu-ooe/sprite": ^2.0.0
     "@psu-ooe/vertical-menu": ^1.0.0
@@ -1688,6 +1689,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/compact-search@workspace:packages/compact-search"
   dependencies:
+    "@psu-ooe/base": ^2.0.0
     "@psu-ooe/drop-button": ^3.0.0
     "@psu-ooe/sprite": ^2.0.0
   languageName: unknown
@@ -1875,6 +1877,8 @@ __metadata:
   resolution: "@psu-ooe/more-menu@workspace:packages/more-menu"
   dependencies:
     "@psu-ooe/base": ^2.0
+    "@psu-ooe/drop-button": ^3.0.0
+    "@psu-ooe/sprite": ^2.0.0
   peerDependencies:
     "@psu-ooe/background-container": ^3.0
   peerDependenciesMeta:
