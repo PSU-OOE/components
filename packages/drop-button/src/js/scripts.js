@@ -35,7 +35,7 @@
     });
   };
 
-  // Whenever the body changes size under 950px, be sure to revalidate all
+  // Whenever the body changes size under 800px, be sure to revalidate all
   // drop-buttons that are present in the registry, as their position relative
   // to the viewport will have almost certainly changed.
   (new ResizeObserver(entries => {
@@ -44,7 +44,7 @@
     });
   })).observe(document.body);
 
-  // Whenever the body size is under 950px and any element is mutated, be sure
+  // Whenever the body size is under 800px and any element is mutated, be sure
   // to revalidate all drop-buttons that are present in the registry, as their
   // position relative to the viewport may have changed.
   const mutation_observer = new MutationObserver((mutationList) => {
