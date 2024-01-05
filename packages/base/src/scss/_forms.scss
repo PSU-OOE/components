@@ -129,7 +129,8 @@ select {
   width: 100%;
   border: _rem(.1) solid var(--medium-grey);
   border-radius: 0;
-  padding: _rem(1.3) _rem(3.5) _rem(1.3) _rem(1);
+  line-height: var(--line-height--nospace);
+  padding: _rem(1.65) _rem(3.5) _rem(1.65) _rem(1);
   cursor: pointer;
   &:focus-visible {
     outline-color: var(--sky-blue);
