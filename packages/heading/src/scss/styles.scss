@@ -194,10 +194,11 @@ h6, .heading--2xsmall {
     text-transform: uppercase;
     &:not(.heading-no-overline)::before {
       margin-bottom: _rem(0.5);
-      height: _rem(0.1);
+      height: _rem(0.2);
     }
     .text--contrasting {
       font-weight: var(--font-weight--extrabold);
+      letter-spacing: inherit;
     }
   }
 
