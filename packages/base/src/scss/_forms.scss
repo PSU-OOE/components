@@ -116,6 +116,7 @@ form {
 
 
 select {
+  font-family: var(--font-family–default);
   font-size: var(--font-size--msmall);
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -128,8 +129,8 @@ select {
   width: 100%;
   border: _rem(.1) solid var(--medium-grey);
   border-radius: 0;
-  padding: _rem(1.6) _rem(3.5) _rem(1.6) _rem(1);
-
+  padding: _rem(1.3) _rem(3.5) _rem(1.3) _rem(1);
+  cursor: pointer;
   &:focus-visible {
     outline-color: var(--sky-blue);
   }
