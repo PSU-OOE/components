@@ -35,10 +35,10 @@
         position: absolute;
         content: "";
         display:block;
-        left: calc(50% - 1260px);
-        top: -80px;
-        width: 1750px;
-        height: 840px;
+        left: calc(50% - _rem(126));
+        top: _rem(-8);
+        width: _rem(175);
+        height: _rem(84);
         transform: rotate(17deg);
         background: radial-gradient(closest-side, var(--nittany-navy), transparent);
         mix-blend-mode: multiply;
@@ -49,8 +49,8 @@
       @include bp(m) {
         content: "";
         position: absolute;
-        width: 10000px;
-        left: calc(50% - 5000px);
+        width: _rem(1000);
+        left: calc(50% - _rem(500));
         top: 0;
         bottom:0;
         background: linear-gradient(22deg, var(--nittany-navy) 41%, transparent 50%);
