@@ -55,7 +55,9 @@ function moveKeyBefore($arr, $find, $move) {
         $component = str_replace('@psu-ooe/', '', $manifest);
         $potential_css_file = "packages/$component/dist/styles.css";
         if (file_exists($potential_css_file)) {
-          $styles .= file_get_contents($potential_css_file);
+          $file_content = file_get_contents($potential_css_file);
+          // Strip out any UTF-8 BOM sequences before inlining.
+          $styles .= preg_replace("/^\xEF\xBB\xBF/", '', $file_content);
         }
       }
       return $styles;

@@ -20,7 +20,6 @@
     "gulp-sass": "^5.1.0",
     "gulp-sass-bulk-import": "^1.0.1",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-stripbom": "^1.0.5",
     "gulp-svg-sprite": "^2.0.3",
     "gulp-uglify-es": "^3.0.0",
     "sass": "^1.69.5",
