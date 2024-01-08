@@ -1,0 +1,12 @@
+{% set search %}
+  <div style="display:flex; justify-content: flex-end">
+    {% include '@blocks/compact-search/compact-search.twig' with {
+      search_form: 'The form goes here.'
+    } only %}
+  </div>
+{% endset %}
+
+{% include '@molecules/callout/callout.twig' with {
+  background: 'blue-gradient',
+  content: search,
+} only %}

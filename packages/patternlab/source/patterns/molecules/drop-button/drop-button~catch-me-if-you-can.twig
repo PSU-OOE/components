@@ -1,0 +1,29 @@
+{% set drop_button %}
+  <style>
+      @keyframes backandforth {0%{margin-left:0;} 100%{margin-left:80%;}}
+  </style>
+  <div style="padding: 4rem 0;height:10rem;animation-timing-function: linear;animation-name: backandforth; animation-direction:alternate;animation-iteration-count: infinite;animation-duration:5s;">
+    {% include '@molecules/drop-button/drop-button.twig' with {
+      toggle_content: '<div style="outline: 2px dotted black;text-align:center">More<br>(may shake violently)</div>',
+      panel_content: 'Test content',
+    } only %}
+  </div>
+{% endset %}
+
+{% include '@organisms/alert/alert.twig' with {
+  content: "This example may potentially trigger seizures for people with photosensitive epilepsy! This example exists to illuminate the inherent limitations of the drop-button component javascript positioning system. Use of the component in this manner is not recommended and may carry legal consequences.<br><br><strong>Do not</strong> activate this example unless it is safe to do so in your surroundings.",
+  severity: "error"
+} only %}
+
+{% set expandable_section %}
+  {% include '@organisms/expandable-section/expandable-section.twig' with {
+    id: 'drop-button-warning-expandable-content',
+    intro: warning,
+    expand_label: "Expand example",
+    content: drop_button,
+    collapse_label: "Close example"
+  } only %}
+{% endset %}
+  {% include '@molecules/callout/callout.twig' with {
+    content: expandable_section,
+  } only %}

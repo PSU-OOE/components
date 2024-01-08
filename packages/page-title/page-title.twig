@@ -1,0 +1,23 @@
+{% set heading_content %}
+  {% set content_classes = [
+    'page-title-typography__content',
+    reversed ? 'page-title-typography__content--reversed'
+  ]|filter(class => class is not empty) %}
+  <span class="{{ content_classes|join(' ') }}">
+    {% if subtitle_before %}
+      <span class="page-title-typography__subtitle-before">{{ subtitle_before }}</span>
+    {% endif %}
+    <span class="page-title-typography__title">{{ title }}</span>
+    {% if subtitle_after %}
+      <span class="page-title-typography__subtitle-after">{{ subtitle_after }}</span>
+    {% endif %}
+  </span>
+{% endset %}
+
+<div class="page-title-typography">
+  {% include '@atoms/heading/heading.twig' with {
+    level: 1,
+    content: heading_content,
+    vspace: 'none',
+  } only %}
+</div>
