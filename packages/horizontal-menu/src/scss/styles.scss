@@ -21,11 +21,15 @@
       top: 100%;
       opacity: 0;
       visibility: hidden;
-      box-shadow: _rem(.1) _rem(.3) _rem(.5) rgba($nittany-navy, .75);
+      box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 75%, transparent);
       border-left: _rem(.3) solid var(--sky-blue);
       padding: _rem(.5) _rem(2);
       min-width: 100%;
       width: _rem(23);
+
+      @supports not (color: color-mix(in srgb, white, white)) {
+        box-shadow: _rem(.1) _rem(.3) _rem(.5) rgba($nittany-navy, .75);
+      }
     }
   }
 
