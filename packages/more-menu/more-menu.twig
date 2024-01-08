@@ -16,7 +16,7 @@
 {% endset %}
 
 {% set link_list %}
-  <ul class="more-menu__list">
+  <ul class="more-menu__list" role="list">
     {% for link in links %}
       <li class="more-menu__item">
         <a class="more-menu__link" href="{{ link.url }}">{{ link.label }}</a>

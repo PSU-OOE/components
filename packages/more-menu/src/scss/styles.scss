@@ -130,7 +130,7 @@
       font-size: var(--font-size--default);
     }
 
-    &:hover, &:focus {
+    &:hover, &:focus-visible {
       color: var(--pa-link);
       text-decoration-color: var(--pa-link);
     }
