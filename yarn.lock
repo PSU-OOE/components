@@ -1910,6 +1910,35 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/page-title-banner-image@workspace:packages/page-title-banner-image":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/page-title-banner-image@workspace:packages/page-title-banner-image"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/page-title": ^1.0
+    "@psu-ooe/sprite": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/page-title-banner-plain@workspace:packages/page-title-banner-plain":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/page-title-banner-plain@workspace:packages/page-title-banner-plain"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/page-title": ^1.0
+    "@psu-ooe/sprite": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/page-title@^1.0, @psu-ooe/page-title@workspace:packages/page-title":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/page-title@workspace:packages/page-title"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/heading": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/pager@^2.0, @psu-ooe/pager@workspace:packages/pager":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/pager@workspace:packages/pager"

@@ -40,5 +40,6 @@ title: Headings
 ## Vertical space modifiers
 | Modifier | Description                                               |
 |----------|-----------------------------------------------------------|
+| none     | If specified, the heading will have no margin bottom      |
 | small    | If specified, the heading will have a small margin bottom |
 | large    | If specified, the heading will have a large margin bottom |

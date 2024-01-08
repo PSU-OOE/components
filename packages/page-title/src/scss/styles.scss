@@ -1,0 +1,24 @@
+@import '../../../base/src/scss/imports/variables';
+
+.page-title-typography {
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &--reversed {
+      color: var(--white);
+      text-shadow: var(--nittany-navy) 0 0 _rem(.6);
+    }
+  }
+
+  &__subtitle-before,
+  &__subtitle-after {
+    font-family: var(--font-family--display);
+    font-size: var(--font-size--xlarge);
+    line-height: var(--line-height--2xsnug);
+  }
+
+  &__subtitle-after {
+    margin-top: _rem(.3);
+  }
+}

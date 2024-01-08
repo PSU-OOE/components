@@ -223,6 +223,10 @@ h6, .heading--2xsmall {
     }
   }
 
+  &--vspace-none {
+    margin: 0;
+  }
+
   &--vspace-small {
     margin: 0 0 var(--text-element-vertical-space--small);
   }
