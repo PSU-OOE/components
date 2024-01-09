@@ -31,6 +31,7 @@
 
   // line height
   --line-height--medium: calc(30/17);
+  --line-height--msnug: calc(28/17);
   --line-height--snug: calc(24/17);
   --line-height--xsnug: calc(21/17);
   --line-height--2xsnug: calc(28/24);
@@ -177,6 +178,10 @@ p, .paragraph--default {
 
 .text--height-default {
   line-height: var(--line-height--default);
+}
+
+.text--height-msnug {
+  line-height: var(--line-height--msnug);
 }
 
 .text--height-snug {
