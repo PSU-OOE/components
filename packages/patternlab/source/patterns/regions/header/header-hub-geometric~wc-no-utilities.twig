@@ -1,0 +1,50 @@
+{% embed '@psu-ooe/header/header.twig' %}
+
+  {% set how_to_apply %}
+    {% include '@psu-ooe/cta/cta-block.twig' with {
+      label: 'How to Apply',
+      url: '#',
+      color: 'light-blue',
+      compact: true,
+    } only %}{% endset %}
+  {% set request_info %}
+    {% include '@psu-ooe/cta/cta-block.twig' with {
+      label: 'Request Info',
+      url: '#',
+      color: 'reversed',
+      compact: true,
+    } only %}
+  {% endset %}
+
+  {% block dogear_content %}
+    <div class="region region--branding">
+      <div class="block block--system-branding-block">
+        <a href="/">
+          <svg class="sprite sprite--wc-mark" aria-hidden="true" viewBox="0 0 229 72">
+            <use xlink:href="#wc-mark"></use>
+          </svg>
+          <span class="visually-hidden">Penn State World Campus</span>
+        </a>
+      </div>
+    </div>
+  {% endblock %}
+  {% block content %}
+    <div class="region region--cta-large-viewports">
+      {% apply spaceless %}
+        {{ how_to_apply }}
+        {{ request_info }}
+      {% endapply %}
+    </div>
+  {% endblock %}
+  {% block overflow %}
+    <div class="region region--cta-small-viewports">
+      {% apply spaceless %}
+        {% include '@psu-ooe/cta/cta-group.twig' with {
+          ctas: [how_to_apply, request_info],
+          expand_to_fit: true,
+        } only %}
+      {% endapply %}
+    </div>
+    <div class="region region--overflow-large-viewports"></div>
+  {% endblock %}
+{% endembed %}

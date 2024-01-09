@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/callout",
+  "version": "1.0.0",
+  "description": "Provides a callout implementation.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^2.0"
+  }
+}

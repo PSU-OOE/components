@@ -1,5 +1,5 @@
 {% set bio_1 %}
-  {% include '@organisms/bio/bio.twig' with {
+  {% include '@psu-ooe/bio/bio.twig' with {
     title: {
       level: 2,
       content: 'Thomas T. Amlie',
@@ -16,7 +16,7 @@
   } only %}
 {% endset %}
 {% set bio_2 %}
-  {% include '@organisms/bio/bio.twig' with {
+  {% include '@psu-ooe/bio/bio.twig' with {
     title: {
       level: 2,
       content: 'Janet Duck',
@@ -37,7 +37,7 @@
   } only %}
 {% endset %}
 {% set bio_3 %}
-  {% include '@organisms/bio/bio.twig' with {
+  {% include '@psu-ooe/bio/bio.twig' with {
     title: {
       level: 2,
       content: 'John Cameron',
@@ -56,12 +56,12 @@
 {% endset %}
 
 {% set bio_collection %}
-  {% include '@blocks/bio-collection/bio-collection.twig' with {
+  {% include '@psu-ooe/bio-collection/bio-collection.twig' with {
     bios: [bio_1, bio_2, bio_3]
   } only %}
 {% endset %}
 
-{% include '@organisms/expandable-section/expandable-section.twig' with {
+{% include '@psu-ooe/expandable-section/expandable-section.twig' with {
   id: 'minors',
   toc_label: 'Minors',
   intro: "<div class=\"wysiwyg\"><h2 class=\"heading--neutral heading--flush\"><span class=\"text--contrasting\">World Class</span> Faculty</h2></div>",

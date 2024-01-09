@@ -4,80 +4,57 @@
 .pager {
   text-align: center;
 
-  &:not(:first-child) {
-    margin-top: _rem(4);
-
-    @include bp(m) {
-      margin-top: _rem(8);
-    }
-  }
-
-  .pager__items {
+  &__items {
     display: inline-flex;
+    gap: _rem(1);
     margin: 0 auto;
     flex-wrap: wrap;
+    list-style-type:none;
+  }
 
-    .pager__item {
-      margin: 0 _rem(1) _rem(1) 0;
+  &__link {
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--msmall);
+    background-color: var(--pa-link);
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    width: _rem(4);
+    height: _rem(4);
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-duration--default) linear,
+                color var(--transition-duration--default) linear;
+
+    &:hover, &:focus-visible {
+      background-color: var(--beaver-blue);
+      text-decoration: none;
+    }
+
+    &[aria-current="page"] {
+      background: var(--nittany-navy);
+      position: relative;
 
       &::before {
-        display: none;
+        content: '';
+        position: absolute;
+        inset: _rem(.2) _rem(.2) calc(100% - #{_rem(.4)}) _rem(.2);
+        background-color: var(--keystone);
       }
+    }
 
-      a {
-        font-size: _rem(1.4);
-        background-color: $beaver-blue;
-        border-bottom: none;
-        color: $white;
-        cursor: pointer;
-        display: flex;
-        text-align: center;
-        width: _rem(4);
-        height: _rem(4);
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        transition: background-color .25s ease;
+    &--next,
+    &--previous,
+    &--first,
+    &--last {
+      background: var(--light-mauve);
+      color: var(--pa-link);
+      font-size: var(--font-size--xsmall);
 
-        &:hover,
-        &:focus {
-          background-color: $nittany-navy;
-          text-decoration: none;
-        }
-
-        &:focus {
-          outline-offset: _rem(.2);
-        }
-      }
-
-      &--next,
-      &--previous,
-      &--first,
-      &--last {
-        a {
-          background: $light-grey;
-          color: $primary-blue;
-          font-weight: 400;
-
-          &:hover,
-          &:focus {
-            color: $white;
-          }
-        }
-      }
-
-      &--last {
-        margin: 0;
-      }
-
-      &.is-active {
-        a {
-          background-color: $primary-blue;
-
-          &:hover {
-            background-color: $primary-blue;
-          }
-        }
+      &:hover, &:focus-visible {
+        background-color: var(--medium-grey);
+        color: var(--beaver-blue);
       }
     }
   }

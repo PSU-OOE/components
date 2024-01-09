@@ -5,8 +5,10 @@
 {% if align_right %}
   {% set classes = classes|merge(['cta-group--align-right']) %}
 {% endif %}
-<div class="{{ classes|join(' ') }}">
-  {% for cta in ctas %}
-    {{ cta }}
-  {% endfor %}
-</div>
+{% apply spaceless %}
+  <div class="{{ classes|join(' ') }}">
+    {% for cta in ctas %}
+      {{ cta }}
+    {% endfor %}
+  </div>
+{% endapply %}

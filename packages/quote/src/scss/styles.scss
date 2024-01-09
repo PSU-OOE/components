@@ -1,97 +1,53 @@
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
 
-@supports (hanging-punctuation: first) {
-  .quote__content {
-    hanging-punctuation: first;
-  }
-}
-
-@supports not (hanging-punctuation: first) {
-  .quote__content {
-    text-indent: -.25em;
-  }
-}
-
-// canceling out 1em 4em margin from normalize
-figure.quote__figure {
-  margin: 0;
-}
-
 .quote {
-  color: $nittany-navy;
+  color: var(--nittany-navy);
 
-  .quote__wrapper {
+  &--reverse {
+    color: var(--white);
+
+    .quote__content::before, .quote__content::after {
+      color: var(--pugh-blue);
+    }
+  }
+
+  &__wrapper {
     display: flex;
-    gap: _rem(2);
+    gap: 2.5%;
     align-items: center;
+  }
+
+  &__headshot {
+    max-width: _rem(20);
+    flex: 0 1 25%;
+    align-self: flex-start;
 
     @include bp(s) {
-      gap: _rem(3);
+      flex: 0 1 33.333%;
     }
 
-    .quote__headshot {
-      max-width: _rem(20);
-      flex: 0 1 25%;
-      align-self: flex-start;
-
-      @include bp(s) {
-        flex: 0 1 33.333%;
-      }
-
-      img {
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-        border-radius: 50%;
-      }
-    }
-
-    .quote__figure {
-      flex: 1 1 calc(100% - 25%);
-
-      @include bp(s) {
-        flex: 1 1 calc(100% - 33.333%);
-      }
-
-      .quote__content {
-        font-family: $roboto-slab;
-        font-weight: 200;
-        font-size: _rem(1.8);
-
-        @include bp(s) {
-          font-size: _rem(2);
-        }
-
-        line-height: 1.5;
-        letter-spacing: -.025em;
-      }
-
-      .quote__caption {
-        font-family: $open-sans;
-        font-weight: 700;
-        font-size: _rem(1.4);
-        line-height: calc(2/1.4);
-      }
-
-      .quote__content + .quote__caption {
-        margin-top: _rem(1.5);
-
-        @include bp(s) {
-          margin-top: _rem(2);
-        }
-      }
-      // mirroring what is being done above
-      .quote__after {
-        margin-top: _rem(1.5);
-
-        @include bp(s) {
-          margin-top: _rem(2);
-        }
-      }
+    img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
-}
 
-.quote--reverse {
-  color: $white;
+  &__figure {
+    flex: 1 1 calc(100% - 25%);
+
+    @include bp(s) {
+      flex: 1 1 calc(100% - 33.333%);
+    }
+  }
+
+  &__after {
+    margin-left: _rem(2.8);
+    margin-top: var(--text-element-vertical-space--small);
+
+    @include bp(s) {
+      margin-top: var(--text-element-vertical-space--default);
+    }
+  }
 }

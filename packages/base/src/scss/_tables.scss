@@ -12,27 +12,26 @@ table {
   }
 
   caption span.h2 {
-    font-size: _rem(2.6);
-    line-height: _rem(3.2);
+    font-size: var(--font-size--2xlarge);
+    line-height: var(--line-height--2xsnug);
     letter-spacing: _rem(-.01);
-    color: $primary-blue;
+    color: var(--nittany-navy);
     text-align: left;
-    font-weight: 400;
+    font-weight: var(--font-weight--regular);
   }
 
   caption span.h4 {
-    font-size: _rem(1.8);
-    line-height: _rem(2.4);
+    font-size: var(--font-size--large);
+    line-height: var(--line-height--2xsnug);
     clear: both;
-    font-family: $open-sans;
-    color: $nittany-navy;
-    font-weight: 700;
+    color: var(--nittany-navy);
+    font-weight: var(--font-weight--bold);
     text-align: left;
   }
 
   th, td {
     padding: _rem(1);
-    border: _rem(.1) solid $medium-grey;
+    border: _rem(.1) solid var(--medium-grey);
     text-align: left;
     min-width: _rem(10);
     vertical-align: top;
@@ -42,10 +41,9 @@ table {
     background: transparent;
 
     &, & p {
-      font-size: _rem(1.6);
       line-height: _rem(1.8);
-      font-weight: 700;
-      color: $primary-blue;
+      font-weight: var(--font-weight--bold);
+      color: var(--beaver-blue);
     }
 
     p:last-child {
@@ -54,25 +52,25 @@ table {
 
     &.st-head-row:not(.st-head-row-main) {
       &, & p {
-        font-size: _rem(1.4);
-        line-height: _rem(2.2);
-        color: $nittany-navy;
-        font-weight: 600;
+        font-size: var(font-size--small);
+        line-height: var(--line-height--snug);
+        color: var(--nittany-navy);
+        font-weight: var(--font-weight--semibold);
       }
     }
   }
 
   td {
     &, & p {
-      font-size: _rem(1.4);
-      line-height: _rem(2.2);
+      font-size: var(--font-size--small);
+      line-height: var(--line-height--snug);
 
       p:last-child {
         margin-bottom: 0;
       }
 
       strong {
-        font-weight: 600;
+        font-weight: var(--font-weight--semibold);
       }
     }
   }
@@ -87,10 +85,10 @@ table.small-only {
   }
 
   margin-top: _rem(1);
-  border-top: _rem(.1) solid $medium-grey;
+  border-top: _rem(.1) solid var(--medium-grey);
 
   tr {
-    border: _rem(.1) solid $medium-grey;
+    border: _rem(.1) solid var(--medium-grey);
     border-top: none;
     display: block;
 
@@ -113,14 +111,14 @@ table.small-only {
         display: block;
 
         & + .row-heading {
-          border-top: _rem(.1) solid $medium-grey;
+          border-top: _rem(.1) solid var(--medium-grey);
         }
       }
     }
   }
 
   tr.show:last-child {
-    border-bottom: _rem(.1) solid $medium-grey;
+    border-bottom: _rem(.1) solid var(--medium-grey);
   }
 }
 
@@ -140,23 +138,24 @@ tr:not(:first-of-type) .st-head-row {
   cursor: pointer;
 
   &:after {
-    font-size: _rem(1.4);
-    content: "\f067";
-    font-weight: 200;
-    font-family: $font-awesome;
-    color: $primary-blue;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23005fa9' d='M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z' /%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    width: _rem(1.4);
+    height: _rem(1.4);
     position: absolute;
     right: _rem(1.5);
     top: 50%;
     transform: translateY(-50%);
-    transition: transform .1s ease-in-out;
+    transition: transform var(--transition-duration--medium) ease-in-out;
   }
+
 }
 
 // Table support styles
 p .footnote {
-  font-size: _rem(1.4) !important;
-  line-height: _rem(2.2) !important;
+  font-size: var(--font-size--small) !important;
+  line-height: var(--line-height--snug) !important;
   display: block;
 }
 
@@ -181,8 +180,8 @@ table + p + p .footnote {
     padding-bottom: 0;
 
     &, & p {
-      color: $primary-blue;
-      font-weight: 700;
+      color: var(--beaver-blue);
+      font-weight: var(--font-weight--bold);
     }
   }
 
@@ -199,4 +198,5 @@ table + p + p .footnote {
 
 table .row-heading-active .st-head-row:after {
   transform: translateY(-50%) rotate(45deg);
+
 }

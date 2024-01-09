@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const stripBOM = require('gulp-stripbom');
 
 /**
  * Updates a file which contains a random build ID.
@@ -37,7 +36,6 @@ const compile_scss = done => {
         precision: 6,
         includePaths: ['sass']
       })).on('error', sass.logError)
-      .pipe(stripBOM())
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(dist));
   });

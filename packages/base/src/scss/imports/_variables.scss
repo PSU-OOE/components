@@ -1,5 +1,3 @@
-@use 'sass:meta';
-
 // Fonts
 $open-sans: 'Open Sans', sans-serif;
 $roboto-slab: 'Roboto Slab', Georgia, serif;
@@ -11,11 +9,11 @@ $white: #FFF;
 $black: #000;
 
 // Penn State World Campus Colors
-$primary-blue:     #0064bf;
+$primary-blue:     #0064bf; //depreciated - brand refresh 2023
 $beaver-blue:      #1e407c;
 $nittany-navy:     #001e44;
 $nittany-navy-faded: rgba($nittany-navy, .5);
-$true-blue:        #0057ae;
+$true-blue:        #0057ae; //depreciated - brand refresh 2023
 $sky-blue:         #009cde;
 $pugh-blue:        #96bee6;
 $light-mauve:      #ebecf4;
@@ -37,6 +35,9 @@ $invent-orange-light: #fca917;
 $penns-forest: #4A7729;
 $creek: #3ea39e;
 
+$pa-link: #005fa9;
+$pa-link-light: #cce9ff;
+
 // Tile nav
 $tile-nav-image-overlay: rgba(0, 100, 191, 0.75);
 $tile-nav-active: rgba(0,30,68, .75);
@@ -50,18 +51,10 @@ $font-color-default: $nittany-navy;
 // Image Path
 $img-path: "/themes/custom/worldcampus/images";
 
-$fa-font-path: '/themes/custom/worldcampus/webfonts/2021-04-12';
 $base-rem-scale: 1 !default;
 
-@function rem($base, $deprecated: true) {
-  @if $deprecated {
-    @warn('The "rem" function is deprecated and will be removed in 2.0.0, use "_rem" instead');
-  }
-  @return unquote(($base * $base-rem-scale) + 'rem');
-}
-
 @function _rem($base) {
-  @return meta.call(meta.get-function('rem'), $base, false);
+  @return unquote(($base * $base-rem-scale) + 'rem');
 }
 
 // z-index layers

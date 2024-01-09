@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/alert",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Provides an alert.",
   "ooe": {
     "namespace": "molecules"
@@ -10,7 +10,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0",
-    "@psu-ooe/sprite": "^1.0"
+    "@psu-ooe/base": "^1.0 || ^2.0",
+    "@psu-ooe/sprite": "^1.0 || ^2.0"
   }
 }

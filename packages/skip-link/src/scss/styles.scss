@@ -9,11 +9,13 @@
   position: absolute;
   overflow: hidden;
   clip: rect(_rem(0.1),_rem(0.1),_rem(0.1),_rem(0.1));
-  text-decoration: underline;
+  text-decoration: none;
+
   &:focus {
     left: _rem(1);
     top: _rem(1);
     clip: auto;
     overflow: visible;
+    outline-offset: _rem(-.4);
   }
 }

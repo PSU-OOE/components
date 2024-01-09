@@ -1,13 +1,13 @@
 {
   "name": "@psu-ooe/event-link",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "Provides an event link implementation.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0",
+    "@psu-ooe/base": "^2.0",
     "@psu-ooe/smart-datetime": "^1.0"
   }
 }

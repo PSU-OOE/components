@@ -10,6 +10,7 @@
     name: 'Ambient Backgrounds',
     sprites: {
       'community-shield': 'Community Shield',
+      'hub-geometric': 'Hub Geometric',
     },
   },
   social_media: {
@@ -30,6 +31,7 @@
     sprites: {
       'envelope': 'Envelope',
       'fa-angle-up': 'Angle Up',
+      'fa-arrows-maximize': 'Arrows Maximize',
       'fa-bars': 'Bars',
       'fa-check-circle': 'Check Circle',
       'fa-chevron-double-left': 'Chevron Double Left',
@@ -37,6 +39,7 @@
       'fa-chevron-left': 'Chevron Left',
       'fa-circle-arrow-down': 'Circle Arrow Down',
       'fa-circle-notch': 'Circle Notch',
+      'fa-clock': 'Clock',
       'fa-exclamation': 'Exclamation',
       'fa-exclamation-circle': 'Circle Exclamation',
       'fa-exclamation-triangle': 'Triangle Exclamation',
@@ -55,6 +58,7 @@
       'fas-building-user': 'Building User',
       'fas-calculator': 'Calculator',
       'fas-calendar-days': 'Calendar Days',
+      'fas-camera': 'Camera',
       'fas-certificate': 'Certificate',
       'fas-chalkboard-user': 'Chalkboard User',
       'fas-chart-line': 'Chart Line',
@@ -87,6 +91,7 @@
       'fas-newspaper': 'Newspaper',
       'fas-notes-medical': 'Notes Medical',
       'fas-object-group': 'Object Group',
+      'fas-paper-plane': 'Paper Plane',
       'fas-pencil': 'Pencil',
       'fas-people-roof': 'People Roof',
       'fas-photo-film': 'Photo Film',
@@ -108,9 +113,9 @@
 <form style="position: sticky;top:0; background: #fff; padding:2rem; box-shadow: 0 0.5rem 0.5rem #888;">
   <label for="sprite-color" style="display: block;font-weight: bold;margin-bottom: 1rem;">Preview Sprite Color</label>
   <select id="sprite-color">
-    <option value="primary-blue" selected>Primary Blue</option>
-    <option value="beaver-blue">Beaver Blue</option>
-    <option value="nittany-navy">Nittany Navy</option>
+    <option value="--beaver-blue" selected>Beaver Blue</option>
+    <option value="--nittany-navy">Nittany Navy</option>
+    <option value="--sky-blue">Sky Blue</option>
   </select>
   <script>
       (() => {
@@ -119,17 +124,7 @@
         select.addEventListener('change', () => {
           const previews = document.querySelectorAll('.sprite-preview');
           previews.forEach(preview => {
-            switch(select.value) {
-              case 'primary-blue':
-                preview.style.color = '#0064bf';
-                break;
-              case 'beaver-blue':
-                  preview.style.color = '#1e407c';
-                  break;
-              case 'nittany-navy':
-                  preview.style.color = '#001e44';
-                  break;
-            }
+            preview.style.color = 'var(' + select.value + ')';
           });
         });
       })();
@@ -154,8 +149,8 @@
           <tr>
             <th>Preview</th>
             <td>
-              <div class="sprite-preview" style="color:#0064bf; font-size: 5rem; text-align: center;">
-                {% include '@atoms/sprite/sprite.twig' with { name: sprite } %}
+              <div class="sprite-preview" style="color:var(--beaver-blue); font-size: 5rem; text-align: center;">
+                {% include '@psu-ooe/sprite/sprite.twig' with { name: sprite } %}
               </div>
             </td>
           </tr>
@@ -164,6 +159,6 @@
       {% endset %}
       {% set grid_items = grid_items|merge([grid_item]) %}
     {% endfor %}
-    {% include '@molecules/grid/grid.twig' with { items: grid_items, columns: 3 } only %}
+    {% include '@psu-ooe/grid/grid.twig' with { items: grid_items, columns: 3 } only %}
   </div>
 {% endfor %}

@@ -56,6 +56,11 @@
     z-index: -1;
   }
 
+  @import "hub-geometric-topleft";
+  @import "hub-geometric-topright";
+  @import "hub-geometric-bottomleft";
+  @import "hub-geometric-bottomright";
+
 	@import "shield-left";
 	@import "shield-right";
 	@import "shield-bottomright";

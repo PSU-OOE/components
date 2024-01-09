@@ -1,0 +1,55 @@
+{% set menu %}
+  {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+    menu_name: 'Example menu with tight density',
+    density: 'tight',
+    items: [
+      { title: 'Home', url: '#' },
+      { title: 'About Us', url: '#', in_active_trail: true, below: [
+        { title: 'Our Story', url: '#' },
+        { title: 'Mission', url: '#' },
+        { title: 'Our Leadership', url: '#' },
+        { title: 'Our Students', url: '#' },
+        { title: 'Why World Campus', url: '#' },
+        { title: 'News and Features', url: '#' },
+        { title: 'Success Stories', url: '#' },
+        { title: 'Employment', url: '#' },
+      ]},
+      { title: 'Degrees and Certificates', url: '#', below: [
+
+      ]},
+      { title: 'How Online Learning Works', url: '#', below: [
+        { title: 'Online Learning Experience', url: '#' },
+        { title: 'Student Services', url: '#' },
+        { title: 'Dedication to Accessibility', url: '#' },
+        { title: 'How it Works (FAQs)', url: '#' },
+      ]},
+      { title: 'Admissions', url: '#', below: [
+        { title: 'How to Apply', url: '#' },
+        { title: 'Returning Students', url: '#' },
+        { title: 'Transfer Students', url: '#' },
+        { title: 'International Students', url: '#' },
+        { title: 'Academic Calendar', url: '#' },
+        { title: 'Planning Resources', url: '#' },
+      ]},
+      { title: 'Tuition and Financial Aid', url: '#', below: [
+        { title: 'Tuition and Costs', url: '#' },
+        { title: 'Financial Aid', url: '#' },
+        { title: 'Scholarships', url: '#' },
+        { title: 'Payment Options', url: '#' },
+      ]},
+      { title: 'Military', url: '#', below: [
+        { title: 'Education Benefits and Financial Aid', url: '#' },
+        { title: 'Admissions and Transfer Credits', url: '#' },
+        { title: 'Military Support', url: '#' },
+        { title: 'What You Can Expect', url: '#' },
+        { title: 'Awards and Affiliations', url: '#' },
+        { title: 'Events', url: '#' },
+        { title: 'Service Members', url: '#' },
+        { title: 'Veterans', url: '#' },
+      ]},
+    ],
+  } only %}
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: menu,
+} only %}

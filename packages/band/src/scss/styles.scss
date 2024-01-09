@@ -4,13 +4,64 @@
 @import "../../../base/src/scss/imports/layout";
 
 .band {
-  background-color: $light-mauve;
+  background-color: var(--beaver-blue);
+  color: var(--text-color--light);
+
+  &--hub-geometric {
+    position: relative;
+
+    // Straight beaver blue from 0% to 44rem left of center, then transition
+    // from beaver blue to nittany navy from 44rem left of center to 44rem right
+    // of center, then straight nittany navy from 44rem right of center to 100%.
+    background: linear-gradient(
+        to right,
+        var(--beaver-blue) 0%,
+        var(--beaver-blue) calc(50% - _rem(44)),
+        var(--nittany-navy) calc(50% + _rem(44)),
+        var(--nittany-navy) 100%
+    );
+
+    .band__geometrics {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+
+      // The design calls for a sky-blue linear gradient at a 2% angle overlaid
+      // on the geometric lines. The hub geometric sprite has an API that takes
+      // an optional fill property, so we can apply this unique gradient, tightly
+      // scoped to this particular context.
+      //
+      // @see https://github.com/PSU-OOE/components/blob/bleeding-edge-headers/packages/sprite/src/assets/hub-geometric.svg
+      --hub-geometric-gradient: url(#hub-geometric-band-gradient);
+
+      // Two sprites are used to form the header geometrics design.  Since the
+      // element that provides the gradient occupies the :first-child position
+      // in the geometrics container, the sprites occupy the second and third
+      // positions.
+      .sprite {
+        position: absolute;
+        width: _rem(71.8);
+        top: _rem(-42.7);
+        height: auto;
+        opacity: .3;
+
+        &:nth-child(2) {
+          left: calc(50% - #{_rem(33)});
+        }
+
+        &:nth-child(3) {
+          left: calc(50% + #{_rem(38)});
+        }
+      }
+    }
+  }
 
   &__content {
+    position: relative;
     padding: _rem(1.2) 2.6%;
 
     @include bp(m) {
-      padding: _rem(1.6) _rem(2);
+      padding: _rem(1.6) _rem(4);
     }
   }
 
@@ -25,16 +76,14 @@
   }
 
   &--padding-none .band__content {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
 
     @include bp(m) {
-      padding-top: _rem(0);
-      padding-bottom: _rem(0);
+      padding: 0;
     }
   }
 
   &--secondary {
-    background-color: color.mix($light-mauve, $white);
+    background-color: var(--nittany-navy);
   }
 }

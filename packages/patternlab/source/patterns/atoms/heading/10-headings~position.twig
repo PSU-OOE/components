@@ -1,0 +1,11 @@
+{% for level in range(1, 6) %}
+  <div style="display: flex; flex-flow: row nowrap; gap: var(--text-element-vertical-space--default); margin-bottom: var(--text-element-vertical-space--default);">
+    {% include '@psu-ooe/heading/heading.twig' with {
+      content: 'Heading ' ~ level ~ ' should be flush with this box -->|',
+      level: level,
+      flush: true,
+      no_overline: true,
+    } only %}
+    <div style="background: lightgrey;width:50px;height:50px;"></div>
+  </div>
+{% endfor %}

@@ -1,8 +1,12 @@
 @import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
 
 .sticky-panel {
   position: sticky;
-  top: 0;
+  top: var(--sticky-panel-vertical-offset, 0);
+  left: var(--sticky-panel-horizontal-offset, 0);
+  width: var(--sticky-panel-width, 100%);
+  z-index: 10000;
 
   &__content {
     position: relative;

@@ -12,35 +12,50 @@
     justify-content: flex-start;
     max-width: _rem(110);
     margin: 0 auto;
+    container-type: inline-size;
 
     .alert__icon {
-      width: _rem(5.5);
-      height: _rem(5.5);
       margin-right: _rem(1);
 
       .sprite {
-        width: _rem(5.5);
-        height: _rem(5.5);
+        width: _rem(2);
+        height: _rem(2);
+
+      }
+    }
+    @supports (container-type: inline-size ) {
+      @container (min-width: 425px) {
+        .alert__icon .sprite {
+          width: _rem(5.5);
+          height: _rem(5.5);
+        }
       }
     }
     .alert__content {
       flex: 1;
-      margin-top: 1.6rem;
+      margin-top: _rem(0.2);
+    }
+    @supports (container-type: inline-size ) {
+      @container (min-width: 425px) {
+        .alert__content {
+          margin-top: _rem(1.6);
+        }
+      }
     }
   }
 
   &--error {
     background-color: mix($error-red, $white, 6%);
-    border-top: _rem(1) solid $error-red;
+    border-top: _rem(1) solid var(--error-red);
 
     .sprite {
-      color: $error-red;
+      color: var(--error-red);
     }
   }
 
   &--warning {
     background-color: mix($keystone, $white, 20%);
-    border-top: _rem(1) solid $keystone;
+    border-top: _rem(1) solid var(--keystone);
 
     .sprite {
       color: darken($invent-orange, 3.5%);
@@ -49,10 +64,10 @@
 
   &--status {
     background-color: mix($creek, $white, 10%);
-    border-top: _rem(1) solid $creek;
+    border-top: _rem(1) solid var(--creek);
 
     .sprite {
-      color: $creek;
+      color: var(--creek);
     }
   }
 }

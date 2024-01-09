@@ -1,4 +1,6 @@
 .cta-group {
+  display: flex;
+
   &--align-right {
     text-align: right;
   }
@@ -11,7 +13,7 @@
     > .cta-block {
       flex: 1 1 auto;
 
-      &:not(.cta-block--compact) {
+      &:not(.cta-block--compact, .cta-block--xcompact, .cta-block--compact-responsive) {
         padding: 1.5rem;
 
         @include bp(m) {
@@ -22,6 +24,6 @@
   }
 
   & > .cta-block:not(:last-of-type) {
-    margin-right: .5rem;
+    margin-right: clamp(_rem(.5), 1.25vw, _rem(1));
   }
 }

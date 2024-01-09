@@ -13,9 +13,9 @@
             once: (id, selector, context = document) => context.querySelectorAll(selector),
         };
     </script>
-    {% include '@global/gtm/gtm.twig' %}
+    {% include '@psu-ooe/gtm/gtm.twig' %}
     <meta name="viewport" content="width=device-width" />
-    {% include '@global/webfonts/webfonts.twig' with { base_directory: '/fonts'} %}
+    {% include '@psu-ooe/webfonts/webfonts.twig' %}
 
     <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
     {{ patternLabHead | raw }}

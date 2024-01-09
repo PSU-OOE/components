@@ -1,14 +1,5 @@
 {% apply spaceless %}
 
-  {#
-    Legacy mappings to be removed in 2.0
-      Some sprites were misnamed early-on in this component.
-  #}
-
-  {% if name == 'fa-magnifying-glass' %}
-    {% set name = 'fas-magnifying-glass' %}
-  {% endif %}
-  
   {% set viewboxes = {
     'blog': '0 0 448 448',
     'community-shield': '0 0 1033.5 1143.1',
@@ -18,8 +9,10 @@
     'fa-exclamation-circle': '0 0 512 512',
     'fa-exclamation-triangle': '0 0 576 512',
     'fa-angle-up': '0 0 320 512',
-    'fa-bars': '0 0 448 512',
+    'fa-arrows-maximize': '0 0 512 512',
+    'fa-bars': '0 0 448 384',
     'fa-circle-notch': '0 0 512 512',
+    'fa-clock': '0 0 512 512',
     'fa-exclamation': '0 0 20.851 66.722',
     'fa-filter-solid': '0 0 512 512',
     'fa-plus-circle': '0 0 512 512',
@@ -32,10 +25,12 @@
     'fas-building-columns': '0 0 512 512',
     'fas-calculator': '0 0 384 512',
     'fas-calendar-days': '0 0 448 512',
+    'fas-camera': '0 0 512 512',
     'fas-certificate': '0 0 512 512',
     'fas-chart-line': '0 0 512 448',
     'fas-child-reaching': '0 0 352.1 512',
     'fas-graduation-cap': '0 0 640 448',
+    'fas-paper-plane': '0 0 512 512',
     'fas-plus': '0 0 448 512',
     'fas-circle-bolt': '0 0 512 512',
     'fas-chevron-down': '0 0 448 512',
@@ -86,6 +81,7 @@
     'fas-user-group': '0 0 640 512',
     'facebook': '0 0 448 448',
     'flickr': '0 0 448 448',
+    'hub-geometric': '0 0 719.5 718.4',
     'instagram': '0 0 448 448',
     'linkedin': '0 0 448 448',
     'pinterest': '0 0 448 448',

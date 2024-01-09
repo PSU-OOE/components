@@ -1,0 +1,21 @@
+{% embed '@psu-ooe/header/header.twig' %}
+  {% block dogear_content %}
+    <div class="region region--branding">
+      <div class="block block--system-branding-block">
+        <a href="/">
+          <svg class="sprite sprite--wc-mark" aria-hidden="true" viewBox="0 0 229 72">
+            <use xlink:href="#wc-mark"></use>
+          </svg>
+          <span class="visually-hidden">Penn State World Campus</span>
+        </a>
+      </div>
+    </div>
+  {% endblock %}
+  {% block content %}
+    <div class="tagline">
+      <div class="tagline__text">
+        <div class="wysiwyg">A world of possibilities. <strong>Online.</strong></div>
+      </div>
+    </div>
+  {% endblock %}
+{% endembed %}

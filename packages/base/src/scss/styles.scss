@@ -1,22 +1,18 @@
 @import "imports/variables";
 @import "imports/layout";
-
-@import "normalize";
+@import "colors";
+@import "spacing";
+@import "transitions";
+@import "typography";
 
 // Universal selectors.
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: _rem(.2) solid $sky-blue;
-}
-
 // Type selectors.
 html {
   font-size: 62.5%;
-
-  /* set up for rem() use */
   overflow: hidden;
   overflow-y: auto;
   -webkit-font-smoothing: antialiased;
@@ -26,32 +22,43 @@ html {
   @media (prefers-reduced-motion) {
     scroll-behavior: auto;
   }
-
-  &.no-scroll-mobile {
-    @include bp(s_max) {
-      overflow: hidden;
-    }
-  }
 }
 
 body {
-  font-size: _rem(1.6);
-  font-family: $font-family-default;
-  color: $font-color-default;
-  background: $white;
+  margin: 0;
+  font-size: var(--font-size--default);
+  font-family: var(--font-family--default);
+  color: var(--text-color--default);
+  background: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  color: $primary-blue;
-  font-weight: 600;
-  text-decoration: none;
+a,
+.link--default {
+  color: var(--link-color--default);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: inherit;
+  text-decoration-thickness: _rem(0.1);
+  outline: solid _rem(.2) transparent;
+  outline-offset: _rem(0.2);
+  transition: outline-color var(--transition-duration--default) linear;
+  text-underline-offset: .2em;
 
-  &:hover {
-    color: $beaver-blue;
+  &:hover, &:focus-visible {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: _rem(.1);
   }
 
+  &:focus-visible {
+    outline-color: var(--sky-blue);
+    outline-offset: _rem(0.2);
+  }
+
+  // @TODO: This probably isn't used...
   &.hidden {
     left: _rem(-99.9);
     position: absolute;
@@ -61,6 +68,15 @@ a {
       color: #ffffff;
       left: _rem(.5);
     }
+  }
+}
+
+.link--color-reversed {
+  color: var(--link-color--light);
+  text-decoration-color: var(--link-color--light);
+
+  &:hover, &:focus-visible {
+    text-decoration-color: var(--link-color--light);
   }
 }
 
@@ -87,14 +103,6 @@ nav {
     margin: 0;
     padding: 0;
     text-align: left;
-
-    li {
-      &.expanded,
-      &.collapsed,
-      &.leaf {
-        padding: 0;
-      }
-    }
   }
 }
 
@@ -117,27 +125,11 @@ footer {
   overflow: hidden;
 }
 
-blockquote {
-  margin: 0;
-
-  p {
-    &::before {
-      content: open-quote;
-    }
-
-    &::after {
-      content: close-quote;
-    }
-    color: $beaver-blue;
-    font-size: _rem(1.4);
-    line-height: _rem(2.4);
-    text-indent:_rem(-.5);
-  }
-}
-
+@import 'blockquote';
+@import 'figure';
+@import "buttons";
 @import "fields";
 @import "tables";
-@import "typography";
 @import "forms";
 
 // Class selectors
@@ -154,7 +146,3 @@ span {
     }
   }
 }
-
-@include visible_at(xs);
-@include visible_at(s);
-@include visible_at(m);

@@ -8,28 +8,29 @@
   {% set classes = classes|merge(['accordion--borderless']) %}
 {% endif %}
 
-{% set heading_classes = ['accordion__heading'] %}
-{% if heading_style %}
-  {% set heading_classes = heading_classes|merge(["heading", "heading--" ~ heading_style])%}
-{% endif %}
-
 <div class="{{ classes|join(' ') }}" data-interactive-component>
-  {% if heading_level %}
-    <{{ heading_level }} class="{{ heading_classes|join(' ') }}">
-  {% endif %}
-  <button class="accordion__button" aria-expanded="{{ expanded ? 'true' : 'false' }}" aria-controls="{{ id }}">
-    {% set accordion_label_classes = ['accordion__label'] %}
-    {% if label_underline %}
-      {% set accordion_label_classes = accordion_label_classes|merge(['accordion__label--label-underline']) %}
-    {% endif %}
-
-    <span class="{{ accordion_label_classes|join(' ') }}">{{ label }}</span>
-    <span class="accordion__sprite">
-      {% include '@atoms/sprite/sprite.twig' with { name: 'fas-plus'} only %}
+  {% set toggle_content %}
+    <button class="accordion__button" aria-expanded="{{ expanded ? 'true' : 'false' }}" aria-controls="{{ id }}">
+      {% set accordion_label_classes = ['accordion__label'] %}
+      {% if label_underline %}
+        {% set accordion_label_classes = accordion_label_classes|merge(['accordion__label--label-underline']) %}
+      {% endif %}
+      <span class="{{ accordion_label_classes|join(' ') }}">{{ label }}</span>
+      <span class="accordion__sprite">
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-plus'} only %}
     </span>
-  </button>
+    </button>
+  {% endset %}
   {% if heading_level %}
-    </{{ heading_level }}>
+    {% include '@psu-ooe/heading/heading.twig' with {
+      level: heading_level,
+      size: heading_style,
+      classes: ['accordion__heading'],
+      no_overline: true,
+      content: toggle_content,
+    } only %}
+  {% else %}
+    {{ toggle_content }}
   {% endif %}
 
   {% set expandable_content_classes = ['accordion__expandable-content'] %}

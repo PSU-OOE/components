@@ -12,7 +12,7 @@
   {% for item in items %}
     <li class="icon-list__item">
       <div class="icon-list__content">
-        <div class="icon-list__icon">{% include '@atoms/sprite/sprite.twig' with { name: item.icon ?: 'fa-check-circle' } only %}</div>
+        <div class="icon-list__icon">{% include '@psu-ooe/sprite/sprite.twig' with { name: item.icon ?: 'fa-check-circle' } only %}</div>
         <div class="icon-list__text">{{ item.content }}</div>
       </div>
     </li>

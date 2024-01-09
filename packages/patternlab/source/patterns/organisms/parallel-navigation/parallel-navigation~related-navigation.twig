@@ -13,7 +13,7 @@
 {% set parallel_navigation_items = [] %}
 {% for item in item_titles %}
   {% set content %}
-    {% include '@molecules/parallel-navigation-item/parallel-navigation-item.twig' with {
+    {% include '@psu-ooe/parallel-navigation-item/parallel-navigation-item.twig' with {
       active: item.active,
       url: '#',
       title: item.title,
@@ -23,7 +23,7 @@
   {% set parallel_navigation_items = parallel_navigation_items|merge([content]) %}
 {% endfor %}
 
-{% include '@organisms/parallel-navigation/parallel-navigation.twig' with {
+{% include '@psu-ooe/parallel-navigation/parallel-navigation.twig' with {
   id: "related-navigation",
   heading: "Related Topics",
   intro_text: "Additional resources related to finances and financial need",

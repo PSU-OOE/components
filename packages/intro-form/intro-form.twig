@@ -2,18 +2,13 @@
   {% set heading_level = 'span' %}
 {% endif %}
 
-{% if color not in ['light-grey', 'primary-blue'] %}
+{% if color not in ['light-grey', 'beaver-blue'] %}
   {% set color = 'light-grey' %}
-{% endif %}
-
-{# @deprecated - the 'image' variable is removed in 2.0.0, use 'images' instead #}
-{% if image and not images %}
- {% set images = [image] %}
 {% endif %}
 
 {% set classes = [
   'intro-form',
-  color in ['primary-blue'] ? 'intro-form--' ~ color,
+  color in ['beaver-blue'] ? 'intro-form--' ~ color,
 ] %}
 
 <div class="{{ classes|join(' ') }}">
@@ -23,14 +18,14 @@
         <div class="intro-form__border"></div>
         <div class="intro-form__image">
           {% if images|length > 1 %}
-            {% include '@molecules/random-item/random-item.twig' with { items: images } only %}
+            {% include '@psu-ooe/random-item/random-item.twig' with { items: images } only %}
           {% else %}
             {{ images[0] }}
           {% endif %}
         </div>
         <div class="intro-form__intro">
           <div class="intro-form__overlay">
-            <{{ heading_level }} class="intro-form__title">
+            <{{ heading_level }} class="intro-form__title heading heading--no-overline">
               <span class="intro-form__relative">{{ title }}</span>
             </{{ heading_level }}>
           </div>
@@ -42,7 +37,7 @@
       </div>
     </div>
   {% endset %}
-  {% include '@molecules/background-container/background-container.twig' with {
+  {% include '@psu-ooe/background-container/background-container.twig' with {
     color: color,
     background_image: 'shield:topleft-bottomright',
     padding: 'small',

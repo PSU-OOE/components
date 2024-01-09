@@ -1,9 +1,0 @@
-<div class="description-navigation-tile {% if background %}description-navigation-tile--{{ background }}{% endif %}">
-  <a class="description-navigation-tile__link" href="{{ link.url }}"><span class="visually-hidden">{{ link.label }}</span></a>
-  <div class="description-navigation-tile__content">
-    <div class="description-navigation-tile__title" aria-hidden="true">
-      <span>{{ link.label }}{% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}</span>
-    </div>
-    <div class="description-navigation-tile__description">{{ description }}</div>
-  </div>
-</div>

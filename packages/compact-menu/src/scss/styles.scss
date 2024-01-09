@@ -1,0 +1,76 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.compact-menu {
+  &__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: _rem(.5);
+
+    @include bp(xs) {
+      gap: _rem(.7);
+    }
+
+    &:is(:focus-visible > .compact-menu__toggle) {
+      outline: _rem(.2) solid var(--sky-blue);
+      outline-offset: _rem(.2);
+    }
+
+    &:where(:hover) &-sprite {
+      color: var(--white);
+    }
+
+    &:hover &-label {
+      text-decoration-color: var(--white);
+    }
+
+    &-sprite {
+      color: var(--pugh-blue);
+      transition: color var(--transition-duration--default) linear;
+
+      &:is([aria-expanded="true"] *) {
+        color: var(--keystone-light);
+      }
+
+      .sprite {
+        width: _rem(2.1);
+        min-height: _rem(2.1);
+        height: auto;
+
+        @include bp(xs) {
+          width: _rem(2.6);
+          min-height: _rem(2.6);
+        }
+      }
+    }
+
+    &-label {
+      color: var(--white);
+      display: block;
+      font-family: var(--font-family--default);
+      font-weight: var(--font-weight--semibold);
+      font-size: var(--font-size--5xsmall);
+      line-height: var(--line-height--nospace);
+      text-decoration-color: transparent;
+      text-decoration-line: underline;
+      text-decoration-thickness: _rem(.1);
+      text-underline-offset: .2em;
+      transition: text-decoration-color var(--transition-duration--default) linear;
+      padding-bottom: .2em;
+
+      @include bp(xs) {
+        font-size: var(--font-size--3xsmall);
+      }
+
+      &:is(:focus-visible *) {
+        text-decoration-color: var(--white);
+      }
+    }
+  }
+
+  &__content {
+    padding: _rem(1) _rem(2) _rem(3) _rem(2);
+  }
+}

@@ -4,14 +4,13 @@
 
   &:not(.accordion--borderless) {
 
-    border-top: _rem(.1) solid $medium-grey;
-    border-bottom: _rem(.1) solid $medium-grey;
+    border-top: _rem(.1) solid var(--medium-grey);
+    border-bottom: _rem(.1) solid var(--medium-grey);
 
     + .accordion {
       border-top: none;
     }
   }
-
 
   &__heading {
     margin-bottom: 0;
@@ -30,20 +29,20 @@
     border: none;
     cursor: pointer;
     display: flex;
-    font-family: $open-sans;
-    font-size: _rem(1.6);
-    line-height: _rem(2.4);
-    color: $beaver-blue;
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--default);
+    font-weight: var(--font-weight--semibold);
+    line-height: var(--line-height--snug);
+    color: var(--beaver-blue);
     padding: _rem(2) 0;
     width: 100%;
     text-align: left;
-    transition: color .2s linear, margin-bottom .2s linear;
 
-    &:hover {
-      color: $primary-blue;
+    &:hover, &:focus-visible {
+      color: var(--pa-link);
 
       .accordion__label {
-        text-decoration-color: $primary-blue;
+        text-decoration-color: var(--pa-link);
 
         &--label-underline {
           text-decoration-style: solid;
@@ -53,37 +52,15 @@
       .accordion__sprite .sprite {
         transform: scale(1.25);
       }
-    }
-
-    &:focus, &:active {
-      outline: none;
     }
 
     &:focus-visible {
       outline: _rem(.2) solid $sky-blue;
       outline-offset: _rem(.2);
-      color: $primary-blue;
-
-      .accordion__label {
-        text-decoration-color: $primary-blue;
-
-        &--label-underline {
-          text-decoration-style: solid;
-        }
-      }
-
-      .accordion__sprite .sprite {
-        transform: scale(1.25);
-      }
     }
 
     .accordion__label--label-underline {
-      color: $primary-blue;
-      text-decoration-color: $primary-blue;
-      text-decoration-thickness: _rem(.1);
-      text-decoration-line: underline;
-      text-decoration-style: dotted;
-      text-underline-offset: .2em;
+      text-decoration-color: var(--pa-link);
     }
   }
 
@@ -98,7 +75,7 @@
   }
 
   .accordion__sprite .sprite {
-    color: $primary-blue;
+    color: var(--pa-link);
     height: _rem(1.6);
     margin: auto _rem(1.5);
     transition-property: transform;
@@ -124,7 +101,7 @@
         transform: rotate(45deg);
       }
 
-      &:hover {
+      &:hover, &:focus-visible {
         .accordion__sprite .sprite {
           transform: rotate(45deg) scale(1.25);
         }
@@ -132,10 +109,6 @@
 
       &:focus-visible {
         margin-bottom: _rem(.3);
-
-        .accordion__sprite .sprite {
-          transform: rotate(45deg) scale(1.25);
-        }
       }
     }
 
@@ -146,26 +119,3 @@
   }
 }
 
-// @TODO: Delete when focus-visible polyfill is removed.
-.accordion {
-
-  &__button.focus-visible {
-    outline: _rem(.2) solid $sky-blue;
-    outline-offset: _rem(.2);
-    color: $primary-blue;
-    margin-bottom: _rem(.3);
-
-    .accordion__label {
-      text-decoration-color: $primary-blue;
-    }
-
-    .accordion__sprite .sprite {
-      color: $primary-blue;
-      transform: scale(1.25);
-    }
-  }
-
-  &--expanded .accordion__button.focus-visible .accordion__sprite .sprite {
-    transform: rotate(45deg) scale(1.25);
-  }
-}

@@ -24,7 +24,11 @@
     left: 0;
     right: 0;
     inset: 0;
-    background-color: rgba($nittany-navy, 0.85);
+    background-color: color-mix(in srgb, var(--nittany-navy) 85%, transparent);
+    // @TODO: Remove fallback when appropriate.
+    @supports not (background: color-mix(in srgb, white, white)) {
+      background-color: rgba($nittany-navy, 0.85);
+    }
     width: 100%;
     height: 100%;
     overflow: auto;
@@ -36,7 +40,7 @@
     display: none;
     flex-direction: column;
     position: relative;
-    background-color: $white;
+    background-color: var(--white);
     width: fit-content;
     height: auto;
     padding: _rem(5) _rem(2) _rem(3) _rem(2);
@@ -51,7 +55,7 @@
       outline: none;
     }
     &:focus-visible {
-      outline: _rem(0.2) solid $sky-blue;
+      outline: _rem(0.2) solid var(--sky-blue);
     }
   }
 
@@ -67,24 +71,24 @@
 
     &:hover,
     &:focus {
-      background-color: $primary-blue;
-      color: $white;
+      background-color: var(--pa-link);
+      color: var(--white);
       cursor: pointer;
 
       .sprite--fa-times {
-        color: $white;
+        color: var(--white);
       }
     }
 
     &:focus {
-      outline: solid _rem(0.2) $white;
+      outline: solid _rem(0.2) var(--white);
       outline-offset: _rem(-0.4);
 
     }
 
     .sprite--fa-times {
       background: none;
-      color: $primary-blue;
+      color: var(--pa-link);
       width: _rem(2.4);
       height: _rem(2.4);
     }

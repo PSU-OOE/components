@@ -1,0 +1,24 @@
+{% set tiles = [
+  {
+    'link': { 'url': '#', 'label': 'Transfer Students' },
+    'image': 'https://www.worldcampus.psu.edu/sites/default/files/styles/student_spotlight_16_9_m/public/2019-01/840x473_transfer-student-CampusExteriorSummer2018-38_audience.jpg.webp?itok=IGFY_ElN',
+  },
+  {
+    'link': { 'url': '#', 'label': 'Military Students' },
+    'image': 'https://www.worldcampus.psu.edu/sites/default/files/styles/student_spotlight_16_9_m/public/2019-01/870x490_ThinkstockPhotos-579407234_audience_0.jpg.webp?itok=uQfiRuaa',
+  },
+  {
+    'link': { 'url': '#', 'label': 'Returning Students' },
+    'image': 'https://www.worldcampus.psu.edu/sites/default/files/styles/student_spotlight_16_9_m/public/2021-03/returning-students-audience.jpg.webp?itok=RzU986_h',
+  },
+] %}
+
+{% set items = [] %}
+{% for tile in tiles %}
+  {% set rendered_tile %}
+    {% include '@psu-ooe/navigation-tile-image/navigation-tile-image.twig' with tile only %}
+  {% endset %}
+  {% set items = items|merge([rendered_tile]) %}
+{% endfor %}
+
+{% include '@psu-ooe/grid/grid.twig' with { items: items } only %}

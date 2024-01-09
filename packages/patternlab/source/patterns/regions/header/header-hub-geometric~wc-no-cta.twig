@@ -1,0 +1,88 @@
+{% embed '@psu-ooe/header/header.twig' %}
+
+  {% set search_horizontal %}
+    {% include '@psu-ooe/compact-search/compact-search.twig' with {
+      align: 'right',
+      orientation: 'horizontal',
+      search_form: 'The search form goes here.'
+    } only %}
+  {% endset %}
+
+  {% set search_vertical %}
+    {% include '@psu-ooe/compact-search/compact-search.twig' with {
+      align: 'right',
+      search_form: 'The search form goes here.'
+    } only %}
+  {% endset %}
+
+  {% set horizontal_menu %}
+    {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
+      menu_name: 'Primary navigation menu',
+      items: [
+        { title: 'Home', url: '#', in_active_trail: true },
+        { title: 'About Us', url: '#' },
+        { title: 'Degrees and Certificates', url: '#' },
+        { title: 'How Online Learning Works' },
+        { title: 'Admissions', url: '#' },
+        { title: 'Tuition and Financial Aid', url: '#' },
+        { title: 'Military', url: '#'},
+      ],
+    } only %}
+  {% endset %}
+
+  {% set vertical_menu %}
+    {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+      menu_name: 'Primary navigation menu',
+      density: 'tight',
+      items: [
+        { title: 'Home', url: '#', in_active_trail: true },
+        { title: 'About Us', url: '#' },
+        { title: 'Degrees and Certificates', url: '#' },
+        { title: 'How Online Learning Works' },
+        { title: 'Admissions', url: '#' },
+        { title: 'Tuition and Financial Aid', url: '#' },
+        { title: 'Military', url: '#'},
+      ],
+    } only %}
+  {% endset %}
+
+  {% set menu %}
+    {% include '@psu-ooe/compact-menu/compact-menu.twig' with {
+      align: 'right',
+      menu: vertical_menu
+    } only %}
+  {% endset %}
+
+  {% block dogear_content %}
+    <div class="region region--branding">
+      <div class="block block--system-branding-block">
+        <a href="/">
+          <svg class="sprite sprite--wc-mark" aria-hidden="true" viewBox="0 0 229 72">
+            <use xlink:href="#wc-mark"></use>
+          </svg>
+          <span class="visually-hidden">Penn State World Campus</span>
+        </a>
+      </div>
+    </div>
+  {% endblock %}
+  {% block content %}
+    <div class="region region--utility-small-viewports">
+      {{ search_vertical }}
+      {{ menu }}
+    </div>
+    <div class="region region--utility-large-viewports">
+      <ul class="utility-menu" role="list">
+        <li class="utility-menu__item"><a class="utility-menu__link" href="#">Current Students</a></li>
+        <li class="utility-menu__item"><a class="utility-menu__link" href="#">Alumni</a></li>
+        <li class="utility-menu__item"><a class="utility-menu__link" href="#">Events</a></li>
+      </ul>
+      {{ search_horizontal }}
+    </div>
+  {% endblock %}
+  {% block overflow %}
+    <div class="region region--cta-small-viewports"></div>
+    <div class="region region--overflow-large-viewports">
+      {{ horizontal_menu }}
+    </div>
+  {% endblock %}
+{% endembed %}

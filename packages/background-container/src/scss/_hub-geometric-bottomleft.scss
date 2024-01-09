@@ -1,0 +1,50 @@
+&.bg--hub-geometric-bottomleft {
+  & > .bg__sprites > .bg__sprite .sprite {
+    color: var(--white);
+    position: absolute;
+    height: auto;
+    width: _rem(60);
+    left: _rem(-44);
+    bottom: _rem(-51);
+    display: none; // @TODO: When container query support is more mainstream, simplify this.
+
+    //noinspection CssUnknownProperty
+    @supports (container-type: inline-size ) {
+      display: initial;
+    }
+  }
+
+  &.bg--primary-blue > .bg__sprites > .bg__sprite .sprite {
+    opacity: .25;
+  }
+
+  &.bg--beaver-blue > .bg__sprites > .bg__sprite .sprite {
+    opacity: .22;
+  }
+}
+
+&.bg--hub-geometric-bottomleft.bg--narrow > .bg__sprites > .bg__sprite .sprite {
+  @supports (container-type: inline-size ) {
+
+    //noinspection CssInvalidAtRule
+    @container (min-width: 950px) {
+      width: _rem(67);
+      right: calc(50% + _rem(30));
+      left: initial;
+      bottom: _rem(-58);
+    }
+  }
+}
+
+&.bg--hub-geometric-bottomleft:not(.bg--narrow) > .bg__sprites > .bg__sprite .sprite {
+  //noinspection CssUnknownProperty
+  @supports (container-type: inline-size ) {
+    //noinspection CssInvalidAtRule
+    @container (min-width: 1024px) {
+      width: _rem(67);
+      right: calc(50% + _rem(47));
+      left: initial;
+      bottom: _rem(-58);
+    }
+  }
+}

@@ -3,19 +3,15 @@
 
 .event-link {
   display: flex;
+  font-family: var(--font-family--default);
+  text-decoration: none;
 
-  // @TODO: Remove when :focus-visible is globally adopted.
-  &:focus {
-    outline: none;
-  }
+  &:hover, &:focus-visible {
+    text-decoration: none;
 
-  // @TODO: Consolidate states after safari polyfill is no longer needed.
-  &:hover {
     .event-link__title {
-      color: $primary-blue;
+      color: var(--pa-link);
       text-decoration: underline;
-      text-decoration-thickness: _rem(.1);
-      text-underline-offset: .2em;
     }
 
     .event-link__third .sprite {
@@ -24,27 +20,15 @@
   }
 
   &:focus-visible {
-    outline: _rem(.2) solid $sky-blue;
+    outline: _rem(.2) solid var(--sky-blue);
     outline-offset: _rem(.5);
-
-    .event-link__title {
-      color: $primary-blue;
-      text-decoration: underline;
-      text-decoration-thickness: _rem(.1);
-      text-underline-offset: .2em;
-    }
-
-    .event-link__third .sprite {
-      transform: scale(1.25);
-    }
   }
 
   &__first {
-    color: $nittany-navy;
-    font-family: $open-sans;
-    font-weight: 400;
-    font-size: _rem(1.4);
-    line-height: calc(19/14);
+    color: var(--nittany-navy);
+    font-size: var(--font-size--small);
+    font-weight: var(--font-weight--regular);
+    line-height: var(--line-height--xsnug);
     width: _rem(8.7);
     flex: 0 0 auto;
     padding-right: _rem(1.5);
@@ -52,7 +36,7 @@
     text-align: center;
 
     &::after {
-      background: repeating-linear-gradient(0deg, $primary-blue, $primary-blue _rem(.1), transparent _rem(.1), transparent _rem(.3));
+      background: repeating-linear-gradient(0deg, var(--sky-blue), var(--sky-blue) _rem(.1), transparent _rem(.1), transparent _rem(.3));
       content: "";
       position: absolute;
       inset: 0 _rem(-.1) 0 auto;
@@ -64,14 +48,14 @@
     flex: 1 0 0;
     padding-left: _rem(1.5);
     position: relative;
-    font-size: _rem(1.6);
+    font-size: var(--font-size--medium);
+    line-height: var(--line-height--xsnug);
     margin: auto;
-    line-height: 1.375;
   }
 
   &__third {
     flex: 0 0 auto;
-    color: $primary-blue;
+    color: var(--pa-link);
     margin: auto _rem(1.5);
 
     .sprite {
@@ -82,14 +66,16 @@
 
   .date-range {
     .date__day {
-      font-weight: 800;
+      font-weight: var(--font-weight--extrabold);
     }
+
     &[data-same-day] {
       .date-range__start .date__day {
-        color: $slate;
+        color: var(--slate);
         display: block;
-        font-size: _rem(1.8);
-        line-height: 1;
+        font-size: var(--font-size--3xlarge);
+        font-weight: var(--font-weight--extrabold);
+        line-height: var(--line-height--nospace);
       }
 
       .date-range__start .date__month,
@@ -116,15 +102,16 @@
       .date-range__start .date__day,
       .date-range__separator,
       .date-range__end .date__day {
-        color: $slate;
-        font-size: _rem(1.8);
-        line-height: 1;
+        color: var(--slate);
+        font-size: var(--font-size--large);
+        line-height: var(--line-height--nospace);
       }
     }
   }
 
   &__title {
     display: inline-block;
+    font-weight: var(--font-weight--semibold);
     line-height: 1.375;
   }
   &__description {
@@ -134,12 +121,12 @@
 
   &__time {
     display: block;
-    font-size: _rem(1.4);
-    line-height: 1.375;
+    font-size: var(--font-size--small);
+    font-weight: var(--font-weight--regular);
+    line-height: var(--line-height--xsnug);
 
     .time-range[data-same-day] {
-      color: $nittany-navy;
-      font-weight: 400;
+      color: var(--nittany-navy);
       margin-top: _rem(.3);
     }
 
@@ -147,27 +134,13 @@
       display: none;
     }
   }
+
   &__all-day {
-    font-weight: normal;
-    color: $black;
+    font-weight: var(--font-weight--regular);
+    color: var(--nittany-navy);
   }
+
   &--featured {
-    .date-range {
-      &[data-same-month] {
-        .date-range__start .date__day,
-        .date-range__separator,
-        .date-range__end .date__day {
-          font-size: _rem(2.1);
-        }
-      }
-
-      &[data-same-day] {
-        .date-range__start .date__day {
-          font-size: _rem(3);
-        }
-      }
-    }
-
     @include bp(s) {
       .event-link__first {
         max-width: _rem(8.7);
@@ -195,22 +168,17 @@
         padding-left: _rem(1);
       }
     }
-  }
-}
 
-// @TODO: Delete Safari polyfill when not needed.
-.event-link.focus-visible {
-  outline: _rem(.2) solid $sky-blue;
-  outline-offset: _rem(.5);
+    .date-range[data-same-month] {
+      .date-range__start .date__day,
+      .date-range__separator,
+      .date-range__end .date__day {
+        font-size: var(--font-size--mlarge);
+      }
+    }
 
-  .event-link__title {
-    color: $primary-blue;
-    text-decoration: underline;
-    text-decoration-thickness: _rem(.1);
-    text-underline-offset: .2em;
-  }
-
-  .event-link__third .sprite {
-    transform: scale(1.25);
+    .date-range[data-same-day] .date-range__start .date__day {
+      font-size: var(--font-size--large);
+    }
   }
 }

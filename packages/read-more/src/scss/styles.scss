@@ -2,42 +2,39 @@
 
 .read-more {
   text-decoration: none;
-  border-bottom: _rem(.1) solid transparent;
-  color: $primary-blue;
-  font-size: _rem(1.4);
-  line-height: calc(16/14);
+  font-size: var(--font-size--small);
+  font-family: var(--font-family--default);
+  line-height: var(--line-height--2xsnug);
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: var(--font-weight--bold);
+  position: relative;
 
-  &:hover {
-    color: $primary-blue;
-    border-color: $primary-blue;
+
+  &__chevron {
+    position: absolute;
+    font-size: _rem(1);
+    margin-top: _rem(.65);
   }
 
-  &:focus {
-    outline-offset: _rem(0.2);
+
+  &__text {
+    margin-right: _rem(.4);
   }
 
   &--small {
-    font-size: _rem(1.1);
-    line-height: calc(16/11);
+    font-size: var(--font-size--3xsmall);
+    .read-more__chevron {
+      margin-top: _rem(0.69);
+    }
   }
 
   &--reverse {
-    color: $white;
+    color: var(--pa-link-light);
 
-    &:hover {
-      color: $white;
-      border-color: $white;
-    }
-
-    &:focus {
-      outline-color: $white;
+    &:focus-visible {
+      outline-color: var(--white);
     }
   }
 
-  .sprite {
-    font-size: _rem(1);
-    vertical-align: -6%;
-  }
+
 }
