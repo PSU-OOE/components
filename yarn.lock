@@ -1655,7 +1655,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/card@^1.0 || 2.0, @psu-ooe/card@^2.0, @psu-ooe/card@workspace:packages/card":
+"@psu-ooe/card@^2.0, @psu-ooe/card@workspace:packages/card":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/card@workspace:packages/card"
   dependencies:
@@ -1664,12 +1664,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cards-list@^1.0, @psu-ooe/cards-list@workspace:packages/cards-list":
+"@psu-ooe/cards-list@^2.0, @psu-ooe/cards-list@workspace:packages/cards-list":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cards-list@workspace:packages/cards-list"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/card": ^1.0 || 2.0
+    "@psu-ooe/card": ^2.0
     "@psu-ooe/expandable-section": ^1.0
   languageName: unknown
   linkType: soft
@@ -1986,7 +1986,7 @@ __metadata:
     "@psu-ooe/bio-collection": ^2.0
     "@psu-ooe/breadcrumbs": ^2.0
     "@psu-ooe/card": ^2.0
-    "@psu-ooe/cards-list": ^1.0
+    "@psu-ooe/cards-list": ^2.0
     "@psu-ooe/credential": ^2.0
     "@psu-ooe/cta": ^2.0
     "@psu-ooe/cta-tracking": ^1.0
