@@ -1,5 +1,5 @@
 {% set content %}
-{% include '@organisms/quote/quote.twig' with {
+{% include '@psu-ooe/quote/quote.twig' with {
   headshot: "",
   reverse: false,
   quote: "Penn State has a long and strong history of educating learners at a distance. I look forward to leading the Online Education team to further the reputation of excellence that has been established.",
@@ -15,7 +15,7 @@
     <img src="https://test.worldcampus.psu.edu/sites/default/files/2018-12/1920x1018_Engel_feature.jpg" alt="">
   </picture>
 {% endset %}
-{% include '@molecules/overlay/overlay.twig' with {
+{% include '@psu-ooe/overlay/overlay.twig' with {
   image: image,
   content: content,
   column_width: "normal",

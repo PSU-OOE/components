@@ -1,6 +1,6 @@
 <div class="bio">
   <div class="bio__title">
-    {% include '@atoms/heading/heading.twig' with title only %}
+    {% include '@psu-ooe/heading/heading.twig' with title only %}
   </div>
   {% if profile_photo %}
     <div class="bio__profile-photo">
@@ -17,14 +17,14 @@
       <ul class="bio__credentials">
         {% for credential in credentials %}
           <li class="bio__credential">
-            {% include '@molecules/credential/credential.twig' with credential only %}
+            {% include '@psu-ooe/credential/credential.twig' with credential only %}
           </li>
         {% endfor %}
       </ul>
     {% else %}
       <div class="bio__credentials">
         <div class="bio__credential">
-          {% include '@molecules/credential/credential.twig' with credentials[0] only %}
+          {% include '@psu-ooe/credential/credential.twig' with credentials[0] only %}
         </div>
       </div>
     {% endif %}
@@ -36,7 +36,7 @@
   {% endif %}
   {% if link %}
     <div class="bio__link">
-      {% include '@molecules/read-more/read-more.twig' with link|merge({size: 'small'}) only %}
+      {% include '@psu-ooe/read-more/read-more.twig' with link|merge({size: 'small'}) only %}
     </div>
   {% endif %}
 </div>

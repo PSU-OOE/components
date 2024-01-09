@@ -3,19 +3,19 @@
     <div class="general-sticky__dogear">
       <div class="block block--system-branding-block">
         <a href="/">
-          {% include '@atoms/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'wc-mark' } only %}
           <span class="visually-hidden">Penn State World Campus</span>
         </a>
       </div>
     </div>
     <div class="general-sticky__content">
       <div class="general-sticky__utility">
-        {% include '@blocks/compact-search/compact-search.twig' with {
+        {% include '@psu-ooe/compact-search/compact-search.twig' with {
           align: 'right',
           search_form: 'The search form goes here.'
         } only %}
         {% set vertical_menu %}
-          {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+          {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
             menu_name: 'Primary navigation menu',
             density: 'tight',
             items: [
@@ -66,14 +66,14 @@
             ],
           } only %}
         {% endset %}
-        {% include '@blocks/compact-menu/compact-menu.twig' with {
+        {% include '@psu-ooe/compact-menu/compact-menu.twig' with {
           align: 'right',
           menu: vertical_menu
         } only %}
       </div>
       <div class="general-sticky__cta">
         {% set how_to_apply %}
-          {% include '@atoms/cta/cta-block.twig' with {
+          {% include '@psu-ooe/cta/cta-block.twig' with {
             label: 'How to Apply',
             url: '#',
             color: 'light-blue',
@@ -81,14 +81,14 @@
           } only %}
         {% endset %}
         {% set request_info %}
-          {% include '@atoms/cta/cta-block.twig' with {
+          {% include '@psu-ooe/cta/cta-block.twig' with {
             label: 'Request Info',
             url: '#',
             color: 'reversed',
             size: 'compact-responsive',
           } only %}
         {% endset %}
-        {% include '@atoms/cta/cta-group.twig' with {
+        {% include '@psu-ooe/cta/cta-group.twig' with {
           ctas: [how_to_apply, request_info],
         } only %}
       </div>
@@ -96,14 +96,14 @@
   </div>
 {% endset %}
 {% set primary_band %}
-  {% include '@molecules/band/band.twig' with {
+  {% include '@psu-ooe/band/band.twig' with {
     background: 'hub-geometric',
     content: primary_content,
     padding: 'none'
   } only %}
 {% endset %}
 
-{% include '@organisms/sticky-panel/sticky-panel.twig' with {
+{% include '@psu-ooe/sticky-panel/sticky-panel.twig' with {
   bands: [primary_band]
 } only %}
 <div style="max-width:87rem;padding:4rem;margin:auto">

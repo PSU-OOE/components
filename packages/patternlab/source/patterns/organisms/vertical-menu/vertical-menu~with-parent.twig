@@ -1,5 +1,5 @@
 {% set menu %}
-  {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+  {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'About us menu',
     parent_item: { title: 'About Us', url: '#' },
     items: [
@@ -14,6 +14,6 @@
     ],
   } only %}
 {% endset %}
-{% include '@molecules/callout/callout.twig' with {
+{% include '@psu-ooe/callout/callout.twig' with {
   content: menu,
 } only %}

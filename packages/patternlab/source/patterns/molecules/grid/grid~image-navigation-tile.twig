@@ -1,5 +1,5 @@
 {% set tile %}
-  {% include '@organisms/navigation-tile-image/navigation-tile-image.twig' with {
+  {% include '@psu-ooe/navigation-tile-image/navigation-tile-image.twig' with {
     link: {
       url: '#',
       label: 'Navigation Title',
@@ -10,7 +10,7 @@
 {% endset %}
 
 {% set tile2 %}
-  {% include '@organisms/navigation-tile-image/navigation-tile-image.twig' with {
+  {% include '@psu-ooe/navigation-tile-image/navigation-tile-image.twig' with {
     link: {
       url: '#',
       label: 'Navigation Title with a really long title that will go to two lines eventually',
@@ -19,6 +19,6 @@
   } only %}
 
 {% endset %}
-{% include '@molecules/grid/grid.twig' with {
+{% include '@psu-ooe/grid/grid.twig' with {
   items: [tile, tile2, tile],
 } only %}

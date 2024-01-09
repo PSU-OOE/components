@@ -7,7 +7,7 @@
             <li class="breadcrumbs__item">
               <a class="breadcrumbs__link" href="{{ crumb.url }}">{{ crumb.text }}</a>
               {% if not loop.last %}
-                {% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
+                {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
               {% endif %}
             </li>
           {% else %}

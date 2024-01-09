@@ -21,7 +21,7 @@
               {% set id = (item.title ~ '-submenu')|clean_unique_id %}
               <button class="vertical-menu__toggle" aria-controls="{{ id }}" aria-expanded="{{ item.in_active_trail ? 'true' : 'false' }}">
                 <span class="visually-hidden">{{ 'Toggle ' ~ item.title ~ ' menu' }}</span>
-                <span class="vertical-menu__chevron">{% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-down' } only %}</span>
+                <span class="vertical-menu__chevron">{% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-down' } only %}</span>
               </button>
               {% import _self as menus %}
               {{ menus.menu_links(item.below, menu_level + 1, id, item.in_active_trail, density, highlight_active_trail) }}

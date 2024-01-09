@@ -6,7 +6,7 @@
 
 {% set third_generation %}
   <div style="padding:10rem;">
-    {% include '@molecules/background-container/background-container.twig' with {
+    {% include '@psu-ooe/background-container/background-container.twig' with {
         color: 'beaver-blue',
         background_image: 'shield:topleft-bottomright',
         content: content,
@@ -16,7 +16,7 @@
 
 {% set second_generation %}
   <div style="padding:10rem;">
-    {% include '@molecules/background-container/background-container.twig' with {
+    {% include '@psu-ooe/background-container/background-container.twig' with {
       color: 'light-grey',
       background_image: 'shield:right',
       content: third_generation,
@@ -25,7 +25,7 @@
 {% endset %}
 
 <div style="text-align:center; color:#fff">
-  {% include '@molecules/background-container/background-container.twig' with {
+  {% include '@psu-ooe/background-container/background-container.twig' with {
     color: 'beaver-blue',
     background_image: 'shield:left',
     content: second_generation,

@@ -15,7 +15,7 @@
               {% set id = (item.title ~ '-submenu')|clean_unique_id %}
               <button class="horizontal-menu__toggle" aria-controls="{{ id }}" aria-expanded="false">
                 <span class="visually-hidden">{{ 'Toggle ' ~ item.title ~ ' menu' }}</span>
-                <span class="horizontal-menu__chevron">{% include '@atoms/sprite/sprite.twig' with { name: 'fas-chevron-down' } only %}</span>
+                <span class="horizontal-menu__chevron">{% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-down' } only %}</span>
               </button>
               {% import _self as menus %}
               {{ menus.menu_links(item.below, menu_level + 1, id) }}

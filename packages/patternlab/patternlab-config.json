@@ -117,49 +117,7 @@
     "twig": {
       "namespaces": [
         {
-          "id": "global",
-          "recursive": false,
-          "paths": [
-            "packages"
-          ]
-        },
-        {
-          "id": "atoms",
-          "recursive": false,
-          "paths": [
-            "packages"
-          ]
-        },
-        {
-          "id": "molecules",
-          "recursive": false,
-          "paths": [
-            "packages"
-          ]
-        },
-        {
-          "id": "organisms",
-          "recursive": false,
-          "paths": [
-            "packages"
-          ]
-        },
-        {
-          "id": "blocks",
-          "recursive": false,
-          "paths": [
-            "packages"
-          ]
-        },
-        {
-          "id": "regions",
-          "recursive": false,
-          "paths": [
-            "packages"
-          ]
-        },
-        {
-          "id": "pages",
+          "id": "psu-ooe",
           "recursive": false,
           "paths": [
             "packages"

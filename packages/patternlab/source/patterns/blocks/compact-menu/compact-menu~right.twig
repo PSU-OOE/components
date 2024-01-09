@@ -1,5 +1,5 @@
 {% set vertical_menu %}
-  {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+  {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Primary navigation menu',
     density: 'tight',
     items: [
@@ -52,13 +52,13 @@
 {% endset %}
 {% set menu %}
   <div style="display:flex; justify-content: flex-end">
-    {% include '@blocks/compact-menu/compact-menu.twig' with {
+    {% include '@psu-ooe/compact-menu/compact-menu.twig' with {
       menu: vertical_menu,
     } only %}
   </div>
 {% endset %}
 
-{% include '@molecules/callout/callout.twig' with {
+{% include '@psu-ooe/callout/callout.twig' with {
   background: 'blue-gradient',
   content: menu,
 } only %}

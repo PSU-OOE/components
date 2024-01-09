@@ -20,7 +20,7 @@
   <div class="{{ featured_classes|join(' ') }}">
     {% for card in featured_cards %}
       <div class="cards-list__card">
-        {% include '@molecules/card/card.twig' with card only %}
+        {% include '@psu-ooe/card/card.twig' with card only %}
       </div>
     {% endfor %}
   </div>
@@ -32,14 +32,14 @@
         <div class="cards-list__overflow-cards">
           {% for card in overflow_cards %}
             <div class="cards-list__card">
-              {% include '@molecules/card/card.twig' with card|merge({ list: true }) only %}
+              {% include '@psu-ooe/card/card.twig' with card|merge({ list: true }) only %}
             </div>
           {% endfor %}
         </div>
       {% endset %}
       {% if collapsible %}
         {% set expand_label = expand_label|default(featured_cards_length ? 'More Items' : 'Show Items') %}
-        {% include '@organisms/expandable-section/expandable-section.twig' with {
+        {% include '@psu-ooe/expandable-section/expandable-section.twig' with {
           content: overflow,
           expand_label: expand_label,
           collapse_label: collapse_label|default('Close Items')

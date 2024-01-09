@@ -1,5 +1,5 @@
 {% set tile %}
-  {% include '@organisms/navigation-tile/navigation-tile.twig' with {
+  {% include '@psu-ooe/navigation-tile/navigation-tile.twig' with {
     link: {
       url: '#',
       label: 'Navigation Title',
@@ -9,7 +9,7 @@
 
 {% endset %}
 {% set tile2 %}
-  {% include '@organisms/navigation-tile/navigation-tile.twig' with {
+  {% include '@psu-ooe/navigation-tile/navigation-tile.twig' with {
     link: {
       url: '#',
       label: 'Navigation Title with a really long title that will go to two lines eventually',
@@ -19,7 +19,7 @@
 
 {% endset %}
 <div class="pattern-lab-example" style="background: #f2f3f9; padding: 2rem">
-  {% include '@molecules/grid/grid.twig' with {
+  {% include '@psu-ooe/grid/grid.twig' with {
     items: [tile, tile2, tile],
   } only %}
 </div>

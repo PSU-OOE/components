@@ -1,10 +1,10 @@
 {% set search %}
-  {% include '@blocks/compact-search/compact-search.twig' with {
+  {% include '@psu-ooe/compact-search/compact-search.twig' with {
     search_form: 'The form goes here.'
   } only %}
 {% endset %}
 
-{% include '@molecules/callout/callout.twig' with {
+{% include '@psu-ooe/callout/callout.twig' with {
   background: 'blue-gradient',
   content: search,
 } only %}

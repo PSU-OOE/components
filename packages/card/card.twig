@@ -30,7 +30,7 @@ Variables:
         <img class="card__media-image" src="{{ image }}" alt="{{ image_alt }}" loading="lazy"/>
         <span class="card__media-overlay card__media-overlay--{{ image_overlay_style }}">
           {% if image_overlay_style == 'video' %}
-            {% include '@atoms/sprite/sprite.twig' with { name: 'youtube-player'} only %}
+            {% include '@psu-ooe/sprite/sprite.twig' with { name: 'youtube-player'} only %}
           {% endif %}
         </span>
       </div>

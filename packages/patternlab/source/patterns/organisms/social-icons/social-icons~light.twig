@@ -12,7 +12,7 @@
 {% set social_icons = [] %}
 {% for icon, label in social_medias %}
   {% set social_icon %}
-    {% include '@molecules/social-icon/social-icon.twig' with {
+    {% include '@psu-ooe/social-icon/social-icon.twig' with {
       color: 'light',
       icon: icon,
       label: label,
@@ -23,5 +23,5 @@
 {% endfor %}
 
 <div style="padding: 1rem;background:#1e407c">
-  {% include '@organisms/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
+  {% include '@psu-ooe/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
 </div>

@@ -2,10 +2,10 @@
   <span class="visually-hidden">{{ loading_text }}</span>
   <div class="spinner__animation spinner__animation--{{ size }}">
     <span class="spinner__notch">
-      {% include '@atoms/sprite/sprite.twig' with { name: 'fa-circle-notch'} only %}
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-circle-notch'} only %}
     </span>
     <span class="spinner__third">
-        {% include '@atoms/sprite/sprite.twig' with { name: 'fa-spinner-third'} only %}
+        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-spinner-third'} only %}
     </span>
   </div>
   {% if loading_text %}

@@ -1,5 +1,5 @@
 {% for spacing in ['small', 'medium', 'large', 'none'] %}
-  {% include '@atoms/heading/heading.twig' with {
+  {% include '@psu-ooe/heading/heading.twig' with {
     content: 'This heading has a ' ~ (spacing == 'none' ? 'no' : spacing) ~ ' amount of space under it',
     vspace: spacing,
   } only %}

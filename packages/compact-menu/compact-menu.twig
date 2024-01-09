@@ -1,7 +1,7 @@
 {% set toggle_content %}
   <div class="compact-menu__toggle">
     <div class="compact-menu__toggle-sprite">
-      {% include '@atoms/sprite/sprite.twig' with { name: 'fa-bars' } only %}
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-bars' } only %}
     </div>
     <span class="compact-menu__toggle-label">{{ menu_label|default('Menu') }}</span>
   </div>
@@ -16,7 +16,7 @@
 {% endset %}
 
 <div class="compact-menu">
-  {% include '@molecules/drop-button/drop-button.twig' with {
+  {% include '@psu-ooe/drop-button/drop-button.twig' with {
     toggle_content: toggle_content,
     panel_content: panel_content,
     panel_width: 'wide',

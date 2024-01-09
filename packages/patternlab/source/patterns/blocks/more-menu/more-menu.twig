@@ -1,5 +1,5 @@
 {% set menu %}
-  {% include '@blocks/more-menu/more-menu.twig' with {
+  {% include '@psu-ooe/more-menu/more-menu.twig' with {
     button_label: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
     links: [
       { "url": "#", "label": "Item 1"},
@@ -10,6 +10,6 @@
   } only %}
 {% endset %}
 
-{% include '@molecules/callout/callout.twig' with {
+{% include '@psu-ooe/callout/callout.twig' with {
   content: menu,
 } only %}

@@ -53,21 +53,21 @@
 {% for color in colors %}
     {% for background in backgrounds %}
       	<h2>{{ color }} {{ background }} (Full Width Background)</h2>
-          {% include '@molecules/background-container/background-container.twig' with {
+          {% include '@psu-ooe/background-container/background-container.twig' with {
               color: color,
               background_image: background,
               content: unbound_short_content
           } only %}
           <br />
           <br />
-          {% include '@molecules/background-container/background-container.twig' with {
+          {% include '@psu-ooe/background-container/background-container.twig' with {
               color: color,
               background_image: background,
               content: unbound_tall_content
           } only %}
           <br />
           <br />
-          {% include '@molecules/background-container/background-container.twig' with {
+          {% include '@psu-ooe/background-container/background-container.twig' with {
               color: color,
               background_image: background,
               width: 'narrow',
@@ -75,7 +75,7 @@
           } only %}
           <br />
           <br />
-          {% include '@molecules/background-container/background-container.twig' with {
+          {% include '@psu-ooe/background-container/background-container.twig' with {
               color: color,
               background_image: background,
               width: 'narrow',
@@ -90,7 +90,7 @@
     {% for background in backgrounds %}
       	<h2>{{ color }} {{ background }} (Limited Width Background)</h2>
             <div style="max-width:119rem;padding:0 4rem;margin:auto;">
-                {% include '@molecules/background-container/background-container.twig' with {
+                {% include '@psu-ooe/background-container/background-container.twig' with {
                     color: color,
                     background_image: background,
                     content: short_content
@@ -99,7 +99,7 @@
             <br />
             <br />
             <div style="max-width:119rem;padding:0 4rem;margin:auto;">
-                {% include '@molecules/background-container/background-container.twig' with {
+                {% include '@psu-ooe/background-container/background-container.twig' with {
                     color: color,
                     background_image: background,
                     content: tall_content
@@ -108,7 +108,7 @@
             <br />
             <br />
             <div style="max-width:95rem;padding:0 4rem;margin:auto;">
-                {% include '@molecules/background-container/background-container.twig' with {
+                {% include '@psu-ooe/background-container/background-container.twig' with {
                     color: color,
                     background_image: background,
                     width: 'narrow',
@@ -118,7 +118,7 @@
             <br />
             <br />
             <div style="max-width:95rem;padding:0 4rem;margin:auto;">
-                {% include '@molecules/background-container/background-container.twig' with {
+                {% include '@psu-ooe/background-container/background-container.twig' with {
                     color: color,
                     background_image: background,
                     width: 'narrow',
@@ -139,7 +139,7 @@
 {% endset %}
 
 <div style="max-width:119rem;padding:0 4rem;margin-top:6rem;">
-  {% include '@molecules/background-container/background-container.twig' with {
+  {% include '@psu-ooe/background-container/background-container.twig' with {
     color: 'primary-blue',
     background_image: 'shield:right',
     content: overflowing_content

@@ -1,14 +1,14 @@
 <div class="divider divider--{{ variant }}">
   {% if variant == 'tall-blue-gradient-shield' or variant == 'tall-medium-grey-shield' %}
-    {% include '@atoms/sprite/sprite.twig' with { name: 'community-shield' } %}
+    {% include '@psu-ooe/sprite/sprite.twig' with { name: 'community-shield' } %}
     <div class="divider__top-band"></div>
   {% endif %}
   {% if variant == 'tall-medium-grey-geometric' or variant == 'tall-blue-gradient-geometric' %}
     <div class="divider__sprite_1">
-      {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } %}
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric' } %}
     </div>
     <div class="divider__sprite_2">
-      {% include '@atoms/sprite/sprite.twig' with { name: 'hub-geometric' } %}
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric' } %}
     </div>
     <div class="divider__top-band"></div>
   {% endif %}

@@ -6,9 +6,9 @@
   <div class="{{ toggle_classes|join(' ') }}">
     <div class="more-menu__toggle-sprite">
       {% if stacked %}
-        {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis' } only %}
+        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-ellipsis' } only %}
       {% else %}
-        {% include '@atoms/sprite/sprite.twig' with { name: 'fas-ellipsis-vertical' } only %}
+        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-ellipsis-vertical' } only %}
       {% endif %}
     </div>
     <span class="more-menu__toggle-label">{{ more_label|default('More') }}</span>
@@ -25,7 +25,7 @@
   </ul>
 {% endset %}
 <div class="more-menu">
-  {% include '@molecules/drop-button/drop-button.twig' with {
+  {% include '@psu-ooe/drop-button/drop-button.twig' with {
     toggle_content: toggle_content,
     panel_content: link_list,
   } only %}

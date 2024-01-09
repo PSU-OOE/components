@@ -1,7 +1,7 @@
-{% embed '@regions/header/header.twig' %}
+{% embed '@psu-ooe/header/header.twig' %}
 
   {% set how_to_apply %}
-    {% include '@atoms/cta/cta-block.twig' with {
+    {% include '@psu-ooe/cta/cta-block.twig' with {
       label: 'How to Apply',
       url: '#',
       color: 'light-blue',
@@ -9,7 +9,7 @@
     } only %}{% endset %}
 
   {% set search_horizontal %}
-    {% include '@blocks/compact-search/compact-search.twig' with {
+    {% include '@psu-ooe/compact-search/compact-search.twig' with {
       align: 'right',
       orientation: 'horizontal',
       search_form: 'The search form goes here.'
@@ -17,14 +17,14 @@
   {% endset %}
 
   {% set search_vertical %}
-    {% include '@blocks/compact-search/compact-search.twig' with {
+    {% include '@psu-ooe/compact-search/compact-search.twig' with {
       align: 'right',
       search_form: 'The search form goes here.'
     } only %}
   {% endset %}
 
   {% set horizontal_menu %}
-    {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
+    {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
       menu_name: 'Primary navigation menu',
       items: [
         { title: 'Home', url: '#', in_active_trail: true },
@@ -39,7 +39,7 @@
   {% endset %}
 
   {% set vertical_menu %}
-    {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+    {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
       menu_name: 'Primary navigation menu',
       density: 'tight',
       items: [
@@ -55,7 +55,7 @@
   {% endset %}
 
   {% set menu %}
-    {% include '@blocks/compact-menu/compact-menu.twig' with {
+    {% include '@psu-ooe/compact-menu/compact-menu.twig' with {
       align: 'right',
       menu: vertical_menu
     } only %}
@@ -92,7 +92,7 @@
   {% endblock %}
   {% block overflow %}
     <div class="region region--cta-small-viewports">
-      {% include '@atoms/cta/cta-group.twig' with {
+      {% include '@psu-ooe/cta/cta-group.twig' with {
         ctas: [how_to_apply],
         expand_to_fit: true,
       } only %}

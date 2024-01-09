@@ -1,5 +1,5 @@
 {% set menu %}
-  {% include '@organisms/horizontal-menu/horizontal-menu.twig' with {
+  {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
     menu_name: 'Example',
     items: [
       { title: 'Home', url: '#' },
@@ -76,7 +76,7 @@
     ],
   } only %}
 {% endset %}
-{% include '@molecules/callout/callout.twig' with {
+{% include '@psu-ooe/callout/callout.twig' with {
   background: 'blue-gradient',
   content: menu,
 } only %}

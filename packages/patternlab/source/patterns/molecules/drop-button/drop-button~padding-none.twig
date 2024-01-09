@@ -1,6 +1,6 @@
 {% set menu %}
   <div style="padding: 4rem 0">
-    {% include '@molecules/drop-button/drop-button.twig' with {
+    {% include '@psu-ooe/drop-button/drop-button.twig' with {
       toggle_content: '<span style="outline: 2px dotted black"><span class="visually-hidden">4</span> More <span class="visually-hidden">options</span></span>',
       panel_content: 'Padding control may delegated to panel content. Be sure to allow at least 1.414rem of padding on the top to prevent intersecting with the caret (unlike this example).',
       panel_width: 'wide',
@@ -8,6 +8,6 @@
     } only %}
   </div>
 {% endset %}
-{% include '@molecules/callout/callout.twig' with {
+{% include '@psu-ooe/callout/callout.twig' with {
   content: menu,
 } only %}

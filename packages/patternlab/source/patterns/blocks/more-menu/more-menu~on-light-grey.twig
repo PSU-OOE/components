@@ -1,6 +1,6 @@
 {% set menu %}
   <div style="padding: 0 4rem">
-    {% include '@blocks/more-menu/more-menu.twig' with {
+    {% include '@psu-ooe/more-menu/more-menu.twig' with {
       button_label: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
       links: [
         { "url": "#", "label": "Item 1"},
@@ -11,7 +11,7 @@
     } only %}
   </div>
 {% endset %}
-{% include '@molecules/background-container/background-container.twig' with {
+{% include '@psu-ooe/background-container/background-container.twig' with {
   color: 'light-grey',
   content: menu,
 } only %}

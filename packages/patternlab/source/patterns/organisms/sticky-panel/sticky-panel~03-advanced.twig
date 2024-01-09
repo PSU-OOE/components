@@ -14,21 +14,21 @@
 {% endset %}
 
 {% set primary_band %}
-    {% include '@molecules/band/band.twig' with {
+    {% include '@psu-ooe/band/band.twig' with {
         content: primary_content,
         padding: 'small'
     } only %}
 {% endset %}
 
 {% set secondary_band %}
-    {% include '@molecules/band/band.twig' with {
+    {% include '@psu-ooe/band/band.twig' with {
         content: secondary_content,
         secondary: true,
         padding: 'small'
     } only %}
 {% endset %}
 
-{% include '@organisms/sticky-panel/sticky-panel.twig' with {
+{% include '@psu-ooe/sticky-panel/sticky-panel.twig' with {
   bands: [primary_band, secondary_band]
 } only %}
 <div style="max-width:87rem;padding:4rem;margin:auto">

@@ -1,19 +1,19 @@
 {% set cta1 %}
-  {% include '@atoms/cta/cta-block.twig' with {
+  {% include '@psu-ooe/cta/cta-block.twig' with {
     label: 'Apply Now',
     url: '#',
   } only %}
 {% endset %}
 
 {% set cta2 %}
-  {% include '@atoms/cta/cta-block.twig' with {
+  {% include '@psu-ooe/cta/cta-block.twig' with {
     label: 'Request Info',
     url: '#',
     color: 'alt',
   } only %}
 {% endset %}
 
-{% include '@atoms/cta/cta-group.twig' with {
+{% include '@psu-ooe/cta/cta-group.twig' with {
   ctas: [cta1, cta2],
   expand_to_fit: true,
 } only %}

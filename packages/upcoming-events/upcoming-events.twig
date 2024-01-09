@@ -8,12 +8,12 @@
   {% if heading %}
     {% set heading_classes = heading.classes|default([])|merge(['upcoming-events__heading']) %}
     {% set heading = heading|merge({classes: heading_classes}) %}
-    {% include '@atoms/heading/heading.twig' with heading only %}
+    {% include '@psu-ooe/heading/heading.twig' with heading only %}
   {% endif %}
   <div class="upcoming-events__featured">
     {% for event in events|slice(0, 3) %}
       <div class="upcoming-events__event">
-        {% include '@organisms/event-link/event-link.twig' with event|merge({
+        {% include '@psu-ooe/event-link/event-link.twig' with event|merge({
           compact: compact,
           featured: not compact
         }) only %}
@@ -27,7 +27,7 @@
       <div class="upcoming-events__more">
         {% for event in events %}
           <div class="upcoming-events__event">
-            {% include '@organisms/event-link/event-link.twig' with event|merge({
+            {% include '@psu-ooe/event-link/event-link.twig' with event|merge({
               compact: compact,
               featured: false
             }) only %}
@@ -36,7 +36,7 @@
       </div>
     {% endset %}
     <div class="upcoming-events__overflow">
-      {% include '@organisms/expandable-section/expandable-section.twig' with {
+      {% include '@psu-ooe/expandable-section/expandable-section.twig' with {
         expand_label: event_count == 1 ? '1 More Event' : event_count ~ ' More Events',
         collapse_label: 'Close Events',
         content: more

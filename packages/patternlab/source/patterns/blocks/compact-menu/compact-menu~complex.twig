@@ -1,5 +1,5 @@
 {% set vertical_menu %}
-  {% include '@organisms/vertical-menu/vertical-menu.twig' with {
+  {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Primary navigation menu',
     density: 'tight',
     items: [
@@ -51,7 +51,7 @@
   } only %}
 {% endset %}
 {% set menu %}
-  {% embed '@blocks/compact-menu/compact-menu.twig' with {
+  {% embed '@psu-ooe/compact-menu/compact-menu.twig' with {
     menu: vertical_menu,
     menu_label: '<em>Awesome</em> Menu',
   } only %}
@@ -62,7 +62,7 @@
   {% endembed %}
 {% endset %}
 
-{% include '@molecules/callout/callout.twig' with {
+{% include '@psu-ooe/callout/callout.twig' with {
   background: 'blue-gradient',
   content: menu,
 } only %}

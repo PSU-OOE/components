@@ -1,6 +1,6 @@
 {% for level in range(1, 6) %}
   <div style="display: flex; flex-flow: row nowrap; gap: var(--text-element-vertical-space--default); margin-bottom: var(--text-element-vertical-space--default);">
-    {% include '@atoms/heading/heading.twig' with {
+    {% include '@psu-ooe/heading/heading.twig' with {
       content: 'Heading ' ~ level ~ ' should be flush with this box -->|',
       level: level,
       flush: true,

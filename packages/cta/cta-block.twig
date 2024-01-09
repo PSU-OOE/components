@@ -23,7 +23,7 @@
   >
     {% if icon_before %}
       <span class="cta-block__icon">
-        {% include '@atoms/sprite/sprite.twig' with {
+        {% include '@psu-ooe/sprite/sprite.twig' with {
           name: icon_before
         } only %}
       </span>
@@ -31,7 +31,7 @@
     {{ label }}
     {% if icon_after %}
       <span class="cta-block__icon">
-        {% include '@atoms/sprite/sprite.twig' with {
+        {% include '@psu-ooe/sprite/sprite.twig' with {
           name: icon_after
         } only %}
       </span>
