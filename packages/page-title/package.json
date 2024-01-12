@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/page-title",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a page title component.",
   "publishConfig": {
     "access": "public",
