@@ -132,6 +132,7 @@ select {
   line-height: var(--line-height--nospace);
   padding: _rem(1.65) _rem(3.5) _rem(1.65) _rem(1);
   cursor: pointer;
+  color: var(--nittany-navy);
   &:focus-visible {
     outline-color: var(--sky-blue);
   }
