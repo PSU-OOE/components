@@ -8,12 +8,12 @@
   text-transform: uppercase;
   font-weight: var(--font-weight--bold);
   position: relative;
-
+  display: inline-block;
 
   &__chevron {
     position: absolute;
     font-size: _rem(1);
-    margin-top: _rem(.65);
+    margin-top: _rem(.2);
   }
 
 
@@ -24,7 +24,7 @@
   &--small {
     font-size: var(--font-size--3xsmall);
     .read-more__chevron {
-      margin-top: _rem(0.69);
+      margin-top: _rem(0.05);
     }
   }
 
