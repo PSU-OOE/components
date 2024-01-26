@@ -19,7 +19,10 @@ function moveKeyBefore($arr, $find, $move) {
 
   function addCustomExtension(Environment $env) {
     $env->addExtension(new SmartDatetimeExtension);
-    $env->addFilter(new TwigFilter('clean_unique_id', function($id) { return $id . '-' . uniqid(); }));
+    $env->addFilter(new TwigFilter('clean_unique_id', function($id) {
+        $id = str_replace(' ', '-', $id);
+        return $id . '-' . uniqid();
+    }));
 
     $env->addFunction(new TwigFunction('get_component_stylesheets', function () {
       $manifests = [];
