@@ -38,7 +38,7 @@
     {% set expandable_content_classes = expandable_content_classes|merge(['accordion__expandable-content--indent-content']) %}
   {% endif %}
 
-  <div class="{{ expandable_content_classes|join(' ') }}" id="{{ id }}"{% if toc_label %} data-toc-label="{{ toc_label }}"{% endif %} {% if not expanded %} aria-hidden="true" style="height:0; overflow:hidden"{% endif %}>
+  <div class="{{ expandable_content_classes|join(' ') }}" id="{{ id }}"{% if toc_label %} data-toc-label="{{ toc_label }}"{% endif %} {% if not expanded %} style="height:0; overflow:hidden"{% endif %}>
     {{ expandable_content }}
   </div>
 </div>
