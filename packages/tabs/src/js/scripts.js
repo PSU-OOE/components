@@ -118,6 +118,7 @@
                 sibling.setAttribute('aria-selected', 'true');
                 sibling.setAttribute('tabindex', '');
                 sibling_panel.classList.add('tabs__panel--active');
+                sibling_panel.removeAttribute('aria-hidden');
                 panel.dispatchEvent(new CustomEvent('component:activated'));
               }
             });
@@ -130,6 +131,8 @@
             button.setAttribute('aria-selected', 'false');
             button.setAttribute('tabindex', '-1');
             panel.classList.remove('tabs__panel--active');
+            panel.setAttribute('aria-hidden', 'true');
+
             panel.dispatchEvent(new CustomEvent('component:deactivated'));
           }
         });

@@ -84,6 +84,7 @@
   }
 
   &__expandable-content {
+    content-visibility: auto;
     transition-property: height, margin-bottom, visibility;
     transition-timing-function: ease-in-out;
     visibility: hidden;

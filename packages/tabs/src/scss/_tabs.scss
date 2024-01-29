@@ -37,6 +37,7 @@
   }
 
   &__panel {
+    content-visibility: auto;
     position: absolute;
     width: 100%;
     visibility: hidden;

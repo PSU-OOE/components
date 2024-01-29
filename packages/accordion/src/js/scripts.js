@@ -16,12 +16,14 @@
           content.style['transition-duration'] = '0ms';
           content.style['height'] = null;
           accordion.classList.add('accordion--expanded');
+          content.removeAttribute('aria-hidden');
           button.setAttribute('aria-expanded', 'true');
         }
         else {
           content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
+          content.removeAttribute('aria-hidden');
           cms.expand(content);
         }
       });
@@ -32,11 +34,13 @@
           content.style['height'] = '0';
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
+          content.setAttribute('aria-hidden', 'true');
         }
         else {
           content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
+          content.setAttribute('aria-hidden', 'true');
           cms.collapse(content);
         }
       });
