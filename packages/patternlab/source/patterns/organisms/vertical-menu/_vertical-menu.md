@@ -1,13 +1,13 @@
 # Variables
 
-| Variable               | Type    | Required | Description                                                                              |
-|------------------------|---------|----------|------------------------------------------------------------------------------------------|
-| menu_name              | string  | true     | The name of the menu (visible in the accessibility tree).                                |
-| density                | enum    | false    | Overrides the layout density of the menu; must be one of the documented density presets. |
-| highlight_active_trail | boolean | false    | Should the active trail be highlighted with a vertical highlight?                        |
-| parent_item            | object  | false    | If provided, the parent item will be placed at the start and emphasized.                 |
-| items                  | array   | true     | The items to include in the menu.                                                        |
-| active_item            | string  | false    | The current active url                                                                   |
+| Variable               | Type    | Required | Description                                                                                             |
+|------------------------|---------|----------|---------------------------------------------------------------------------------------------------------|
+| menu_name              | string  | true     | The name of the menu (visible in the accessibility tree).                                               |
+| density                | enum    | false    | Overrides the layout density of the menu; must be one of the documented density presets.                |
+| highlight_active_trail | boolean | false    | Should the active trail be highlighted with a vertical highlight?                                       |
+| parent_item            | object  | false    | If provided, the parent item will be placed at the start and emphasized.                                |
+| items                  | array   | true     | The items to include in the menu.                                                                       |
+| current_url            | string  | false    | The current url (used to determine if an item is <code>aria-current</code>). Use is highly recommended. | |
 
 ## Menu Densities
 
