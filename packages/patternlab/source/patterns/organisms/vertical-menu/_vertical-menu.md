@@ -6,6 +6,8 @@
  | highlight_active_trail | boolean | false    | Should the active trail be highlighted with a vertical highlight?                        |
  | parent_item            | object  | false    | If provided, the parent item will be placed at the start and emphasized.                 |
 | items                  | array   | true     | The items to include in the menu.                                                        |
+| active_item | string | false | The current active url |
+
 
 ## Menu Densities
 | Density | Description                                      |
