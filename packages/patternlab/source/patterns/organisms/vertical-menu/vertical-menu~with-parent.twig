@@ -2,11 +2,12 @@
   {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'About us menu',
     parent_item: { title: 'About Us', url: '#' },
+    active_item: '/about-us/our-students',
     items: [
       { title: 'Our Story', url: '#' },
       { title: 'Mission', url: '#' },
       { title: 'Our Leadership', url: '#' },
-      { title: 'Our Students', url: '#', in_active_trail: true },
+      { title: 'Our Students', url: '/about-us/our-students', in_active_trail: true },
       { title: 'Why World Campus', url: '#' },
       { title: 'News and Features', url: '#' },
       { title: 'Success Stories', url: '#' },

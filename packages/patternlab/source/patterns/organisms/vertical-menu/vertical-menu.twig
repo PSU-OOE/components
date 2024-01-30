@@ -1,9 +1,10 @@
 {% set menu %}
   {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Example',
+    active_item: '/about-us',
     items: [
       { title: 'Home', url: '#' },
-      { title: 'About Us', url: '#', in_active_trail: true, below: [
+      { title: 'About Us', url: '/about-us', in_active_trail: true, below: [
         { title: 'Our Story', url: '#' },
         { title: 'Mission', url: '#' },
         { title: 'Our Leadership', url: '#' },

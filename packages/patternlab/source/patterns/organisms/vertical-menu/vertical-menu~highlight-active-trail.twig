@@ -2,6 +2,7 @@
   {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Example',
     highlight_active_trail: true,
+    active_item: '/how-online-learning-works',
     items: [
       { title: 'Home', url: '#' },
       { title: 'About Us', url: '#', below: [
@@ -17,7 +18,7 @@
       { title: 'Degrees and Certificates', url: '#', below: [
 
       ]},
-      { title: 'How Online Learning Works', in_active_trail: true, url: '#', below: [
+      { title: 'How Online Learning Works', in_active_trail: true, url: '/how-online-learning-works', below: [
         { title: 'Online Learning Experience', url: '#' },
         { title: 'Student Services', url: '#' },
         { title: 'Dedication to Accessibility', url: '#' },

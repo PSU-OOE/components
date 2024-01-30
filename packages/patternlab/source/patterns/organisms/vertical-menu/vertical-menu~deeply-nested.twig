@@ -1,6 +1,7 @@
 {% set menu %}
   {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Example',
+    active_item: '/item-2',
     items: [
       { title: 'Home', url: '#' },
       { title: 'Item 1', url: '#', below: [
@@ -21,7 +22,7 @@
         { title: 'Item 1c', url: '#' },
         { title: 'Item 1d', url: '#' },
       ]},
-      { title: 'Item 2', url: '#', in_active_trail: true, below: [
+      { title: 'Item 2', url: '/item-2', in_active_trail: true, below: [
         { title: 'Item 2a', url: '#' },
         { title: 'Item 2b', url: '#', below: [
           { title: 'Subitem 2a', url: '#' },
