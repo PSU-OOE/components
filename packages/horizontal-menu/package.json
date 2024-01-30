@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/horizontal-menu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a horizontal menu.",
   "publishConfig": {
     "access": "public",
