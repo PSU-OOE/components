@@ -7,7 +7,7 @@
 | highlight_active_trail | boolean | false    | Should the active trail be highlighted with a vertical highlight?                                        |
 | parent_item            | object  | false    | If provided, the parent item will be placed at the start and emphasized.                                 |
 | items                  | array   | true     | The items to include in the menu.                                                                        |
-| current_path           | string  | false    | The current path (used to determine if an item is <code>aria-current</code>). Use is highly recommended. |
+| current_path           | string  | false    | The current path (used to determine if an item is ```aria-current```. Use is highly recommended. |
 
 ## Menu Densities
 
