@@ -1,10 +1,10 @@
 # Variables
 
-| Variable    | Type   | Required | Description                                                                                             |
-|-------------|--------|----------|---------------------------------------------------------------------------------------------------------|
-| menu_name   | string | true     | The name of the menu (visible in the accessibility tree).                                               |
-| items       | array  | true     | The items to include in the menu.                                                                       |
-| current_url | string | false    | The current url (used to determine if an item is <code>aria-current</code>). Use is highly recommended. |
+| Variable     | Type   | Required | Description                                                                                              |
+|--------------|--------|----------|----------------------------------------------------------------------------------------------------------|
+| menu_name    | string | true     | The name of the menu (visible in the accessibility tree).                                                |
+| items        | array  | true     | The items to include in the menu.                                                                        |
+| current_path | string | false    | The current path (used to determine if an item is <code>aria-current</code>). Use is highly recommended. |
 
 ## Menu item structure
 

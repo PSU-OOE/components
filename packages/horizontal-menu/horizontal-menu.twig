@@ -1,4 +1,4 @@
-{% macro menu_links(items, menu_level, id, current_url) %}
+{% macro menu_links(items, menu_level, id, current_path) %}
   {% apply spaceless %}
     {% if items %}
       <ul class="horizontal-menu__menu horizontal-menu__menu--{{ menu_level }}" id="{{ id }}">
@@ -10,7 +10,7 @@
                 item.in_active_trail ? 'horizontal-menu__link--active-trail',
               ]|filter(v => v is not empty)
             %}
-            <a class="{{ link_classes|join(' ') }}" href="{{ item.url }}" {% if item.url == current_url %} aria-current="page" {% endif %}>{{ item.title }}</a>
+            <a class="{{ link_classes|join(' ') }}" href="{{ item.url }}" {% if item.url == current_path %} aria-current="page" {% endif %}>{{ item.title }}</a>
             {% if item.below %}
               {% set id = (item.title ~ '-submenu')|clean_unique_id %}
               <button class="horizontal-menu__toggle" aria-controls="{{ id }}" aria-expanded="false">
@@ -18,7 +18,7 @@
                 <span class="horizontal-menu__chevron">{% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-down' } only %}</span>
               </button>
               {% import _self as menus %}
-              {{ menus.menu_links(item.below, menu_level + 1, id, current_url) }}
+              {{ menus.menu_links(item.below, menu_level + 1, id, current_path) }}
             {% endif %}
           </li>
         {% endfor %}
@@ -29,5 +29,5 @@
 {% import _self as menus %}
 
 <nav class="horizontal-menu" aria-label="{{ menu_name }}">
-  {{ menus.menu_links(items, 1, menu_name|clean_unique_id, current_url) }}
+  {{ menus.menu_links(items, 1, menu_name|clean_unique_id, current_path) }}
 </nav>
