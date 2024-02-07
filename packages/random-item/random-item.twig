@@ -4,7 +4,7 @@
     (() => {
       const items = {{ items|json_encode()|raw }};
       if (items) {
-        document.querySelector('#{{ identifier }}').outerHTML = items[~~(Math.random() * items.length)];
+        document.querySelector('#{{ identifier }}').outerHTML = navigator.webdriver ? items[0] : items[~~(Math.random() * items.length)];
       }
     })();
   </script>
