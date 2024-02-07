@@ -1834,6 +1834,7 @@ __metadata:
   dependencies:
     "@psu-ooe/background-container": ^3.0
     "@psu-ooe/base": ^2.0
+    "@psu-ooe/heading": ^2.0
     "@psu-ooe/random-item": ^1.0
   languageName: unknown
   linkType: soft
