@@ -2,10 +2,9 @@
   {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Example menu with tight density',
     density: 'tight',
-    current_path: '/about-us',
     items: [
       { title: 'Home', url: '#' },
-      { title: 'About Us', url: '/about-us', in_active_trail: true, below: [
+      { title: 'About Us', url: '/about-us', is_current_page: true, in_active_trail: true, below: [
         { title: 'Our Story', url: '#' },
         { title: 'Mission', url: '#' },
         { title: 'Our Leadership', url: '#' },
