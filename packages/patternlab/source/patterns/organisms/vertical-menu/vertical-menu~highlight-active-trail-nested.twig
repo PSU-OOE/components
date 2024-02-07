@@ -2,12 +2,13 @@
   {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
     menu_name: 'Example',
     highlight_active_trail: true,
+    current_path: '/about-us/our-leadership',
     items: [
       { title: 'Home', url: '#' },
       { title: 'About Us', url: '#', in_active_trail: true, below: [
         { title: 'Our Story', url: '#' },
         { title: 'Mission', url: '#' },
-        { title: 'Our Leadership', url: '#', in_active_trail: true },
+        { title: 'Our Leadership', url: '/about-us/our-leadership', in_active_trail: true },
         { title: 'Our Students', url: '#' },
         { title: 'Why World Campus', url: '#' },
         { title: 'News and Features', url: '#' },
