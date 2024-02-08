@@ -29,8 +29,12 @@
 
     .sprite {
       position: absolute;
-      width: _rem(67);
       height: auto;
+      width: _rem(60);
+
+      @include bp(s) {
+        width: _rem(67);
+      }
     }
   }
 
