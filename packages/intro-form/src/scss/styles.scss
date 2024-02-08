@@ -32,7 +32,7 @@
       height: auto;
       width: _rem(60);
 
-      @include bp(s) {
+      @include bp(m) {
         width: _rem(67);
       }
     }
@@ -47,7 +47,7 @@
     bottom: _rem(-39);
     right: _rem(-33);
 
-    @include bp(s) {
+    @include bp(m) {
       bottom: _rem(-41);
       left: calc(50% + _rem(31.9));
       right: unset;
