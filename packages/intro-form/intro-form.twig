@@ -6,41 +6,54 @@
   {% set color = 'light-grey' %}
 {% endif %}
 
-{% set classes = [
-  'intro-form',
-  color in ['beaver-blue'] ? 'intro-form--' ~ color,
-] %}
-
-<div class="{{ classes|join(' ') }}">
-  {% set bg_content %}
-    <div class="intro-form__container">
-      <div class="intro-form__first">
-        <div class="intro-form__border"></div>
-        <div class="intro-form__image">
-          {% if images|length > 1 %}
-            {% include '@psu-ooe/random-item/random-item.twig' with { items: images } only %}
-          {% else %}
-            {{ images[0] }}
-          {% endif %}
-        </div>
-        <div class="intro-form__intro">
-          <div class="intro-form__overlay">
-            <{{ heading_level }} class="intro-form__title heading heading--no-overline">
-              <span class="intro-form__relative">{{ title }}</span>
-            </{{ heading_level }}>
-          </div>
-          <p class="intro-form__description">{{ description }}</p>
-        </div>
+<div class="intro-form">
+  {% set geometric_classes = [
+    'intro-form__geometrics',
+    'intro-form__geometrics--' ~ color
+  ] %}
+  <div class="{{ geometric_classes|join(' ') }}">
+    {% set topleft_id = 'hub-geometric-intro-form-topleft'|clean_unique_id %}
+    {% set bottomright_id = 'hub-geometric-intro-form-topleft'|clean_unique_id %}
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <linearGradient id="{{ topleft_id }}" x1="0.5" y1="0.686" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="var(--{{ color == 'light-grey' ? 'white' : 'sky-blue' }})" />
+          <stop offset="1" stop-color="var(--white)" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="{{ bottomright_id }}" x1="0.253" y1="0.054" x2="0.313" y2="0.267" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="var(--{{ color == 'light-grey' ? 'white' : 'sky-blue' }})" stop-opacity="0" />
+          <stop offset="1" stop-color="var(--{{ color == 'light-grey' ? 'white' : 'sky-blue' }})" />
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="intro-form__sprite" style="--hub-geometric-gradient: url(#{{ topleft_id }});">
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
+    </div>
+    <div class="intro-form__sprite" style="--hub-geometric-gradient: url(#{{ bottomright_id }});">
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
+    </div>
+  </div>
+  <div class="intro-form__container">
+    <div class="intro-form__first">
+      <div class="intro-form__border"></div>
+      <div class="intro-form__image">
+        {% if images|length > 1 %}
+          {% include '@psu-ooe/random-item/random-item.twig' with { items: images } only %}
+        {% else %}
+          {{ images[0] }}
+        {% endif %}
       </div>
-      <div class="intro-form__second">
-        {{ form }}
+      <div class="intro-form__intro">
+        <div class="intro-form__overlay">
+          <{{ heading_level }} class="intro-form__title heading heading--no-overline">
+            <span class="intro-form__relative">{{ title }}</span>
+          </{{ heading_level }}>
+        </div>
+        <p class="intro-form__description">{{ description }}</p>
       </div>
     </div>
-  {% endset %}
-  {% include '@psu-ooe/background-container/background-container.twig' with {
-    color: color,
-    background_image: 'shield:topleft-bottomright',
-    padding: 'small',
-    content: bg_content,
-  } only %}
+    <div class="intro-form__second">
+      {{ form }}
+    </div>
+  </div>
 </div>
