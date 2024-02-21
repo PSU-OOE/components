@@ -34,3 +34,4 @@ The menu item structure is recursive. Each item has the following attributes:
 | url             | string  | true     | The url of the menu item.                                     |
 | in_active_trail | boolean | false    | Is the item in the active trail?                              |
 | below           | array   | false    | An array of items that exist under the current item.          |
+| is_current_page | boolean | false    | Is the item the current page that the user is on?             |
