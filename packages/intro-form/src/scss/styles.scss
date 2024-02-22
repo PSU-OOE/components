@@ -17,15 +17,13 @@
   }
 
   &__first {
+    background-color: var(--nittany-navy);
     position: relative;
 
     margin-top: _rem(-3);
 
-    @include bp(xs) {
-      margin-top: _rem(-4);
-    }
-
     @include bp(s) {
+      border-top: _rem(.6) solid var(--sky-blue);
       box-shadow: _rem(.1) _rem(.2) rgba($nittany-navy, .4);
       flex: 1;
       height: fit-content;
@@ -34,99 +32,39 @@
     }
   }
 
-  &__border {
-    @include bp(s) {
-      border-top: _rem(.8) solid var(--sky-blue);
-    }
-  }
-
   &__image {
-    background-color: var(--white);
-    position: absolute;
+    position: relative;
     aspect-ratio: 16/7;
     width: 100%;
 
-    @include bp(s) {
-      aspect-ratio: 2;
-    }
-
-    img {
-      aspect-ratio: 16/7;
-      object-fit: cover;
-
-      @include bp(s) {
-        aspect-ratio: 2;
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      inset: calc(100% - 7.5rem) 0 0 0;
+      background: linear-gradient(to bottom, transparent 0%, var(--nittany-navy) 100%);
     }
   }
 
   &__intro {
-    padding: 0 _rem(1);
-    margin-top: calc(43.75% - _rem(3.25));
+    padding: _rem(2.5) _rem(2);
 
     @include bp(xs) {
-      padding: 0 _rem(2);
+      padding: _rem(3) _rem(4);
     }
 
     @include bp(s) {
-      background: var(--white);
-      padding: 0;
-      margin-top: calc(50% - _rem(7.25));
+      padding: _rem(3) _rem(2)
     }
   }
 
-  &__overlay {
-    margin-right: _rem(4);
-
-    @include bp(xs) {
-      margin-right: _rem(5);
-    }
-
-    @include bp(s) {
-      min-height: _rem(5.9);
-      margin-left: _rem(-2);
-      margin-right: _rem(3);
-    }
-  }
-
-  &__title {
-    display: inline;
-    letter-spacing: var(--letter-spacing--msnug);
-    position: relative;
-    font-size: var(--font-size--3xlarge);
-    font-family: var(--font-family--headings);
-    line-height: var(--line-height--xsnug);
-    font-weight: var(--font-weight--medium);
-    background: var(--nittany-navy);
-    padding: _rem(1) 0;
-    margin: 0 _rem(1.5);
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-    box-shadow: _rem(-1.5) 0 0 var(--nittany-navy), _rem(1.5) 0 0 var(--nittany-navy);
-    color: var(--white);
-  }
-
-  &__relative {
-    position: relative;
+  &__image + &__intro {
+    padding-top: _rem(0);
   }
 
   &__description {
-    background: var(--white);
-    display: block;
-    box-shadow: _rem(.1) _rem(.2) rgba($nittany-navy, .4);
-    padding: _rem(2.5) _rem(2);
-    margin: _rem(.4) _rem(1) 0 _rem(1);
-
-    @include bp(xs) {
-      margin: _rem(.4) _rem(2) 0 _rem(2);
-    }
-
-    @include bp(s) {
-      font-size: var(--font-size--large);
-      margin: _rem(1.3) 0 0 0;
-      box-shadow: none;
-      padding: _rem(2) _rem(2) _rem(3);
-    }
+    color: var(--text-color--light);
+    font-size: var(--font-size--large);
+    line-height: var(--line-height--snug);
   }
 
   &__second {
