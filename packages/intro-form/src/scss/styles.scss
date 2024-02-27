@@ -2,8 +2,60 @@
 @import '../../../base/src/scss/imports/layout';
 
 .intro-form {
+  position: relative;
+  padding: _rem(3) 0;
+
+  &__geometrics {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+
+    &--light-grey {
+      background-color: var(--light-grey);
+
+      .sprite {
+        color: var(--white);
+      }
+    }
+
+    &--beaver-blue {
+      background-color: var(--beaver-blue);
+
+      .sprite {
+        color: var(--sky-blue);
+        opacity: .3;
+      }
+    }
+
+    .sprite {
+      position: absolute;
+      height: auto;
+      width: _rem(60);
+
+      @include bp(m) {
+        width: _rem(67);
+      }
+    }
+  }
+
+  &__sprite:nth-child(2) .sprite {
+    top: _rem(-36.6);
+    right: calc(50% + _rem(30));
+  }
+
+  &__sprite:nth-child(3) .sprite {
+    bottom: _rem(-39);
+    right: _rem(-33);
+
+    @include bp(m) {
+      bottom: _rem(-41);
+      left: calc(50% + _rem(31.9));
+      right: unset;
+    }
+  }
 
   &__container {
+    position: relative;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -41,7 +93,7 @@
       content: '';
       position: absolute;
       inset: calc(100% - 7.5rem) 0 0 0;
-      background: linear-gradient(to bottom, transparent 0%, var(--nittany-navy) 100%);
+      background: linear-gradient(to bottom, transparent, var(--nittany-navy));
     }
   }
 
