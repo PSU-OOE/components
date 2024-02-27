@@ -1,0 +1,54 @@
+<div class="event-spotlight">
+  <div class="event-spotlight__image">
+    {% if images|length > 1 %}
+      {% include '@psu-ooe/random-item/random-item.twig' with { items: images } only %}
+    {% else %}
+      {{ images[0] }}
+    {% endif %}
+  </div>
+  <div class="event-spotlight__content">
+    <a class="event-spotlight__heading" href="{{ url }}">
+      {% include '@psu-ooe/heading/heading.twig' with {
+        reversed: true,
+        size: 'medium',
+        level: heading_level,
+        content: title,
+      } only %}
+    </a>
+    <div class="event-spotlight__datetime">
+      <span class="event-spotlight__date">
+        {% include '@psu-ooe/smart-datetime/smart-date.twig' with {
+          start: start,
+          end: end,
+          timezone: timezone
+        } only %}
+      </span>
+      <span class="event-spotlight__time">
+        {% include '@psu-ooe/smart-datetime/smart-time.twig' with {
+          start: start,
+          end: end,
+          timezone: timezone
+        } only %}
+      </span>
+    </div>
+    {% set event_details %}
+      Learn more <span class="visually-hidden">about {{ title }}</span>
+    {% endset %}
+    <div class="event-spotlight__event-details">
+      {% include '@psu-ooe/read-more/read-more.twig' with {
+        reverse: true,
+        url: url,
+        size: 'medium',
+        title: event_details
+      } only %}
+    </div>
+    <div class="event-spotlight__all-events">
+      {% include '@psu-ooe/read-more/read-more.twig' with {
+        reverse: true,
+        url: all_events_url,
+        size: 'small',
+        title: 'All events'
+      } only %}
+    </div>
+  </div>
+</div>

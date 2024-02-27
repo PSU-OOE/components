@@ -1,0 +1,24 @@
+.event-spotlight {
+  container-type: inline-size;
+  position: relative;
+
+  &__image {
+    @container (min-width: 410px) {
+      position: absolute;
+      inset: 0 0 0 0;
+    }
+  }
+
+  &__content {
+    background: var(--nittany-navy);
+    position: relative;
+    padding: 0 _rem(2) _rem(2) _rem(2);
+
+    &::before {
+      position: absolute;
+      content: '';
+      inset: _rem(-6) 0 100% 0;
+      background: linear-gradient(to bottom, transparent, var(--nittany-navy));
+    }
+  }
+}
