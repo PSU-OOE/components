@@ -27,6 +27,15 @@ h1, .heading--xlarge {
     }
   }
 
+  &.heading--reversed {
+    --headings-color: color-mix(in srgb, var(--text-color--light) 85%, transparent);
+
+    // @TODO: Remove fallback when appropriate.
+    @supports not (color: color-mix(in srgb, white, white)) {
+      --headings-color: var(--text-color--light);
+    }
+  }
+
   .text--contrasting {
     font-weight: var(--font-weight--extrabold);
   }
@@ -47,10 +56,6 @@ h2, .heading--large {
       margin-top: _rem(-0.55);
     }
   }
-
-  .text--contrasting {
-    font-weight: var(--font-weight--bold);
-  }
 }
 
 // <h3> specific properties.
@@ -63,10 +68,6 @@ h3, .heading--medium {
 
   &.heading--flush {
     margin-top: _rem(-0.55);
-  }
-
-  .text--contrasting {
-    font-weight: var(--font-weight--bold);
   }
 }
 
@@ -81,10 +82,6 @@ h4, .heading--small {
   &.heading--flush {
     margin-top: _rem(-0.5);
   }
-
-  .text--contrasting {
-    font-weight: var(--font-weight--bold);
-  }
 }
 
 // <h5> specific properties.
@@ -97,10 +94,6 @@ h5, .heading--xsmall {
 
   &.heading--flush {
     margin-top: _rem(-0.4);
-  }
-
-  .text--contrasting {
-    font-weight: var(--font-weight--bold);
   }
 }
 
@@ -115,10 +108,6 @@ h6, .heading--2xsmall {
   &.heading--flush {
     margin-top: _rem(-0.4);
   }
-
-  .text--contrasting {
-    font-weight: var(--font-weight--bold);
-  }
 }
 
 // Styles specific to <h1> and <h2> elements.
@@ -131,15 +120,6 @@ h2, .heading--large {
     height: .125em;
     background-color: var(--sky-blue);
     max-width: _rem(8);
-  }
-
-  &.heading--reversed {
-    --headings-color: color-mix(in srgb, var(--text-color--light) 85%, transparent);
-
-    // @TODO: Remove fallback when appropriate.
-    @supports not (color: color-mix(in srgb, white, white)) {
-      --headings-color: var(--text-color--light);
-    }
   }
 }
 
@@ -168,21 +148,20 @@ h6, .heading--2xsmall {
     display: none !important;
   }
 
-  &.heading--reversed {
-    --headings-color: color-mix(in srgb, var(--text-color--light) 90%, transparent) !important;
-
-    // @TODO: Remove fallback when appropriate.
-    @supports not (color: color-mix(in srgb, white, white)) {
-      --headings-color: var(--text-color--light) !important;
-    }
+  .text--contrasting {
+    font-weight: var(--font-weight--bold);
   }
 }
 
 // Modifiers.
 .heading {
 
-  &--reversed .text--contrasting {
-    color: var(--text-color--light);
+  &--reversed {
+    --headings-color: var(--text-color--light);
+
+    .text--contrasting {
+      color: var(--text-color--light);
+    }
   }
 
   &--subtle {

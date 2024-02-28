@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/intro-form",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Provides a specialized container for presenting a form with accompanying intro content.",
   "publishConfig": {
     "access": "public",
