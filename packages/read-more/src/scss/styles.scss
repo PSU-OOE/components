@@ -1,7 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 
 .read-more {
-  text-decoration: none;
+  text-decoration: inherit;
   font-size: var(--font-size--small);
   font-family: var(--font-family--default);
   line-height: var(--line-height--2xsnug);
@@ -36,6 +36,4 @@
       outline-color: var(--white);
     }
   }
-
-
 }

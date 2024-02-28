@@ -1,24 +1,99 @@
+@import '../../../base/src/scss/imports/variables';
+
+$event-spotlight-wide: 410px;
+
 .event-spotlight {
   container-type: inline-size;
-  position: relative;
 
-  &__image {
-    @container (min-width: 410px) {
-      position: absolute;
-      inset: 0 0 0 0;
+  &__container {
+    display: flex;
+    min-height: _rem(20);
+    background: var(--beaver-blue);
+    flex-direction: column;
+
+    @container (min-width: #{$event-spotlight-wide}) {
+      flex-flow: row-reverse;
     }
   }
 
-  &__content {
-    background: var(--nittany-navy);
+  &__image img {
+    @container (min-width: #{$event-spotlight-wide}) {
+      object-fit: cover;
+      height: 100%;
+      width: auto;
+      max-width: _rem(17.5);
+    }
+  }
+
+  &__event {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: _rem(3);
     position: relative;
     padding: 0 _rem(2) _rem(2) _rem(2);
+
+    @container (min-width: #{$event-spotlight-wide}) {
+      padding: _rem(2.5) 0 _rem(2.5) _rem(2.5);
+    }
 
     &::before {
       position: absolute;
       content: '';
       inset: _rem(-6) 0 100% 0;
-      background: linear-gradient(to bottom, transparent, var(--nittany-navy));
+      background: linear-gradient(to bottom, transparent, var(--beaver-blue));
+
+      @container (min-width: 410px) {
+        inset: 0 _rem(-6) 0 100%;
+        background: linear-gradient(to right, var(--beaver-blue), transparent);
+      }
+    }
+  }
+
+  &__title {
+    font-size: var(--font-size--large);
+    font-family: var(--font-family--display);
+    line-height: var(--line-height--2xsnug);
+    font-weight: var(--font-weight--medium);
+  }
+
+  &__datetime {
+    color: var(--text-color--light);
+    font-size: var(--font-size--xsmall);
+    display: flex;
+    flex-wrap: wrap;
+    gap: _rem(1);
+  }
+
+  &__date {
+    font-weight: var(--font-weight--bold);
+  }
+
+  // If the event spans multiple days, don't display the time.
+  &__datetime:not(:has([data-same-day])) &__time {
+    display: none;
+  }
+
+  &__all {
+
+  }
+
+  a.event-spotlight__link {
+    text-decoration: none;
+  }
+
+  &__link {
+    color: var(--text-color--light);
+    display: flex;
+    flex-direction: column;
+    gap: _rem(.8);
+
+    // Needed so focus rings aren't cut off by the shadow.
+    z-index: 1;
+
+    &:focus-visible {
+      outline-color: var(--white);
     }
   }
 }
