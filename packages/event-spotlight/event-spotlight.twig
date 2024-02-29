@@ -8,7 +8,7 @@
       {% endif %}
     </div>
     <div class="event-spotlight__event">
-      <{{ use_cta_button ? 'div' : 'a' }} class="event-spotlight__link"{% if not use_cta_button %} href="{{ url }}"{% endif %}>
+      <a class="event-spotlight__link" href="{{ url }}">
         {% include '@psu-ooe/heading/heading.twig' with {
           reversed: true,
           size: 'medium',
@@ -37,22 +37,14 @@
         {% endif %}
         {% if cta_text %}
           <div class="event-spotlight__more">
-            {% if use_cta_button %}
-              {% include '@psu-ooe/cta/cta-block.twig' with {
-                label: cta_text,
-                url: '#',
-                color: 'color-keystone',
-              } only %}
-            {% else %}
-             {% include '@psu-ooe/read-more/read-more.twig' with {
-                reverse: true,
-                size: 'medium',
-                title: cta_text
-              } only %}
-          {% endif %}
+            {% include '@psu-ooe/read-more/read-more.twig' with {
+              reverse: true,
+              size: 'medium',
+              title: cta_text
+            } only %}
           </div>
         {% endif %}
-      </{{ use_cta_button ? 'div' : 'a' }}>
+      </a>
       {% if all_events_url and all_events_text %}
         <div class="event-spotlight__all">
           {% include '@psu-ooe/read-more/read-more.twig' with {

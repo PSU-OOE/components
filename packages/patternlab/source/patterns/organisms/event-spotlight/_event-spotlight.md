@@ -15,4 +15,3 @@ title: Event Spotlight
 | cta_text        | string  | false    | Optional call to action text to display in the spotlight.                                                                       |
 | all_events_text | string  | false    | Optional text for an all events page link.                                                                                      |
 | all_events_url  | string  | false    | Optional url to an all events page.                                                                                             |
-| use_cta_button  | boolean | false    | ***This is only included as a food for thought example -- will be removed!***                                                   |
