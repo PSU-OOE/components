@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/alert",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provides an alert.",
   "ooe": {
     "namespace": "molecules"
