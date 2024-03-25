@@ -1,8 +1,12 @@
 @import "imports/variables";
 @import "imports/layout";
-@import "colors";
-@import "spacing";
-@import "transitions";
+
+// Custom properties.
+@import "variables/colors";
+@import "variables/spacing";
+@import "variables/transitions";
+@import "variables/typography";
+
 @import "typography";
 
 // Universal selectors.
