@@ -1876,6 +1876,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/input-range@workspace:packages/input-range":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-range@workspace:packages/input-range"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/intro-form@*, @psu-ooe/intro-form@workspace:packages/intro-form":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
