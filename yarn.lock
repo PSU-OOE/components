@@ -1771,6 +1771,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/form@workspace:packages/form":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/form@workspace:packages/form"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/grid@*, @psu-ooe/grid@workspace:packages/grid":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/grid@workspace:packages/grid"
