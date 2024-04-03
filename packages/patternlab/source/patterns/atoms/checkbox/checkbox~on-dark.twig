@@ -1,0 +1,10 @@
+{% set checkbox %}
+  <div data-dark>
+    <input type="checkbox">
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: checkbox,
+  background: 'blue',
+} only %}
+
