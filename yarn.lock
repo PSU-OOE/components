@@ -1720,6 +1720,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/details@workspace:packages/details":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/details@workspace:packages/details"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/divider@*, @psu-ooe/divider@workspace:packages/divider":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/divider@workspace:packages/divider"
@@ -1823,6 +1831,14 @@ __metadata:
 "@psu-ooe/infographic@*, @psu-ooe/infographic@workspace:packages/infographic":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/infographic@workspace:packages/infographic"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-checkbox@workspace:packages/input-checkbox":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-checkbox@workspace:packages/input-checkbox"
   dependencies:
     "@psu-ooe/base": ^2.0
   languageName: unknown
