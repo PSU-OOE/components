@@ -1,0 +1,83 @@
+:root {
+  // Required indicators.
+  --form-required-indicator-color: var(--pa-link);
+
+  // Help tooltips.
+  --form-help-color: var(--pa-link);
+
+  // Labels.
+  --form-label-text-color: var(--text-color--default);
+  --form-label-font-family: var(--font-family--default);
+  --form-label-font-size: var(--font-size--msmall);
+  --form-label-font-weight: var(--font-weight--semibold);
+  --form-label-line-height: var(--line-height--2xsnug);
+
+  // Elements.
+  --form-element-width: 100%;
+  --form-element-background-color: var(--slate-light);
+  --form-element-border-color: var(--limestone);
+  --form-element-font-family: var(--font-family--default);
+  --form-element-font-size: var(--font-size--msmall);
+  --form-element-font-weight: var(--font-weight--regular);
+  --form-element-text-color: var(--text-color--default);
+  --form-element-line-height: var(--line-height--2xsnug);
+  --form-element-margin--vertical: #{_rem(2.5)};
+  --form-element-placeholder-color: color-mix(in srgb, transparent, var(--slate) 90%);
+  --form-element-disabled-background-color: color-mix(in srgb, transparent, var(--limestone) 20%);
+  --form-element-disabled-text-color: color-mix(in srgb, transparent, var(--slate) 90%);
+  --form-element-padding--vertical: #{_rem(1.57)};
+  --form-element-padding--horizontal: #{_rem(1)};
+  --form-element-border-radius--default: 0;
+  --form-element-border-radius--rounded: #{_rem(.8)};
+
+  // Text counter errors.
+  --form-element-text-count-error-color: var(--error-red);
+
+  // Inline warnings.
+  --form-warning-background-color: var(--keystone-light);
+  --form-warning-text-color: var(--nittany-navy);
+  --form-warning-padding--horizontal: #{_rem(.3)};
+  --form-warning-padding--vertical: #{_rem(.3)};
+
+  // Inline errors.
+  --form-error-text-color: var(--white);
+  --form-error-background-color: var(--error-red);
+  --form-error-padding--horizontal: #{_rem(.3)};
+  --form-error-padding--vertical: #{_rem(.3)};
+
+  // Webform more element.
+  --form-element-webform-more-color: var(--pa-link);
+
+  // Progress tracker.
+  --webform-progress-tracker-color: var(--headings-color);
+}
+
+// Overrides for light contexts.
+[data-light] {
+  --form-required-indicator-color: var(--pa-link);
+  --form-help-color: var(--pa-link);
+  --form-label-text-color: var(--text-color--default);
+  --form-element-disabled-background-color: color-mix(in srgb, transparent, var(--limestone) 20%);
+  --form-element-disabled-text-color: color-mix(in srgb, transparent, var(--slate) 90%);
+  --form-element-webform-more-color: var(--pa-link);
+  --form-element-text-count-error-color: var(--error-red);
+  --webform-progress-tracker-color: var(--headings-color);
+}
+
+// Overrides for dark contexts.
+[data-dark] {
+  --form-required-indicator-color: var(--pa-link-light);
+  --form-help-color: var(--pa-link-light);
+  --form-label-text-color: var(--text-color--light);
+  --form-element-disabled-background-color: color-mix(in srgb, transparent, var(--limestone) 90%);
+  --form-element-disabled-text-color: color-mix(in srgb, transparent, var(--nittany-navy) 85%);
+  --form-element-webform-more-color: var(--pa-link-light);
+  --form-element-text-count-error-color: var(--keystone-light);
+  --webform-progress-tracker-color: var(--white);
+}
+
+// Overrides for compact contexts.
+[data-compact] {
+  --form-element-margin--vertical: #{_rem(1.5)};
+  --form-element-padding--vertical: #{_rem(1)};
+}
