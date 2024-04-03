@@ -1868,6 +1868,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/input-radio@workspace:packages/input-radio":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-radio@workspace:packages/input-radio"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/intro-form@*, @psu-ooe/intro-form@workspace:packages/intro-form":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
@@ -2096,14 +2104,6 @@ __metadata:
 "@psu-ooe/quote@*, @psu-ooe/quote@workspace:packages/quote":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/quote@workspace:packages/quote"
-  dependencies:
-    "@psu-ooe/base": ^2.0
-  languageName: unknown
-  linkType: soft
-
-"@psu-ooe/radio@workspace:packages/radio":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/radio@workspace:packages/radio"
   dependencies:
     "@psu-ooe/base": ^2.0
   languageName: unknown

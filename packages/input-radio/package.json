@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/radio",
+  "name": "@psu-ooe/input-radio",
   "version": "1.0.0",
   "description": "Provides radio element styles.",
   "publishConfig": {
