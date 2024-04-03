@@ -1844,6 +1844,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/input-file@workspace:packages/input-file":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-file@workspace:packages/input-file"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/intro-form@*, @psu-ooe/intro-form@workspace:packages/intro-form":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
