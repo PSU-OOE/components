@@ -2140,6 +2140,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/select@workspace:packages/select":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/select@workspace:packages/select"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/skip-link@*, @psu-ooe/skip-link@workspace:packages/skip-link":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/skip-link@workspace:packages/skip-link"
