@@ -1886,6 +1886,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/legend@workspace:packages/legend":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/legend@workspace:packages/legend"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/modal@*, @psu-ooe/modal@workspace:packages/modal":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/modal@workspace:packages/modal"
