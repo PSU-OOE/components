@@ -1,0 +1,10 @@
+input[type="time"] {
+
+  &::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

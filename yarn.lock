@@ -1860,11 +1860,55 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/input-common@^1.0, @psu-ooe/input-common@workspace:packages/input-common":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-common@workspace:packages/input-common"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-date@workspace:packages/input-date":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-date@workspace:packages/input-date"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-email@workspace:packages/input-email":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-email@workspace:packages/input-email"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/input-file@workspace:packages/input-file":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-file@workspace:packages/input-file"
   dependencies:
     "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-number@workspace:packages/input-number":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-number@workspace:packages/input-number"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-password@workspace:packages/input-password":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-password@workspace:packages/input-password"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
@@ -1881,6 +1925,51 @@ __metadata:
   resolution: "@psu-ooe/input-range@workspace:packages/input-range"
   dependencies:
     "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-search@workspace:packages/input-search":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-search@workspace:packages/input-search"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-tel@workspace:packages/input-tel":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-tel@workspace:packages/input-tel"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-text@workspace:packages/input-text":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-text@workspace:packages/input-text"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-time@workspace:packages/input-time":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-time@workspace:packages/input-time"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/input-url@workspace:packages/input-url":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-url@workspace:packages/input-url"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/input-common": ^1.0
   languageName: unknown
   linkType: soft
 
