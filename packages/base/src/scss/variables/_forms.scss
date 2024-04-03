@@ -50,6 +50,8 @@
 
   // Progress tracker.
   --webform-progress-tracker-color: var(--headings-color);
+
+  --webform-progress-tracker-margin--vertical: #{_rem(2)};
 }
 
 // Overrides for light contexts.
@@ -78,6 +80,7 @@
 
 // Overrides for compact contexts.
 [data-compact] {
-  --form-element-margin--vertical: #{_rem(1.5)};
-  --form-element-padding--vertical: #{_rem(1)};
+  --form-element-margin--vertical: #{_rem(1.8)};
+  --form-element-padding--vertical: #{_rem(1.3)};
+  --webform-progress-tracker-margin--vertical: #{_rem(1.5)};
 }
