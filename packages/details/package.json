@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/details",
+  "version": "1.0.0",
+  "description": "Provides details element styles.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^2.0"
+  }
+}
