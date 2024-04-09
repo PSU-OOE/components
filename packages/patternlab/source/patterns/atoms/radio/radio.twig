@@ -1,1 +1,7 @@
-<input type="radio">
+{% set checkbox %}
+  <input type="radio" name="radio" id="radio"><label class="visually-hidden" for="radio">Demo radio</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: checkbox,
+} only %}
+

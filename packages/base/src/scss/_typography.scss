@@ -1,5 +1,5 @@
 p, .paragraph--default {
-  color: var(--text-color--default);
+  color: var(--text-color);
   font-size: var(--font-size--default);
   line-height: var(--line-height--default);
   margin: 0 0 var(--text-element-vertical-space--default);
@@ -10,7 +10,7 @@ p, .paragraph--default {
 }
 
 .text {
-  color: var(--text-color--default);
+  color: var(--text-color);
   font-size: var(--font-size--default);
   font-weight: var(--font-weight--default);
   line-height: var(--line-height--default);

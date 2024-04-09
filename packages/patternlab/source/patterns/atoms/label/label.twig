@@ -1,1 +1,7 @@
-<label>This is a label</label>
+{% set label %}
+  <label for="dummy_input">This is a label</label>
+  <input class="visually-hidden" name="dummy_input" id="dummy_input">
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: label,
+} only %}

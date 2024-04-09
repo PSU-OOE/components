@@ -1,4 +1,12 @@
-@TODO: Fill me in with form elements when they're available.
-<form>
-  <label>I'm kinda boring right now, sorry.</label>
-</form>
+{% set form %}
+  <form>
+    <label for="demo_form_input">Demo input</label>
+    <input name="demo_form_input" id="demo_form_input">
+    <button>Submit</button>
+  </form>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: form,
+} only %}
+

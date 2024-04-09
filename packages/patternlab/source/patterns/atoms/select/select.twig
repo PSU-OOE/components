@@ -1,5 +1,12 @@
-<select>
+{% set select %}
+<select name="select" id="select">
   <option>Yes</option>
   <option>No</option>
   <option>Maybe</option>
 </select>
+<label class="visually-hidden" for="select">Demo select</label>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: select,
+} only %}

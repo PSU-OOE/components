@@ -1,1 +1,6 @@
-<input type="date">
+{% set date %}
+  <input type="date" name="date" id="date"><label class="visually-hidden" for="date">Demo date</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: date,
+} only %}
