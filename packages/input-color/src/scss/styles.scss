@@ -1,4 +1,28 @@
+@import "../../../base/src/scss/imports/variables";
+
 input[type="color"] {
   border: none;
   background: none;
+  height: 100%;
+  aspect-ratio: 1;
+
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  &::-webkit-color-swatch {
+    border-width: _rem(.1);
+    border-style: solid;
+    transition: border-color var(--transition-duration--default) linear;
+  }
+
+  &, &:is([data-light] *) {
+    &::-webkit-color-swatch {
+      border-color: var(--nittany-navy);
+    }
+  }
+
+  &:is([data-dark] *)::-webkit-color-swatch {
+    border-color: var(--white);
+  }
 }
