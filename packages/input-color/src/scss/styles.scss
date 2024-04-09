@@ -1,28 +1,20 @@
 @import "../../../base/src/scss/imports/variables";
 
 input[type="color"] {
-  border: none;
   background: none;
   height: 100%;
   aspect-ratio: 1;
+  padding: 0;
+  border-width: _rem(.1);
+  border-style: solid none solid solid;
+  border-color: var(--form-element-border-color);
 
   &::-webkit-color-swatch-wrapper {
     padding: 0;
   }
 
   &::-webkit-color-swatch {
-    border-width: _rem(.1);
-    border-style: solid;
+    border: none;
     transition: border-color var(--transition-duration--default) linear;
-  }
-
-  &, &:is([data-light] *) {
-    &::-webkit-color-swatch {
-      border-color: var(--nittany-navy);
-    }
-  }
-
-  &:is([data-dark] *)::-webkit-color-swatch {
-    border-color: var(--white);
   }
 }
