@@ -11,7 +11,7 @@
   'error': 'alert'
 }%}
 
-<div class="alert alert--{{ severity }}" role="{{ aria_mapping[severity] }}">
+<div class="alert alert--{{ severity }}" role="{{ aria_mapping[severity] }}" data-light>
   <div class="alert__inner-wrapper">
     <div class="alert__icon">
       {% include '@psu-ooe/sprite/sprite.twig' with { name: icon_mapping[severity]} only %}
