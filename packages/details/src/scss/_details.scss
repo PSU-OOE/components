@@ -7,14 +7,21 @@ details {
     border-top: none;
   }
 
-  // The first child after the summary needs a top margin.
-  & > summary + * {
-    margin-top: _rem(3);
+  &[open] > details[open] {
+    border-bottom: none;
+  }
+
+  &[open] > summary {
+    margin-bottom: _rem(3);
+
+    & ~:last-child {
+      margin-bottom: _rem(3);
+    }
   }
 
   // All children (except the summary) need a left margin.
   & > *:not(summary) {
-    padding-left: _rem(5);
+    margin-left: _rem(5);
   }
 
   &, &:is([data-light] *) {
