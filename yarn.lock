@@ -1860,6 +1860,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/input-color@workspace:packages/input-color":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/input-color@workspace:packages/input-color"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/input-common@^1.0, @psu-ooe/input-common@workspace:packages/input-common":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-common@workspace:packages/input-common"
