@@ -5,9 +5,12 @@ input[type="color"] {
   height: 100%;
   aspect-ratio: 1;
   padding: 0;
-  border-width: _rem(.1);
-  border-style: solid none solid solid;
-  border-color: var(--form-element-border-color);
+  border: _rem(.1) solid var(--form-element-border-color);
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 
   &::-webkit-color-swatch-wrapper {
     padding: 0;
