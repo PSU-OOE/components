@@ -9,7 +9,7 @@ details {
 
   // The first child after the summary needs a top margin.
   & > summary + * {
-    padding-top: _rem(3);
+    margin-top: _rem(3);
   }
 
   // All children (except the summary) need a left margin.
