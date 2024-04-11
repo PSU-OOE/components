@@ -14,7 +14,7 @@ details {
   &[open] > summary {
     margin-bottom: _rem(3);
 
-    & ~:last-child {
+    & ~ :last-child {
       margin-bottom: _rem(3);
     }
   }

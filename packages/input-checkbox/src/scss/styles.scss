@@ -23,11 +23,11 @@ input[type="checkbox"] {
     position: absolute;
     content: '';
     inset: 0;
-    border: _rem(.1) solid var(--form-element-border-color);
+    border-width: _rem(.1);
+    border-style: solid;
     border-radius: _rem(.5);
-    background-color: var(--form-element-background-color);
     transition: background-color var(--transition-duration--default) linear,
-    border-color var(--transition-duration--default) linear;
+                border-color var(--transition-duration--default) linear;
   }
 
   &::after {
@@ -41,91 +41,98 @@ input[type="checkbox"] {
     transition: background-color var(--transition-duration--default) linear;
   }
 
-  &:checked {
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &, &:is([data-light] *) {
     &::before {
+      background-color: var(--form-element-background-color);
+      border-color: var(--form-element-border-color);
+    }
+
+    &:checked::before {
       background-color: var(--beaver-blue);
       border-color: var(--beaver-blue);
     }
 
-    &::after {
-      background-color: var(--white);
-    }
-  }
-
-  @media (any-hover: hover) {
-    &:hover {
-      &::before {
+    @media (any-hover: hover) {
+      &:hover::before {
         background-color: var(--white);
-        border:  _rem(.1) solid var(--nittany-navy);
-      }
-
-      &:checked::after {
-        background-color: var(--pa-link);
+        border-color: var(--nittany-navy);
       }
     }
-  }
 
-  &:disabled {
-    cursor: not-allowed;
-    &::before {
-      background-color: color-mix(in srgb, transparent, var(--slate) 70%);
-      border-color: color-mix(in srgb, transparent, var(--slate) 70%);
-    }
-
-    &:checked::after {
-      background-color: var(--white);
-    }
-  }
-
-  // Light mode profile overrides.
-  // @TODO: Make checkbox color variables?
-  &:is([data-light] *) {
-    &::before {
-      border: _rem(.1) solid var(--form-element-border-color);
-    }
-
-    &:disabled::before {
-      background-color: color-mix(in srgb, transparent, var(--slate) 70%);
-      border-color: color-mix(in srgb, transparent, var(--slate) 70%);
-    }
-  }
-
-  // Dark mode profile overrides.
-  // @TODO: Make checkbox color variables?
-  &:is([data-dark] *) {
     &:checked {
-      &::before {
-        background-color: var(--nittany-navy);
-        border: _rem(.1) solid var(--white);
+      &::after {
+        background-color: var(--white);
       }
 
       @media (any-hover: hover) {
-        &:hover {
-          &::before {
-            background-color: var(--white);
-          }
-
-          &::after {
-            background-color: var(--pa-link);
-          }
+        &:hover::after {
+          background-color: var(--pa-link);
         }
       }
     }
 
     &:disabled {
-      &, &:hover {
-        &::before {
-          background-color: color-mix(in srgb, transparent, var(--slate) 90%);
-          border-color: var(--light-mauve);
-        }
-
-        &:checked::after {
-          background-color: var(--slate-light);
-        }
+      &::before {
+        background-color: var(--form-element-disabled-background-color);
+        color: var(--white);
+        border:  _rem(.1) solid var(--form-element-border-color);
       }
 
-      & ~ * {
-        color: var(--medium-grey);
+      &:checked {
+        &::before {
+          background-color: color-mix(in srgb, transparent, var(--slate) 70%);
+          border-color: color-mix(in srgb, transparent, var(--slate) 70%);
+        }
+
+        &::after,
+        &:hover::after {
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+
+  &:is([data-dark] *) {
+
+    &:checked::before {
+      background: var(--nittany-navy);
+      border-color: var(--white);
+    }
+
+    @media (any-hover: hover) {
+
+      &:checked:hover {
+        &::before {
+          background-color: var(--white);
+          border-color: var(--nittany-navy);
+        }
+
+        &::after {
+          background-color: var(--pa-link);
+        }
+      }
+    }
+
+    &:disabled {
+      &::before {
+        border-color: var(--light-mauve);
+      }
+
+      &:checked {
+        &::before,
+        &:hover::before {
+          border-color: var(--light-mauve);
+          background-color: color-mix(in srgb, transparent, var(--slate) 90%);
+        }
+
+        &::after,
+        &:hover::after {
+          background-color: var(--slate-light);
+        }
       }
     }
   }
