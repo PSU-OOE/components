@@ -1,0 +1,9 @@
+{% set color %}
+  <div data-dark>
+    <input disabled type="color" name="color_on_dark_disabled" id="color_on_dark_disabled"><label class="visually-hidden" for="color_on_dark_disabled">Demo color on dark disabled</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: color,
+  background: 'blue',
+} only %}
