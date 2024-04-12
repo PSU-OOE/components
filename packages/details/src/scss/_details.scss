@@ -12,10 +12,10 @@ details {
   }
 
   &[open] > summary {
-    margin-bottom: _rem(3);
+    margin-bottom: _rem(1);
 
     & ~ :last-child {
-      margin-bottom: _rem(3);
+      margin-bottom: var(--form-element-margin--vertical);
     }
   }
 
