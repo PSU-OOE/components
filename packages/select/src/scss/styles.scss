@@ -42,7 +42,7 @@ select {
 
   &:not([multiple]) {
     &, &:is([data-light] *) {
-      &:not(:disabled) {
+      &:not(:disabled, .error) {
         box-shadow: var(--form-element-border-color) 0 _rem(.1);
       }
     }
