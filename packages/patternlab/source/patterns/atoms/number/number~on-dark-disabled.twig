@@ -1,0 +1,10 @@
+{% set number %}
+  <div data-dark>
+    <input disabled type="number" name="demo_number_on_dark_disabled" id="demo_number_on_dark_disabled"><label class="visually-hidden" for="demo_number_on_dark_disabled">Demo number on dark background disabled</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: number,
+  background: 'blue',
+} only %}
+

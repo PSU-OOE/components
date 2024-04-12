@@ -1,0 +1,10 @@
+{% set url %}
+  <div data-dark>
+    <input type="url" name="demo_url_on_dark" id="demo_url_on_dark"><label class="visually-hidden" for="demo_url_on_dark">Demo url on dark background</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: url,
+  background: 'blue',
+} only %}
+
