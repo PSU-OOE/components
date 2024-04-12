@@ -40,14 +40,16 @@ select {
     border: _rem(.1) solid var(--error-red);
   }
 
-  &, &:is([data-light] *) {
-    &:not(:disabled) {
-      box-shadow: var(--form-element-border-color) 0 _rem(.1);
+  &:not([multiple]) {
+    &, &:is([data-light] *) {
+      &:not(:disabled) {
+        box-shadow: var(--form-element-border-color) 0 _rem(.1);
+      }
     }
-  }
 
-  &:is([data-dark] *) {
-    box-shadow: none;
+    &:is([data-dark] *) {
+      box-shadow: none;
+    }
   }
 }
 
