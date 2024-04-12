@@ -64,12 +64,13 @@ input[type="radio"] {
     }
 
     &:disabled {
-      &::before {
-        background-color: var(--form-element-disabled-background-color);
-      }
+      &, &:hover {
+        &::before {
+          background-color: var(--form-element-disabled-background-color);
+          border-color: var(--form-element-border-color);
+        }
 
-      &:checked {
-        &::after, &:hover::after {
+        &:checked::after {
           background-color: color-mix(in srgb, transparent, var(--slate) 70%);
         }
       }
