@@ -1,0 +1,6 @@
+{% set textarea %}
+  <textarea readonly name="demo_textarea_readonly" id="demo_textarea_readonly"></textarea><label class="visually-hidden" for="demo_textarea_readonly">Demo textarea readonly</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: textarea,
+} only %}
