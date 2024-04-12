@@ -41,22 +41,17 @@ input[type="file"] {
     }
   }
 
-  &:disabled {
-    background-color: var(--form-element-disabled-background-color);
-    color: var(--form-element-disabled-text-color);
-    cursor: not-allowed;
-
-    &::file-selector-button {
-      background-color: var(--limestone);
-      color: color-mix(in srgb, transparent, var(--nittany-navy) 80%);
+  &, &:is([data-light] *) {
+    &:disabled {
+      background-color: var(--form-element-disabled-background-color);
+      color: var(--form-element-disabled-text-color);
       cursor: not-allowed;
-    }
-  }
 
-  &:is([data-light] *) {
-    &:disabled::file-selector-button {
-      background-color: var(--limestone);
-      color: color-mix(in srgb, transparent, var(--nittany-navy) 80%);
+      &::file-selector-button {
+        background-color: var(--limestone);
+        color: color-mix(in srgb, transparent, var(--nittany-navy) 80%);
+        cursor: not-allowed;
+      }
     }
   }
 
