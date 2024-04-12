@@ -1,0 +1,7 @@
+{% set file %}
+  <input disabled type="file" name="file_single_disabled" id="file_single_disabled"><label class="visually-hidden" for="file_single_disabled">Demo file single disabled</label>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: file,
+} only %}
