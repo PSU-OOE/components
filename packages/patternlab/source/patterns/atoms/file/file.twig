@@ -1,1 +1,7 @@
-<input type="file" name="file" id="file"><label class="visually-hidden" for="file">Demo file</label>
+{% set file %}
+  <input type="file" name="file" id="file"><label class="visually-hidden" for="file">Demo file</label>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: file,
+} only %}
