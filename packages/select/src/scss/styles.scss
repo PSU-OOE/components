@@ -35,8 +35,19 @@ select {
     background-position: calc(100% - var(--form-element-padding--horizontal)) center;
     background-size: auto _rem(.8);
   }
+
   &.error {
     border: _rem(.1) solid var(--error-red);
+  }
+
+  &, &:is([data-light] *) {
+    &:not(:disabled) {
+      box-shadow: var(--form-element-border-color) 0 _rem(.1);
+    }
+  }
+
+  &:is([data-dark] *) {
+    box-shadow: none;
   }
 }
 

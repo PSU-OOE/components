@@ -14,8 +14,8 @@
 
   // Elements.
   --form-element-width: 100%;
-  --form-element-background-color: var(--slate-light);
-  --form-element-border-color: var(--limestone);
+  --form-element-background-color: color-mix(in srgb, var(--pugh-blue), var(--white) 60%);
+  --form-element-border-color: color-mix(in srgb, var(--slate) 55%, var(--white));
   --form-element-font-family: var(--font-family--default);
   --form-element-font-size: var(--font-size--msmall);
   --form-element-font-weight: var(--font-weight--regular);

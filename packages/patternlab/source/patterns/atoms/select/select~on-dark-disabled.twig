@@ -1,0 +1,15 @@
+{% set select %}
+  <div data-dark>
+    <select disabled name="select_on_dark_disabled" id="select_on_dark_disabled">
+      <option>Yes</option>
+      <option>No</option>
+      <option>Maybe</option>
+    </select>
+    <label class="visually-hidden" for="select_on_dark_disabled">Demo select</label>
+  </div>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: select,
+  background: 'blue',
+} only %}
