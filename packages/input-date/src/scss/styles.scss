@@ -8,6 +8,10 @@ input[type="date"] {
     background-image: none;
   }
 
+  &::-webkit-date-and-time-value {
+    text-align: left;
+  }
+
   &::-webkit-calendar-picker-indicator {
     background: none;
     cursor: pointer;
