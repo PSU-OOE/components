@@ -1,7 +1,18 @@
 input[type="date"] {
 
   &::-webkit-calendar-picker-indicator {
+    background: var(--form-element-text-color);
+    mask: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMjAgM2gtMVYxaC0ydjJIN1YxSDV2Mkg0Yy0xLjEgMC0yIC45LTIgMnYxNmMwIDEuMS45IDIgMiAyaDE2YzEuMSAwIDItLjkgMi0yVjVjMC0xLjEtLjktMi0yLTJ6bTAgMThINFY4aDE2djEzeiIvPjxwYXRoIGZpbGw9Im5vbmUiIGQ9Ik0wIDBoMjR2MjRIMHoiLz48L3N2Zz4=') no-repeat center / 100%;
     cursor: pointer;
+
+    @media (any-hover: hover) {
+      transition: transform var(--transition-duration--default) linear;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+
 
     &:disabled {
       cursor: not-allowed;
