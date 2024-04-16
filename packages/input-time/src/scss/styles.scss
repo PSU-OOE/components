@@ -4,6 +4,10 @@ input[type="time"] {
   appearance: none;
   transition: background-size var(--transition-duration--default) linear;
 
+  &:disabled {
+    background-image: none;
+  }
+
   &::-webkit-calendar-picker-indicator {
     background: none;
     cursor: pointer;
