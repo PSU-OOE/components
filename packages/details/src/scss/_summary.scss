@@ -9,8 +9,8 @@ summary {
   font-weight: var(--font-weight--medium);
   letter-spacing: var(--letter-spacing--medium);
   line-height: var(--line-height--snug);
-  transition: color var(--transition-duration--default) linear,
-  background-color var(--transition-duration--default) linear;
+  transition: background-color var(--transition-duration--default) linear,
+              color var(--transition-duration--default) linear;
 
   // Turn off the native marker.
   &::-webkit-details-marker,
@@ -21,7 +21,7 @@ summary {
   // Replace the native marker with a sprite.
   &::before {
     position: absolute;
-    inset: 0 calc(100% - 3.6rem) 0 1.4rem;
+    inset: 0 calc(100% - _rem(3.6)) 0 _rem(1.4);
     content: '';
     -webkit-mask-size: _rem(2.4) auto;
     mask-size: _rem(2.4) auto;
@@ -70,6 +70,7 @@ summary {
       background-color: var(--pa-link-light);
       outline: _rem(.2) solid var(--pa-link);
       outline-offset: _rem(-.2);
+
       &::before {
         background-color: var(--beaver-blue);
       }

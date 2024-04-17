@@ -3,10 +3,12 @@ details {
   border-top-style: dotted;
   border-bottom-style: dotted;
 
+  // Ensure that adjacent details don't double up borders.
   & + details {
     border-top: none;
   }
 
+  // Ensure that nested details don't double up margins.
   &[open] > details[open] {
     border-bottom: none;
   }
