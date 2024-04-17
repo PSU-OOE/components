@@ -6,7 +6,12 @@
   {% set color = 'light-grey' %}
 {% endif %}
 
-<div class="intro-form">
+{% set color_map = {
+  'light-grey': 'light',
+  'beaver-blue': 'dark',
+} %}
+
+<div class="intro-form" data-{{ color_map[color] }}>
   {% set geometric_classes = [
     'intro-form__geometrics',
     'intro-form__geometrics--' ~ color
@@ -34,7 +39,7 @@
     </div>
   </div>
   <div class="intro-form__container">
-    <div class="intro-form__first">
+    <div class="intro-form__first" data-dark>
       {% if images %}
         <div class="intro-form__image">
           {% if images|length > 1 %}
