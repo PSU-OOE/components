@@ -27,17 +27,8 @@ summary {
     mask-size: _rem(2.4) auto;
     -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233 407c13 12 33 12 46 0l192-192a32 32 0 0 0-46-46L256 339 87 169a32 32 0 0 0-46 46l192 192z"/></svg>') no-repeat center;
     mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233 407c13 12 33 12 46 0l192-192a32 32 0 0 0-46-46L256 339 87 169a32 32 0 0 0-46 46l192 192z"/></svg>') no-repeat center;
-    transition: transform var(--transition-duration--default) linear,
-    background-color var(--transition-duration--default) linear;
-  }
-
-  &.form-required::after {
-    font-size: inherit;
-  }
-
-  // Hide empty summaries.
-  > .summary:empty {
-    display: none;
+    transition: background-color var(--transition-duration--default) linear,
+                transform var(--transition-duration--default) linear;
   }
 
   // Flip the chevron when open.

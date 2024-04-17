@@ -76,7 +76,6 @@ input[type="checkbox"] {
     &:disabled {
       &::before {
         background-color: var(--form-element-disabled-background-color);
-        color: var(--white);
         border:  _rem(.1) solid var(--form-element-border-color);
       }
 
