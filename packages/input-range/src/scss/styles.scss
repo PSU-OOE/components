@@ -32,7 +32,6 @@ input[type="range"] {
     appearance: none;
     -webkit-appearance: none;
     height: _rem(.6);
-    background-color: var(--slate);
   }
 
   @include range-thumb {
@@ -41,8 +40,6 @@ input[type="range"] {
     width: _rem(2.8);
     height: _rem(2.8);
     border: _rem(.2) solid var(--white);
-    background-color: var(--pa-link);
-    box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 30%) 0 _rem(.3) _rem(.6);
     border-radius: 50%;
   }
 
@@ -60,16 +57,9 @@ input[type="range"] {
 
   &:disabled {
     cursor: not-allowed;
-    @include range-container {
-      background-color: var(--limestone);
-    }
-
-    @include range-thumb {
-      background-color: var(--limestone);
-    }
   }
 
-  &:is([data-light] *) {
+  &, &:is([data-light] *) {
     @include range-container {
       background-color: var(--slate);
     }
