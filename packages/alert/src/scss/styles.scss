@@ -45,7 +45,7 @@
   }
 
   &--info {
-    background-color: mix($sky-blue, $white, 10%);
+    background-color: color-mix(in srgb, var(--white), var(--sky-blue) 10%);
     border-top: _rem(1) solid var(--sky-blue);
 
     .sprite {
@@ -54,7 +54,7 @@
   }
 
   &--error {
-    background-color: mix($error-red, $white, 6%);
+    background-color: color-mix(in srgb, var(--white), var(--error-red) 6%);
     border-top: _rem(1) solid var(--error-red);
 
     .sprite {
@@ -63,7 +63,7 @@
   }
 
   &--warning {
-    background-color: mix($keystone, $white, 20%);
+    background-color: color-mix(in srgb, var(--white), var(--keystone) 20%);
     border-top: _rem(1) solid var(--keystone);
 
     .sprite {
@@ -72,7 +72,7 @@
   }
 
   &--status {
-    background-color: mix($creek, $white, 10%);
+    background-color: color-mix(in srgb, var(--white), var(--creek) 10%);
     border-top: _rem(1) solid var(--creek);
 
     .sprite {
