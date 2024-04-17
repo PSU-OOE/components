@@ -1,3 +1,7 @@
 form {
+
+  // Since the last element in the form will have a margin-bottom, we apply
+  // an equivalent negative margin to the form itself to ensure that the top
+  // and bottom padding is equal.
   margin-bottom: calc(-1 * var(--form-element-margin--vertical));
 }
