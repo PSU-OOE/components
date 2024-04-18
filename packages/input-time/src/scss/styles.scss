@@ -21,6 +21,9 @@ input[type="time"] {
   &::-webkit-calendar-picker-indicator {
     background: none;
     cursor: pointer;
+    position: absolute;
+    padding: _rem(.6);
+    right: calc((2 * var(--form-element-padding--horizontal)) + _rem(.8));
 
     &:disabled {
       cursor: not-allowed;

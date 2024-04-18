@@ -49,9 +49,9 @@ input[type="password"] {
 
   &.warning {
     border-color: var(--keystone)
-    var(--keystone-light)
-    var(--keystone-light)
-    var(--keystone-light);
+                  var(--keystone-light)
+                  var(--keystone-light)
+                  var(--keystone-light);
     border-style: solid;
   }
 }
