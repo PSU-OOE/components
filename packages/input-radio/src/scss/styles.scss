@@ -87,10 +87,6 @@ input[type="radio"] {
         &:checked::after {
           background-color: var(--slate);
         }
-
-        & ~ * {
-          color: var(--medium-grey);
-        }
       }
     }
   }

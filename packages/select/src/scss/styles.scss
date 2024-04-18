@@ -34,13 +34,7 @@ select {
     background-repeat: no-repeat;
     background-position: calc(100% - var(--form-element-padding--horizontal)) center;
     background-size: auto _rem(.8);
-  }
 
-  &.error {
-    border: _rem(.1) solid var(--error-red);
-  }
-
-  &:not([multiple]) {
     &, &:is([data-light] *) {
       &:not(:disabled, .error) {
         box-shadow: var(--form-element-border-color) 0 _rem(.1);
@@ -51,10 +45,8 @@ select {
       box-shadow: none;
     }
   }
-}
 
-.form-select-wrapper:has(select.error) {
-  background-color: var(--error-red);
-  border-top-left-radius: var(--form-element-border-radius--rounded);
-  border-top-right-radius: var(--form-element-border-radius--rounded);
+  &.error {
+    border: _rem(.1) solid var(--error-red);
+  }
 }
