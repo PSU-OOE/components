@@ -1,13 +1,12 @@
 {
   "name": "@psu-ooe/intro-form",
-  "version": "2.0.1",
+  "version": "3.0.1",
   "description": "Provides a specialized container for presenting a form with accompanying intro content.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/background-container": "^3.0",
     "@psu-ooe/base": "^2.0",
     "@psu-ooe/heading": "^2.0",
     "@psu-ooe/random-item": "^1.0"
