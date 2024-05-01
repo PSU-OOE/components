@@ -1,5 +1,6 @@
 /* Automatic contrasting color definitions */
 :root {
+  // @TODO: Bring the expand auto-contrasting into the fold operationally.
   --cta-block-expand-background-color-default: var(--light-mauve);
   --cta-block-expand-background-color-light: var(--white);
 
@@ -10,6 +11,14 @@
   @supports not (color: color-mix(in srgb, white, white)) {
     --box-shadow: _rem(.1) _rem(.1) 0 0 rgba($nittany-navy, .5);
   }
+
+  --cta-foreground-color: var(--text-color--light);
+  --cta-foreground-color-active: var(--text-color--light);
+
+  --cta-background-color: var(--pa-link);
+  --cta-background-color-active: var(--nittany-navy);
+
+  --cta-border: none;
 }
 
 .cta-block {
@@ -124,16 +133,6 @@
       margin: auto;
     }
   }
-
-  & {
-    --cta-foreground-color: var(--text-color--light);
-    --cta-foreground-color-active: var(--text-color--light);
-
-    --cta-background-color: var(--pa-link);
-    --cta-background-color-active: var(--nittany-navy);
-
-    --cta-border: none;
-  }
 }
 
 // Automatic contrasting.
@@ -174,7 +173,7 @@
 @include cta-color-dark('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
 
 
-// Legacy coloration.
+// Legacy forced color profiles.
 @mixin cta-color($name, $background, $foreground, $background-active, $foreground-active, $outline) {
   .cta-block--#{$name} {
     background: $background;

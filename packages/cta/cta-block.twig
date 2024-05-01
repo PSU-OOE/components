@@ -6,8 +6,8 @@
   {% set classes = classes|merge(['cta-block--' ~ color]) %}
 {% elseif color_light or color_dark %}
   {% set classes = classes|merge([
-    'cta-block--on-light-' ~ color_light,
-    'cta-block--on-dark-' ~ color_dark,
+    color_light ? 'cta-block--on-light-' ~ color_light,
+    color_dark ? 'cta-block--on-dark-' ~ color_dark,
   ]) %}
 {% endif %}
 {% if font_weight in ['bold'] %}
