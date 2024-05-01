@@ -3,14 +3,16 @@ order: 3
 title: CTA
 ---
 # Variables
-| Variable      | Type    | Required | Description                                                           |
-|---------------|---------|----------|-----------------------------------------------------------------------|
-| size          | string  | false    | The size variation of the cta component                               |
-| expand_to_fit | boolean | false    | If true, the cta component will expand the width of parent container  |
-| color         | string  | false    | The color variation of the cta component                              |
-| font_weight   | string  | false    | The font weighting of the cta component                               |
-| label         | string  | false    | The label of the cta component                                        |
-| url           | string  | false    | The url of the cta link                                               |
+| Variable      | Type    | Required | Description                                                                                                                |
+|---------------|---------|----------|----------------------------------------------------------------------------------------------------------------------------|
+| size          | string  | false    | The size variation of the cta component                                                                                    |
+| expand_to_fit | boolean | false    | If true, the cta component will expand the width of parent container                                                       |
+| color         | string  | false    | The forced color variation of the cta component (**for enhanced accessibility, use the light/dark feature when possible**) |
+| color_light   | string  | false    | The preferred color if the cta exists on a light background                                                                |
+| color_dark    | string  | false    | The preferred color if the cta exists on a dark background                                                                 |
+| font_weight   | string  | false    | The font weighting of the cta component                                                                                    |
+| label         | string  | false    | The label of the cta component                                                                                             |
+| url           | string  | false    | The url of the cta link                                                                                                    |
 
 
 ## Size modifiers
