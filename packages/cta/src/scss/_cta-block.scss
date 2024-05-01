@@ -136,22 +136,7 @@
   }
 }
 
-@mixin cta-color($name, $background, $foreground, $background-active, $foreground-active, $outline) {
-  .cta-block--#{$name} {
-    background: $background;
-    color: $foreground;
-
-    &:hover, &:focus-visible {
-      background: $background-active;
-      color: $foreground-active;
-    }
-
-    &:focus-visible {
-      outline-color: $outline;
-    }
-  }
-}
-
+// Automatic contrasting.
 @mixin cta-color-light($name, $background, $foreground, $background-active, $foreground-active, $outline) {
   .cta-block--on-light-#{$name} {
     &, &:is([data-light] *) {
@@ -176,7 +161,6 @@
   }
 }
 
-// Automatic contrasting.
 @include cta-color-light('alt', var(--beaver-blue), var(--white), var(--nittany-navy), var(--white), var(--sky-blue));
 @include cta-color-light('color-keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
 @include cta-color-light('expand', var(--cta-block-expand-background-color), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
@@ -191,6 +175,21 @@
 
 
 // Legacy coloration.
+@mixin cta-color($name, $background, $foreground, $background-active, $foreground-active, $outline) {
+  .cta-block--#{$name} {
+    background: $background;
+    color: $foreground;
+
+    &:hover, &:focus-visible {
+      background: $background-active;
+      color: $foreground-active;
+    }
+
+    &:focus-visible {
+      outline-color: $outline;
+    }
+  }
+}
 @include cta-color('alt', var(--beaver-blue), var(--white), var(--nittany-navy), var(--white), var(--sky-blue));
 @include cta-color('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
 @include cta-color('color-keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
@@ -214,7 +213,8 @@
   }
 }
 
-.cta-block--hollow {
+.cta-block--hollow,
+.cta-block--on-light-hollow {
 
   &-dotted {
     &, &:hover, &:focus {
@@ -227,5 +227,12 @@
     &, &:hover, &:focus {
       border: _rem(.1) var(--pa-link) solid;
     }
+  }
+}
+
+.cta-block--on-light-hollow-solid,
+.cta-block--on-light-hollow-dotted {
+  &:is([data-dark] *) {
+    border: none;
   }
 }
