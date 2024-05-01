@@ -1,0 +1,64 @@
+<input type="checkbox" name="cta_dark_mode" id="cta_dark_mode"><label for="cta_dark_mode">Toggle dark mode</label>
+<div id="cta_auto_contrast">
+  {% include '@psu-ooe/cta/cta-block.twig' with {
+    label: 'Default | Reversed',
+    url: '#',
+    color_dark: 'reversed'
+  } only %}
+  {% include '@psu-ooe/cta/cta-block.twig' with {
+    label: 'Default | Keystone',
+    url: '#',
+    color_dark: 'color-keystone'
+  } only %}
+  {% include '@psu-ooe/cta/cta-block.twig' with {
+    label: 'Default | Light blue',
+    url: '#',
+    color_dark: 'light-blue'
+  } only %}
+  {% include '@psu-ooe/cta/cta-block.twig' with {
+    label: 'Alt | Reversed',
+    url: '#',
+    color_light: 'alt',
+    color_dark: 'reversed'
+  } only %}
+  {% include '@psu-ooe/cta/cta-block.twig' with {
+    label: 'Alt | Keystone',
+    url: '#',
+    color_light: 'alt',
+    color_dark: 'color-keystone'
+  } only %}
+  {% include '@psu-ooe/cta/cta-block.twig' with {
+    label: 'Alt | Light blue',
+    url: '#',
+    color_light: 'alt',
+    color_dark: 'light-blue'
+  } only %}
+</div>
+<script>
+  (()=>{
+    const wrapper = document.getElementById('cta_auto_contrast');
+    document.getElementById('cta_dark_mode').addEventListener('change', () => {
+      if (wrapper.hasAttribute('data-dark')) {
+        wrapper.removeAttribute('data-dark');
+        wrapper.setAttribute('data-light', '');
+      }
+      else {
+        wrapper.removeAttribute('data-light');
+        wrapper.setAttribute('data-dark', '');
+      }
+    });
+  })();
+</script>
+<style>
+  #cta_auto_contrast {
+    background-color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  #cta_auto_contrast[data-dark] {
+    background-color: var(--beaver-blue);
+  }
+</style>
