@@ -22,8 +22,6 @@
 }
 
 .cta-block {
-  background-color: var(--cta-background-color);
-  color: var(--cta-foreground-color);
   border: var(--cta-border);
   display:inline-block;
   padding: _rem(1.5) _rem(3);
@@ -35,6 +33,8 @@
   border-radius: var(--button-border-radius--default);
   transition: background-color .2s ease-in-out, color .2s ease-in-out;
   text-align:center;
+  color: var(--cta-foreground-color);
+  background-color: var(--cta-background-color);
   margin-bottom: 0;
   outline-offset: _rem(-.5);
   position: relative;
