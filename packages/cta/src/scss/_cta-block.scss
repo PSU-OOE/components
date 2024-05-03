@@ -67,6 +67,42 @@
     outline-offset: _rem(-.5);
   }
 
+  @mixin cta-colors($background, $foreground, $background-active, $foreground-active, $outline) {
+    --cta-background-color: #{$background};
+    --cta-background-color-active: #{$background-active};
+    --cta-foreground-color: #{$foreground};
+    --cta-foreground-color-active: #{$foreground-active};
+    --cta-outline-color: #{$outline};
+  }
+
+  @mixin cta-color-light($name, $background, $foreground, $background-active, $foreground-active, $outline) {
+    &--#{$name} {
+      &, &:is([data-light] *) {
+        @include cta-colors($background, $foreground, $background-active, $foreground-active, $outline);
+      }
+    }
+  }
+
+  @mixin cta-color-dark($name, $background, $foreground, $background-active, $foreground-active, $outline) {
+    &--on-dark-#{$name} {
+      &:is([data-dark] *) {
+        @include cta-colors($background, $foreground, $background-active, $foreground-active, $outline);
+      }
+    }
+  }
+
+  @include cta-color-light('alt', var(--beaver-blue), var(--white), var(--nittany-navy), var(--white), var(--sky-blue));
+  @include cta-color-light('color-keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
+  @include cta-color-light('hollow-solid', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+  @include cta-color-light('hollow-dotted', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+  @include cta-color-light('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+  @include cta-color-light('expand', var(--cta-block-expand-background-color), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+  @include cta-color-light('expand-reversed', var(--text-color--light), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+
+  @include cta-color-dark('color-keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
+  @include cta-color-dark('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+  @include cta-color-dark('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+
   &--compact {
     font-size: var(--font-size--small);
     padding: _rem(1.3) _rem(2.2);
@@ -137,43 +173,6 @@
     }
   }
 }
-
-// Automatic contrasting.
-@mixin cta-colors($background, $foreground, $background-active, $foreground-active, $outline) {
-  --cta-background-color: #{$background};
-  --cta-background-color-active: #{$background-active};
-  --cta-foreground-color: #{$foreground};
-  --cta-foreground-color-active: #{$foreground-active};
-  --cta-outline-color: #{$outline};
-}
-
-@mixin cta-color-light($name, $background, $foreground, $background-active, $foreground-active, $outline) {
-  .cta-block--#{$name} {
-    &, &:is([data-light] *) {
-      @include cta-colors($background, $foreground, $background-active, $foreground-active, $outline);
-    }
-  }
-}
-
-@mixin cta-color-dark($name, $background, $foreground, $background-active, $foreground-active, $outline) {
-  .cta-block--on-dark-#{$name} {
-    &:is([data-dark] *) {
-      @include cta-colors($background, $foreground, $background-active, $foreground-active, $outline);
-    }
-  }
-}
-
-@include cta-color-light('alt', var(--beaver-blue), var(--white), var(--nittany-navy), var(--white), var(--sky-blue));
-@include cta-color-light('color-keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
-@include cta-color-light('hollow-solid', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
-@include cta-color-light('hollow-dotted', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
-@include cta-color-light('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
-@include cta-color-light('expand', var(--cta-block-expand-background-color), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
-@include cta-color-light('expand-reversed', var(--text-color--light), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
-
-@include cta-color-dark('color-keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
-@include cta-color-dark('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
-@include cta-color-dark('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
 
 .cta-block--expand {
   transition: color .3s linear, background-color .3s linear, box-shadow .3s linear;
