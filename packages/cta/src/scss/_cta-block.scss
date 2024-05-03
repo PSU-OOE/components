@@ -98,6 +98,8 @@
   @include cta-color-light('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
   @include cta-color-light('expand', var(--cta-block-expand-background-color), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
   @include cta-color-light('expand-reversed', var(--text-color--light), var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+  // @TODO: Remove reversed-on-light b/c layer in 3.0.0.
+  @include cta-color-light('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
 
   @include cta-color-dark('color-keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
   @include cta-color-dark('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy));

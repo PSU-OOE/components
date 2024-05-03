@@ -1,17 +1,20 @@
 {# @TODO: Remove backwards-compatibility layer in 3.0.0 #}
+{% if not color_dark and color == 'reversed' %}
+  {% set reversed_legacy = true %}
+{% endif %}
 {% if not color_dark %}
-  {% if color == 'reversed' %}
-    {% set color_dark = 'reversed' %}
-  {% elseif color == 'color-keystone' %}
+  {% if color == 'color-keystone' %}
     {% set color_dark = 'color-keystone' %}
   {% elseif color == 'light-blue' %}
     {% set color_dark = 'light-blue' %}
+  {% else %}
+    {% set color_dark = 'reversed' %}
   {% endif %}
 {% endif %}
 
 {% set classes = [
   'cta-block',
-  color in ['alt', 'color-keystone', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand', 'expand-reversed']? 'cta-block--' ~ color,
+  reversed_legacy or color in ['alt', 'color-keystone', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand', 'expand-reversed'] ? 'cta-block--' ~ color,
   color_dark in ['color-keystone', 'reversed', 'light-blue'] ? 'cta-block--on-dark-' ~ color_dark,
   expand_to_fit ? 'cta-block--expand-to-fit',
   font_weight in ['bold'] ? 'cta-block--' ~ font_weight,
