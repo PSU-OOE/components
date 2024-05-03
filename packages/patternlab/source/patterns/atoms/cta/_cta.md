@@ -8,7 +8,7 @@ title: CTA
 | label         | string  | true     | The label of the cta component                                                      |
 | url           | string  | true     | The url of the cta link                                                             |
 | color         | string  | false    | The preferred color variation of the cta component                                  |
-| color_on_dark    | string  | false    | The preferred color if the cta exists on a dark background (defaults to 'reversed') |
+| color_on_dark | string  | false    | The preferred color if the cta exists on a dark background (defaults to 'reversed') |
 | font_weight   | string  | false    | The font weighting of the cta component                                             |
 | size          | string  | false    | The size variation of the cta component                                             |
 | expand_to_fit | boolean | false    | If true, the cta component will expand the width of parent container                |
