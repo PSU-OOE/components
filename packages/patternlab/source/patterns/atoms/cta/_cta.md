@@ -3,17 +3,15 @@ order: 3
 title: CTA
 ---
 # Variables
-| Variable      | Type    | Required | Description                                                                                                                |
-|---------------|---------|----------|----------------------------------------------------------------------------------------------------------------------------|
-| size          | string  | false    | The size variation of the cta component                                                                                    |
-| expand_to_fit | boolean | false    | If true, the cta component will expand the width of parent container                                                       |
-| color         | string  | false    | The forced color variation of the cta component (**for enhanced accessibility, use the light/dark feature when possible**) |
-| color_light   | string  | false    | The preferred color if the cta exists on a light background                                                                |
-| color_dark    | string  | false    | The preferred color if the cta exists on a dark background                                                                 |
-| font_weight   | string  | false    | The font weighting of the cta component                                                                                    |
-| label         | string  | false    | The label of the cta component                                                                                             |
-| url           | string  | false    | The url of the cta link                                                                                                    |
-
+| Variable      | Type    | Required | Description                                                                         |
+|---------------|---------|----------|-------------------------------------------------------------------------------------|
+| label         | string  | true     | The label of the cta component                                                      |
+| url           | string  | true     | The url of the cta link                                                             |
+| color         | string  | false    | The preferred color variation of the cta component                                  |
+| color_dark    | string  | false    | The preferred color if the cta exists on a dark background (defaults to 'reversed') |
+| font_weight   | string  | false    | The font weighting of the cta component                                             |
+| size          | string  | false    | The size variation of the cta component                                             |
+| expand_to_fit | boolean | false    | If true, the cta component will expand the width of parent container                |
 
 ## Size modifiers
 | Size               | Description                                                                       |
@@ -28,15 +26,22 @@ title: CTA
 | bold     | If specified, the cta component will be bolded |
 
 ## Color modifiers
-| Modifier       | Description                                                                      |
-|----------------|----------------------------------------------------------------------------------|
-| alt            | If specified, the cta component will have the color modifier of 'alt'            |
-| expand         | If specified, the cta component will have the color modifier of 'expand'         |
-| hollow-dotted  | If specified, the cta component will have the color modifier of 'hollow-dotted'  |
-| hollow-solid   | If specified, the cta component will have the color modifier of 'hollow-solid'   |
-| color-keystone | If specified, the cta component will have the color modifier of 'color-keystone' |
-| light-blue     | If specified, the cta component will have the color modifier of 'light-blue'     |
-| reversed       | If specified, the cta component will have the color modifier of 'reversed'       |
+| Modifier         | Description                                                                       |
+|------------------|-----------------------------------------------------------------------------------|
+| alt              | If specified, the cta component will have the color modifier of 'alt'             |
+| hollow-dotted    | If specified, the cta component will have the color modifier of 'hollow-dotted'   |
+| hollow-solid     | If specified, the cta component will have the color modifier of 'hollow-solid'    |
+| color-keystone   | If specified, the cta component will have the color modifier of 'color-keystone'  |
+| light-blue       | If specified, the cta component will have the color modifier of 'light-blue'      |
+| expand           | If specified, the cta component will have the color modifier of 'expand'          |
+| expand-reversed  | If specified, the cta component will have the color modifier of 'expand-reversed' |
+
+## Dark color modifiers
+| Modifier        | Description                                                                       |
+|-----------------|-----------------------------------------------------------------------------------|
+| reversed        | If specified, the cta component will have the color modifier of 'reversed'        |
+| color-keystone  | If specified, the cta component will have the color modifier of 'color-keystone'  |
+| light-blue      | If specified, the cta component will have the color modifier of 'light-blue'      |
 
 ## Icon modifiers
 | Modifier       | Description                                                            |
