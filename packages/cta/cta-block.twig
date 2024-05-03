@@ -1,7 +1,4 @@
 {# @TODO: Remove backwards-compatibility layer in 3.0.0 #}
-{% if not color_dark and color == 'reversed' %}
-  {% set reversed_legacy = true %}
-{% endif %}
 {% if not color_dark %}
   {% if color == 'color-keystone' %}
     {% set color_dark = 'color-keystone' %}
@@ -9,6 +6,10 @@
     {% set color_dark = 'light-blue' %}
   {% else %}
     {% set color_dark = 'reversed' %}
+    {% if color == 'reversed' %}
+      {# Continue to support reversed-on-light for old uses. #}
+      {% set reversed_legacy = true %}
+    {% endif %}
   {% endif %}
 {% endif %}
 
