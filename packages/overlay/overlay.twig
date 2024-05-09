@@ -1,24 +1,19 @@
-{% set classes = ['overlay'] %}
+{% set color_profiles = {
+  'blue-gradient': 'dark',
+  'beaver-blue': 'dark',
+} %}
 
-{% if overlay_bg_color %}
-  {% set classes = classes|merge(['overlay--' ~ overlay_bg_color ]) %}
-{% endif %}
-
-{% if column_width %}
-  {% set classes = classes|merge(['overlay--column-width-' ~ column_width ]) %}
-{% endif %}
-
-{% if overlay_width %}
-  {% set classes = classes|merge(['overlay--content-width-' ~ overlay_width ]) %}
-{% endif %}
-
-{% if background_position %}
-  {% set classes = classes|merge(['overlay--background-position--' ~ background_position ]) %}
-{% endif %}
+{% set classes = [
+  'overlay',
+  overlay_bg_color in color_profiles|keys ? 'overlay--' ~ overlay_bg_color,
+  column_width in ['narrow'] ? 'overlay--column-width-' ~ column_width,
+  overlay_width in ['wide'] ? 'overlay--content-width-' ~ overlay_width,
+  background_position in ['top-left', 'top-right', 'center-left', 'center-center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'] ? 'overlay--background-position--' ~ background_position,
+]|filter(class => class is not empty) %}
 
 <div class="{{ classes|join(' ') }}">
   <div class="overlay__image"> {{ image }} </div>
   <div class="overlay__column">
-    <div class="overlay__content"> {{ content }} </div>
+    <div class="overlay__content" data-{{ color_profiles|keys ? color_profiles[overlay_bg_color] : 'light' }}> {{ content }} </div>
   </div>
 </div>
