@@ -9,7 +9,7 @@
   column_width in ['narrow'] ? 'overlay--column-width-' ~ column_width,
   overlay_width in ['wide'] ? 'overlay--content-width-' ~ overlay_width,
   background_position in ['top-left', 'top-right', 'center-left', 'center-center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'] ? 'overlay--background-position--' ~ background_position,
-] %}
+]|filter(class => class is not empty) %}
 
 <div class="{{ classes|join(' ') }}">
   <div class="overlay__image"> {{ image }} </div>
