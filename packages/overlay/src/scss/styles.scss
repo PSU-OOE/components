@@ -34,7 +34,7 @@
   }
 
   .overlay__content {
-    background: $white;
+    background: var(--white);
     width: auto;
     padding: _rem(2);
 
@@ -62,11 +62,11 @@
   }
 
   &--beaver-blue .overlay__content {
-    background: $beaver-blue;
+    background: var(--beaver-blue);
   }
 
   &--blue-gradient .overlay__content {
-    background: linear-gradient(to right, $nittany-navy, $beaver-blue);
+    background: linear-gradient(to right, var(--nittany-navy), var(--beaver-blue));
   }
 
   &--column-width-narrow {
