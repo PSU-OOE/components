@@ -1,16 +1,27 @@
-{% set classes = ['cta-block'] %}
-{% if expand_to_fit %}
-  {% set classes = classes|merge(['cta-block--expand-to-fit']) %}
+{# @TODO: Remove backwards-compatibility layer in 3.0.0 #}
+{% if not color_on_dark %}
+  {% if color == 'color-keystone' %}
+    {% set color_on_dark = 'color-keystone' %}
+  {% elseif color == 'light-blue' %}
+    {% set color_on_dark = 'light-blue' %}
+  {% else %}
+    {% set color_on_dark = 'reversed' %}
+    {% if color == 'reversed' %}
+      {# Continue to support reversed-on-light for old uses. #}
+      {% set reversed_legacy = true %}
+    {% endif %}
+  {% endif %}
 {% endif %}
-{% if color %}
-  {% set classes = classes|merge(['cta-block--' ~ color]) %}
-{% endif %}
-{% if font_weight in ['bold'] %}
-  {% set classes = classes|merge(['cta-block--' ~ font_weight]) %}
-{% endif %}
-{% if size in ['xcompact', 'compact', 'compact-responsive'] %}
-  {% set classes = classes|merge(['cta-block--' ~ size]) %}
-{% endif %}
+
+{% set classes = [
+  'cta-block',
+  reversed_legacy or color in ['alt', 'color-keystone', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand', 'expand-reversed'] ? 'cta-block--' ~ color,
+  color_on_dark in ['color-keystone', 'reversed', 'light-blue'] ? 'cta-block--on-dark-' ~ color_on_dark,
+  expand_to_fit ? 'cta-block--expand-to-fit',
+  font_weight in ['bold'] ? 'cta-block--' ~ font_weight,
+  size in ['xcompact', 'compact', 'compact-responsive'] ? 'cta-block--' ~ size,
+]|filter(class => class is not empty) %}
+
 {% apply spaceless %}
   <a
     class="{{ classes|join(' ') }}"
