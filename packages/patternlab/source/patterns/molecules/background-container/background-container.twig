@@ -143,7 +143,7 @@
 
   {% set overflowing_content %}
     <div style="padding: 0 4rem">
-      <h2 style="color:black;margin-top:-10rem;margin-bottom:5rem;">I'm overflowing!!!</h2>
+      <h2 style="margin-top:-10rem;margin-bottom:5rem;">I'm overflowing!!!</h2>
       <h3>Overflowing content</h3>
       <p>This content is overflowing!</p>
     </div>
@@ -151,7 +151,7 @@
 
   <div style="max-width:119rem;padding:0 4rem;margin-top:6rem;">
     {% include '@psu-ooe/background-container/background-container.twig' with {
-      color: 'primary-blue',
+      color: 'beaver-blue',
       background_image: 'shield:right',
       content: overflowing_content
     } only %}
