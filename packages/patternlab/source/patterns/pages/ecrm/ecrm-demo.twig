@@ -29,14 +29,9 @@
 {% include '@psu-ooe/page-title-banner-plain/page-title-banner-plain.twig' with {
   title: 'Your Communication Preferences',
 } only %}
-<main style="display: flex; flex-direction: column; gap: 3rem; max-width: 119rem; margin: auto;">
-  {% set intro %}
-    <p>Update your interests or unsubscribe from all non-transactional messages.</p>
-  {% endset %}
-  {% include '@psu-ooe/callout/callout.twig' with {
-    content: intro,
-    padding: 'small',
-  } only %}
+<main style="display: flex; flex-direction: column; gap: 3rem; max-width: 119rem; margin: 5rem auto;">
+  <p>Update your interests or unsubscribe from all non-transactional messages.</p>
+
   {% set profile_info %}
     {% include '@psu-ooe/heading/heading.twig' with { content: 'Profile Information'} only %}
     <ul>
@@ -52,9 +47,51 @@
   } only %}
   {% set preferences %}
     {% include '@psu-ooe/heading/heading.twig' with { content: 'Subscription Preferences'} only %}
+    {% include '@psu-ooe/divider/divider.twig' with { variant: 'light-grey' } only %}
+    {% include '@psu-ooe/heading/heading.twig' with { level: 3, content: 'Email'} only %}
+    <p class="text text--size-large text--weight-semibold">You are currently opted into email.</p>
+    <p>
+      {% include '@psu-ooe/cta/cta-block.twig' with {
+        label: 'Opt out of email',
+        url: '#',
+      } only %}
+    </p>
+    <p>If you opt out you will be removed from promotional services, programs, and events. You will still receive details about your enrollment.</p>
+    {% include '@psu-ooe/heading/heading.twig' with { level: 4, content: 'Update Email Topic Preferences'} only %}
+    <label><input type="checkbox" name="events">Events (webinars and in-person)</label>
+    <br>
+    <label><input type="checkbox" name="marketing">Marketing Communications</label>
+    <br>
+    <label><input type="checkbox" name="application">Application Communications</label>
+    <br>
+    <br>
+    <p>
+      {% include '@psu-ooe/cta/cta-block.twig' with {
+        label: 'Update Topic Preferences',
+        url: '#',
+      } only %}
+    </p>
+    {% include '@psu-ooe/heading/heading.twig' with { level: 3, content: 'Text'} only %}
+    <p class="text text--size-large text--weight-semibold">You are currently opted into text messages.</p>
+    <p>
+      {% include '@psu-ooe/cta/cta-block.twig' with {
+        label: 'Opt out of text',
+        url: '#',
+      } only %}
+    </p>
+    <p>If you opt out you will be removed from promotional services, programs, and events. You will still receive details about your enrollment.</p>
+    <p><a href="#">Privacy policy and SMS Terms and Conditions</a></p>
   {% endset %}
   {% include '@psu-ooe/callout/callout.twig' with {
     content: preferences,
     background: 'light-grey',
   } only %}
 </main>
+<footer>
+  {% include '@psu-ooe/background-container/background-container.twig' with {
+    color: 'beaver-blue',
+    background_image: 'hub-geometric:topright',
+    padding: 'large',
+    content: "<p style='color:white;text-align: center'>Can't help you here, sorry.</p>",
+  } only %}
+</footer>
