@@ -1,0 +1,97 @@
+{% embed '@psu-ooe/header/header.twig' %}
+  {% block dogear_content %}
+    <style>
+      {# "System branding block" backport from wcprospect8 #}
+      .block--system-branding-block .sprite{color:var(--beaver-blue);height:auto;width:13rem;min-width:3rem;max-width:100%}@media(min-width: 550px){.block--system-branding-block .sprite{width:18.5rem}}
+    </style>
+    <div class="region region--branding">
+      <div class="block block--system-branding-block">
+        <a href="/">
+          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'wc-mark' } only %}
+          <span class="visually-hidden">Penn State World Campus</span>
+        </a>
+      </div>
+    </div>
+  {% endblock %}
+
+  {% block content %}
+    <style>
+      {# "Tagline" backport from wcprospect8 #}
+      @media(min-width: 550px){.tagline{margin-left:2rem}}@media(min-width: 950px){.tagline{margin-left:4rem}}.tagline::before{content:"";display:block;background-color:var(--sky-blue);height:0.1rem;width:6rem;margin-bottom:0.6rem}@media(min-width: 550px){.tagline::before{height:0.2rem;width:7rem;margin-bottom:0.7rem}}@media(min-width: 950px){.tagline::before{height:0.3rem;width:8rem;margin-bottom:0.8rem}}.tagline__text{color:var(--text-color--light);font-family:var(--font-family--default);font-size:var(--font-size--5xsmall);font-weight:var(--font-weight--regular);line-height:var(--line-height--xsnug)}@media(min-width: 550px){.tagline__text{font-size:var(--font-size--3xsmall)}}@media(min-width: 950px){.tagline__text{font-size:var(--font-size--mlarge)}}
+    </style>
+    <div class="tagline">
+      <div class="tagline__text">
+        <div class="wysiwyg">A world of possibilities. <strong>Online.</strong></div>
+      </div>
+    </div>
+  {% endblock %}
+{% endembed %}
+{% include '@psu-ooe/page-title-banner-plain/page-title-banner-plain.twig' with {
+  title: 'Your Communication Preferences',
+} only %}
+<main style="display: flex; flex-direction: column; gap: 3rem; max-width: 119rem; margin: 5rem auto;">
+  <p>Update your interests or unsubscribe from all non-transactional messages.</p>
+
+  {% set profile_info %}
+    {% include '@psu-ooe/heading/heading.twig' with { content: 'Profile Information'} only %}
+    <ul>
+      <li>Name: <strong>John Doe</strong></li>
+      <li>Primary Email Address: <strong>******e@gmail.com</strong></li>
+      <li>Seconary Email Address: <strong>****b@gmail.com</strong></li>
+      <li>Phone Number: <strong>*******432</strong></li>
+    </ul>
+  {% endset %}
+  {% include '@psu-ooe/callout/callout.twig' with {
+    content: profile_info,
+    background: 'light-grey',
+  } only %}
+  {% set preferences %}
+    {% include '@psu-ooe/heading/heading.twig' with { content: 'Subscription Preferences'} only %}
+    {% include '@psu-ooe/divider/divider.twig' with { variant: 'light-grey' } only %}
+    {% include '@psu-ooe/heading/heading.twig' with { level: 3, content: 'Email'} only %}
+    <p class="text text--size-large text--weight-semibold">You are currently opted into email.</p>
+    <p>
+      {% include '@psu-ooe/cta/cta-block.twig' with {
+        label: 'Opt out of email',
+        url: '#',
+      } only %}
+    </p>
+    <p>If you opt out you will be removed from promotional services, programs, and events. You will still receive details about your enrollment.</p>
+    {% include '@psu-ooe/heading/heading.twig' with { level: 4, content: 'Update Email Topic Preferences'} only %}
+    <label><input type="checkbox" name="events">Events (webinars and in-person)</label>
+    <br>
+    <label><input type="checkbox" name="marketing">Marketing Communications</label>
+    <br>
+    <label><input type="checkbox" name="application">Application Communications</label>
+    <br>
+    <br>
+    <p>
+      {% include '@psu-ooe/cta/cta-block.twig' with {
+        label: 'Update Topic Preferences',
+        url: '#',
+      } only %}
+    </p>
+    {% include '@psu-ooe/heading/heading.twig' with { level: 3, content: 'Text'} only %}
+    <p class="text text--size-large text--weight-semibold">You are currently opted into text messages.</p>
+    <p>
+      {% include '@psu-ooe/cta/cta-block.twig' with {
+        label: 'Opt out of text',
+        url: '#',
+      } only %}
+    </p>
+    <p>If you opt out you will be removed from promotional services, programs, and events. You will still receive details about your enrollment.</p>
+    <p><a href="#">Privacy policy and SMS Terms and Conditions</a></p>
+  {% endset %}
+  {% include '@psu-ooe/callout/callout.twig' with {
+    content: preferences,
+    background: 'light-grey',
+  } only %}
+</main>
+<footer>
+  {% include '@psu-ooe/background-container/background-container.twig' with {
+    color: 'beaver-blue',
+    background_image: 'hub-geometric:topright',
+    padding: 'large',
+    content: "<p style='color:white;text-align: center'>Can't help you here, sorry.</p>",
+  } only %}
+</footer>
