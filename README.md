@@ -141,7 +141,16 @@ within the `<head>` element by the CMS integrator.
     });
     ``` 
 4. **announce(text, priority)** - Requests that assistive technology 
-5. i
+5. **data(name)** - Retrieves arbitrary data from a client-side datastore.
+    1. _name_ - the name of the data to retrieve
+    2. Example:
+    ```js
+    <script>
+      ((cms) => {
+        alert('Hello ' + cms.data('username'));
+      })(cms);
+    </script>
+    ```
 ###### `cms` Example (Drupal)
 ```js
 <script>
