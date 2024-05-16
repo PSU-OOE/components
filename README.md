@@ -1,3 +1,5 @@
+# PSU-OOE Components!
+The majority of design work is maintained in this CMS-agnostic monorepo.
 ## Using Components
 This documentation is aimed at people that wish to use components.
 
