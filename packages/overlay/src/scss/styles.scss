@@ -34,7 +34,7 @@
   }
 
   .overlay__content {
-    background: $white;
+    background: var(--white);
     width: auto;
     padding: _rem(2);
 
@@ -50,28 +50,23 @@
       align-self: center;
       z-index: 1;
     }
+
+    // @TODO: Remove this when text auto-contrasts globally.
+    &[data-dark] {
+      color: var(--white);
+
+      & > * {
+        color: var(--white);
+      }
+    }
   }
 
-  &--beaver-blue {
-    .overlay__content {
-      background: $beaver-blue;
-      color: $white;
-    }
-    // because quotes are currently nested in here
-    .overlay__content > * {
-      color: $white;
-    }
+  &--beaver-blue .overlay__content {
+    background: var(--beaver-blue);
   }
 
-  &--blue-gradient {
-    .overlay__content {
-      background: linear-gradient(to right, $nittany-navy, $beaver-blue);
-      color: $white;
-    }
-    // because quotes are currently nested in here
-    .overlay__content > * {
-      color: $white;
-    }
+  &--blue-gradient .overlay__content {
+    background: linear-gradient(to right, var(--nittany-navy), var(--beaver-blue));
   }
 
   &--column-width-narrow {

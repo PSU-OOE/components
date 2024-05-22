@@ -7,7 +7,6 @@
 | highlight_active_trail | boolean | false    | Should the active trail be highlighted with a vertical highlight?                                 |
 | parent_item            | object  | false    | If provided, the parent item will be placed at the start and emphasized.                          |
 | items                  | array   | true     | The items to include in the menu.                                                                 |
-| current_path           | string  | false    | The current path (used to determine if an item is ```aria-current```). Use is highly recommended. |
 
 ## Menu Densities
 
@@ -35,3 +34,4 @@ The menu item structure is recursive. Each item has the following attributes:
 | url             | string  | true     | The url of the menu item.                                     |
 | in_active_trail | boolean | false    | Is the item in the active trail?                              |
 | below           | array   | false    | An array of items that exist under the current item.          |
+| is_current_page | boolean | false    | Is the item the current page that the user is on?             |

@@ -1681,7 +1681,7 @@ __metadata:
     "@psu-ooe/base": ^2.0.0
     "@psu-ooe/drop-button": ^3.0.0
     "@psu-ooe/sprite": ^2.0.0
-    "@psu-ooe/vertical-menu": ^1.0.0
+    "@psu-ooe/vertical-menu": ^2.0.0
   languageName: unknown
   linkType: soft
 
@@ -2338,7 +2338,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/vertical-menu@*, @psu-ooe/vertical-menu@^1.0.0, @psu-ooe/vertical-menu@workspace:packages/vertical-menu":
+"@psu-ooe/vertical-menu@*, @psu-ooe/vertical-menu@^2.0.0, @psu-ooe/vertical-menu@workspace:packages/vertical-menu":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/vertical-menu@workspace:packages/vertical-menu"
   dependencies:
