@@ -1,5 +1,5 @@
 {
-  "name": "@psu-ooe/monorepo-dev",
+  "name": "@psu-ooe/components",
   "version": "1.0.0",
   "private": true,
   "workspaces": {
