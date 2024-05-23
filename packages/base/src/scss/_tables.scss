@@ -52,7 +52,7 @@ table {
 
     &.st-head-row:not(.st-head-row-main) {
       &, & p {
-        font-size: var(font-size--small);
+        font-size: var(--font-size--small);
         line-height: var(--line-height--snug);
         color: var(--nittany-navy);
         font-weight: var(--font-weight--semibold);
@@ -101,8 +101,6 @@ table.small-only {
     td {
       border: none;
     }
-
-    &.show td {}
 
     &.row-data {
       border-bottom: none;
