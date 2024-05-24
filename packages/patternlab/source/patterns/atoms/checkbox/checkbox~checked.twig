@@ -1,0 +1,7 @@
+{% set checkbox %}
+  <input checked type="checkbox" name="demo_checkbox_checked" id="demo_checkbox_checked"><label class="visually-hidden" for="demo_checkbox_checked">Demo checkbox checked</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: checkbox,
+} only %}
+

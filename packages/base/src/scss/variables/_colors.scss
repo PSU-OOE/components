@@ -48,4 +48,16 @@
   --text-color--default: var(--text-color--dark);
   --link-color--default: var(--link-color--dark);
   --headings-color: var(--text-color--slate);
+
+}
+
+// Automatically contrasting variables.
+:root, [data-light] {
+  --link-color: var(--link-color--default);
+  --text-color: var(--text-color--default);
+}
+
+[data-dark] {
+  --link-color: var(--link-color--light);
+  --text-color: var(--text-color--light);
 }

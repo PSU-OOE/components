@@ -1,0 +1,32 @@
+@import '../../../base/src/scss/imports/variables';
+
+input[type="date"] {
+  // Android, in particular, renders native date inputs with a chevron versus
+  // a more intuitive calendar icon. To normalize this, we add our own icon via
+  // a background image.
+  appearance: none;
+  $icon-width: #{_rem(2.4)};
+  background: var(--form-element-background-color) url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 24 24"><path fill="%23001e44" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/><path fill="none" d="M0 0h24v24H0z"/></svg>') no-repeat calc(100% - var(--form-element-padding--horizontal)) center / $icon-width;
+  padding-right: calc($icon-width + var(--form-element-padding--horizontal) * 2);
+  position: relative;
+
+  &:disabled {
+    background-image: none;
+  }
+
+  &::-webkit-date-and-time-value {
+    text-align: left;
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    padding: _rem(.6);
+    right: calc((2 * var(--form-element-padding--horizontal)) - _rem(1.2));
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+}

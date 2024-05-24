@@ -1,0 +1,134 @@
+@import "../../../base/src/scss/imports/variables";
+
+input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  width: _rem(2.4);
+  height: _rem(2.4);
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: _rem(.2) solid var(--sky-blue);
+    outline-offset: _rem(.2);
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    border-width: _rem(.1);
+    border-style: solid;
+    border-radius: _rem(.5);
+    transition: background-color var(--transition-duration--default) linear,
+                border-color var(--transition-duration--default) linear;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    // @TODO: Keep an eye on the need for -webkit-mask.
+    -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439 105c12 13 12 33 0 46L183 407a32 32 0 0 1-46 0L9 279a32 32 0 0 1 46-46l105 106 233-234c13-12 33-12 46 0z"/></svg>') no-repeat center/ _rem(1.4) auto;
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439 105c12 13 12 33 0 46L183 407a32 32 0 0 1-46 0L9 279a32 32 0 0 1 46-46l105 106 233-234c13-12 33-12 46 0z"/></svg>') no-repeat center/ _rem(1.4) auto;
+    transition: background-color var(--transition-duration--default) linear;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &, &:is([data-light] *) {
+    &::before {
+      background-color: var(--form-element-background-color);
+      border-color: var(--form-element-border-color);
+    }
+
+    &:checked {
+      &::before {
+        background-color: var(--beaver-blue);
+        border-color: var(--beaver-blue);
+      }
+
+      &::after {
+        background-color: var(--white);
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover::before {
+        background-color: var(--white);
+        border-color: var(--nittany-navy);
+      }
+
+      &:checked:hover::after {
+        background-color: var(--pa-link);
+      }
+    }
+
+    &:disabled {
+      &::before {
+        background-color: var(--form-element-disabled-background-color);
+        border:  _rem(.1) solid var(--form-element-border-color);
+      }
+
+      &:checked {
+        &::before {
+          background-color: color-mix(in srgb, transparent, var(--slate) 70%);
+          border-color: color-mix(in srgb, transparent, var(--slate) 70%);
+        }
+
+        &::after,
+        &:hover::after {
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+
+  &:is([data-dark] *) {
+    &:checked::before {
+      background: var(--nittany-navy);
+      border-color: var(--white);
+    }
+
+    @media (any-hover: hover) {
+      &:checked:hover {
+        &::before {
+          background-color: var(--white);
+          border-color: var(--nittany-navy);
+        }
+
+        &::after {
+          background-color: var(--pa-link);
+        }
+      }
+    }
+
+    &:disabled {
+      &::before {
+        border-color: var(--light-mauve);
+      }
+
+      &:checked {
+        &::before,
+        &:hover::before {
+          border-color: var(--light-mauve);
+          background-color: color-mix(in srgb, transparent, var(--slate) 90%);
+        }
+
+        &::after,
+        &:hover::after {
+          background-color: var(--slate-light);
+        }
+      }
+    }
+  }
+}

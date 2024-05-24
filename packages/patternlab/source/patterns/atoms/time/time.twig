@@ -1,0 +1,7 @@
+{% set time %}
+  <input type="time" name="demo_time" id="demo_time"><label class="visually-hidden" for="demo_time">Demo time</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: time,
+} only %}
+

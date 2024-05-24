@@ -1,0 +1,9 @@
+{% set date %}
+  <div data-dark>
+    <input disabled type="date" name="date_on_dark_disabled" id="date_on_dark_disabled"><label class="visually-hidden" for="date_on_dark_disabled">Demo date on dark background disabled</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: date,
+  background: 'blue',
+} only %}

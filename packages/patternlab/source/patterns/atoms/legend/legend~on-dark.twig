@@ -1,0 +1,9 @@
+{% set legend %}
+  <div data-dark>
+    <legend>This is a legend.</legend>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: legend,
+  background: 'blue',
+} only %}

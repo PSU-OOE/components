@@ -1,0 +1,99 @@
+summary {
+  cursor: pointer;
+  display: flex;
+  gap: _rem(.5);
+  position: relative;
+  padding: _rem(2) 0 _rem(2) _rem(5);
+  font-family: var(--font-family--headings);
+  font-size: var(--font-size--mlarge);
+  font-weight: var(--font-weight--medium);
+  letter-spacing: var(--letter-spacing--medium);
+  line-height: var(--line-height--snug);
+  transition: background-color var(--transition-duration--default) linear,
+              color var(--transition-duration--default) linear;
+
+  // Turn off the native marker.
+  &::-webkit-details-marker,
+  &::marker {
+    display: none;
+  }
+
+  // Replace the native marker with a sprite.
+  &::before {
+    position: absolute;
+    inset: 0 calc(100% - _rem(3.6)) 0 _rem(1.4);
+    content: '';
+    -webkit-mask-size: _rem(2.4) auto;
+    mask-size: _rem(2.4) auto;
+    -webkit-mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233 407c13 12 33 12 46 0l192-192a32 32 0 0 0-46-46L256 339 87 169a32 32 0 0 0-46 46l192 192z"/></svg>') no-repeat center;
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M233 407c13 12 33 12 46 0l192-192a32 32 0 0 0-46-46L256 339 87 169a32 32 0 0 0-46 46l192 192z"/></svg>') no-repeat center;
+    transition: background-color var(--transition-duration--default) linear,
+                transform var(--transition-duration--default) linear;
+  }
+
+  // Flip the chevron when open.
+  &:is([open] > summary) {
+    &::before {
+      transform: rotateX(180deg);
+    }
+  }
+
+  &, &:is([data-light] *) {
+    color: var(--pa-link);
+
+    &::before {
+      background-color: var(--pa-link);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--beaver-blue);
+        background-color: var(--pa-link-light);
+
+        &::before {
+          background-color: var(--beaver-blue);
+        }
+      }
+    }
+
+    &:focus-visible {
+      color: var(--beaver-blue);
+      background-color: var(--pa-link-light);
+      outline: _rem(.2) solid var(--pa-link);
+      outline-offset: _rem(-.2);
+
+      &::before {
+        background-color: var(--beaver-blue);
+      }
+    }
+  }
+
+  &:is([data-dark] *) {
+    color: var(--pa-link-light);
+
+    &::before {
+      background-color: var(--pa-link-light);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--white);
+        background-color: var(--pa-link);
+
+        &::before {
+          background-color: var(--white);
+        }
+      }
+    }
+
+    &:focus-visible {
+      color: var(--white);
+      background-color: var(--pa-link);
+      outline: _rem(.2) solid var(--pugh-blue);
+
+      &::before {
+        background-color: var(--white);
+      }
+    }
+  }
+}

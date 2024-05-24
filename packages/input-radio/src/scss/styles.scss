@@ -1,0 +1,94 @@
+@import "../../../base/src/scss/imports/variables";
+
+input[type="radio"] {
+  appearance: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  width: _rem(2.4);
+  height: _rem(2.4);
+  position: relative;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: _rem(.2) solid var(--sky-blue);
+    outline-offset: _rem(.2);
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    border: _rem(.1) solid var(--form-element-border-color);
+    border-radius: 50%;
+    transition: background-color var(--transition-duration--default) linear,
+    border-color var(--transition-duration--default) linear;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: _rem(.5);
+    transition: background-color var(--transition-duration--default) linear;
+    border-radius: 50%;
+  }
+
+  &, &:is([data-light] *) {
+    &::before {
+      background-color: var(--form-element-background-color);
+    }
+
+    &:checked::after {
+      background-color: var(--nittany-navy);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          background-color: var(--white);
+          border-color: var(--nittany-navy);
+        }
+
+        &:checked::after {
+          background-color: var(--pa-link);
+        }
+      }
+    }
+
+    &:disabled {
+      &, &:hover {
+        &::before {
+          background-color: var(--form-element-disabled-background-color);
+          border-color: var(--form-element-border-color);
+        }
+
+        &:checked::after {
+          background-color: color-mix(in srgb, transparent, var(--slate) 70%);
+        }
+      }
+    }
+  }
+
+  &:is([data-dark] *) {
+    &:disabled {
+      &, &:hover {
+        &::before {
+          border-color: var(--light-mauve);
+        }
+
+        &:checked::after {
+          background-color: var(--slate);
+        }
+      }
+    }
+  }
+
+}

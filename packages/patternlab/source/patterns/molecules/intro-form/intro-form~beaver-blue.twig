@@ -1,4 +1,5 @@
-{# @TODO: Replace with a real form when base styles allow... #}
+{# @TODO: input[type="submit"] swap out? #}
+
 {% include '@psu-ooe/intro-form/intro-form.twig' with {
   "color": "beaver-blue",
   "images": [
@@ -6,15 +7,15 @@
   ],
   "title": "Ready to Learn More?",
   "description": "Get the resources you need to make informed decisions about your education. Request information on this program and other programs of interest by completing this form.",
-  "form": '<span style=\"color:white;\"><form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname"><br><br>
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email"><br>
-  <label for="phone">Phone</label><br>
-  <input type="telephone" id="phone" name="phone"><br><br>
+  "form": '<form action="/action_page.php">
+  <label for="intro_form_fname_1">First name:</label><br>
+  <input type="text" id="intro_form_fname_1" name="intro_form_fname_1"><br><br>
+  <label for="intro_form_lname_1">Last name:</label><br>
+  <input type="text" id="intro_form_lname_1" name="intro_form_lname_1"><br><br>
+  <label for="intro_form_email_1">Email:</label><br>
+  <input type="email" id="intro_form_email_1" name="intro_form_email_1"><br><br>
+  <label for="intro_form_phone_1">Phone</label><br>
+  <input type="tel" id="intro_form_phone_1" name="intro_form_phone_1"><br><br>
   <input style="background: none;" class="cta cta-block" type="submit" value="Submit">
-</form> </span>'
+</form>'
 } only %}

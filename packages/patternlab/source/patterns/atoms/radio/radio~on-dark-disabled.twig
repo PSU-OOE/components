@@ -1,0 +1,10 @@
+{% set radio %}
+  <div data-dark>
+    <input disabled type="radio" name="demo_radio_disabled_on_dark" id="demo_radio_disabled_on_dark"><label class="visually-hidden" for="demo_radio_disabled_on_dark">Demo radio disabled on dark background</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: radio,
+  background: 'blue',
+} only %}
+

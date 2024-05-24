@@ -1,0 +1,9 @@
+{% set fieldset %}
+  <fieldset>
+    <legend>This is a fieldset.</legend>
+    <p>There's nothing inside yet. @TODO: Fill it up.</p>
+  </fieldset>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: fieldset,
+} only %}

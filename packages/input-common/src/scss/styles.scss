@@ -1,0 +1,57 @@
+@import "../../../base/src/scss/imports/variables";
+
+input:not([type]),
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="url"],
+input[type="search"],
+input[type="number"],
+input[type="password"] {
+  background-color: var(--form-element-background-color);
+  width: var(--form-element-width);
+  border-radius: var(--form-element-border-radius--default);
+  padding: var(--form-element-padding--vertical) var(--form-element-padding--horizontal);
+  font-family: var(--form-element-font-family);
+  font-weight: var(--form-element-font-weight);
+  color: var(--form-element-text-color);
+  font-size: var(--form-element-font-size);
+  line-height: var(--form-element-line-height);
+  border-color: var(--form-element-border-color);
+  border-style: solid none none none;
+  border-width: _rem(.1);
+  max-width: 100%;
+
+  &:focus-visible {
+    outline: _rem(.2) solid var(--sky-blue);
+    outline-offset: _rem(.2);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:disabled, &:read-only {
+    background-color: var(--form-element-disabled-background-color);
+    color: var(--form-element-disabled-text-color);
+  }
+
+  &::placeholder {
+    color: var(--form-element-placeholder-color);
+  }
+
+  &.error {
+    border-color: var(--error-red);
+    border-style: solid;
+  }
+
+  &.warning {
+    border-color: var(--keystone)
+                  var(--keystone-light)
+                  var(--keystone-light)
+                  var(--keystone-light);
+    border-style: solid;
+  }
+}

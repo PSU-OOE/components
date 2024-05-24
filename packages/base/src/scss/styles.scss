@@ -6,6 +6,7 @@
 @import "variables/spacing";
 @import "variables/transitions";
 @import "variables/typography";
+@import "variables/forms";
 
 @import "typography";
 
@@ -40,7 +41,7 @@ body {
 
 a,
 .link--default {
-  color: var(--link-color--default);
+  color: var(--link-color);
   font-weight: inherit;
   text-decoration: underline;
   text-decoration-style: dotted;
@@ -133,7 +134,6 @@ footer {
 @import 'figure';
 @import "buttons";
 @import "tables";
-@import "forms";
 
 // Class selectors
 

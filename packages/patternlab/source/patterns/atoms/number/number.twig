@@ -1,0 +1,7 @@
+{% set number %}
+  <input type="number" name="demo_number" id="demo_number"><label class="visually-hidden" for="demo_number">Demo number</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: number,
+} only %}
+

@@ -1,0 +1,10 @@
+{% set text %}
+  <div data-dark>
+    <input type="text" name="demo_text_on_dark" id="demo_text_on_dark"><label class="visually-hidden" for="demo_text_on_dark">Demo text on dark background</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: text,
+  background: 'blue',
+} only %}
+
