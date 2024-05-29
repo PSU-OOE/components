@@ -1765,7 +1765,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/fieldset@workspace:packages/fieldset":
+"@psu-ooe/fieldset@*, @psu-ooe/fieldset@workspace:packages/fieldset":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/fieldset@workspace:packages/fieldset"
   dependencies:
@@ -1779,7 +1779,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/form@workspace:packages/form":
+"@psu-ooe/form@*, @psu-ooe/form@workspace:packages/form":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/form@workspace:packages/form"
   dependencies:
@@ -1852,7 +1852,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-checkbox@workspace:packages/input-checkbox":
+"@psu-ooe/input-checkbox@*, @psu-ooe/input-checkbox@workspace:packages/input-checkbox":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-checkbox@workspace:packages/input-checkbox"
   dependencies:
@@ -1860,7 +1860,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-color@workspace:packages/input-color":
+"@psu-ooe/input-color@*, @psu-ooe/input-color@workspace:packages/input-color":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-color@workspace:packages/input-color"
   dependencies:
@@ -1868,7 +1868,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-common@^1.0, @psu-ooe/input-common@workspace:packages/input-common":
+"@psu-ooe/input-common@*, @psu-ooe/input-common@^1.0, @psu-ooe/input-common@workspace:packages/input-common":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-common@workspace:packages/input-common"
   dependencies:
@@ -1876,7 +1876,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-date@workspace:packages/input-date":
+"@psu-ooe/input-date@*, @psu-ooe/input-date@workspace:packages/input-date":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-date@workspace:packages/input-date"
   dependencies:
@@ -1885,7 +1885,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-email@workspace:packages/input-email":
+"@psu-ooe/input-email@*, @psu-ooe/input-email@workspace:packages/input-email":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-email@workspace:packages/input-email"
   dependencies:
@@ -1894,7 +1894,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-file@workspace:packages/input-file":
+"@psu-ooe/input-file@*, @psu-ooe/input-file@workspace:packages/input-file":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-file@workspace:packages/input-file"
   dependencies:
@@ -1902,7 +1902,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-number@workspace:packages/input-number":
+"@psu-ooe/input-number@*, @psu-ooe/input-number@workspace:packages/input-number":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-number@workspace:packages/input-number"
   dependencies:
@@ -1911,7 +1911,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-password@workspace:packages/input-password":
+"@psu-ooe/input-password@*, @psu-ooe/input-password@workspace:packages/input-password":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-password@workspace:packages/input-password"
   dependencies:
@@ -1920,7 +1920,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-radio@workspace:packages/input-radio":
+"@psu-ooe/input-radio@*, @psu-ooe/input-radio@workspace:packages/input-radio":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-radio@workspace:packages/input-radio"
   dependencies:
@@ -1928,7 +1928,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-range@workspace:packages/input-range":
+"@psu-ooe/input-range@*, @psu-ooe/input-range@workspace:packages/input-range":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-range@workspace:packages/input-range"
   dependencies:
@@ -1936,7 +1936,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-search@workspace:packages/input-search":
+"@psu-ooe/input-search@*, @psu-ooe/input-search@workspace:packages/input-search":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-search@workspace:packages/input-search"
   dependencies:
@@ -1945,7 +1945,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-tel@workspace:packages/input-tel":
+"@psu-ooe/input-tel@*, @psu-ooe/input-tel@workspace:packages/input-tel":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-tel@workspace:packages/input-tel"
   dependencies:
@@ -1954,7 +1954,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-text@workspace:packages/input-text":
+"@psu-ooe/input-text@*, @psu-ooe/input-text@workspace:packages/input-text":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-text@workspace:packages/input-text"
   dependencies:
@@ -1963,7 +1963,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-time@workspace:packages/input-time":
+"@psu-ooe/input-time@*, @psu-ooe/input-time@workspace:packages/input-time":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-time@workspace:packages/input-time"
   dependencies:
@@ -1972,7 +1972,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/input-url@workspace:packages/input-url":
+"@psu-ooe/input-url@*, @psu-ooe/input-url@workspace:packages/input-url":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/input-url@workspace:packages/input-url"
   dependencies:
@@ -1991,7 +1991,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/label@workspace:packages/label":
+"@psu-ooe/label@*, @psu-ooe/label@workspace:packages/label":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/label@workspace:packages/label"
   dependencies:
@@ -1999,7 +1999,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/legend@workspace:packages/legend":
+"@psu-ooe/legend@*, @psu-ooe/legend@workspace:packages/legend":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/legend@workspace:packages/legend"
   dependencies:
@@ -2166,7 +2166,9 @@ __metadata:
     "@psu-ooe/drop-button": "*"
     "@psu-ooe/event-link": "*"
     "@psu-ooe/expandable-section": "*"
+    "@psu-ooe/fieldset": "*"
     "@psu-ooe/flex-wrap-listener": "*"
+    "@psu-ooe/form": "*"
     "@psu-ooe/grid": "*"
     "@psu-ooe/gtm": "*"
     "@psu-ooe/header": "*"
@@ -2175,7 +2177,24 @@ __metadata:
     "@psu-ooe/horizontal-menu": "*"
     "@psu-ooe/icon-list": "*"
     "@psu-ooe/infographic": "*"
+    "@psu-ooe/input-checkbox": "*"
+    "@psu-ooe/input-color": "*"
+    "@psu-ooe/input-common": "*"
+    "@psu-ooe/input-date": "*"
+    "@psu-ooe/input-email": "*"
+    "@psu-ooe/input-file": "*"
+    "@psu-ooe/input-number": "*"
+    "@psu-ooe/input-password": "*"
+    "@psu-ooe/input-radio": "*"
+    "@psu-ooe/input-range": "*"
+    "@psu-ooe/input-search": "*"
+    "@psu-ooe/input-tel": "*"
+    "@psu-ooe/input-text": "*"
+    "@psu-ooe/input-time": "*"
+    "@psu-ooe/input-url": "*"
     "@psu-ooe/intro-form": "*"
+    "@psu-ooe/label": "*"
+    "@psu-ooe/legend": "*"
     "@psu-ooe/modal": "*"
     "@psu-ooe/more-menu": "*"
     "@psu-ooe/navigation-tile": "*"
@@ -2191,6 +2210,7 @@ __metadata:
     "@psu-ooe/random-item": "*"
     "@psu-ooe/read-more": "*"
     "@psu-ooe/section-view-tracking": "*"
+    "@psu-ooe/select": "*"
     "@psu-ooe/skip-link": "*"
     "@psu-ooe/slide-toggle": "*"
     "@psu-ooe/smart-datetime": "*"
@@ -2200,6 +2220,7 @@ __metadata:
     "@psu-ooe/sprite": "*"
     "@psu-ooe/sticky-panel": "*"
     "@psu-ooe/tabs": "*"
+    "@psu-ooe/textarea": "*"
     "@psu-ooe/upcoming-events": "*"
     "@psu-ooe/vertical-menu": "*"
     "@psu-ooe/webfonts": "*"
@@ -2237,7 +2258,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/select@workspace:packages/select":
+"@psu-ooe/select@*, @psu-ooe/select@workspace:packages/select":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/select@workspace:packages/select"
   dependencies:
@@ -2320,7 +2341,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/textarea@workspace:packages/textarea":
+"@psu-ooe/textarea@*, @psu-ooe/textarea@workspace:packages/textarea":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/textarea@workspace:packages/textarea"
   dependencies:
