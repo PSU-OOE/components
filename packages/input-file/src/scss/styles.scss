@@ -5,6 +5,7 @@ input[type="file"] {
   cursor: pointer;
   width: var(--form-element-width);
   border-radius: var(--form-element-border-radius--rounded);
+  border-width: _rem(.1);
   font-family: var(--form-element-font-family);
   font-weight: var(--form-element-font-weight);
   color: var(--form-element-text-color);
@@ -24,6 +25,11 @@ input[type="file"] {
     line-height: var(--form-element-line-height);
     padding: var(--form-element-padding--vertical) var(--form-element-padding--horizontal);
     transition: background-color var(--transition-duration--default) linear;
+  }
+
+  &.error {
+    border-color: var(--error-red);
+    border-style: solid;
   }
 
   &:focus {

@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/input-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides file element styles.",
   "publishConfig": {
     "access": "public",
