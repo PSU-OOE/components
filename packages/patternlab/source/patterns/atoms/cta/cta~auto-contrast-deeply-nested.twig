@@ -1,0 +1,94 @@
+<input type="checkbox" name="cta_dark_mode_deeply_nested" id="cta_dark_mode_deeply_nested"><label for="cta_dark_mode_deeply_nested">Toggle dark mode</label>
+{% set buttons = {
+  'Default | Reversed': ['', 'reversed'],
+  'Default | Keystone': ['', 'color-keystone'],
+  'Default | Light Blue': ['', 'light-blue'],
+  'Alt | Reversed': ['alt', 'reversed'],
+  'Alt | Keystone': ['alt', 'color-keystone'],
+  'Alt | Light Blue': ['alt', 'light-blue'],
+  'Hollow Solid | Reversed': ['hollow-solid', 'reversed'],
+  'Hollow Solid | Keystone': ['hollow-solid', 'color-keystone'],
+  'Hollow Solid | Light Blue': ['hollow-solid', 'light-blue'],
+  'Hollow Dotted | Reversed': ['hollow-dotted', 'reversed'],
+  'Hollow Dotted | Keystone': ['hollow-dotted', 'color-keystone'],
+  'Hollow Dotted | Light Blue': ['hollow-dotted', 'light-blue'],
+  'Light Blue | Reversed': ['light-blue', 'reversed'],
+  'Light Blue | Keystone': ['light-blue', 'color-keystone'],
+  'Light Blue | Light Blue': ['light-blue', 'light-blue']
+} %}
+<div class="cta-auto-contrast-wrapper" data-dark>
+  {% for label, colors in buttons %}
+    {% include '@psu-ooe/cta/cta-block.twig' with {
+      label: label,
+      url: '#',
+      color: colors[0],
+      color_on_dark: colors[1],
+    } only %}
+  {% endfor %}
+  <div class="cta-auto-contrast-wrapper" data-light>
+    {% for label, colors in buttons %}
+      {% include '@psu-ooe/cta/cta-block.twig' with {
+        label: label,
+        url: '#',
+        color: colors[0],
+        color_on_dark: colors[1],
+      } only %}
+    {% endfor %}
+    <div class="cta-auto-contrast-wrapper" data-dark>
+      {% for label, colors in buttons %}
+        {% include '@psu-ooe/cta/cta-block.twig' with {
+          label: label,
+          url: '#',
+          color: colors[0],
+          color_on_dark: colors[1],
+        } only %}
+      {% endfor %}
+      <div class="cta-auto-contrast-wrapper" data-light>
+        {% for label, colors in buttons %}
+          {% include '@psu-ooe/cta/cta-block.twig' with {
+            label: label,
+            url: '#',
+            color: colors[0],
+            color_on_dark: colors[1],
+          } only %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (()=>{
+
+    document.getElementById('cta_dark_mode_deeply_nested').addEventListener('change', () => {
+      const wrappers = document.querySelectorAll('.cta-auto-contrast-wrapper');
+      wrappers.forEach(wrapper => {
+        if (wrapper.hasAttribute('data-dark')) {
+          wrapper.removeAttribute('data-dark');
+          wrapper.setAttribute('data-light', '');
+        }
+        else {
+          wrapper.removeAttribute('data-light');
+          wrapper.setAttribute('data-dark', '');
+        }
+      });
+    });
+  })();
+</script>
+<style>
+  .cta-auto-contrast-wrapper {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    transition: background var(--transition-duration--default) linear;
+  }
+  .cta-auto-contrast-wrapper[data-light] {
+    background-color: var(--white);
+  }
+  .cta-auto-contrast-wrapper[data-dark] {
+    background-color: var(--beaver-blue);
+  }
+
+</style>
