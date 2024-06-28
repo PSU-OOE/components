@@ -76,8 +76,6 @@
   margin-bottom: 0;
   outline-offset: _rem(-.5);
   position: relative;
-  --cta-border-color: transparent;
-
 
   @include bp(m) {
     padding: _rem(1.7) _rem(3.125);
@@ -85,8 +83,8 @@
 
   &:hover, &:focus-visible {
     text-decoration: none;
-    color: var(--cta-foreground-color-active, var(--white));
     background-color: var(--cta-background-color-active, var(--nittany-navy));
+    color: var(--cta-foreground-color-active, var(--white));
     cursor: pointer;
   }
 
