@@ -84,9 +84,9 @@
   }
 
   &:hover, &:focus-visible {
+    text-decoration: none;
     color: var(--cta-foreground-color-active, var(--white));
     background-color: var(--cta-background-color-active, var(--nittany-navy));
-    text-decoration: none;
     cursor: pointer;
   }
 
