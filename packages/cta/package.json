@@ -1,13 +1,13 @@
 {
   "name": "@psu-ooe/cta",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Provides a CTA button.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/base": "^2.2",
     "@psu-ooe/cta-tracking": "^1.0"
   }
 }
