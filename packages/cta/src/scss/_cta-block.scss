@@ -97,21 +97,21 @@
 
   @mixin cta-color-light($name, $background, $foreground, $background-active, $foreground-active, $outline) {
     &--#{$name} {
-      --cta-background-color-light: var(--if-light, #{$background});
-      --cta-background-color-active-light: var(--if-light, #{$background-active});
-      --cta-foreground-color-light: var(--if-light, #{$foreground});
-      --cta-foreground-color-active-light: var(--if-light, #{$foreground-active});
-      --cta-outline-color-light: var(--if-light, #{$outline});
+      --cta-background-color-light: #{$background};
+      --cta-background-color-active-light: #{$background-active};
+      --cta-foreground-color-light: #{$foreground};
+      --cta-foreground-color-active-light: #{$foreground-active};
+      --cta-outline-color-light: #{$outline};
     }
   }
 
   @mixin cta-color-dark($name, $background, $foreground, $background-active, $foreground-active, $outline) {
     &--on-dark-#{$name} {
-      --cta-background-color-dark: var(--if-dark, #{$background});
-      --cta-background-color-active-dark: var(--if-dark, #{$background-active});
-      --cta-foreground-color-dark: var(--if-dark, #{$foreground});
-      --cta-foreground-color-active-dark: var(--if-dark, #{$foreground-active});
-      --cta-outline-color-dark: var(--if-dark, #{$outline});
+      --cta-background-color-dark: #{$background};
+      --cta-background-color-active-dark: #{$background-active};
+      --cta-foreground-color-dark: #{$foreground};
+      --cta-foreground-color-active-dark: #{$foreground-active};
+      --cta-outline-color-dark: #{$outline};
     }
   }
 
