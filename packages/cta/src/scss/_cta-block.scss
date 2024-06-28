@@ -13,12 +13,10 @@
   }
 }
 
-[data-light] {
+:root, [data-light] {
   --if-light: initial;
   --if-dark: ;
 }
-
-
 
 [data-dark] {
   --if-dark: initial;
@@ -67,8 +65,8 @@
   }
 
   &:hover, &:focus-visible {
-    color: var(--cta-foreground-color-active);
-    background-color: var(--cta-background-color-active);
+    color: var(--cta-foreground-color-active, var(--white));
+    background-color: var(--cta-background-color-active, var(--nittany-navy));
     text-decoration: none;
     cursor: pointer;
   }
