@@ -3,32 +3,58 @@
 
 .callout {
   display: flex;
-  padding: _rem(4) _rem(2);
+  padding: _rem(4) var(--page-side-padding);
 
-  @include bp(xs) {
-    padding-left: _rem(4);
-    padding-right: _rem(4);
-  }
-  &--padding-small {
-    padding-top: _rem(3);
-    padding-bottom: _rem(3);
-  }
+  &--padding-vertical {
+    &-xsmall {
+      padding-top: _rem(2);
+      padding-bottom: _rem(2);
+    }
 
-  &--padding-large {
-    padding-top: _rem(5);
-    padding-bottom: _rem(5)
-  }
+    &-small {
+      padding-top: _rem(3);
+      padding-bottom: _rem(3);
+    }
 
-  @include bp(m) {
-    &--padding-large {
-      padding-top: _rem(6);
-      padding-bottom: _rem(6);
+    &-small-percentage {
+      padding-top: clamp(_rem(1), 2.9%, _rem(4));
+      padding-bottom: clamp(_rem(1), 2.9%, _rem(4));
+    }
+
+    &-medium-percentage {
+      padding-top: clamp(_rem(1), 5.8%, _rem(4));
+      padding-bottom: clamp(_rem(1), 5.8%, _rem(4));
+    }
+
+    &-large-percentage {
+      padding-top: clamp(_rem(1), 8.7%, _rem(4));
+      padding-bottom: clamp(_rem(1), 8.7%, _rem(4));
     }
   }
 
+  &--padding-horizontal {
+    &-small-percentage {
+      padding-left: clamp(_rem(1), 2.9%, _rem(4));
+      padding-right: clamp(_rem(1), 2.9%, _rem(4));
+    }
+
+    &-medium-percentage {
+      padding-left: clamp(_rem(1), 5.8%, _rem(4));
+      padding-right: clamp(_rem(1), 5.8%, _rem(4));
+    }
+
+    &-large-percentage {
+      padding-left: clamp(_rem(1), 8.7%, _rem(4));
+      padding-right: clamp(_rem(1), 8.7%, _rem(4));
+    }
+  }
+
+  &--white {
+    background-color: var(--white);
+  }
 
   &--light-grey {
-    background: var(--light-grey);
+    background-color: var(--light-grey);
   }
 
   &--blue-gradient {
@@ -36,12 +62,12 @@
   }
 
   &--blue {
-    background: var(--beaver-blue);
+    background-color: var(--beaver-blue);
   }
 
-  &--narrow {
-    .callout__content {
-      max-width: _rem(87);
+  &--shadow {
+    &-standard {
+      box-shadow: 0 _rem(.3) _rem(.6) color-mix(in srgb, transparent, var(--nittany-navy) 25%);
     }
   }
 
@@ -49,5 +75,9 @@
     margin: auto;
     max-width: _rem(111);
     width: 100%;
+
+    &--narrow {
+      max-width: _rem(87);
+    }
   }
 }
