@@ -61,23 +61,25 @@
   {% endblock %}
   {% block middle_first %}
     <h2 class="visually-hidden">Contact information</h2>
-    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;color:var(--beaver-blue)">
-      <span class="visually-hidden">phone</span>
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'phone' } only %}&nbsp;
-      <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold"> 814-865-5403</span></a>
-    </div>
-    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;color:var(--beaver-blue)">
-      <span class="visually-hidden">email</span>
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
-      <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">worldcampus@psu.edu</span></a>
-    </div>
-    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
-      <span class="text text--size-msmall text--height-snug text--weight-regular" style="font-style: italic">U.S. Toll Free</span>:&nbsp;
-      <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">800-252-3592</span></a>
-    </div>
-    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
-      <span class="text text--size-msmall text--height-snug text--weight-regular" style="font-style: italic">Fax:</span>&nbsp;814-865-3290
-    </div>
+    <address>
+      <div style="white-space: nowrap;color:var(--beaver-blue)">
+        <span class="visually-hidden">phone</span>
+        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'phone' } only %}&nbsp;
+        <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold"> 814-865-5403</span></a>
+      </div>
+      <div style="white-space: nowrap;color:var(--beaver-blue)">
+        <span class="visually-hidden">email</span>
+        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
+        <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">worldcampus@psu.edu</span></a>
+      </div>
+      <div style="white-space: nowrap;">
+        <span class="text text--size-msmall text--height-snug text--weight-regular" style="font-style: italic">U.S. Toll Free</span>:&nbsp;
+        <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">800-252-3592</span></a>
+      </div>
+      <div style="white-space: nowrap;">
+        <span class="text text--size-msmall text--height-snug text--weight-regular" style="font-style: italic">Fax:</span>&nbsp;814-865-3290
+      </div>
+    </address>
   {% endblock %}
   {% block middle_second %}
     {% include '@psu-ooe/address/address.twig' with {
