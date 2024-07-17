@@ -1,4 +1,4 @@
-{% embed '@psu-ooe/footer/footer.twig' with { color: 'dark' } only %}
+{% embed '@psu-ooe/footer/footer.twig' %}
   {% block top_first %}
     <a href="#" style="display:inline-block;  width: max(13rem, 100%);min-width: 3rem;max-width: 22.2rem;color:var(--beaver-blue)">
       <span class="visually-hidden">Penn State World Campus</span>
@@ -61,12 +61,12 @@
   {% endblock %}
   {% block middle_first %}
     <h2 class="visually-hidden">Contact information</h2>
-    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
+    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;color:var(--beaver-blue)">
       <span class="visually-hidden">phone</span>
       {% include '@psu-ooe/sprite/sprite.twig' with { name: 'phone' } only %}&nbsp;
-      <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold":> 814-865-5403</span></a>
+      <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold"> 814-865-5403</span></a>
     </div>
-    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
+    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;color:var(--beaver-blue)">
       <span class="visually-hidden">email</span>
       {% include '@psu-ooe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
       <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">worldcampus@psu.edu</span></a>
@@ -93,7 +93,7 @@
     {% for icon, label in {instagram: 'Instagram', facebook: 'Facebook', linkedin: 'LinkedIn', twitter: 'Twitter', youtube: 'YouTube', flickr: 'Flickr', pinterest: 'Pinterest', blog: 'Blog'} %}
       {% set social_icon %}
         {% include '@psu-ooe/social-icon/social-icon.twig' with {
-          color: 'light',
+          color: 'dark',
           icon: icon,
           label: label,
           url: '#',
@@ -109,7 +109,7 @@
   {% block colophon %}
     <h2 class="visually-hidden">Disclosures, policies, and copyright information</h2>
     <div style="display:flex;gap:2rem 2.5%">
-      <a href="#" style="color:var(--white);display:inline-block;min-width:10rem;width:10rem;height:fit-content;padding:1rem 0;">
+      <a href="#" style="color:var(--beaver-blue);display:inline-block;min-width:10rem;width:10rem;height:fit-content;padding:1rem 0;">
         <span class="visually-hidden">Penn State</span>
         {% include '@psu-ooe/sprite/sprite.twig' with { name: 'psu-mark', expand: true } only %}
       </a>

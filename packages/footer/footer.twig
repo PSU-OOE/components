@@ -34,9 +34,9 @@
   {% endblock %}
 {% endset %}
 
-{% set bottom %}
-  {% block bottom %}
-    {{ bottom }}
+{% set colophon %}
+  {% block colophon %}
+    {{ colophon }}
   {% endblock %}
 {% endset %}
 
@@ -69,37 +69,51 @@
         content: footer_top
       } only %}
     {% endif %}
-    {% if middle_first or middle_second or middle_third %}
-      {% set footer_middle %}
-        <div class="footer__middle">
+    {% if middle_first or middle_second or middle_third or bottom %}
+      {% set footer_bottom_content %}
+        <div class="footer__bottom-container-geometrics">
+          <svg width="0" height="0" style="position:absolute">
+            <defs>
+              <linearGradient id="hub-geometric-footer-bottom-gradient" x1="0.539" y1="0.24" x2="0.02" y2="0.066" gradientUnits="objectBoundingBox">
+                <stop offset="0" stop-color="var(--sky-blue)"></stop>
+                <stop offset="1" stop-color="var(--sky-blue)" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
+        </div>
+        <div class="footer__bottom">
           {% if middle_first %}
-            <div class="footer__middle-first">
+            <div class="footer__bottom-first">
               {{ middle_first }}
             </div>
           {% endif %}
           {% if middle_second %}
-            <div class="footer__middle-second">
+            <div class="footer__bottom-second">
               {{ middle_second }}
             </div>
           {% endif %}
           {% if middle_third %}
-            <div class="footer__middle-third">
+            <div class="footer__bottom-third">
               {{ middle_third }}
             </div>
           {% endif %}
         </div>
-        {% if bottom %}
-          <div class="footer__bottom">
-            {{ bottom }}
+        {% if colophon %}
+          <div class="footer__colophon">
+            {{ colophon }}
           </div>
         {% endif %}
       {% endset %}
-      {% include '@psu-ooe/background-container/background-container.twig' with {
-        color: bottom_color|default('beaver-blue'),
-        background_image: 'hub-geometric:bottomright',
-        padding: 'large',
-        content: footer_middle
-      } only %}
+      {% if color == 'dark' %}
+        <div class="footer__bottom-container footer__bottom-container--dark" data-dark>
+          {{ footer_bottom_content }}
+        </div>
+      {% else %}
+        <div class="footer__bottom-container">
+          {{ footer_bottom_content }}
+        </div>
+      {% endif %}
     {% endif %}
   </footer>
 {% endapply %}

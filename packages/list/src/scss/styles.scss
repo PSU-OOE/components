@@ -1,3 +1,5 @@
+@import '../../../base/src/scss/imports/variables';
+
 .list {
   margin: 0;
   padding: 0;
@@ -8,6 +10,13 @@
 
     &--horizontal {
       display: inline-block;
+    }
+
+    &--separator-dot {
+      &:not(:last-child)::after {
+        content: "•";
+        margin:0 _rem(1);
+      }
     }
   }
 }

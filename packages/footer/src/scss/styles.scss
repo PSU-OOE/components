@@ -3,16 +3,18 @@
 
 .footer {
 
-  &__top, &__middle, &__bottom {
+  &__top, &__bottom-container {
     max-width: _rem(119);
     margin: 0 auto;
     padding: 0 var(--page-side-padding);
   }
 
-  &__top, &__middle {
+  &__top, &__bottom {
     display: flex;
+    flex-wrap: wrap;
     gap: _rem(3.5) 7.5%;
     flex-direction: column;
+    position: relative;
 
     @include bp(m) {
       flex-direction: row;
@@ -31,13 +33,45 @@
     }
   }
 
-  &__top, &__middle, &__bottom {
-    &:empty {
-      display: none;
+  &__colophon {
+    position: relative;
+  }
+
+  &__bottom-container {
+    position: relative;
+    padding: _rem(5) var(--page-side-padding);
+    display: flex;
+    flex-direction: column;
+    gap: _rem(4);
+
+    @include bp(m) {
+      padding: _rem(6) var(--page-side-padding);
+    }
+
+    &--dark {
+      background: linear-gradient(to right, var(--nittany-navy), var(--beaver-blue));
+    }
+
+    &-geometrics {
+      overflow: hidden;
+      position: absolute;
+      inset: 0;
+
+      .sprite {
+        opacity: .3;
+        position: absolute;
+        top: -1rem;
+        right: -30rem;
+        width: 60rem;
+        height: auto;
+        --hub-geometric-gradient: url(#hub-geometric-footer-bottom-gradient);
+      }
     }
   }
 
-  &__middle:not(:empty) + &__bottom {
-    margin-top: _rem(4);
+  &__top, &__middle, &__colophon {
+    &:empty {
+      display: none;
+    }
   }
 }

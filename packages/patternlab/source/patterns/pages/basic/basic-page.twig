@@ -239,16 +239,134 @@
     Footer bottom content
   </div>
 {% endset %}
-<footer>
-  {% include '@psu-ooe/background-container/background-container.twig' with {
-    color: 'light-grey',
-    background_image: 'hub-geometric:topleft',
-    content: footer_top,
-  } only %}
-  {% include '@psu-ooe/background-container/background-container.twig' with {
-    color: 'beaver-blue',
-    background_image: 'hub-geometric:bottomright',
-    content: footer_bottom,
-  } only %}
-</footer>
+{% embed '@psu-ooe/footer/footer.twig' with { color: 'dark' } only %}
+  {% block top_first %}
+    <a href="#" style="display:inline-block;  width: max(13rem, 100%);min-width: 3rem;max-width: 22.2rem;color:var(--beaver-blue)">
+      <span class="visually-hidden">Penn State World Campus</span>
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'wc-mark', expand: true } only %}
+    </a>
+  {% endblock %}
+  {% block top_second %}
+    {% include '@psu-ooe/heading/heading.twig' with {
+      level: 2,
+      size: 'medium',
+      content: 'A world of possibilities. <span class="text--contrasting">Online.</span>'
+    } only %}
+    {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
+      menu_name: 'Example',
+      items: [
+        { title: 'Home', url: '#' },
+        { title: 'About Us', url: '/about-us', below: [
+          { title: 'Our Story', url: '#' }, { title: 'Mission', url: '#' }, { title: 'Our Leadership', url: '#' }, { title: 'Our Students', url: '#' }, { title: 'Why World Campus', url: '#' }, { title: 'News and Features', url: '#' }, { title: 'Success Stories', url: '#' }, { title: 'Employment', url: '#' },
+        ]},
+        { title: 'Degrees and Certificates', url: '#'},
+        { title: 'How Online Learning Works', url: '#', below: [
+          { title: 'Online Learning Experience', url: '#' }, { title: 'Student Services', url: '#' }, { title: 'Dedication to Accessibility', url: '#' }, { title: 'How it Works (FAQs)', url: '#' },
+        ]},
+        { title: 'Admissions', url: '#', below: [
+          { title: 'How to Apply', url: '#' }, { title: 'Returning Students', url: '#' }, { title: 'Transfer Students', url: '#' }, { title: 'International Students', url: '#' }, { title: 'Academic Calendar', url: '#' }, { title: 'Planning Resources', url: '#' },
+        ]},
+        { title: 'Tuition and Financial Aid', url: '#', below: [
+          { title: 'Tuition and Costs', url: '#' }, { title: 'Financial Aid', url: '#' }, { title: 'Scholarships', url: '#' }, { title: 'Payment Options', url: '#' },
+        ]},
+        { title: 'Military', url: '#', below: [
+          { title: 'Education Benefits and Financial Aid', url: '#' }, { title: 'Admissions and Transfer Credits', url: '#' }, { title: 'Military Support', url: '#' }, { title: 'What You Can Expect', url: '#' }, { title: 'Awards and Affiliations', url: '#' }, { title: 'Events', url: '#' }, { title: 'Service Members', url: '#' }, { title: 'Veterans', url: '#' },
+        ]},
+      ],
+    } only %}
+
+  {% endblock %}
+  {% block top_third %}
+    {% include '@psu-ooe/list/list.twig' with {
+      items: [
+        '<a href="#" style="display:inline-block;padding:.5rem 0;">Contacts & Help</a>',
+        '<a href="#" style="display:inline-block;padding:.5rem 0;">Events</a>',
+        '<a href="#" style="display:inline-block;padding:.5rem 0;">On-Demand Webinars</a>',
+        '<a href="#" style="display:inline-block;padding:.5rem 0;">AcademicCalendar</a>',
+      ],
+    } only %}
+    <div>
+      <span class="text text--weight-bold">
+        Information For:
+        <span class="visually-hidden"> specific groups</span>
+      </span>
+      {% include '@psu-ooe/list/list.twig' with {
+        items: [
+          '<a href="#" style="display:inline-block;padding:.25rem 0;">Current Students</a>',
+          '<a href="#" style="display:inline-block;padding:.25rem 0;">Alumni and Friends</a>',
+          '<a href="#" style="display:inline-block;padding:.25rem 0;">Education Alliance</a>',
+          '<a href="#" style="display:inline-block;padding:.25rem 0;">Faculty and Staff</a>',
+        ],
+      } only %}
+    </div>
+  {% endblock %}
+  {% block middle_first %}
+    <h2 class="visually-hidden">Contact information</h2>
+    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
+      <span class="visually-hidden">phone</span>
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'phone' } only %}&nbsp;
+      <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold":> 814-865-5403</span></a>
+    </div>
+    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
+      <span class="visually-hidden">email</span>
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
+      <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">worldcampus@psu.edu</span></a>
+    </div>
+    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
+      <span class="text text--size-msmall text--height-snug text--weight-regular" style="font-style: italic">U.S. Toll Free</span>:&nbsp;
+      <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">800-252-3592</span></a>
+    </div>
+    <div class="text text--size-msmall text--height-snug text--weight-semibold" style="white-space: nowrap;">
+      <span class="text text--size-msmall text--height-snug text--weight-regular" style="font-style: italic">Fax:</span>&nbsp;814-865-3290
+    </div>
+  {% endblock %}
+  {% block middle_second %}
+    {% include '@psu-ooe/address/address.twig' with {
+      name: 'The Pennsylvania State University',
+      street: '128 Outreach Building',
+      locality: 'University Park',
+      state: 'PA',
+      postcode: '16802',
+    } only %}
+  {% endblock %}
+  {% block middle_third %}
+    {% set social_icons = [] %}
+    {% for icon, label in {instagram: 'Instagram', facebook: 'Facebook', linkedin: 'LinkedIn', twitter: 'Twitter', youtube: 'YouTube', flickr: 'Flickr', pinterest: 'Pinterest', blog: 'Blog'} %}
+      {% set social_icon %}
+        {% include '@psu-ooe/social-icon/social-icon.twig' with {
+          color: 'light',
+          icon: icon,
+          label: label,
+          url: '#',
+        } only %}
+      {% endset %}
+      {% set social_icons = social_icons|merge([social_icon]) %}
+    {% endfor %}
+
+    <div style="width:22rem">
+      {% include '@psu-ooe/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
+    </div>
+  {% endblock %}
+  {% block colophon %}
+    <h2 class="visually-hidden">Disclosures, policies, and copyright information</h2>
+    <div style="display:flex;gap:2rem 2.5%">
+      <a href="#" style="color:var(--white);display:inline-block;min-width:10rem;width:10rem;height:fit-content;padding:1rem 0;">
+        <span class="visually-hidden">Penn State</span>
+        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'psu-mark', expand: true } only %}
+      </a>
+      {% include '@psu-ooe/list/list.twig' with {
+        orientation: 'horizontal',
+        separator: 'dot',
+        items: [
+          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Accessibility</span></a>',
+          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Equal Opportunity</span></a>',
+          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Nondiscrimination</span></a>',
+          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Privacy</span></a>',
+          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Consumer Information and Disclosures</span></a>',
+          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">The Pennsylvania State University © 2024</span></a>',
+        ]
+      } only %}
+    </div>
+  {% endblock %}
+{% endembed %}
 

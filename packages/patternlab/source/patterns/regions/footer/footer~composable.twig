@@ -1,45 +1,43 @@
-{% embed '@psu-ooe/footer/footer.twig' with {
-  bottom_color: 'white'
-} only %}
+{% embed '@psu-ooe/footer/footer.twig' %}
   {% block top_first %}
     <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
-      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Top-First</button>
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Region</button>
     </div>
   {% endblock %}
 
   {% block top_second %}
     <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
-      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Top-Second</button>
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Region</button>
     </div>
   {% endblock %}
 
   {% block top_third %}
     <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
-      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Top-Third</button>
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Region</button>
     </div>
   {% endblock %}
 
   {% block middle_first %}
-    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
-      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Middle-First</button>
+    <div style="outline:2px dashed var(--white);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Region</button>
     </div>
   {% endblock %}
 
   {% block middle_second %}
-    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
-      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Middle-Second</button>
+    <div style="outline:2px dashed var(--white);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Region</button>
     </div>
   {% endblock %}
 
   {% block middle_third %}
-    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
-      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Middle-Third</button>
+    <div style="outline:2px dashed var(--white);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Region</button>
     </div>
   {% endblock %}
 
-  {% block bottom %}
-    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
-      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove-Bottom</button>
+  {% block colophon %}
+    <div style="outline:2px dashed var(--white);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Region</button>
     </div>
   {% endblock %}
 {% endembed %}

@@ -3,6 +3,8 @@
   {% set item_classes = [
     'list__item',
     orientation == 'horizontal' ? 'list__item--horizontal',
+    separator in ['dot'] ? 'list__item--separator-' ~ separator,
+    density in ['tight'] ? 'list__item--density-' ~ density,
   ]|filter(class => class is not empty) %}
   {% for item in items %}
     <li class="{{ item_classes|join(' ') }}">{{ item }}</li>
