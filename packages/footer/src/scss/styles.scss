@@ -1,0 +1,43 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.footer {
+
+  &__top, &__middle, &__bottom {
+    max-width: _rem(119);
+    margin: 0 auto;
+    padding: 0 var(--page-side-padding);
+  }
+
+  &__top, &__middle {
+    display: flex;
+    gap: _rem(3.5) 7.5%;
+    flex-direction: column;
+
+    @include bp(m) {
+      flex-direction: row;
+
+      &-first {
+        flex: 20%;
+      }
+
+      &-second {
+        flex: 40%;
+      }
+
+      &-third {
+        flex: auto;
+      }
+    }
+  }
+
+  &__top, &__middle, &__bottom {
+    &:empty {
+      display: none;
+    }
+  }
+
+  &__middle:not(:empty) + &__bottom {
+    margin-top: _rem(4);
+  }
+}

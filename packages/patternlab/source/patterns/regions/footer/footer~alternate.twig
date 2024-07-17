@@ -1,0 +1,31 @@
+{% embed '@psu-ooe/footer/footer.twig' with {
+  bottom_color: 'white'
+} only %}
+  {% block top_first %}
+    <p style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;">Top First</p>
+  {% endblock %}
+
+  {% block top_second %}
+    <p style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;">Top Second</p>
+  {% endblock %}
+
+  {% block top_third %}
+    <p style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;">Top Third</p>
+  {% endblock %}
+
+  {% block middle_first %}
+    <p style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;">Middle First</p>
+  {% endblock %}
+
+  {% block middle_second %}
+    <p style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;">Middle Second</p>
+  {% endblock %}
+
+  {% block middle_third %}
+    <p style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;">Middle Third</p>
+  {% endblock %}
+
+  {% block bottom %}
+    <p style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;">Legal</p>
+  {% endblock %}
+{% endembed %}

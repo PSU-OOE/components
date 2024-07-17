@@ -1562,6 +1562,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/address@*, @psu-ooe/address@workspace:packages/address":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/address@workspace:packages/address"
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/alert@*, @psu-ooe/alert@workspace:packages/alert":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/alert@workspace:packages/alert"
@@ -1776,6 +1782,12 @@ __metadata:
 "@psu-ooe/flex-wrap-listener@*, @psu-ooe/flex-wrap-listener@^1.0, @psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener"
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/footer@*, @psu-ooe/footer@workspace:packages/footer":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/footer@workspace:packages/footer"
   languageName: unknown
   linkType: soft
 
@@ -2007,6 +2019,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/list@*, @psu-ooe/list@workspace:packages/list":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/list@workspace:packages/list"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/modal@*, @psu-ooe/modal@workspace:packages/modal":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/modal@workspace:packages/modal"
@@ -2144,6 +2164,7 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.17.0
     "@pattern-lab/uikit-workshop": ^5.17.0
     "@psu-ooe/accordion": "*"
+    "@psu-ooe/address": "*"
     "@psu-ooe/alert": "*"
     "@psu-ooe/announcement": "*"
     "@psu-ooe/auto-expansion": "*"
@@ -2168,6 +2189,7 @@ __metadata:
     "@psu-ooe/expandable-section": "*"
     "@psu-ooe/fieldset": "*"
     "@psu-ooe/flex-wrap-listener": "*"
+    "@psu-ooe/footer": "*"
     "@psu-ooe/form": "*"
     "@psu-ooe/grid": "*"
     "@psu-ooe/gtm": "*"
@@ -2195,6 +2217,7 @@ __metadata:
     "@psu-ooe/intro-form": "*"
     "@psu-ooe/label": "*"
     "@psu-ooe/legend": "*"
+    "@psu-ooe/list": "*"
     "@psu-ooe/modal": "*"
     "@psu-ooe/more-menu": "*"
     "@psu-ooe/navigation-tile": "*"

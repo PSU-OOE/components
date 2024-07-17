@@ -1,0 +1,45 @@
+{% embed '@psu-ooe/footer/footer.twig' with {
+  bottom_color: 'white'
+} only %}
+  {% block top_first %}
+    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Top-First</button>
+    </div>
+  {% endblock %}
+
+  {% block top_second %}
+    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Top-Second</button>
+    </div>
+  {% endblock %}
+
+  {% block top_third %}
+    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Top-Third</button>
+    </div>
+  {% endblock %}
+
+  {% block middle_first %}
+    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Middle-First</button>
+    </div>
+  {% endblock %}
+
+  {% block middle_second %}
+    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Middle-Second</button>
+    </div>
+  {% endblock %}
+
+  {% block middle_third %}
+    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove Middle-Third</button>
+    </div>
+  {% endblock %}
+
+  {% block bottom %}
+    <div style="outline:2px dashed var(--beaver-blue);padding:2rem;margin:auto;text-align:center">
+      <button class="cta-block cta-block--compact" onclick="this.parentElement.parentElement.remove();">Remove-Bottom</button>
+    </div>
+  {% endblock %}
+{% endembed %}

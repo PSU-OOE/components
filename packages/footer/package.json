@@ -1,0 +1,9 @@
+{
+  "name": "@psu-ooe/footer",
+  "version": "1.0.0",
+  "description": "Provides a footer region.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

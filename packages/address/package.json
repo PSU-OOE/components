@@ -1,0 +1,9 @@
+{
+  "name": "@psu-ooe/address",
+  "version": "1.0.0",
+  "description": "Provides an address element.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  }
+}

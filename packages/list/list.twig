@@ -1,0 +1,10 @@
+{% set list_semantic = ordered ? 'ol' : 'ul' %}
+<{{ list_semantic }} class="list">
+  {% set item_classes = [
+    'list__item',
+    orientation == 'horizontal' ? 'list__item--horizontal',
+  ]|filter(class => class is not empty) %}
+  {% for item in items %}
+    <li class="{{ item_classes|join(' ') }}">{{ item }}</li>
+  {% endfor %}
+</{{ list_semantic }}>
