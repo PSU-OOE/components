@@ -2,29 +2,26 @@
   <address class="address">
     {% if name %}
       <div class="address__name">
-        {{ name }}
+        {{- name -}}
       </div>
     {% endif %}
     {% if street %}
       <div class="address__line1">
-        {{ street }}
+        {{- street -}}
       </div>
     {% endif %}
     {% if locality or state or postcode %}
       <div class="address__line2">
         {% if locality %}
           <span class="address__locality">
-            {{ locality }}
-            {% if state or postcode %}
-              ,
-            {% endif %}
+            {{- locality -}}{% if state or postcode %},{% endif %}
           </span>
         {% endif %}
         {% if state %}
-          <span class="address__state">{{ state }}</span>
+          <span class="address__state">{{- state -}}{% if postcode %} {% endif %}</span>
         {% endif %}
         {% if postcode %}
-          <span class="address_postcode">{{ postcode }}</span>
+          <span class="address_postcode">{{- postcode -}}</span>
         {% endif %}
       </div>
     {% endif %}
