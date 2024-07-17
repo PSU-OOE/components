@@ -3,15 +3,15 @@
 
 .footer {
 
-  &__top, &__bottom-container {
+  &__top, &__bottom, &__colophon {
     max-width: _rem(119);
     margin: 0 auto;
     padding: 0 var(--page-side-padding);
+    width: 100%;
   }
 
   &__top, &__bottom {
     display: flex;
-    flex-wrap: wrap;
     gap: _rem(3.5) 7.5%;
     flex-direction: column;
     position: relative;
