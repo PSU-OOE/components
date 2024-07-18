@@ -1,0 +1,10 @@
+{% set range %}
+  <div style="display: flex;flex-flow: row nowrap;">
+    <input type="range" min="0" max="100" name="demo_dual_range" id="demo_dual_range"><label class="visually-hidden" for="demo_dual_range">Demo range start</label>
+    <input type="range" min="100" max="1000" name="demo_dual_range_2" id="demo_dual_range_2"><label class="visually-hidden" for="demo_dual_range_2">Demo range end</label>
+  </div>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: range,
+} only %}
