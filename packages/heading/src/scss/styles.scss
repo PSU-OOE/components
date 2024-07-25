@@ -1,18 +1,31 @@
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
 
+:root, [data-light] {
+  --headings-color: var(--slate);
+  --h1-opacity: 100%;
+  --headings-contrasting-color: var(--text-color--dark);
+}
+
+[data-dark] {
+  --headings-color: var(--white);
+  --h1-opacity: 85%;
+  --headings-contrasting-color: var(--white);
+}
+
 // Common properties.
-h1, h2, h3, h4, h5, h6, .heading {
+h1, h2, h3, h4, h5, h6 {
   color: var(--headings-color);
   margin: 0 0 var(--text-element-vertical-space--default);
 
   .text--contrasting {
-    color: var(--text-color--dark);
+    color: var(--headings-contrasting-color);
   }
 }
 
 // <h1> specific properties.
 h1, .heading--xlarge {
+  color: color-mix(in srgb, transparent, var(--headings-color) var(--h1-opacity));
   font-family: var(--font-family--text);
   font-size: var(--font-size--4xlarge);
   font-weight: var(--font-weight--extrabold);
@@ -24,15 +37,6 @@ h1, .heading--xlarge {
 
     @include bp(s) {
       margin-top: _rem(-0.75);
-    }
-  }
-
-  &.heading--reversed {
-    --headings-color: color-mix(in srgb, var(--text-color--light) 85%, transparent);
-
-    // @TODO: Remove fallback when appropriate.
-    @supports not (color: color-mix(in srgb, white, white)) {
-      --headings-color: var(--text-color--light);
     }
   }
 
@@ -118,7 +122,7 @@ h2, .heading--large {
     display: flex;
     width: 100%;
     height: .125em;
-    background-color: var(--sky-blue);
+    background-color: var(--accent-color, var(--sky-blue));
     max-width: _rem(8);
   }
 }
@@ -156,6 +160,7 @@ h6, .heading--2xsmall {
 // Modifiers.
 .heading {
 
+  // @deprecated since 2.1.0
   &--reversed {
     --headings-color: var(--text-color--light);
 

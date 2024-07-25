@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/heading",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Provides a heading implementation.",
   "publishConfig": {
     "access": "public",
