@@ -49,3 +49,42 @@
   </head>
   <body class="{{ bodyClass }}">
     {{ get_sprites() }}
+  {% set prefs %}
+    <div style="text-align: left">
+      <h2>User Preferences</h2>
+      <form>
+        <label>
+          Accent Color
+          <input type="color" name="accent_color">
+        </label>
+      </form>
+      <script>
+        (()=>{
+          if (localStorage.getItem('accent_color')) {
+            document.documentElement.style.setProperty('--accent-color', localStorage.getItem('accent_color'));
+          }
+          document.querySelector('[name="accent_color"]').addEventListener('change', e => {
+            document.documentElement.style.setProperty('--accent-color', e.target.value);
+            localStorage.setItem('accent_color', e.target.value);
+          });
+        })();
+      </script>
+    </div>
+  {% endset %}
+  {% set menu %}
+    <div style="text-align: right">
+      {%  include '@psu-ooe/compact-menu/compact-menu.twig' with {
+        menu_label: 'Customize',
+        menu: prefs,
+      } only %}
+    </div>
+  {% endset %}
+  {% set band %}
+    {% include '@psu-ooe/band/band.twig' with {
+      padding: 'compact',
+      content: menu
+    } only %}
+  {% endset %}
+  {% include '@psu-ooe/sticky-panel/sticky-panel.twig' with {
+    bands: [band]
+  } only %}
