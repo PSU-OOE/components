@@ -88,16 +88,8 @@
             elem.addEventListener('change', () => {
               document.documentElement.style.setProperty(prop, elem.value);
               localStorage.setItem(key, elem.value);
-              document.documentElement.style.display = 'run-in';
-              setTimeout(() => {
-                document.documentElement.style.display = 'block';
-              });
             });
             document.documentElement.style.setProperty(prop, value);
-            document.documentElement.style.display = 'run-in';
-            setTimeout(() => {
-              document.documentElement.style.display = 'block';
-            });
           }
         })();
       </script>
