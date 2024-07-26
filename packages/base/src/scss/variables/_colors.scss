@@ -48,10 +48,13 @@
   --link-color--light: var(--pa-link-light);
   --accent-color--dark: var(--sky-blue);
   --accent-color--light: var(--sky-blue);
+  --accent-color-active--dark: var(--sky-blue);
+  --accent-color-active--light: var(--sky-blue);
 
   --text-color--default: var(--text-color--dark);
   --link-color--default: var(--link-color--dark);
   --accent-color--default: var(--accent-color--dark);
+  --accent-color-active--default: var(--accent-color-active--dark);
   --headings-color: var(--text-color--slate);
 }
 
@@ -60,10 +63,12 @@
   --link-color: var(--link-color--default);
   --text-color: var(--text-color--default);
   --accent-color: var(--accent-color--default);
+  --accent-color-active: var(--accent-color-active--default)
 }
 
 [data-dark] {
   --link-color: var(--link-color--light);
   --text-color: var(--text-color--light);
   --accent-color: var(--accent-color--light);
+  --accent-color-active: var(--accent-color-active--light)
 }

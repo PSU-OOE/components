@@ -53,19 +53,47 @@
     <div style="text-align: left">
       <h2>User Preferences</h2>
       <form>
-        <label>
-          Accent Color
-          <input type="color" name="accent_color">
-        </label>
+        <fieldset>
+          <legend>Accent Colors</legend>
+          <br>
+          <label for="accent-color-decorative--dark">Decorative</label>
+          <br>
+          <input type="color" name="accent_color_dark" id="accent-color--dark">
+          <br>
+          <label for="accent-color-decorative--light">Decorative (light)</label>
+          <br>
+          <input type="color" name="accent_color_light" id="accent-color--light">
+          <br>
+          <label for="accent-color-active--dark">Active</label>
+          <br>
+          <input type="color" name="accent_color_active_dark" id="accent-color-active--dark">
+          <br>
+          <label for="accent-color-active--light">Active (light)</label>
+          <br>
+          <input type="color" name="accent_color_active_light" id="accent-color-active--light">
+        </fieldset>
       </form>
       <script>
         (()=>{
-          if (localStorage.getItem('accent_color')) {
-            document.documentElement.style.setProperty('--accent-color', localStorage.getItem('accent_color'));
+          const prefs = {
+            '--accent-color--dark': 'accent_color_dark',
+            '--accent-color--light': 'accent_color_light',
+            '--accent-color-active--dark': 'accent_color_active_dark',
+            '--accent-color-active--light': 'accent_color_active_light',
           }
-          document.querySelector('[name="accent_color"]').addEventListener('change', e => {
-            document.documentElement.style.setProperty('--accent-color', e.target.value);
-            localStorage.setItem('accent_color', e.target.value);
+          if (localStorage.getItem('accent_color')) {
+            for (const [prop, key] of Object.entries(prefs)) {
+              const value = localStorage.getItem(key);
+              const elem =  document.querySelector('[name="' + key + '"]');
+              elem.value = value;
+              elem.addEventListener('change', () => {
+                document.documentElement.style.setProperty(prop, elem.value);
+                localStorage.setItem(key, elem.value);
+              });
+              document.documentElement.style.setProperty(prop, value);
+            }
+          }
+          document.querySelector('[name^="accent_color_"]').addEventListener('change', e => {
           });
         })();
       </script>
