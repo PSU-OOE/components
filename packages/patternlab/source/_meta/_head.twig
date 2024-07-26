@@ -64,13 +64,13 @@
           <br>
           <input type="color" name="accent_color_light" id="accent-color--light">
           <br>
-          <label for="accent-color-active--dark">Active</label>
+          <label for="accent-color-interactive--dark">Active</label>
           <br>
-          <input type="color" name="accent_color_active_dark" id="accent-color-active--dark">
+          <input type="color" name="accent_color_interactive_dark" id="accent-color-interactive--dark">
           <br>
-          <label for="accent-color-active--light">Active (light)</label>
+          <label for="accent-color-interactive--light">Active (light)</label>
           <br>
-          <input type="color" name="accent_color_active_light" id="accent-color-active--light">
+          <input type="color" name="accent_color_interactive_light" id="accent-color-interactive--light">
         </fieldset>
       </form>
       <script>
@@ -78,8 +78,8 @@
           const prefs = {
             '--accent-color--dark': 'accent_color_dark',
             '--accent-color--light': 'accent_color_light',
-            '--accent-color-active--dark': 'accent_color_active_dark',
-            '--accent-color-active--light': 'accent_color_active_light',
+            '--accent-color-interactive--dark': 'accent_color_interactive_dark',
+            '--accent-color-interactive--light': 'accent_color_interactive_light',
           }
           if (localStorage.getItem('accent_color')) {
             for (const [prop, key] of Object.entries(prefs)) {
