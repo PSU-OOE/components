@@ -22,7 +22,7 @@
       opacity: 0;
       visibility: hidden;
       box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 75%, transparent);
-      border-left: _rem(.3) solid var(--sky-blue);
+      border-left: _rem(.3) solid var(--accent-color);
       padding: _rem(.5) _rem(2);
       min-width: 100%;
       width: _rem(23);
@@ -93,7 +93,7 @@
           bottom: 0;
           left: 0;
           width: _rem(.3);
-          background-color: var(--sky-blue);
+          background-color: var(--accent-color);
         }
       }
 
