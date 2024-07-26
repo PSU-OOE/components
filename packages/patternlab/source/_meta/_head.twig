@@ -81,25 +81,23 @@
             '--accent-color-interactive--dark': 'accent_color_interactive_dark',
             '--accent-color-interactive--light': 'accent_color_interactive_light',
           }
-          if (localStorage.getItem('accent_color')) {
-            for (const [prop, key] of Object.entries(prefs)) {
-              const value = localStorage.getItem(key);
-              const elem =  document.querySelector('[name="' + key + '"]');
-              elem.value = value;
-              elem.addEventListener('change', () => {
-                document.documentElement.style.setProperty(prop, elem.value);
-                localStorage.setItem(key, elem.value);
-                document.documentElement.style.display = 'run-in';
-                setTimeout(() => {
-                  document.documentElement.style.display = 'block';
-                });
-              });
-              document.documentElement.style.setProperty(prop, value);
+          for (const [prop, key] of Object.entries(prefs)) {
+            const value = localStorage.getItem(key);
+            const elem =  document.querySelector('[name="' + key + '"]');
+            elem.value = value;
+            elem.addEventListener('change', () => {
+              document.documentElement.style.setProperty(prop, elem.value);
+              localStorage.setItem(key, elem.value);
               document.documentElement.style.display = 'run-in';
               setTimeout(() => {
                 document.documentElement.style.display = 'block';
               });
-            }
+            });
+            document.documentElement.style.setProperty(prop, value);
+            document.documentElement.style.display = 'run-in';
+            setTimeout(() => {
+              document.documentElement.style.display = 'block';
+            });
           }
         })();
       </script>
