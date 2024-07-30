@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" data-dark>
   <div class="header__geometrics">
     <svg width="0" height="0" style="position:absolute">
       <defs>
@@ -12,7 +12,7 @@
     {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
   </div>
   <div class="header__inner">
-    <div class="header__dogear">
+    <div class="header__dogear" data-light>
       {% block dogear_content %}
         {{ dogear_content }}
       {% endblock %}
