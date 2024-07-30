@@ -2,6 +2,7 @@
 @import "../../../base/src/scss/imports/layout";
 
 .callout {
+  color: var(--text-color);
   display: flex;
   padding: _rem(4) var(--page-side-padding);
 
