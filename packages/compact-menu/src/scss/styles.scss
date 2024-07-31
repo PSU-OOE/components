@@ -49,19 +49,19 @@
     }
 
     &:where(:hover) &-sprite {
-      color: var(--white);
+      color: var(--compact-menu-bars-hover-color);
     }
 
     &:hover &-label {
-      text-decoration-color: var(--white);
+      text-decoration-color: var(--compact-menu-text-hover-color);
     }
 
     &-sprite {
-      color: var(--pugh-blue);
+      color: var(--compact-menu-bars-color);
       transition: color var(--transition-duration--default) linear;
 
       &:is([aria-expanded="true"] *) {
-        color: var(--keystone-light);
+        color: var(--compact-menu-bars-active-color);
       }
 
       .sprite {
@@ -77,7 +77,7 @@
     }
 
     &-label {
-      color: var(--white);
+      color: var(--compact-menu-text-color);
       display: block;
       font-family: var(--font-family--default);
       font-weight: var(--font-weight--semibold);
@@ -95,7 +95,7 @@
       }
 
       &:is(:focus-visible *) {
-        text-decoration-color: var(--white);
+        text-decoration-color: var(--compact-menu-text-hover-color);
       }
     }
   }
