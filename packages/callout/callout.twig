@@ -1,16 +1,24 @@
 {% if content %}
-  {% set classes = ['callout'] %}
-  {% if background %}
-    {% set classes = classes|merge(['callout--' ~ background]) %}
+  {% set classes = [
+    'callout',
+    background in ['white', 'light-grey', 'blue', 'blue-gradient'] ? 'callout--' ~ background,
+    padding_horizontal in ['small-percentage', 'medium-percentage', 'large-percentage'] ? 'callout--padding-horizontal-' ~ padding_horizontal,
+    padding_vertical in ['xsmall', 'small', 'small-percentage', 'medium-percentage', 'large-percentage'] ? 'callout--padding-vertical-' ~ padding_vertical,
+    shadow in ['standard'] ? 'callout--shadow-' ~ shadow,
+  ]|filter(class => class is not empty) %}
+
+  {% if background in ['white', 'light-grey'] %}
+    {% set background_context = 'light' %}
+  {% elseif background in ['blue', 'blue-gradient'] %}
+    {% set background_context = 'dark' %}
   {% endif %}
-  {% if width %}
-    {% set classes = classes|merge(['callout--' ~ width]) %}
-  {% endif %}
-  {% if padding %}
-    {% set classes = classes|merge(['callout--padding-' ~ padding]) %}
-  {% endif %}
-  <div class="{{ classes|join(' ') }}">
-    <div class="callout__content">
+
+  <div class="{{ classes|join(' ') }}"{% if background_context %} data-{{ background_context }}{% endif %}>
+    {% set content_classes = [
+      'callout__content',
+      width in ['narrow'] ? 'callout__content--' ~ width,
+    ]|filter(class => class is not empty) %}
+    <div class="{{ content_classes|join(' ') }}">
       {{ content }}
     </div>
   </div>
