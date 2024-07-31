@@ -1,47 +1,22 @@
-{% set top_first %}
-  {% block top_first %}
-    {{ top_first }}
-  {% endblock %}
-{% endset %}
-
-{% set top_second %}
-  {% block top_second %}
-    {{ top_second }}
-  {% endblock %}
-{% endset %}
-
-{% set top_third %}
-  {% block top_third %}
-    {{ top_third }}
-  {% endblock %}
-{% endset %}
-
-{% set middle_first %}
-  {% block middle_first %}
-    {{ middle_first }}
-  {% endblock %}
-{% endset %}
-
-{% set middle_second %}
-  {% block middle_second %}
-    {{ middle_second }}
-  {% endblock %}
-{% endset %}
-
-{% set middle_third %}
-  {% block middle_third %}
-    {{ middle_third }}
-  {% endblock %}
-{% endset %}
-
-{% set colophon %}
-  {% block colophon %}
-    {{ colophon }}
-  {% endblock %}
-{% endset %}
-
 {% apply spaceless %}
   <footer class="footer">
+    {% set top_first %}
+      {% block top_first %}
+        {{ top_first }}
+      {% endblock %}
+    {% endset %}
+
+    {% set top_second %}
+      {% block top_second %}
+        {{ top_second }}
+      {% endblock %}
+    {% endset %}
+
+    {% set top_third %}
+      {% block top_third %}
+        {{ top_third }}
+      {% endblock %}
+    {% endset %}
     {% if top_first or top_second or top_third %}
       {% set footer_top %}
         <div class="footer__top">
@@ -69,7 +44,29 @@
         content: footer_top
       } only %}
     {% endif %}
-    {% if middle_first or middle_second or middle_third or bottom %}
+    {% set middle_first %}
+      {% block middle_first %}
+        {{ middle_first }}
+      {% endblock %}
+    {% endset %}
+
+    {% set middle_second %}
+      {% block middle_second %}
+        {{ middle_second }}
+      {% endblock %}
+    {% endset %}
+
+    {% set middle_third %}
+      {% block middle_third %}
+        {{ middle_third }}
+      {% endblock %}
+    {% endset %}
+    {% set colophon %}
+      {% block colophon %}
+        {{ colophon }}
+      {% endblock %}
+    {% endset %}
+    {% if middle_first or middle_second or middle_third or colophon %}
       {% set footer_bottom_content %}
         <div class="footer__bottom-container-geometrics">
           <svg width="0" height="0" style="position:absolute">
@@ -105,15 +102,13 @@
           </div>
         {% endif %}
       {% endset %}
-      {% if color == 'dark' %}
-        <div class="footer__bottom-container footer__bottom-container--dark" data-dark>
-          {{ footer_bottom_content }}
-        </div>
-      {% else %}
-        <div class="footer__bottom-container">
-          {{ footer_bottom_content }}
-        </div>
-      {% endif %}
+      {% set footer_bottom_classes = [
+        'footer__bottom-container',
+        bottom_background in ['dark'] ? 'footer__bottom-container--dark',
+      ]|filter(class => class is not empty) %}
+      <div class="{{ footer_bottom_classes|join(' ') }}" data-{{ bottom_background == 'dark' ? 'dark' : 'light' }}>
+        {{ footer_bottom_content }}
+      </div>
     {% endif %}
   </footer>
 {% endapply %}
