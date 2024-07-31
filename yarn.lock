@@ -1609,7 +1609,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/base@^1.0 || ^2.0, @psu-ooe/base@^2.0, @psu-ooe/base@^2.0.0, @psu-ooe/base@workspace:packages/base":
+"@psu-ooe/base@^1.0 || ^2.0, @psu-ooe/base@^2.0, @psu-ooe/base@^2.0.0, @psu-ooe/base@^2.2, @psu-ooe/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/base@workspace:packages/base"
   dependencies:
@@ -1717,11 +1717,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cta@*, @psu-ooe/cta@^1.0 || ^2.0, @psu-ooe/cta@workspace:packages/cta":
+"@psu-ooe/cta@*, @psu-ooe/cta@^2.2, @psu-ooe/cta@workspace:packages/cta":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta@workspace:packages/cta"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-ooe/base": ^2.2
     "@psu-ooe/cta-tracking": ^1.0
   languageName: unknown
   linkType: soft
@@ -1765,8 +1765,8 @@ __metadata:
   resolution: "@psu-ooe/expandable-section@workspace:packages/expandable-section"
   dependencies:
     "@psu-ooe/auto-expansion": ^1.0
-    "@psu-ooe/base": ^1.0 || ^2.0
-    "@psu-ooe/cta": ^1.0 || ^2.0
+    "@psu-ooe/base": ^2.2
+    "@psu-ooe/cta": ^2.2
     "@psu-ooe/slide-toggle": ^1.0
   languageName: unknown
   linkType: soft

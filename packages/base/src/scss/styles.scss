@@ -149,3 +149,38 @@ span {
     }
   }
 }
+
+// Custom properties are amazing...but often times with newer technology,
+// often alien at the same time.  To understand this mechanism, one first
+// has to understand two under-advertised features of CSS.
+//
+// 1. The 'initial' keyword and the concept of Guaranteed-Invalid. The CSS
+// specification says that when a custom property encounters a value that is
+// the Guaranteed-Invalid state, the behavior is that it will fall back to
+// the next value in the chain.  Using the 'initial' keyword, a property can
+// be reset to the Guaranteed-Invalid state.  For example `var(initial, red)`
+// must evaluate to `red`.
+// 2. A space character is allowed as the value of a custom property! The
+// syntax may look a little strange, but `--var: ;` is a variable that holds
+// a space character.
+//
+// Combining these two behaviors, one can accomplish amazing things.
+
+// By default, or in light contexts, set `--if-light` to initial and
+// `--if-dark` to a space.  This makes a pattern like:
+// `--color: var(--if-light, red) var(--if-dark, blue);` evaluate to:
+// `--color: red ;`.  Do note the extra space at the end! This space character
+// is the value of `--if-dark`!
+:root, [data-light] {
+  --if-light: initial;
+  --if-dark: ;
+}
+
+// Likewise, do the opposite for dark contexts.
+// `--color: var(--if-light, red) var(--if-dark, blue);` will evaluate to
+// `--color:  blue;`. Note there are two spaces between `--color:` and `blue;`.
+// The extra space character is the value of `if-light`.
+[data-dark] {
+  --if-dark: initial;
+  --if-light: ;
+}
