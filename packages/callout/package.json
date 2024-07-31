@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/callout",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Provides a callout implementation.",
   "publishConfig": {
     "access": "public",
