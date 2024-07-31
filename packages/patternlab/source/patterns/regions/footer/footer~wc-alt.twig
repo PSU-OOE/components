@@ -14,22 +14,20 @@
     {% include '@psu-ooe/vertical-menu/vertical-menu.twig' with {
       menu_name: 'Example',
       items: [
-        { title: 'Home', url: '#' },
-        { title: 'About Us', url: '/about-us', below: [
-          { title: 'Our Story', url: '#' }, { title: 'Mission', url: '#' }, { title: 'Our Leadership', url: '#' }, { title: 'Our Students', url: '#' }, { title: 'Why World Campus', url: '#' }, { title: 'News and Features', url: '#' }, { title: 'Success Stories', url: '#' }, { title: 'Employment', url: '#' },
+        { title: 'Finances', url: '#', below: [
+          { title: 'Tuition and Costs', url: '#' }, { title: 'Scholarships', url: '#' }, { title: 'Financial Aid', url: '#' }, { title: 'Paying Your Bill', url: '#' }, { title: 'Financial Literacy', url: '#' },
         ]},
-        { title: 'Degrees and Certificates', url: '#'},
-        { title: 'How Online Learning Works', url: '#', below: [
-          { title: 'Online Learning Experience', url: '#' }, { title: 'Student Services', url: '#' }, { title: 'Dedication to Accessibility', url: '#' }, { title: 'How it Works (FAQs)', url: '#' },
+        { title: 'Inclusion and Wellness', url: '#', below: [
+          { title: 'Diversity and Inclusion', url: '#' }, { title: 'Disabilities and Accomodations', url: '#' }, { title: 'Mental Health', url: '#' },
         ]},
-        { title: 'Admissions', url: '#', below: [
-          { title: 'How to Apply', url: '#' }, { title: 'Returning Students', url: '#' }, { title: 'Transfer Students', url: '#' }, { title: 'International Students', url: '#' }, { title: 'Academic Calendar', url: '#' }, { title: 'Planning Resources', url: '#' },
+        { title: 'Enrollment and Registration', url: '#', below: [
+          { title: 'Course Planning', url: '#' },
         ]},
-        { title: 'Tuition and Financial Aid', url: '#', below: [
-          { title: 'Tuition and Costs', url: '#' }, { title: 'Financial Aid', url: '#' }, { title: 'Scholarships', url: '#' }, { title: 'Payment Options', url: '#' },
+        { title: 'Course Work and Success', url: '#', below: [
+          { title: 'Academic Advising', url: '#' },
         ]},
-        { title: 'Military', url: '#', below: [
-          { title: 'Education Benefits and Financial Aid', url: '#' }, { title: 'Admissions and Transfer Credits', url: '#' }, { title: 'Military Support', url: '#' }, { title: 'What You Can Expect', url: '#' }, { title: 'Awards and Affiliations', url: '#' }, { title: 'Events', url: '#' }, { title: 'Service Members', url: '#' }, { title: 'Veterans', url: '#' },
+        { title: 'Involvement and Opportunities', url: '#', below: [
+          { title: 'Career Resources', url: '#' },
         ]},
       ],
     } only %}
@@ -38,10 +36,10 @@
   {% block top_third %}
     {% include '@psu-ooe/list/list.twig' with {
       items: [
-        '<a href="#" style="display:inline-block;padding:.5rem 0;">Contacts & Help</a>',
-        '<a href="#" style="display:inline-block;padding:.5rem 0;">Events</a>',
-        '<a href="#" style="display:inline-block;padding:.5rem 0;">On-Demand Webinars</a>',
-        '<a href="#" style="display:inline-block;padding:.5rem 0;">Academic Calendar</a>',
+        '<a href="#" style="display:inline-block;padding:.5rem 0;">A-Z Index</a>',
+        '<a href="#" style="display:inline-block;padding:.5rem 0;">Calendar</a>',
+        '<a href="#" style="display:inline-block;padding:.5rem 0;">Help and Support</a>',
+        '<a href="#" style="display:inline-block;padding:.5rem 0;">Search</a>',
       ],
     } only %}
     <div>
@@ -51,10 +49,10 @@
       </span>
       {% include '@psu-ooe/list/list.twig' with {
         items: [
-          '<a href="#" style="display:inline-block;padding:.25rem 0;">Current Students</a>',
-          '<a href="#" style="display:inline-block;padding:.25rem 0;">Alumni and Friends</a>',
-          '<a href="#" style="display:inline-block;padding:.25rem 0;">Education Alliance</a>',
-          '<a href="#" style="display:inline-block;padding:.25rem 0;">Faculty and Staff</a>',
+          '<a href="#" style="display:inline-block;padding:.25rem 0;">New and Recently Admitted Students</a>',
+          '<a href="#" style="display:inline-block;padding:.25rem 0;">Returning Students</a>',
+          '<a href="#" style="display:inline-block;padding:.25rem 0;">Graduating Students</a>',
+          '<a href="#" style="display:inline-block;padding:.25rem 0;">Military Students</a>',
         ],
       } only %}
     </div>
@@ -71,13 +69,6 @@
         <span class="visually-hidden">email</span>
         {% include '@psu-ooe/sprite/sprite.twig' with { name: 'envelope' } only %}&nbsp;
         <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">worldcampus@psu.edu</span></a>
-      </div>
-      <div style="white-space: nowrap;">
-        <span class="text text--size-msmall text--height-snug text--weight-regular" style="font-style: italic">U.S. Toll Free</span>:&nbsp;
-        <a href="#"><span class="text text--size-msmall text--height-snug text--weight-semibold">800-252-3592</span></a>
-      </div>
-      <div style="white-space: nowrap;">
-        <span class="text text--size-msmall text--height-snug text--weight-regular" style="font-style: italic">Fax:</span>&nbsp;814-865-3290
       </div>
     </address>
   {% endblock %}
