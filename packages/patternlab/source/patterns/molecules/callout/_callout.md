@@ -42,5 +42,5 @@ title: Callouts
 | Modifier          | Description                                                                               |
 |-------------------|-------------------------------------------------------------------------------------------|
 | small-percentage  | If specified, a small amount of variable padding is used, clamped by two sentinel values. |
-| medium-percentage | If specified, a small amount of variable padding is used, clamped by two sentinel values. |
+| medium-percentage | If specified, a medium amount of variable padding is used, clamped by two sentinel values. |
 | large-percentage  | If specified, a small amount of variable padding is used, clamped by two sentinel values. |
