@@ -18,8 +18,8 @@
     }
 
     &-small-percentage {
-      padding-top: clamp(_rem(1), 2.9%, _rem(4));
-      padding-bottom: clamp(_rem(1), 2.9%, _rem(4));
+      padding-top: clamp(_rem(.7), 2.9%, _rem(3));
+      padding-bottom: clamp(_rem(.7), 2.9%, _rem(3));
     }
 
     &-medium-percentage {
@@ -28,15 +28,15 @@
     }
 
     &-large-percentage {
-      padding-top: clamp(_rem(1), 8.7%, _rem(4));
-      padding-bottom: clamp(_rem(1), 8.7%, _rem(4));
+      padding-top: clamp(_rem(1.5), 8.7%, _rem(5));
+      padding-bottom: clamp(_rem(1.5), 8.7%, _rem(5));
     }
   }
 
   &--padding-horizontal {
     &-small-percentage {
-      padding-left: clamp(_rem(1), 2.9%, _rem(4));
-      padding-right: clamp(_rem(1), 2.9%, _rem(4));
+      padding-left: clamp(_rem(.7), 2.9%, _rem(3));
+      padding-right: clamp(_rem(.7), 2.9%, _rem(3));
     }
 
     &-medium-percentage {
@@ -45,8 +45,8 @@
     }
 
     &-large-percentage {
-      padding-left: clamp(_rem(1), 8.7%, _rem(4));
-      padding-right: clamp(_rem(1), 8.7%, _rem(4));
+      padding-left: clamp(_rem(1.5), 8.7%, _rem(5));
+      padding-right: clamp(_rem(1.5), 8.7%, _rem(5));
     }
   }
 
