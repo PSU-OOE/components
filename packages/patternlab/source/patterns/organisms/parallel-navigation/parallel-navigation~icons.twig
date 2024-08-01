@@ -1,0 +1,38 @@
+{% set item_titles = [
+  { title: 'Business (62)', active: true, icon: 'fas-globe' },
+  { title: 'Education (22)', icon: 'fas-certificate' },
+  { title: 'Energy and Sustainability (11)', icon: 'fas-child-reaching' },
+  { title: 'Engineering (12)', icon: 'fas-family' },
+  { title: 'Geospatial (10)', icon: 'fas-paper-plane' },
+  { title: 'Health and Family Services (11)', icon: 'fas-pencil' },
+  { title: 'Homeland Security (16)', icon: 'fas-sun' },
+  { title: 'Human Resources, Labor, and Employment Relations (8)', icon: 'fas-sun' },
+  { title: 'Law and Public Policy', icon: 'fas-user-group' },
+  { title: 'Liberal Arts and Communications (16)', icon: 'fas-user-doctor' },
+  { title: 'Nursing (8)', icon: 'fas-raindrops' },
+  { title: 'Technology, Sciences, and Math (25)', icon: 'fas-school' },
+  { title: 'Turfgrass (5)', icon: 'fas-shield-quartered' }
+  ]
+%}
+{% set parallel_navigation_items = [] %}
+{% for item in item_titles %}
+  {% set content %}
+    {% include '@psu-ooe/parallel-navigation-item/parallel-navigation-item.twig' with {
+      active: item.active,
+      url: '#',
+      title: item.title,
+      icon: item.icon,
+    } %}
+  {% endset %}
+  {% set parallel_navigation_items = parallel_navigation_items|merge([content]) %}
+{% endfor %}
+
+{% include '@psu-ooe/parallel-navigation/parallel-navigation.twig' with {
+  id: 'topics-2-col',
+  heading: 'Explore All Topics',
+  intro_text: 'Penn State World Campus offers more than 175 degrees and certificates spanning 13 topic areas.',
+  heading_level: 'h2',
+  heading_size: 'medium',
+  heading_color: 'neutral',
+  items: parallel_navigation_items
+} only %}
