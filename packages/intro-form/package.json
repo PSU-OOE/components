@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/intro-form",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Provides a specialized container for presenting a form with accompanying intro content.",
   "publishConfig": {
     "access": "public",
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^2.0",
-    "@psu-ooe/heading": "^2.0",
+    "@psu-ooe/heading": "^2.0 || ^3.0",
     "@psu-ooe/random-item": "^1.0"
   }
 }

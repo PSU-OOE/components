@@ -49,8 +49,9 @@
 
   --text-color--default: var(--text-color--dark);
   --link-color--default: var(--link-color--dark);
-  --headings-color: var(--text-color--slate);
 
+  // @deprecated - to be removed in 3.0.0.
+  --headings-color: var(--text-color--slate);
 }
 
 // Automatically contrasting variables.

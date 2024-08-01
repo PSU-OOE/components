@@ -1556,7 +1556,7 @@ __metadata:
   resolution: "@psu-ooe/accordion@workspace:packages/accordion"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0
+    "@psu-ooe/heading": ^2.0 || ^3.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/sprite": ^2.0
   languageName: unknown
@@ -1633,7 +1633,7 @@ __metadata:
   resolution: "@psu-ooe/bio@workspace:packages/bio"
   dependencies:
     "@psu-ooe/credential": ^1.0 || ^2.0
-    "@psu-ooe/heading": ^1.0 || ^2.0
+    "@psu-ooe/heading": ^1.0 || ^2.0 || ^3.0
     "@psu-ooe/read-more": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
@@ -1834,7 +1834,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/heading@*, @psu-ooe/heading@^1.0 || ^2.0, @psu-ooe/heading@^2.0, @psu-ooe/heading@workspace:packages/heading":
+"@psu-ooe/heading@*, @psu-ooe/heading@^1.0 || ^2.0 || ^3.0, @psu-ooe/heading@^2.0 || ^3.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
   dependencies:
@@ -2010,7 +2010,7 @@ __metadata:
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0
+    "@psu-ooe/heading": ^2.0 || ^3.0
     "@psu-ooe/random-item": ^1.0
   languageName: unknown
   linkType: soft
@@ -2104,7 +2104,7 @@ __metadata:
   resolution: "@psu-ooe/page-title@workspace:packages/page-title"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0
+    "@psu-ooe/heading": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
