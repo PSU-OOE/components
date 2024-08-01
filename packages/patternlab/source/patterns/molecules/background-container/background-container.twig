@@ -1,37 +1,35 @@
 {# @TODO: Split this out into ~16 discreet examples when we have time. #}
 {% set short_content %}
-  <div style="padding:0 4rem">
-    <h3>Short content</h3>
-    <p>This is a WYSIWYG block.</p>
-  </div>
+  <h3>Short content</h3>
+  <p>This is a WYSIWYG block.</p>
 {% endset %}
 
 {% set tall_content %}
-  <div style="padding:0 4rem">
-    <h3>Long content</h3>
-    <p>This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on.</p>
-  </div>
+  <h3>Long content</h3>
+  <p>This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on. This is a WYSIWYG block with some very long content. Content goes on and on and on.</p>
 {% endset %}
 
 {% set unbound_short_content %}
-    <div style="max-width:111rem;margin:auto;">
-      {{ short_content }}
-    </div>
+  {% include '@psu-ooe/callout/callout.twig' with {
+    content: short_content,
+  } only %}
 {% endset %}
 {% set unbound_tall_content %}
-    <div style="max-width:111rem;margin:auto;">
-      {{ tall_content }}
-    </div>
+  {% include '@psu-ooe/callout/callout.twig' with {
+    content: tall_content,
+  } only %}
 {% endset %}
 {% set unbound_short_narrow_content %}
-    <div style="max-width:87rem;margin:auto;">
-      {{ short_content }}
-    </div>
+  {% include '@psu-ooe/callout/callout.twig' with {
+    content: short_content,
+    width: 'narrow',
+  } only %}
 {% endset %}
 {% set unbound_tall_narrow_content %}
-    <div style="max-width:87rem;margin:auto;">
-      {{ tall_content }}
-    </div>
+  {% include '@psu-ooe/callout/callout.twig' with {
+    content: tall_content,
+    width: 'narrow',
+  } only %}
 {% endset %}
 {% set colors = ['light-grey', 'beaver-blue'] %}
 {% set backgrounds = [
@@ -86,44 +84,42 @@
   {% for color in colors %}
       {% for background in backgrounds %}
           <h2>{{ color }} {{ background }} (Limited Width Background)</h2>
-              <div style="max-width:119rem;padding:0 4rem;margin:auto;">
+              <div style="max-width:119rem;padding:0 var(--page-side-padding);margin:auto;">
                   {% include '@psu-ooe/background-container/background-container.twig' with {
                       color: color,
                       background_image: background,
-                      content: short_content
+                      content: unbound_short_content
+                  } only %}
+              <br />
+              <br />
+                  {% include '@psu-ooe/background-container/background-container.twig' with {
+                      color: color,
+                      background_image: background,
+                      content: unbound_tall_content
                   } only %}
               </div>
               <br />
               <br />
-              <div style="max-width:119rem;padding:0 4rem;margin:auto;">
-                  {% include '@psu-ooe/background-container/background-container.twig' with {
-                      color: color,
-                      background_image: background,
-                      content: tall_content
-                  } only %}
-              </div>
-              <br />
-              <br />
-              <div style="max-width:95rem;padding:0 4rem;margin:auto;">
-                  {% include '@psu-ooe/background-container/background-container.twig' with {
-                      color: color,
-                      background_image: background,
-                      width: 'narrow',
-                      content: short_content
-                  } only %}
-              </div>
-              <br />
-              <br />
-              <div style="max-width:95rem;padding:0 4rem;margin:auto;">
+              <div style="max-width:95rem;padding:0 var(--page-side-padding);margin:auto;">
+
                   {% include '@psu-ooe/background-container/background-container.twig' with {
                       color: color,
                       background_image: background,
                       width: 'narrow',
-                      content: tall_content
+                      content: unbound_short_narrow_content
                   } only %}
-              </div>
               <br />
               <br />
+                  {% include '@psu-ooe/background-container/background-container.twig' with {
+                      color: color,
+                      background_image: background,
+                      width: 'narrow',
+                      content: unbound_tall_narrow_content
+                  } only %}
+              <br />
+              <br />
+          </div>
+
       {% endfor %}
   {% endfor %}
 
