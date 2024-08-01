@@ -1,18 +1,43 @@
 @import "../../../base/src/scss/imports/variables";
 @import "../../../base/src/scss/imports/layout";
 
+:root {
+  --headings-color--light: var(--white);
+  --headings-contrasting-color--light: var(--white);
+  --headings-color--dark: var(--slate);
+  --headings-contrasting-color--dark: var(--text-color--dark);
+  --h1-opacity--full: 100%;
+  --h1-opacity--muted: 85%;
+}
+
+:root, [data-light] {
+  --headings-color: var(--headings-color--dark);
+  --headings-contrasting-color: var(--headings-contrasting-color--dark);
+  --h1-opacity: var(--h1-opacity--full);
+}
+
+[data-dark] {
+  --headings-color: var(--headings-color--light);
+  --headings-contrasting-color: var(--headings-contrasting-color--light);
+  --h1-opacity: var(--h1-opacity--muted);
+}
+
 // Common properties.
 h1, h2, h3, h4, h5, h6, .heading {
-  color: var(--headings-color);
   margin: 0 0 var(--text-element-vertical-space--default);
 
   .text--contrasting {
-    color: var(--text-color--dark);
+    color: var(--headings-contrasting-color);
   }
+}
+
+h2, h3, h4, h5, h6, .heading:not(h1) {
+  color: var(--headings-color);
 }
 
 // <h1> specific properties.
 h1, .heading--xlarge {
+  color: color-mix(in srgb, transparent, var(--headings-color) var(--h1-opacity));
   font-family: var(--font-family--text);
   font-size: var(--font-size--4xlarge);
   font-weight: var(--font-weight--extrabold);
@@ -24,15 +49,6 @@ h1, .heading--xlarge {
 
     @include bp(s) {
       margin-top: _rem(-0.75);
-    }
-  }
-
-  &.heading--reversed {
-    --headings-color: color-mix(in srgb, var(--text-color--light) 85%, transparent);
-
-    // @TODO: Remove fallback when appropriate.
-    @supports not (color: color-mix(in srgb, white, white)) {
-      --headings-color: var(--text-color--light);
     }
   }
 
@@ -155,14 +171,6 @@ h6, .heading--2xsmall {
 
 // Modifiers.
 .heading {
-
-  &--reversed {
-    --headings-color: var(--text-color--light);
-
-    .text--contrasting {
-      color: var(--text-color--light);
-    }
-  }
 
   &--subtle {
     font-family: var(--font-family--default);

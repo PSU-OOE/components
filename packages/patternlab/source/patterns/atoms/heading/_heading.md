@@ -12,7 +12,6 @@ title: Headings
 | vspace       | string  | false    | Must match a documented vertical space modifier (below).                    |
 | position     | string  | false    | Must match a documented position modifier (below).                          |
 | no_overline  | boolean | false    | If specified, the heading will never render with an overline decoration.    |
-| reversed     | boolean | false    | If specified, the heading will render with an inverse color profile         |
 | subtle       | boolean | false    | If specified, the heading will render with a subtle look.                   |
 
 ## Size modifiers
