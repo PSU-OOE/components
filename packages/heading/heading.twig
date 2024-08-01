@@ -15,7 +15,6 @@
     flush ? 'heading--flush',
     align in allowed_alignments ? 'heading--align-' ~ align,
     vspace in allowed_vspaces ? 'heading--vspace-' ~ vspace,
-    reversed ? 'heading--reversed',
     no_overline ? 'heading--no-overline',
     subtle ? 'heading--subtle'
   ]) | filter(class => class is not empty) %}
