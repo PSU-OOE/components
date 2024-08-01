@@ -1556,7 +1556,7 @@ __metadata:
   resolution: "@psu-ooe/accordion@workspace:packages/accordion"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0
+    "@psu-ooe/heading": ^2.0 || ^3.0
     "@psu-ooe/slide-toggle": ^1.0
     "@psu-ooe/sprite": ^2.0
   languageName: unknown
@@ -1633,7 +1633,7 @@ __metadata:
   resolution: "@psu-ooe/bio@workspace:packages/bio"
   dependencies:
     "@psu-ooe/credential": ^1.0 || ^2.0
-    "@psu-ooe/heading": ^1.0 || ^2.0
+    "@psu-ooe/heading": ^1.0 || ^2.0 || ^3.0
     "@psu-ooe/read-more": ^1.0 || ^2.0
   languageName: unknown
   linkType: soft
@@ -1692,6 +1692,30 @@ __metadata:
     "@psu-ooe/base": ^2.0.0
     "@psu-ooe/drop-button": ^3.0.0
     "@psu-ooe/sprite": ^2.0.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/components@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/components@workspace:."
+  dependencies:
+    "@pattern-lab/cli": ^5.17.0
+    "@pattern-lab/core": ^5.17.0
+    "@pattern-lab/engine-twig-php": ^5.17.0
+    "@pattern-lab/uikit-workshop": ^5.17.0
+    gulp: ^4.0.2
+    gulp-cli: ^2.3.0
+    gulp-concat: ^2.6.1
+    gulp-htmlmin: ^5.0.1
+    gulp-run: ^1.7.1
+    gulp-sass: ^5.1.0
+    gulp-sass-bulk-import: ^1.0.1
+    gulp-sourcemaps: ^3.0.0
+    gulp-svg-sprite: ^2.0.3
+    gulp-uglify-es: ^3.0.0
+    sass: ^1.69.5
+    svg-sprite: ^2.0.2
+    yarn: ^1.22.19
   languageName: unknown
   linkType: soft
 
@@ -1810,7 +1834,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/heading@*, @psu-ooe/heading@^1.0 || ^2.0, @psu-ooe/heading@^2.0, @psu-ooe/heading@workspace:packages/heading":
+"@psu-ooe/heading@*, @psu-ooe/heading@^1.0 || ^2.0 || ^3.0, @psu-ooe/heading@^2.0 || ^3.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
   dependencies:
@@ -1986,7 +2010,7 @@ __metadata:
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0
+    "@psu-ooe/heading": ^2.0 || ^3.0
     "@psu-ooe/random-item": ^1.0
   languageName: unknown
   linkType: soft
@@ -2013,30 +2037,6 @@ __metadata:
   dependencies:
     "@psu-ooe/base": ^2.0
     "@psu-ooe/sprite": ^2.0
-  languageName: unknown
-  linkType: soft
-
-"@psu-ooe/monorepo-dev@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/monorepo-dev@workspace:."
-  dependencies:
-    "@pattern-lab/cli": ^5.17.0
-    "@pattern-lab/core": ^5.17.0
-    "@pattern-lab/engine-twig-php": ^5.17.0
-    "@pattern-lab/uikit-workshop": ^5.17.0
-    gulp: ^4.0.2
-    gulp-cli: ^2.3.0
-    gulp-concat: ^2.6.1
-    gulp-htmlmin: ^5.0.1
-    gulp-run: ^1.7.1
-    gulp-sass: ^5.1.0
-    gulp-sass-bulk-import: ^1.0.1
-    gulp-sourcemaps: ^3.0.0
-    gulp-svg-sprite: ^2.0.3
-    gulp-uglify-es: ^3.0.0
-    sass: ^1.69.5
-    svg-sprite: ^2.0.2
-    yarn: ^1.22.19
   languageName: unknown
   linkType: soft
 
@@ -2104,7 +2104,7 @@ __metadata:
   resolution: "@psu-ooe/page-title@workspace:packages/page-title"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0
+    "@psu-ooe/heading": ^2.0 || ^3.0
   languageName: unknown
   linkType: soft
 
