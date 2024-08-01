@@ -33,20 +33,6 @@
       {{ tall_content }}
     </div>
 {% endset %}
-<style>
-  /* @TODO: Remove when text auto-contrasts globally */
-
-  [data-light] {
-    --bg-demo-text-color: var(--text-color--dark);
-  }
-  [data-dark] {
-    --bg-demo-text-color: var(--text-color--light);
-  }
-
-  .bg-demo h3, .bg-demo p {
-    color: var(--bg-demo-text-color);
-  }
-</style>
 {% set colors = ['light-grey', 'beaver-blue'] %}
 {% set backgrounds = [
   'hub-geometric:topleft',
