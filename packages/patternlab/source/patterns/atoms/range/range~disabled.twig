@@ -1,0 +1,7 @@
+{% set range %}
+  <input disabled type="range" min="0" max="100" name="demo_range_disabled" id="demo_range_disabled"><label class="visually-hidden" for="demo_range_disabled">Demo range disabled</label>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: range,
+} only %}

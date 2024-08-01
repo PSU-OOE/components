@@ -1,0 +1,7 @@
+{% set label %}
+  <label for="dummy_label_input_disabled">This is a label on a disabled input</label>
+  <input disabled class="visually-hidden" name="dummy_label_input_disabled" id="dummy_label_input_disabled">
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: label,
+} only %}

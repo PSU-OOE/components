@@ -1,0 +1,10 @@
+{% set file %}
+  <div data-dark>
+    <input disabled type="file" name="file_single_on_dark_disabled" id="file_single_on_dark_disabled"><label class="visually-hidden" for="file_single_on_dark_disabled">Demo file single on dark background disabled</label>
+  </div>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: file,
+  background: 'blue',
+} only %}

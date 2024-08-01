@@ -1,0 +1,7 @@
+{% set search %}
+  <input type="search" name="demo_search" id="demo_search"><label class="visually-hidden" for="demo_search">Demo search</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: search,
+} only %}
+

@@ -1,0 +1,6 @@
+{% set color %}
+  <input type="color" name="color" id="color"><label class="visually-hidden" for="color">Demo color</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: color,
+} only %}

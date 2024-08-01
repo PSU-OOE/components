@@ -1,0 +1,12 @@
+{% set select %}
+  <select disabled name="select_single_disabled" id="select_single_disabled">
+    <option>Yes</option>
+    <option>No</option>
+    <option>Maybe</option>
+  </select>
+  <label class="visually-hidden" for="select_single_disabled">Demo select single disabled</label>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: select,
+} only %}

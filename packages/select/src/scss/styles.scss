@@ -1,0 +1,52 @@
+@import "../../../base/src/scss/imports/variables";
+
+select {
+  background-color: var(--form-element-background-color);
+  cursor: pointer;
+  width: var(--form-element-width);
+  border-radius: var(--form-element-border-radius--default);
+  padding: var(--form-element-padding--vertical) var(--form-element-padding--horizontal);
+  font-family: var(--form-element-font-family);
+  font-weight: var(--form-element-font-weight);
+  color: var(--form-element-text-color);
+  font-size: var(--form-element-font-size);
+  line-height: var(--form-element-line-height);
+
+  &:focus-visible {
+    outline: _rem(.2) solid var(--sky-blue);
+    outline-offset: _rem(.2);
+  }
+
+  &:disabled {
+    background-color: var(--form-element-disabled-background-color);
+    color: var(--form-element-disabled-text-color);
+    cursor: not-allowed;
+  }
+
+  &:not([multiple]) {
+    border: none;
+    $width-of-chevron: '(#{_rem(.8)} * 257 / 150)';
+    padding-right: calc((var(--form-element-padding--horizontal) * 2) + #{$width-of-chevron});
+    border-radius: var(--form-element-border-radius--rounded);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url('data:image/svg+xml,<svg viewBox="0 0 13.18246 8" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M 6.0789337,7.7878096 0.21221033,1.9210554 c -0.28294711,-0.2829465 -0.28294711,-0.7416758 0,-1.02459275 L 0.89647062,0.21220341 C 1.1789345,-0.07026083 1.636726,-0.0708042 1.919855,0.21099579 L 6.5912534,4.8605021 11.2626,0.21099586 c 0.283139,-0.28180004 0.740934,-0.28125667 1.023377,0.001208 l 0.68427,0.68425917 c 0.282951,0.28294707 0.282951,0.74167527 0,1.02459277 l -5.8666887,5.866754 c -0.2829423,0.2829205 -0.7416787,0.2829205 -1.0246246,-2e-7 z" style="stroke-width:0.0301861" /></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - var(--form-element-padding--horizontal)) center;
+    background-size: auto _rem(.8);
+
+    &, &:is([data-light] *) {
+      &:not(:disabled, .error) {
+        box-shadow: var(--form-element-border-color) 0 _rem(.1);
+      }
+    }
+
+    &:is([data-dark] *) {
+      box-shadow: none;
+    }
+  }
+
+  &.error {
+    border: _rem(.1) solid var(--error-red);
+  }
+}

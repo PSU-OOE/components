@@ -1,0 +1,7 @@
+{% set number %}
+  <input disabled type="number" name="demo_number_disabled" id="demo_number_disabled"><label class="visually-hidden" for="demo_number_disabled">Demo number disabled</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: number,
+} only %}
+

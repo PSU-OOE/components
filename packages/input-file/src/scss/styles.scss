@@ -1,0 +1,70 @@
+@import "../../../base/src/scss/imports/variables";
+
+input[type="file"] {
+  background-color: var(--form-element-background-color);
+  cursor: pointer;
+  width: var(--form-element-width);
+  border-radius: var(--form-element-border-radius--rounded);
+  border-width: _rem(.1);
+  font-family: var(--form-element-font-family);
+  font-weight: var(--form-element-font-weight);
+  color: var(--form-element-text-color);
+  font-size: var(--form-element-font-size);
+  line-height: var(--form-element-line-height);
+  padding: _rem(1);
+
+  &::file-selector-button {
+    border: none;
+    background-color: var(--pa-link);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: _rem(.5);
+    font-family: var(--form-element-font-family);
+    font-weight: var(--font-weight--semibold);
+    font-size: var(--form-element-font-size);
+    line-height: var(--form-element-line-height);
+    padding: var(--form-element-padding--vertical) var(--form-element-padding--horizontal);
+    transition: background-color var(--transition-duration--default) linear;
+  }
+
+  &.error {
+    border-color: var(--error-red);
+    border-style: solid;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: _rem(.2) solid var(--sky-blue);
+    outline-offset: _rem(.2);
+  }
+
+  &:hover, &:focus-visible {
+    &::file-selector-button {
+      background-color: var(--nittany-navy);
+    }
+  }
+
+  &, &:is([data-light] *) {
+    &:disabled {
+      background-color: var(--form-element-disabled-background-color);
+      color: var(--form-element-disabled-text-color);
+      cursor: not-allowed;
+
+      &::file-selector-button {
+        background-color: var(--limestone);
+        color: color-mix(in srgb, transparent, var(--nittany-navy) 80%);
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &:is([data-dark] *) {
+    &:disabled::file-selector-button {
+      background-color: color-mix(in srgb, transparent, var(--slate) 60%);
+      color: var(--medium-grey);
+    }
+  }
+}

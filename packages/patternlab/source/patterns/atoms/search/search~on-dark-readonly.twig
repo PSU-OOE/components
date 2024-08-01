@@ -1,0 +1,10 @@
+{% set search %}
+  <div data-dark>
+    <input readonly type="search" name="demo_search_on_dark_readonly" id="demo_search_on_dark_readonly"><label class="visually-hidden" for="demo_search_on_dark_readonly">Demo search on dark background readonly</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: search,
+  background: 'blue',
+} only %}
+

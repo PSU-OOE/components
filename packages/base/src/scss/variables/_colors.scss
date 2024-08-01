@@ -32,6 +32,8 @@
   --pa-link: #{ $pa-link };
   --pa-link-light: #{ $pa-link-light };
 
+  --futures-calling: #99cc00;
+
   // Tile nav
   --tile-nav-image-overlay: #{ $tile-nav-image-overlay };
   --tile-nav-active: #{ $tile-nav-active };
@@ -48,4 +50,16 @@
   --text-color--default: var(--text-color--dark);
   --link-color--default: var(--link-color--dark);
   --headings-color: var(--text-color--slate);
+
+}
+
+// Automatically contrasting variables.
+:root, [data-light] {
+  --link-color: var(--link-color--default);
+  --text-color: var(--text-color--default);
+}
+
+[data-dark] {
+  --link-color: var(--link-color--light);
+  --text-color: var(--text-color--light);
 }

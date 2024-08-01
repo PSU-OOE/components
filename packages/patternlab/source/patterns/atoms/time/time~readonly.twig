@@ -1,0 +1,7 @@
+{% set time %}
+  <input readonly type="time" name="demo_time_readonly" id="demo_time_readonly"><label class="visually-hidden" for="demo_time_readonly">Demo time readonly</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: time,
+} only %}
+

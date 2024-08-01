@@ -1,0 +1,105 @@
+@import "../../../base/src/scss/imports/variables";
+
+@mixin range-thumb {
+  &::-webkit-slider-thumb {
+    @content;
+  }
+
+  &::-moz-range-thumb {
+    @content;
+  }
+}
+
+@mixin range-container {
+  &::-webkit-slider-container {
+    @content;
+  }
+
+  &::-moz-range-track {
+    @content;
+  }
+}
+
+input[type="range"] {
+  appearance: none;
+  cursor: grab;
+  -webkit-appearance: none;
+  outline: none;
+  width: 100%;
+  margin: 0;
+
+  @include range-container {
+    appearance: none;
+    -webkit-appearance: none;
+    height: _rem(.6);
+  }
+
+  @include range-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: _rem(2.8);
+    height: _rem(2.8);
+    border: _rem(.2) solid var(--white);
+    border-radius: 50%;
+  }
+
+  &:focus-visible {
+
+    @include range-thumb {
+      outline: _rem(.2) solid var(--sky-blue);
+      outline-offset: _rem(.2);
+    }
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &, &:is([data-light] *) {
+    @include range-container {
+      background-color: var(--slate);
+    }
+
+    @include range-thumb {
+      background-color: var(--pa-link);
+      box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 30%) 0 _rem(.3) _rem(.6);
+    }
+
+    &:disabled {
+      @include range-container {
+        background-color: var(--limestone);
+      }
+
+      @include range-thumb {
+        background-color: var(--limestone);
+        box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 30%) 0 _rem(.3) _rem(.6);
+      }
+    }
+  }
+
+  &:is([data-dark] *) {
+    @include range-container {
+      background-color: var(--pugh-blue);
+    }
+
+    @include range-thumb {
+      background-color: var(--white);
+      box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 70%) 0 _rem(.3) _rem(.6);
+    }
+
+    &:disabled {
+      @include range-container {
+        background-color: color-mix(in srgb, transparent, var(--limestone) 70%);
+      }
+
+      @include range-thumb {
+        background-color: var(--limestone);
+        box-shadow: color-mix(in srgb, transparent, var(--nittany-navy) 70%) 0 _rem(.3) _rem(.6);
+      }
+    }
+  }
+}

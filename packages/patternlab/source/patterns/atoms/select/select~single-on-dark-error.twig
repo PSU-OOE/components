@@ -1,0 +1,15 @@
+{% set select %}
+  <div data-dark>
+    <select name="select_single_on_dark_error" id="select_single_on_dark_error" class="error">
+      <option>Yes</option>
+      <option>No</option>
+      <option>Maybe</option>
+    </select>
+    <label class="visually-hidden" for="select_single_on_dark_error">Demo select single on dark background error</label>
+  </div>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: select,
+  background: 'blue',
+} only %}

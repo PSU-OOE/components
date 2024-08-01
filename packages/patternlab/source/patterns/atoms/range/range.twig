@@ -1,0 +1,7 @@
+{% set range %}
+  <input type="range" min="0" max="100" name="demo_range" id="demo_range"><label class="visually-hidden" for="demo_range">Demo range</label>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: range,
+} only %}

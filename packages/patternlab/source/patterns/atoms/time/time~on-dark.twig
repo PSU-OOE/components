@@ -1,0 +1,10 @@
+{% set time %}
+  <div data-dark>
+    <input type="time" name="demo_time_on_dark" id="demo_time_on_dark"><label class="visually-hidden" for="demo_time_on_dark">Demo time on dark background</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: time,
+  background: 'blue',
+} only %}
+
