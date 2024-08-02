@@ -1,14 +1,13 @@
 @import '../../../base/src/scss/imports/variables';
 
 .layout-multi-column {
-  --layout-column-gap-multipler: 1;
-  --layout-column-gap-min: calc(#{_rem(.5)} * var(--layout-column-gap-multipler));
-  --layout-column-gap-variable: calc(2.87% * var(--layout-column-gap-multipler));
-  --layout-column-gap-max: calc(#{_rem(1.25)} * var(--layout-column-gap-multipler));
+  --layout-column-gap-min: calc(#{_rem(.5)} * var(--layout-column-gap-multipler, 1));
+  --layout-column-gap-percentage: calc(2.87% * var(--layout-column-gap-multipler, 1));
+  --layout-column-gap-max: calc(#{_rem(1.25)} * var(--layout-column-gap-multipler, 1));
 
   --layout-column-gap: clamp(
     var(--layout-column-gap-min),
-    calc(var(--layout-column-gap-variable) / 2),
+    calc(var(--layout-column-gap-percentage) / 2),
     var(--layout-column-gap-max)
   );
 
@@ -56,7 +55,7 @@
   .layout-multi-column {
     --layout-column-gap: clamp(
       var(--layout-column-gap-min),
-      calc((var(--layout-column-gap-variable) / 2) * (1 / (var(--region-weight, 1)))),
+      calc((var(--layout-column-gap-percentage) / 2) * (1 / (var(--region-weight, 1)))),
       var(--layout-column-gap-max)
     );
   }
