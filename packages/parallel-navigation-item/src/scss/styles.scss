@@ -17,6 +17,7 @@
     transition: color  var(--transition-duration--default) linear,
                 outline var(--transition-duration--default) linear;
     align-items: center;
+    gap: _rem(1.9);
 
     .parallel-navigation-item__title {
       text-decoration: underline;
@@ -38,7 +39,7 @@
         text-decoration-color: var(--pa-link);
       }
 
-      .parallel-navigation-item__icon .sprite {
+      .parallel-navigation-item__chevron .sprite {
         transform: scale(1.25);
       }
     }
@@ -70,6 +71,13 @@
   }
 
   &__icon {
+    color: var(--beaver-blue);
+    align-self: baseline;
+    width: _rem(2.1);
+    text-align: center;
+  }
+
+  &__chevron {
     margin: 0 _rem(1);
     .sprite {
       transition: transform .2s linear;
