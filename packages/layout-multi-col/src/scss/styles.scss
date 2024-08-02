@@ -7,9 +7,9 @@
   --layout-column-gap-max: calc(#{_rem(1.25)} * var(--layout-column-gap-multipler));
 
   --layout-column-gap: clamp(
-          var(--layout-column-gap-min),
-          calc(var(--layout-column-gap-variable) / 2),
-          var(--layout-column-gap-max)
+    var(--layout-column-gap-min),
+    calc(var(--layout-column-gap-variable) / 2),
+    var(--layout-column-gap-max)
   );
 
   display: flex;
@@ -55,9 +55,9 @@
   /* Handle nesting 2 levels deep. */
   .layout-multi-column {
     --layout-column-gap: clamp(
-            var(--layout-column-gap-min),
-            calc((var(--layout-column-gap-variable) / 2) * (1 / (var(--region-weight, 1)))),
-            var(--layout-column-gap-max)
+      var(--layout-column-gap-min),
+      calc((var(--layout-column-gap-variable) / 2) * (1 / (var(--region-weight, 1)))),
+      var(--layout-column-gap-max)
     );
   }
 }
