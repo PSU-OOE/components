@@ -51,13 +51,15 @@
       --region-weight: .75;
     }
   }
+
+  /* Handle nesting 2 levels deep. */
+  .layout-multi-column {
+    --layout-column-gap: clamp(
+            var(--layout-column-gap-min),
+            calc((var(--layout-column-gap-variable) / 2) * (1 / (var(--region-weight, 1)))),
+            var(--layout-column-gap-max)
+    );
+  }
 }
 
-/* Handle nesting 2 levels deep. */
-.layout__regions .layout__regions {
-  --layout-column-gap: clamp(
-    var(--layout-column-gap-min),
-    calc((var(--layout-column-gap-variable) / 2) * (1 / (var(--region-weight, 1)))),
-    var(--layout-column-gap-max)
-  );
-}
+

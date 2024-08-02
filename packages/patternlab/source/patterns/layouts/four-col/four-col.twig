@@ -1,0 +1,26 @@
+{% embed '@psu-ooe/layout-four-col/layout-four-col.twig' %}
+  {% block first %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'First region content'
+    } only %}
+  {% endblock %}
+  {% block second %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'Second region content'
+    } only %}
+  {% endblock %}
+  {% block third %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'Third region content'
+    } only %}
+  {% endblock %}
+  {% block fourth %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'Fourth region content'
+    } only %}
+  {% endblock %}
+{% endembed %}
