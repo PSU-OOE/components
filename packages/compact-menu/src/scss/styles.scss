@@ -89,7 +89,7 @@
       transition: text-decoration-color var(--transition-duration--default) linear;
 
       &:is(:focus-visible *) {
-        text-decoration-color: var(--compact-menu-text-color);
+        text-decoration-color: var(--compact-menu-text-hover-color);
       }
     }
 
