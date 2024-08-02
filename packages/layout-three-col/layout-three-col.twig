@@ -17,6 +17,7 @@
 {% endset %}
 
 {% include '@psu-ooe/layout-multi-col/layout-multi-col.twig' with {
+  gap: gap,
   regions: [
     { weight: first_width|default(33), content: first },
     { weight: second_width|default(33), content: second },
