@@ -1,0 +1,63 @@
+@import '../../../base/src/scss/imports/variables';
+
+.layout-multi-column {
+  --layout-column-gap-multipler: 1;
+  --layout-column-gap-min: calc(#{_rem(.5)} * var(--layout-column-gap-multipler));
+  --layout-column-gap-variable: calc(2.87% * var(--layout-column-gap-multipler));
+  --layout-column-gap-max: calc(#{_rem(1.25)} * var(--layout-column-gap-multipler));
+
+  --layout-column-gap: clamp(
+          var(--layout-column-gap-min),
+          calc(var(--layout-column-gap-variable) / 2),
+          var(--layout-column-gap-max)
+  );
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--layout-column-gap));
+  margin-right: calc(-1 * var(--layout-column-gap));
+
+  &--gap-large {
+    --layout-column-gap-multipler: 2;
+  }
+
+  &__region {
+    --region-weight: 1;
+    margin-left: var(--layout-column-gap);
+    margin-right: var(--layout-column-gap);
+    flex: 1 1 calc((100% * (var(--region-weight))) - (2 * var(--layout-column-gap)));
+
+    &:not(:last-child) {
+      margin-bottom: calc(var(--layout-column-gap) * 2);
+    }
+
+    &--25 {
+      --region-weight: .25;
+    }
+
+    &--33 {
+      --region-weight: calc(1/3);
+    }
+
+    &--50 {
+      --region-weight: .5;
+    }
+
+    &--67 {
+      --region-weight: calc(2/3);
+    }
+
+    &--75 {
+      --region-weight: .75;
+    }
+  }
+}
+
+/* Handle nesting 2 levels deep. */
+.layout__regions .layout__regions {
+  --layout-column-gap: clamp(
+    var(--layout-column-gap-min),
+    calc((var(--layout-column-gap-variable) / 2) * (1 / (var(--region-weight, 1)))),
+    var(--layout-column-gap-max)
+  );
+}

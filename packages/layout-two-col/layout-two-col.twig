@@ -1,0 +1,18 @@
+{% set first %}
+  {% block first %}
+    {{ first }}
+  {% endblock %}
+{% endset %}
+
+{% set second %}
+  {% block second %}
+    {{ second }}
+  {% endblock %}
+{% endset %}
+
+{% include '@psu-ooe/layout-multi-col/layout-multi-col.twig' with {
+  regions: [
+    { weight: first_width|default(50), content: first },
+    { weight: second_width|default(50), content: second }
+  ]|filter((region) => region.content is not empty)
+} only %}

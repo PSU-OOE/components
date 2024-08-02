@@ -1,0 +1,14 @@
+{% embed '@psu-ooe/layout-two-col/layout-two-col.twig' with { gap: 'large', first_width: 25, second_width: 75 } only %}
+  {% block first %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'First region content'
+    } only %}
+  {% endblock %}
+  {% block second %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'Second region content'
+    } only %}
+  {% endblock %}
+{% endembed %}
