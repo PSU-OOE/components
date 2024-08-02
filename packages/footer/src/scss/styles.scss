@@ -12,25 +12,12 @@
   }
 
   &__top, &__bottom {
-    display: flex;
+    display: grid;
     gap: _rem(3.5) 7.5%;
-    flex-direction: column;
     position: relative;
 
     @include bp(m) {
-      flex-direction: row;
-
-      &-first {
-        flex: 20%;
-      }
-
-      &-second {
-        flex: 40%;
-      }
-
-      &-third {
-        flex: auto;
-      }
+      grid-template-columns: 20% 40% 1fr;
     }
   }
 

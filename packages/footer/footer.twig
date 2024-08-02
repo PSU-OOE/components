@@ -20,21 +20,15 @@
     {% if top_first or top_second or top_third %}
       {% set footer_top %}
         <div class="footer__top">
-          {% if top_first %}
-            <div class="footer__top-first">
-              {{ top_first }}
-            </div>
-          {% endif %}
-          {% if top_second %}
-            <div class="footer__top-second">
-              {{ top_second }}
-            </div>
-          {% endif %}
-          {% if top_third %}
-            <div class="footer__top-third">
-              {{ top_third }}
-            </div>
-          {% endif %}
+          <div class="footer__top-first">
+            {{ top_first }}
+          </div>
+          <div class="footer__top-second">
+            {{ top_second }}
+          </div>
+          <div class="footer__top-third">
+            {{ top_third }}
+          </div>
         </div>
       {% endset %}
       {% include '@psu-ooe/background-container/background-container.twig' with {
@@ -80,21 +74,15 @@
           {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
         </div>
         <div class="footer__bottom">
-          {% if middle_first %}
-            <div class="footer__bottom-first">
-              {{ middle_first }}
-            </div>
-          {% endif %}
-          {% if middle_second %}
-            <div class="footer__bottom-second">
-              {{ middle_second }}
-            </div>
-          {% endif %}
-          {% if middle_third %}
-            <div class="footer__bottom-third">
-              {{ middle_third }}
-            </div>
-          {% endif %}
+          <div class="footer__bottom-first">
+            {{ middle_first }}
+          </div>
+          <div class="footer__bottom-second">
+            {{ middle_second }}
+          </div>
+          <div class="footer__bottom-third">
+            {{ middle_third }}
+          </div>
         </div>
         {% if colophon %}
           <div class="footer__colophon">
