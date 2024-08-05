@@ -1562,12 +1562,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/address@*, @psu-ooe/address@workspace:packages/address":
-  version: 0.0.0-use.local
-  resolution: "@psu-ooe/address@workspace:packages/address"
-  languageName: unknown
-  linkType: soft
-
 "@psu-ooe/alert@*, @psu-ooe/alert@workspace:packages/alert":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/alert@workspace:packages/alert"
@@ -2164,7 +2158,6 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.17.0
     "@pattern-lab/uikit-workshop": ^5.17.0
     "@psu-ooe/accordion": "*"
-    "@psu-ooe/address": "*"
     "@psu-ooe/alert": "*"
     "@psu-ooe/announcement": "*"
     "@psu-ooe/auto-expansion": "*"
@@ -2229,6 +2222,7 @@ __metadata:
     "@psu-ooe/pager": "*"
     "@psu-ooe/parallel-navigation": "*"
     "@psu-ooe/parallel-navigation-item": "*"
+    "@psu-ooe/physical-address": "*"
     "@psu-ooe/quote": "*"
     "@psu-ooe/random-item": "*"
     "@psu-ooe/read-more": "*"
@@ -2247,6 +2241,12 @@ __metadata:
     "@psu-ooe/upcoming-events": "*"
     "@psu-ooe/vertical-menu": "*"
     "@psu-ooe/webfonts": "*"
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/physical-address@*, @psu-ooe/physical-address@workspace:packages/physical-address":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/physical-address@workspace:packages/physical-address"
   languageName: unknown
   linkType: soft
 
