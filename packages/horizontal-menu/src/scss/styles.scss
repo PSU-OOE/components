@@ -100,7 +100,7 @@
       }
 
       &:focus-visible {
-        outline: _rem(.2) solid var(--sky-blue);
+        outline: _rem(.2) solid var(--accent-color-semantic, var(--sky-blue));
         outline-offset: 0;
       }
 
@@ -128,7 +128,7 @@
       }
 
       &:hover, &:focus-visible {
-        color: var(--pa-link);
+        color: var(--accent-color-semantic, var(--sky-blue));
       }
 
       &:focus-visible {
@@ -154,7 +154,7 @@
 
     &:focus-visible {
       opacity: 1;
-      outline: _rem(.2) solid var(--sky-blue);
+      outline: _rem(.2) solid var(--accent-color-semantic, var(--sky-blue));
       outline-offset: 0;
     }
 
