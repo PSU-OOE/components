@@ -1,0 +1,41 @@
+{% set item_titles = [
+  { title: 'Business (62)', active: true, icon: 'fas-building-user' },
+  { title: 'Education (22)', icon: 'fas-chalkboard-user' },
+  { title: 'Energy and Sustainability (11)', icon: 'fas-wind-turbine' },
+  { title: 'Engineering (12)', icon: 'fas-gear' },
+  { title: 'Geospatial (10)', icon: 'fas-earth-americas' },
+  { title: 'Health and Family Services (11)', icon: 'fas-family' },
+  { title: 'Homeland Security (16)', icon: 'fas-shield-quartered' },
+  { title: 'Human Resources, Labor, and Employment Relations (8)', icon: 'fas-handshake-simple' },
+  { title: 'Law and Public Policy', icon: 'fas-scale-balanced' },
+  { title: 'Liberal Arts and Communications (16)', icon: 'fas-graduation-cap' },
+  { title: 'Nursing (8)', icon: 'fas-user-doctor' },
+  { title: 'Technology, Sciences, and Math (25)', icon: 'fas-atom-simple' },
+  { title: 'Turfgrass (5)', icon: 'custom-grass' }
+]
+%}
+
+{% set parallel_navigation_items = [] %}
+{% for item in item_titles %}
+  {% set content %}
+    {% include '@psu-ooe/parallel-navigation-item/parallel-navigation-item.twig' with {
+      active: item.active,
+      url: '#',
+      title: item.title,
+      icon: item.icon,
+      variation: 'related',
+    } %}
+  {% endset %}
+  {% set parallel_navigation_items = parallel_navigation_items|merge([content]) %}
+{% endfor %}
+
+{% include '@psu-ooe/parallel-navigation/parallel-navigation.twig' with {
+  id: "related-navigation",
+  heading: "Related Topics",
+  intro_text: "Additional resources related to finances and financial need",
+  heading_level: "h2",
+  heading_size: "large",
+  heading_color: "neutral",
+  columns: 2,
+  items: parallel_navigation_items
+} only %}

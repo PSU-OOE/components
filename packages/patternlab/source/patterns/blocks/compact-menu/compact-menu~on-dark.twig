@@ -51,17 +51,12 @@
   } only %}
 {% endset %}
 {% set menu %}
-  {% embed '@psu-ooe/compact-menu/compact-menu.twig' with {
+  {% include '@psu-ooe/compact-menu/compact-menu.twig' with {
     menu: vertical_menu,
-    menu_label: '<em>Awesome</em> Menu',
   } only %}
-    {% block panel_content %}
-      {{ parent() }}
-      <div style="padding-top:2.5rem">Arbitrary content after!</div>
-    {% endblock %}
-  {% endembed %}
 {% endset %}
 
 {% include '@psu-ooe/callout/callout.twig' with {
+  background: 'blue-gradient',
   content: menu,
 } only %}
