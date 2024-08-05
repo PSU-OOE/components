@@ -9,20 +9,6 @@
   .utility-menu{display:flex;justify-content:flex-end;align-items:center;gap:1.5rem;margin:0;padding:0;list-style-type:none}@media(min-width: 1024px){.utility-menu{gap:2rem}}.utility-menu__link{color:var(--text-color--light);text-decoration:none;font-family:var(--font-family--default);font-weight:var(--font-weight--semibold);font-size:var(--font-size--xsmall);line-height:var(--line-height--nospace);letter-spacing:var(--letter-spacing--medium)}@media(min-width: 1280px){.utility-menu__link{font-size:var(--font-size--msmall)}}
 
 </style>
-<style>
-  .pl-c-main:has(.page-title) {
-    padding: 0;
-  }
-    .basic-page-content {
-        padding: 0 2rem;
-    }
-    @media screen and(min-width: 550px) {
-        .basic-page-content {
-            padding: 0 4rem;
-        }
-    }
-</style>
-
 {% embed '@psu-ooe/header/header.twig' %}
 
   {% set how_to_apply %}
@@ -150,9 +136,39 @@
 
 <main>
   {% set page_content %}
-    <div class="basic-page-content" style="margin: auto;display:flex;flex-wrap:wrap; gap:5%; max-width: 119rem;">
-      <p style="flex: 1 1 0; min-width: 28rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras. Neque gravida in fermentum et sollicitudin ac. Gravida in fermentum et sollicitudin ac. Duis convallis convallis tellus id interdum. Neque volutpat ac tincidunt vitae semper. Non nisi est sit amet facilisis magna etiam tempor orci. Sit amet commodo nulla facilisi nullam vehicula. Eu volutpat odio facilisis mauris sit amet massa vitae tortor. Ante metus dictum at tempor commodo ullamcorper a lacus. Et molestie ac feugiat sed lectus vestibulum. Risus commodo viverra maecenas accumsan. Pretium vulputate sapien nec sagittis aliquam.</p>
-      <div style="flex: 1 1 0;min-width: 28rem;">
+  {% embed '@psu-ooe/layout-three-col/layout-three-col.twig' %}
+    {% block first %}
+      {% include '@psu-ooe/heading/heading.twig' with {
+        level: 2,
+        size: 'medium',
+        content: '200+ programs'
+      } only %}
+      <p>Penn State World Campus offers more than 200 programs and certificates to choose from.</p>
+    {% endblock %}
+    {% block second %}
+      {% include '@psu-ooe/heading/heading.twig' with {
+        level: 2,
+        size: 'medium',
+        content: '25+ years'
+      } only %}
+      <p>Penn State World Campus has been a leader in online education for more than two decades.</p>
+    {% endblock %}
+    {% block third %}
+      {% include '@psu-ooe/heading/heading.twig' with {
+        level: 2,
+        size: 'medium',
+        content: 'Nationally Recognized'
+      } only %}
+      <p>Our bachelor's degrees are highly ranked by <em>U.S. News & World Report</em>.</p>
+    {% endblock %}
+  {% endembed %}
+    <br>
+    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' with { first_width: 33, second_width: 67 } only %}
+      {% block first %}
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed blandit libero volutpat sed cras. Neque gravida in fermentum et sollicitudin ac. Gravida in fermentum et sollicitudin ac. Duis convallis convallis tellus id interdum. Neque volutpat ac tincidunt vitae semper.</p>
+      {% endblock %}
+
+      {% block second %}
         {% include '@psu-ooe/quote/quote.twig' with {
           headshot: "<img src=\"https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg\" width=\"400\" height=\"400\" alt=\"carrie tilley and family\">",
           reverse: false,
@@ -161,16 +177,50 @@
           byline: "Master of Engineering in Systems Engineering graduate",
           after_quote: ""
         } only %}
-      </div>
-    </div>
+      {% endblock %}
+    {% endembed %}
+    <br>
+    {% embed '@psu-ooe/layout-four-col/layout-four-col.twig' %}
+      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+      {% block third %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
+      {% block fourth %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Fourth region' } only %} {% endblock %}
+    {% endembed %}
+    <br>
+    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' with { first_width: 25, second_width: 75 } only %}
+      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+    {% endembed %}
+    <br>
+    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' with { first_width: 75, second_width: 25 } only %}
+      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+    {% endembed %}
+    <br>
+    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
+      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+    {% endembed %}
+    <br>
+    {% embed '@psu-ooe/layout-three-col/layout-three-col.twig' %}
+      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+      {% block third %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
+    {% endembed %}
+    <br>
+    {% embed '@psu-ooe/layout-three-col/layout-three-col.twig' with { first_width: 25, second_width: 50, third_width: 25 } only %}
+      {% block first %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'First region' } only %} {% endblock %}
+      {% block second %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Second region' } only %} {% endblock %}
+      {% block third %} {% include '@psu-ooe/callout/callout.twig' with { background: 'blue-gradient', content: 'Third region' } only %} {% endblock %}
+    {% endembed %}
   {% endset %}
-  {% include '@psu-ooe/background-container/background-container.twig' with {
-    color: 'white',
+
+  {% include '@psu-ooe/callout/callout.twig' with {
+    background: 'white',
     content: page_content,
   } only %}
 
   {% set tile_nav_content %}
-    <div class="basic-page-content" style="margin: auto;display: flex; flex-direction: column; max-width: 119rem;">
       {% set tile %}
         {% include '@psu-ooe/navigation-tile/navigation-tile.twig' with {
           link: {
@@ -193,12 +243,16 @@
       {% include '@psu-ooe/grid/grid.twig' with {
         items: [tile, tile2, tile],
       } only %}
-    </div>
+  {% endset %}
+
+  {% set tile_nav_callout %}
+    {% include '@psu-ooe/callout/callout.twig' with { content: tile_nav_content } only %}
   {% endset %}
   {% include '@psu-ooe/background-container/background-container.twig' with {
     color: 'light-grey',
     background_image: 'hub-geometric:topright',
-    content: tile_nav_content,
+    padding: 'non',
+    content: tile_nav_callout,
   } only %}
   {% set overlay_content %}
     {% set headshot %}
