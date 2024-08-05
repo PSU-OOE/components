@@ -1,29 +1,30 @@
+{% set element = semantic ? 'address' : 'div' %}
 {% apply spaceless %}
-  <address class="address">
+  <{{ element }} class="physical-address">
     {% if name %}
-      <div class="address__name">
+      <div class="physical-address__name">
         {{- name -}}
       </div>
     {% endif %}
     {% if street %}
-      <div class="address__line1">
+      <div class="physical-address__line1">
         {{- street -}}
       </div>
     {% endif %}
     {% if locality or state or postcode %}
-      <div class="address__line2">
+      <div class="physical-address__line2">
         {% if locality %}
-          <span class="address__locality">
+          <span class="physical-address__locality">
             {{- locality -}}{% if state or postcode %},{% endif %}
           </span>
         {% endif %}
         {% if state %}
-          <span class="address__state">{{- state -}}{% if postcode %} {% endif %}</span>
+          <span class="physical-address__state">{{- state -}}{% if postcode %} {% endif %}</span>
         {% endif %}
         {% if postcode %}
-          <span class="address_postcode">{{- postcode -}}</span>
+          <span class="physical-address_postcode">{{- postcode -}}</span>
         {% endif %}
       </div>
     {% endif %}
-  </address>
+  </{{ element }}>
 {% endapply %}
