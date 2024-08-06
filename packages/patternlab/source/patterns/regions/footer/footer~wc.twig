@@ -15,25 +15,14 @@
       menu_name: 'Example',
       items: [
         { title: 'Home', url: '#' },
-        { title: 'About Us', url: '/about-us', below: [
-          { title: 'Our Story', url: '#' }, { title: 'Mission', url: '#' }, { title: 'Our Leadership', url: '#' }, { title: 'Our Students', url: '#' }, { title: 'Why World Campus', url: '#' }, { title: 'News and Features', url: '#' }, { title: 'Success Stories', url: '#' }, { title: 'Employment', url: '#' },
-        ]},
+        { title: 'About Us', url: '/about-us', below: [ { title: 'Our Story', url: '#' }, { title: 'Mission', url: '#' }, { title: 'Our Leadership', url: '#' }, { title: 'Our Students', url: '#' }, { title: 'Why World Campus', url: '#' }, { title: 'News and Features', url: '#' }, { title: 'Success Stories', url: '#' }, { title: 'Employment', url: '#' } ]},
         { title: 'Degrees and Certificates', url: '#'},
-        { title: 'How Online Learning Works', url: '#', below: [
-          { title: 'Online Learning Experience', url: '#' }, { title: 'Student Services', url: '#' }, { title: 'Dedication to Accessibility', url: '#' }, { title: 'How it Works (FAQs)', url: '#' },
-        ]},
-        { title: 'Admissions', url: '#', below: [
-          { title: 'How to Apply', url: '#' }, { title: 'Returning Students', url: '#' }, { title: 'Transfer Students', url: '#' }, { title: 'International Students', url: '#' }, { title: 'Academic Calendar', url: '#' }, { title: 'Planning Resources', url: '#' },
-        ]},
-        { title: 'Tuition and Financial Aid', url: '#', below: [
-          { title: 'Tuition and Costs', url: '#' }, { title: 'Financial Aid', url: '#' }, { title: 'Scholarships', url: '#' }, { title: 'Payment Options', url: '#' },
-        ]},
-        { title: 'Military', url: '#', below: [
-          { title: 'Education Benefits and Financial Aid', url: '#' }, { title: 'Admissions and Transfer Credits', url: '#' }, { title: 'Military Support', url: '#' }, { title: 'What You Can Expect', url: '#' }, { title: 'Awards and Affiliations', url: '#' }, { title: 'Events', url: '#' }, { title: 'Service Members', url: '#' }, { title: 'Veterans', url: '#' },
-        ]},
+        { title: 'How Online Learning Works', url: '#', below: [ { title: 'Online Learning Experience', url: '#' }, { title: 'Student Services', url: '#' }, { title: 'Dedication to Accessibility', url: '#' }, { title: 'How it Works (FAQs)', url: '#' } ]},
+        { title: 'Admissions', url: '#', below: [ { title: 'How to Apply', url: '#' }, { title: 'Returning Students', url: '#' }, { title: 'Transfer Students', url: '#' }, { title: 'International Students', url: '#' }, { title: 'Academic Calendar', url: '#' }, { title: 'Planning Resources', url: '#' } ]},
+        { title: 'Tuition and Financial Aid', url: '#', below: [ { title: 'Tuition and Costs', url: '#' }, { title: 'Financial Aid', url: '#' }, { title: 'Scholarships', url: '#' }, { title: 'Payment Options', url: '#' } ]},
+        { title: 'Military', url: '#', below: [ { title: 'Education Benefits and Financial Aid', url: '#' }, { title: 'Admissions and Transfer Credits', url: '#' }, { title: 'Military Support', url: '#' }, { title: 'What You Can Expect', url: '#' }, { title: 'Awards and Affiliations', url: '#' }, { title: 'Events', url: '#' }, { title: 'Service Members', url: '#' }, { title: 'Veterans', url: '#' } ]},
       ],
     } only %}
-
   {% endblock %}
   {% block top_third %}
     {% include '@psu-ooe/list/list.twig' with {
@@ -110,23 +99,25 @@
   {% endblock %}
   {% block colophon %}
     <h2 class="visually-hidden">Disclosures, policies, and copyright information</h2>
-    <div style="display:flex;gap:2rem 2.5%">
-      <a href="#" style="color:var(--white);display:inline-block;min-width:10rem;width:10rem;height:fit-content;padding:1rem 0;">
+    <div style="--link-color: var(--text-color); display:flex;gap:2rem 2.5%">
+      <a href="#" style="display:inline-block;min-width:10rem;width:10rem;padding:.25rem 0;">
         <span class="visually-hidden">Penn State</span>
         {% include '@psu-ooe/sprite/sprite.twig' with { name: 'psu-mark', expand: true } only %}
       </a>
-      {% include '@psu-ooe/list/list.twig' with {
-        orientation: 'horizontal',
-        separator: 'dot',
-        items: [
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Accessibility</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Equal Opportunity</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Nondiscrimination</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Privacy</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Consumer Information and Disclosures</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">The Pennsylvania State University © 2024</span></a>',
-        ]
-      } only %}
+      <div style="font-size: var(--font-size--3xsmall);line-height: var(--line-height--snug)">
+        {% include '@psu-ooe/list/list.twig' with {
+          orientation: 'horizontal',
+          separator: 'dot',
+          items: [
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Accessibility</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Equal Opportunity</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Nondiscrimination</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Privacy</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Consumer Information and Disclosures</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">The Pennsylvania State University © 2024</a>',
+          ]
+        } only %}
+      </div>
     </div>
   {% endblock %}
 {% endembed %}

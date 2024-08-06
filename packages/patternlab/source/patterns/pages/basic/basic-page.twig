@@ -349,23 +349,25 @@
   {% endblock %}
   {% block colophon %}
     <h2 class="visually-hidden">Disclosures, policies, and copyright information</h2>
-    <div style="display:flex;gap:2rem 2.5%">
-      <a href="#" style="color:var(--white);display:inline-block;min-width:10rem;width:10rem;height:fit-content;padding:1rem 0;">
+    <div style="--link-color: var(--text-color); display:flex;gap:2rem 2.5%">
+      <a href="#" style="display:inline-block;min-width:10rem;width:10rem;padding:.25rem 0;">
         <span class="visually-hidden">Penn State</span>
         {% include '@psu-ooe/sprite/sprite.twig' with { name: 'psu-mark', expand: true } only %}
       </a>
-      {% include '@psu-ooe/list/list.twig' with {
-        orientation: 'horizontal',
-        separator: 'dot',
-        items: [
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Accessibility</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Equal Opportunity</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Nondiscrimination</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Privacy</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">Consumer Information and Disclosures</span></a>',
-          '<a style="display:inline-block;padding:.5rem 0;" href="#"><span class="text text--size-3xsmall text--weight-semibold text--height-snug">The Pennsylvania State University © 2024</span></a>',
-        ]
-      } only %}
+      <div style="font-size: var(--font-size--3xsmall);line-height: var(--line-height--snug)">
+        {% include '@psu-ooe/list/list.twig' with {
+          orientation: 'horizontal',
+          separator: 'dot',
+          items: [
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Accessibility</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Equal Opportunity</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Nondiscrimination</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Privacy</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">Consumer Information and Disclosures</a>',
+            '<a style="display:inline-block;padding:.5rem 0;" href="#">The Pennsylvania State University © 2024</a>',
+          ]
+        } only %}
+      </div>
     </div>
   {% endblock %}
 {% endembed %}
