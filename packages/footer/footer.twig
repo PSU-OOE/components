@@ -92,9 +92,9 @@
       {% endset %}
       {% set footer_bottom_classes = [
         'footer__bottom-container',
-        bottom_background in ['dark'] ? 'footer__bottom-container--dark',
+        bottom_background != 'white' ? 'footer__bottom-container--dark',
       ]|filter(class => class is not empty) %}
-      <div class="{{ footer_bottom_classes|join(' ') }}" data-{{ bottom_background == 'dark' ? 'dark' : 'light' }}>
+      <div class="{{ footer_bottom_classes|join(' ') }}" data-{{ bottom_background == 'white' ? 'light' : 'dark' }}>
         {{ footer_bottom_content }}
       </div>
     {% endif %}
