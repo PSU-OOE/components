@@ -9,20 +9,16 @@
     padding: 0 var(--page-side-padding);
     margin: 0 auto;
     width: 100%;
+    position: relative;
   }
 
   &__top, &__bottom {
     display: grid;
     gap: _rem(3.5) 7.5%;
-    position: relative;
 
     @include bp(m) {
       grid-template-columns: 20% 40% 1fr;
     }
-  }
-
-  &__colophon {
-    position: relative;
   }
 
   &__bottom-container {
@@ -54,12 +50,6 @@
         height: auto;
         --hub-geometric-gradient: url(#hub-geometric-footer-bottom-gradient);
       }
-    }
-  }
-
-  &__top, &__middle, &__colophon {
-    &:empty {
-      display: none;
     }
   }
 }
