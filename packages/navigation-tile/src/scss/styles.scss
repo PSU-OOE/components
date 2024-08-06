@@ -21,6 +21,9 @@
     .navigation-tile__title {
       color: var(--nittany-navy);
     }
+    .navigation-tile__chevron {
+      color: var(--beaver-blue);
+    }
   }
 
 
@@ -52,6 +55,15 @@
     line-height: var(--line-height--2xsnug);
     font-weight: var(--font-weight--medium);
     transition: color var(--transition-duration--default) linear;
+    display: flex;
+    align-items: center;
+    gap: _rem(1.5);
+  }
+
+  &__chevron {
+    color: var(--pa-link);
+    font-size: var(--font-size--small);
+    margin-left: auto;
   }
 
   &__description {
@@ -61,4 +73,5 @@
     line-height: var(--line-height--snug);
     font-weight: var(--font-weight--semibold);
   }
+
 }
