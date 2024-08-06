@@ -40,11 +40,17 @@
     &-geometrics {
       opacity: .3;
       position: absolute;
-      top: -1rem;
-      right: -30rem;
-      width: 60rem;
+      top: _rem(-1);
+      right: _rem(-30);
+      width: _rem(60);
       height: auto;
       --hub-geometric-gradient: url(#hub-geometric-footer-bottom-gradient);
+
+      @include bp(m) {
+        left: calc(max(50%, _rem(59.5)) + _rem(22));
+        width: _rem(67);
+
+      }
     }
   }
 }
