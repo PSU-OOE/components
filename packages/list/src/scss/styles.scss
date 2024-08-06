@@ -6,16 +6,30 @@
   list-style-type: none;
 
   &__item {
+    --list-item-density: #{_rem(.5)};
+
+    &--density-loose {
+      --list-item-density: #{_rem(1)};
+    }
+
     color: var(--text-color);
 
     &--horizontal {
       display: inline-block;
+
+      &:not(:first-child) {
+        margin-left: var(--list-item-density);
+      }
+      &:not(:last-child) {
+        margin-right: var(--list-item-density)
+      }
     }
 
     &--separator-dot {
       &:not(:last-child)::after {
+        color: var(--accent-color, var(--text-color));
         content: "•";
-        margin:0 _rem(1);
+        margin-left: calc(var(--list-item-density) * 2);
       }
     }
   }
