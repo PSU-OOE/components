@@ -27,6 +27,7 @@
     display: flex;
     flex-direction: column;
     gap: _rem(4);
+    overflow: hidden;
 
     @include bp(m) {
       padding: _rem(6) 0;
@@ -37,19 +38,13 @@
     }
 
     &-geometrics {
-      overflow: hidden;
+      opacity: .3;
       position: absolute;
-      inset: 0;
-
-      .sprite {
-        opacity: .3;
-        position: absolute;
-        top: -1rem;
-        right: -30rem;
-        width: 60rem;
-        height: auto;
-        --hub-geometric-gradient: url(#hub-geometric-footer-bottom-gradient);
-      }
+      top: -1rem;
+      right: -30rem;
+      width: 60rem;
+      height: auto;
+      --hub-geometric-gradient: url(#hub-geometric-footer-bottom-gradient);
     }
   }
 }
