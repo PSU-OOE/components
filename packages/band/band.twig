@@ -5,7 +5,7 @@
 {% if background %}
   {% set classes = classes|merge(['band--' ~ background]) %}
 {% endif %}
-<div class="{{ classes|join(' ') }}">
+<div class="{{ classes|join(' ') }}" data-dark>
   {% if background == 'hub-geometric' %}
     <div class="band__geometrics">
       <svg width="0" height="0" style="position:absolute">

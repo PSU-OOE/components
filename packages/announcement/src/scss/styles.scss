@@ -2,7 +2,6 @@
 @import "../../../base/src/scss/imports/layout";
 @import "../../../base/src/scss/imports/utility";
 
-
 /**
  * Contains styles for the announcement block.
  */
@@ -148,7 +147,6 @@
 
   &--notice {
     background-color: var(--medium-grey);
-    color: var(--nittany-navy);
 
     .announcement {
       &__expand {
@@ -163,10 +161,10 @@
           color: var(--white);
         }
       }
+
       &__content {
-        a, p {
-          color: var(--beaver-blue);
-        }
+        --text-color: var(--beaver-blue);
+        --link-color: var(--beaver-blue);
       }
 
       &__icon {
@@ -180,7 +178,6 @@
 
   &--warning {
     background-color: var(--keystone);
-    color: var(--nittany-navy);
 
     .announcement {
       &__expand {
@@ -196,9 +193,7 @@
       }
 
       &__content {
-        a, p {
-          color: var(--beaver-blue);
-        }
+        --link-color: var(--nittany-navy);
       }
 
       &__icon {
@@ -213,9 +208,11 @@
 
   &--emergency {
     background-color: var(--error-red);
-    color: var(--white);
 
     .announcement {
+      &__expand, &__collapse {
+        color: var(--white);
+      }
       &__expand {
         &:active,
         &:focus,
@@ -230,9 +227,7 @@
       }
 
       &__content {
-        a, p {
-          color: var(--white);
-        }
+        --link-color: var(--white);
       }
 
       &__icon {

@@ -7,7 +7,7 @@
     panel_width in ['wide'] ? 'drop-button__content--' ~ panel_width,
     panel_padding in ['none', 'small'] ? 'drop-button__content--padding-' ~ panel_padding,
   ]|filter(v => v is not empty) %}
-  <div class="{{ content_classes|join(' ') }}" tabindex="0">
+  <div class="{{ content_classes|join(' ') }}" data-light tabindex="0">
     {{ panel_content }}
   </div>
 </div>
