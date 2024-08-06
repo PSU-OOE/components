@@ -76,7 +76,9 @@
     ],
   } only %}
 {% endset %}
-{% include '@psu-ooe/callout/callout.twig' with {
-  background: 'blue-gradient',
-  content: menu,
-} only %}
+<div style="position: relative;z-index:2">
+  {% include '@psu-ooe/callout/callout.twig' with {
+    background: 'blue-gradient',
+    content: menu,
+  } only %}
+</div>
