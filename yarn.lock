@@ -2247,6 +2247,8 @@ __metadata:
 "@psu-ooe/physical-address@*, @psu-ooe/physical-address@workspace:packages/physical-address":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/physical-address@workspace:packages/physical-address"
+  dependencies:
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
