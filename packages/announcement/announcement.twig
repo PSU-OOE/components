@@ -1,4 +1,5 @@
-<div class="announcement announcement--{{ severity }}" data-announcement-hash="{{ hash }}">
+{% set context = severity == 'emergency' ? 'dark' : 'light' %}
+<div class="announcement announcement--{{ severity }}" data-{{ context }} data-announcement-hash="{{ hash }}">
   <button class="announcement__expand" type="button" aria-label="Expand announcements">
     <span class="announcement__expand-icon" aria-hidden="true">
       {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-exclamation'} only %}
