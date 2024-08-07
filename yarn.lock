@@ -1586,7 +1586,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/background-container@*, @psu-ooe/background-container@workspace:packages/background-container":
+"@psu-ooe/background-container@*, @psu-ooe/background-container@^3.0, @psu-ooe/background-container@workspace:packages/background-container":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/background-container@workspace:packages/background-container"
   dependencies:
@@ -1806,6 +1806,9 @@ __metadata:
 "@psu-ooe/footer@*, @psu-ooe/footer@workspace:packages/footer":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/footer@workspace:packages/footer"
+  dependencies:
+    "@psu-ooe/background-container": ^3.0
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
