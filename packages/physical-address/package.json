@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/physical-address",
+  "version": "1.0.0",
+  "description": "Provides an element for physical addresses.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^2.0"
+  }
+}

@@ -104,8 +104,12 @@
     'youtube': '0 0 448 448',
     'youtube-player': '0 0 68 48',
   } %}
-
-  <svg class="sprite sprite--{{ name }}" aria-hidden="true" viewBox="{{ viewboxes[name] }}">
+  {% set classes = [
+    'sprite',
+    expand ? 'sprite--expand',
+    'sprite--' ~ name
+  ]|filter(class => class is not empty) %}
+  <svg class="{{ classes|join(' ') }}" aria-hidden="true" viewBox="{{ viewboxes[name] }}">
     <use xlink:href="#{{ name }}" />
   </svg>
 {% endapply %}

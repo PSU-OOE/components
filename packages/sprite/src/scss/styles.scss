@@ -2,4 +2,9 @@
   height: 1em;
   width: auto;
   vertical-align: middle;
+
+  &--expand {
+    height: auto;
+    width: 100%;
+  }
 }

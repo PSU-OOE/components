@@ -1586,7 +1586,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/background-container@*, @psu-ooe/background-container@workspace:packages/background-container":
+"@psu-ooe/background-container@*, @psu-ooe/background-container@^3.0, @psu-ooe/background-container@workspace:packages/background-container":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/background-container@workspace:packages/background-container"
   dependencies:
@@ -1800,6 +1800,16 @@ __metadata:
 "@psu-ooe/flex-wrap-listener@*, @psu-ooe/flex-wrap-listener@^1.0, @psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/flex-wrap-listener@workspace:packages/flex-wrap-listener"
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/footer@*, @psu-ooe/footer@workspace:packages/footer":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/footer@workspace:packages/footer"
+  dependencies:
+    "@psu-ooe/background-container": ^3.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
@@ -2031,6 +2041,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/list@*, @psu-ooe/list@workspace:packages/list":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/list@workspace:packages/list"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/modal@*, @psu-ooe/modal@workspace:packages/modal":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/modal@workspace:packages/modal"
@@ -2168,6 +2186,7 @@ __metadata:
     "@psu-ooe/expandable-section": "*"
     "@psu-ooe/fieldset": "*"
     "@psu-ooe/flex-wrap-listener": "*"
+    "@psu-ooe/footer": "*"
     "@psu-ooe/form": "*"
     "@psu-ooe/grid": "*"
     "@psu-ooe/gtm": "*"
@@ -2195,6 +2214,7 @@ __metadata:
     "@psu-ooe/intro-form": "*"
     "@psu-ooe/label": "*"
     "@psu-ooe/legend": "*"
+    "@psu-ooe/list": "*"
     "@psu-ooe/modal": "*"
     "@psu-ooe/more-menu": "*"
     "@psu-ooe/navigation-tile": "*"
@@ -2206,6 +2226,7 @@ __metadata:
     "@psu-ooe/pager": "*"
     "@psu-ooe/parallel-navigation": "*"
     "@psu-ooe/parallel-navigation-item": "*"
+    "@psu-ooe/physical-address": "*"
     "@psu-ooe/quote": "*"
     "@psu-ooe/random-item": "*"
     "@psu-ooe/read-more": "*"
@@ -2224,6 +2245,14 @@ __metadata:
     "@psu-ooe/upcoming-events": "*"
     "@psu-ooe/vertical-menu": "*"
     "@psu-ooe/webfonts": "*"
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/physical-address@*, @psu-ooe/physical-address@workspace:packages/physical-address":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/physical-address@workspace:packages/physical-address"
+  dependencies:
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
