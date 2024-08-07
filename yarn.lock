@@ -1809,6 +1809,7 @@ __metadata:
   dependencies:
     "@psu-ooe/background-container": ^3.0
     "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
 
