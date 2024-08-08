@@ -50,6 +50,10 @@
   --text-color--default: var(--text-color--dark);
   --link-color--default: var(--link-color--dark);
 
+  // Focus indicators
+  --focus-indicator-color--light: var(--sky-blue);
+  --focus-indicator-color--dark: var(--sky-blue);
+
   // @deprecated - to be removed in 3.0.0.
   --headings-color: var(--text-color--slate);
 }
@@ -59,12 +63,12 @@
   --link-color: var(--link-color--default);
   --text-color: var(--text-color--default);
 
-  --focus-indicator-color--light: var(--sky-blue);
+  --focus-indicator-color: var(--focus-indicator-color--dark);
 }
 
 [data-dark] {
   --link-color: var(--link-color--light);
   --text-color: var(--text-color--light);
 
-  --focus-indicator-color--dark: var(--sky-blue);
+  --focus-indicator-color: var(--focus-indicator-color--light);
 }
