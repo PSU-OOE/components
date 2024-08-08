@@ -35,6 +35,7 @@
 
   .overlay__content {
     background: var(--white);
+    color: var(--text-color);
     width: auto;
     padding: _rem(2);
 
@@ -49,15 +50,6 @@
       margin-bottom: _rem(4);
       align-self: center;
       z-index: 1;
-    }
-
-    // @TODO: Remove this when text auto-contrasts globally.
-    &[data-dark] {
-      color: var(--white);
-
-      & > * {
-        color: var(--white);
-      }
     }
   }
 

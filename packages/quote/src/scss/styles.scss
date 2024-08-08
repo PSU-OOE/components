@@ -2,15 +2,7 @@
 @import "../../../base/src/scss/imports/layout";
 
 .quote {
-  color: var(--nittany-navy);
-
-  &--reverse {
-    color: var(--white);
-
-    .quote__content::before, .quote__content::after {
-      color: var(--pugh-blue);
-    }
-  }
+  color: var(--text-color);
 
   &__wrapper {
     display: flex;

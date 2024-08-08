@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "2.0.21",
+  "version": "2.0.26",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -35,6 +35,7 @@
     "@psu-ooe/expandable-section": "*",
     "@psu-ooe/fieldset": "*",
     "@psu-ooe/flex-wrap-listener": "*",
+    "@psu-ooe/footer": "*",
     "@psu-ooe/form": "*",
     "@psu-ooe/grid": "*",
     "@psu-ooe/gtm": "*",
@@ -62,6 +63,7 @@
     "@psu-ooe/intro-form": "*",
     "@psu-ooe/label": "*",
     "@psu-ooe/legend": "*",
+    "@psu-ooe/list": "*",
     "@psu-ooe/modal": "*",
     "@psu-ooe/more-menu": "*",
     "@psu-ooe/navigation-tile": "*",
@@ -73,6 +75,7 @@
     "@psu-ooe/pager": "*",
     "@psu-ooe/parallel-navigation": "*",
     "@psu-ooe/parallel-navigation-item": "*",
+    "@psu-ooe/physical-address": "*",
     "@psu-ooe/quote": "*",
     "@psu-ooe/random-item": "*",
     "@psu-ooe/read-more": "*",

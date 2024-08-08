@@ -59,6 +59,15 @@
     font-weight: var(--font-weight--medium);
     padding: _rem(1) _rem(2) _rem(2) _rem(2);
     transition: background var(--transition-duration--default) linear;
+    display: flex;
+    align-items: center;
+    gap: _rem(1.5);
+  }
+
+  &__chevron {
+    color: var(--white);
+    font-size: var(--font-size--small);
+    margin-left: auto;
   }
 
 }

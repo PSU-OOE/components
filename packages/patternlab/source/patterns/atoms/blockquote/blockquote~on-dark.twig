@@ -1,0 +1,10 @@
+{% set quote %}
+  <figure>
+    <blockquote>The question isn't who is going to let me; it's who is going to stop me.</blockquote>
+    <figcaption>—Ayn Rand</figcaption>
+  </figure>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  background: 'blue-gradient',
+  content: quote,
+} only %}

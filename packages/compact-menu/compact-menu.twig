@@ -1,5 +1,5 @@
 {% set toggle_content %}
-  <div class="compact-menu__toggle">
+  <div class="compact-menu__toggle compact-menu__toggle--{{ orientation|default('vertical') }}">
     <div class="compact-menu__toggle-sprite">
       {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-bars' } only %}
     </div>

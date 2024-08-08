@@ -22,7 +22,7 @@
       opacity: 0;
       visibility: hidden;
       box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 75%, transparent);
-      border-left: _rem(.3) solid var(--sky-blue);
+      border-left: _rem(.3) solid var(--accent-color, var(--sky-blue));
       padding: _rem(.5) _rem(2);
       min-width: 100%;
       width: _rem(23);
@@ -65,9 +65,10 @@
       font-weight: var(--font-weight--semibold);
       line-height: var(--line-height--nospace);
       letter-spacing: var(--letter-spacing--medium);
-      color: var(--text-color--light);
+      color: var(--text-color);
       padding: _rem(2.4) _rem(1.1);
-      transition: background-color var(--transition-duration--default) linear;
+      transition: background-color var(--transition-duration--default) linear,
+                  color var(--transition-duration--default) linear;
 
       @include bp(l) {
         font-size: var(--font-size--small);
@@ -79,7 +80,8 @@
       }
 
       &:focus-within, &:hover, &:has(+ [aria-expanded="true"]) {
-        background-color: var(--pa-link);
+        background: var(--horizontal-menu-link-active-background-color, var(--pa-link));
+        color: var(--horizontal-menu-link-active-foreground-color, var(--text-color));
         text-decoration: none;
       }
 
@@ -93,7 +95,7 @@
           bottom: 0;
           left: 0;
           width: _rem(.3);
-          background-color: var(--sky-blue);
+          background-color: var(--accent-color, var(--sky-blue));
         }
       }
 
@@ -109,7 +111,7 @@
           content: '';
           position: absolute;
           inset: calc(100% - _rem(.9)) _rem(.5) _rem(.5) _rem(.5);
-          background-color: var(--sky-blue);
+          background-color: var(--accent-color-semantic, var(--sky-blue));
         }
       }
 
@@ -126,7 +128,7 @@
       }
 
       &:hover, &:focus-visible {
-        color: var(--pa-link);
+        color: var(--accent-color-semantic, var(--sky-blue));
       }
 
       &:focus-visible {
@@ -140,7 +142,7 @@
   }
 
   &__toggle {
-    background: var(--pa-link);
+    background: var(--horizontal-menu-link-active-background-color, var(--pa-link));
     border: none;
     position: absolute;
     inset: 0 _rem(-.8) 0 calc(100% - _rem(.8));
@@ -164,9 +166,14 @@
     }
   }
 
+  &__toggle[aria-expanded="true"] &__chevron .sprite {
+    transform: rotateX(180deg);
+  }
+
   &__chevron .sprite {
-    color: var(--white);
+    color: var(--horizontal-menu-link-active-foreground-color, var(--text-color));
     width: _rem(1.6);
     height: auto;
+    transition: transform var(--transition-duration--default) linear;
   }
 }

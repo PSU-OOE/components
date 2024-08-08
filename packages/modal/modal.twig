@@ -1,6 +1,6 @@
 <div id="{{ id }}" class="modal" data-interactive-component>
-  <div class="modal__overlay">
-    <div class="modal__container" role="dialog" aria-modal="true">
+  <div class="modal__overlay" data-dark>
+    <div class="modal__container" role="dialog" aria-modal="true" data-light>
       <h2 class="modal__title visually-hidden" tabindex="-1">{{ title }}</h2>
       <button type="button" class="modal__close" aria-label="Close">
         {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fa-times' } %}
