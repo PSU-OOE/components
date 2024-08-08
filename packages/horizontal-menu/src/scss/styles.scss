@@ -98,7 +98,7 @@
       }
 
       &:focus-visible {
-        outline: _rem(.2) solid var(--sky-blue);
+        outline: _rem(.2) solid var(--focus-indicator-color);
         outline-offset: 0;
       }
 
@@ -152,7 +152,7 @@
 
     &:focus-visible {
       opacity: 1;
-      outline: _rem(.2) solid var(--sky-blue);
+      outline: _rem(.2) solid var(--focus-indicator-color);
       outline-offset: 0;
     }
 
