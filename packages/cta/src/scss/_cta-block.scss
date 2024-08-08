@@ -51,7 +51,7 @@
   }
 
   &:focus-visible {
-    outline: _rem(.2) solid var(--cta-outline-color, var(--sky-blue));
+    outline: _rem(.2) solid var(--cta-outline-color, var(--focus-indicator-color));
     outline-offset: _rem(-.5);
   }
 

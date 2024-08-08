@@ -13,7 +13,7 @@ select {
   line-height: var(--form-element-line-height);
 
   &:focus-visible {
-    outline: _rem(.2) solid var(--sky-blue);
+    outline: _rem(.2) solid var(--focus-indicator-color);
     outline-offset: _rem(.2);
   }
 

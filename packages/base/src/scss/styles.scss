@@ -59,7 +59,7 @@ a,
   }
 
   &:focus-visible {
-    outline-color: var(--sky-blue);
+    outline-color: var(--focus-indicator-color);
     outline-offset: _rem(0.2);
   }
 

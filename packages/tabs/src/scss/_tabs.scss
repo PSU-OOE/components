@@ -63,7 +63,7 @@
         content: '';
         inset: 0 100% 0 0;
         position: absolute;
-        border-left: _rem(.4) solid var(--sky-blue);
+        border-left: _rem(.4) solid var(--focus-indicator-color);
         left: _rem(-1);
 
         @include bp(xs) {

@@ -55,7 +55,7 @@
       outline: none;
     }
     &:focus-visible {
-      outline: _rem(0.2) solid var(--sky-blue);
+      outline: _rem(0.2) solid var(--focus-indicator-color);
     }
   }
 
