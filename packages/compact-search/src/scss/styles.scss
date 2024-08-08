@@ -8,7 +8,7 @@
     align-items: center;
 
     &:is(:focus-visible > .compact-search__toggle) {
-      outline: _rem(.2) solid var(--sky-blue);
+      outline: _rem(.2) solid var(--focus-indicator-color);
       outline-offset: _rem(.2);
     }
 
