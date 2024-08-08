@@ -1,0 +1,34 @@
+{% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
+  {% block first %}
+    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
+      {% block first %}
+        {% include '@psu-ooe/callout/callout.twig' with {
+          background: 'light-grey',
+          content: 'First inner layout first region content'
+        } only %}
+      {% endblock %}
+      {% block second %}
+        {% include '@psu-ooe/callout/callout.twig' with {
+          background: 'light-grey',
+          content: 'First inner layout second region content'
+        } only %}
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+  {% block second %}
+    {% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
+      {% block first %}
+        {% include '@psu-ooe/callout/callout.twig' with {
+          background: 'blue-gradient',
+          content: 'Second inner layout first region content',
+        } only %}
+      {% endblock %}
+      {% block second %}
+        {% include '@psu-ooe/callout/callout.twig' with {
+          background: 'blue-gradient',
+          content: 'Second inner layout second region content',
+        } only %}
+      {% endblock %}
+    {% endembed %}
+  {% endblock %}
+{% endembed %}

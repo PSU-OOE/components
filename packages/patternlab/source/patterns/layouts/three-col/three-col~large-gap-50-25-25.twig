@@ -1,0 +1,20 @@
+{% embed '@psu-ooe/layout-three-col/layout-three-col.twig' with { gap: 'large', first_width: 50, second_width: 25, third_width: 25 } only %}
+  {% block first %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'First region content'
+    } only %}
+  {% endblock %}
+  {% block second %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'Second region content'
+    } only %}
+  {% endblock %}
+  {% block third %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'Third region content'
+    } only %}
+  {% endblock %}
+{% endembed %}
