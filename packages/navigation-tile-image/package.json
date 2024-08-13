@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/navigation-tile-image",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Provides a navigation tile component that supports an image.",
   "publishConfig": {
     "access": "public",

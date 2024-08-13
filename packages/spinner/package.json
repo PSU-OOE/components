@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/spinner",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "description": "Provides a spinner component.",
   "ooe": {
     "namespace": "molecules"
