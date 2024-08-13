@@ -114,7 +114,7 @@
     transition: outline-color var(--transition-duration--default) linear;
 
     &:focus-visible {
-      outline-color: var(--sky-blue);
+      outline-color: var(--focus-indicator-color);
     }
   }
 
