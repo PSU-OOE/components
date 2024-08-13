@@ -25,15 +25,16 @@
     right: 0;
     inset: 0;
     background-color: color-mix(in srgb, var(--nittany-navy) 85%, transparent);
-    // @TODO: Remove fallback when appropriate.
-    @supports not (background: color-mix(in srgb, white, white)) {
-      background-color: rgba($nittany-navy, 0.85);
-    }
     width: 100%;
     height: 100%;
     overflow: auto;
     overscroll-behavior: contain;
     z-index: $modal;
+
+    // @TODO: Remove fallback when appropriate.
+    @supports not (background: color-mix(in srgb, white, white)) {
+      background-color: rgba($nittany-navy, 0.85);
+    }
   }
 
   .modal__container {

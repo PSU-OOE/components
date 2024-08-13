@@ -7,12 +7,12 @@
 
   &__item {
     --list-item-density: #{_rem(.5)};
+    color: var(--text-color);
 
     &--density-loose {
       --list-item-density: #{_rem(1)};
     }
 
-    color: var(--text-color);
 
     &--horizontal {
       display: inline-block;
