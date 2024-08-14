@@ -6,7 +6,7 @@
   top: var(--sticky-panel-vertical-offset, 0);
   left: var(--sticky-panel-horizontal-offset, 0);
   width: var(--sticky-panel-width, 100%);
-  z-index: 10000;
+  z-index: var(--z-index--floating);
 
   &__content {
     position: relative;
