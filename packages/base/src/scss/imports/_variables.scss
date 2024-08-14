@@ -57,5 +57,5 @@ $base-rem-scale: 1 !default;
   @return unquote(($base * $base-rem-scale) + 'rem');
 }
 
-// z-index layers
+// @deprecated - remove in 3.0.0
 $modal: 1000;
