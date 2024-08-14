@@ -1603,7 +1603,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/base@^1.0 || ^2.0, @psu-ooe/base@^2.0, @psu-ooe/base@^2.0.0, @psu-ooe/base@^2.2, @psu-ooe/base@workspace:packages/base":
+"@psu-ooe/base@^1.0 || ^2.0, @psu-ooe/base@^2.0, @psu-ooe/base@^2.0.0, @psu-ooe/base@^2.2, @psu-ooe/base@^2.5.0, @psu-ooe/base@workspace:packages/base":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/base@workspace:packages/base"
   dependencies:
@@ -1765,7 +1765,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/drop-button@workspace:packages/drop-button"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-ooe/base": ^2.5.0
   languageName: unknown
   linkType: soft
 
@@ -2053,7 +2053,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@psu-ooe/modal@workspace:packages/modal"
   dependencies:
-    "@psu-ooe/base": ^2.0
+    "@psu-ooe/base": ^2.5.0
     "@psu-ooe/sprite": ^2.0
   languageName: unknown
   linkType: soft
