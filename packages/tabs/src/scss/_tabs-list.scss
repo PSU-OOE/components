@@ -195,7 +195,7 @@
     }
 
     &:focus-visible {
-      outline: _rem(.2) solid var(--sky-blue);
+      outline: _rem(.2) solid var(--focus-indicator-color);
       box-shadow: 0 _rem(.5) 0 0 color-mix(in srgb, var(--beaver-blue) 100%, transparent);
 
       // @TODO: Remove fallback when appropriate.

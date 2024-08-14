@@ -1586,7 +1586,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/background-container@*, @psu-ooe/background-container@workspace:packages/background-container":
+"@psu-ooe/background-container@*, @psu-ooe/background-container@^3.0, @psu-ooe/background-container@workspace:packages/background-container":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/background-container@workspace:packages/background-container"
   dependencies:
@@ -1803,6 +1803,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/footer@*, @psu-ooe/footer@workspace:packages/footer":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/footer@workspace:packages/footer"
+  dependencies:
+    "@psu-ooe/background-container": ^3.0
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/form@*, @psu-ooe/form@workspace:packages/form":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/form@workspace:packages/form"
@@ -1834,7 +1844,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/heading@*, @psu-ooe/heading@^1.0 || ^2.0 || ^3.0, @psu-ooe/heading@^2.0 || ^3.0, @psu-ooe/heading@workspace:packages/heading":
+"@psu-ooe/heading@*, @psu-ooe/heading@^1.0 || ^2.0 || ^3.0, @psu-ooe/heading@^2.0 || ^3.0, @psu-ooe/heading@^3.0, @psu-ooe/heading@workspace:packages/heading":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/heading@workspace:packages/heading"
   dependencies:
@@ -2010,7 +2020,7 @@ __metadata:
   resolution: "@psu-ooe/intro-form@workspace:packages/intro-form"
   dependencies:
     "@psu-ooe/base": ^2.0
-    "@psu-ooe/heading": ^2.0 || ^3.0
+    "@psu-ooe/heading": ^3.0
     "@psu-ooe/random-item": ^1.0
   languageName: unknown
   linkType: soft
@@ -2061,6 +2071,14 @@ __metadata:
 "@psu-ooe/legend@*, @psu-ooe/legend@workspace:packages/legend":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/legend@workspace:packages/legend"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/list@*, @psu-ooe/list@workspace:packages/list":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/list@workspace:packages/list"
   dependencies:
     "@psu-ooe/base": ^2.0
   languageName: unknown
@@ -2203,6 +2221,7 @@ __metadata:
     "@psu-ooe/expandable-section": "*"
     "@psu-ooe/fieldset": "*"
     "@psu-ooe/flex-wrap-listener": "*"
+    "@psu-ooe/footer": "*"
     "@psu-ooe/form": "*"
     "@psu-ooe/grid": "*"
     "@psu-ooe/gtm": "*"
@@ -2230,6 +2249,7 @@ __metadata:
     "@psu-ooe/intro-form": "*"
     "@psu-ooe/label": "*"
     "@psu-ooe/legend": "*"
+    "@psu-ooe/list": "*"
     "@psu-ooe/modal": "*"
     "@psu-ooe/more-menu": "*"
     "@psu-ooe/navigation-tile": "*"
@@ -2241,6 +2261,7 @@ __metadata:
     "@psu-ooe/pager": "*"
     "@psu-ooe/parallel-navigation": "*"
     "@psu-ooe/parallel-navigation-item": "*"
+    "@psu-ooe/physical-address": "*"
     "@psu-ooe/quote": "*"
     "@psu-ooe/random-item": "*"
     "@psu-ooe/read-more": "*"
@@ -2259,6 +2280,14 @@ __metadata:
     "@psu-ooe/upcoming-events": "*"
     "@psu-ooe/vertical-menu": "*"
     "@psu-ooe/webfonts": "*"
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/physical-address@*, @psu-ooe/physical-address@workspace:packages/physical-address":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/physical-address@workspace:packages/physical-address"
+  dependencies:
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 

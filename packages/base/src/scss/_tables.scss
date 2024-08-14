@@ -79,13 +79,12 @@ table {
 table.small-only {
 
   display: table;
+  margin-top: _rem(1);
+  border-top: _rem(.1) solid var(--medium-grey);
 
   @include bp(m) {
     display: none;
   }
-
-  margin-top: _rem(1);
-  border-top: _rem(.1) solid var(--medium-grey);
 
   tr {
     border: _rem(.1) solid var(--medium-grey);
@@ -122,12 +121,11 @@ table.small-only {
 
 table.large-only {
   display: none;
+  margin: _rem(3) 0;
 
   @include bp(m) {
     display: table;
   }
-
-  margin: _rem(3) 0;
 }
 
 tr:not(:first-of-type) .st-head-row {

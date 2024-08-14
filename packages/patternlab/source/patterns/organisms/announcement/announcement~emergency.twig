@@ -1,6 +1,11 @@
+{% set content %}
+  <h2>Why use an emergency announcement?</h2>
+  <p>Using an emergency announcement is crucial for effectively communicating urgent information to the public during a crisis or critical event. In situations such as natural disasters, public safety threats, or health emergencies, timely and clear announcements can provide essential guidance, instructions, and updates to help individuals make informed decisions. These announcements can facilitate the dissemination of evacuation orders, safety reminders, or shelter locations, ensuring that communities are well-informed and can reduce panic and confusion.</p>
+  <a href="#">More information</a>
+{% endset %}
 {% include '@psu-ooe/announcement/announcement.twig' with {
   label: "Announcement",
-  content: "Here is an emergency announcement",
+  content: content,
   severity: "emergency",
   hash: "SGVyZSBpcyBhbiBlbWVyZ2VuY3kgYW5ub3VuY2VtZW50"
 } only %}

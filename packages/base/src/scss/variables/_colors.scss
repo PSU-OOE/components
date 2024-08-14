@@ -50,6 +50,18 @@
   --text-color--default: var(--text-color--dark);
   --link-color--default: var(--link-color--dark);
 
+  // Non-semantic accents
+  --accent-color--dark: var(--sky-blue);
+  --accent-color--light: var(--sky-blue);
+
+  // Semantic accents
+  --accent-color-semantic--dark: var(--sky-blue);
+  --accent-color-semantic--light: var(--sky-blue);
+
+  // Focus indicators
+  --focus-indicator-color--light: var(--sky-blue);
+  --focus-indicator-color--dark: var(--sky-blue);
+
   // @deprecated - to be removed in 3.0.0.
   --headings-color: var(--text-color--slate);
 }
@@ -58,9 +70,21 @@
 :root, [data-light] {
   --link-color: var(--link-color--default);
   --text-color: var(--text-color--default);
+
+  --accent-color: var(--accent-color--dark);
+
+  --accent-color-semantic: var(--accent-color-semantic--dark);
+
+  --focus-indicator-color: var(--focus-indicator-color--dark);
 }
 
 [data-dark] {
   --link-color: var(--link-color--light);
   --text-color: var(--text-color--light);
+
+  --accent-color: var(--accent-color--light);
+
+  --accent-color-semantic: var(--accent-color-semantic--light);
+
+  --focus-indicator-color: var(--focus-indicator-color--light);
 }

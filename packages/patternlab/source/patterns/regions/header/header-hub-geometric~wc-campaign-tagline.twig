@@ -3,9 +3,7 @@
     <div class="region region--branding">
       <div class="block block--system-branding-block">
         <a href="/">
-          <svg class="sprite sprite--wc-mark" aria-hidden="true" viewBox="0 0 229 72">
-            <use xlink:href="#wc-mark"></use>
-          </svg>
+          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'wc-mark' } only %}
           <span class="visually-hidden">Penn State World Campus</span>
         </a>
       </div>
