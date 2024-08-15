@@ -1,13 +1,13 @@
 {
   "name": "@psu-ooe/sticky-panel",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Provides a sticky panel that contains one or more bands.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/band": "^1.0 || ^2.0",
-    "@psu-ooe/base": "^1.0 || ^2.0"
+    "@psu-ooe/band": "^2.0",
+    "@psu-ooe/base": "^2.6.0"
   }
 }

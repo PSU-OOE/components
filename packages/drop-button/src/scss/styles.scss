@@ -35,7 +35,7 @@
       border-width: _rem(.1);
       border-style: solid;
       border-color: var(--slate-light) transparent transparent var(--slate-light);
-      z-index: 102;
+      z-index: calc(var(--z-index--dropdown) + 1);
     }
   }
 
@@ -48,7 +48,7 @@
     border-color: var(--slate-light) var(--slate-light) var(--slate-light) var(--sky-blue);
     border-width: _rem(.1) _rem(.1) _rem(.1) _rem(.3);
     box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 15%, transparent);
-    z-index: 101;
+    z-index: var(--z-index--dropdown);
     left: var(--drop-button--left);
     right: var(--drop-button--right);
     top: calc(100% + #{_rem(math.div(math.sqrt(200), 10))} + .2em);

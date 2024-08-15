@@ -1,12 +1,12 @@
 {
   "name": "@psu-ooe/skip-link",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Provides a skip link element.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-ooe/base": "^2.6.0"
   }
 }

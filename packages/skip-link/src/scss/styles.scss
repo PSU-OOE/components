@@ -4,7 +4,7 @@
   padding: _rem(2) _rem(2.5);
   outline: _rem(0.2) solid $sky-blue;
   outline-offset: 0;
-  z-index: 9999999;
+  z-index: var(--z-index--floating);
   background: $white;
   position: absolute;
   overflow: hidden;

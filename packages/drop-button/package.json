@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/drop-button",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "An accessible drop-button component.",
   "ooe": {
     "namespace": "global"
@@ -10,6 +10,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^2.0"
+    "@psu-ooe/base": "^2.6.0"
   }
 }
