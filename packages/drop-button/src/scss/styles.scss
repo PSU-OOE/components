@@ -45,7 +45,7 @@
     transition: opacity var(--transition-duration--default) linear,
                 visibility (--transition-duration--default) linear;
     border-style: solid;
-    border-color: var(--slate-light) var(--slate-light) var(--slate-light) var(--sky-blue);
+    border-color: var(--slate-light) var(--slate-light) var(--slate-light) var(--accent-color);
     border-width: _rem(.1) _rem(.1) _rem(.1) _rem(.3);
     box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 15%, transparent);
     z-index: var(--z-index--dropdown);
