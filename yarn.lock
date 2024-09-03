@@ -2033,6 +2033,41 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/layout-four-col@workspace:packages/layout-four-col":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/layout-four-col@workspace:packages/layout-four-col"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/layout-multi-col": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/layout-multi-col@^1.0, @psu-ooe/layout-multi-col@workspace:packages/layout-multi-col":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/layout-multi-col@workspace:packages/layout-multi-col"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/layout-three-col@workspace:packages/layout-three-col":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/layout-three-col@workspace:packages/layout-three-col"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/layout-multi-col": ^1.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/layout-two-col@workspace:packages/layout-two-col":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/layout-two-col@workspace:packages/layout-two-col"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/layout-multi-col": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/legend@*, @psu-ooe/legend@workspace:packages/legend":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/legend@workspace:packages/legend"
