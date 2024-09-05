@@ -2,6 +2,8 @@
 @import "../../../base/src/scss/imports/layout";
 
 .parallel-navigation-item {
+  min-width: 10rem;
+  
   &__link {
     color: var(--nittany-navy);
     display: flex;
