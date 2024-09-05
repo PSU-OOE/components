@@ -1,6 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 
 .social-icon {
+  min-width: 4.4rem;
   display: inline-block;
   transition: .3s opacity ease-in;
   opacity: .8;
