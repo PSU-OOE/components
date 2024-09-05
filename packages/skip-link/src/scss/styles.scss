@@ -1,7 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 
 .skip-link {
-  min-width: 4rem;
+  min-width: _rem(4);
   padding: _rem(2) _rem(2.5);
   outline: _rem(0.2) solid $sky-blue;
   outline-offset: 0;

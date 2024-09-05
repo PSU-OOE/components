@@ -2,7 +2,7 @@
 
 .card {
   position: relative;
-  min-width: 15rem;
+  min-width: _rem(15);
 
   &:focus-within,
   &:hover {

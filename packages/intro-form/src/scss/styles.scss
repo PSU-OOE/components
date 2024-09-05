@@ -2,7 +2,7 @@
 @import '../../../base/src/scss/imports/layout';
 
 .intro-form {
-  min-width: 20rem;
+  min-width: _rem(20);
   position: relative;
   padding: _rem(3) 0;
 

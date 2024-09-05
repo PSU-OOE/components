@@ -2,7 +2,7 @@
 @import "../../../base/src/scss/imports/layout";
 
 .infographic {
-  min-width: 23rem;
+  min-width: _rem(23);
   display: flex;
   flex-wrap: nowrap;
   margin: 0;
