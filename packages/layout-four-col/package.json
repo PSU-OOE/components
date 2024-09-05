@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/layout-four-col",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a four column layout.",
   "publishConfig": {
     "access": "public",
@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^2.0",
-    "@psu-ooe/layout-multi-col": "^1.0"
+    "@psu-ooe/layout-multi-col": "^1.1.0"
   }
 }

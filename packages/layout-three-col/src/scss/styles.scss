@@ -1,0 +1,9 @@
+@import '../../../base/src/scss/imports/layout';
+
+.layout-three-col {
+  flex-direction: column;
+
+  @include bp(s) {
+    flex-direction: row;
+  }
+}

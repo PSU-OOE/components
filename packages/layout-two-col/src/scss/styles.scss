@@ -1,0 +1,9 @@
+@import '../../../base/src/scss/imports/layout';
+
+.layout-two-col {
+  flex-direction: column;
+
+  @include bp(xs) {
+    flex-direction: row;
+  }
+}

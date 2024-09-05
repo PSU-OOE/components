@@ -23,6 +23,7 @@
 {% endset %}
 
 {% include '@psu-ooe/layout-multi-col/layout-multi-col.twig' with {
+  classes: ['layout-four-col'],
   gap: gap,
   regions: [
     { weight: first_width|default(25), content: first },

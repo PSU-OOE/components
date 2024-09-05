@@ -1,0 +1,19 @@
+@import '../../../base/src/scss/imports/layout';
+
+.layout-four-col {
+  flex-direction: column;
+
+  @include bp(xs) {
+    flex-direction: row;
+
+    & > * {
+      --region-weight: .5;
+    }
+  }
+
+  @include bp(m) {
+    & > * {
+      --region-weight: .25;
+    }
+  }
+}
