@@ -1,6 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 
 .basic-tile {
+  min-width: 12rem;
   font-size: var(--font-size--default);
   line-height: var(--line-height--xsnug);
   font-family: var(--font-family--default);
