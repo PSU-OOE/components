@@ -2,6 +2,8 @@
 @import "../../../base/src/scss/imports/layout";
 
 .overlay {
+  min-width: _rem(20);
+  
   @include bp(s) {
     position: relative;
     min-height: _rem(50);
