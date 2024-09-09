@@ -6,7 +6,7 @@
   {% for region in regions %}
     {% set region_classes = [
       'layout-multi-column__region',
-      'layout-multi-column__region--' ~ region.weight,
+      region.weight ? 'layout-multi-column__region--' ~ region.weight,
     ]|filter(class => class is not empty) %}
     <div class="{{ region_classes|join(' ') }}">
       {{ region.content }}

@@ -1,0 +1,13 @@
+{% set regions = [] %}
+{% for i in 1..5 %}
+  {% set region %}
+    {% include '@psu-ooe/callout/callout.twig' with {
+      background: 'light-grey',
+      content: 'Region ' ~ i ~ ' content',
+    } only %}
+  {% endset %}
+  {% set regions = regions|merge([{ weight: 20, content: region }]) %}
+{% endfor %}
+{% include '@psu-ooe/layout-multi-col/layout-multi-col.twig' with {
+    regions: regions,
+} only %}

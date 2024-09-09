@@ -22,10 +22,9 @@
   }
 
   &__region {
-    --region-weight: 1;
     margin-left: var(--layout-column-gap);
     margin-right: var(--layout-column-gap);
-    flex: 1 1 calc((100% * (var(--region-weight))) - (2 * var(--layout-column-gap)));
+    flex: 1 1 calc((100% * (var(--region-weight, 0))) - (2 * var(--layout-column-gap)));
 
     &--25 {
       --region-weight: .25;
@@ -52,7 +51,7 @@
   .layout-multi-column {
     --layout-column-gap: clamp(
       var(--layout-column-gap-min),
-      calc((var(--layout-column-gap-percentage) / 2) * (1 / (var(--region-weight, 1)))),
+      calc((var(--layout-column-gap-percentage) / 2) * (1 / (var(--region-weight, 0)))),
       var(--layout-column-gap-max)
     );
   }
