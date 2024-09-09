@@ -7,7 +7,7 @@
   padding: 0;
 
   &--one-col {
-    grid-template-columns: 1;
+    grid-template-columns: auto;
   }
 
   &--two-col {
