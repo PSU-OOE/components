@@ -13,7 +13,7 @@
 
   display: flex;
   flex-wrap: wrap;
-  row-gap: calc(5 * var(--layout-column-gap));
+  row-gap: calc(2 * var(--layout-column-gap-max));
   margin-left: calc(-1 * var(--layout-column-gap));
   margin-right: calc(-1 * var(--layout-column-gap));
 
