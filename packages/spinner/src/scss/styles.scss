@@ -1,6 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 
 .spinner {
+  min-width: _rem(2);
   position: relative;
   display: inline-block;
 

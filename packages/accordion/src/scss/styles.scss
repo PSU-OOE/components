@@ -1,6 +1,7 @@
 @import "../../../base/src/scss/imports/_variables.scss";
 
 .accordion {
+  min-width: _rem(15);
 
   &:not(.accordion--borderless) {
 
