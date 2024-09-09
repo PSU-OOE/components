@@ -13,6 +13,7 @@
 
   display: flex;
   flex-wrap: wrap;
+  row-gap: calc(var(--layout-column-gap) * 4);
   margin-left: calc(-1 * var(--layout-column-gap));
   margin-right: calc(-1 * var(--layout-column-gap));
 
@@ -25,10 +26,6 @@
     margin-left: var(--layout-column-gap);
     margin-right: var(--layout-column-gap);
     flex: 1 1 calc((100% * (var(--region-weight))) - (2 * var(--layout-column-gap)));
-
-    &:not(:last-child) {
-      margin-bottom: calc(var(--layout-column-gap) * 2);
-    }
 
     &--25 {
       --region-weight: .25;
