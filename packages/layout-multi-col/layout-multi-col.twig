@@ -1,12 +1,12 @@
-{% set classes = [
+{% set classes = (classes|default([]))|merge([
   'layout-multi-column',
   gap in ['large'] ? 'layout-multi-column--gap-' ~ gap,
-]|filter(class => class is not empty) %}
+])|filter(class => class is not empty) %}
 <div class="{{ classes|join(' ') }}">
   {% for region in regions %}
     {% set region_classes = [
       'layout-multi-column__region',
-      'layout-multi-column__region--' ~ region.weight,
+      region.weight ? 'layout-multi-column__region--' ~ region.weight,
     ]|filter(class => class is not empty) %}
     <div class="{{ region_classes|join(' ') }}">
       {{ region.content }}
