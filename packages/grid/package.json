@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/grid",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Provides a grid component.",
   "publishConfig": {
     "access": "public",
