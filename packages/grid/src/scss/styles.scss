@@ -6,6 +6,10 @@
   margin: 0;
   padding: 0;
 
+  &--one-col {
+    grid-template-columns: auto;
+  }
+
   &--two-col {
     grid-template-columns: repeat(auto-fill, minmax(max(48%, min(24rem, 100%)), 1fr));
   }
