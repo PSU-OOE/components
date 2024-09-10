@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/layout-two-col",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Provides a two column layout.",
   "publishConfig": {
     "access": "public",

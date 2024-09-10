@@ -1,0 +1,8 @@
+{% embed '@psu-ooe/layout-two-col/layout-two-col.twig' %}
+    {% block first %}
+        {% include '@psu-ooe/callout/callout.twig' with {
+            background: 'light-grey',
+            content: 'First region content (second region is empty and should not render)'
+        } only %}
+    {% endblock %}
+{% endembed %}
