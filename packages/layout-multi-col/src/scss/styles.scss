@@ -25,6 +25,7 @@
     margin-left: var(--layout-column-gap);
     margin-right: var(--layout-column-gap);
     flex: 1 1 calc((100% * (var(--region-weight, 0))) - (2 * var(--layout-column-gap)));
+    width: 100%;
 
     &--25 {
       --region-weight: .25;
