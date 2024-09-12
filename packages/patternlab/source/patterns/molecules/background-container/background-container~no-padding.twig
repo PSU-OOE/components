@@ -1,0 +1,10 @@
+{% set background_content %}
+  {% include '@psu-ooe/callout/callout.twig' with {
+    content: 'There is no padding on the background container.',
+  } only %}
+{% endset %}
+{% include '@psu-ooe/background-container/background-container.twig' with {
+  color: 'light-grey',
+  content: background_content,
+  padding: 'none',
+} only %}

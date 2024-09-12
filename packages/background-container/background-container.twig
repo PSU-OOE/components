@@ -19,7 +19,7 @@
   'bg',
   color in color_profiles|keys ? 'bg--' ~ color,
   background_image in background_image_options|keys ? 'bg--' ~ background_image|replace({':':'-'}),
-  padding in ['small', 'large'] ? 'bg--padding-' ~ padding,
+  padding in ['none', 'small', 'large'] ? 'bg--padding-' ~ padding,
   width in ['narrow'] ? 'bg--' ~ width,
 ])|filter(class => class is not empty) %}
 
