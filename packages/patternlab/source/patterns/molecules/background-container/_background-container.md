@@ -28,6 +28,7 @@
 ## Paddings
 | Padding | Description                                               |
 |---------|-----------------------------------------------------------|
+| none    | No vertical padding will be added to the container.       |
 | small   | Adds a small amount of vertical padding to the container. |
 | large   | Adds a large amount of vertical padding to the container. |
 

@@ -16,6 +16,11 @@
     container-type: inline-size;
   }
 
+  &--padding-none {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   &--padding-large {
     padding-top: _rem(5);
     padding-bottom: _rem(5);
@@ -24,6 +29,11 @@
   @include bp(xs) {
     padding-top: _rem(4);
     padding-bottom: _rem(4);
+
+    &--padding-none {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     &--padding-small {
       padding-top: _rem(3);
