@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/parallel-navigation-item",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Provides a parallel navigation item component.",
   "publishConfig": {
     "access": "public",

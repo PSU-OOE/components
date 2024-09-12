@@ -9,7 +9,8 @@
     {% if icon %}
       <span class="parallel-navigation-item__icon">
         {% include '@psu-ooe/sprite/sprite.twig' with {
-          name: icon
+          name: icon,
+          expand: true,
         } only %}
       </span>
     {% endif %}
