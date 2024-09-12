@@ -30,6 +30,12 @@
       column-gap: _rem(2);
       column-width: _rem(29);
     }
+
+    &--three-col {
+      column-count: 3;
+      column-gap: _rem(2);
+      column-width: _rem(27);
+    }
   }
 
   &__item {
