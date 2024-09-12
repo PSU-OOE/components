@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/parallel-navigation",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Provides a parallel navigation component.",
   "publishConfig": {
     "access": "public",
