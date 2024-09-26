@@ -53,7 +53,11 @@
     position: absolute;
     overflow: hidden;
     inset: 0 0 0 0;
-    z-index: -1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
   }
 
   @import "hub-geometric-topleft";
