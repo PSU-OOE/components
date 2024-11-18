@@ -1570,7 +1570,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@psu-ooe/accordion@*, @psu-ooe/accordion@workspace:packages/accordion":
+"@psu-ooe/accordion-group@workspace:packages/accordion-group":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/accordion-group@workspace:packages/accordion-group"
+  dependencies:
+    "@psu-ooe/accordion": ^2.0
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/accordion@*, @psu-ooe/accordion@^2.0, @psu-ooe/accordion@workspace:packages/accordion":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/accordion@workspace:packages/accordion"
   dependencies:
