@@ -1,4 +1,4 @@
-<div class="accordion-group">
+<div class="accordion-group"{% if section %} data-section="{{ section }}" data-section-tags='{"section_type":"accordion-group"}'{% endif %}>
   {% for accordion_data in accordions %}
     {% set accordion_data = accordion_data|merge({borderless: true}) %}
     <div class="accordion-group__accordion">
