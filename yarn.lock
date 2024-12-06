@@ -1570,7 +1570,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@psu-ooe/accordion-group@workspace:packages/accordion-group":
+"@psu-ooe/accordion-group@*, @psu-ooe/accordion-group@workspace:packages/accordion-group":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/accordion-group@workspace:packages/accordion-group"
   dependencies:
@@ -2226,6 +2226,7 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.17.0
     "@pattern-lab/uikit-workshop": ^5.17.0
     "@psu-ooe/accordion": "*"
+    "@psu-ooe/accordion-group": "*"
     "@psu-ooe/alert": "*"
     "@psu-ooe/announcement": "*"
     "@psu-ooe/auto-expansion": "*"
