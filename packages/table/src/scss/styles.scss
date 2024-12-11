@@ -52,13 +52,6 @@
     }
   }
 
-  // If the first column is a header column, make it sticky.
-  &__tbody &__tr &__th:first-child {
-    position: sticky;
-    left: 0;
-    background: $white;
-  }
-
   &__tbody > &__tr > &__th,
   &__tbody > &__tr > &__td {
     padding-top: _rem(2);
