@@ -1,35 +1,51 @@
-{% set classes = ['cta-block'] %}
-{% if expand_to_fit %}
-  {% set classes = classes|merge(['cta-block--expand-to-fit']) %}
-{% endif %}
-{% if color %}
-  {% set classes = classes|merge(['cta-block--' ~ color]) %}
-{% endif %}
-{% if compact %}
-  {% set classes = classes|merge(['cta-block--compact']) %}
-{% endif %}
-<a
-  class="{{ classes|join(' ') }}"
-  href="{{ url }}"
-  {% if tracking_description and tracking_placement %}
-    data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }}
-    data-cta-description="{{ tracking_description }}"
-    data-cta-placement="{{ tracking_placement }}"
+{# @TODO: Remove backwards-compatibility layer in 3.0.0 #}
+{% if not color_on_dark %}
+  {% if color == 'color-keystone' %}
+    {% set color_on_dark = 'color-keystone' %}
+  {% elseif color == 'light-blue' %}
+    {% set color_on_dark = 'light-blue' %}
+  {% else %}
+    {% set color_on_dark = 'reversed' %}
+    {% if color == 'reversed' %}
+      {# Continue to support reversed-on-light for old uses. #}
+      {% set reversed_legacy = true %}
+    {% endif %}
   {% endif %}
->
-  {% if icon_before %}
-    <span class="cta-block__icon">
-      {% include '@atoms/sprite/sprite.twig' with {
-        name: icon_before
-      } only %}
-    </span>
-  {% endif %}
-  {{ label }}
-  {% if icon_after %}
-    <span class="cta-block__icon">
-      {% include '@atoms/sprite/sprite.twig' with {
-        name: icon_after
-      } only %}
-    </span>
-  {% endif %}
-</a>
+{% endif %}
+
+{% set classes = [
+  'cta-block',
+  reversed_legacy or color in ['alt', 'color-keystone', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand', 'expand-reversed'] ? 'cta-block--' ~ color,
+  color_on_dark in ['color-keystone', 'reversed', 'light-blue'] ? 'cta-block--on-dark-' ~ color_on_dark,
+  expand_to_fit ? 'cta-block--expand-to-fit',
+  font_weight in ['bold'] ? 'cta-block--' ~ font_weight,
+  size in ['xcompact', 'compact', 'compact-responsive'] ? 'cta-block--' ~ size,
+]|filter(class => class is not empty) %}
+
+{% apply spaceless %}
+  <a
+    class="{{ classes|join(' ') }}"
+    href="{{ url }}"
+    {% if tracking_description and tracking_placement %}
+      data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }}
+      data-cta-description="{{ tracking_description }}"
+      data-cta-placement="{{ tracking_placement }}"
+    {% endif %}
+  >
+    {% if icon_before %}
+      <span class="cta-block__icon">
+        {% include '@psu-ooe/sprite/sprite.twig' with {
+          name: icon_before
+        } only %}
+      </span>
+    {% endif %}
+    {{ label }}
+    {% if icon_after %}
+      <span class="cta-block__icon">
+        {% include '@psu-ooe/sprite/sprite.twig' with {
+          name: icon_after
+        } only %}
+      </span>
+    {% endif %}
+  </a>
+{% endapply %}

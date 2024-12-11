@@ -1,0 +1,102 @@
+{% apply spaceless %}
+  <footer class="footer">
+    {% set top_first %}
+      {% block top_first %}
+        {{ top_first }}
+      {% endblock %}
+    {% endset %}
+
+    {% set top_second %}
+      {% block top_second %}
+        {{ top_second }}
+      {% endblock %}
+    {% endset %}
+
+    {% set top_third %}
+      {% block top_third %}
+        {{ top_third }}
+      {% endblock %}
+    {% endset %}
+    {% if top_first or top_second or top_third %}
+      {% set footer_top %}
+        <div class="footer__top">
+          <div class="footer__top-first">
+            {{ top_first }}
+          </div>
+          <div class="footer__top-second">
+            {{ top_second }}
+          </div>
+          <div class="footer__top-third">
+            {{ top_third }}
+          </div>
+        </div>
+      {% endset %}
+      {% include '@psu-ooe/background-container/background-container.twig' with {
+        color: 'light-grey',
+        background_image: 'hub-geometric:topleft',
+        padding: 'large',
+        content: footer_top
+      } only %}
+    {% endif %}
+    {% set middle_first %}
+      {% block middle_first %}
+        {{ middle_first }}
+      {% endblock %}
+    {% endset %}
+
+    {% set middle_second %}
+      {% block middle_second %}
+        {{ middle_second }}
+      {% endblock %}
+    {% endset %}
+
+    {% set middle_third %}
+      {% block middle_third %}
+        {{ middle_third }}
+      {% endblock %}
+    {% endset %}
+    {% set colophon %}
+      {% block colophon %}
+        {{ colophon }}
+      {% endblock %}
+    {% endset %}
+    {% if middle_first or middle_second or middle_third or colophon %}
+      {% set footer_bottom_content %}
+        <div class="footer__bottom-container-geometrics">
+          <svg width="0" height="0" style="position:absolute">
+            <defs>
+              <linearGradient id="hub-geometric-footer-bottom-gradient" x1="0.539" y1="0.24" x2="0.02" y2="0.066" gradientUnits="objectBoundingBox">
+                <stop offset="0" stop-color="var(--sky-blue)"></stop>
+                <stop offset="1" stop-color="var(--sky-blue)" stop-opacity="0"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric', expand: true } only %}
+        </div>
+        <div class="footer__bottom">
+          <div class="footer__bottom-first">
+            {{ middle_first }}
+          </div>
+          <div class="footer__bottom-second">
+            {{ middle_second }}
+          </div>
+          <div class="footer__bottom-third">
+            {{ middle_third }}
+          </div>
+        </div>
+        {% if colophon %}
+          <div class="footer__colophon">
+            {{ colophon }}
+          </div>
+        {% endif %}
+      {% endset %}
+      {% set footer_bottom_classes = [
+        'footer__bottom-container',
+        bottom_background != 'white' ? 'footer__bottom-container--dark',
+      ]|filter(class => class is not empty) %}
+      <div class="{{ footer_bottom_classes|join(' ') }}" data-{{ bottom_background == 'white' ? 'light' : 'dark' }}>
+        {{ footer_bottom_content }}
+      </div>
+    {% endif %}
+  </footer>
+{% endapply %}

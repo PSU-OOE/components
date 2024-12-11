@@ -1,6 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 
 .social-icon {
+  min-width: _rem(4.4);
   display: inline-block;
   transition: .3s opacity ease-in;
   opacity: .8;
@@ -11,25 +12,25 @@
   }
 
   &--light {
-    color: $white;
+    color: var(--white);
 
     &:hover,
     &:focus {
-      color: $white;
+      color: var(--white);
     }
   }
 
   &--dark {
-    color: $primary-blue;
+    color: var(--pa-link);
 
     &:hover,
     &:focus {
-      color: $primary-blue;
+      color: var(--pa-link);
     }
   }
 
   .sprite {
-    width: rem(4.4);
-    height: rem(4.4);
+    width: _rem(4.4);
+    height: _rem(4.4);
   }
 }

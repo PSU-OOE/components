@@ -1,0 +1,16 @@
+<div class="navigation-tile {% if background %}navigation-tile--{{ background }}{% endif %}">
+  <a class="navigation-tile__link" href="{{ link.url }}"><span class="visually-hidden">{{ link.label }}</span></a>
+  <div class="navigation-tile__content">
+    <div class="navigation-tile__title" aria-hidden="true">
+      {{ link.label }}
+      {% if chevron %}
+        <span class="navigation-tile__chevron">
+          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
+        </span>
+      {% endif %}
+    </div>
+    {% if description %}
+      <div class="navigation-tile__description">{{ description }}</div>
+    {% endif %}
+  </div>
+</div>

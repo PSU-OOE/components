@@ -18,7 +18,7 @@
     {% set tabs_list_data = tabs_list_data|merge({ expand_to_fit: true }) %}
   {% endif %}
   <div class="tabs__list">
-    {% include '@organisms/tabs/tabs-list.twig' with tabs_list_data only %}
+    {% include '@psu-ooe/tabs/tabs-list.twig' with tabs_list_data only %}
   </div>
   <div class="tabs__panels">
     {% for tab in tabs %}

@@ -4,7 +4,8 @@
  */
 ((cms) => {
   cms.attach('accordion', context => {
-    const accordions = context.querySelectorAll('.accordion');
+    const accordions = cms.once('accordion', '.accordion', context);
+
     accordions.forEach(accordion => {
       const button = accordion.querySelector('.accordion__button');
       const content = accordion.querySelector('.accordion__expandable-content');
@@ -18,7 +19,7 @@
           button.setAttribute('aria-expanded', 'true');
         }
         else {
-          content.style['transition-duration'] = Math.max(content.scrollHeight / 2, 200) + 'ms';
+          content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
           accordion.classList.add('accordion--expanded');
           button.setAttribute('aria-expanded', 'true');
           cms.expand(content);
@@ -33,7 +34,7 @@
           button.setAttribute('aria-expanded', 'false');
         }
         else {
-          content.style['transition-duration'] = Math.max(content.scrollHeight / 2, 200) + 'ms';
+          content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
           accordion.classList.remove('accordion--expanded');
           button.setAttribute('aria-expanded', 'false');
           cms.collapse(content);

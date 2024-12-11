@@ -1,0 +1,7 @@
+{% set email %}
+  <input type="email" name="demo_email" id="demo_email"><label class="visually-hidden" for="demo_email">Demo email</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: email,
+} only %}
+

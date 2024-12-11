@@ -1,18 +1,20 @@
 {% set icon_mapping = {
+  'info': 'fas-circle-info',
   'status': 'fa-check-circle',
   'warning': 'fa-exclamation-circle',
   'error': 'fa-exclamation-triangle'
 }%}
 {% set aria_mapping = {
+  'info': 'status',
   'status': 'status',
   'warning': 'alert',
   'error': 'alert'
 }%}
 
-<div class="alert alert--{{ severity }}" role="{{ aria_mapping[severity] }}">
+<div class="alert alert--{{ severity }}" role="{{ aria_mapping[severity] }}" data-light>
   <div class="alert__inner-wrapper">
     <div class="alert__icon">
-      {% include '@atoms/sprite/sprite.twig' with { name: icon_mapping[severity]} only %}
+      {% include '@psu-ooe/sprite/sprite.twig' with { name: icon_mapping[severity]} only %}
     </div>
     <div class="alert__content">
       {{ content }}

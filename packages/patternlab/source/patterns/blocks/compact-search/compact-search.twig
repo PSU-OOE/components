@@ -1,0 +1,10 @@
+{% set search %}
+  {% include '@psu-ooe/compact-search/compact-search.twig' with {
+    search_form: 'The form goes here.'
+  } only %}
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  background: 'blue-gradient',
+  content: search,
+} only %}

@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/accordion",
-  "version": "1.2.0",
+  "version": "2.1.1",
   "description": "Provides an accessible accordion implementation.",
   "ooe": {
     "namespace": "molecules"
@@ -10,7 +10,9 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0",
-    "@psu-ooe/slide-toggle": "^1.0"
+    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/heading": "^2.0 || ^3.0",
+    "@psu-ooe/slide-toggle": "^1.0",
+    "@psu-ooe/sprite": "^2.0"
   }
 }

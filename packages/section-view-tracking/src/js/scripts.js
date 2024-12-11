@@ -23,12 +23,16 @@
           window.dataLayer.push({
             event: 'section_view',
             section_view_title: 'Header',
+            tags: {
+              activation_type: 'PAGE_LOAD',
+              section_type: 'header',
+            }
           });
         }
       }
     }
 
-    const components = context.querySelectorAll('[data-interactive-component]');
+    const components = cms.once('sectionViewTracking', '[data-interactive-component]', context);
 
     components.forEach(component => {
       component.addEventListener('component:activate', e => {
@@ -37,10 +41,20 @@
           if (section && section !== current_section) {
             current_section = section;
             window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-              event: 'section_view',
-              section_view_title: current_section.getAttribute('data-section'),
-            });
+
+            try {
+              let tags = JSON.parse(current_section.getAttribute('data-section-tags') ?? '{}');
+              tags.activation_type = e.detail.activation_type;
+              window.dataLayer.push({
+                event: 'section_view',
+                section_view_title: current_section.getAttribute('data-section'),
+                tags: tags,
+              });
+            }
+            catch(error) {
+              // Prevent unwinding the stack; log the error and continue on.
+              console.error(error);
+            }
           }
         }
       });

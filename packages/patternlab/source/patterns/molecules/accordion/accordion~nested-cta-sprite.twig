@@ -1,11 +1,11 @@
 {% set nested_cta_sprite %}
-  {% include '@atoms/cta/cta-block.twig' with {
+  {% include '@psu-ooe/cta/cta-block.twig' with {
     label: 'How to Apply',
     url: '#',
     icon_after: 'fas-chevron-right'
   } only %}
 {% endset %}
-{% include '@molecules/accordion/accordion.twig' with {
+{% include '@psu-ooe/accordion/accordion.twig' with {
     "id": "accordion-default",
     "label": "Accordion item (default)",
     "expandable_content": nested_cta_sprite

@@ -1,0 +1,7 @@
+{% set url %}
+  <input readonly type="url" name="demo_url_readonly" id="demo_url_readonly"><label class="visually-hidden" for="demo_url_readonly">Demo url readonly</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: url,
+} only %}
+

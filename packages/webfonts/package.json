@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/webfonts",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Contains the webfonts of the OOE design system",
   "homepage": "https://github.com/PSU-OOE/monorepo-dev#readme",
   "ooe": {

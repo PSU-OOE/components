@@ -1,0 +1,6 @@
+{% set color %}
+  <input disabled type="color" name="color_disabled" id="color_disabled"><label class="visually-hidden" for="color_disabled">Demo color disabled</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: color,
+} only %}

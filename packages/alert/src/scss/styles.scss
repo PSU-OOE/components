@@ -4,43 +4,67 @@
 
 .alert {
   position: relative;
-  padding: rem(2);
+  padding: _rem(2);
 
   &__inner-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    max-width: rem(110);
+    max-width: _rem(110);
     margin: 0 auto;
+    container-type: inline-size;
 
     .alert__icon {
-      width: rem(5.5);
-      height: rem(5.5);
-      margin-right: rem(1);
+      margin-right: _rem(1);
 
       .sprite {
-        width: rem(5.5);
-        height: rem(5.5);
+        width: _rem(2);
+        height: _rem(2);
+
+      }
+    }
+    @supports (container-type: inline-size ) {
+      @container (min-width: 425px) {
+        .alert__icon .sprite {
+          width: _rem(5.5);
+          height: _rem(5.5);
+        }
       }
     }
     .alert__content {
       flex: 1;
-      margin-top: 1.6rem;
+      margin-top: _rem(0.2);
+    }
+    @supports (container-type: inline-size ) {
+      @container (min-width: 425px) {
+        .alert__content {
+          margin-top: _rem(1.6);
+        }
+      }
+    }
+  }
+
+  &--info {
+    background-color: color-mix(in srgb, var(--white), var(--sky-blue) 10%);
+    border-top: _rem(1) solid var(--sky-blue);
+
+    .sprite {
+      color: var(--sky-blue);
     }
   }
 
   &--error {
-    background-color: mix($error-red, $white, 6%);
-    border-top: rem(1) solid $error-red;
+    background-color: color-mix(in srgb, var(--white), var(--error-red) 6%);
+    border-top: _rem(1) solid var(--error-red);
 
     .sprite {
-      color: $error-red;
+      color: var(--error-red);
     }
   }
 
   &--warning {
-    background-color: mix($keystone, $white, 20%);
-    border-top: rem(1) solid $keystone;
+    background-color: color-mix(in srgb, var(--white), var(--keystone) 20%);
+    border-top: _rem(1) solid var(--keystone);
 
     .sprite {
       color: darken($invent-orange, 3.5%);
@@ -48,11 +72,11 @@
   }
 
   &--status {
-    background-color: mix($creek, $white, 10%);
-    border-top: rem(1) solid $creek;
+    background-color: color-mix(in srgb, var(--white), var(--creek) 10%);
+    border-top: _rem(1) solid var(--creek);
 
     .sprite {
-      color: $creek;
+      color: var(--creek);
     }
   }
 }

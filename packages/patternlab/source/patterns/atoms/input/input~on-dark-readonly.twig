@@ -1,0 +1,10 @@
+{% set input %}
+  <div data-dark>
+    <input readonly name="demo_input_on_dark_readonly" id="demo_input_on_dark_readonly"><label class="visually-hidden" for="demo_input_on_dark_readonly">Demo input on dark background readonly</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: input,
+  background: 'blue',
+} only %}
+

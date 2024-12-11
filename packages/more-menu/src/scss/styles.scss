@@ -1,0 +1,153 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.more-menu {
+
+  &__toggle {
+    font-size: var(--font-size--3xsmall);
+    font-weight: var(--font-weight--semibold);
+    flex-direction: row;
+    justify-content: space-around;
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    padding: _rem(1) _rem(1.5);
+    font-family: var(--font-family--default);
+    background: var(--light-mauve);
+    border: none;
+    color: var(--beaver-blue);
+    cursor: pointer;
+    display: inline-flex;
+    gap: _rem(.5);
+    align-items: center;
+    border-radius: var(--button-border-radius--default);
+    box-shadow: _rem(.1) _rem(.1) color-mix(in srgb, var(--beaver-blue) 50%, transparent);
+    transition: color var(--transition-duration--default) linear,
+                background-color var(--transition-duration--default) linear,
+                box-shadow var(--transition-duration--default) linear;
+    line-height: var(--line-height--nospace);
+
+    .sprite {
+      opacity: .75;
+      max-width: 100%;
+      overflow: visible;
+      height: _rem(1.4);
+      width: auto;
+      margin-top: 0;
+    }
+
+    &--stacked {
+      flex-direction: column;
+      font-size: var(--font-size--2xsmall);
+      padding: _rem(.5);
+      justify-content: center;
+      width: _rem(4.4);
+      height: _rem(4.4);
+      font-weight: var(--font-weight--regular);
+
+      @include bp(xs) {
+        font-size: var(--font-size--xsmall);
+        padding: _rem(.6);
+        width: _rem(5.2);
+        height: _rem(5.2);
+      }
+
+      @include bp(s) {
+        font-size: var(--font-size--msmall);
+        padding: _rem(.8);
+        width: _rem(6.3);
+        height: _rem(6.3);
+      }
+
+      @include bp(m) {
+        font-size: var(--font-size--default);
+        padding: _rem(.9);
+        width: _rem(7.2);
+        height: _rem(7.2);
+      }
+
+      @include bp(l) {
+        font-size: var(--font-size--mlarge);
+        padding: _rem(1);
+        width: _rem(8);
+        height: _rem(8);
+      }
+
+      .sprite {
+        height: _rem(.605);
+        margin-top: _rem(.3);
+
+        @include bp(xs) {
+          height: _rem(.66);
+        }
+
+        @include bp(s) {
+          height: _rem(.77);
+        }
+
+        @include bp(m) {
+          height: _rem(.825);
+        }
+
+        @include bp(l) {
+          height: _rem(.88);
+        }
+      }
+    }
+
+    &:is(:focus-visible > .more-menu__toggle) {
+      outline: none;
+    }
+
+    &:is([aria-expanded="true"] > .more-menu__toggle) {
+      box-shadow: _rem(-.1) _rem(-.1) var(--beaver-blue);
+    }
+
+    &:hover, &:is(:focus-visible > .more-menu__toggle) {
+      background: var(--pugh-blue);
+      box-shadow: _rem(.1) _rem(.1) var(--nittany-navy);
+      color: var(--nittany-navy);
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    color: var(--nittany-navy);
+    display: block;
+    padding: _rem(1);
+    line-height: var(--line-height--xsnug);
+    font-size: var(--font-size--small);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: text-decoration-color var(--transition-duration--default), color var(--transition-duration--default);
+
+    @include bp(xs) {
+      font-size: var(--font-size--default);
+    }
+
+    &:hover, &:focus-visible {
+      color: var(--pa-link);
+      text-decoration-color: var(--pa-link);
+    }
+  }
+}
+
+// Optional peer dependency can influence certain styles.
+.bg--light-grey {
+  .more-menu__toggle {
+    background: var(--white);
+
+    &:hover {
+      background: var(--pugh-blue);
+    }
+
+    &:focus-visible {
+      background: var(--pugh-blue);
+    }
+  }
+}

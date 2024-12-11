@@ -12,7 +12,7 @@
 {% set social_icons = [] %}
 {% for icon, label in social_medias %}
   {% set social_icon %}
-    {% include '@molecules/social-icon/social-icon.twig' with {
+    {% include '@psu-ooe/social-icon/social-icon.twig' with {
       color: 'dark',
       icon: icon,
       label: label,
@@ -22,4 +22,4 @@
   {% set social_icons = social_icons|merge([social_icon]) %}
 {% endfor %}
 
-{% include '@organisms/social-icons/social-icons.twig' with { social_icons: social_icons } only %}
+{% include '@psu-ooe/social-icons/social-icons.twig' with { social_icons: social_icons } only %}

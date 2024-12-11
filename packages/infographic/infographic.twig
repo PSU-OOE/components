@@ -1,0 +1,15 @@
+<div class="infographic">
+  {% if emphasis %}
+  <span class="infographic__emphasis">{{ emphasis }}</span>
+  {% endif %}
+  {% if preliminary or primary %}
+  <span class="infographic__stacked">
+    {% if preliminary %}
+      <span class="infographic__preliminary">{{ preliminary }}</span>
+    {% endif %}
+    {% if primary %}
+      <span class="infographic__primary">{{ primary }}</span>
+    {% endif %}
+  </span>
+  {% endif %}
+</div>

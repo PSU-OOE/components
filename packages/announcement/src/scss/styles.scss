@@ -2,7 +2,6 @@
 @import "../../../base/src/scss/imports/layout";
 @import "../../../base/src/scss/imports/utility";
 
-
 /**
  * Contains styles for the announcement block.
  */
@@ -12,13 +11,13 @@
   // Styles for the expanded announcement content.
   &__expanded {
     display: flex;
-    max-width: rem(119);
+    max-width: _rem(119);
     margin: auto;
-    padding: rem(3) rem(2);
+    padding: _rem(3) _rem(2);
   }
 
   &__inner {
-    margin-right: rem(4.5);
+    margin-right: _rem(4.5);
     width: 100%;
     // Stop text from wrapping around the icon.
     @include bp(xs) {
@@ -30,32 +29,32 @@
   &__icon {
     border-radius: 50%;
     float: left;
-    width: rem(4.2);
-    height: rem(4.2);
-    margin-right: rem(1);
+    width: _rem(4.2);
+    height: _rem(4.2);
+    margin-right: _rem(1);
     display: flex;
     align-items: center;
     text-align: center;
     .sprite {
       margin: 0 auto;
-      font-size: rem(2.5);
+      font-size: var(--font-size--2xlarge);
     }
     @include bp(xs) {
       float: none;
       flex-shrink: 0;
-      margin: 0 rem(2) auto 0;
-      width: rem(6.2);
-      height: rem(6.2);
+      margin: 0 _rem(2) auto 0;
+      width: _rem(6.2);
+      height: _rem(6.2);
       .sprite {
-        font-size: rem(3.6);
+        font-size: _rem(3.6);
       }
     }
-     @include bp(m) {
-        width: rem(7.4);
-        height: rem(7.4);
-        .sprite {
-          font-size: rem(4);
-        }
+    @include bp(m) {
+      width: _rem(7.4);
+      height: _rem(7.4);
+      .sprite {
+        font-size: var(--font-size--4xlarge);
+      }
     }
 
   }
@@ -64,24 +63,13 @@
   &__content {
     margin: auto 0;
     flex: 1;
-    
-    a {
-      border-bottom-width: rem(0.1);
-      border-bottom-style: dotted;
-      transition: border-bottom-color .2s;
 
-      &:hover,
-      &:focus,
-      &:active {
-        border-bottom-style: solid;
-      }
-    }
     p {
-      line-height: rem(2.4);
+      line-height: _rem(2.4);
 
       @include bp(s) {
-        font-size: rem(1.7);
-        line-height: rem(2.5);
+        font-size: var(--font-size--mlarge);
+        line-height: var(--line-height--snug);
       }
     }
   }
@@ -91,19 +79,21 @@
   &__collapse {
     background-color: transparent;
     border: none;
-    outline-offset: rem(-0.2);
+    outline-offset: _rem(-0.2);
+    color: inherit;
+
   }
 
   // Expand button for the announcement.
   &__expand {
     display: flex;
-    font-size: rem(1.8);
-    height: rem(4.5);
+    font-size: var(--font-size--large);
+    height: _rem(4.5);
     justify-content: center;
-    line-height: rem(2.5);
+    line-height: var(--line-height--2xsnug);
     padding: 0;
     width: 100%;
-    transition: background-color .2s, border .2s, color .2s;
+    transition: background-color var(--transition-duration--medium), border var(--transition-duration--medium), color var(--transition-duration--medium);
     cursor: pointer;
     border-bottom: 0.1rem solid transparent;
     & > * {
@@ -112,160 +102,139 @@
     }
 
     &-icon {
-      margin-right: rem(1);
+      margin-right: _rem(1);
       position: relative;
-      height: rem(2.5);
-      width: rem(2.5);
+      height: _rem(2.5);
+      width: _rem(2.5);
       display: flex;
       align-items: center;
       text-align: center;
       border-radius: 50%;
-      font-size: rem(1.6);
+      font-size: _rem(1.6);
       .sprite {
         margin: 0 auto;
       }
     }
 
     &-after {
-      margin-left: rem(1);
-      font-size: rem(1.6);
+      margin-left: _rem(1);
+      font-size: _rem(1.6);
     }
 
   }
 
   // Collapse button for the announcement.
   &__collapse {
-    font-size: rem(3.5);
+    font-size: _rem(3.5);
     line-height: .7;
     margin: 0;
     padding: 0;
-    transition: background-color .2s, color .2s;
+    transition: background-color var(--transition-duration--medium), color var(--transition-duration--medium);
     cursor: pointer;
     position: absolute;
-    right: rem(1.4);
-    top: rem(2);
-    min-width: rem(4.5);
-    min-height: rem(4.5);
+    right: _rem(1.4);
+    top: _rem(2);
+    min-width: _rem(4.5);
+    min-height: _rem(4.5);
 
     &:hover,
     &:active,
     &:focus {
-      background-color: $primary-blue;
-      color: $white;
+      background-color: var(--beaver-blue);
+      color: var(--white);
     }
   }
 
   &--notice {
-    background-color: $medium-grey;
-    color: $nittany-navy;
+    background-color: var(--medium-grey);
 
     .announcement {
       &__expand {
         &:active,
         &:focus,
         &:hover {
-          background-color: $white;
-          border-bottom: rem(0.1) solid $medium-grey;
+          background-color: var(--white);
+          border-bottom: _rem(0.1) solid var(--medium-grey);
         }
         &-icon {
-          background: $primary-blue;
-          color: $white;
+          background: var(--beaver-blue);
+          color: var(--white);
         }
       }
-      &__content {
-        a, p {
-          color: $beaver-blue;
-        }
 
-        a {
-          border-bottom-color: $beaver-blue;
-        }
+      &__content {
+        --text-color: var(--beaver-blue);
+        --link-color: var(--beaver-blue);
       }
 
       &__icon {
-        background: $primary-blue;
+        background: var(--beaver-blue);
         .sprite {
-          color: $white;
+          color: var(--white);
         }
       }
     }
   }
 
   &--warning {
-    background-color: $keystone;
-    color: $nittany-navy;
+    background-color: var(--keystone);
 
     .announcement {
       &__expand {
         &:active,
         &:focus,
         &:hover {
-          background-color: $invent-orange-light;
+          background-color: var(--invent-orange-light);
         }
         &-icon {
-          background: $white;
-          color: $primary-blue;
+          background: var(--white);
+          color: var(--beaver-blue);
         }
       }
 
       &__content {
-        a, p {
-          color: $beaver-blue;
-        }
-
-        a {
-          border-bottom-color: $beaver-blue;
-        }
+        --link-color: var(--nittany-navy);
       }
 
       &__icon {
-        background: $white;
+        background: var(--white);
 
         .sprite {
-          color: $primary-blue;
+          color: var(--beaver-blue);
         }
       }
     }
   }
 
   &--emergency {
-    background-color: $error-red;
-    color: $white;
+    background-color: var(--error-red);
 
     .announcement {
+      &__expand, &__collapse {
+        color: var(--white);
+      }
       &__expand {
         &:active,
         &:focus,
         &:hover {
-          background-color: $invent-orange;
-          color: $nittany-navy;
+          background-color: var(--invent-orange);
+          color: var(--nittany-navy);
         }
         &-icon {
-          background: $white;
-          color: $error-red;
+          background: var(--white);
+          color: var(--error-red);
         }
       }
 
       &__content {
-        a, p {
-          color: $white;
-        }
-
-        a {
-          // White with 75% opacity.
-          border-bottom-color: rgba(255, 255, 255, .75);
-
-          &:hover {
-            border-bottom-color: $white;
-          }
-        }
+        --link-color: var(--white);
       }
 
       &__icon {
-        background: $white;
+        background: var(--white);
 
         .sprite {
-          color: $error-red;
+          color: var(--error-red);
         }
       }
     }

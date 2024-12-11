@@ -1,0 +1,7 @@
+{% set file %}
+  <input multiple type="file" name="file_multiple" id="file_multiple"><label class="visually-hidden" for="file_multiple">Demo file multiple</label>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: file,
+} only %}

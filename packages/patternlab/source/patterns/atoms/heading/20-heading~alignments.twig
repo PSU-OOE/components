@@ -1,0 +1,6 @@
+{% for alignment in ['left', 'center', 'right'] %}
+  {% include '@psu-ooe/heading/heading.twig' with {
+    content: 'This heading is ' ~ alignment ~ ' aligned',
+    align: alignment
+  } only %}
+{% endfor %}

@@ -2,37 +2,41 @@
 
 .icon-list {
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 _rem(-2) 0;
   padding: 0;
 
   &--two-col {
     column-count: 2;
-    column-width: rem(32);
-    column-gap: rem(3);
+    column-width: _rem(32);
+    column-gap: _rem(3);
+  }
+
+  &--three-col {
+    column-count: 3;
+    column-width: _rem(21);
+    column-gap: _rem(3);
   }
 
   &__item {
     break-inside: avoid;
 
-    &:not(:last-child) {
-      margin-bottom: rem(2);
-    }
+    padding-bottom: _rem(2);
   }
 
   &__content {
     display: flex;
     align-items: baseline;
     flex-wrap: nowrap;
-    gap: rem(1.5);
+    gap: _rem(1.5);
   }
 
   &__icon {
-    color: $primary-blue;
+    color: var(--beaver-blue);
 
     .sprite {
-      width: rem(3);
+      width: _rem(3);
       height: auto;
-      max-height: rem(3);
+      max-height: _rem(3);
     }
   }
 }

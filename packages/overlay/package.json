@@ -1,12 +1,12 @@
 {
   "name": "@psu-ooe/overlay",
-  "version": "1.0.0",
+  "version": "2.2.1",
   "description": "Provides an overlay implementation.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0"
+    "@psu-ooe/base": "^2.0"
   }
 }

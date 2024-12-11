@@ -1,0 +1,12 @@
+{% set form %}
+  <form>
+    <label for="demo_form_input">Demo input</label>
+    <input name="demo_form_input" id="demo_form_input">
+    <button>Submit</button>
+  </form>
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: form,
+} only %}
+

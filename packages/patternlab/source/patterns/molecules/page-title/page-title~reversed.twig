@@ -1,0 +1,13 @@
+{% set page_title %}
+  {% include '@psu-ooe/page-title/page-title.twig' with {
+    subtitle_before: 'Subtitle-before',
+    title: 'Title',
+    subtitle_after: 'Subtitle-after',
+    reversed: true,
+  } only %}
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: page_title,
+  background: 'blue-gradient',
+} only %}

@@ -1,13 +1,13 @@
 {
   "name": "@psu-ooe/social-icons",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Provides a social icon links organism.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0",
-    "@psu-ooe/social-icon": "^1.0"
+    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/social-icon": "^2.0"
   }
 }

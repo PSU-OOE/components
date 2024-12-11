@@ -1,0 +1,7 @@
+{% set search %}
+  <input disabled type="search" name="demo_search_disabled" id="demo_search_disabled"><label class="visually-hidden" for="demo_search_disabled">Demo search disabled</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: search,
+} only %}
+

@@ -1,0 +1,84 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+
+.callout {
+  color: var(--text-color);
+  display: flex;
+  padding: _rem(4) var(--page-side-padding);
+
+  &--padding-vertical {
+    &-xsmall {
+      padding-top: _rem(2);
+      padding-bottom: _rem(2);
+    }
+
+    &-small {
+      padding-top: _rem(3);
+      padding-bottom: _rem(3);
+    }
+
+    &-small-percentage {
+      padding-top: clamp(_rem(.7), 2.9%, _rem(3));
+      padding-bottom: clamp(_rem(.7), 2.9%, _rem(3));
+    }
+
+    &-medium-percentage {
+      padding-top: clamp(_rem(1), 5.8%, _rem(4));
+      padding-bottom: clamp(_rem(1), 5.8%, _rem(4));
+    }
+
+    &-large-percentage {
+      padding-top: clamp(_rem(1.5), 8.7%, _rem(5));
+      padding-bottom: clamp(_rem(1.5), 8.7%, _rem(5));
+    }
+  }
+
+  &--padding-horizontal {
+    &-small-percentage {
+      padding-left: clamp(_rem(.7), 2.9%, _rem(3));
+      padding-right: clamp(_rem(.7), 2.9%, _rem(3));
+    }
+
+    &-medium-percentage {
+      padding-left: clamp(_rem(1), 5.8%, _rem(4));
+      padding-right: clamp(_rem(1), 5.8%, _rem(4));
+    }
+
+    &-large-percentage {
+      padding-left: clamp(_rem(1.5), 8.7%, _rem(5));
+      padding-right: clamp(_rem(1.5), 8.7%, _rem(5));
+    }
+  }
+
+  &--white {
+    background-color: var(--white);
+  }
+
+  &--light-grey {
+    background-color: var(--light-grey);
+  }
+
+  &--blue-gradient {
+    background: linear-gradient(to right, var(--beaver-blue), var(--nittany-navy));
+  }
+
+  &--blue {
+    background-color: var(--beaver-blue);
+  }
+
+  &--shadow {
+    &-standard {
+      box-shadow: 0 _rem(.3) _rem(.6) color-mix(in srgb, transparent, var(--nittany-navy) 25%);
+    }
+  }
+
+  &__content {
+    margin: auto;
+    max-width: _rem(111);
+    width: 100%;
+
+    &--narrow {
+      max-width: _rem(87);
+    }
+  }
+}

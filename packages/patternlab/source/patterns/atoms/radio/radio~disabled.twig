@@ -1,0 +1,7 @@
+{% set radio %}
+  <input disabled type="radio" name="demo_radio_disabled" id="demo_radio_disabled"><label class="visually-hidden" for="demo_radio_disabled">Demo radio disabled</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: radio,
+} only %}
+

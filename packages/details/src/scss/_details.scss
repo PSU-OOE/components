@@ -1,0 +1,36 @@
+details {
+  border-width: _rem(.1);
+  border-top-style: dotted;
+  border-bottom-style: dotted;
+
+  // Ensure that adjacent details don't double up borders.
+  & + details {
+    border-top: none;
+  }
+
+  // Ensure that nested details don't double up margins.
+  &[open] > details[open] {
+    border-bottom: none;
+  }
+
+  &[open] > summary {
+    margin-bottom: _rem(1);
+
+    & ~ :last-child {
+      margin-bottom: var(--form-element-margin--vertical);
+    }
+  }
+
+  // All children (except the summary) need a left margin.
+  & > *:not(summary) {
+    margin-left: _rem(5);
+  }
+
+  &, &:is([data-light] *) {
+    border-color: var(--pa-link);
+  }
+
+  &:is([data-dark] *) {
+    border-color: var(--pugh-blue);
+  }
+}

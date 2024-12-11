@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/announcement",
-  "version": "1.0.1",
+  "version": "2.1.0",
   "description": "Provides an interactive announcement.",
   "ooe": {
     "namespace": "molecules"
@@ -10,7 +10,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0",
-    "@psu-ooe/sprite": "^1.0"
+    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/sprite": "^2.0"
   }
 }

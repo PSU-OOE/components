@@ -1,0 +1,14 @@
+{
+  "name": "@psu-ooe/vertical-menu",
+  "version": "2.1.0",
+  "description": "Provides a vertical menu.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/slide-toggle": "^1.0",
+    "@psu-ooe/sprite": "^2.0"
+  }
+}

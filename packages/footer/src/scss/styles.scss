@@ -1,0 +1,56 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.footer {
+  color: var(--text-color);
+
+  &__top, &__bottom, &__colophon {
+    max-width: _rem(119);
+    padding: 0 var(--page-side-padding);
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+  }
+
+  &__top, &__bottom {
+    display: grid;
+    gap: _rem(3.5) 7.5%;
+
+    @include bp(m) {
+      grid-template-columns: 20% 40% 1fr;
+    }
+  }
+
+  &__bottom-container {
+    position: relative;
+    padding: _rem(5) 0;
+    display: flex;
+    flex-direction: column;
+    gap: _rem(4);
+    overflow: hidden;
+
+    @include bp(m) {
+      padding: _rem(6) 0;
+    }
+
+    &--dark {
+      background: linear-gradient(to right, var(--nittany-navy), var(--beaver-blue));
+    }
+
+    &-geometrics {
+      opacity: .3;
+      position: absolute;
+      top: _rem(-1);
+      right: _rem(-30);
+      width: _rem(60);
+      height: auto;
+      --hub-geometric-gradient: url(#hub-geometric-footer-bottom-gradient);
+
+      @include bp(m) {
+        left: calc(max(50%, _rem(59.5)) + _rem(22));
+        width: _rem(67);
+
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.page-title-banner-image {
+  overflow: hidden;
+  position: relative;
+
+  @include bp(m) {
+    height: _rem(40);
+  }
+
+  &__background {
+    position: relative;
+
+    @include bp(m) {
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &__image img {
+    @include bp(m) {
+      position: absolute;
+      object-fit: cover;
+      object-position: top center;
+      height: 100%;
+      width: 100%;
+      inset: 0;
+    }
+  }
+
+  &__gradient {
+    &::before {
+      @include bp(m) {
+        position: absolute;
+        content: "";
+        display:block;
+        left: calc(50% - _rem(126));
+        top: _rem(-8);
+        width: _rem(175);
+        height: _rem(84);
+        transform: rotate(17deg);
+        background: radial-gradient(closest-side, var(--nittany-navy), transparent);
+        mix-blend-mode: multiply;
+      }
+    }
+
+    &::after {
+      @include bp(m) {
+        content: "";
+        position: absolute;
+        width: _rem(1000);
+        left: calc(50% - _rem(500));
+        top: 0;
+        bottom:0;
+        background: linear-gradient(22deg, var(--nittany-navy) 41%, transparent 50%);
+      }
+    }
+  }
+
+  &__geometrics {
+    mix-blend-mode: overlay;
+    opacity: .5;
+
+    @include bp(m) {
+      position: absolute;
+      overflow: hidden;
+      inset: _rem(-2) 0 0 calc(max(50%, _rem(59.5)) - _rem(173.6));
+    }
+
+    // Two sprites are used to form the page title (with image) geometrics
+    // design.  Since the element that provides the gradient occupies the
+    // :first-child position in the geometrics container, the sprites occupy
+    // the second and third positions.
+    .sprite {
+      color: var(--white);
+      position: absolute;
+      height: auto;
+
+      &:nth-child(2) {
+        width: _rem(67);
+        left: 0;
+      }
+
+      &:nth-child(3) {
+        // The design calls for a white to transparent linear gradient from
+        // left to right on the geometric lines. The hub geometric sprite has
+        // an API that takes an optional fill property, so we can apply this
+        // unique gradient, tightly scoped to this particular context.
+        //
+        // @see https://github.com/PSU-OOE/components/blob/bleeding-edge-headers/packages/sprite/src/assets/hub-geometric.svg
+        --hub-geometric-gradient: url(#hub-geometric-page-title-image-gradient);
+
+        inset: _rem(-24.4) 0 0 _rem(-42.5);
+        mix-blend-mode: overlay;
+        width: _rem(60);
+
+        @include bp(m) {
+          width: _rem(67);
+          inset: 0 0 0 _rem(66.8);
+          mix-blend-mode: revert;
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin: auto;
+    max-width: _rem(119);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    background: var(--nittany-navy);
+    padding: 0 var(--page-side-padding) _rem(2) var(--page-side-padding);
+
+    @include bp(xs) {
+      padding-bottom: _rem(4);
+    }
+
+    @include bp(m) {
+      padding: _rem(8) var(--page-side-padding) _rem(4.5) var(--page-side-padding);
+      background: transparent;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      inset: _rem(-8) 0 100% 0;
+      background: linear-gradient(to bottom, transparent, var(--nittany-navy));
+
+      @include bp(m) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    @include bp(m) {
+      max-width: _rem(50);
+    }
+  }
+}

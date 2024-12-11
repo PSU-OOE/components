@@ -1,0 +1,13 @@
+<a class="navigation-tile-image" href="{{ link.url }}">
+  <img class="navigation-tile-image__img" alt="" src="{{ image }}" loading="lazy">
+  <div class="navigation-tile-image__overlay"></div>
+  <div class="navigation-tile-image__title">
+    {{ link.label }}
+    {% if chevron %}
+      <span class="navigation-tile-image__chevron">
+        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
+      </span>
+    {% endif %}
+  </div>
+</a>
+

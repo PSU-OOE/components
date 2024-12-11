@@ -27,17 +27,15 @@ Variables:
   <div class="card__content">
     {% if image %}
       <div class="{{ media_classes|join(' ') }}">
-        <div class="card__media-placeholder">
-          <img class="card__media-image" src="{{ image }}" alt="{{ image_alt }}" loading="lazy"/>
-        </div>
+        <img class="card__media-image" src="{{ image }}" alt="{{ image_alt }}" loading="lazy"/>
         <span class="card__media-overlay card__media-overlay--{{ image_overlay_style }}">
           {% if image_overlay_style == 'video' %}
-            {% include '@atoms/sprite/sprite.twig' with { name: 'youtube-player'} only %}
+            {% include '@psu-ooe/sprite/sprite.twig' with { name: 'youtube-player'} only %}
           {% endif %}
         </span>
       </div>
     {% endif %}
-    <span class="card__text" aria-hidden="true">
+    <div class="card__text" aria-hidden="true">
       <span class="card__title">{{ link_text }}</span>
       {% if link_attribution %}
         <span class="card__attribution">{{ link_attribution }}</span>
@@ -45,7 +43,7 @@ Variables:
       {% if description %}
         <div class="card__description text text--height-xsnug">{{ description }}</div>
       {% endif %}
-    </span>
+    </div>
   </div>
   <a class="card__link" href="{{ link_url }}">
     <span class="visually-hidden">{{ link_text }}, {{ link_attribution }}</span>

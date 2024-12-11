@@ -1,19 +1,22 @@
 @import "../../../base/src/scss/imports/variables";
 
 .skip-link {
-  padding: rem(2) rem(2.5);
-  outline: rem(0.2) solid $sky-blue;
+  min-width: _rem(4);
+  padding: _rem(2) _rem(2.5);
+  outline: _rem(0.2) solid $sky-blue;
   outline-offset: 0;
-  z-index: 9999999;
+  z-index: var(--z-index--floating);
   background: $white;
   position: absolute;
   overflow: hidden;
-  clip: rect(rem(0.1),rem(0.1),rem(0.1),rem(0.1));
-  text-decoration: underline;
+  clip: rect(_rem(0.1),_rem(0.1),_rem(0.1),_rem(0.1));
+  text-decoration: none;
+
   &:focus {
-    left: rem(1);
-    top: rem(1);
+    left: _rem(1);
+    top: _rem(1);
     clip: auto;
     overflow: visible;
+    outline-offset: _rem(-.4);
   }
 }

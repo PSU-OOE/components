@@ -6,12 +6,20 @@
 
 <span class="parallel-navigation-item">
   <a class="{{ link_classes|join(' ') }}" href="{{ url }}">
+    {% if icon %}
+      <span class="parallel-navigation-item__icon">
+        {% include '@psu-ooe/sprite/sprite.twig' with {
+          name: icon,
+          expand: true,
+        } only %}
+      </span>
+    {% endif %}
     <span class="parallel-navigation-item__title">
       {{ title }}
     </span>
     {% if variation == 'related' and not active %}
-      <span class="parallel-navigation-item__icon">
-        {% include '@atoms/sprite/sprite.twig' with {
+      <span class="parallel-navigation-item__chevron">
+        {% include '@psu-ooe/sprite/sprite.twig' with {
           name: 'fas-chevron-right'
         } only %}
       </span>

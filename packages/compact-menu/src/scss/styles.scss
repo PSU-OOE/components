@@ -1,0 +1,123 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+:root {
+  --compact-menu-bars-color--light: var(--pugh-blue);
+  --compact-menu-text-color--light: var(--white);
+  --compact-menu-bars-hover-color--light: var(--white);
+  --compact-menu-text-hover-color--light: var(--white);
+  --compact-menu-bars-active-color--light: var(--keystone-light);
+
+  --compact-menu-bars-color--dark: var(--beaver-blue);
+  --compact-menu-text-color--dark: var(--beaver-blue);
+  --compact-menu-bars-hover-color--dark: var(--pa-link);
+  --compact-menu-text-hover-color--dark: var(--nittany-navy);
+  --compact-menu-bars-active-color--dark: var(--nittany-navy);
+}
+
+:root, [data-light] {
+  --compact-menu-bars-color: var(--compact-menu-bars-color--dark);
+  --compact-menu-text-color: var(--compact-menu-text-color--dark);
+  --compact-menu-bars-hover-color: var(--compact-menu-bars-hover-color--dark);
+  --compact-menu-text-hover-color: var(--compact-menu-text-hover-color--dark);
+  --compact-menu-bars-active-color: var(--compact-menu-bars-active-color--dark);
+}
+
+[data-dark] {
+  --compact-menu-bars-color: var(--compact-menu-bars-color--light);
+  --compact-menu-text-color: var(--compact-menu-text-color--light);
+  --compact-menu-bars-hover-color: var(--compact-menu-bars-hover-color--light);
+  --compact-menu-text-hover-color: var(--compact-menu-text-hover-color--light);
+  --compact-menu-bars-active-color: var(--compact-menu-bars-active-color--light);
+}
+
+.compact-menu {
+  &__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: _rem(.5);
+
+    @include bp(xs) {
+      gap: _rem(.7);
+    }
+
+    &:is(:focus-visible > .compact-menu__toggle) {
+      outline: _rem(.2) solid var(--focus-indicator-color);
+      outline-offset: _rem(.2);
+    }
+
+    &:where(:hover) &-sprite {
+      color: var(--compact-menu-bars-hover-color);
+    }
+
+    &:hover &-label {
+      text-decoration-color: var(--compact-menu-text-hover-color);
+    }
+
+    &-sprite {
+      color: var(--compact-menu-bars-color);
+      transition: color var(--transition-duration--default) linear;
+
+      &:is([aria-expanded="true"] *) {
+        color: var(--compact-menu-bars-active-color);
+      }
+
+      .sprite {
+        width: _rem(2.1);
+        min-height: _rem(2.1);
+        height: auto;
+
+        @include bp(xs) {
+          width: _rem(2.6);
+          min-height: _rem(2.6);
+        }
+      }
+    }
+
+    &-label {
+      color: var(--compact-menu-text-color);
+      display: block;
+      font-family: var(--font-family--default);
+      font-weight: var(--font-weight--semibold);
+      font-size: var(--font-size--5xsmall);
+      line-height: var(--line-height--nospace);
+      text-decoration-color: transparent;
+      text-decoration-line: underline;
+      text-decoration-thickness: _rem(.1);
+      text-underline-offset: .2em;
+      transition: text-decoration-color var(--transition-duration--default) linear;
+
+      &:is(:focus-visible *) {
+        text-decoration-color: var(--compact-menu-text-hover-color);
+      }
+    }
+
+    &--vertical {
+      flex-direction: column;
+
+      .compact-menu__toggle-label {
+        padding-bottom: .2em;
+        font-size: var(--font-size--5xsmall);
+
+        @include bp(xs) {
+          font-size: var(--font-size--3xsmall);
+        }
+      }
+    }
+
+    &--horizontal {
+      flex-direction: row-reverse;
+      font-size: var(--font-size--small);
+
+      .sprite {
+        width: _rem(1.6);
+        height: auto;
+      }
+    }
+  }
+
+  &__content {
+    padding: _rem(1) _rem(2) _rem(3) _rem(2);
+  }
+}

@@ -1,6 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 
 .spinner {
+  min-width: _rem(2);
   position: relative;
   display: inline-block;
 
@@ -9,29 +10,29 @@
   }
 
   &:focus-visible {
-    outline: rem(.2) solid $sky-blue;
-    outline-offset: rem(.2);
+    outline: _rem(.2) solid var(--focus-indicator-color);
+    outline-offset: _rem(.2);
   }
 
   &__animation {
     &--xlarge {
-      font-size: rem(15);
+      font-size: _rem(15);
     }
 
     &--large {
-      font-size: rem(10);
+      font-size: _rem(10);
     }
 
     &--medium {
-      font-size: rem(5);
+      font-size: _rem(5);
     }
 
     &--small {
-      font-size: rem(2.5);
+      font-size: _rem(2.5);
     }
 
     &--xsmall {
-      font-size: rem(1.6);
+      font-size: _rem(1.6);
     }
   }
 
@@ -39,26 +40,26 @@
     display: none;
     color: $nittany-navy;
     font-weight: bold;
-    text-shadow: rem(-0.1) rem(-0.1) 0 $white, rem(.1) rem(-0.1) 0 $white, rem(-0.1) rem(.1) 0 $white, rem(.1) rem(.1) 0 $white;
+    text-shadow: _rem(-0.1) _rem(-0.1) 0 $white, _rem(.1) _rem(-0.1) 0 $white, _rem(-0.1) _rem(.1) 0 $white, _rem(.1) _rem(.1) 0 $white;
 
     &--xlarge {
-      font-size: rem(2.2);
+      font-size: _rem(2.2);
     }
 
     &--large {
-      font-size: rem(1.8);
+      font-size: _rem(1.8);
     }
 
     &--medium {
-      font-size: rem(1.6);
+      font-size: _rem(1.6);
     }
 
     &--small {
-      font-size: rem(1.2);
+      font-size: _rem(1.2);
     }
 
     &--xsmall {
-      font-size: rem(1.1);
+      font-size: _rem(1.1);
     }
   }
 

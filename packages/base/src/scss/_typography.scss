@@ -1,8 +1,8 @@
-p {
-  color: $font-color-default;
-  font-size: rem(1.6);
-  line-height: rem(3);
-  margin: 0 0 rem(2);
+p, .paragraph--default {
+  color: var(--text-color);
+  font-size: var(--font-size--default);
+  line-height: var(--line-height--default);
+  margin: 0 0 var(--text-element-vertical-space--default);
 
   &:last-child {
     margin-bottom: 0;
@@ -10,56 +10,131 @@ p {
 }
 
 .text {
-  color: $nittany-navy;
-  font-size: rem(1.6);
-  font-weight: 400;
-  line-height: 1.875;
+  color: var(--text-color);
+  font-size: var(--font-size--default);
+  font-weight: var(--font-weight--default);
+  line-height: var(--line-height--default);
+  letter-spacing: var(--letter-spacing--default);
 }
 
 .text--contrasting {
   font-weight: 800;
   color: rgba($nittany-navy, .5);
-  letter-spacing: -.0294em;
 }
 
 // Font weight modifiers.
 .text--weight-regular {
-  font-weight: 400;
+  font-weight: var(--font-weight--regular);
 }
 
 .text--weight-semibold {
-  font-weight: 600;
+  font-weight: var(--font-weight--semibold);
 }
 
 .text--weight-bold {
-  font-weight: 700;
+  font-weight: var(--font-weight--bold);
 }
 
 // Font size modifiers.
+.text--size-6xlarge {
+  font-size: var(--font-size--6xlarge);
+}
+
+.text--size-5xlarge {
+  font-size: var(--font-size--5xlarge);
+}
+
+.text--size-4xlarge {
+  font-size: var(--font-size--4xlarge);
+}
+
+.text--size-3xlarge {
+  font-size: var(--font-size--3xlarge);
+}
+
+.text--size-2xlarge {
+  font-size: var(--font-size--2xlarge);
+}
+
+.text--size-xlarge {
+  font-size: var(--font-size--xlarge);
+}
+
+.text--size-large {
+  font-size: var(--font-size--large);
+}
+
+.text--size-mlarge {
+  font-size: var(--font-size--mlarge);
+}
+
+.text--size-medium {
+  font-size: var(--font-size--medium);
+}
+
+.text--size-msmall {
+  font-size: var(--font-size--msmall);
+}
+
 .text--size-small {
-  font-size: rem(1.4);
+  font-size: var(--font-size--small);
 }
 
 .text--size-xsmall {
-  font-size: rem(1.2);
+  font-size: var(--font-size--xsmall);
+}
+
+.text--size-2xsmall {
+  font-size: var(--font-size--2xsmall);
+}
+
+.text--size-3xsmall {
+  font-size: var(--font-size--3xsmall);
+}
+
+.text--size-4xsmall {
+  font-size: var(--font-size--4xsmall);
 }
 
 // Line height modifiers.
+
+.text--height-default {
+  line-height: var(--line-height--default);
+}
+
+.text--height-msnug {
+  line-height: var(--line-height--msnug);
+}
+
 .text--height-snug {
-  line-height: 1.5;
+  line-height: var( --line-height--snug);
 }
 
 .text--height-xsnug {
-  line-height: calc(4/3);
+  line-height: var(--line-height--xsnug);
+}
+
+.text--height-2xsnug {
+  line-height: var(--line-height--2xsnug);
+}
+
+.text--height-3xsnug {
+  line-height: var(--line-height--3xsnug);
+}
+
+.text--height-nospace {
+  line-height: var(--line-height--nospace);
 }
 
 // Color modifiers
-
-.text--color-slate {
-  color: $slate;
+.text--color-default {
+  color: var(--text-color--default);
 }
 
-// @TODO: This should probably be set to an automatic CSS variable.
+.text--color-slate {
+  color: var(--text-color--slate);
+}
+
 .text--color-reversed {
-  color: $white;
+  color: var(--text-color--light);
 }

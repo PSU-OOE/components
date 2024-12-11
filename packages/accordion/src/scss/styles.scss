@@ -1,17 +1,17 @@
 @import "../../../base/src/scss/imports/_variables.scss";
 
 .accordion {
+  min-width: _rem(15);
 
   &:not(.accordion--borderless) {
 
-    border-top: rem(.1) solid $medium-grey;
-    border-bottom: rem(.1) solid $medium-grey;
+    border-top: _rem(.1) solid var(--medium-grey);
+    border-bottom: _rem(.1) solid var(--medium-grey);
 
     + .accordion {
       border-top: none;
     }
   }
-
 
   &__heading {
     margin-bottom: 0;
@@ -30,50 +30,45 @@
     border: none;
     cursor: pointer;
     display: flex;
-    font-family: $open-sans;
-    font-size: rem(1.6);
-    line-height: rem(2.4);
-    color: $beaver-blue;
-    padding: rem(2) 0;
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--default);
+    font-weight: var(--font-weight--semibold);
+    line-height: var(--line-height--snug);
+    color: var(--beaver-blue);
+    padding: _rem(2) 0;
     width: 100%;
     text-align: left;
-    transition: color .2s linear, margin-bottom .2s linear;
 
-    &:hover {
-      color: $primary-blue;
+    &:hover, &:focus-visible {
+      color: var(--pa-link);
 
       .accordion__label {
-        text-decoration-color: $primary-blue;
+        text-decoration-color: var(--pa-link);
+
+        &--label-underline {
+          text-decoration-style: solid;
+        }
       }
 
       .accordion__sprite .sprite {
         transform: scale(1.25);
       }
-    }
-
-    &:focus, &:active {
-      outline: none;
     }
 
     &:focus-visible {
-      outline: rem(.2) solid $sky-blue;
-      outline-offset: rem(.2);
-      color: $primary-blue;
+      outline: _rem(.2) solid var(--focus-indicator-color);
+      outline-offset: _rem(.2);
+    }
 
-      .accordion__label {
-        text-decoration-color: $primary-blue;
-      }
-
-      .accordion__sprite .sprite {
-        transform: scale(1.25);
-      }
+    .accordion__label--label-underline {
+      text-decoration-color: var(--pa-link);
     }
   }
 
   &__label {
     flex: 1 1 0;
     text-decoration-color: transparent;
-    text-decoration-thickness: rem(.1);
+    text-decoration-thickness: _rem(.1);
     text-decoration-line: underline;
     text-decoration-style: dotted;
     text-underline-offset: .2em;
@@ -81,9 +76,9 @@
   }
 
   .accordion__sprite .sprite {
-    color: $primary-blue;
-    height: rem(1.6);
-    margin: auto rem(1.5);
+    color: var(--pa-link);
+    height: _rem(1.6);
+    margin: auto _rem(1.5);
     transition-property: transform;
     transition-timing-function: linear;
     transition-duration: .2s;
@@ -91,8 +86,12 @@
 
   &__expandable-content {
     transition-property: height, margin-bottom, visibility;
-    transition-timing-function: linear;
+    transition-timing-function: ease-in-out;
     visibility: hidden;
+
+    &--indent-content {
+      margin-left: 3.75%;
+    }
   }
 
   &--expanded {
@@ -103,48 +102,21 @@
         transform: rotate(45deg);
       }
 
-      &:hover {
+      &:hover, &:focus-visible {
         .accordion__sprite .sprite {
           transform: rotate(45deg) scale(1.25);
         }
       }
 
       &:focus-visible {
-        margin-bottom: rem(.3);
-
-        .accordion__sprite .sprite {
-          transform: rotate(45deg) scale(1.25);
-        }
+        margin-bottom: _rem(.3);
       }
     }
 
    > .accordion__expandable-content {
-      margin-bottom: rem(2);
+      margin-bottom: _rem(2);
       visibility: inherit;
     }
   }
 }
 
-// @TODO: Delete when focus-visible polyfill is removed.
-.accordion {
-
-  &__button.focus-visible {
-    outline: rem(.2) solid $sky-blue;
-    outline-offset: rem(.2);
-    color: $primary-blue;
-    margin-bottom: rem(.3);
-
-    .accordion__label {
-      text-decoration-color: $primary-blue;
-    }
-
-    .accordion__sprite .sprite {
-      color: $primary-blue;
-      transform: scale(1.25);
-    }
-  }
-
-  &--expanded .accordion__button.focus-visible .accordion__sprite .sprite {
-    transform: rotate(45deg) scale(1.25);
-  }
-}

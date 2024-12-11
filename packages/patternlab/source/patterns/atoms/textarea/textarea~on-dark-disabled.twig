@@ -1,0 +1,9 @@
+{% set textarea %}
+  <div data-dark>
+    <textarea disabled name="demo_textarea_on_dark_disabled" id="demo_textarea_on_dark_disabled"></textarea><label class="visually-hidden" for="demo_textarea_on_dark_disabled">Demo textarea on dark background disabled</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: textarea,
+  background: 'blue',
+} only %}

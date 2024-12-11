@@ -1,0 +1,9 @@
+{% set range %}
+  <div data-dark>
+    <input type="range" min="0" max="100" name="demo_range_on_dark" id="demo_range_on_dark"><label class="visually-hidden" for="demo_range_on_dark">Demo range on dark background</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: range,
+  background: 'blue',
+} only %}

@@ -8,7 +8,7 @@
 <a class="{{ classes|join(' ') }}" href="{{ url }}">
   <span class="event-link__first">
     <span class="event-link__date">
-      {% include '@molecules/smart-datetime/smart-date.twig' with {
+      {% include '@psu-ooe/smart-datetime/smart-date.twig' with {
         start: start,
         end: end,
         timezone: timezone,
@@ -21,7 +21,7 @@
     {% if not hide_time %}
       <span class="event-link__time">
         {% if not all_day %}
-          {% include '@molecules/smart-datetime/smart-time.twig' with {
+          {% include '@psu-ooe/smart-datetime/smart-time.twig' with {
             start: start,
             end: end,
             timezone: timezone
@@ -38,7 +38,7 @@
     {% endif %}
   </span>
   <span class="event-link__third">
-    {% include '@atoms/sprite/sprite.twig' with {
+    {% include '@psu-ooe/sprite/sprite.twig' with {
       name: 'fas-chevron-right'
     } only %}
   </span>

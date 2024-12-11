@@ -1,0 +1,14 @@
+{% set quote %}
+  {% include '@psu-ooe/quote/quote.twig' with {
+    headshot: "<img src=\"https://test.worldcampus.psu.edu/sites/default/files/2020-08/Carrie-Tilley-quote.jpg\" width=\"400\" height=\"400\" alt=\"carrie tilley and family\">",
+    reverse: false,
+    quote: "Being able to work with Penn State World Campus and find not only a degree program I was interested in, but knowing that I had that flexibility made it work perfectly for us.",
+    attribution: "Carrie Tilley",
+    byline: "Master of Engineering in Systems Engineering graduate",
+  } only %}
+{% endset %}
+ {% include '@psu-ooe/callout/callout.twig' with {
+   background: 'light-grey',
+   content: quote,
+   width: 'narrow'
+ } only %}

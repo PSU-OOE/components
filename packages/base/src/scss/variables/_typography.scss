@@ -1,0 +1,76 @@
+:root {
+  // fonts
+  --font-family--text: 'proxima-nova', sans-serif;
+  --font-family--display: 'serifa', serif;
+
+  // font mappings
+  --font-family--default: var(--font-family--text);
+  --font-family--headings: var(--font-family--display);
+  --font-family--page-title: var(--font-family--text);
+  --font-family--quotes: var(--font-family--display);
+
+  // font sizing
+  --font-size--6xlarge: #{ _rem(6.2) };
+  --font-size--5xlarge: #{ _rem(4.8) };
+  --font-size--4xlarge: #{ _rem(3.2) };
+  --font-size--3xlarge: #{ _rem(2.8) };
+  --font-size--2xlarge: #{ _rem(2.5) };
+  --font-size--xlarge: #{ _rem(2.2) };
+  --font-size--large: #{ _rem(2) };
+  --font-size--mlarge: #{ _rem(1.8) };
+  --font-size--medium: #{ _rem(1.7) };
+  --font-size--msmall: #{ _rem(1.6) };
+  --font-size--small: #{ _rem(1.5) };
+  --font-size--xsmall: #{ _rem(1.4) };
+  --font-size--2xsmall: #{ _rem(1.3) };
+  --font-size--3xsmall: #{ _rem(1.2) };
+  --font-size--4xsmall: #{ _rem(1.1) };
+  --font-size--5xsmall: #{ _rem(1.0) };
+
+  --font-size--default: var(--font-size--medium);
+
+  // line height
+  --line-height--medium: calc(30/17);
+  --line-height--msnug: calc(28/17);
+  --line-height--snug: calc(24/17);
+  --line-height--xsnug: calc(21/17);
+  --line-height--2xsnug: calc(28/24);
+  --line-height--3xsnug: calc(48/45);
+  --line-height--nospace: 1;
+
+  --line-height--default: var(--line-height--medium);
+
+  // letter spacing
+  --letter-spacing--2xloose: 0.06em;
+  --letter-spacing--xloose: 0.03em;
+  --letter-spacing--loose: 0.02em;
+  --letter-spacing--mloose: 0.01em;
+  --letter-spacing--medium: 0;
+  --letter-spacing--msnug: -0.01em;
+  --letter-spacing--snug: -0.02em;
+  --letter-spacing--xsnug: -0.03em;
+  --letter-spacing--2xsnug: -0.06em;
+
+  --letter-spacing--default: var(--letter-spacing--medium);
+
+  // font weights
+  --font-weight--regular: 400;
+  --font-weight--medium: 500;
+  --font-weight--semibold: 600;
+  --font-weight--bold: 700;
+  --font-weight--extrabold: 800;
+
+  --font-weight--default: var(--font-weight--regular);
+}
+
+@include bp(s) {
+  :root {
+    --font-size--6xlarge: #{ _rem(7.9) };
+    --font-size--5xlarge: #{ _rem(6) };
+    --font-size--4xlarge: #{ _rem(4.5) };
+    --font-size--3xlarge: #{ _rem(3.2) };
+    --font-size--2xlarge: #{ _rem(2.8) };
+    --font-size--xlarge: #{ _rem(2.4) };
+    --font-size--large: #{ _rem(2.1) };
+  }
+}

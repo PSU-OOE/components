@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/input-file",
+  "version": "1.1.1",
+  "description": "Provides file element styles.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^2.0"
+  }
+}

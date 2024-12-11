@@ -1,0 +1,130 @@
+@import '../../../base/src/scss/imports/variables';
+
+.vertical-menu {
+  &__parent {
+    display: block;
+    font-size: var(--font-size--large);
+    font-weight: var(--font-weight--bold);
+    color: var(--text-color--default);
+    border-bottom: _rem(.2) solid var(--pugh-blue);
+    text-decoration: none;
+    padding: _rem(1.5) 0;
+
+    &--tight {
+      padding: _rem(1) 0;
+    }
+
+    &--loose {
+      padding: _rem(2) 0;
+    }
+  }
+
+  &__menu:not(&__menu--1) {
+    margin-left: _rem(2);
+    flex-basis: 100%;
+    visibility: hidden;
+    transition: height var(--transition-duration--default) ease-in-out,
+                visibility var(--transition-duration--default) ease-in-out;
+  }
+
+  &__toggle {
+    background: transparent;
+    color: var(--pa-link);
+    border: none;
+    font-size: _rem(1.6);
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: _rem(.2) solid var(--focus-indicator-color);
+      outline-offset: 0;
+    }
+
+    .sprite {
+      transition: transform var(--transition-duration--default) linear;
+    }
+
+    &[aria-expanded="true"] {
+      .sprite {
+        transform: rotateX(-180deg)
+      }
+      & + .vertical-menu__menu {
+        visibility: inherit;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--1 {
+      border-bottom: _rem(.1) solid var(--pugh-blue);
+    }
+
+    &:not(&--1):first-child {
+      border-top: _rem(.1) solid var(--slate-light);
+    }
+
+    &:not(&--1):not(:last-child) {
+      border-bottom: _rem(.1) solid var(--slate-light);
+    }
+
+    &--1#{&}--highlight {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: -1.2rem;
+        border-left: 0.3rem solid var(--accent-color);
+        content: "";
+        display: block;
+        height: 100%;
+      }
+    }
+  }
+
+  &__link {
+    color: var(--text-color--default);
+    display: block;
+    font-weight: var(--font-weight--regular);
+    flex: 1;
+    text-decoration: none;
+
+    &--1 {
+      padding: _rem(1.5) 0;
+    }
+
+    &:not(&--1) {
+      padding: _rem(1) 0;
+      font-size: var(--font-size--msmall);
+    }
+
+    &--tight#{&}--1 {
+      padding: _rem(1) 0;
+    }
+
+    &--tight#{&}:not(&--1) {
+      padding: _rem(.7) 0;
+    }
+
+    &--loose#{&}--1 {
+      padding: _rem(2) 0;
+    }
+
+    &--loose#{&}:not(&--1) {
+      padding: _rem(1.5) 0;
+    }
+
+    &:hover, &:focus-visible {
+      color: var(--pa-link);
+    }
+
+    &:focus-visible {
+      outline-offset: 0;
+    }
+
+    &--active-trail {
+      font-weight: var(--font-weight--bold);
+    }
+  }
+}

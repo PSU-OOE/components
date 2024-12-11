@@ -1,13 +1,13 @@
 {
   "name": "@psu-ooe/social-icon",
-  "version": "1.0.0",
+  "version": "2.0.1",
   "description": "Provides a social icon link molecule.",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@psu-ooe/base": "^1.0",
-    "@psu-ooe/sprite": "^1.0"
+    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/sprite": "^2.0"
   }
 }

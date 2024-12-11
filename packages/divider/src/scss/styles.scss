@@ -6,38 +6,40 @@
   position: relative;
 
   &--thin-slate-light {
-    height: rem(.1);
-    background-color: $slate-light;
+    height: _rem(.1);
+    background-color: var(--slate-light);
   }
 
   &--standard-light-grey {
-    height: rem(2);
-    background-color: $light-grey;
+    height: _rem(2);
+    background-color: var(--light-grey);
   }
 
   &--standard-white {
-    height: rem(2);
-    background-color: $white;
+    height: _rem(2);
+    background-color: var(--white);
   }
 
   &--tall-medium-grey-shield,
-  &--tall-blue-gradient-shield {
-    height: rem(8);
+  &--tall-medium-grey-geometric,
+  &--tall-blue-gradient-shield,
+  &--tall-blue-gradient-geometric {
+    height: _rem(8);
 
     .divider__top-band {
       position: absolute;
       top: 0;
       width: 100%;
-      height: rem(1);
-      background-color: $beaver-blue;
+      height: _rem(1);
+
     }
 
     .sprite {
-      color: $white;
-      margin-top: rem(-6);
-      width: rem(130);
+      color: var(--white);
+      width: _rem(130);
       height: auto;
       margin-left: 35.1%;
+      margin-top: _rem(-6);
       position: absolute;
     }
   }
@@ -46,15 +48,65 @@
     background-color: $medium-grey;
 
     .divider__top-band {
-      background: linear-gradient(90deg, $beaver-blue 0, $true-blue 100%);
+      background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
+    }
+  }
+
+  &--tall-medium-grey-geometric {
+    background: var(--medium-grey);
+    overflow: hidden;
+
+    .divider__top-band {
+      background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
+    }
+    
+    .divider__rule {
+      top: _rem(1);
+      height: 100%;
+      background: linear-gradient(90deg, var(--medium-grey) 0, transparent 100%);
+      margin: 0;
     }
   }
 
   &--tall-blue-gradient-shield {
-    background: linear-gradient(90deg, $true-blue 0, $primary-blue 100%);
+    background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
 
     .divider__top-band {
       background-color: $nittany-navy;
+    }
+  }
+
+  &--tall-blue-gradient-geometric {
+    background: linear-gradient(90deg, var(--beaver-blue) 0, var(--sky-blue) 100%);
+
+    .divider__top-band {
+      background-color: $nittany-navy;
+    }
+    .divider__rule {
+      top: _rem(1);
+      height: 100%;
+      background: linear-gradient(90deg, var(--beaver-blue) 0, transparent 100%);
+      margin: 0;
+    }
+  }
+
+  &--tall-blue-gradient-geometric,
+  &--tall-medium-grey-geometric {
+    .divider__sprite_1 {
+      .sprite {
+        position: absolute;
+        right: _rem(71);
+        margin-top: _rem(-19);
+        width: _rem(67);
+      }
+    }
+    .divider__sprite_2 {
+      .sprite {
+        position: absolute;
+        right: _rem(-1);
+        margin-top: _rem(-33);
+        width: _rem(67);
+      }
     }
   }
 

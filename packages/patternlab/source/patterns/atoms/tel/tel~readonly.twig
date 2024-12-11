@@ -1,0 +1,7 @@
+{% set tel %}
+  <input readonly type="tel" name="demo_tel_readonly" id="demo_tel_readonly"><label class="visually-hidden" for="demo_tel_readonly">Demo tel readonly</label>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: tel,
+} only %}
+

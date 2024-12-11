@@ -1,0 +1,71 @@
+{% set bio_1 %}
+  {% include '@psu-ooe/bio/bio.twig' with {
+    title: {
+      level: 2,
+      content: 'Thomas T. Amlie',
+      color: 'neutral',
+    },
+    profile_photo: '<img src="https://via.placeholder.com/130x130" alt="test">',
+    job_title: 'Condimentum id venenatis a condimentum vitae',
+    credentials: [
+      { icon: 'fas-graduation-cap', icon_alt: 'Degree', text: 'Ph.D., Accounting, University of Maryland'},
+      { icon: 'fas-graduation-cap', icon_alt: 'Degree', text: 'MBA, University of Maryland'},
+    ],
+    content: '<p>Dr. Thomas T. Amlie\'s teaching interests are in the area of financial accounting and reporting. His research interests center on the proper disclosure of accounting information, the assumptions underlying that accounting information, and the effects of those assumptions on business decisions and reporting.</p>',
+
+  } only %}
+{% endset %}
+{% set bio_2 %}
+  {% include '@psu-ooe/bio/bio.twig' with {
+    title: {
+      level: 2,
+      content: 'Janet Duck',
+      color: 'neutral',
+    },
+    profile_photo: '<img src="https://via.placeholder.com/130x130" alt="test">',
+    job_title: 'Faculty Chair, Online MBA',
+    credentials: [
+      { icon: 'fas-graduation-cap', icon_alt: 'Degree', text: 'MBA, Lebanon Valley College'},
+      { icon: 'fas-graduation-cap', icon_alt: 'Degree', text: 'B.S., Business Administration, Slippery Rock University'},
+      { icon: 'fas-certificate', icon_alt: 'Credential', text: 'Ph.D., Workforce Development, Penn State'},
+    ],
+    content: '<p>Dr. Janet Duck has more than 15 years of teaching, authoring, and designing experience in online graduate environments. She teaches courses in organizational change management, leadership communication, organizational development and intervention, and team performance. Additionally, Dr. Duck serves as the faculty lead for the Professional Graduate Portfolio (PGP) at the Smeal College of Business, where she facilitates data-driven course design for the graduate business population. She has received the Outstanding Faculty award for the iMBA. She has more than 15 years of industry experience in organizational change and development in both domestic and international markets. Dr. Duck\'s work in online teaching has been highlighted in The New York Times and Delta Sky Magazine.</p>',
+    link: {
+      url: '#',
+      title: 'See Janet\'s full profile',
+    },
+  } only %}
+{% endset %}
+{% set bio_3 %}
+  {% include '@psu-ooe/bio/bio.twig' with {
+    title: {
+      level: 2,
+      content: 'John Cameron',
+      color: 'neutral',
+    },
+    profile_photo: '<img src="https://via.placeholder.com/130x130" alt="test">',
+    credentials: [
+      { icon: 'fas-graduation-cap', icon_alt: 'Degree', text: 'J.D., Widener University School of Law'},
+      { icon: 'fas-graduation-cap', icon_alt: 'Degree', text: 'LLM, Corporation Law, New York University School of Law'},
+      { icon: 'fas-graduation-cap', icon_alt: 'Degree', text: 'MBA, Temple University'},
+      { icon: 'fas-graduation-cap', icon_alt: 'Degree', text: 'B.A., University of Pittsburgh'},
+    ],
+    content: '<p>John C. Cameron, associate professor of management and organization, held corporate positions in health care administration and corporate law. He is admitted to practice law in Pennsylvania, Maryland, and New Jersey. Currently he serves as the co-chair of the Pennsylvania Bar Association Health Care Law Committee. Mr. Cameron teaches courses in leadership development, business ethics, bioscience management and negotiations. His research interests are in the areas of corporate governance, bioethics, leadership, and regulatory compliance.</p>',
+
+  } only %}
+{% endset %}
+
+{% set bio_collection %}
+  {% include '@psu-ooe/bio-collection/bio-collection.twig' with {
+    bios: [bio_1, bio_2, bio_3]
+  } only %}
+{% endset %}
+
+{% include '@psu-ooe/expandable-section/expandable-section.twig' with {
+  id: 'minors',
+  toc_label: 'Minors',
+  intro: "<div class=\"wysiwyg\"><h2 class=\"heading--neutral heading--flush\"><span class=\"text--contrasting\">World Class</span> Faculty</h2></div>",
+  expand_label: "Meet the Team",
+  content: bio_collection,
+  collapse_label: "Close Team"
+} only %}

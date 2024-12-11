@@ -4,27 +4,31 @@
 .tabs {
   position: relative;
 
+  &__intro {
+    margin-bottom: _rem(3);
+  }
+
   &__list {
     /* @TODO: Replace with gap when flex-gap is available. */
-    margin-left: rem(-.4);
-    margin-right: rem(-.4);
-    margin-bottom: rem(3);
+    margin-left: _rem(-.4);
+    margin-right: _rem(-.4);
+    margin-bottom: _rem(3);
 
     @include bp(xs) {
-      margin-bottom: rem(4);
+      margin-bottom: _rem(4);
     }
     @include bp(s) {
-      margin-left: rem(-.45);
-      margin-right: rem(-.45);
+      margin-left: _rem(-.45);
+      margin-right: _rem(-.45);
     }
 
     @include bp(m) {
-      margin-bottom: rem(5);
+      margin-bottom: _rem(5);
     }
 
     @include bp(xl) {
-      margin-left: rem(-.5);
-      margin-right: rem(-.5);
+      margin-left: _rem(-.5);
+      margin-right: _rem(-.5);
     }
   }
 
@@ -46,6 +50,7 @@
       visibility: visible;
       opacity: 1;
       height: auto;
+      overflow: visible;
     }
 
     &:focus {
@@ -53,28 +58,18 @@
     }
 
     &:focus-visible {
-      border-left: rem(.4) solid $sky-blue;
-      margin-left: rem(-1.4);
-      padding-left: rem(1);
+      outline: none;
+      &::before {
+        content: '';
+        inset: 0 100% 0 0;
+        position: absolute;
+        border-left: _rem(.4) solid var(--focus-indicator-color);
+        left: _rem(-1);
 
-      @include bp(xs) {
-        margin-left: rem(-2.4);
-        padding-left: rem(2);
+        @include bp(xs) {
+          margin-left: _rem(-2);
+        }
       }
     }
-  }
-}
-
-// @TODO: Delete when safari polyfills are no longer needed. */
-// These styles are repeated from the canonical :focus-visible selector.
-
-.tabs__panel.focus-visible {
-  border-left: rem(.4) solid $sky-blue;
-  margin-left: rem(-1.4);
-  padding-left: rem(1);
-
-  @include bp(xs) {
-    margin-left: rem(-2.4);
-    padding-left: rem(2);
   }
 }

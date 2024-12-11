@@ -1,0 +1,90 @@
+:root {
+  // Color custom properties for color variables
+  // Basic colors
+  --white: #{ $white };
+  --black: #{ $black };
+
+  // Penn State World Campus Colors
+  --beaver-blue: #{ $beaver-blue };
+  --nittany-navy: #{ $nittany-navy };
+  --nittany-navy-faded: #{ $nittany-navy-faded };
+  --sky-blue: #{ $sky-blue };
+  --pugh-blue: #{ $pugh-blue };
+  --light-mauve: #{ $light-mauve };
+
+  --light-grey: #{ $light-grey };
+  --medium-grey: #{ $medium-grey };
+  --medium-dark-grey: #{ $medium-dark-grey };
+  --slate: #{ $slate };
+  --slate-light: #{ $slate-light };
+
+  --limestone: #{ $limestone };
+
+  --keystone: #{ $keystone };
+  --keystone-light: #{ $keystone-light };
+
+  --invent-orange: #{ $invent-orange };
+  --invent-orange-light: #{ $invent-orange-light };
+
+  --penns-forest: #{ $penns-forest };
+  --creek: #{ $creek };
+
+  --pa-link: #{ $pa-link };
+  --pa-link-light: #{ $pa-link-light };
+
+  --futures-calling: #99cc00;
+
+  // Tile nav
+  --tile-nav-image-overlay: #{ $tile-nav-image-overlay };
+  --tile-nav-active: #{ $tile-nav-active };
+
+  --error-red: #{ $error-red };
+
+  // Brand refresh colors
+  --text-color--dark: var(--nittany-navy);
+  --text-color--slate: var(--slate);
+  --text-color--light: var(--white);
+  --link-color--dark: var(--pa-link);
+  --link-color--light: var(--pa-link-light);
+
+  --text-color--default: var(--text-color--dark);
+  --link-color--default: var(--link-color--dark);
+
+  // Non-semantic accents
+  --accent-color--dark: var(--sky-blue);
+  --accent-color--light: var(--sky-blue);
+
+  // Semantic accents
+  --accent-color-semantic--dark: var(--sky-blue);
+  --accent-color-semantic--light: var(--sky-blue);
+
+  // Focus indicators
+  --focus-indicator-color--light: var(--sky-blue);
+  --focus-indicator-color--dark: var(--sky-blue);
+
+  // @deprecated - to be removed in 3.0.0.
+  --headings-color: var(--text-color--slate);
+}
+
+// Automatically contrasting variables.
+:root, [data-light] {
+  --link-color: var(--link-color--default);
+  --text-color: var(--text-color--default);
+
+  --accent-color: var(--accent-color--dark);
+
+  --accent-color-semantic: var(--accent-color-semantic--dark);
+
+  --focus-indicator-color: var(--focus-indicator-color--dark);
+}
+
+[data-dark] {
+  --link-color: var(--link-color--light);
+  --text-color: var(--text-color--light);
+
+  --accent-color: var(--accent-color--light);
+
+  --accent-color-semantic: var(--accent-color-semantic--light);
+
+  --focus-indicator-color: var(--focus-indicator-color--light);
+}

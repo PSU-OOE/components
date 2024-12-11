@@ -1,0 +1,34 @@
+{% set first -%}
+  {% block first %}
+    {{- first -}}
+  {% endblock %}
+{% endset %}
+
+{% set second -%}
+  {% block second %}
+    {{- second -}}
+  {% endblock %}
+{% endset %}
+
+{% set third -%}
+  {% block third %}
+    {{- third -}}
+  {% endblock %}
+{% endset %}
+
+{% set fourth -%}
+  {% block fourth %}
+    {{- fourth -}}
+  {% endblock %}
+{% endset %}
+
+{% include '@psu-ooe/layout-multi-col/layout-multi-col.twig' with {
+  classes: ['layout-four-col'],
+  gap: gap,
+  regions: [
+    { content: first },
+    { content: second },
+    { content: third },
+    { content: fourth },
+  ]|filter((region) => region.content is not empty)
+} only %}

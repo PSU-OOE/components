@@ -1,0 +1,10 @@
+{% set email %}
+  <div data-dark>
+    <input type="email" name="demo_email_on_dark" id="demo_email_on_dark"><label class="visually-hidden" for="demo_email_on_dark">Demo email on dark background</label>
+  </div>
+{% endset %}
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: email,
+  background: 'blue',
+} only %}
+

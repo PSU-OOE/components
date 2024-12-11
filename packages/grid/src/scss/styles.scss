@@ -2,16 +2,20 @@
 
 .grid {
   display: grid;
-  gap: rem(2);
+  gap: _rem(2);
   margin: 0;
   padding: 0;
+
+  &--one-col {
+    grid-template-columns: auto;
+  }
 
   &--two-col {
     grid-template-columns: repeat(auto-fill, minmax(max(48%, min(24rem, 100%)), 1fr));
   }
 
   &--three-col {
-    grid-template-columns: repeat(auto-fill, minmax(unquote('max(30%, #{unquote('min(#{rem(24)}, 100%)')})'), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(unquote('max(30%, #{unquote('min(#{_rem(24)}, 100%)')})'), 1fr));
   }
   &--four-col {
     grid-template-columns: repeat(auto-fill, minmax(max(22%, min(18rem, 100%)), 1fr));

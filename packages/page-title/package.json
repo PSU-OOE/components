@@ -1,0 +1,13 @@
+{
+  "name": "@psu-ooe/page-title",
+  "version": "1.0.2",
+  "description": "Provides a page title component.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/heading": "^2.0 || ^3.0"
+  }
+}

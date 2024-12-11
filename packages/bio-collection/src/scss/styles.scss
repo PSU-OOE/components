@@ -1,4 +1,5 @@
 @import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
 
 .bio-collection {
   margin: 0;
@@ -6,6 +7,10 @@
   list-style-type: none;
 
   &__bio:not(:last-of-type) {
-    margin-bottom: rem(3);
+    margin-bottom: var(--text-element-vertical-space--large);
+
+    @include bp(s) {
+      margin-bottom: _rem(5);
+    }
   }
 }

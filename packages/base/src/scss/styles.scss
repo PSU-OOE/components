@@ -1,22 +1,24 @@
 @import "imports/variables";
 @import "imports/layout";
 
-@import "normalize";
+// Custom properties.
+@import "variables/colors";
+@import "variables/spacing";
+@import "variables/transitions";
+@import "variables/typography";
+@import "variables/forms";
+@import "variables/layers";
+
+@import "typography";
 
 // Universal selectors.
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
-*:focus {
-  outline: rem(.2) solid $sky-blue;
-}
-
 // Type selectors.
 html {
   font-size: 62.5%;
-
-  /* set up for rem() use */
   overflow: hidden;
   overflow-y: auto;
   -webkit-font-smoothing: antialiased;
@@ -26,41 +28,61 @@ html {
   @media (prefers-reduced-motion) {
     scroll-behavior: auto;
   }
-
-  &.no-scroll-mobile {
-    @include bp(s_max) {
-      overflow: hidden;
-    }
-  }
 }
 
 body {
-  font-size: rem(1.6);
-  font-family: $font-family-default;
-  color: $font-color-default;
-  background: $white;
+  margin: 0;
+  font-size: var(--font-size--default);
+  font-family: var(--font-family--default);
+  color: var(--text-color--default);
+  background: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  color: $primary-blue;
-  font-weight: 600;
-  text-decoration: none;
+a,
+.link--default {
+  color: var(--link-color);
+  font-weight: inherit;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: inherit;
+  text-decoration-thickness: _rem(0.1);
+  outline: solid _rem(.2) transparent;
+  outline-offset: _rem(0.2);
+  transition: outline-color var(--transition-duration--default) linear;
+  text-underline-offset: .2em;
 
-  &:hover {
-    color: $beaver-blue;
+  &:hover, &:focus-visible {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: _rem(.1);
   }
 
+  &:focus-visible {
+    outline-color: var(--focus-indicator-color);
+    outline-offset: _rem(0.2);
+  }
+
+  // @TODO: This probably isn't used...
   &.hidden {
-    left: rem(-99.9);
+    left: _rem(-99.9);
     position: absolute;
 
     &:focus {
       background-color: transparent;
       color: #ffffff;
-      left: rem(.5);
+      left: _rem(.5);
     }
+  }
+}
+
+.link--color-reversed {
+  color: var(--link-color--light);
+  text-decoration-color: var(--link-color--light);
+
+  &:hover, &:focus-visible {
+    text-decoration-color: var(--link-color--light);
   }
 }
 
@@ -72,12 +94,12 @@ img {
 
 hr {
   border: none;
-  margin: rem(2) 0;
+  margin: _rem(2) 0;
   padding: 0;
   background: transparent;
-  height: rem(.1);
+  height: _rem(.1);
   width: 100%;
-  border-bottom: rem(.1) dotted rgba($nittany-navy, 0.25);
+  border-bottom: _rem(.1) dotted rgba($nittany-navy, 0.25);
 }
 
 nav {
@@ -87,24 +109,16 @@ nav {
     margin: 0;
     padding: 0;
     text-align: left;
-
-    li {
-      &.expanded,
-      &.collapsed,
-      &.leaf {
-        padding: 0;
-      }
-    }
   }
 }
 
 caption {
-  font-size: rem(2.2);
-  line-height: rem(2.8);
+  font-size: _rem(2.2);
+  line-height: _rem(2.8);
   clear: both;
   color: $nittany-navy;
   font-weight: 700;
-  padding-bottom: rem(2);
+  padding-bottom: _rem(2);
   text-align:left;
 }
 
@@ -117,27 +131,9 @@ footer {
   overflow: hidden;
 }
 
-blockquote {
-  margin: 0;
-
-  p {
-    &::before {
-      content: open-quote;
-    }
-
-    &::after {
-      content: close-quote;
-    }
-    color: $beaver-blue;
-    font-size: rem(1.4);
-    line-height: rem(2.4);
-    text-indent:rem(-.5);
-  }
-}
-
-@import "fields";
-@import "typography";
-@import "forms";
+@import 'blockquote';
+@import 'figure';
+@import "buttons";
 
 // Class selectors
 
@@ -154,6 +150,37 @@ span {
   }
 }
 
-@include visible_at(xs);
-@include visible_at(s);
-@include visible_at(m);
+// Custom properties are amazing...but often times with newer technology,
+// often alien at the same time.  To understand this mechanism, one first
+// has to understand two under-advertised features of CSS.
+//
+// 1. The 'initial' keyword and the concept of Guaranteed-Invalid. The CSS
+// specification says that when a custom property encounters a value that is
+// the Guaranteed-Invalid state, the behavior is that it will fall back to
+// the next value in the chain.  Using the 'initial' keyword, a property can
+// be reset to the Guaranteed-Invalid state.  For example `var(initial, red)`
+// must evaluate to `red`.
+// 2. A space character is allowed as the value of a custom property! The
+// syntax may look a little strange, but `--var: ;` is a variable that holds
+// a space character.
+//
+// Combining these two behaviors, one can accomplish amazing things.
+
+// By default, or in light contexts, set `--if-light` to initial and
+// `--if-dark` to a space.  This makes a pattern like:
+// `--color: var(--if-light, red) var(--if-dark, blue);` evaluate to:
+// `--color: red ;`.  Do note the extra space at the end! This space character
+// is the value of `--if-dark`!
+:root, [data-light] {
+  --if-light: initial;
+  --if-dark: ;
+}
+
+// Likewise, do the opposite for dark contexts.
+// `--color: var(--if-light, red) var(--if-dark, blue);` will evaluate to
+// `--color:  blue;`. Note there are two spaces between `--color:` and `blue;`.
+// The extra space character is the value of `if-light`.
+[data-dark] {
+  --if-dark: initial;
+  --if-light: ;
+}

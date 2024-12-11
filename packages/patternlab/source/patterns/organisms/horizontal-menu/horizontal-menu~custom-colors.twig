@@ -1,0 +1,26 @@
+{% set menu %}
+  {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
+    menu_name: 'Example',
+    items: [
+      { title: 'Home', url: '#', in_active_trail: true, is_current_page: true },
+      { title: 'Finances', url: '#', below: [ { title: 'Tuition and Costs', url: '#' }, { title: 'Scholarships', url: '#' }, { title: 'Financial Aid', url: '#' }, { title: 'Paying Your Bill', url: '#' }, { title: 'Financial Literacy', url: '#' } ]},
+      { title: 'Inclusion and Wellness', url: '#', below: [ { title: 'Diversity and Inclusion', url: '#' }, { title: 'Disabilities and Accomodations', url: '#' }, { title: 'Mental Health', url: '#' } ]},
+      { title: 'Enrollment and Registration', url: '#', below: [ { title: 'Course Planning', url: '#' }, { title: 'Adding and Dropping Courses', url: '#' }, { title: 'Grading and Transcripts', url: '#' }, { title: 'Deferring a Grade', url: '#' }, { title: 'Withdrawing from a Semester', url: '#' } ]},
+      { title: 'Course Work and Success', url: '#', below: [ { title: 'Academic Advising', url: '#' }, { title: 'Preparing for and Attending Courses', url: '#' }, { title: 'Proctored Exams', url: '#' }, { title: 'Tutoring', url: '#' }, { title: 'Math, Writing, and Subject Support', url: '#' } ]},
+      { title: 'Involvement and Opportunities', url: '#', below: [ { title: 'Career Resources', url: '#' }, { title: 'Student Organizations', url: '#' }, { title: 'Student Government', url: '#' }, { title: 'Student Leadership Opportunities', url: '#' }, { title: 'Internships', url: '#' } ]},
+    ],
+  } only %}
+{% endset %}
+<div style="
+  position: relative;
+  z-index: 1;
+  background-color: var(--keystone-light);
+  --accent-color: var(--futures-calling);
+  --accent-color-semantic: var(--pa-link);
+  --focus-indicator-color: var(--pa-link);
+  --horizontal-menu-link-active-background-color: var(--keystone);
+  --horizontal-menu-link-active-foreground-color: var(--nittany-navy);">
+  {% include '@psu-ooe/callout/callout.twig' with {
+    content: menu,
+  } only %}
+</div>

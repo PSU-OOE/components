@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/layout-multi-col",
+  "version": "1.1.2",
+  "description": "Common styles for multi-column layouts.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^2.0"
+  }
+}

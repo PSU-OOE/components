@@ -1,0 +1,179 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.horizontal-menu {
+  position: relative;
+
+  // Create a stacking context so that both child and grand-child elements
+  // are able to use the menu root for relative positioning.
+  //
+  // @see https://meyerweb.com/eric/thoughts/2011/09/12/un-fixing-fixed-elements-with-css-transforms/
+  transform: rotate(0deg);
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--2 {
+      background: var(--white);
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      opacity: 0;
+      visibility: hidden;
+      box-shadow: _rem(.1) _rem(.3) _rem(.5) color-mix(in srgb, var(--nittany-navy) 75%, transparent);
+      border-left: _rem(.3) solid var(--accent-color, var(--sky-blue));
+      padding: _rem(.5) _rem(2);
+      min-width: 100%;
+      width: _rem(23);
+
+      @supports not (color: color-mix(in srgb, white, white)) {
+        box-shadow: _rem(.1) _rem(.3) _rem(.5) rgba($nittany-navy, .75);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    break-inside: avoid;
+
+    &--1 {
+      display: flex;
+      flex: 1 0 auto;
+
+      &:last-child .horizontal-menu__menu {
+        right: 0;
+      }
+    }
+
+    &--2 {
+      &:not(:last-child) {
+        border-bottom: _rem(.1) solid var(--slate-light);
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-family: var(--font-family--default);
+    text-decoration: none;
+    width: 100%;
+
+    &--1 {
+      text-align: center;
+      font-size: var(--font-size--xsmall);
+      font-weight: var(--font-weight--semibold);
+      line-height: var(--line-height--nospace);
+      letter-spacing: var(--letter-spacing--medium);
+      color: var(--text-color);
+      padding: _rem(2.4) _rem(1.1);
+      transition: background-color var(--transition-duration--default) linear,
+                  color var(--transition-duration--default) linear;
+
+      @include bp(l) {
+        font-size: var(--font-size--small);
+      }
+
+      @include bp(xl) {
+        font-size: var(--font-size--msmall);
+        padding: _rem(2.4) _rem(1.6);
+      }
+
+      &:focus-within, &:hover, &:has(+ [aria-expanded="true"]) {
+        background: var(--horizontal-menu-link-active-background-color, var(--pa-link));
+        color: var(--horizontal-menu-link-active-foreground-color, var(--text-color));
+        text-decoration: none;
+      }
+
+      &:has(+ [aria-expanded="true"]) {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          width: _rem(.3);
+          background-color: var(--accent-color, var(--sky-blue));
+        }
+      }
+
+      &:focus-visible {
+        outline: _rem(.2) solid var(--focus-indicator-color);
+        outline-offset: 0;
+      }
+
+      &.horizontal-menu__link--active-trail {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          inset: calc(100% - _rem(.9)) _rem(.5) _rem(.5) _rem(.5);
+          background-color: var(--accent-color-semantic, var(--sky-blue));
+        }
+      }
+
+    }
+
+    &:not(&--1) {
+      color: var(--text-color--default);
+      font-size: var(--font-size--xsmall);
+      line-height: var(--line-height--xsnug);
+      letter-spacing: var(--letter-spacing--medium);
+      padding: _rem(1.6) 0;
+      @include bp(xl) {
+        font-size: var(--font-size--msmall);
+      }
+
+      &:hover, &:focus-visible {
+        color: var(--accent-color-semantic, var(--sky-blue));
+      }
+
+      &:focus-visible {
+        outline-offset: _rem(-.1);
+      }
+
+      &.horizontal-menu__link--active-trail {
+        font-weight: var(--font-weight--bold);
+      }
+    }
+  }
+
+  &__toggle {
+    background: var(--horizontal-menu-link-active-background-color, var(--pa-link));
+    border: none;
+    position: absolute;
+    inset: 0 _rem(-.8) 0 calc(100% - _rem(.8));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: var(--z-index--dropdown);
+
+    &:focus-visible {
+      opacity: 1;
+      outline: _rem(.2) solid var(--focus-indicator-color);
+      outline-offset: 0;
+    }
+
+    &[aria-expanded="true"] + .horizontal-menu__menu {
+      visibility: visible;
+      opacity: 1;
+      height: auto;
+      z-index: var(--z-index--dropdown);
+    }
+  }
+
+  &__toggle[aria-expanded="true"] &__chevron .sprite {
+    transform: rotateX(180deg);
+  }
+
+  &__chevron .sprite {
+    color: var(--horizontal-menu-link-active-foreground-color, var(--text-color));
+    width: _rem(1.6);
+    height: auto;
+    transition: transform var(--transition-duration--default) linear;
+  }
+}

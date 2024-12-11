@@ -1,0 +1,45 @@
+@import '../../../base/src/scss/imports/variables';
+@import '../../../base/src/scss/imports/layout';
+
+.page-title-banner-plain {
+  background: var(--light-grey);
+  overflow: hidden;
+  position: relative;
+
+  &__geometrics .sprite {
+    opacity: .3;
+    position: absolute;
+    top: _rem(-34);
+    right: _rem(-30);
+    width: _rem(60);
+    height: auto;
+
+    // The design calls for a white to transparent linear gradient from
+    // left to right on the geometric lines. The hub geometric sprite has
+    // an API that takes an optional fill property, so we can apply this
+    // unique gradient, tightly scoped to this particular context.
+    //
+    // The #hub-geometric-page-title-gradient is provided via the accompanying
+    // twig template and is served inline in the DOM Response.
+    //
+    // @see https://github.com/PSU-OOE/components/blob/bleeding-edge-headers/packages/sprite/src/assets/hub-geometric.svg
+    --hub-geometric-gradient: url(#hub-geometric-page-title-banner-plain-gradient);
+
+    @include bp(m) {
+      left: calc(max(50%, _rem(59.5)) + _rem(22));
+      right: unset;
+      width: _rem(67);
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: _rem(119);
+    margin: 0 auto;
+    padding: _rem(6) _rem(4) _rem(3) _rem(2);
+
+    @include bp(m) {
+      padding: _rem(8) _rem(16) _rem(3) _rem(4);
+    }
+  }
+}

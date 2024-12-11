@@ -1,0 +1,16 @@
+{% set menu %}
+  {% include '@psu-ooe/more-menu/more-menu.twig' with {
+    stacked: true,
+    button_label: '<span class="visually-hidden">4</span> More <span class="visually-hidden">options</span>',
+    links: [
+      { "url": "#", "label": "Item 1"},
+      { "url": "#", "label": "Item 2"},
+      { "url": "#", "label": "Item 3"},
+      { "url": "#", "label": "Item 4"},
+    ]
+  } only %}
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  content: menu,
+} only %}
