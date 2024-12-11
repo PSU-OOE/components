@@ -1,0 +1,11 @@
+@import "../../../base/src/scss/imports/_variables.scss";
+
+.accordion-group {
+  &__accordion {
+    border-bottom: _rem(.1) solid var(--medium-grey);
+
+    &:first-child {
+      border-top: _rem(.1) solid var(--medium-grey);
+    }
+  }
+}
