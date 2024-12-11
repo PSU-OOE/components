@@ -2299,6 +2299,7 @@ __metadata:
     "@psu-ooe/spinner": "*"
     "@psu-ooe/sprite": "*"
     "@psu-ooe/sticky-panel": "*"
+    "@psu-ooe/table": "*"
     "@psu-ooe/tabs": "*"
     "@psu-ooe/textarea": "*"
     "@psu-ooe/upcoming-events": "*"
@@ -2417,6 +2418,14 @@ __metadata:
   dependencies:
     "@psu-ooe/band": ^2.0
     "@psu-ooe/base": ^2.6.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/table@*, @psu-ooe/table@workspace:packages/table":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/table@workspace:packages/table"
+  dependencies:
+    "@psu-ooe/base": ^2.0
   languageName: unknown
   linkType: soft
 
