@@ -1,0 +1,28 @@
+{% set table %}
+<div class="a11y-table">
+  <table class="a11y-table__table">
+    <caption class="a11y-table__caption">The table caption that is pretty darn long...probably longer than it ever would be in "real" content?</caption>
+    <thead class="a11y-table__thead">
+      <tr class="a11y-table__tr">
+        {% for i in 1..15 %}
+          <th class="a11y-table__th" style="white-space: nowrap">Table header {{ i }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody class="a11y-table__tbody">
+      {% for i in 1..15 %}
+        <tr class="a11y-table__tr">
+          {% for j in 1..15 %}
+            <td class="a11y-table__td" style="white-space: nowrap">Table data ({{ i }}, {{ j }})</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endset %}
+
+{% include '@psu-ooe/background-container/background-container.twig' with {
+  color: 'light-grey',
+  content: table,
+} only %}
