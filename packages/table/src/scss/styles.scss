@@ -30,13 +30,13 @@
   background-repeat: no-repeat;
   background-size: 3rem 100%, 1.5rem 100%, 3rem 100%, 1.5rem 100%;
   background-attachment: local, scroll, local, scroll;
+  position: relative;
 
   &__table {
     border-collapse: collapse;
   }
 
   &__caption {
-    background-color: var(--a11y-table-bg);
     color: var(--text-color);
     font-size: var(--font-size--large);
     line-height: var(--line-height--xsnug);
