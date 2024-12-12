@@ -4,7 +4,6 @@
   container-type: inline-size;
   overflow: visible;
   overflow-x: scroll;
-  position: relative;
   -webkit-overflow-scrolling: touch;
   overflow-scrolling: touch;
 
@@ -20,45 +19,45 @@
 
   &__table {
     border-collapse: collapse;
-    width: 100%;
-    position: relative;
   }
 
   &__caption {
-    // Clip the shadow.
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    padding-right: _rem(1.5);
+    color: var(--text-color);
+    font-size: var(--font-size--large);
+    line-height: var(--line-height--xsnug);
+    font-weight: var(--font-weight--bold);
+    text-align: left;
     max-width: 100cqw;
+    margin-bottom: var(--text-element-vertical-space--default);
   }
 
   &__th, &__td {
     color: var(--text-color);
+    padding-top: _rem(2);
     font-size: _rem(1.6);
     line-height: 1.5;
     scroll-snap-align: start;
     text-align: left;
+        border-bottom: _rem(.1) solid var(--medium-grey);
+
+    &:not(:first-child) {
+      padding-left: _rem(2);
+    }
   }
 
   &__th {
     font-weight: bold;
   }
 
-  &__thead &__th {
+  &__td {
+    padding-bottom: _rem(2);
+  }
+
+  &__th {
     padding-bottom: _rem(1.5);
     border-bottom: _rem(.3) solid var(--medium-grey);
 
     &:not(:first-of-type) {
-      padding-left: _rem(2);
-    }
-  }
-
-  &__tbody > &__tr > &__th,
-  &__tbody > &__tr > &__td {
-    padding-top: _rem(2);
-    padding-bottom: _rem(2);
-    border-bottom: _rem(.1) solid var(--medium-grey);
-
-    &:not(:first-child) {
       padding-left: _rem(2);
     }
   }
