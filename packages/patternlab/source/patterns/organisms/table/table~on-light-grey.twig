@@ -22,7 +22,13 @@
 </div>
 {% endset %}
 
+{% set callout %}
+  {% include '@psu-ooe/callout/callout.twig' with {
+  content: table,
+} only %}
+{% endset %}
+
 {% include '@psu-ooe/background-container/background-container.twig' with {
   color: 'light-grey',
-  content: table,
+  content: callout,
 } only %}
