@@ -94,4 +94,41 @@
       height: _rem(2.4);
     }
   }
+
+  .modal__confirm {
+    display: block;
+    margin-top: _rem(2);
+    border:none;
+    padding: _rem(1.5) _rem(3);
+    font-family: var(--font-family--default);
+    font-size: var(--font-size--msmall);
+    line-height: var(--line-height--2xsnug);
+    font-weight: var(--font-weight--semibold);
+    border-radius: var(--button-border-radius--default);
+    transition: background-color var(--transition-duration--default) ease-in-out,
+                border-color var(--transition-duration--default) ease-in-out,
+                color var(--transition-duration--default) ease-in-out;
+    text-align:center;
+    color: var(--white);
+    background-color: var(--pa-link);
+    outline-offset: _rem(-.5);
+    position: relative;
+
+    @include bp(m) {
+      padding: _rem(1.7) _rem(3.125);
+    }
+
+    &:hover, &:focus-visible {
+      background-color: var(--nittany-navy);
+    }
+
+    &:focus-visible {
+      outline: _rem(.2) solid var(--focus-indicator-color);
+      outline-offset: _rem(-.5);
+    }
+
+    &--right {
+      margin-left: auto;
+    }
+  }
 }

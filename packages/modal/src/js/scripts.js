@@ -23,6 +23,7 @@
       const modalContainer = modalOverlay.firstElementChild;
       const modalTitle = modalContainer.firstElementChild;
       const modalCloseBtn = modalTitle.nextElementSibling;
+      const modalConfirmBtn = modalContainer.querySelector('.modal__confirm');
 
       modal.addEventListener('component:activate', e => {
         if (!modal.classList.contains('show-modal')) {
@@ -44,6 +45,13 @@
       modalCloseBtn.addEventListener("click", (e) => {
         modal.dispatchEvent(new CustomEvent('component:deactivate'));
       });
+
+      // Hiding the modal if there is a confirm button and the user hits confirm.
+      if (modalConfirmBtn) {
+        modalConfirmBtn.addEventListener("click", (e) => {
+          modal.dispatchEvent(new CustomEvent('component:deactivate'));
+        });
+      }
 
       // Hiding modal when clicking outside of it and moving focus back to triggering element
       modalOverlay.addEventListener("click", (e) => {

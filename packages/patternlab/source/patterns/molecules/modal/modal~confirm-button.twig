@@ -1,0 +1,27 @@
+{% set content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor eget justo eu cursus. In vitae vehicula massa, vel tincidunt tortor. Mauris luctus elit nibh, in placerat nulla condimentum et. Aenean ac porttitor dolor. Maecenas dignissim ultricies convallis. Pellentesque varius molestie sagittis. Aenean scelerisque nisi nunc, sed tincidunt urna suscipit a. Suspendisse vulputate egestas sapien, nec aliquet orci luctus a. Duis pellentesque sapien non leo efficitur convallis. Suspendisse pulvinar tortor nulla, vitae elementum quam lacinia eget. Fusce aliquet imperdiet ante at mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur eu justo a erat lobortis malesuada quis a justo. Morbi at nibh metus. <a href="#">Link to something</a>' %}
+
+{% set title = 'Modal Title' %}
+
+<button id="modal-trigger-confirm-button" class="modal__trigger">Click me to open the modal</button>
+
+{% include '@psu-ooe/modal/modal.twig' with {
+  content: content,
+  id: 'modal-confirm-button',
+  title: title,
+  confirm_button_label: 'Confirm',
+} only %}
+
+<script>
+  (() => {
+      const modal = document.getElementById('modal-confirm-button');
+      const trigger = document.getElementById('modal-trigger-confirm-button');
+      // Showing modal when clicking triggering element and moving focus to modal container
+      trigger.addEventListener("click", (e) => {
+          modal.dispatchEvent(new CustomEvent('component:activate', {
+              detail: {
+                  modal_trigger: trigger,
+              }
+          }));
+      });
+  })();
+</script>

@@ -7,6 +7,11 @@
       </button>
       <span class="modal__content">
         {{ content }}
+        {% if confirm_button_label %}
+          <button class="modal__confirm{% if confirm_button_position == 'right' %} modal__confirm--right{% endif %}">
+            {{- confirm_button_label -}}
+          </button>
+        {% endif %}
       </span>
     </div>
   </div>
