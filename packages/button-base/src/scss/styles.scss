@@ -1,0 +1,152 @@
+@import "../../../base/src/scss/imports/variables";
+@import "../../../base/src/scss/imports/layout";
+@import "mixins";
+
+.button {
+
+  // Default coloration for light contexts.
+  --button-background-color-light: var(--pa-link);
+  --button-background-color-active-light: var(--nittany-navy);
+  --button-foreground-color-light: var(--white);
+  --button-foreground-color-active-light: var(--white);
+  --button-outline-color-light: var(--focus-indicator-color);
+
+  // Default coloration for dark contexts.
+  --button-background-color-dark: var(--white);
+  --button-background-color-active-dark: var(--keystone-light);
+  --button-foreground-color-dark: var(--beaver-blue);
+  --button-foreground-color-active-dark: var(--beaver-blue);
+  --button-outline-color-dark: var(--nittany-navy);
+
+  // Auto-contrast based on light or dark context.
+  color: var(--if-light, var(--button-foreground-color-light)) var(--if-dark, var(--button-foreground-color-dark));
+  background-color: var(--if-light, var(--button-background-color-light)) var(--if-dark, var(--button-background-color-dark));
+
+  font-family: var(--font-family--default);
+  font-size: var(--font-size--msmall);
+  line-height: var(--line-height--2xsnug);
+  font-weight: var(--font-weight--semibold);
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: _rem(.8);
+  border: none;
+  margin: 0;
+  padding: _rem(1.5) _rem(3);
+  text-decoration:none;
+  border-radius: var(--button-border-radius--default);
+  transition: background-color var(--transition-duration--default) ease-in-out,
+              border-color var(--transition-duration--default) ease-in-out,
+              color var(--transition-duration--default) ease-in-out;
+  position: relative;
+  max-width: 100%;
+
+  @include bp(m) {
+    padding: _rem(1.7) _rem(3.125);
+  }
+
+  &:hover, &:focus-visible {
+    text-decoration: none;
+    background-color: var(--if-light, var(--button-background-color-active-light)) var(--if-dark, var(--button-background-color-active-dark));
+    color: var(--if-light, var(--button-foreground-color-active-light)) var(--if-dark, var(--button-foreground-color-active-dark));
+  }
+
+  &:focus-visible {
+    outline: _rem(.2) solid var(--if-light, var(--button-outline-color-light)) var(--if-dark, var(--button-outline-color-dark));
+    outline-offset: _rem(-.5);
+  }
+
+  &--compact {
+    font-size: var(--font-size--small);
+    padding: _rem(1.3) _rem(2.2);
+  }
+
+  &--xcompact,
+  &--compact-responsive {
+    font-size: var(--font-size--4xsmall);
+    min-height: _rem(3.6);
+    padding: _rem(0.5) _rem(1);
+  }
+
+  &--compact-responsive {
+    @include bp(m) {
+      padding: _rem(1.5) _rem(2);
+      font-size: var(--font-size--small);
+    }
+  }
+
+  &--expand-to-fit {
+    display: flex;
+    width: stretch; /* official name - not supported by major browsers yet */
+    width: -webkit-fill-available;
+    width: -moz-available;
+  }
+
+  &--shadow {
+    box-shadow: _rem(.1) _rem(.1) rgba(0,0,0,0.25);
+    filter: drop-shadow(_rem(-.1) _rem(-.1) 0 rgba(255,255,255,0.67));
+  }
+
+  &--bold {
+    font-weight: var(--font-weight--bold);
+  }
+
+  &__label--clamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--button-label-clamp);
+    overflow: hidden;
+  }
+
+  &__icon {
+    display: flex;
+  }
+}
+
+.button--hollow-solid,
+.button--hollow-dotted {
+  border-width: var(--if-light, _rem(.1)) var(--if-dark, 0);
+  border-color: var(--if-light, var(--pa-link)) var(--if-dark, transparent);
+}
+
+.button--hollow-solid {
+  border-style: solid;
+}
+
+.button--hollow-dotted {
+  border-style: dotted;
+}
+
+@include button-color-light('alt', var(--beaver-blue), var(--white), var(--nittany-navy), var(--white), var(--sky-blue));
+@include button-color-light('keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--nittany-navy), var(--nittany-navy));
+@include button-color-light('keystone-light', var(--keystone-light), var(--nittany-navy), var(--keystone), var(--nittany-navy), var(--nittany-navy));
+@include button-color-light('hollow-solid', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+@include button-color-light('hollow-dotted', transparent, var(--beaver-blue), var(--pugh-blue), var(--nittany-navy), var(--nittany-navy));
+@include button-color-light('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+
+@include button-color-dark('keystone', var(--keystone), var(--nittany-navy), var(--invent-orange-light), var(--black), var(--nittany-navy));
+@include button-color-dark('keystone-light', var(--keystone-light), var(--nittany-navy), var(--keystone), var(--nittany-navy), var(--nittany-navy));
+@include button-color-dark('reversed', var(--white), var(--beaver-blue),var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+@include button-color-dark('light-blue', var(--pa-link-light), var(--beaver-blue), var(--keystone-light), var(--beaver-blue), var(--nittany-navy));
+
+// @TODO: This is not part of the component API.
+.button--expand {
+  --button-background-color-light: var(--light-mauve);
+  --button-foreground-color-light: var(--beaver-blue);
+  --button-background-color-active-light: var(--pugh-blue);
+  --button-foreground-color-active-light: var(--beaver-blue);
+  --focus-indicator-color-light: var(--nittany-navy);
+  transition: color .3s linear, background-color .3s linear, box-shadow .3s linear;
+  box-shadow: _rem(.1)_rem(.1) 0 0 color-mix(in srgb, var(--nittany-navy) 50%, transparent);
+
+  &:focus-visible, &:hover {
+    box-shadow: 0.1rem 0.1rem 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
+    background-color: var(--pugh-blue);
+  }
+
+  &:is(.bg--light-grey *) {
+    --button-background-color-light: var(--white);
+  }
+}

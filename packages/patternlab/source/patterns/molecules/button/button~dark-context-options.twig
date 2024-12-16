@@ -1,0 +1,38 @@
+{% set dark_background_options %}
+    {% include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Reversed (default)',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+  } only %}
+  <br><br>
+  {% include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Keystone',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color_on_dark: 'keystone',
+  } only %}
+  <br><br>
+  {% include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Keystone Light',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color_on_dark: 'keystone-light',
+  } only %}
+  <br><br>
+  {% include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Light Blue',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color_on_dark: 'light-blue',
+  } only %}
+{% endset %}
+
+<h2>Dark background options</h2>
+{% include '@psu-ooe/callout/callout.twig' with {
+  background: 'blue-gradient',
+  content: dark_background_options
+} only %}

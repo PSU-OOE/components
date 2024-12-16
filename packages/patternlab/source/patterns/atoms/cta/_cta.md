@@ -31,7 +31,7 @@ title: CTA
 | alt              | If specified, the cta component will have the color modifier of 'alt'             |
 | hollow-dotted    | If specified, the cta component will have the color modifier of 'hollow-dotted'   |
 | hollow-solid     | If specified, the cta component will have the color modifier of 'hollow-solid'    |
-| color-keystone   | If specified, the cta component will have the color modifier of 'color-keystone'  |
+| keystone   | If specified, the cta component will have the color modifier of 'keystone'  |
 | light-blue       | If specified, the cta component will have the color modifier of 'light-blue'      |
 | expand           | If specified, the cta component will have the color modifier of 'expand'          |
 | expand-reversed  | If specified, the cta component will have the color modifier of 'expand-reversed' |
@@ -40,7 +40,7 @@ title: CTA
 | Modifier        | Description                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|
 | reversed        | If specified, the cta component will have the color modifier of 'reversed'        |
-| color-keystone  | If specified, the cta component will have the color modifier of 'color-keystone'  |
+| keystone  | If specified, the cta component will have the color modifier of 'keystone'  |
 | light-blue      | If specified, the cta component will have the color modifier of 'light-blue'      |
 
 ## Icon modifiers

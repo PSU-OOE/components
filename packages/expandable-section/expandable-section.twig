@@ -4,19 +4,26 @@
       {{ intro }}
     </div>
   {% endif %}
-  <button class="expandable-section__expand cta-block cta-block--expand cta-block--on-dark-reversed cta-block--expand-to-fit" aria-expanded="false">
-    {{ expand_label }}
-    <span class="cta-block__icon cta-block__icon--after">
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-down' } only %}
-    </span>
-  </button>
-  <div class="expandable-section__content" style="height:0;overflow:hidden;">
+  {% include '@psu-ooe/button/button.twig' with {
+    classes: ['expandable-section__expand', 'button--expand', 'button--on-dark-reversed'],
+    color: 'expand',
+    expand_to_fit: true,
+    expanded: expanded ? 'true' : 'false',
+    controls: id,
+    label: expand_label,
+    color: 'raised',
+    icon_after: 'fas-chevron-down',
+  } only %}
+  <div class="expandable-section__content"{% if not expanded %} style="height:0;overflow:hidden;"{% endif %}>
     {{ content }}
   </div>
-  <button class="expandable-section__collapse cta-block cta-block--expand cta-block--on-dark-reversed cta-block--expand-to-fit" aria-expanded="false">
-    {{ collapse_label }}
-    <span class="cta-block__icon cta-block__icon--after">
-      {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-up' } only %}
-    </span>
-  </button>
+  {% include '@psu-ooe/button/button.twig' with {
+    classes: ['expandable-section__collapse', 'button--expand', 'button--on-dark-reversed'],
+    expand_to_fit: true,
+    expanded: expanded ? 'true' : 'false',
+    controls: id,
+    label: expand_label,
+    color: 'raised',
+    icon_after: 'fas-chevron-up',
+  } only %}
 </div>

@@ -1,0 +1,27 @@
+<h2>Label is never truncated</h2>
+{% include '@psu-ooe/button/button.twig' with {
+  type: 'button',
+  label: 'Default button with a super long label that spans multiple lines',
+  icon_before: 'fa-chevron-left',
+  icon_after: 'fas-chevron-right',
+} only %}
+<br><br>
+<h2>Label truncated when the first line wraps</h2>
+{% include '@psu-ooe/button/button.twig' with {
+  type: 'button',
+  label: 'Default button with a super long label that is truncated with ellipsis',
+  label_clamp: 1,
+  icon_before: 'fa-chevron-left',
+  icon_after: 'fas-chevron-right',
+  truncate_label: true,
+} only %}
+<br><br>
+<h2>Label truncated when the second line wraps</h2>
+{% include '@psu-ooe/button/button.twig' with {
+  type: 'button',
+  label: 'Default button with a super long label that is truncated with ellipsis on the second line',
+  label_clamp: 2,
+  icon_before: 'fa-chevron-left',
+  icon_after: 'fas-chevron-right',
+  truncate_label: true,
+} only %}
