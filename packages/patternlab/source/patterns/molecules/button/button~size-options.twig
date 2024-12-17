@@ -16,6 +16,13 @@
   } only -%}
   {%- include '@psu-ooe/button/button.twig' with {
     type: 'button',
+    label: 'Extra compact button',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    size: 'xcompact'
+  } only -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
     label: 'Compact responsive button',
     icon_before: 'fa-chevron-left',
     icon_after: 'fas-chevron-right',

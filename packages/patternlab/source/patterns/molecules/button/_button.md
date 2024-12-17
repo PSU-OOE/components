@@ -7,7 +7,7 @@
 | expanded      | bool    | false    | If true, the button will be rendered in expanded state. This is typically used in conjunction with the controls property. |
 | controls      | string  | false    | The id attribute of the element that this button controls.                                                                |
 | color         | string  | false    | The preferred color variation of the button                                                                               |
-| color_on_dark | string  | false    | The preferred color if the cta exists on a dark background (defaults to 'reversed')                                       |
+| color_on_dark | string  | false    | The preferred color if the button exists on a dark background (defaults to 'reversed')                                       |
 | font_weight   | string  | false    | The font weighting of the button                                                                                          |
 | size          | string  | false    | The size variation of the button                                                                                          |
 | expand_to_fit | boolean | false    | If true, the button will expand the width of parent container                                                             |
@@ -23,9 +23,10 @@
 ## Size modifiers
 | Size               | Description                                                                       |
 |--------------------|-----------------------------------------------------------------------------------|
-| xcompact           | An xcompact version of the cta                                                    |
-| compact            | A compact version of the cta                                                      |
-| compact-responsive | A compact-responsive version of the cta. Matches xcompact until medium breakpoint |
+| xcompact           | An xcompact version of the button                                                    |
+| compact            | A compact version of the button                                                      |
+| compact-responsive | A compact-responsive version of the button. Matches xcompact until medium breakpoint |
+| medium             | A medium version of the button                                                    |
 
 ## Font weight modifiers
 | Modifier | Description                                    |
