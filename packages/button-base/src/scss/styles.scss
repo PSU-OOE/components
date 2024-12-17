@@ -61,11 +61,19 @@
   &--medium {
     font-size: var(--font-size--small);
     padding: _rem(1.3) _rem(2.2);
+
+    .button__icon {
+      font-size: var(--font-size--xsmall);
+    }
   }
 
   &--compact {
     font-size: var(--font-size--xsmall);
     padding: _rem(1) _rem(1.2);
+
+    .button__icon {
+      font-size: var(--font-size--2xsmall);
+    }
   }
 
   &--xcompact,
@@ -73,12 +81,20 @@
     font-size: var(--font-size--4xsmall);
     min-height: _rem(3.6);
     padding: _rem(0.5) _rem(1);
+
+    .button__sprite {
+      font-size: var(--font-size--5xsmall);
+    }
   }
 
   &--compact-responsive {
     @include bp(m) {
       padding: _rem(1.5) _rem(2);
       font-size: var(--font-size--small);
+
+      .button__icon {
+        font-size: var(--font-size--xsmall);
+      }
     }
   }
 
