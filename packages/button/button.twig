@@ -1,10 +1,10 @@
-{%- set type = type in ['button', 'submit', 'reset'] ? type : '' -%}
+{%- set type = type in ['button', 'submit', 'reset'] ? type : 'button' -%}
 {%- set label_clamp = label_clamp ? label_clamp|number_format : '' -%}
 
 {%- set classes = classes|default([])|merge([
   'button',
   color in ['alt', 'keystone', 'keystone-light', 'hollow-solid', 'hollow-dotted', 'light-blue'] ? 'button--' ~ color,
-  color_on_dark in ['keystone', 'keystone-light', 'reversed', 'light-blue'] ? 'button--on-dark-' ~ color_on_dark,
+  color_on_dark in ['keystone', 'keystone-light', 'light-blue'] ? 'button--on-dark-' ~ color_on_dark,
   expand_to_fit ? 'button--expand-to-fit',
   font_weight in ['bold'] ? 'button--' ~ font_weight,
   size in ['xcompact', 'compact', 'compact-responsive'] ? 'button--' ~ size,
