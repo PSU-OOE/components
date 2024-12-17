@@ -1,0 +1,39 @@
+<h2>Additional sprite examples</h2>
+<div style="display:flex;gap:2rem;align-items:center;padding:0 2rem;flex-wrap:wrap;">
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Send',
+    icon_after: 'fas-paper-plane',
+  } only -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Trash',
+    icon_after: 'fas-trash',
+  } only -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Edit',
+    icon_after: 'fas-pencil',
+  } only -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Chat',
+    icon_after: 'fas-message',
+  } only -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Download Brochure',
+    icon_before: 'fas-file-pdf',
+  } only -%}
+</div>
+<br><br>
+<h2>Icons may also be passed into the 'label' property</h2>
+<div style="display:flex;gap:2rem;align-items:center;padding:0 2rem;flex-wrap:wrap;">
+  {%- set trash_sprite %}
+    {%- include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-trash' } only -%}
+  {% endset -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: '<span class="visually-hidden">Delete</span>' ~ trash_sprite,
+  } only -%}
+</div>

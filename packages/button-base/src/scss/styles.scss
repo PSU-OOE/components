@@ -58,9 +58,14 @@
     outline-offset: _rem(-.5);
   }
 
-  &--compact {
+  &--medium {
     font-size: var(--font-size--small);
     padding: _rem(1.3) _rem(2.2);
+  }
+
+  &--compact {
+    font-size: var(--font-size--xsmall);
+    padding: _rem(1) _rem(1.2);
   }
 
   &--xcompact,
