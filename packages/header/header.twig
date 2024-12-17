@@ -1,4 +1,10 @@
-<header class="header" data-dark>
+{%- set header_context = profile == 'inversed' ? 'light' : 'dark' -%}
+{%- set dogear_context = profile == 'inversed' ? 'dark' : 'light' -%}
+{%- set classes = [
+  'header',
+  profile in ['inversed'] ? 'header--' ~ profile,
+]|filter(class => class is not empty) -%}
+<header class="{{ classes|join(' ') }}" data-{{ header_context }}>
   <div class="header__geometrics">
     <svg width="0" height="0" style="position:absolute">
       <defs>
@@ -12,7 +18,7 @@
     {% include '@psu-ooe/sprite/sprite.twig' with { name: 'hub-geometric' } only %}
   </div>
   <div class="header__inner">
-    <div class="header__dogear" data-light>
+    <div class="header__dogear" data-{{ dogear_context }}>
       {% block dogear_content %}
         {{ dogear_content }}
       {% endblock %}
@@ -22,12 +28,12 @@
         {{ content }}
       {% endblock %}
     </div>
-    {% apply spaceless %}
-      <div class="header__overflow">
-        {% block overflow %}
-          {{ overflow }}
-        {% endblock %}
-      </div>
-    {% endapply %}
   </div>
+  {% apply spaceless %}
+    <div class="header__overflow">
+      {% block overflow %}
+        {{ overflow }}
+      {% endblock %}
+    </div>
+  {% endapply %}
 </header>

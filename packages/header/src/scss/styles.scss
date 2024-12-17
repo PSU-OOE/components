@@ -2,18 +2,33 @@
 @import '../../../base/src/scss/imports/layout';
 
 .header {
-  position: relative;
-
   // Straight beaver blue from 0% to 44rem left of center, then transition
   // from beaver blue to nittany navy from 44rem left of center to 44rem right
   // of center, then straight nittany navy from 44rem right of center to 100%.
-  background: linear-gradient(
+  --header-background: #{linear-gradient(
     to right,
     var(--beaver-blue) 0%,
     var(--beaver-blue) calc(50% - _rem(44)),
     var(--nittany-navy) calc(50% + _rem(44)),
     var(--nittany-navy) 100%
-  );
+  )};
+
+  --dogear-left-color: color-mix(in srgb, var(--slate-light) 50%, var(--white));
+  --dogear-right-color: var(--white);
+
+  position: relative;
+  background: var(--header-background);
+
+  // @TODO: Remove fallback when appropriate.
+  @supports not (color: color-mix(in srgb, white, white)) {
+    --dogear-left-color: rgba($slate-light, 50%);
+  }
+
+  &--inversed {
+    --header-background: var(--white);
+    --dogear-left-color: var(--beaver-blue);
+    --dogear-right-color: var(--nittany-navy);
+  }
 
   &__geometrics {
     position: absolute;
@@ -124,21 +139,11 @@
       // Extend the pseudo-element -2rem to the left to meet the viewport edge.
       inset: 0 0 0 _rem(-2);
 
-      background-color: var(--white);
-      background-image: linear-gradient(
+      background: linear-gradient(
         to right,
-        #{'color-mix(in srgb, var(--slate-light) 50%, transparent)'},
-        transparent 100%
+        var(--dogear-left-color),
+        var(--dogear-right-color) 100%
       );
-
-      // @TODO: Remove fallback when appropriate.
-      @supports not (color: color-mix(in srgb, white, white)) {
-        background-image: linear-gradient(
-          to right,
-          rgba($slate-light, 50%),
-          transparent 100%
-        );
-      }
 
       @include bp(s) {
         // Extend the pseudo-element -4rem to compensate for the wider padding.
@@ -162,7 +167,7 @@
     grid-area: content;
     display: flex;
     align-items: center;
-    padding: _rem(.3) 0;
+    padding: _rem(.5) 0;
 
     @include bp(m) {
       padding: _rem(1) 0 0 0;
@@ -170,7 +175,6 @@
   }
 
   &__overflow {
-    position: relative;
     grid-area: overflow;
 
     &:empty {
