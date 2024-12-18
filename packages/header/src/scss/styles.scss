@@ -15,6 +15,7 @@
 
   --dogear-left-color: color-mix(in srgb, var(--slate-light) 50%, var(--white));
   --dogear-right-color: var(--white);
+  --hub-geometrics-opacity: .3;
 
   position: relative;
   background: var(--header-background);
@@ -28,6 +29,7 @@
     --header-background: var(--white);
     --dogear-left-color: var(--beaver-blue);
     --dogear-right-color: var(--nittany-navy);
+    --hub-geometrics-opacity: .2;
   }
 
   &__geometrics {
@@ -52,7 +54,7 @@
       width: _rem(71.8);
       top: _rem(-42.7);
       height: auto;
-      opacity: .3;
+      opacity: var(--hub-geometrics-opacity);
 
       &:nth-child(2) {
         left: calc(50% - #{_rem(33)});
