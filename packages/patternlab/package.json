@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "2.0.37",
+  "version": "2.0.38",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -30,6 +30,7 @@
     "@psu-ooe/credential": "*",
     "@psu-ooe/cta": "*",
     "@psu-ooe/cta-tracking": "*",
+    "@psu-ooe/details": "*",
     "@psu-ooe/divider": "*",
     "@psu-ooe/drop-button": "*",
     "@psu-ooe/event-link": "*",
