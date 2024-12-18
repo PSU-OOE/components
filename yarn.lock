@@ -1772,7 +1772,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/details@workspace:packages/details":
+"@psu-ooe/details@*, @psu-ooe/details@workspace:packages/details":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/details@workspace:packages/details"
   dependencies:
@@ -2245,6 +2245,7 @@ __metadata:
     "@psu-ooe/credential": "*"
     "@psu-ooe/cta": "*"
     "@psu-ooe/cta-tracking": "*"
+    "@psu-ooe/details": "*"
     "@psu-ooe/divider": "*"
     "@psu-ooe/drop-button": "*"
     "@psu-ooe/event-link": "*"
