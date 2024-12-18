@@ -1,5 +1,4 @@
 {%- set label_clamp = label_clamp ? label_clamp|number_format : '' -%}
-
 {%- set classes = classes|default([])|merge([
   'cta-block',
   'button',
@@ -9,7 +8,6 @@
   font_weight in ['bold'] ? 'button--' ~ font_weight,
   size in ['xcompact', 'compact', 'compact-responsive'] ? 'button--' ~ size,
 ])|filter(class => class is not empty) -%}
-
 <a
   {%- if classes %} class="{{- classes|join(' ') -}}"{%- endif -%}
   {%- if url %} href="{{ url }}"{%- endif -%}
