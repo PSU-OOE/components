@@ -7,7 +7,7 @@
   color_on_dark in ['keystone', 'keystone-light', 'light-blue'] ? 'button--on-dark-' ~ color_on_dark,
   expand_to_fit ? 'button--expand-to-fit',
   font_weight in ['bold'] ? 'button--' ~ font_weight,
-  size in ['xcompact', 'compact', 'compact-responsive'] ? 'button--' ~ size,
+  size in ['medium', 'xcompact', 'compact', 'compact-responsive'] ? 'button--' ~ size,
 ])|filter(class => class is not empty) -%}
 
 <button

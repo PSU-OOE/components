@@ -2,6 +2,12 @@
 <div style="display:flex;gap:2rem;align-items:center;padding:0 2rem;flex-wrap:wrap;">
   {%- include '@psu-ooe/button/button.twig' with {
     type: 'button',
+    label: 'Default button',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+  } only -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
     label: 'Medium button',
     icon_before: 'fa-chevron-left',
     icon_after: 'fas-chevron-right',

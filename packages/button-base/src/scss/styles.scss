@@ -61,6 +61,7 @@
   &--medium {
     font-size: var(--font-size--small);
     padding: _rem(1.3) _rem(2.2);
+    gap: _rem(.7);
 
     .button__icon {
       font-size: var(--font-size--xsmall);
@@ -70,6 +71,7 @@
   &--compact {
     font-size: var(--font-size--xsmall);
     padding: _rem(1) _rem(1.2);
+    gap: _rem(.7);
 
     .button__icon {
       font-size: var(--font-size--2xsmall);
@@ -80,6 +82,7 @@
   &--compact-responsive {
     font-size: var(--font-size--4xsmall);
     min-height: _rem(3.6);
+    gap: _rem(.6);
     padding: _rem(0.5) _rem(1);
 
     .button__sprite {
