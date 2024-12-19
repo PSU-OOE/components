@@ -1,6 +1,36 @@
 @import '../../../base/src/scss/imports/variables';
 @import '../../../base/src/scss/imports/layout';
 
+:root {
+  --compact-search-icon-color--light: var(--pugh-blue);
+  --compact-search-text-color--light: var(--white);
+  --compact-search-icon-hover-color--light: var(--white);
+  --compact-search-text-hover-color--light: var(--white);
+  --compact-search-icon-active-color--light: var(--keystone-light);
+
+  --compact-search-icon-color--dark: var(--beaver-blue);
+  --compact-search-text-color--dark: var(--beaver-blue);
+  --compact-search-icon-hover-color--dark: var(--pa-link);
+  --compact-search-text-hover-color--dark: var(--nittany-navy);
+  --compact-search-icon-active-color--dark: var(--nittany-navy);
+}
+
+:root, [data-light] {
+  --compact-search-icon-color: var(--compact-search-icon-color--dark);
+  --compact-search-text-color: var(--compact-search-text-color--dark);
+  --compact-search-icon-hover-color: var(--compact-search-icon-hover-color--dark);
+  --compact-search-text-hover-color: var(--compact-search-text-hover-color--dark);
+  --compact-search-icon-active-color: var(--compact-search-icon-active-color--dark);
+}
+
+[data-dark] {
+  --compact-search-icon-color: var(--compact-search-icon-color--light);
+  --compact-search-text-color: var(--compact-search-text-color--light);
+  --compact-search-icon-hover-color: var(--compact-search-icon-hover-color--light);
+  --compact-search-text-hover-color: var(--compact-search-text-hover-color--light);
+  --compact-search-icon-active-color: var(--compact-search-icon-active-color--light);
+}
+
 .compact-search {
   &__toggle {
     display: flex;
@@ -13,24 +43,24 @@
     }
 
     &:where(:hover) &-sprite {
-      color: var(--white);
+      color: var(--compact-search-icon-hover-color);
     }
 
     &:hover &-label {
-      text-decoration-color: var(--white);
+      text-decoration-color: var(--compact-search-text-hover-color);
     }
 
     &-sprite {
-      color: var(--pugh-blue);
+      color: var(--compact-search-icon-color);
       transition: color var(--transition-duration--default) linear;
 
       &:is([aria-expanded="true"] > .compact-search__toggle > .compact-search__toggle-sprite) {
-        color: var(--keystone-light);
+        color: var(--compact-search-icon-active-color);
       }
     }
 
     &-label {
-      color: var(--white);
+      color: var(--compact-search-text-color);
       display: block;
       font-family: var(--font-family--default);
       font-weight: var(--font-weight--semibold);
@@ -43,7 +73,7 @@
       transition: text-decoration-color var(--transition-duration--default) linear;
 
       &:is(:focus-visible  > .compact-search__toggle > .compact-search__toggle-label) {
-        text-decoration-color: var(--white);
+        text-decoration-color: var(--compact-search-icon-active-color);
       }
     }
 
