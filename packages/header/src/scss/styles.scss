@@ -28,8 +28,12 @@
   &--inversed {
     --header-background: var(--white);
     --dogear-left-color: var(--beaver-blue);
-    --dogear-right-color: var(--nittany-navy);
+    --dogear-right-color: color-mix(in srgb, var(--beaver-blue), var(--nittany-navy) 25%);
     --hub-geometrics-opacity: .2;
+
+    @include bp(s) {
+      --dogear-right-color: color-mix(in srgb, var(--beaver-blue), var(--nittany-navy) 50%);
+    }
   }
 
   &__geometrics {
@@ -177,6 +181,7 @@
   }
 
   &__overflow {
+    position: relative;
     grid-area: overflow;
 
     &:empty {
