@@ -63,20 +63,24 @@
   {% block overflow %}
     <div style="background-color:white;height:.1rem;width:100%"></div>
     <div class="region region--segmentation-small">
+      <div class="region__content">
       <p>Small segmentation</p>
+      </div>
     </div>
     <div class="region region--primary-nav" data-dark>
-      {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
-        menu_name: 'Primary navigation menu',
-        items: [
-          { title: 'Home', url: '#', in_active_trail: true },
-          { title: 'Finances', url: '#' },
-          { title: 'Inclusion and Wellness', url: '#' },
-          { title: 'Enrollment and Registration' },
-          { title: 'Course Work and Success', url: '#' },
-          { title: 'Involvement and Opportunities', url: '#' },
-        ],
-      } only %}
+      <div class="region__content">
+        {% include '@psu-ooe/horizontal-menu/horizontal-menu.twig' with {
+          menu_name: 'Primary navigation menu',
+          items: [
+            { title: 'Home', url: '#', in_active_trail: true },
+            { title: 'Finances', url: '#' },
+            { title: 'Inclusion and Wellness', url: '#' },
+            { title: 'Enrollment and Registration' },
+            { title: 'Course Work and Success', url: '#' },
+            { title: 'Involvement and Opportunities', url: '#' },
+          ],
+        } only %}
+      </div>
     </div>
     <div class="region region--primary-nav-mobile">
       Mobile primary nav
