@@ -3,16 +3,15 @@
 
 :root {
   --compact-search-icon-color--light: var(--pugh-blue);
-  --compact-search-text-color--light: var(--white);
+  --compact-search-icon-active-color--light: var(--keystone);
   --compact-search-icon-hover-color--light: var(--white);
-  --compact-search-text-hover-color--light: var(--white);
-  --compact-search-icon-active-color--light: var(--keystone-light);
+  --compact-search-text-color--light: var(--white);
 
-  --compact-search-icon-color--dark: var(--beaver-blue);
+  --compact-search-icon-color--dark: var(--pa-link);
+  --compact-search-icon-hover-color--dark: var(--beaver-blue);
+  --compact-search-icon-active-color--dark: var(--sky-blue);
   --compact-search-text-color--dark: var(--beaver-blue);
-  --compact-search-icon-hover-color--dark: var(--pa-link);
-  --compact-search-text-hover-color--dark: var(--nittany-navy);
-  --compact-search-icon-active-color--dark: var(--nittany-navy);
+  --compact-search-text-hover-color--dark: var(--beaver-blue);
 }
 
 :root, [data-light] {
