@@ -3,22 +3,20 @@
 
 :root {
   --compact-search-icon-color--light: var(--pugh-blue);
-  --compact-search-icon-active-color--light: var(--keystone);
-  --compact-search-icon-hover-color--light: var(--white);
   --compact-search-text-color--light: var(--white);
+  --compact-search-icon-hover-color--light: var(--white);
+  --compact-search-icon-active-color--light: var(--keystone);
 
   --compact-search-icon-color--dark: var(--pa-link);
-  --compact-search-icon-hover-color--dark: var(--beaver-blue);
-  --compact-search-icon-active-color--dark: var(--sky-blue);
   --compact-search-text-color--dark: var(--beaver-blue);
-  --compact-search-text-hover-color--dark: var(--beaver-blue);
+  --compact-search-icon-active-color--dark: var(--sky-blue);
+  --compact-search-icon-hover-color--dark: var(--beaver-blue);
 }
 
 :root, [data-light] {
   --compact-search-icon-color: var(--compact-search-icon-color--dark);
   --compact-search-text-color: var(--compact-search-text-color--dark);
   --compact-search-icon-hover-color: var(--compact-search-icon-hover-color--dark);
-  --compact-search-text-hover-color: var(--compact-search-text-hover-color--dark);
   --compact-search-icon-active-color: var(--compact-search-icon-active-color--dark);
 }
 
@@ -26,7 +24,6 @@
   --compact-search-icon-color: var(--compact-search-icon-color--light);
   --compact-search-text-color: var(--compact-search-text-color--light);
   --compact-search-icon-hover-color: var(--compact-search-icon-hover-color--light);
-  --compact-search-text-hover-color: var(--compact-search-text-hover-color--light);
   --compact-search-icon-active-color: var(--compact-search-icon-active-color--light);
 }
 
@@ -46,7 +43,7 @@
     }
 
     &:hover &-label {
-      text-decoration-color: var(--compact-search-text-hover-color);
+      text-decoration-color: var(--compact-search-text-color);
     }
 
     &-sprite {
