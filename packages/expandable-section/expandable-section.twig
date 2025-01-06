@@ -8,7 +8,7 @@
     classes: ['expandable-section__expand', 'button--raised'],
     color: 'expand',
     expand_to_fit: true,
-    expanded: expanded ? 'true' : 'false',
+    expanded: expanded,
     controls: id,
     label: expand_label,
     color: 'raised',
@@ -20,7 +20,7 @@
   {% include '@psu-ooe/button/button.twig' with {
     classes: ['expandable-section__collapse', 'button--raised'],
     expand_to_fit: true,
-    expanded: expanded ? 'true' : 'false',
+    expanded: expanded,
     controls: id,
     label: expand_label,
     color: 'raised',
