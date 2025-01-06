@@ -14,7 +14,7 @@
   {%- if classes %} class="{{- classes|join(' ') -}}"{%- endif -%}
   {%- if type %} type="{{- type -}} {%- endif -%}"
   {%- if label_clamp %} style="--button-label-clamp: {{- label_clamp -}}"{%- endif -%}
-  {%- if expanded in ['true', 'false'] %} aria-expanded="{{ expanded }}"{%- endif -%}
+  {%- if expanded is defined %} aria-expanded="{{ expanded ? 'true' : 'false' }}"{%- endif -%}
   {%- if controls %} aria-controls="{{ controls }}"{%- endif -%}
 >
   {%- if icon_before -%}
