@@ -6,12 +6,10 @@
   {% endif %}
   {% include '@psu-ooe/button/button.twig' with {
     classes: ['expandable-section__expand', 'button--raised'],
-    color: 'expand',
     expand_to_fit: true,
     expanded: expanded,
     controls: id,
     label: expand_label,
-    color: 'raised',
     icon_after: 'fas-chevron-down',
   } only %}
   <div class="expandable-section__content"{% if not expanded %} style="height:0;overflow:hidden;"{% endif %}>
@@ -22,8 +20,7 @@
     expand_to_fit: true,
     expanded: expanded,
     controls: id,
-    label: expand_label,
-    color: 'raised',
+    label: collapse_label,
     icon_after: 'fas-chevron-up',
   } only %}
 </div>
