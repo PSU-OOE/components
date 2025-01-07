@@ -19,6 +19,7 @@ title: CTA
 | xcompact           | An xcompact version of the cta                                                    |
 | compact            | A compact version of the cta                                                      |
 | compact-responsive | A compact-responsive version of the cta. Matches xcompact until medium breakpoint |
+| medium             | A medium version of the cta                                                       |
 
 ## Font weight modifiers
 | Modifier | Description                                    |
@@ -31,17 +32,15 @@ title: CTA
 | alt              | If specified, the cta component will have the color modifier of 'alt'             |
 | hollow-dotted    | If specified, the cta component will have the color modifier of 'hollow-dotted'   |
 | hollow-solid     | If specified, the cta component will have the color modifier of 'hollow-solid'    |
-| color-keystone   | If specified, the cta component will have the color modifier of 'color-keystone'  |
+| keystone   | If specified, the cta component will have the color modifier of 'keystone'  |
 | light-blue       | If specified, the cta component will have the color modifier of 'light-blue'      |
-| expand           | If specified, the cta component will have the color modifier of 'expand'          |
-| expand-reversed  | If specified, the cta component will have the color modifier of 'expand-reversed' |
 
 ## Dark color modifiers
-| Modifier        | Description                                                                       |
-|-----------------|-----------------------------------------------------------------------------------|
-| reversed        | If specified, the cta component will have the color modifier of 'reversed'        |
-| color-keystone  | If specified, the cta component will have the color modifier of 'color-keystone'  |
-| light-blue      | If specified, the cta component will have the color modifier of 'light-blue'      |
+| Modifier    | Description                                                                 |
+|-------------|-----------------------------------------------------------------------------|
+| reversed    | If specified, the cta component will have the color modifier of 'reversed'  |
+| keystone    | If specified, the cta component will have the color modifier of 'keystone'  |
+| light-blue  | If specified, the cta component will have the color modifier of 'light-blue'|
 
 ## Icon modifiers
 | Modifier       | Description                                                            |

@@ -1,14 +1,10 @@
-{% set classes = ['cta-group'] %}
-{% if expand_to_fit %}
-  {% set classes = classes|merge(['cta-group--expand-to-fit']) %}
-{% endif %}
-{% if align_right %}
-  {% set classes = classes|merge(['cta-group--align-right']) %}
-{% endif %}
-{% apply spaceless %}
-  <div class="{{ classes|join(' ') }}">
-    {% for cta in ctas %}
-      {{ cta }}
-    {% endfor %}
-  </div>
-{% endapply %}
+{%- set classes = [
+  'cta-group',
+  expand_to_fit ? 'cta-group--expand-to-fit',
+  align_right ? 'cta-group--align-right',
+]|filter(class => class is not empty) -%}
+<div class="{{- classes|join(' ') -}}">
+  {%- for cta in ctas -%}
+    {{- cta -}}
+  {%- endfor -%}
+</div>

@@ -1675,6 +1675,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/button-base@^1.0, @psu-ooe/button-base@workspace:packages/button-base":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/button-base@workspace:packages/button-base"
+  dependencies:
+    "@psu-ooe/base": ^2.2
+    "@psu-ooe/sprite": ^2.0.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/button@workspace:packages/button":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/button@workspace:packages/button"
+  dependencies:
+    "@psu-ooe/button-base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/callout@*, @psu-ooe/callout@workspace:packages/callout":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/callout@workspace:packages/callout"
@@ -1763,11 +1780,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cta@*, @psu-ooe/cta@^2.2, @psu-ooe/cta@workspace:packages/cta":
+"@psu-ooe/cta@*, @psu-ooe/cta@^3.0, @psu-ooe/cta@workspace:packages/cta":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta@workspace:packages/cta"
   dependencies:
-    "@psu-ooe/base": ^2.2
+    "@psu-ooe/button-base": ^1.0
     "@psu-ooe/cta-tracking": ^1.0
   languageName: unknown
   linkType: soft
@@ -1812,7 +1829,7 @@ __metadata:
   dependencies:
     "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/base": ^2.2
-    "@psu-ooe/cta": ^2.2
+    "@psu-ooe/cta": ^3.0
     "@psu-ooe/slide-toggle": ^1.0
   languageName: unknown
   linkType: soft

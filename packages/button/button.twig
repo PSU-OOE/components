@@ -1,18 +1,21 @@
+{%- set type = type in ['button', 'submit', 'reset'] ? type : 'button' -%}
 {%- set label_clamp = label_clamp ? label_clamp|number_format : '' -%}
+
 {%- set classes = classes|default([])|merge([
-  'cta-block',
   'button',
-  color in ['alt', 'keystone', 'keystone-light', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand'] ? 'button--' ~ color,
-  color_on_dark in ['keystone', 'keystone-light', 'reversed', 'light-blue'] ? 'button--on-dark-' ~ color_on_dark,
+  color in ['alt', 'keystone', 'keystone-light', 'hollow-solid', 'hollow-dotted', 'light-blue'] ? 'button--' ~ color,
+  color_on_dark in ['keystone', 'keystone-light', 'light-blue'] ? 'button--on-dark-' ~ color_on_dark,
   expand_to_fit ? 'button--expand-to-fit',
   font_weight in ['bold'] ? 'button--' ~ font_weight,
   size in ['medium', 'xcompact', 'compact', 'compact-responsive'] ? 'button--' ~ size,
 ])|filter(class => class is not empty) -%}
-<a
+
+<button
   {%- if classes %} class="{{- classes|join(' ') -}}"{%- endif -%}
-  {%- if url %} href="{{ url }}"{%- endif -%}
+  {%- if type %} type="{{- type -}} {%- endif -%}"
   {%- if label_clamp %} style="--button-label-clamp: {{- label_clamp -}}"{%- endif -%}
-  {%- if tracking_description and tracking_placement %} data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }} data-cta-description="{{ tracking_description }}" data-cta-placement="{{ tracking_placement }}"{%- endif -%}
+  {%- if expanded is defined %} aria-expanded="{{ expanded ? 'true' : 'false' }}"{%- endif -%}
+  {%- if controls %} aria-controls="{{ controls }}"{%- endif -%}
 >
   {%- if icon_before -%}
     <span class="button__icon">
@@ -33,4 +36,4 @@
       } only -%}
     </span>
   {%- endif -%}
-</a>
+</button>

@@ -18,7 +18,7 @@
             content.style['transition-duration'] = Math.min(Math.max(content.scrollHeight / 2, 200), 800) + 'ms';
             cms.expand(content);
           }
-          collapse.style.display = 'block';
+          collapse.style.display = 'flex';
           expand.style.display = 'none';
 
           // Say something for A/T users.
@@ -40,7 +40,7 @@
           }
           function afterCollapse() {
             content.removeEventListener('transitionend', afterCollapse);
-            expand.style.display = 'block';
+            expand.style.display = 'flex';
             expand.focus();
             collapse.style.display = 'none';
           }
