@@ -19,6 +19,7 @@ title: CTA
 | xcompact           | An xcompact version of the cta                                                    |
 | compact            | A compact version of the cta                                                      |
 | compact-responsive | A compact-responsive version of the cta. Matches xcompact until medium breakpoint |
+| medium             | A medium version of the cta                                                       |
 
 ## Font weight modifiers
 | Modifier | Description                                    |
