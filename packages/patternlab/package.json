@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "2.0.42",
+  "version": "2.0.43",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -22,6 +22,7 @@
     "@psu-ooe/bio": "*",
     "@psu-ooe/bio-collection": "*",
     "@psu-ooe/breadcrumbs": "*",
+    "@psu-ooe/button": "*",
     "@psu-ooe/callout": "*",
     "@psu-ooe/card": "*",
     "@psu-ooe/cards-list": "*",
