@@ -1684,7 +1684,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/button@workspace:packages/button":
+"@psu-ooe/button@*, @psu-ooe/button@^1.0, @psu-ooe/button@workspace:packages/button":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/button@workspace:packages/button"
   dependencies:
@@ -1780,7 +1780,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cta@*, @psu-ooe/cta@^3.0, @psu-ooe/cta@workspace:packages/cta":
+"@psu-ooe/cta@*, @psu-ooe/cta@workspace:packages/cta":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta@workspace:packages/cta"
   dependencies:
@@ -1829,7 +1829,7 @@ __metadata:
   dependencies:
     "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/base": ^2.2
-    "@psu-ooe/cta": ^3.0
+    "@psu-ooe/button": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
   languageName: unknown
   linkType: soft
@@ -2254,6 +2254,7 @@ __metadata:
     "@psu-ooe/bio": "*"
     "@psu-ooe/bio-collection": "*"
     "@psu-ooe/breadcrumbs": "*"
+    "@psu-ooe/button": "*"
     "@psu-ooe/callout": "*"
     "@psu-ooe/card": "*"
     "@psu-ooe/cards-list": "*"
