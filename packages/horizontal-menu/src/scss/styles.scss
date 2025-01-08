@@ -128,7 +128,7 @@
       }
 
       &:hover, &:focus-visible {
-        color: var(--accent-color-semantic, var(--sky-blue));
+        color: var(--horizontal-menu-link-foreground-color, var(--sky-blue));
       }
 
       &:focus-visible {
