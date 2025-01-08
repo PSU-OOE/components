@@ -81,7 +81,7 @@
 
       &:focus-within, &:hover, &:has(+ [aria-expanded="true"]) {
         background: var(--horizontal-menu-link-active-background-color, var(--pa-link));
-        color: var(--horizontal-menu-link-active-foreground-color, var(--text-color));
+        color: var(--text-color);
         text-decoration: none;
       }
 
@@ -128,7 +128,7 @@
       }
 
       &:hover, &:focus-visible {
-        color: var(--horizontal-menu-link-foreground-color, var(--sky-blue));
+        color: var(--horizontal-menu-link-active-foreground-color, var(--sky-blue));
       }
 
       &:focus-visible {
