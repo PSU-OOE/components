@@ -3,6 +3,7 @@
 {%- set classes = [
   'header',
   profile in ['inversed'] ? 'header--' ~ profile,
+  height in ['tall'] ? 'header--' ~ height
 ]|filter(class => class is not empty) -%}
 <header class="{{ classes|join(' ') }}" data-{{ header_context }}>
   <div class="header__geometrics">

@@ -188,4 +188,18 @@
       padding: _rem(.6) 0;
     }
   }
+  
+  &--tall &__inner {
+    @include bp(l) {
+      grid-template-columns: min(50%, _rem(25.5)) auto;
+    }
+  }
+
+  &--tall &__dogear {
+    @include bp(l) {
+      padding-top: _rem(2);
+      padding-bottom: _rem(2);
+      padding-right: _rem(9);
+    }
+  }
 }
