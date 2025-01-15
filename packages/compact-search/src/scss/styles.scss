@@ -32,6 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: var(--line-height--nospace);
 
     &:is(:focus-visible > .compact-search__toggle) {
       outline: _rem(.2) solid var(--focus-indicator-color);
@@ -61,7 +62,6 @@
       font-family: var(--font-family--default);
       font-weight: var(--font-weight--semibold);
       font-size: var(--font-size--5xsmall);
-      line-height: var(--line-height--nospace);
       text-decoration-color: transparent;
       text-decoration-line: underline;
       text-decoration-thickness: _rem(.1);
