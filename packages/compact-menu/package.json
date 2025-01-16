@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/compact-menu",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Provides a compact menu block.",
   "publishConfig": {
     "access": "public",
