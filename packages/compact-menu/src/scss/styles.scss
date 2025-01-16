@@ -28,6 +28,7 @@
 }
 
 .compact-menu {
+  display: flex;
   &__toggle {
     display: flex;
     justify-content: center;
