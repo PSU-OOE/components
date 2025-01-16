@@ -102,8 +102,8 @@
       }
     }
 
-    &--horizontal {
-      flex-direction: row;
+    &--horizontal,
+    &--horizontal-reversed {
       gap: _rem(.6);
 
       .compact-search__toggle-sprite .sprite {
@@ -119,6 +119,14 @@
           font-size: var(--font-size--msmall);
         }
       }
+    }
+
+    &--horizontal {
+      flex-direction: row;
+    }
+
+    &--horizontal-reversed {
+      flex-direction: row-reverse;
     }
   }
 }
