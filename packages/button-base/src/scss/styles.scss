@@ -129,6 +129,10 @@
   }
 }
 
+.button--square {
+  border-radius: var(--button-border-radius--square);
+}
+
 .button--hollow-solid,
 .button--hollow-dotted {
   border-width: var(--if-light, _rem(.1)) var(--if-dark, 0);
