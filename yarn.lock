@@ -1823,6 +1823,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/event-spotlight@workspace:packages/event-spotlight":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/event-spotlight@workspace:packages/event-spotlight"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/sprite": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/expandable-section@*, @psu-ooe/expandable-section@^1.0, @psu-ooe/expandable-section@workspace:packages/expandable-section":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/expandable-section@workspace:packages/expandable-section"
