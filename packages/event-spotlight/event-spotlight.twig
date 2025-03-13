@@ -3,7 +3,25 @@
   <div class="event-spotlight--content">
     <div class="event-spotlight--event-title"></div>
     <div class="event-spotlight--date-time"></div>
-    <div class="event-spotlight--read-more">{ read-more component }</div>
+    <div class="event-spotlight--read-more">
+      <div style="background: #005fa9; padding-top: 1em; padding-bottom: 1em; padding-left: 1em;">
+        {% include '@psu-ooe/read-more/read-more.twig' with {
+          reverse: true,
+          url: "https://www.google.com",
+          title: "Event details",
+          size: "medium"
+        } only %}
+      </div>
+    </div>
   </div>
-  <div class="event-spotlight--read-more-calendar">{ read-more link to calendar }</div>
+  <div class="event-spotlight--read-more-calendar">
+    <div style="background: #005fa9; padding-top: 1em; padding-bottom: 1em; padding-left: 1em;">
+      {% include '@psu-ooe/read-more/read-more.twig' with {
+        reverse: true,
+        url: "https://www.google.com",
+        title: "View all events",
+        size: "small"
+      } only %}
+    </div>
+  </div>
 </div>
