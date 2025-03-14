@@ -3,4 +3,8 @@
 .event-spotlight {
   background-color: $beaver-blue;
   width: 100%;
+
+  &--content {
+    margin-bottom: 3rem;
+  }
 }
