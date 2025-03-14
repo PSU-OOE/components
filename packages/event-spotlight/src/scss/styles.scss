@@ -6,14 +6,14 @@
 
   &--content {
     margin-bottom: 3rem;
+  }
 
-    &--title h2 {
-      font-size: var(--font-size--large);
-      font-family: var(--font-family--display);
-      font-weight: var(--font-weight--medium);
-      line-height: var(--line-height--2xsnug);
-      color: var(--text--color-reversed);
-      margin-bottom: 0.8rem;
-    }
+  &--title {
+    font-size: var(--font-size--large);
+    font-family: var(--font-family--display);
+    font-weight: var(--font-weight--medium);
+    line-height: var(--line-height--2xsnug);
+    color: var(--text--color-reversed);
+    margin-bottom: 0.8rem;
   }
 }
