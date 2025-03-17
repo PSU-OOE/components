@@ -2,7 +2,20 @@
   <div class="event-spotlight--image"></div>
   <div class="event-spotlight--content">
     <div class="event-spotlight--title">{{ title }}</div>
-    <div class="event-spotlight--date">{{ date }}</div>
+    <div class="event-spotlight--date">
+      {% include '@psu-ooe/smart-datetime/smart-date.twig' with {
+        start: '2022-03-22 8:00 EDT',
+        end: '2022-03-23 9:00 EDT',
+        timezone: 'America/New_York'
+      } only %}
+    </div>
+    <div class="event-spotlight--time">
+      {% include '@psu-ooe/smart-datetime/smart-time.twig' with {
+        start: '2022-03-22 8:00 EDT',
+        end: '2022-03-22 14:00 EDT',
+        timezone: 'America/New_York'
+      } only %}
+    </div>
     <div class="event-spotlight--read-more">
       <div style="background: #1e407c; padding-top: 1em; padding-bottom: 1em; padding-left: 1em;">
         {% include '@psu-ooe/read-more/read-more.twig' with {
