@@ -1,8 +1,16 @@
 @import "../../../base/src/scss/imports/variables";
 
 .event-spotlight {
+  container-name: event-spotlight;
+  container-type: size;
   width: 100%;
   background-color: $beaver-blue;
+
+  &__image {
+    // max rendered size: 410px x 169px
+    // center crop vertically and horizontally
+    aspect-ratio: 7 / 16;
+  }
 
   &__title {
     font-family: var(--font-family--display);
@@ -22,7 +30,6 @@
 
     .event-spotlight__date {
       font-weight: var(--font-weight--bold);
-      // need 1rem of space between day and time
     }
 
     .event-spotlight__time {
@@ -31,8 +38,15 @@
   }
 
   &__read-more-links {
-    .event-spotlight__read-more-calendar .read-more {
+    .event-spotlight__read-more-calendar a.read-more {
       padding: 0 2rem 2rem 2rem;
     }
+  }
+}
+
+// Container queries
+@container event-spotlight (min-width: 410px) {
+  .event-spotlight {
+    min-height: 20rem;
   }
 }
