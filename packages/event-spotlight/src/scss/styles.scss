@@ -12,4 +12,18 @@
     color: var(--text-color--light);
     margin-bottom: 0.8rem;
   }
+
+  &__date-time {
+    font-size: var(--font-size--xsmall);
+    margin-bottom: 0.8rem;
+
+    .event-spotlight__date {
+      font-weight: var(--font-weight--bold);
+      // need 1rem of space between day and time
+    }
+    
+    .event-spotlight__time {
+      font-weight: var(--font-weight--regular);
+    }
+  }
 }
