@@ -1,28 +1,32 @@
-<div class="event-spotlight" data-dark>
-  <div class="event-spotlight--image">{{ image }}</div>
-  <div class="event-spotlight--content">
-    <div class="event-spotlight--title">{{ title }}</div>
-    <div class="event-spotlight--date">{{ date }}</div>
-    <div class="event-spotlight--time">{{ time }}</div>
-    <div class="event-spotlight--read-more">
-      <div style="background: #1e407c; padding-top: 1em; padding-bottom: 1em; padding-left: 1em;">
-        {% include '@psu-ooe/read-more/read-more.twig' with {
-          reverse: true,
-          url: "https://www.google.com",
-          title: "Event details",
-          size: "medium"
-        } only %}
-      </div>
+<div class="event-spotlight">
+  <div class="event-spotlight__image">{{ image }}</div>
+  <div class="event-spotlight__content" data-dark>
+    <div class="event-spotlight__title">{{ title }}</div>
+    <div class="event-spotlight__date-time">
+      <div class="event-spotlight__date">{{ date }}</div>
+      <div class="event-spotlight__time">{{ time }}</div>
     </div>
-  </div>
-  <div class="event-spotlight--read-more-calendar">
-    <div style="background: #1e407c; padding: 0.2rem 2rem 2rem;">
-      {% include '@psu-ooe/read-more/read-more.twig' with {
-        reverse: true,
-        url: "https://www.google.com",
-        title: "View all events",
-        size: "small"
-      } only %}
+    <div class="event-spotlight__read-more-links">
+      <div class="event-spotlight__read-more-details">
+        <div style="background: #1e407c; padding-top: 1em; padding-bottom: 1em; padding-left: 1em;">
+          {% include '@psu-ooe/read-more/read-more.twig' with {
+            reverse: true,
+            url: "https://www.google.com",
+            title: "Event details",
+            size: "medium"
+          } only %}
+        </div>
+      </div>
+      <div class="event-spotlight__read-more-calendar">
+        <div style="background: #1e407c; padding: 0.2rem 2rem 2rem;">
+          {% include '@psu-ooe/read-more/read-more.twig' with {
+            reverse: true,
+            url: "https://www.google.com",
+            title: "View all events",
+            size: "small"
+          } only %}
+        </div>
+      </div>
     </div>
   </div>
 </div>
