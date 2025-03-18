@@ -29,4 +29,10 @@
       font-weight: var(--font-weight--regular);
     }
   }
+
+  &__read-more-links {
+    .event-spotlight__read-more-calendar .read-more {
+      padding: 0 2rem 2rem 2rem;
+    }
+  }
 }
