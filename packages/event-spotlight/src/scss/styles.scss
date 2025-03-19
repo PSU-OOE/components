@@ -5,10 +5,12 @@
   width: 100%;
   background-color: $beaver-blue;
 
-  &__image {
+  &__image img {
     // max rendered size: 410px x 169px
     // center crop vertically and horizontally
     aspect-ratio: 7 / 16;
+    max-width: 410px;
+    max-height: 169px;
   }
 
   &__title {
