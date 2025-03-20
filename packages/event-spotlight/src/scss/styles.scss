@@ -7,6 +7,11 @@
 
   &__image {
 
+    .event-spotlight__image-overlay {
+      position: relative;
+      background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
+    }
+
     img {
       // max rendered size: 410px x 169px
       // center crop vertically and horizontally
