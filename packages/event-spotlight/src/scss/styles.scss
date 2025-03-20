@@ -6,19 +6,23 @@
   background-color: $beaver-blue;
 
   &__image {
+    position: relative;
+    aspect-ratio: 7/16;
 
-    .event-spotlight__image-overlay {
-      position: relative;
-      background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
-    }
-
-    img {
+    .event-spotlight__image-img {
+      position: absolute;
+      inset: 0;
       // max rendered size: 410px x 169px
       // center crop vertically and horizontally
       // gradient overlay on bottom of image - height 6rem, bottom: beaver-blue, top: transparent
       // aspect-ratio: 7/16;
       // max-width: 410px;
       // max-height: 169px;
+    }
+
+    .event-spotlight__image-overlay {
+      position: relative;
+      background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
     }
   }
 
