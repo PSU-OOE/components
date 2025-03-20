@@ -6,17 +6,21 @@
   background-color: $beaver-blue;
 
   &__image {
-    // max rendered size: 410px x 169px
-    // center crop vertically and horizontally
 
     img {
-      //aspect-ratio: 7/16;
-      //max-width: 410px;
-      //max-height: 169px;
+      // max rendered size: 410px x 169px
+      // center crop vertically and horizontally
+      // gradient overlay on bottom of image - height 6rem, bottom: beaver-blue, top: transparent
+      // aspect-ratio: 7/16;
+      // max-width: 410px;
+      // max-height: 169px;
     }
   }
 
+  // Link to event around title, date, and read more
+  // Block, auto height and width, no padding/margin
   &__title {
+    // Parameter to determine heading level to fit with content - default to h2? (matt r.)
     font-family: var(--font-family--display);
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--medium);
@@ -49,6 +53,10 @@
 }
 
 // Container queries
+// 410px and above: suggests using a named sass variable like event-spotlight-breakpoint--wide
+// padding 2.5 rem 0 2.5rem 2.5rem around title/date/read-more
+// gradient overlay on LEFT of image, width: 6rem, left: beaver-blue, right: transparent
+// image - width: 17.5rem, height: 100%
 @container event-spotlight (min-width: 410px) {
   .event-spotlight {
     min-height: 20rem;
