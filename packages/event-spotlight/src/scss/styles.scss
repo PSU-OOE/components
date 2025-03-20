@@ -23,6 +23,15 @@
     .event-spotlight__image-overlay {
       position: relative;
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
+
+      ::after {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+        background: linear-gradient(to bottom, transparent 0%, var(--pa-link) 100%);
+        transition: opacity var(--transition-duration--default) linear;
+        opacity: 0;
+      }
     }
   }
 
