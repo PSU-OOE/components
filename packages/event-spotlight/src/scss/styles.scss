@@ -17,8 +17,11 @@
     }
   }
 
-  // Link to event around title, date, and read more
-  // Block, auto height and width, no padding/margin
+  &__content {
+    // Link to event around title, date, and read more
+    // Block, auto height and width, no padding/margin
+  }
+
   &__title {
     // Parameter to determine heading level to fit with content - default to h2? (matt r.)
     font-family: var(--font-family--display);
