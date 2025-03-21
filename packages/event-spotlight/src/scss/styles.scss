@@ -1,22 +1,24 @@
 @import "../../../base/src/scss/imports/variables";
 
 .event-spotlight {
+  display: flex;
+  flex-direction: column;
   container-name: event-spotlight;
   width: 100%;
   background-color: $beaver-blue;
 
   &__image {
     // copied from <a> in navigation-tile-image for now except where noted - will need to be moved
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    aspect-ratio: 7 / 16; // 16/9 for tile nav
-    outline: solid 0.2rem rgba(0, 0, 0, 0);
-    outline-offset: 0.2rem;
-    transition: outline-color var(--transition-duration--default) linear;
-    overflow: hidden;
-    text-decoration: none;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: flex-end;
+    //position: relative;
+    aspect-ratio: 16 / 7;
+    //outline: solid 0.2rem rgba(0, 0, 0, 0);
+    //outline-offset: 0.2rem;
+    //transition: outline-color var(--transition-duration--default) linear;
+    //overflow: hidden;
+    //text-decoration: none;
 
     .event-spotlight__image-img {
       position: absolute;
@@ -30,23 +32,29 @@
     }
 
     .event-spotlight__image-overlay {
-      position: relative;
-      background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
-
-      ::after {
-        content: "";
-        position: absolute;
-        inset: 0 0 0 0;
-        background: linear-gradient(to bottom, transparent 0%, var(--pa-link) 100%);
-        transition: opacity var(--transition-duration--default) linear;
-        opacity: 0;
-      }
+      position: absolute;
+      // should be on bottom of container at small, left at big
+      //position: relative;
+      //background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
+      //
+      //::after {
+      //  content: "";
+      //  position: absolute;
+      //  inset: 0 0 0 0;
+      //  background: linear-gradient(to bottom, transparent 0%, var(--pa-link) 100%);
+      //  transition: opacity var(--transition-duration--default) linear;
+      //  opacity: 0;
+      //}
     }
   }
 
   &__content {
     // Link to event around title/date/read more - NOT the image like in tiles
     // Block, auto height and width, no padding/margin
+
+    .event-spotlight__link {
+      display: block;
+    }
   }
 
   &__title {
@@ -90,5 +98,14 @@
 @container event-spotlight (min-width: 410px) {
   .event-spotlight {
     min-height: 20rem;
+    flex-direction: row;
+  }
+  .event-spotlight__image {
+    overflow: hidden;
+    // object position to center
+  }
+  .event-spotlight__image-img {
+    // might be able to keep aspect ratio
+    // object fit on image itself
   }
 }
