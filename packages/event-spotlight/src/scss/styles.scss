@@ -102,10 +102,10 @@
   }
   .event-spotlight__image {
     overflow: hidden;
-    // object position to center
+    object-position: center;
   }
   .event-spotlight__image-img {
+    object-fit: contain;
     // might be able to keep aspect ratio
-    // object fit on image itself
   }
 }
