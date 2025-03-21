@@ -89,7 +89,22 @@
 // padding 2.5 rem 0 2.5rem 2.5rem around title/date/read-more
 // gradient overlay on LEFT of image, width: 6rem, left: beaver-blue, right: transparent
 // image - width: 17.5rem, height: 100%
-@container event-spotlight (min-width: 410px) {
+//@container event-spotlight (min-width: 410px) {
+//  .event-spotlight {
+//    min-height: 20rem;
+//    flex-direction: row;
+//  }
+//  .event-spotlight__image {
+//    overflow: hidden;
+//    object-position: center;
+//  }
+//  .event-spotlight__image-img {
+//    object-fit: contain;
+//    // might be able to keep aspect ratio
+//  }
+//}
+
+@media (min-width: 410px) {
   .event-spotlight {
     min-height: 20rem;
     flex-direction: row;
