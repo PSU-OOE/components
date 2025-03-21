@@ -6,7 +6,7 @@
   background-color: $beaver-blue;
 
   &__image {
-    // copied from <a> in navigation-tile-image for now except where noted
+    // copied from <a> in navigation-tile-image for now except where noted - will need to be moved
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -45,12 +45,12 @@
   }
 
   &__content {
-    // Link to event around title/date/read more - NOT the image like tile - I have __image as the <a>
+    // Link to event around title/date/read more - NOT the image like in tiles
     // Block, auto height and width, no padding/margin
   }
 
   &__title {
-    // Parameter to determine heading level to fit with content - default to h2? (matt r.)
+    // "Parameter to determine heading level to fit with content - default to h2?" (matt r.)
     font-family: var(--font-family--display);
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--medium);
