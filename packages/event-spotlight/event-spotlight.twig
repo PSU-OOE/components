@@ -5,13 +5,12 @@
   </div>
   <div class="event-spotlight__content" data-dark>
 {# title, date, and read more/event details need to be the link to the event #}
-    <div class="event-spotlight__title">{{ title }}</div>
-    <div class="event-spotlight__date-time">
-      <span class="event-spotlight__date">{{ date }}</span>
-      <span class="event-spotlight__time">{{ time }}</span>
-    </div>
-    <div class="event-spotlight__read-more-links">
-{# the 'read more details' link will need to move to be included in the big ol link #}
+    <a href="#" class="event-spotlight__link">
+      <div class="event-spotlight__title">{{ title }}</div>
+      <div class="event-spotlight__date-time">
+        <span class="event-spotlight__date">{{ date }}</span>
+        <span class="event-spotlight__time">{{ time }}</span>
+      </div>
       <div class="event-spotlight__read-more-details">
         <div style="background: #1e407c; padding-top: 1em; padding-bottom: 1em; padding-left: 1em;">
           {% include '@psu-ooe/read-more/read-more.twig' with {
@@ -22,16 +21,16 @@
           } only %}
         </div>
       </div>
+    </a>
 {# This 'view all events/calendar' link is NOT included in the big ol link #}
-      <div class="event-spotlight__read-more-calendar">
-        <div style="background: #1e407c; padding: 0.2rem 2rem 2rem;">
-          {% include '@psu-ooe/read-more/read-more.twig' with {
-            reverse: true,
-            url: "https://www.google.com",
-            title: "View all events",
-            size: "small"
-          } only %}
-        </div>
+    <div class="event-spotlight__read-more-calendar">
+      <div style="background: #1e407c; padding: 0.2rem 2rem 2rem;">
+        {% include '@psu-ooe/read-more/read-more.twig' with {
+          reverse: true,
+          url: "https://www.google.com",
+          title: "View all events",
+          size: "small"
+        } only %}
       </div>
     </div>
   </div>
