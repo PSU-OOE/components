@@ -52,14 +52,22 @@
       text-decoration: none;
 
       .event-spotlight__read-more-text {
+        // copied from read-more medium styles on pattern lab
+        font-size: var(--font-size--small);
+        font-family: var(--font-family--default);
+        line-height: var(--line-height--2xsnug);
         text-transform: uppercase;
+        font-weight: var(--font-weight--bold);
+        position: relative;
+        display: inline-block;
+        padding-right: _rem(0.6);
       }
 
       .event-spotlight__read-more-chevron {
-        // copied from read-more.scss
+        // copied from read more medium styles on pattern lab
         position: absolute;
-        //font-size: _rem(1);
-        //margin-top: _rem(.2);
+        font-size: 1rem;
+        margin-top: 0.2rem;
       }
     }
   }
