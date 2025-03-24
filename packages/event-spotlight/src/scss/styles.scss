@@ -3,7 +3,7 @@
 .event-spotlight {
   display: flex;
   flex-direction: column;
-  container-name: event-spotlight;
+  //container-name: event-spotlight;
   width: 100%;
   background-color: $beaver-blue;
 
@@ -48,6 +48,7 @@
 
     .event-spotlight__link {
       display: block;
+      text-decoration: none;
     }
   }
 
