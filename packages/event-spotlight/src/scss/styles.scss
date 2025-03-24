@@ -43,6 +43,7 @@
   }
 
   &__content {
+    padding: 0 2rem 2rem 2rem;
 
     .event-spotlight__link {
       position: relative;
@@ -95,12 +96,6 @@
 
     .event-spotlight__time {
       font-weight: var(--font-weight--regular);
-    }
-  }
-
-  &__read-more-links {
-    .event-spotlight__read-more-calendar a.read-more {
-      padding: 0 2rem 2rem 2rem;
     }
   }
 }
