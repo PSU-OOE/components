@@ -11,7 +11,9 @@
         <span class="event-spotlight__time">{{ time }}</span>
       </div>
       <span class="event-spotlight__read-more-text">Event Details</span>
-      <span class="event-spotlight__read-more-chevron">&rsaquo;</span>
+      <span class="event-spotlight__read-more-chevron">
+        {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
+      </span>
     </a>
     <div class="event-spotlight__read-more-calendar">
       <div style="background: #1e407c; padding: 0.2rem 2rem 2rem;">
