@@ -44,7 +44,6 @@
 
   &__content {
     padding: 0 2rem 2rem 2rem;
-    margin-bottom: 3rem;
 
     .event-spotlight__link {
       position: relative;
@@ -52,6 +51,7 @@
       height: auto;
       width: auto;
       text-decoration: none;
+      margin-bottom: 3rem;
 
       .event-spotlight__read-more-text {
         // copied from read-more medium styles on pattern lab
