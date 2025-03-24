@@ -43,12 +43,12 @@
   }
 
   &__content {
-    // Link to event around title/date/read more - NOT the image like in tiles
-    // Block, auto height and width, no padding/margin
 
     .event-spotlight__link {
       position: relative;
       display: block;
+      height: auto;
+      width: auto;
       text-decoration: none;
 
       .event-spotlight__read-more-text {
