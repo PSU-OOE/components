@@ -47,8 +47,20 @@
     // Block, auto height and width, no padding/margin
 
     .event-spotlight__link {
+      position: relative;
       display: block;
       text-decoration: none;
+
+      .event-spotlight__read-more-text {
+        text-transform: uppercase;
+      }
+
+      .event-spotlight__read-more-chevron {
+        // copied from read-more.scss
+        position: absolute;
+        font-size: _rem(1);
+        margin-top: _rem(.2);
+      }
     }
   }
 
