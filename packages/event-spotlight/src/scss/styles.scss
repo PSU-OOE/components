@@ -45,10 +45,11 @@
 
     @media (min-width: _rem(41)) {
       padding: _rem(2.5) 0 _rem(2.5) _rem(2.5);
+      flex: 1;
     }
 
     .event-spotlight__link {
-      display: block;
+      display: inline-block;
       text-decoration: none;
       margin-bottom: 3rem;
 
