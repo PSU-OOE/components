@@ -8,6 +8,8 @@
   background-color: $beaver-blue;
 
   &__image {
+    display: flex;
+    flex-direction: column;
     position: relative;
     aspect-ratio: 16 / 7;
     // copied from <a> in navigation-tile-image for now except where noted - will need to be moved:
