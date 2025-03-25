@@ -1,13 +1,9 @@
 @import "../../../base/src/scss/imports/variables";
 
-:root {
-  --event-spotlight-breakpoint--wide: _rem(41);
-}
-
 .event-spotlight {
   background-color: $beaver-blue;
 
-  @media (min-width: _rem(41)) {
+  @media (min-width: 410px) {
     display: flex;
     flex-direction: row-reverse;
     min-height: _rem(20);
@@ -16,12 +12,13 @@
   &__image {
     position: relative;
 
-    @media (min-width: _rem(41)) {
+
       img {
-        width: _rem(17.5);
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+        @media (min-width: 410px) {
+          width: _rem(17.5);
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
       }
     }
 
@@ -32,7 +29,7 @@
       height: _rem(6);
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
 
-      @media (min-width: _rem(41)) {
+      @media (min-width: 410px) {
         height: 100%;
         width: _rem(6);
         background: linear-gradient(to right, var(--beaver-blue) 0%, transparent 100%);
@@ -43,7 +40,7 @@
   &__content {
     padding: 0 _rem(2) _rem(2) _rem(2);
 
-    @media (min-width: _rem(41)) {
+    @media (min-width: 410px) {
       padding: _rem(2.5) 0 _rem(2.5) _rem(2.5);
       flex: 1;
     }
