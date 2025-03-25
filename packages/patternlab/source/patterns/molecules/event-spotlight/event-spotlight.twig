@@ -1,6 +1,22 @@
+{% set date %}
+  {% include '@psu-ooe/smart-datetime/smart-date.twig' with {
+    start: '2023-08-31 12:00 EDT',
+    end: '2023-08-31 15:00 EDT',
+    timezone: 'America/New_York'
+  } only %}
+{% endset %}
+
+{% set time %}
+  {% include '@psu-ooe/smart-datetime/smart-time.twig' with {
+    start: '2023-08-31 12:00 EDT',
+    end: '2023-08-31 15:00 EDT',
+    timezone: 'America/New_York'
+  } only %}
+{% endset %}
+
 {% include '@psu-ooe/event-spotlight/event-spotlight.twig' with {
   image: '<img src="/images/lion.jpg" alt="">',
   title: 'Virtual Open House (Afternoon Session)',
-  date: 'August 31, 2003',
-  time: '12-3 pm (EDT)'
+  date: date,
+  time: time
 } only %}
