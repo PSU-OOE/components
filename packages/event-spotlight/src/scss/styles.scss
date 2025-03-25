@@ -28,6 +28,7 @@
     .event-spotlight__image-overlay {
       // should be on bottom of container at small, left at big
       position: relative;
+      height: 6rem;
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
 
       ::after {
