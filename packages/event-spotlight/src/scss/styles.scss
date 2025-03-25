@@ -12,13 +12,11 @@
     flex-direction: column;
     position: relative;
     // copied from <a> in navigation-tile-image for now except where noted - will need to be moved:
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: flex-end;
+    justify-content: flex-end;
     //outline: solid 0.2rem rgba(0, 0, 0, 0);
     //outline-offset: 0.2rem;
     //transition: outline-color var(--transition-duration--default) linear;
-    //overflow: hidden;
+    overflow: hidden;
     //text-decoration: none;
 
     .event-spotlight__image-img {
