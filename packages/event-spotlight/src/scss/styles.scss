@@ -12,13 +12,12 @@
   &__image {
     position: relative;
 
-
-      img {
-        @media (min-width: 410px) {
-          width: _rem(17.5);
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
+    img {
+      object-fit: cover;
+      aspect-ratio: 16 / 7;
+      @media (min-width: 410px) {
+        width: _rem(17.5);
+        height: 100%;
       }
     }
 
