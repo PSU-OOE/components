@@ -16,6 +16,15 @@
   &__image {
     position: relative;
 
+    @media (min-width: _rem(41)) {
+      img {
+        width: _rem(17.5);
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
     .event-spotlight__image-overlay {
       width: 100%;
       position: absolute;
@@ -24,6 +33,7 @@
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
 
       @media (min-width: _rem(41)) {
+        height: 100%;
         width: _rem(6);
         background: linear-gradient(to right, var(--beaver-blue) 0%, transparent 100%);
       }
@@ -32,6 +42,10 @@
 
   &__content {
     padding: 0 2rem 2rem 2rem;
+
+    @media (min-width: _rem(41)) {
+      padding: _rem(2.5) 0 _rem(2.5) _rem(2.5);
+    }
 
     .event-spotlight__link {
       display: block;
