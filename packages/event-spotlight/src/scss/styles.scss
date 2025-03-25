@@ -26,19 +26,18 @@
     }
 
     .event-spotlight__image-overlay {
-      position: absolute;
       // should be on bottom of container at small, left at big
-      //position: relative;
+      position: relative;
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
-      //
-      //::after {
-      //  content: "";
-      //  position: absolute;
-      //  inset: 0 0 0 0;
-      //  background: linear-gradient(to bottom, transparent 0%, var(--pa-link) 100%);
-      //  transition: opacity var(--transition-duration--default) linear;
-      //  opacity: 0;
-      //}
+
+      ::after {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+        background: linear-gradient(to bottom, transparent 0%, var(--pa-link) 100%);
+        transition: opacity var(--transition-duration--default) linear;
+        opacity: 0;
+      }
     }
   }
 
