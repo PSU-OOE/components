@@ -1,7 +1,17 @@
 @import "../../../base/src/scss/imports/variables";
 
+:root {
+  --event-spotlight-breakpoint--wide: _rem(41);
+}
+
 .event-spotlight {
   background-color: $beaver-blue;
+
+  @media (min-width: _rem(41)) {
+    display: flex;
+    flex-direction: row-reverse;
+    min-height: 20rem;
+  }
 
   &__image {
     position: relative;
@@ -12,6 +22,11 @@
       bottom: 0;
       height: 6rem;
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
+
+      @media (min-width: _rem(41)) {
+        width: _rem(6);
+        background: linear-gradient(to right, var(--beaver-blue) 0%, transparent 100%);
+      }
     }
   }
 
@@ -25,7 +40,9 @@
 
       &:hover,
       &:focus-visible {
-        text-decoration: underline;
+        .read-more__text {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -53,23 +70,5 @@
     .event-spotlight__time {
       font-weight: var(--font-weight--regular);
     }
-  }
-}
-
-// padding 2.5 rem 0 2.5rem 2.5rem around title/date/read-more
-// gradient overlay on LEFT of image, width: 6rem, left: beaver-blue, right: transparent
-// image - width: 17.5rem, height: 100%
-
-@media (min-width: 410px) {
-  .event-spotlight {
-    min-height: 20rem;
-    flex-direction: row;
-  }
-  .event-spotlight__image {
-    overflow: hidden;
-    object-position: center;
-  }
-  .event-spotlight__image-img {
-    object-fit: contain;
   }
 }
