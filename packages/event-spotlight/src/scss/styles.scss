@@ -3,23 +3,16 @@
 .event-spotlight {
   display: flex;
   flex-direction: column;
-  //container-name: event-spotlight;
   width: 100%;
   background-color: $beaver-blue;
 
   &__image {
     // aspect-ratio: 16 / 7;
     display: flex;
-    flex-direction: column;
     position: relative;
-    // copied from <a> in navigation-tile-image for now except where noted - will need to be moved:
     justify-content: center;
     align-items: center;
-    //outline: solid 0.2rem rgba(0, 0, 0, 0);
-    //outline-offset: 0.2rem;
-    //transition: outline-color var(--transition-duration--default) linear;
     overflow: hidden;
-    //text-decoration: none;
 
     .event-spotlight__image-img {
       // center crop vertically and horizontally
@@ -28,7 +21,9 @@
 
     .event-spotlight__image-overlay {
       // should be on bottom of container at small, left at big
-      position: relative;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
       height: 6rem;
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
 
@@ -53,30 +48,10 @@
       width: auto;
       text-decoration: none;
       margin-bottom: 3rem;
-
-      .event-spotlight__read-more-text {
-        // copied from read-more medium styles on pattern lab
-        font-size: var(--font-size--small);
-        font-family: var(--font-family--default);
-        line-height: var(--line-height--2xsnug);
-        text-transform: uppercase;
-        font-weight: var(--font-weight--bold);
-        position: relative;
-        display: inline-block;
-        padding-right: _rem(0.6);
-      }
-
-      .event-spotlight__read-more-chevron {
-        // copied from read more medium styles on pattern lab
-        position: absolute;
-        font-size: 1rem;
-        margin-top: 0.2rem;
-      }
     }
   }
 
   &__title {
-    // "Parameter to determine heading level to fit with content - default to h2?" (matt r.)
     font-family: var(--font-family--display);
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--medium);
@@ -102,25 +77,9 @@
   }
 }
 
-// Container queries
-// 410px and above: suggests using a named sass variable like event-spotlight-breakpoint--wide
 // padding 2.5 rem 0 2.5rem 2.5rem around title/date/read-more
 // gradient overlay on LEFT of image, width: 6rem, left: beaver-blue, right: transparent
 // image - width: 17.5rem, height: 100%
-//@container event-spotlight (min-width: 410px) {
-//  .event-spotlight {
-//    min-height: 20rem;
-//    flex-direction: row;
-//  }
-//  .event-spotlight__image {
-//    overflow: hidden;
-//    object-position: center;
-//  }
-//  .event-spotlight__image-img {
-//    object-fit: contain;
-//    // might be able to keep aspect ratio
-//  }
-//}
 
 @media (min-width: 410px) {
   .event-spotlight {
@@ -133,6 +92,5 @@
   }
   .event-spotlight__image-img {
     object-fit: contain;
-    // might be able to keep aspect ratio
   }
 }
