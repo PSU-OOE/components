@@ -1,40 +1,17 @@
 @import "../../../base/src/scss/imports/variables";
 
 .event-spotlight {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
   background-color: $beaver-blue;
 
   &__image {
-    // aspect-ratio: 16 / 7;
-    display: flex;
     position: relative;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-    .event-spotlight__image-img {
-      // center crop vertically and horizontally
-      // gradient overlay on bottom of image - height 6rem, bottom: beaver-blue, top: transparent
-    }
 
     .event-spotlight__image-overlay {
-      // should be on bottom of container at small, left at big
       width: 100%;
       position: absolute;
       bottom: 0;
       height: 6rem;
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
-
-      &::after {
-        content: "";
-        position: absolute;
-        inset: 0 0 0 0;
-        background: linear-gradient(to bottom, transparent 0%, var(--pa-link) 100%);
-        transition: opacity var(--transition-duration--default) linear;
-        opacity: 0;
-      }
     }
   }
 
@@ -42,12 +19,14 @@
     padding: 0 2rem 2rem 2rem;
 
     .event-spotlight__link {
-      position: relative;
       display: block;
-      height: auto;
-      width: auto;
       text-decoration: none;
       margin-bottom: 3rem;
+
+      &:hover,
+      &:focus-visible {
+        text-decoration: underline;
+      }
     }
   }
 
