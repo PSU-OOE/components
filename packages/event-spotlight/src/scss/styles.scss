@@ -9,9 +9,9 @@
 
   &__image {
     // copied from <a> in navigation-tile-image for now except where noted - will need to be moved
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     position: relative;
     aspect-ratio: 16 / 7;
     //outline: solid 0.2rem rgba(0, 0, 0, 0);
