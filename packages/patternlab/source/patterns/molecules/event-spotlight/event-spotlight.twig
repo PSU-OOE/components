@@ -16,22 +16,8 @@
 
 
 {% include '@psu-ooe/event-spotlight/event-spotlight.twig' with {
-  image: '<img src="/images/lion.jpg" alt="">',
+  image: '<img src="https://www.worldcampus.psu.edu/sites/default/files/styles/student_spotlight_16_9_m/public/2021-03/returning-students-audience.jpg.webp?itok=RzU986_h" alt="">',
   title: 'Virtual Open House (Afternoon Session)',
   date: date,
   time: time
 } only %}
-
-<script>
-  var baseUrl = window.location.origin;
-  var path = window.location.pathname;
-
-  if (path !== '/') {
-    baseUrl += path.split('/')[1];
-  }
-
-  var eventImage = document.getElementById('event-image');
-  if (eventImage && eventImage.src) {
-    eventImage.src = baseUrl + eventImage.getAttribute('src');
-  }
-</script>
