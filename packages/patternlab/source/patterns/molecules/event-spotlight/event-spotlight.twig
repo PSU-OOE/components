@@ -24,7 +24,13 @@
 
 <script>
   var baseUrl = window.location.origin;
-  var eventImage = document.querySelector('.event-spotlight__image img');
+  var path = window.location.pathname;
+
+  if (path !== '/') {
+    baseUrl += path.split('/')[1];
+  }
+
+  var eventImage = document.getElementById('event-image');
   if (eventImage && eventImage.src) {
     eventImage.src = baseUrl + eventImage.getAttribute('src');
   }
