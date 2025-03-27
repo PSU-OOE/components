@@ -14,9 +14,18 @@
   } only %}
 {% endset %}
 
+
 {% include '@psu-ooe/event-spotlight/event-spotlight.twig' with {
   image: '<img src="/images/lion.jpg" alt="">',
   title: 'Virtual Open House (Afternoon Session)',
   date: date,
   time: time
 } only %}
+
+<script>
+  var baseUrl = window.location.origin;
+  var eventImage = document.querySelector('.event-spotlight__image img');
+  if (eventImage && eventImage.src) {
+    eventImage.src = baseUrl + eventImage.getAttribute('src');
+  }
+</script>
