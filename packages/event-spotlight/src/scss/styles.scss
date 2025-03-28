@@ -1,5 +1,7 @@
 @import "../../../base/src/scss/imports/variables";
 
+$event-min-width: 420px;
+
 .event-spotlight {
   container-type: size;
   container-name: event-spotlight;
@@ -87,7 +89,7 @@
   }
 }
 
-@container event-spotlight (min-width: 410px) {
+@container event-spotlight (min-width: #{$event-min-width}) {
   .event-spotlight {
     display: flex;
     flex-direction: row-reverse;
