@@ -1,0 +1,21 @@
+{% embed '@psu-ooe/header/header.twig' with { profile: 'inversed' } only %}
+  {% block dogear_content %}
+    <div class="region region--branding">
+      <div class="block block--system-branding-block">
+        <a href="/">
+          {{ include('@psu-ooe/sprite/sprite.twig', { name: 'wc-mark' }) }}
+          <span class="visually-hidden">Penn State World Campus</span>
+        </a>
+      </div>
+    </div>
+  {% endblock %}
+  {% block content %}
+    <p style="height:100%;padding:1rem;text-align:center;display:flex;align-items:center;justify-content:center;outline:.2rem dashed;outline-offset:-.4rem;width:100%;">
+      Content area for the header.
+    </p>
+  {% endblock %}
+  {% block overflow %}
+    <div style="height:.1rem;background:var(--white);width:100%;"></div>
+    <p data-dark style="background:linear-gradient(to right, var(--beaver-blue), var(--nittany-navy));padding:1rem;text-align:center;display:flex;align-items:center;justify-content:center;">Optional, overflow area for things that might not quite fit otherwise.</p>
+  {% endblock %}
+{% endembed %}

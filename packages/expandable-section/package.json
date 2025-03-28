@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/expandable-section",
-  "version": "1.4.0",
+  "version": "1.5.1",
   "description": "Provides an expandable section implementation.",
   "publishConfig": {
     "access": "public",
@@ -9,7 +9,7 @@
   "dependencies": {
     "@psu-ooe/auto-expansion": "^1.0",
     "@psu-ooe/base": "^2.2",
-    "@psu-ooe/cta": "^2.2",
+    "@psu-ooe/button": "^1.0",
     "@psu-ooe/slide-toggle": "^1.0"
   }
 }

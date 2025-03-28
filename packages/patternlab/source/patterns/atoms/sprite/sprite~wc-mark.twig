@@ -1,0 +1,16 @@
+{% set sprite %}
+  {% include '@psu-ooe/sprite/sprite.twig' with {
+    name: 'wc-mark',
+    expand: true,
+  } only %}
+{% endset %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  background: 'white',
+  content: sprite,
+} only %}
+
+{% include '@psu-ooe/callout/callout.twig' with {
+  background: 'blue-gradient',
+  content: sprite,
+} only %}

@@ -1,0 +1,13 @@
+{
+  "name": "@psu-ooe/accordion-group",
+  "version": "1.0.0",
+  "description": "Provides a special layout that groups accordions together.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/accordion": "^2.0",
+    "@psu-ooe/base": "^2.0"
+  }
+}

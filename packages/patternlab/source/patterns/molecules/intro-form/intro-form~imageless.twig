@@ -1,15 +1,21 @@
+{% set form %}
+  <form action="/action_page.php">
+    <label for="intro_form_fname_4">First name:</label><br>
+    <input type="text" id="intro_form_fname_4" name="intro_form_fname_4"><br><br>
+    <label for="intro_form_lname_4">Last name:</label><br>
+    <input type="text" id="intro_form_lname_4" name="intro_form_lname_4"><br><br>
+    <label for="intro_form_email_4">Email:</label><br>
+    <input type="email" id="intro_form_email_4" name="intro_form_email_4"><br><br>
+    <label for="intro_form_phone_4">Phone</label><br>
+    <input type="tel" id="intro_form_phone_4" name="intro_form_phone_4"><br><br>
+    {% include '@psu-ooe/button/button.twig' with {
+      type: 'submit',
+      label: 'Submit',
+    } only %}
+  </form>
+{% endset %}
 {% include '@psu-ooe/intro-form/intro-form.twig' with {
   "title": "Ready to Learn More?",
   "description": "Get the resources you need to make informed decisions about your education. Request information on this program and other programs of interest by completing this form.",
-  "form": '<form action="/action_page.php">
-  <label for="intro_form_fname_4">First name:</label><br>
-  <input type="text" id="intro_form_fname_4" name="intro_form_fname_4"><br><br>
-  <label for="intro_form_lname_4">Last name:</label><br>
-  <input type="text" id="intro_form_lname_4" name="intro_form_lname_4"><br><br>
-  <label for="intro_form_email_4">Email:</label><br>
-  <input type="email" id="intro_form_email_4" name="intro_form_email_4"><br><br>
-  <label for="intro_form_phone_4">Phone</label><br>
-  <input type="tel" id="intro_form_phone_4" name="intro_form_phone_4"><br><br>
-  <input class="cta cta-block cta-block--on-dark-reversed" type="submit" value="Submit">
-</form>'
+  "form": form
 } only %}

@@ -1,0 +1,95 @@
+<h2>Light background options</h2>
+<div style="display:flex;gap:2rem;align-items:center;padding:0 2rem;flex-wrap:wrap;">
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Default button',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+  } only -%}
+
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Default',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color: 'alt',
+  } only -%}
+
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Light blue',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color: 'light-blue',
+  } only -%}
+
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Keystone',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color: 'keystone',
+  } only -%}
+
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Keystone Light',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color: 'keystone-light',
+  } only -%}
+
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Hollow Solid',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color: 'hollow-solid',
+  } only -%}
+
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Hollow Dotted',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    color: 'hollow-dotted',
+  } only -%}
+</div>
+
+{% set dark_background_options %}
+  <div style="display:flex;gap:2rem;align-items:center;padding:0 2rem;flex-wrap:wrap;">
+    {%- include '@psu-ooe/button/button.twig' with {
+      type: 'button',
+      label: 'Reversed (default)',
+      icon_before: 'fa-chevron-left',
+      icon_after: 'fas-chevron-right',
+    } only -%}
+    {%- include '@psu-ooe/button/button.twig' with {
+      type: 'button',
+      label: 'Keystone',
+      icon_before: 'fa-chevron-left',
+      icon_after: 'fas-chevron-right',
+      color_on_dark: 'keystone',
+    } only -%}
+    {%- include '@psu-ooe/button/button.twig' with {
+      type: 'button',
+      label: 'Keystone Light',
+      icon_before: 'fa-chevron-left',
+      icon_after: 'fas-chevron-right',
+      color_on_dark: 'keystone-light',
+    } only -%}
+    {%- include '@psu-ooe/button/button.twig' with {
+      type: 'button',
+      label: 'Light Blue',
+      icon_before: 'fa-chevron-left',
+      icon_after: 'fas-chevron-right',
+      color_on_dark: 'light-blue',
+    } only -%}
+  </div>
+{% endset %}
+<br><br>
+<h2>Dark background options</h2>
+{% include '@psu-ooe/background-container/background-container.twig' with {
+  color: 'beaver-blue',
+  content: dark_background_options
+} only %}

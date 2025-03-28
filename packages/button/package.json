@@ -1,0 +1,12 @@
+{
+  "name": "@psu-ooe/button",
+  "version": "1.0.1",
+  "description": "Provides a stylized semantic button.",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/button-base": "^1.0"
+  }
+}

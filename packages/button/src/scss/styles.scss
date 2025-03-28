@@ -1,0 +1,23 @@
+@import '../../../base/src/scss/imports/variables';
+
+// @TODO: This is not part of the component API.
+.button--raised {
+  --button-background-color-light: var(--light-mauve);
+  --button-foreground-color-light: var(--beaver-blue);
+  --button-background-color-active-light: var(--pugh-blue);
+  --button-foreground-color-active-light: var(--beaver-blue);
+  --button-outline-color-light: var(--nittany-navy);
+  --focus-indicator-color-light: var(--nittany-navy);
+
+  transition: color .3s linear, background-color .3s linear, box-shadow .3s linear;
+  box-shadow: _rem(.1) _rem(.1) 0 0 color-mix(in srgb, var(--nittany-navy) 50%, transparent);
+
+  &:focus-visible, &:hover {
+    box-shadow: _rem(.1) _rem(.1) 0 0 color-mix(in srgb, var(--nittany-navy) 100%, transparent);
+    background-color: var(--pugh-blue);
+  }
+
+  &:is(.bg--light-grey *) {
+    --button-background-color-light: var(--white);
+  }
+}

@@ -1570,7 +1570,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@psu-ooe/accordion@*, @psu-ooe/accordion@workspace:packages/accordion":
+"@psu-ooe/accordion-group@*, @psu-ooe/accordion-group@workspace:packages/accordion-group":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/accordion-group@workspace:packages/accordion-group"
+  dependencies:
+    "@psu-ooe/accordion": ^2.0
+    "@psu-ooe/base": ^2.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/accordion@*, @psu-ooe/accordion@^2.0, @psu-ooe/accordion@workspace:packages/accordion":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/accordion@workspace:packages/accordion"
   dependencies:
@@ -1666,6 +1675,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/button-base@^1.0, @psu-ooe/button-base@workspace:packages/button-base":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/button-base@workspace:packages/button-base"
+  dependencies:
+    "@psu-ooe/base": ^2.2
+    "@psu-ooe/sprite": ^2.0.0
+  languageName: unknown
+  linkType: soft
+
+"@psu-ooe/button@*, @psu-ooe/button@^1.0, @psu-ooe/button@workspace:packages/button":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/button@workspace:packages/button"
+  dependencies:
+    "@psu-ooe/button-base": ^1.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/callout@*, @psu-ooe/callout@workspace:packages/callout":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/callout@workspace:packages/callout"
@@ -1754,16 +1780,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/cta@*, @psu-ooe/cta@^2.2, @psu-ooe/cta@workspace:packages/cta":
+"@psu-ooe/cta@*, @psu-ooe/cta@workspace:packages/cta":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/cta@workspace:packages/cta"
   dependencies:
-    "@psu-ooe/base": ^2.2
+    "@psu-ooe/button-base": ^1.0
     "@psu-ooe/cta-tracking": ^1.0
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/details@workspace:packages/details":
+"@psu-ooe/details@*, @psu-ooe/details@workspace:packages/details":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/details@workspace:packages/details"
   dependencies:
@@ -1803,7 +1829,7 @@ __metadata:
   dependencies:
     "@psu-ooe/auto-expansion": ^1.0
     "@psu-ooe/base": ^2.2
-    "@psu-ooe/cta": ^2.2
+    "@psu-ooe/button": ^1.0
     "@psu-ooe/slide-toggle": ^1.0
   languageName: unknown
   linkType: soft
@@ -2217,6 +2243,7 @@ __metadata:
     "@pattern-lab/engine-twig-php": ^5.17.0
     "@pattern-lab/uikit-workshop": ^5.17.0
     "@psu-ooe/accordion": "*"
+    "@psu-ooe/accordion-group": "*"
     "@psu-ooe/alert": "*"
     "@psu-ooe/announcement": "*"
     "@psu-ooe/auto-expansion": "*"
@@ -2227,6 +2254,7 @@ __metadata:
     "@psu-ooe/bio": "*"
     "@psu-ooe/bio-collection": "*"
     "@psu-ooe/breadcrumbs": "*"
+    "@psu-ooe/button": "*"
     "@psu-ooe/callout": "*"
     "@psu-ooe/card": "*"
     "@psu-ooe/cards-list": "*"
@@ -2235,6 +2263,7 @@ __metadata:
     "@psu-ooe/credential": "*"
     "@psu-ooe/cta": "*"
     "@psu-ooe/cta-tracking": "*"
+    "@psu-ooe/details": "*"
     "@psu-ooe/divider": "*"
     "@psu-ooe/drop-button": "*"
     "@psu-ooe/event-link": "*"

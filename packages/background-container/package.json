@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/background-container",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "description": "Provides a container that supports background sprites.",
   "ooe": {
     "namespace": "molecules"

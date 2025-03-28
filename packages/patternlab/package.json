@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/patternlab",
-  "version": "2.0.34",
+  "version": "2.0.45",
   "publishConfig": {
     "access": "public",
     "registry": "https://npm.pkg.github.com/"
@@ -11,6 +11,7 @@
     "@pattern-lab/engine-twig-php": "^5.17.0",
     "@pattern-lab/uikit-workshop": "^5.17.0",
     "@psu-ooe/accordion": "*",
+    "@psu-ooe/accordion-group": "*",
     "@psu-ooe/alert": "*",
     "@psu-ooe/announcement": "*",
     "@psu-ooe/auto-expansion": "*",
@@ -21,6 +22,7 @@
     "@psu-ooe/bio": "*",
     "@psu-ooe/bio-collection": "*",
     "@psu-ooe/breadcrumbs": "*",
+    "@psu-ooe/button": "*",
     "@psu-ooe/callout": "*",
     "@psu-ooe/card": "*",
     "@psu-ooe/cards-list": "*",
@@ -29,6 +31,7 @@
     "@psu-ooe/credential": "*",
     "@psu-ooe/cta": "*",
     "@psu-ooe/cta-tracking": "*",
+    "@psu-ooe/details": "*",
     "@psu-ooe/divider": "*",
     "@psu-ooe/drop-button": "*",
     "@psu-ooe/event-link": "*",

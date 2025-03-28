@@ -1,51 +1,36 @@
-{# @TODO: Remove backwards-compatibility layer in 3.0.0 #}
-{% if not color_on_dark %}
-  {% if color == 'color-keystone' %}
-    {% set color_on_dark = 'color-keystone' %}
-  {% elseif color == 'light-blue' %}
-    {% set color_on_dark = 'light-blue' %}
-  {% else %}
-    {% set color_on_dark = 'reversed' %}
-    {% if color == 'reversed' %}
-      {# Continue to support reversed-on-light for old uses. #}
-      {% set reversed_legacy = true %}
-    {% endif %}
-  {% endif %}
-{% endif %}
-
-{% set classes = [
+{%- set label_clamp = label_clamp ? label_clamp|number_format : '' -%}
+{%- set classes = classes|default([])|merge([
   'cta-block',
-  reversed_legacy or color in ['alt', 'color-keystone', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand', 'expand-reversed'] ? 'cta-block--' ~ color,
-  color_on_dark in ['color-keystone', 'reversed', 'light-blue'] ? 'cta-block--on-dark-' ~ color_on_dark,
-  expand_to_fit ? 'cta-block--expand-to-fit',
-  font_weight in ['bold'] ? 'cta-block--' ~ font_weight,
-  size in ['xcompact', 'compact', 'compact-responsive'] ? 'cta-block--' ~ size,
-]|filter(class => class is not empty) %}
-
-{% apply spaceless %}
-  <a
-    class="{{ classes|join(' ') }}"
-    href="{{ url }}"
-    {% if tracking_description and tracking_placement %}
-      data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }}
-      data-cta-description="{{ tracking_description }}"
-      data-cta-placement="{{ tracking_placement }}"
-    {% endif %}
-  >
-    {% if icon_before %}
-      <span class="cta-block__icon">
-        {% include '@psu-ooe/sprite/sprite.twig' with {
-          name: icon_before
-        } only %}
-      </span>
-    {% endif %}
-    {{ label }}
-    {% if icon_after %}
-      <span class="cta-block__icon">
-        {% include '@psu-ooe/sprite/sprite.twig' with {
-          name: icon_after
-        } only %}
-      </span>
-    {% endif %}
-  </a>
-{% endapply %}
+  'button',
+  color in ['alt', 'keystone', 'keystone-light', 'hollow-solid', 'hollow-dotted', 'light-blue', 'expand'] ? 'button--' ~ color,
+  color_on_dark in ['keystone', 'keystone-light', 'reversed', 'light-blue'] ? 'button--on-dark-' ~ color_on_dark,
+  expand_to_fit ? 'button--expand-to-fit',
+  font_weight in ['bold'] ? 'button--' ~ font_weight,
+  size in ['medium', 'xcompact', 'compact', 'compact-responsive'] ? 'button--' ~ size,
+])|filter(class => class is not empty) -%}
+<a
+  {%- if classes %} class="{{- classes|join(' ') -}}"{%- endif -%}
+  {%- if url %} href="{{ url }}"{%- endif -%}
+  {%- if label_clamp %} style="--button-label-clamp: {{- label_clamp -}}"{%- endif -%}
+  {%- if tracking_description and tracking_placement %} data-cta-track-{{ tracking_synchronous ? 'sync' : 'async' }} data-cta-description="{{ tracking_description }}" data-cta-placement="{{ tracking_placement }}"{%- endif -%}
+>
+  {%- if icon_before -%}
+    <span class="button__icon">
+      {%- include '@psu-ooe/sprite/sprite.twig' with {
+        name: icon_before
+      } only -%}
+    </span>
+  {%- endif -%}
+  {%- set label_classes = [
+    'button__label',
+    label_clamp ? 'button__label--clamp',
+  ]|filter(class => class is not empty) -%}
+  <span class="{{ label_classes|join(' ') }}">{{- label -}}</span>
+  {%- if icon_after -%}
+    <span class="button__icon">
+      {%- include '@psu-ooe/sprite/sprite.twig' with {
+        name: icon_after
+      } only -%}
+    </span>
+  {%- endif -%}
+</a>

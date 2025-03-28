@@ -1,0 +1,39 @@
+{%- set type = type in ['button', 'submit', 'reset'] ? type : 'button' -%}
+{%- set label_clamp = label_clamp ? label_clamp|number_format : '' -%}
+
+{%- set classes = classes|default([])|merge([
+  'button',
+  color in ['alt', 'keystone', 'keystone-light', 'hollow-solid', 'hollow-dotted', 'light-blue'] ? 'button--' ~ color,
+  color_on_dark in ['keystone', 'keystone-light', 'light-blue'] ? 'button--on-dark-' ~ color_on_dark,
+  expand_to_fit ? 'button--expand-to-fit',
+  font_weight in ['bold'] ? 'button--' ~ font_weight,
+  size in ['medium', 'xcompact', 'compact', 'compact-responsive'] ? 'button--' ~ size,
+])|filter(class => class is not empty) -%}
+
+<button
+  {%- if classes %} class="{{- classes|join(' ') -}}"{%- endif -%}
+  {%- if type %} type="{{- type -}} {%- endif -%}"
+  {%- if label_clamp %} style="--button-label-clamp: {{- label_clamp -}}"{%- endif -%}
+  {%- if expanded is defined %} aria-expanded="{{ expanded ? 'true' : 'false' }}"{%- endif -%}
+  {%- if controls %} aria-controls="{{ controls }}"{%- endif -%}
+>
+  {%- if icon_before -%}
+    <span class="button__icon">
+      {%- include '@psu-ooe/sprite/sprite.twig' with {
+        name: icon_before
+      } only -%}
+    </span>
+  {%- endif -%}
+  {%- set label_classes = [
+    'button__label',
+    label_clamp ? 'button__label--clamp',
+  ]|filter(class => class is not empty) -%}
+  <span class="{{ label_classes|join(' ') }}">{{- label -}}</span>
+  {%- if icon_after -%}
+    <span class="button__icon">
+      {%- include '@psu-ooe/sprite/sprite.twig' with {
+        name: icon_after
+      } only -%}
+    </span>
+  {%- endif -%}
+</button>

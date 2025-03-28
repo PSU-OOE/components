@@ -1,0 +1,25 @@
+<h2>Truncation options</h2>
+<div style="display:flex;gap:2rem;align-items:center;padding:0 2rem;flex-wrap:wrap;">
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Default button with a super long label that spans multiple lines',
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+  } only -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Default button with a super long label that is truncated with ellipsis',
+    label_clamp: 1,
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    truncate_label: true,
+  } only -%}
+  {%- include '@psu-ooe/button/button.twig' with {
+    type: 'button',
+    label: 'Default button with a super long label that is truncated with ellipsis on the second line',
+    label_clamp: 2,
+    icon_before: 'fa-chevron-left',
+    icon_after: 'fas-chevron-right',
+    truncate_label: true,
+  } only -%}
+</div>
