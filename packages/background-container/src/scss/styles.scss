@@ -55,7 +55,8 @@
 
   @each $color, $scss_color in $supported_colors {
     &--#{$color} {
-      background-color: #{$scss_color};
+      --background-color: #{$scss_color};
+      background-color: var(--background-color);
     }
   }
 

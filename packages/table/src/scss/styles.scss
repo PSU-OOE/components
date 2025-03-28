@@ -1,20 +1,18 @@
 @import '../../../base/src/scss/imports/variables';
 
 :root, [data-light] {
-  --a11y-table-bg: var(--white);
   --a11y-table-shadows:
-    linear-gradient(to right, var(--white) 30%, rgba(255, 255, 255, 0)) left,
+    linear-gradient(to right, var(--background-color) 30%, rgba(255, 255, 255, 0)) left,
     linear-gradient(to right, color-mix(in srgb, transparent, var(--nittany-navy) 20%), transparent) left,
-    linear-gradient(to left, var(--white) 70%, transparent) right,
+    linear-gradient(to left, var(--background-color) 70%, transparent) right,
     linear-gradient(to left, color-mix(in srgb, transparent, var(--nittany-navy) 20%), transparent) right;
 }
 
 [data-dark] {
-  --a11y-table-bg: var(--beaver-blue);
   --a11y-table-shadows:
-    linear-gradient(to right, var(--beaver-blue) 30%, rgba(255, 255, 255, 0)) left,
+    linear-gradient(to right, var(--background-color) 30%, rgba(255, 255, 255, 0)) left,
     linear-gradient(to right, color-mix(in srgb, transparent, var(--black) 33%), transparent) left,
-    linear-gradient(to left, var(--beaver-blue) 70%, transparent) right,
+    linear-gradient(to left, var(--background-color) 70%, transparent) right,
     linear-gradient(to left, color-mix(in srgb, transparent, var(--black) 33%), transparent) right;
 }
 
@@ -26,7 +24,6 @@
   overflow-scrolling: touch;
 
   background: var(--a11y-table-shadows);
-  background-color: var(--a11y-table-bg);
   background-repeat: no-repeat;
   background-size: 3rem 100%, 1.5rem 100%, 3rem 100%, 1.5rem 100%;
   background-attachment: local, scroll, local, scroll;
