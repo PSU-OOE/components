@@ -35,4 +35,20 @@
   &__secondary-label {
     font-weight: var(--font-weight--regular);
   }
+
+  &--light {
+    border: _rem(.1) solid var(--slate-light);
+    box-shadow: _rem(.1) _rem(.2) _rem(.3)  color-mix(in srgb, var(--nittany-navy) 25%, transparent);
+    background: var(--white);
+    color: var(--pa-link);
+
+    &:hover, &:focus-visible {
+      background: var(--pa-link-light);
+      color: var(--beaver-blue);
+    }
+    
+    &:focus-visible {
+      outline-color: var(--pa-link);
+    }
+  }
 }
