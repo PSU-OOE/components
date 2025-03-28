@@ -1,13 +1,15 @@
 @import "../../../base/src/scss/imports/variables";
 
 .event-spotlight {
+  container-type: size;
+  container-name: event-spotlight;
   background-color: $beaver-blue;
 
-  @media (min-width: 410px) {
-    display: flex;
-    flex-direction: row-reverse;
-    min-height: _rem(20);
-  }
+  //@media (min-width: 410px) {
+  //  display: flex;
+  //  flex-direction: row-reverse;
+  //  min-height: _rem(20);
+  //}
 
   &__image {
     position: relative;
@@ -15,10 +17,11 @@
     img {
       object-fit: cover;
       aspect-ratio: 16 / 7;
-      @media (min-width: 410px) {
-        width: _rem(17.5);
-        height: 100%;
-      }
+
+      //@media (min-width: 410px) {
+      //  width: _rem(17.5);
+      //  height: 100%;
+      //}
     }
 
     .event-spotlight__image-overlay {
@@ -28,21 +31,21 @@
       height: _rem(6);
       background: linear-gradient(to bottom, transparent 0%, var(--beaver-blue) 100%);
 
-      @media (min-width: 410px) {
-        height: 100%;
-        width: _rem(6);
-        background: linear-gradient(to right, var(--beaver-blue) 0%, transparent 100%);
-      }
+      //@media (min-width: 410px) {
+      //  height: 100%;
+      //  width: _rem(6);
+      //  background: linear-gradient(to right, var(--beaver-blue) 0%, transparent 100%);
+      //}
     }
   }
 
   &__content {
     padding: 0 _rem(2) _rem(2) _rem(2);
 
-    @media (min-width: 410px) {
-      padding: _rem(2.5) 0 _rem(2.5) _rem(2.5);
-      flex: 1;
-    }
+    //@media (min-width: 410px) {
+    //  padding: _rem(2.5) 0 _rem(2.5) _rem(2.5);
+    //  flex: 1;
+    //}
 
     .event-spotlight__link {
       display: inline-block;
@@ -81,5 +84,26 @@
     .event-spotlight__time {
       font-weight: var(--font-weight--regular);
     }
+  }
+}
+
+@container event-spotlight (min-width: 410px) {
+  .event-spotlight {
+    display: flex;
+    flex-direction: row-reverse;
+    min-height: _rem(20);
+  }
+  .event-spotlight__image img {
+    width: _rem(17.5);
+    height: 100%;
+  }
+  .event-spotlight__image-overlay {
+    height: 100%;
+    width: _rem(6);
+    background: linear-gradient(to right, var(--beaver-blue) 0%, transparent 100%);
+  }
+  .event-spotlight__content {
+    padding: _rem(2.5) 0 _rem(2.5) _rem(2.5);
+    flex: 1;
   }
 }
