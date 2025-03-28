@@ -1,6 +1,6 @@
 {
   "name": "@psu-ooe/basic-tile",
-  "version": "2.2.1",
+  "version": "2.2.0",
   "description": "Provides a basic tile component.",
   "publishConfig": {
     "access": "public",
