@@ -6,7 +6,7 @@
 
   @supports (container-type: inline-size ) {
     @container (min-width: 410px) {
-      .event-spotlight {
+      .event-spotlight__container {
         display: flex;
         flex-direction: row-reverse;
         min-height: _rem(20);

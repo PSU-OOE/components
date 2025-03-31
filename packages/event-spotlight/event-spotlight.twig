@@ -1,30 +1,32 @@
 <div class="event-spotlight">
-  <div class="event-spotlight__image">
-    {{ image }}
-    <div class="event-spotlight__image-overlay"></div>
-  </div>
-  <div class="event-spotlight__content" data-dark>
-    <a href="#" class="event-spotlight__link">
-      <div class="event-spotlight__title">{{ title }}</div>
-      <div class="event-spotlight__date-time">
-        <span class="event-spotlight__date">{{ date }}</span>
-        <span class="event-spotlight__time">{{ time }}</span>
-      </div>
-      <div class="read-more read-more--reverse">
-        <span class="read-more__text">Event Details</span>
-        <span class="read-more__chevron">
-          {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
-        </span>
-      </div>
-    </a>
-    <div class="event-spotlight__read-more-calendar">
-      <div style="background: #1e407c;">
-        {% include '@psu-ooe/read-more/read-more.twig' with {
-          reverse: true,
-          url: "https://www.google.com",
-          title: "View all events",
-          size: "small"
-        } only %}
+  <div class="event-spotlight__container">
+    <div class="event-spotlight__image">
+      {{ image }}
+      <div class="event-spotlight__image-overlay"></div>
+    </div>
+    <div class="event-spotlight__content" data-dark>
+      <a href="#" class="event-spotlight__link">
+        <div class="event-spotlight__title">{{ title }}</div>
+        <div class="event-spotlight__date-time">
+          <span class="event-spotlight__date">{{ date }}</span>
+          <span class="event-spotlight__time">{{ time }}</span>
+        </div>
+        <div class="read-more read-more--reverse">
+          <span class="read-more__text">Event Details</span>
+          <span class="read-more__chevron">
+            {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
+          </span>
+        </div>
+      </a>
+      <div class="event-spotlight__read-more-calendar">
+        <div style="background: #1e407c;">
+          {% include '@psu-ooe/read-more/read-more.twig' with {
+            reverse: true,
+            url: "https://www.google.com",
+            title: "View all events",
+            size: "small"
+          } only %}
+        </div>
       </div>
     </div>
   </div>
