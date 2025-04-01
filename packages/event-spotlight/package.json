@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@psu-ooe/base": "^2.0",
-    "@psu-ooe/sprite": "^2.0"
+    "@psu-ooe/sprite": "^2.0",
+    "@psu-ooe/read-more": "^2.0"
   }
 }
