@@ -84,8 +84,6 @@
   }
 
   &__date-time {
-    display: flex;
-    column-gap: _rem(1);
     font-size: var(--font-size--xsmall);
     color: var(--text-color--light);
     margin-bottom: _rem(0.8);
