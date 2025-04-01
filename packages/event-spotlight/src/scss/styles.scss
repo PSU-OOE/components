@@ -89,10 +89,12 @@
     margin-bottom: _rem(0.8);
 
     .event-spotlight__date {
+      display: inline-block;
       font-weight: var(--font-weight--bold);
     }
 
     .event-spotlight__time {
+      display: inline-block;
       font-weight: var(--font-weight--regular);
     }
   }
