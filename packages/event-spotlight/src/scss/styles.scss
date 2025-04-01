@@ -2,7 +2,7 @@
 
 .event-spotlight {
   container-type: inline-size;
-  background-color: $beaver-blue;
+  background-color: var(--beaver-blue);
 
   @supports (container-type: inline-size ) {
     @container (min-width: 410px) {
