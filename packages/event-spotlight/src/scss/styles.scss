@@ -24,7 +24,7 @@
 
     @supports (container-type: inline-size ) {
       @container (min-width: 410px) {
-        .event-spotlight__image img {
+        img {
           width: _rem(17.5);
           height: 100%;
         }
