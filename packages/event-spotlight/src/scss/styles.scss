@@ -80,13 +80,13 @@
     font-size: var(--font-size--large);
     font-weight: var(--font-weight--medium);
     line-height: var(--line-height--2xsnug);
-    color: var(--text-color--light);
+    color: var(--text-color);
     margin-bottom: _rem(0.8);
   }
 
   &__date-time {
     font-size: var(--font-size--xsmall);
-    color: var(--text-color--light);
+    color: var(--text-color);
     margin-bottom: _rem(0.8);
 
     .event-spotlight__date {
