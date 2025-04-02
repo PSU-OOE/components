@@ -1,0 +1,30 @@
+<div class="event-spotlight" data-dark>
+  <div class="event-spotlight__container">
+    <div class="event-spotlight__image">
+      {{ image }}
+      <div class="event-spotlight__image-overlay"></div>
+    </div>
+    <div class="event-spotlight__content">
+      <a href="{{ event_url }}" class="event-spotlight__link">
+        <div class="event-spotlight__title">{{ title }}</div>
+        <div class="event-spotlight__date-time">
+          <div class="event-spotlight__date">{{ date }}</div>
+          <div class="event-spotlight__time">{{ time }}</div>
+        </div>
+        <div class="read-more">
+          <span class="read-more__text">Event Details</span>
+          <span class="read-more__chevron">
+            {% include '@psu-ooe/sprite/sprite.twig' with { name: 'fas-chevron-right' } only %}
+          </span>
+        </div>
+      </a>
+      <div>
+        {% include '@psu-ooe/read-more/read-more.twig' with {
+          url: all_events_url,
+          title: all_events_title,
+          size: "small"
+        } only %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1823,6 +1823,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@psu-ooe/event-spotlight@workspace:packages/event-spotlight":
+  version: 0.0.0-use.local
+  resolution: "@psu-ooe/event-spotlight@workspace:packages/event-spotlight"
+  dependencies:
+    "@psu-ooe/base": ^2.0
+    "@psu-ooe/read-more": ^2.0
+    "@psu-ooe/sprite": ^2.0
+  languageName: unknown
+  linkType: soft
+
 "@psu-ooe/expandable-section@*, @psu-ooe/expandable-section@^1.0, @psu-ooe/expandable-section@workspace:packages/expandable-section":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/expandable-section@workspace:packages/expandable-section"
@@ -2358,7 +2368,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@psu-ooe/read-more@*, @psu-ooe/read-more@^1.0 || ^2.0, @psu-ooe/read-more@workspace:packages/read-more":
+"@psu-ooe/read-more@*, @psu-ooe/read-more@^1.0 || ^2.0, @psu-ooe/read-more@^2.0, @psu-ooe/read-more@workspace:packages/read-more":
   version: 0.0.0-use.local
   resolution: "@psu-ooe/read-more@workspace:packages/read-more"
   dependencies:

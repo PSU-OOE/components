@@ -1,0 +1,14 @@
+{
+  "name": "@psu-ooe/event-spotlight",
+  "version": "1.0.0",
+  "description": "Provides an event spotlight component",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "dependencies": {
+    "@psu-ooe/base": "^2.0",
+    "@psu-ooe/read-more": "^2.0",
+    "@psu-ooe/sprite": "^2.0"
+  }
+}
