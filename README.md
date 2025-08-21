@@ -1,5 +1,9 @@
 # PSU-OOE Components!
 The majority of design work is maintained in this CMS-agnostic monorepo.
+
+## This repository has moved!
+Due to organizational changes, the Online Education components can now be found [within the Online Education organization](https://github.com/psu-online-education/components)
+
 ## Using Components
 This documentation is aimed at people that wish to use components.
 
